@@ -1,0 +1,7 @@
+/* BusJatri UX fixes (2026-09-16) — custom stop autocomplete styles */
+/* Replaces the native datalist overlay that blocked fields below  */
+.search-field{position:relative}
+.ac-drop{position:absolute;top:calc(100% - 6px);left:10px;right:10px;background:var(--surface,#fffcf4);border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 10px 26px rgba(60,40,10,.16);z-index:40;max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.ac-item{padding:11px 14px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--line,rgba(33,28,22,.13))}
+.ac-item:last-child{border-bottom:0}
+.ac-item:hover,.ac-item:active{background:rgba(184,121,31,.12)}
