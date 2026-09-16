@@ -26,6 +26,14 @@
       map link: waypoints are spread EVENLY across the whole bus
       route (not just the first stops), so Google Maps follows the
       actual road route even for 60+ stop services.
+  10. Compact bus page: Stops/Operator/Depot boxes removed (route
+      timetable already shows all that), "Via ..." line under the
+      route, return journey moved below the timetable, smaller
+      weather card, perfect-fit timetable rows, and "Show all
+      stops" expands in place (no scroll jump). "+ Add time" is
+      now a tiny + that opens a mini box right there — with AM/PM
+      defaulting to the OPPOSITE of the other direction's saved
+      time (and 0:00 is rejected).
    ============================================================ */
 (function () {
   'use strict';
@@ -146,12 +154,17 @@
       b.removeAttribute('onclick');
       b.dataset.uxFixed = '1';
       b.addEventListener('click', function () {
+        var y = window.scrollY || window.pageYOffset || 0;
         try {
           history.replaceState(null, '', target);
           window.dispatchEvent(new HashChangeEvent('hashchange'));
         } catch (err) {
           location.hash = target;
+          return;
         }
+        var n = 0;
+        var restore = function () { window.scrollTo(0, y); if (++n < 8) setTimeout(restore, 40); };
+        restore();
       });
     });
   }
@@ -549,6 +562,86 @@
     });
   }
 
+  /* ---- 10. Compact bus page + mini add-time box ---- */
+  function compactBusPage() {
+    if (location.hash.indexOf('#/bus/') !== 0) return;
+    var head = document.querySelector('.bus-head');
+    if (!head) return;
+    head.querySelectorAll('.info-item').forEach(function (it) {
+      var lbl = ((it.querySelector('.lbl') || {}).textContent || '').trim().toLowerCase();
+      if (lbl === 'stops' || lbl === 'operator' || lbl === 'depot') it.remove();
+    });
+    var grid = head.querySelector('.info-grid');
+    if (grid && !grid.querySelector('.info-item')) grid.remove();
+    var rl = head.querySelector('.route-line');
+    if (rl && !head.querySelector('.via-line')) {
+      var id = decodeURIComponent(location.hash.split('?')[0].slice(6));
+      var b = (typeof FULL_BUSES !== 'undefined' && FULL_BUSES && FULL_BUSES[id]) || BUSES[id];
+      var sts = (b && b.stoppages) || [];
+      var via = [];
+      for (var i = 1; i < sts.length - 1 && via.length < 6; i++) {
+        var nm = sts[i] && sts[i].name;
+        if (nm && via.indexOf(nm) === -1) via.push(nm);
+      }
+      if (via.length) {
+        var extra = sts.length - 2 > via.length ? ' …' : '';
+        var d = document.createElement('div');
+        d.className = 'via-line';
+        d.innerHTML = '<span class="label-en">Via: </span><span class="label-bn">হয়ে: </span>' + escHtml(via.join(' · ')) + extra;
+        rl.parentNode.insertBefore(d, rl.nextSibling);
+      }
+    }
+    var rj = head.querySelector('.return-journey');
+    var table = document.querySelector('.schedule-table');
+    if (rj && table && rj.parentNode !== table.parentNode) {
+      table.parentNode.insertBefore(rj, table.nextSibling);
+    }
+    document.querySelectorAll('.add-time-btn').forEach(function (btn) {
+      if (btn.textContent.indexOf('+ Add time') === 0) {
+        btn.textContent = '+';
+        btn.title = 'Add time';
+      }
+    });
+  }
+
+  if (typeof addCommunityTime === 'function' && !window.__bjAddTimeV2) {
+    window.__bjAddTimeV2 = true;
+    addCommunityTime = function (busId, stopIndex, direction) {
+      document.querySelectorAll('.bj-timebox').forEach(function (x) { x.remove(); });
+      var other = communityTimes()[communityTimeKey(busId, stopIndex, direction === 'up' ? 'down' : 'up')];
+      var otherMer = other ? (other.indexOf('PM') > -1 ? 'PM' : 'AM') : null;
+      var mer = otherMer === 'AM' ? 'PM' : 'AM';
+      var box = document.createElement('div');
+      box.className = 'bj-timebox';
+      box.innerHTML = '<input type="tel" placeholder="11:30" maxlength="5" aria-label="time">' +
+        '<button type="button" class="bj-mer"></button>' +
+        '<button type="button" class="bj-ok">✓</button>' +
+        '<button type="button" class="bj-no">✕</button>';
+      var input = box.querySelector('input');
+      var merBtn = box.querySelector('.bj-mer');
+      function paint() {
+        merBtn.textContent = mer;
+        merBtn.className = 'bj-mer' + (mer === 'PM' ? ' pm' : '') + (otherMer && mer === otherMer ? ' warn' : '');
+      }
+      paint();
+      merBtn.addEventListener('click', function () { mer = mer === 'AM' ? 'PM' : 'AM'; paint(); input.focus(); });
+      function save() {
+        var v = normalizeCommunityTime(input.value + ' ' + mer);
+        if (!v) { input.value = ''; input.placeholder = '11:30?'; input.focus(); return; }
+        var times = communityTimes();
+        times[communityTimeKey(busId, stopIndex, direction)] = v;
+        try { localStorage.setItem(COMMUNITY_TIME_KEY, JSON.stringify(times)); } catch (e) {}
+        box.remove();
+        render();
+      }
+      box.querySelector('.bj-ok').addEventListener('click', save);
+      box.querySelector('.bj-no').addEventListener('click', function () { box.remove(); });
+      input.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
+      document.body.appendChild(box);
+      setTimeout(function () { input.focus(); }, 60);
+    };
+  }
+
   function runAll() {
     fixWording();
     removeBrowseBtn();
@@ -557,6 +650,7 @@
     rebuildCompactStops();
     compactShareRow();
     fixMapLink();
+    compactBusPage();
   }
 
   /* app.js renders async (7MB data fetch) + on every hashchange —
