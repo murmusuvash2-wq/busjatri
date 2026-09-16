@@ -8,6 +8,10 @@
       overlay that blocked the fields below
    4. Show-all-stops uses history.replaceState so the browser
       BACK button always leaves the page (no history pollution)
+   5. Rebuilds stoppages from the compact app-index stop table
+      (complete search results without the 5MB details download)
+   6. Search gets a 5s budget for the full-data upgrade, then
+      falls back instantly to the complete compact index
    ============================================================ */
 (function () {
   'use strict';
@@ -138,11 +142,52 @@
     });
   }
 
+  /* ---- 5. Compact search completeness: rebuild stoppages from index ---- */
+  function rebuildCompactStops() {
+    if (window.__bjStopsRebuilt) return;
+    if (typeof DATA === 'undefined' || !DATA || !DATA.buses || !DATA.sn) return;
+    window.__bjStopsRebuilt = true;
+    DATA.buses.forEach(function (b) {
+      if (b.sx && !b.stoppages) {
+        b.stoppages = b.sx.map(function (i) { return { name: DATA.sn[i] || '' }; });
+        delete b.sx;
+      }
+    });
+  }
+
+  /* ---- 6. Search: 5s budget for the 5MB full-data upgrade ----
+     Compact index now carries every stop name, so search results are
+     complete even when bus-details.json is slow. Background fetch
+     continues and upgrades later searches/detail pages. */
+  if (typeof renderSearch === 'function' && !window.__bjSearchWrapped) {
+    window.__bjSearchWrapped = true;
+    var origRenderSearch = renderSearch;
+    var origLoader = loadFullBusData;
+    renderSearch = async function (el) {
+      rebuildCompactStops();
+      loadFullBusData = function () {
+        return new Promise(function (resolve, reject) {
+          var settled = false;
+          var to = setTimeout(function () {
+            if (!settled) { settled = true; reject(new Error('full data slow, using compact index')); }
+          }, 5000);
+          origLoader().then(
+            function (j) { if (!settled) { settled = true; clearTimeout(to); resolve(j); } },
+            function (e) { if (!settled) { settled = true; clearTimeout(to); reject(e); } }
+          );
+        });
+      };
+      try { await origRenderSearch(el); }
+      finally { loadFullBusData = origLoader; }
+    };
+  }
+
   function runAll() {
     fixWording();
     removeBrowseBtn();
     stripDatalist();
     fixShowAll();
+    rebuildCompactStops();
   }
 
   /* app.js renders async (7MB data fetch) + on every hashchange —
