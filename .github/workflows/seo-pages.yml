@@ -1,0 +1,41 @@
+name: Patch SEO pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/patch_seo_pages.py'
+      - 'js/seo-ux.js'
+      - 'css/seo2.css'
+      - '.github/workflows/seo-pages.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-pages
+  cancel-in-progress: false
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Inject shared css/js tags
+        run: python3 scripts/patch_seo_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add bus-time-table
+          if git diff --cached --quiet; then
+            echo "No changes needed."
+          else
+            git commit -m "chore: inject shared seo-ux.js + seo2.css into static pages [bot]"
+            git push
+          fi
