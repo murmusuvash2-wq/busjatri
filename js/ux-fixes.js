@@ -22,6 +22,10 @@
       Stop searches / stop pages show a single chronological
       departure list — every service in time order, each row one
       departure (up or down), like a real bus-stand board.
+   9. Compact share row (Map / WhatsApp / X) and a better route
+      map link: waypoints are spread EVENLY across the whole bus
+      route (not just the first stops), so Google Maps follows the
+      actual road route even for 60+ stop services.
    ============================================================ */
 (function () {
   'use strict';
@@ -493,12 +497,66 @@
     };
   }
 
+  /* ---- 8b. Compact share row + full-route map link ---- */
+  var BJ_LABELS = {
+    'Route on Google Maps': 'Map',
+    'View route on Google Maps': 'Map',
+    'গুগল ম্যাপে রুট দেখুন': 'ম্যাপ',
+    'Share on WhatsApp': 'WhatsApp',
+    'শেয়ার করুন': 'শেয়ার',
+    'Share on X': 'X'
+  };
+  function compactShareRow() {
+    document.querySelectorAll('.wa-row .map-btn, .wa-row .wa-btn, .wa-row .share-x-btn').forEach(function (btn) {
+      btn.querySelectorAll('.label-en, .label-bn').forEach(function (sp) {
+        var t = (sp.textContent || '').trim();
+        if (BJ_LABELS[t]) sp.textContent = BJ_LABELS[t];
+      });
+    });
+  }
+  function fixMapLink() {
+    if (location.hash.indexOf('#/bus/') !== 0) return;
+    var links = document.querySelectorAll('.wa-row a.map-btn[href*="google.com/maps/dir"]');
+    if (!links.length) return;
+    var id = decodeURIComponent(location.hash.split('?')[0].slice(6));
+    var b = (typeof FULL_BUSES !== 'undefined' && FULL_BUSES && FULL_BUSES[id]) || BUSES[id];
+    if (!b) return;
+    var seq = [];
+    function push(n) { if (n && seq[seq.length - 1] !== n) seq.push(n); }
+    push(b.origin);
+    (b.stoppages || []).forEach(function (s) { if (s && s.name) push(s.name); });
+    push(b.destination);
+    if (seq.length < 3) return;
+    var inter = seq.slice(1, -1);
+    var MAXW = 9;
+    var wp = [];
+    if (inter.length <= MAXW) {
+      wp = inter;
+    } else {
+      for (var i = 0; i < MAXW; i++) {
+        var k = Math.round(i * (inter.length - 1) / (MAXW - 1));
+        if (wp.indexOf(inter[k]) === -1) wp.push(inter[k]);
+      }
+    }
+    var url = 'https://www.google.com/maps/dir/?api=1&origin=' +
+      encodeURIComponent(seq[0] + ', West Bengal') +
+      '&destination=' + encodeURIComponent(seq[seq.length - 1] + ', West Bengal') +
+      (wp.length ? '&waypoints=' + wp.map(function (n2) { return encodeURIComponent(n2 + ', West Bengal'); }).join('|') : '') +
+      '&travelmode=driving';
+    links.forEach(function (a) {
+      a.href = url;
+      a.dataset.mapFixed = '1';
+    });
+  }
+
   function runAll() {
     fixWording();
     removeBrowseBtn();
     stripDatalist();
     fixShowAll();
     rebuildCompactStops();
+    compactShareRow();
+    fixMapLink();
   }
 
   /* app.js renders async (7MB data fetch) + on every hashchange —

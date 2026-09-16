@@ -5,3 +5,8 @@
 .ac-item{padding:11px 14px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--line,rgba(33,28,22,.13))}
 .ac-item:last-child{border-bottom:0}
 .ac-item:hover,.ac-item:active{background:rgba(184,121,31,.12)}
+
+/* Compact share row — Map / WhatsApp / X buttons (bus pages) */
+.wa-row{gap:8px;margin-top:10px}
+.wa-row .map-btn,.wa-row .wa-btn,.wa-row .share-x-btn{flex:1 1 0;min-width:0;padding:8px 10px;font-size:12px;border-radius:9px;gap:5px}
+.wa-row .map-btn svg,.wa-row .wa-btn svg,.wa-row .share-x-btn svg{width:14px;height:14px}
