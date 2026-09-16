@@ -38,3 +38,16 @@
 .bj-timebox .bj-mer.warn{outline:2px solid #c0392b}
 .bj-timebox .bj-ok{width:36px;height:36px;border-radius:9px;border:0;background:var(--amber,#b8791f);color:#fff;font:700 16px var(--font-body);cursor:pointer}
 .bj-timebox .bj-no{width:30px;height:30px;border-radius:8px;border:0;background:none;color:var(--ink-dim,#665c50);font:600 15px var(--font-body);cursor:pointer}
+
+/* round 2: FB button, weather small w/ icon, rail badge compact, rel buses */
+.wa-row .share-x-btn{background:#1877F2}
+.wa-row .share-x-btn:hover{background:#1667d9}
+.weather-card{align-items:center;gap:8px;flex-wrap:wrap}
+.weather-card .val{display:flex;align-items:center;gap:6px;font-size:.82rem;line-height:1.35;flex-wrap:wrap}
+.rail{display:inline-flex;align-items:center;gap:4px}
+.rail svg{width:12px;height:12px;color:var(--maroon)}
+.bj-relbuses{margin-top:10px}
+.bj-rel-title{font-size:12px;font-weight:700;color:var(--ink-dim);margin-bottom:6px;display:flex;align-items:center;gap:5px}
+.bj-rel-title svg{width:13px;height:13px;color:var(--amber)}
+.bj-rel-item{display:inline-flex;align-items:center;gap:5px;margin:0 6px 6px 0;padding:5px 10px;border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:9px;background:var(--surface,#fffcf4);color:var(--ink,#221c16);text-decoration:none;font-size:12px}
+.bj-rel-item b{font-family:var(--font-mono);color:var(--amber-ink,#7a5210)}
