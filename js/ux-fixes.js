@@ -34,6 +34,13 @@
       now a tiny + that opens a mini box right there — with AM/PM
       defaulting to the OPPOSITE of the other direction's saved
       time (and 0:00 is rejected).
+  11. Bus page round 2: schedule legend (From/Return) removed,
+      railway badge compact (train icon + name/code/km, no
+      "Railway:" word), weather card small with a per-condition
+      inline SVG icon (sun/cloud/rain/storm — no image files),
+      X button replaced by Facebook share, and same-route buses
+      listed right under the return journey box. ux-fixes.css now
+      loads AFTER bus-page.css so its overrides actually win.
    ============================================================ */
 (function () {
   'use strict';
@@ -519,8 +526,17 @@
     'শেয়ার করুন': 'শেয়ার',
     'Share on X': 'X'
   };
+  var FB_SVG = '<svg viewBox="0 0 24 24" style="width:14px;height:14px" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.15v2.3H7.4V13h2.75v8h3.35z"/></svg>';
   function compactShareRow() {
     document.querySelectorAll('.wa-row .map-btn, .wa-row .wa-btn, .wa-row .share-x-btn').forEach(function (btn) {
+      if (btn.classList.contains('share-x-btn') && !btn.dataset.bjFb) {
+        btn.dataset.bjFb = '1';
+        btn.removeAttribute('onclick');
+        btn.innerHTML = FB_SVG + ' <span class="label-en">Share</span><span class="label-bn">শেয়ার</span>';
+        btn.addEventListener('click', function () {
+          window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), '_blank', 'noopener');
+        });
+      }
       btn.querySelectorAll('.label-en, .label-bn').forEach(function (sp) {
         var t = (sp.textContent || '').trim();
         if (BJ_LABELS[t]) sp.textContent = BJ_LABELS[t];
@@ -602,6 +618,65 @@
         btn.title = 'Add time';
       }
     });
+    document.querySelectorAll('.schedule-legend').forEach(function (lg) { lg.remove(); });
+    document.querySelectorAll('.rail').forEach(function (el) {
+      if (el.dataset.bjRail) return;
+      el.dataset.bjRail = '1';
+      var t = el.textContent.replace('Railway:', '').replace('~', '').replace(/ +/g, ' ').trim();
+      el.innerHTML = icon('train') + ' ' + escHtml(t);
+    });
+    fixWeatherIcon();
+    if (rj && !document.querySelector('.bj-relbuses')) {
+      var rid = decodeURIComponent(location.hash.split('?')[0].slice(6));
+      var rb = (typeof FULL_BUSES !== 'undefined' && FULL_BUSES && FULL_BUSES[rid]) || BUSES[rid];
+      if (rb) {
+        var rel = [];
+        Object.values(BUSES).forEach(function (o) {
+          if (o.id === rb.id || rel.length >= 4) return;
+          if ((o.origin === rb.origin && o.destination === rb.destination) ||
+              (o.origin === rb.destination && o.destination === rb.origin)) {
+            rel.push({ o: o, t: parseTime(o.departure_time) });
+          }
+        });
+        rel.sort(function (x, y) { return (x.t == null ? 9999 : x.t) - (y.t == null ? 9999 : y.t); });
+        if (rel.length) {
+          var sec = document.createElement('div');
+          sec.className = 'bj-relbuses';
+          sec.innerHTML = '<div class="bj-rel-title">' + icon('bus') + ' <span class="label-en">More buses on this route</span><span class="label-bn">এই রুটের আরও বাস</span></div>' +
+            rel.map(function (r) {
+              var tt = r.t != null ? fmtTime(r.t) : '—';
+              return '<a class="bj-rel-item" href="#/bus/' + encodeURIComponent(r.o.id) + '"><b>' + tt + '</b> ' + escHtml(r.o.bus_name || '') + '</a>';
+            }).join('');
+          rj.parentNode.insertBefore(sec, rj.nextSibling);
+        }
+      }
+    }
+  }
+
+  var WX_ICONS = {
+    thunder: '<svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 auto" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 13a4.5 4.5 0 0 0-1-8.9 6 6 0 0 0-11.4 2A3.5 3.5 0 0 0 6 13h11.5z" fill="rgba(122,34,48,.15)"/><path d="m12.5 13-2.2 4h3l-2.2 4.5" stroke="#7a2230"/></svg>',
+    rain: '<svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 auto" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14a4.5 4.5 0 0 0-1-8.9 6 6 0 0 0-11.4 2A3.5 3.5 0 0 0 6 14h11.5z" fill="rgba(60,90,150,.15)"/><path d="M8 17.5v2.5M12 16.5v3M16 17.5v2.5"/></svg>',
+    snow: '<svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 auto" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 14a4.5 4.5 0 0 0-1-8.9 6 6 0 0 0-11.4 2A3.5 3.5 0 0 0 6 14h11.5z" fill="rgba(120,140,160,.18)"/><path d="M8 17v3M12 16.5v3.5M16 17v3"/></svg>',
+    cloud: '<svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 auto" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 15a4.5 4.5 0 0 0-1-8.9 6 6 0 0 0-11.4 2A3.5 3.5 0 0 0 6 15h11.5z" fill="rgba(120,120,120,.15)"/></svg>',
+    sun: '<svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 auto" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="rgba(230,160,30,.25)"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M19.4 4.6l-1.8 1.8M6.4 17.6l-1.8 1.8"/></svg>',
+    fog: '<svg viewBox="0 0 24 24" style="width:20px;height:20px;flex:0 0 auto" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M17.5 11a4.5 4.5 0 0 0-1-8.9 6 6 0 0 0-11.4 2A3.5 3.5 0 0 0 6 11h11.5z" fill="rgba(120,120,120,.12)"/><path d="M5 15h14M7 18.5h10"/></svg>'
+  };
+  function fixWeatherIcon() {
+    var card = document.getElementById('weatherCard');
+    if (!card) return;
+    var val = card.querySelector('.val');
+    if (!val || val.dataset.bjWx) return;
+    var txt = (val.textContent || '').toLowerCase();
+    var key = null;
+    if (txt.indexOf('thunder') > -1) key = 'thunder';
+    else if (txt.indexOf('drizzle') > -1 || txt.indexOf('rain') > -1 || txt.indexOf('shower') > -1) key = 'rain';
+    else if (txt.indexOf('snow') > -1) key = 'snow';
+    else if (txt.indexOf('fog') > -1 || txt.indexOf('mist') > -1) key = 'fog';
+    else if (txt.indexOf('clear') > -1) key = 'sun';
+    else if (txt.indexOf('cloud') > -1 || txt.indexOf('overcast') > -1) key = 'cloud';
+    if (!key) return;
+    val.dataset.bjWx = '1';
+    val.innerHTML = WX_ICONS[key] + '<span>' + escHtml(val.textContent.trim()) + '</span>';
   }
 
   if (typeof addCommunityTime === 'function' && !window.__bjAddTimeV2) {
