@@ -1,7 +1,7 @@
 /* BusJatri shared SEO-page controls (2026-09-16)
    Injected into every bus-time-table/*.html page:
    1. EN/বাংলা toggle + dark mode button in the header (listing page already
-      injects its own বাংলা button — we skip that one and only add the theme one)
+      injects its own বাংলা button — we rewire it to also translate the footer)
    2. Translates the common English-only labels on route pages when বাংলা is on
    3. Shortens the listing tagline to one line mentioning SBSTC/NBSTC/private
    4. Adds an amber Search button next to the listing search box
@@ -80,10 +80,10 @@
     if (tg) {
       var en = tg.querySelector('.label-en');
       var bn2 = tg.querySelector('.label-bn');
-        if (en && en.textContent.indexOf('Complete bus timings') === 0) {
-        en.textContent = 'Bus time table — SBSTC × NBSTC × WBTC & private buses.';
+      if (en && en.textContent.indexOf('Complete bus timings') === 0) {
+        en.textContent = 'Bus time table — SBSTC · NBSTC · WBTC & private buses.';
       }
-      if (bn2) bn2.textContent = 'বাস টাইম টেবিল — SBSTC · NBSTC · WBTC ও প্রাই৭েট বাস���',;
+      if (bn2) bn2.textContent = 'বাস টাইম টেবিল — SBSTC · NBSTC · WBTC ও প্রাইভেট বাস।';
     }
 
     var mapped = collectMapped();
