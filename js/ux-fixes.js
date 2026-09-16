@@ -15,10 +15,13 @@
       Jorehira->Bankura return trip (down times). Evening/return
       services now appear, sorted by time at the user's stop.
       5s budget for the full-data upgrade, then instant compact.
-      Every row shows BOTH times at the from-stop: out + return.
    7. Departures know directions too: stop pages and the departure
       board list return (down) services, not just outbound ones —
       and stop pages work again (they relied on removed bus_ids).
+   8. ONE TIME PER ROW, SERIALLY: no side-by-side up+down pairs.
+      Stop searches / stop pages show a single chronological
+      departure list — every service in time order, each row one
+      departure (up or down), like a real bus-stand board.
    ============================================================ */
 (function () {
   'use strict';
@@ -238,28 +241,31 @@
           var fwd = fi < ti;
           var depMin = fwd ? bjStopMin(b, fi, 'up') : bjStopMin(b, fi, 'down');
           if (depMin == null && fwd) depMin = parseTime(b.departure_time);
-          var upMin = null, dnMin = null;
-          var stL = (b.stoppages || []).length;
-          if (fi >= 1 && fi <= stL) {
-            upMin = bjFromStop(b.stoppages[fi - 1], 'up');
-            dnMin = bjFromStop(b.stoppages[fi - 1], 'down');
-          }
-          rows.push({ b: b, fwd: fwd, depMin: depMin, upMin: upMin, dnMin: dnMin,
-                      stopName: bjStopName(b, fi) });
+          rows.push({ b: b, fwd: fwd, depMin: depMin });
         });
       } else if (stop) {
-        rows = all.filter(function (b) {
-          return (b.stoppages || []).some(function (s) { return (s.name || '').toLowerCase().includes(stop); }) ||
-                 (b.origin || '').toLowerCase().includes(stop) ||
-                 (b.destination || '').toLowerCase().includes(stop);
-        }).map(function (b) {
-          var m = null;
+        var seenIds = {};
+        var nBuses = 0;
+        all.forEach(function (b) {
+          var mS = null;
           (b.stoppages || []).forEach(function (s) {
-            if (!m && (s.name || '').toLowerCase().includes(stop)) m = s;
+            if (!mS && (s.name || '').toLowerCase().includes(stop)) mS = s;
           });
-          return { b: b, fwd: true, depMin: parseTime(b.departure_time),
-                   upMin: m ? bjFromStop(m, 'up') : null, dnMin: m ? bjFromStop(m, 'down') : null };
+          var isO = (b.origin || '').toLowerCase().includes(stop);
+          var isD = (b.destination || '').toLowerCase().includes(stop);
+          if (!mS && !isO && !isD) return;
+          if (!seenIds[b.id]) { seenIds[b.id] = 1; nBuses++; }
+          var tU = mS ? bjFromStop(mS, 'up') : null;
+          var tD = mS ? bjFromStop(mS, 'down') : null;
+          if (isO) {
+            var dO = parseTime(b.departure_time);
+            if (dO != null) tU = dO;
+          }
+          if (tU != null) rows.push({ b: b, fwd: true, depMin: tU });
+          if (tD != null) rows.push({ b: b, fwd: false, depMin: tD });
         });
+        window.__bjStopCount = nBuses;
+        window.__bjDepCount = rows.length;
       } else {
         var q = from || to;
         rows = all.filter(function (b) {
@@ -299,29 +305,21 @@
         (from || to ? '<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">' + esc(from || '…') + ' → ' + esc(to || '…') + (stop ? ' <span class="badge badge-ac">stop ' + esc(stop) + '</span>' : '') + '</p>' : '') +
         (stop && !from && !to ? '<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px"><span class="label-en">Buses halting at</span><span class="label-bn">এই স্টপেজে থামে</span> ' + esc(stop) + '</p>' : '') +
         (near.length ? '<p class="near-label">' + icon('clock') + ' <span class="label-en">' + near.length + ' buses around current time</span><span class="label-bn">' + near.length + ' বাস বর্তমান সময়ের কাছাকাছি</span></p>' : '') +
-        (routeMode || stop ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px"><b style="color:var(--amber)">⇗</b> <span class="label-en">outward · </span><span class="label-bn">যাত্রা · </span><b style="color:var(--maroon)">⇙</b> <span class="label-en">return, at your stop</span><span class="label-bn">ফেরার বাস, আপনার স্টপে</span></p>' : '') +
+        (stop && !from && !to && window.__bjDepCount ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px">' + window.__bjStopCount + ' <span class="label-en">buses · </span><span class="label-bn">বাস · </span>' + window.__bjDepCount + ' <span class="label-en">departures today, in time order</span><span class="label-bn">আজকের ছাড়ার সময়, ক্রম অনুযায়ী</span></p>' : '') +
+        (routeMode || (stop && !from && !to) ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px"><b style="color:var(--amber)">⇗</b> <span class="label-en">outward · </span><span class="label-bn">যাত্রা · </span><b style="color:var(--maroon)">⇙</b> <span class="label-en">return service</span><span class="label-bn">ফেরার বাস</span></p>' : '') +
         (rows.length ? rows.map(function (r, i) {
           var b = r.b;
           var isNear = r.depMin != null && rel(r.depMin) <= 180;
-          var stopInfo = '';
-          if ((routeMode || stop) && (r.upMin != null || r.dnMin != null)) {
-            var tU = r.upMin != null ? fmtTime(r.upMin) : null;
-            var tD = r.dnMin != null ? fmtTime(r.dnMin) : null;
-            var em = function (t, hot) { return hot ? '<b style="color:var(--amber)">' + t + '</b>' : t; };
-            stopInfo = '<div style="font-size:12.5px;font-weight:600;margin-top:2px;color:var(--ink-dim)">' +
-              (tU ? '<b style="color:var(--amber)">⇗</b> ' + em(tU, r.fwd) : '') +
-              (tU && tD ? ' · ' : '') +
-              (tD ? '<b style="color:var(--maroon)">⇙</b> ' + em(tD, !r.fwd) : '') +
-              '</div>';
-          }
-          var revBadge = routeMode && !r.fwd ? '<span style="font-size:10px;font-weight:700;color:var(--maroon);border:1px solid var(--maroon);border-radius:6px;padding:2px 7px;margin-left:6px;white-space:nowrap"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
-          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + '</span>' : '';
+          var isRet = (routeMode || (stop && !from && !to)) && !r.fwd;
+          var revBadge = isRet ? '<span style="font-size:10px;font-weight:700;color:var(--maroon);border:1px solid var(--maroon);border-radius:6px;padding:2px 7px;margin-left:6px;white-space:nowrap"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
+          var ro = isRet ? b.destination : b.origin;
+          var rd = isRet ? b.origin : b.destination;
+          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '';
           return '<div class="result-item ' + (isNear ? 'near' : '') + '" style="--i:' + i + '" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
             '<div class="ri-main">' +
             (isNear ? '<div class="near-label">' + icon('clock') + ' <span class="label-en">Coming up</span><span class="label-bn">আসছে</span></div>' : '') +
             '<div class="name">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + revBadge + '</div>' +
-            '<div class="route">' + esc(pn(b.origin)) + ' <span class="rarr">→</span> ' + esc(pn(b.destination)) + '</div>' +
-            stopInfo +
+            '<div class="route">' + esc(pn(ro)) + ' <span class="rarr">→</span> ' + esc(pn(rd)) + '</div>' +
             '<div class="meta"><span>' + icon('stops') + ' ' + (b.total_stoppages || (b.stoppages || []).length) + ' stops</span>' +
             (b.operator ? '<span>' + esc(b.operator) + '</span>' : '') +
             (b.fare ? '<span>' + esc(b.fare) + '</span>' : '') + '</div>' +
@@ -456,20 +454,40 @@
               '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(n.t) + ' · <span style="color:var(--amber);font-weight:700" data-nbdep="' + n.t + '">' + countdownText(n.diff) + '</span></span></div>';
           }).join('') : '') +
         '<a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(stop.name + ', West Bengal, India') + '" target="_blank" rel="noopener">' + icon('map') + ' View on Google Maps</a>' +
-        buses.map(function (b, i) {
-          var m = null;
-          (b.stoppages || []).forEach(function (s) { if (!m && slug(s.name) === slugKey) m = s; });
-          var tU = m ? bjFromStop(m, 'up') : null;
-          var tD = m ? bjFromStop(m, 'down') : null;
-          var pills = '';
-          if (tU != null) pills += '<span class="time-pill">' + icon('clock') + ' ⇗ ' + fmtTime(tU) + '</span> ';
-          if (tD != null) pills += '<span class="time-pill">' + icon('clock') + ' ⇙ ' + fmtTime(tD) + '</span>';
-          if (!pills && b.departure_time) pills = '<span class="time-pill">' + icon('clock') + ' ' + esc(b.departure_time) + '</span>';
-          return '<div class="result-item" style="--i:' + i + '" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
-            '<div class="ri-main"><div class="name">' + esc(b.bus_name) + '</div>' +
-            '<div class="route">' + esc(pn(b.origin)) + ' <span class="rarr">→</span> ' + esc(pn(b.destination)) + '</div>' +
-            '<div class="meta"><span>' + icon('stops') + ' ' + ((b.stoppages || []).length || b.total_stoppages || 0) + ' stops</span></div></div>' + pills + '</div>';
-        }).join('') +
+        (function () {
+          var allDeps = [];
+          buses.forEach(function (b) {
+            var m = null;
+            (b.stoppages || []).forEach(function (s) { if (!m && slug(s.name) === slugKey) m = s; });
+            var tU = m ? bjFromStop(m, 'up') : null;
+            var tD = m ? bjFromStop(m, 'down') : null;
+            if (slug(b.origin) === slugKey) {
+              var dO = parseTime(b.departure_time);
+              if (dO != null) tU = dO;
+            }
+            if (tU != null) allDeps.push({ b: b, t: tU, fwd: true });
+            if (tD != null) allDeps.push({ b: b, t: tD, fwd: false });
+          });
+          var nowM = minutesNow();
+          allDeps.sort(function (x, y) {
+            var ax = x.t < nowM ? x.t + 1440 : x.t;
+            var ay = y.t < nowM ? y.t + 1440 : y.t;
+            return ax - ay;
+          });
+          return allDeps.map(function (n, i) {
+            var isRet = !n.fwd;
+            var head = isRet ? n.b.origin : n.b.destination;
+            var tail = isRet ? n.b.destination : n.b.origin;
+            var dd = n.t - nowM; if (dd < 0) dd += 1440;
+            var near = dd <= 180 ? ' · <b style="color:var(--amber)">' + countdownText(dd) + '</b>' : '';
+            var badge = isRet ? ' <span style="font-size:10px;font-weight:700;color:var(--maroon);border:1px solid var(--maroon);border-radius:6px;padding:2px 7px;white-space:nowrap"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
+            return '<div class="result-item" style="--i:' + i + '" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(n.b.id) + String.fromCharCode(39) + '">' +
+              '<div class="ri-main"><div class="name">' + esc(n.b.bus_name) + badge + '</div>' +
+              '<div class="route">' + esc(pn(tail)) + ' <span class="rarr">→</span> ' + esc(pn(head)) + '</div>' +
+              '<div class="meta"><span>' + icon('stops') + ' ' + ((n.b.stoppages || []).length || n.b.total_stoppages || 0) + ' stops</span></div></div>' +
+              '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(n.t) + near + '</span></div>';
+          }).join('');
+        })() +
         '</div>';
       startNextBusTicker();
     };
