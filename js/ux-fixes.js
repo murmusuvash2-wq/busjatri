@@ -41,6 +41,11 @@
       X button replaced by Facebook share, and same-route buses
       listed right under the return journey box. ux-fixes.css now
       loads AFTER bus-page.css so its overrides actually win.
+  12. Search results header v9: no "Search Results" heading — the
+      route itself is the centered title with (total buses) in
+      brackets, a "via ..." line of the most common middle stops,
+      and the data-refresh note appears ONCE at the bottom (was
+      duplicated at top: "Data updated" + "Data last refreshed").
    ============================================================ */
 (function () {
   'use strict';
@@ -206,6 +211,21 @@
       );
     });
   }
+  function canonName(q) {
+    var best = null;
+    Object.values(STOPS || {}).forEach(function (s) {
+      if (!best && slug(s.name) === slug(q)) best = s.name;
+    });
+    if (!best) {
+      Object.values(BUSES).forEach(function (b) {
+        if (!best) {
+          if (slug(b.origin) === slug(q)) best = b.origin;
+          else if (slug(b.destination) === slug(q)) best = b.destination;
+        }
+      });
+    }
+    return best || q;
+  }
   function bjPosIn(b, q) {
     if (placeMatches(b.origin, q)) return 0;
     var sts = b.stoppages || [];
@@ -320,16 +340,36 @@
           return '<span class="sugg-chip" onclick="quickSearch(' + String.fromCharCode(39) + n + String.fromCharCode(39) + ')">' + esc(n) + '</span>';
         }).join('') + '</div></div>';
 
+      var titleTxt = routeMode ? canonName(from) + ' → ' + canonName(to)
+        : (stop ? canonName(stop) : (from || to || ''));
+      var viaHtml = '';
+      if (routeMode) {
+        var viaCount = {};
+        rows.forEach(function (r) {
+          var fi2 = bjPosIn(r.b, from), ti2 = bjPosIn(r.b, to);
+          if (fi2 < 0 || ti2 < 0) return;
+          var lo = Math.min(fi2, ti2), hi = Math.max(fi2, ti2);
+          var sts2 = r.b.stoppages || [];
+          for (var vi = 0; vi < sts2.length; vi++) {
+            if (vi + 1 > lo && vi + 1 < hi && sts2[vi].name) {
+              viaCount[sts2[vi].name] = (viaCount[sts2[vi].name] || 0) + 1;
+            }
+          }
+        });
+        var viaTop = Object.keys(viaCount).sort(function (a, b) { return viaCount[b] - viaCount[a]; })
+          .filter(function (n) { return slug(n) !== slug(from) && slug(n) !== slug(to); }).slice(0, 4);
+        if (viaTop.length) {
+          viaHtml = '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0"><span class="label-en">via </span><span class="label-bn">হয়ে </span>' + esc(viaTop.join(' · ')) + '</p>';
+        }
+      }
       el.innerHTML =
         '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
-        freshnessNote() +
         '<div class="back-btn" onclick="location.hash=' + String.fromCharCode(39) + '#/' + String.fromCharCode(39) + '">' + icon('chevronLeft') + ' <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>' +
-        '<h2 class="page-title"><span class="label-en">Search Results</span><span class="label-bn">সার্চ ফলাফল</span> <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(' + rows.length + ')</span></h2>' +
-        '<p style="font-size:12px;color:var(--ink-dim);margin:2px 0 4px">Data updated: ' + esc((DATA.meta || {}).last_updated || '') + '</p>' +
-        (from || to ? '<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">' + esc(from || '…') + ' → ' + esc(to || '…') + (stop ? ' <span class="badge badge-ac">stop ' + esc(stop) + '</span>' : '') + '</p>' : '') +
-        (stop && !from && !to ? '<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px"><span class="label-en">Buses halting at</span><span class="label-bn">এই স্টপেজে থামে</span> ' + esc(stop) + '</p>' : '') +
+        '<h2 class="page-title" style="text-align:center;margin-bottom:2px">' + esc(titleTxt) + ' <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(' + rows.length + ')</span></h2>' +
+        viaHtml +
+        (stop && !from && !to && window.__bjDepCount ? '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0">' + window.__bjStopCount + ' <span class="label-en">buses · </span><span class="label-bn">বাস · </span>' + window.__bjDepCount + ' <span class="label-en">departures today</span><span class="label-bn">আজকের ছাড়ার সময়</span></p>' : '') +
+        (stop && !from && !to && window.__bjDepCount ? '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:2px 0 10px"><span class="label-en">all in time order</span><span class="label-bn">সময় অনুযায়ী সাজানো</span></p>' : '') +
         (near.length ? '<p class="near-label">' + icon('clock') + ' <span class="label-en">' + near.length + ' buses around current time</span><span class="label-bn">' + near.length + ' বাস বর্তমান সময়ের কাছাকাছি</span></p>' : '') +
-        (stop && !from && !to && window.__bjDepCount ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px">' + window.__bjStopCount + ' <span class="label-en">buses · </span><span class="label-bn">বাস · </span>' + window.__bjDepCount + ' <span class="label-en">departures today, in time order</span><span class="label-bn">আজকের ছাড়ার সময়, ক্রম অনুযায়ী</span></p>' : '') +
         (routeMode || (stop && !from && !to) ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px"><b style="color:var(--amber)">⇗</b> <span class="label-en">outward · </span><span class="label-bn">যাত্রা · </span><b style="color:var(--maroon)">⇙</b> <span class="label-en">return service</span><span class="label-bn">ফেরার বাস</span></p>' : '') +
         (rows.length ? rows.map(function (r, i) {
           var b = r.b;
@@ -349,6 +389,7 @@
             (b.fare ? '<span>' + esc(b.fare) + '</span>' : '') + '</div>' +
             '</div>' + tPill + '</div>';
         }).join('') : emptyState) +
+        '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:18px 0 0;border-top:1px solid var(--line,rgba(33,28,22,.13));padding-top:10px"><span class="label-en">Data last refreshed: </span><span class="label-bn">শেষ হালনাগাদ: </span><strong>' + esc((DATA.meta || {}).last_updated || '—') + '</strong> · <span class="label-en">Schedules may change. Verify with the operator before travel.</span><span class="label-bn">সময়সূচি বদলাতে পারে। যাত্রার আগে যাচাই করে নিন।</span></p>' +
         '</div>';
     };
   }
