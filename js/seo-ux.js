@@ -81,9 +81,9 @@
       var en = tg.querySelector('.label-en');
       var bn2 = tg.querySelector('.label-bn');
       if (en && en.textContent.indexOf('Complete bus timings') === 0) {
-        en.textContent = 'Bus time table — SBSTC · NBSTC · WBTC & private buses.';
+        en.textContent = 'Bus time table — SBSTC, NBSTC, WBTC & private buses.';
       }
-      if (bn2) bn2.textContent = 'বাস টাইম টেবিল — SBSTC · NBSTC · WBTC ও প্রাইভেট বাস।';
+      if (bn2) bn2.textContent = 'বাস টাইম টেবিল — SBSTC, NBSTC, WBTC ও বেসরকারি বাস';
     }
 
     var mapped = collectMapped();
