@@ -45,12 +45,12 @@
       (total), times run through parseTime+fmtTime (raw "12:65 AM"
       style data garbage can no longer appear), rows sorted from now,
       and the data-refresh line lives at the BOTTOM (was a box on top).
-  13. Home page board v3: tabs (Kolkata/Digha/Burdwan) replaced by ONE
-      search line — type any bus stand, pick a match, the board shows
-      that stand's departures. Duplicate section heading removed (label
-      stays inside the box only), clock smaller, "Popular stops" text
-      gone, and Popular Routes is now a compact single-line horizontal
-      scroller with more routes (14).
+  13. Home page board v4: a compact stand bar replaces the old
+      search line — bus stand NAME on the left (always visible,
+      shows which stand the board is for), a small round search
+      button on the right that opens a dropdown to change the
+      stand. Popular Routes wrap onto multiple lines so ALL chips
+      are visible — no horizontal scrolling on mobile.
    ============================================================ */
 (function () {
   'use strict';
@@ -530,13 +530,13 @@
       var geoHtml = lvNear.length
         ? '<div class="lv-geo"><span class="label-en">Detected near</span><span class="label-bn">কাছাকাছি শনাক্ত</span><b>' + esc(lvNear[0].name) + '</b>' + (lvNear[0].dist != null ? '<span>' + Math.round(lvNear[0].dist) + ' km</span>' : '') + '</div>'
         : '';
-      var savedQ = window.__bjLvQ || '';
       wrap.innerHTML =
         '<div class="lv-clock-wrap">' +
         '<div><div class="lv-clock-label"><span class="label-en">Bus Stand Departure Times</span><span class="label-bn">বাস স্ট্যান্ডের ছাড়ার সময়</span></div>' +
         '<div class="lv-clock-big">' + clockT + '<small>IST</small></div></div>' + geoHtml + '</div>' +
         '<div class="lv-board">' +
-        '<div class="lv-search"><input id="lvSearchInput" type="text" autocomplete="off" placeholder="' + (LANG === 'bn' ? 'বাস স্ট্যান্ড লিখুন…' : 'Type a bus stand…') + '" value="' + escHtml(savedQ) + '" aria-label="Search bus stand"></div>' +
+        '<div class="lv-standbar"><span class="lv-standname">' + esc(lvOrigin) + '</span>' +
+        '<button class="lv-findbtn" type="button" aria-label="Change bus stand">' + FIND_SVG + '</button></div>' +
         '<div id="lvRows">' + rows + '</div></div>';
     };
   }
@@ -622,6 +622,7 @@
     'Share on X': 'X'
   };
   var FB_SVG = '<svg viewBox="0 0 24 24" style="width:14px;height:14px" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.15v2.3H7.4V13h2.75v8h3.35z"/></svg>';
+  var FIND_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>';
   function compactShareRow() {
     document.querySelectorAll('.wa-row .map-btn, .wa-row .wa-btn, .wa-row .share-x-btn').forEach(function (btn) {
       if (btn.classList.contains('share-x-btn') && !btn.dataset.bjFb) {
@@ -812,27 +813,41 @@
     };
   }
 
-  /* ---- 13b. Board stand-search wiring (delegated, survives re-renders) ---- */
+  /* ---- 13b. Board stand bar: name + find button, dropdown search ---- */
   document.addEventListener('input', function (e) {
     if (e.target.id !== 'lvSearchInput') return;
     var q = e.target.value;
-    window.__bjLvQ = q;
     var dr = document.querySelector('.lv-mdrop');
-    if (dr) dr.remove();
+    if (!dr) return;
+    dr.querySelectorAll('.lv-m-item').forEach(function (x) { x.remove(); });
     if (!q.trim() || q.trim().length < 2) return;
     var m = findMatches(q).slice(0, 6);
-    if (!m.length) return;
-    var box = e.target.closest('.lv-search');
-    if (!box) return;
-    var d = document.createElement('div');
-    d.className = 'lv-mdrop';
-    d.innerHTML = m.map(function (n) { return '<div class="lv-m-item">' + escHtml(n) + '</div>'; }).join('');
-    box.appendChild(d);
+    m.forEach(function (n) {
+      var it = document.createElement('div');
+      it.className = 'lv-m-item';
+      it.textContent = n;
+      dr.appendChild(it);
+    });
   });
   document.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('.lv-findbtn') : null;
+    if (btn) {
+      var ex = document.querySelector('.lv-mdrop');
+      if (ex) { ex.remove(); return; }
+      var bar = btn.closest('.lv-standbar');
+      if (bar) {
+        var dr = document.createElement('div');
+        dr.className = 'lv-mdrop';
+        dr.innerHTML = '<div class="lv-msearch"><input id="lvSearchInput" type="text" autocomplete="off" placeholder="' +
+          (typeof LANG !== 'undefined' && LANG === 'bn' ? 'বাস স্ট্যান্ড লিখুন…' : 'Type a bus stand…') +
+          '" aria-label="Search bus stand"></div>';
+        bar.appendChild(dr);
+        setTimeout(function () { var ip = dr.querySelector('input'); if (ip) ip.focus(); }, 30);
+      }
+      return;
+    }
     var it = e.target.closest ? e.target.closest('.lv-m-item') : null;
     if (it) {
-      window.__bjLvQ = it.textContent;
       lvOrigin = it.textContent;
       var dr0 = document.querySelector('.lv-mdrop');
       if (dr0) dr0.remove();
@@ -840,7 +855,7 @@
       return;
     }
     var dr2 = document.querySelector('.lv-mdrop');
-    if (dr2 && !(e.target.closest && e.target.closest('.lv-search'))) dr2.remove();
+    if (dr2 && !(e.target.closest && e.target.closest('.lv-standbar'))) dr2.remove();
   });
 
   /* ---- 13c. More popular routes (14) ---- */
