@@ -76,3 +76,9 @@
 .lv-msearch input{width:100%;border:0;background:none;outline:none;font:600 13px var(--font-body);color:var(--ink,#221c16)}
 .route-chips{flex-wrap:wrap;overflow:visible}
 .route-chip{font-size:11px;padding:5px 9px;min-height:28px}
+
+/* v12: community time edit/delete */
+.community-time{cursor:pointer}
+.community-time small{color:var(--amber-ink,#7a5210)}
+.bj-del{width:34px;height:34px;border-radius:8px;border:1px solid #c0392b;background:none;color:#c0392b;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
+.bj-del:hover{background:#c0392b;color:#fff}
