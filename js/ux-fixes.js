@@ -51,6 +51,9 @@
       button on the right that opens a dropdown to change the
       stand. Popular Routes wrap onto multiple lines so ALL chips
       are visible — no horizontal scrolling on mobile.
+  14. User-submitted times are now EDITABLE: tapping a "User updated"
+      time opens the mini box pre-filled, with a delete option — a wrong
+      entry can be fixed or removed, nothing is permanent.
    ============================================================ */
 (function () {
   'use strict';
@@ -722,6 +725,13 @@
       el.innerHTML = icon('train') + ' ' + escHtml(t);
     });
     fixWeatherIcon();
+    document.querySelectorAll('.community-time').forEach(function (ct) {
+      if (ct.dataset.bjEdit) return;
+      ct.dataset.bjEdit = '1';
+      ct.title = (typeof LANG !== 'undefined' && LANG === 'bn') ? 'সম্পাদনা বা মুছুন' : 'Edit or delete this time';
+      var sm = ct.querySelector('small');
+      if (sm) sm.textContent = (typeof LANG !== 'undefined' && LANG === 'bn') ? '✎ আপনার সময় — ছুঁয়ে সম্পাদনা' : '✎ your time — tap to edit';
+    });
     if (rj && !document.querySelector('.bj-relbuses')) {
       var rid = decodeURIComponent(location.hash.split('?')[0].slice(6));
       var rb = (typeof FULL_BUSES !== 'undefined' && FULL_BUSES && FULL_BUSES[rid]) || BUSES[rid];
@@ -775,42 +785,74 @@
     val.innerHTML = WX_ICONS[key] + '<span>' + escHtml(val.textContent.trim()) + '</span>';
   }
 
-  if (typeof addCommunityTime === 'function' && !window.__bjAddTimeV2) {
-    window.__bjAddTimeV2 = true;
+  /* ---- 12b. Community times: add, EDIT and DELETE ---- */
+  var TRASH_SVG = '<svg viewBox="0 0 24 24" style="width:15px;height:15px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M6.5 7l.8 12a2 2 0 0 0 2 1.9h5.4a2 2 0 0 0 2-1.9l.8-12"/><path d="M10 11v6M14 11v6"/></svg>';
+  function openBjTimeBox(busId, stopIndex, direction, existing) {
+    document.querySelectorAll('.bj-timebox').forEach(function (x) { x.remove(); });
+    var other = communityTimes()[communityTimeKey(busId, stopIndex, direction === 'up' ? 'down' : 'up')];
+    var otherMer = other ? (other.indexOf('PM') > -1 ? 'PM' : 'AM') : null;
+    var existingMer = existing ? (existing.indexOf('PM') > -1 ? 'PM' : 'AM') : null;
+    var mer = existingMer || (otherMer === 'AM' ? 'PM' : 'AM');
+    var box = document.createElement('div');
+    box.className = 'bj-timebox';
+    box.innerHTML = '<input type="tel" placeholder="11:30" maxlength="5" aria-label="time" value="' + escHtml(existing ? existing.split(' ')[0] : '') + '">' +
+      '<button type="button" class="bj-mer" title="AM/PM"></button>' +
+      '<button type="button" class="bj-ok" title="Save">✓</button>' +
+      (existing ? '<button type="button" class="bj-del" title="Delete">' + TRASH_SVG + '</button>' : '') +
+      '<button type="button" class="bj-no" title="Close">✕</button>';
+    var input = box.querySelector('input');
+    var merBtn = box.querySelector('.bj-mer');
+    function paint() {
+      merBtn.textContent = mer;
+      merBtn.className = 'bj-mer' + (mer === 'PM' ? ' pm' : '') + (otherMer && mer === otherMer ? ' warn' : '');
+    }
+    paint();
+    merBtn.addEventListener('click', function () { mer = mer === 'AM' ? 'PM' : 'AM'; paint(); input.focus(); });
+    function save() {
+      var v = normalizeCommunityTime(input.value + ' ' + mer);
+      if (!v) { input.value = ''; input.placeholder = '11:30?'; input.focus(); return; }
+      var times = communityTimes();
+      times[communityTimeKey(busId, stopIndex, direction)] = v;
+      try { localStorage.setItem(COMMUNITY_TIME_KEY, JSON.stringify(times)); } catch (e) {}
+      box.remove();
+      render();
+    }
+    box.querySelector('.bj-ok').addEventListener('click', save);
+    box.querySelector('.bj-no').addEventListener('click', function () { box.remove(); });
+    var delBtn = box.querySelector('.bj-del');
+    if (delBtn) delBtn.addEventListener('click', function () {
+      var times = communityTimes();
+      delete times[communityTimeKey(busId, stopIndex, direction)];
+      try { localStorage.setItem(COMMUNITY_TIME_KEY, JSON.stringify(times)); } catch (e) {}
+      box.remove();
+      render();
+    });
+    input.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
+    document.body.appendChild(box);
+    setTimeout(function () { input.focus(); input.select(); }, 60);
+  }
+  if (typeof addCommunityTime === 'function' && !window.__bjAddTimeV3) {
+    window.__bjAddTimeV3 = true;
     addCommunityTime = function (busId, stopIndex, direction) {
-      document.querySelectorAll('.bj-timebox').forEach(function (x) { x.remove(); });
-      var other = communityTimes()[communityTimeKey(busId, stopIndex, direction === 'up' ? 'down' : 'up')];
-      var otherMer = other ? (other.indexOf('PM') > -1 ? 'PM' : 'AM') : null;
-      var mer = otherMer === 'AM' ? 'PM' : 'AM';
-      var box = document.createElement('div');
-      box.className = 'bj-timebox';
-      box.innerHTML = '<input type="tel" placeholder="11:30" maxlength="5" aria-label="time">' +
-        '<button type="button" class="bj-mer"></button>' +
-        '<button type="button" class="bj-ok">✓</button>' +
-        '<button type="button" class="bj-no">✕</button>';
-      var input = box.querySelector('input');
-      var merBtn = box.querySelector('.bj-mer');
-      function paint() {
-        merBtn.textContent = mer;
-        merBtn.className = 'bj-mer' + (mer === 'PM' ? ' pm' : '') + (otherMer && mer === otherMer ? ' warn' : '');
-      }
-      paint();
-      merBtn.addEventListener('click', function () { mer = mer === 'AM' ? 'PM' : 'AM'; paint(); input.focus(); });
-      function save() {
-        var v = normalizeCommunityTime(input.value + ' ' + mer);
-        if (!v) { input.value = ''; input.placeholder = '11:30?'; input.focus(); return; }
-        var times = communityTimes();
-        times[communityTimeKey(busId, stopIndex, direction)] = v;
-        try { localStorage.setItem(COMMUNITY_TIME_KEY, JSON.stringify(times)); } catch (e) {}
-        box.remove();
-        render();
-      }
-      box.querySelector('.bj-ok').addEventListener('click', save);
-      box.querySelector('.bj-no').addEventListener('click', function () { box.remove(); });
-      input.addEventListener('keydown', function (e) { if (e.key === 'Enter') save(); });
-      document.body.appendChild(box);
-      setTimeout(function () { input.focus(); }, 60);
+      openBjTimeBox(busId, stopIndex, direction, null);
     };
+  }
+  if (!window.__bjTimeEditV1) {
+    window.__bjTimeEditV1 = true;
+    document.addEventListener('click', function (e) {
+      var ct = e.target.closest ? e.target.closest('.community-time') : null;
+      if (!ct || location.hash.indexOf('#/bus/') !== 0) return;
+      var row = ct.closest('.stop-row');
+      if (!row) return;
+      var all = Array.prototype.slice.call(document.querySelectorAll('.schedule-table .stop-row'));
+      var stopIndex = all.indexOf(row);
+      if (stopIndex < 0) return;
+      var dir = ct.closest('.time-in') ? 'down' : 'up';
+      var busId = decodeURIComponent(location.hash.split('?')[0].slice(6));
+      var cur = communityTimes()[communityTimeKey(busId, stopIndex, dir)] || '';
+      if (!cur) return;
+      openBjTimeBox(busId, stopIndex, dir, cur);
+    });
   }
 
   /* ---- 13b. Board stand bar: name + find button, dropdown search ---- */
