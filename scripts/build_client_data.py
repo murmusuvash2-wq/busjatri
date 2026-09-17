@@ -7,6 +7,9 @@ app-index.json is now self-sufficient for search:
   (js/ux-fixes.js rebuilds b.stoppages with um/dm after load, so search
   covers BOTH directions of every service - return journeys too)
 - stops entries keep only {name, nearest_station} (bus_ids were dead weight)
+
+Stop names are whitespace-collapsed (scraped names sometimes contain embedded
+newlines), so search and the datalist see one clean spelling.
 """
 import json
 from pathlib import Path
@@ -17,8 +20,11 @@ source = json.loads((ROOT / "data" / "busjatri_data.json").read_text(encoding="u
 sn = []
 sn_index = {}
 
+def tidy(n):
+    return " ".join(str(n or "").split())
+
 def stop_id(name):
-    name = name or ""
+    name = tidy(name)  # collapse newlines / extra spaces
     if name not in sn_index:
         sn_index[name] = len(sn)
         sn.append(name)
@@ -43,6 +49,8 @@ search_fields = ("id", "bus_name", "reg_no", "bus_type", "origin", "destination"
 search_buses = []
 for bus in source["buses"]:
     b = {k: bus.get(k) for k in search_fields}
+    b["origin"] = tidy(b.get("origin"))
+    b["destination"] = tidy(b.get("destination"))
     stop_list = bus.get("stoppages") or []
     sx = [stop_id(s.get("name")) for s in stop_list]
     if sx:
@@ -53,7 +61,8 @@ for bus in source["buses"]:
 
 stops = {}
 for key, s in (source.get("stops") or {}).items():
-    stops[key] = {"name": s.get("name"), "nearest_station": s.get("nearest_station")}
+    ck = tidy(key)
+    stops[ck] = {"name": ck, "nearest_station": s.get("nearest_station")}
 
 index = {
     "meta": source["meta"],

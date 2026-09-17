@@ -25,10 +25,12 @@ jobs:
       - name: Fill from own stoppage data (offline, safe)
         run: python3 scripts/fill_missing_times.py --write
 
-      - name: Crawl wbbustime.in (optional)
-        if: ${{ github.event.inputs.crawl == 'true' }}
+      - name: Crawl wbbustime.in
+        if: ${{ github.event.inputs.crawl == 'true' || github.event_name == 'schedule' }}
         run: |
-          if [ "${{ github.event.inputs.dry_run_crawl }}" = "false" ]; then
+          DRY="${{ github.event.inputs.dry_run_crawl }}"
+          if [ "${{ github.event_name }}" = "schedule" ]; then DRY=false; fi
+          if [ "$DRY" = "false" ]; then
             python3 scripts/fill_missing_times.py --crawl --write
           else
             python3 scripts/fill_missing_times.py --crawl --dry-run
