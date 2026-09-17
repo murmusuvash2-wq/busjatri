@@ -10,6 +10,9 @@ on:
       - 'scripts/apply_ux_fixes.py'
       - 'scripts/gen_seo_pages.py'
       - 'scripts/finalize_pages.py'
+      - 'scripts/add_faq.py'
+      - 'scripts/polish_route_pages.py'
+      - 'scripts/add_ga4.py'
       - 'scripts/build_client_data.py'
       - '.github/workflows/regenerate-seo-pages.yml'
 
