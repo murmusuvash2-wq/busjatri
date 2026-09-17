@@ -428,7 +428,7 @@ function renderHome(el) {
           <button class="search-btn" onclick="doSearch()">${icon('search')} <span class="label-en">Search buses</span><span class="label-bn">খুঁজুন</span></button>
           <a class="browse-btn" href="bus-time-table/"><span class="label-en">Browse all timetables</span><span class="label-bn">সব টাইমটেবিল দেখুন</span> →</a>
         </div>
-        <datalist id="stopList">${Object.values(STOPS).slice(0, 800).map(s => `<option value="${esc(s.name)}">`).join('')}</datalist>
+        <datalist id="stopList">${[...new Set([...Object.keys(STOPS), ...Object.values(BUSES).flatMap(b => [b.origin, b.destination]).filter(Boolean)])].map(n => `<option value="${esc(n)}">`).join('')}</datalist>
       </div>
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
       <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></p>
