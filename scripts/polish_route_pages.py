@@ -11,7 +11,7 @@
    in localStorage under the same "seo-theme" key the timetable index uses,
    so dark mode stays in sync across all pages.
 
-Run with no arguments.
+Run with no arguments. (rev 2026-09-17b)
 """
 import json, re
 from pathlib import Path
