@@ -84,10 +84,12 @@ def fetch(url, tries=2, timeout=20):
 def find_candidate_urls_on_wbbustime(missing_buses):
     """Discover wbbustime.in route pages and index them by (from, to)."""
     html = fetch("https://wbbustime.in/all-routes/")
-    links = re.findall(r'href="(https://wbbustime\.in/bus-timetable/[^"]+)"[^>]*>([^<]+)', html)
+    # links may be absolute (https://wbbustime.in/bus-timetable/...) or relative (/bus-timetable/...)
+    links = re.findall(r'href="(?:https://wbbustime\.in)?(/bus-timetable/[^"]+)"[^>]*>([^<]+)', html)
     # links text like "Kharagpur to Burdwan Bus Timetable, ..."
     idx = {}
-    for url, text in links:
+    for path, text in links:
+        url = "https://wbbustime.in" + path
         m = re.search(r"([A-Za-z .&()'-]+?)\s*(?:→| to )\s*([A-Za-z .&()'-]+?)(?:\s+Bus\b|$)", text)
         if m:
             idx[(m.group(1).strip().lower(), m.group(2).strip().lower())] = url
