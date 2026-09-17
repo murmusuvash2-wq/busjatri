@@ -3,9 +3,10 @@
 
 For each bus-time-table/<from>-to-<to>.html page, computes real answers from
 data/busjatri_data.json: first bus, last bus, night buses, journey duration,
-operators, via-stoppages and (for SBSTC routes) fare. The existing FAQPage
-JSON-LD is replaced; the visible FAQ section is re-created idempotently.
-Run with no arguments.
+operators, via-stoppages and (for SBSTC routes) fare. The generator's own
+plain FAQ section is removed (superseded); the FAQPage JSON-LD is replaced;
+the visible FAQ section is re-created idempotently. Times may be AM/PM or
+24-hour (09:00) format. Run with no arguments.
 """
 import json, re
 from pathlib import Path
@@ -14,19 +15,23 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGES = ROOT / 'bus-time-table'
 DATA = json.loads((ROOT / 'data' / 'busjatri_data.json').read_text(encoding='utf-8'))
 
-TIME_RE = re.compile(r'^(\d{1,2}):(\d{2})\s*(AM|PM)$', re.I)
+TIME_RE = re.compile(r'^(?:PRE\s+)?(\d{1,2})[:.](\d{2})(?:\s*(AM|PM))?$', re.I)
 
 def to_min(t):
     m = TIME_RE.match((t or '').strip())
     if not m:
         return None
     h, mi = int(m.group(1)), int(m.group(2))
-    ap = m.group(3).upper()
+    ap = (m.group(3) or '').upper()
     if ap == 'AM':
         h = 0 if h == 12 else h
-    else:
+    elif ap == 'PM':
         h = 12 if h == 12 else h + 12
-    return h * 60 + mi
+    # no AM/PM -> 24-hour clock (09:00 -> 9:00 AM, 17:00 -> 5:00 PM)
+    if h > 23:
+        return None
+    v = h * 60 + mi
+    return None if v == 0 else v  # 0:00 is junk data, treat as missing
 
 def fmt(m):
     h, mi = divmod(m, 60)
@@ -66,10 +71,12 @@ if sb.exists():
     except Exception as e:
         print('  sbstc fares skipped:', e)
 
-FAQ_CSS = '<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid #e8e0d0;border-radius:10px;margin:8px 0;background:#fffdf7}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:#b8791f;font-weight:700}.bj-faq details[open] summary::after{content:"\\2013"}.bj-faq .faq-a{padding:0 14px 12px;color:#5a5348;font-size:.88rem;line-height:1.55}</style>'
+FAQ_CSS = '<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\\2013"}.bj-faq .faq-a{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>'
 
 JSONLD_RE = re.compile(r'<script type="application/ld\+json">\{"@context": "https://schema\.org", "@type": "FAQPage".*?</script>', re.S)
 FAQ_SECTION_RE = re.compile(r'<section class="bj-faq".*?</section>', re.S)
+# the generator's own (smaller, plain) FAQ section — superseded by bj-faq
+OLD_FAQ_RE = re.compile(r'<section class="seo-section">\s*<h3 class="section-title">FAQ</h3>.*?</section>', re.S)
 
 def first_dep(b):
     t = to_min(b.get('departure_time'))
@@ -186,6 +193,7 @@ def main():
         qa = build_qa(fr, to, buses)
         sec, jsonld = render(qa, fr, to)
         s = FAQ_SECTION_RE.sub('', s)
+        s = OLD_FAQ_RE.sub('', s)
         s = JSONLD_RE.sub(jsonld, s)
         if '</main>' in s:
             s = s.replace('</main>', sec + '\n</main>', 1)
