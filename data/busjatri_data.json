@@ -6541,7 +6541,7 @@
      "no": 1,
      "name": "Garchakraberia",
      "up_time": "2:20 AM",
-     "down_time": "10:00 AM"
+     "down_time": "10:00 PM"
     },
     {
      "no": 2,
@@ -9437,7 +9437,7 @@
     {
      "no": 1,
      "name": "Manihara",
-     "up_time": "9:00 AM",
+     "up_time": "9:00 PM",
      "down_time": "7:30 PM"
     },
     {
@@ -12275,7 +12275,7 @@
     {
      "no": 13,
      "name": "Bhubaneswar",
-     "up_time": "3:30 AM",
+     "up_time": "3:30 PM",
      "down_time": "7:30 PM"
     }
    ],
@@ -13671,7 +13671,7 @@
     {
      "no": 1,
      "name": "Bankura",
-     "up_time": "4:50 AM",
+     "up_time": "4:50 PM",
      "down_time": "4:40 PM"
     },
     {
@@ -18553,7 +18553,7 @@
      "no": 2,
      "name": "Kotulpur",
      "up_time": "5:40 AM",
-     "down_time": "5:50 AM"
+     "down_time": "5:50 PM"
     },
     {
      "no": 3,
@@ -20466,7 +20466,7 @@
      "no": 20,
      "name": "Asansol",
      "up_time": "10:15 AM",
-     "down_time": "1:10 AM"
+     "down_time": "1:10 PM"
     },
     {
      "no": 21,
@@ -25055,7 +25055,7 @@
      "no": 17,
      "name": "Gidhni",
      "up_time": "",
-     "down_time": "9:05 AM"
+     "down_time": "9:05 PM"
     }
    ],
    "source": "wbbus.in",
@@ -28837,7 +28837,7 @@
      "no": 1,
      "name": "Garchakraberia",
      "up_time": "2:20 AM",
-     "down_time": "10:00 AM"
+     "down_time": "10:00 PM"
     },
     {
      "no": 2,
@@ -37450,7 +37450,7 @@
     {
      "no": 1,
      "name": "Manihara",
-     "up_time": "9:00 AM",
+     "up_time": "9:00 PM",
      "down_time": "7:30 PM"
     },
     {
@@ -38015,7 +38015,7 @@
      "no": 2,
      "name": "Dahijuri",
      "up_time": "7:40 AM",
-     "down_time": "5:00 AM"
+     "down_time": "5:00 PM"
     },
     {
      "no": 3,
@@ -44472,7 +44472,7 @@
      "no": 3,
      "name": "Gopiballabpur",
      "up_time": "8:00 AM",
-     "down_time": "3:15 AM"
+     "down_time": "3:15 PM"
     },
     {
      "no": 4,
@@ -45955,7 +45955,7 @@
     {
      "no": 13,
      "name": "Bhubaneswar",
-     "up_time": "3:30 AM",
+     "up_time": "3:30 PM",
      "down_time": "7:30 PM"
     }
    ],
@@ -48327,7 +48327,7 @@
     {
      "no": 16,
      "name": "Siliguri",
-     "up_time": "6:30 AM",
+     "up_time": "6:30 PM",
      "down_time": "6:50 PM"
     }
    ],
@@ -51174,7 +51174,7 @@
     {
      "no": 1,
      "name": "Bankura",
-     "up_time": "4:50 AM",
+     "up_time": "4:50 PM",
      "down_time": "4:40 PM"
     },
     {
@@ -54645,7 +54645,7 @@
     {
      "no": 1,
      "name": "Khatra",
-     "up_time": "6:00 AM",
+     "up_time": "6:00 PM",
      "down_time": "5:30 PM"
     },
     {
@@ -57610,7 +57610,7 @@
     {
      "no": 1,
      "name": "Molian",
-     "up_time": "6:30 AM",
+     "up_time": "6:30 PM",
      "down_time": ""
     },
     {
@@ -61896,7 +61896,7 @@
      "no": 2,
      "name": "Chhatna",
      "up_time": "10:25 AM",
-     "down_time": "2:00 AM"
+     "down_time": "2:00 PM"
     },
     {
      "no": 3,
@@ -63515,7 +63515,7 @@
      "no": 16,
      "name": "Bangla",
      "up_time": "10:40 AM",
-     "down_time": "12:35 AM"
+     "down_time": "12:35 PM"
     },
     {
      "no": 17,
@@ -63878,7 +63878,7 @@
      "no": 2,
      "name": "Kotulpur",
      "up_time": "5:40 AM",
-     "down_time": "5:50 AM"
+     "down_time": "5:50 PM"
     },
     {
      "no": 3,
@@ -64980,7 +64980,7 @@
      "no": 4,
      "name": "Jhantipahari",
      "up_time": "2:10 PM",
-     "down_time": "5:00 AM"
+     "down_time": "5:00 PM"
     },
     {
      "no": 5,
@@ -66596,7 +66596,7 @@
     {
      "no": 6,
      "name": "Belda",
-     "up_time": "10:30 AM",
+     "up_time": "10:30 PM",
      "down_time": "1:30 AM"
     },
     {
@@ -69745,7 +69745,7 @@
     {
      "no": 1,
      "name": "Tatanagar",
-     "up_time": "8:50 AM",
+     "up_time": "8:50 PM",
      "down_time": "9:10 PM"
     },
     {
@@ -88678,7 +88678,7 @@
     {
      "no": 15,
      "name": "Kharagpur",
-     "up_time": "11:50 AM",
+     "up_time": "11:50 PM",
      "down_time": "12:25 PM"
     }
    ],
@@ -91020,7 +91020,7 @@
      "no": 2,
      "name": "Lodhasuli",
      "up_time": "6:15 AM",
-     "down_time": "8:45 AM"
+     "down_time": "8:45 PM"
     },
     {
      "no": 3,
@@ -91215,7 +91215,7 @@
      "no": 1,
      "name": "Barabazar",
      "up_time": "5:40 AM",
-     "down_time": "5:20 AM"
+     "down_time": "5:20 PM"
     },
     {
      "no": 2,
@@ -94264,7 +94264,7 @@
      "no": 6,
      "name": "Salap",
      "up_time": "8:55 AM",
-     "down_time": "7:15 AM"
+     "down_time": "7:15 PM"
     },
     {
      "no": 7,
@@ -95423,7 +95423,7 @@
      "no": 7,
      "name": "Dahijuri",
      "up_time": "4:00 PM",
-     "down_time": "6:25 AM"
+     "down_time": "6:25 PM"
     },
     {
      "no": 8,
@@ -96381,7 +96381,7 @@
     {
      "no": 1,
      "name": "Baruipur",
-     "up_time": "6:05 AM",
+     "up_time": "6:05 PM",
      "down_time": ""
     },
     {
@@ -96890,7 +96890,7 @@
     {
      "no": 1,
      "name": "Durgapur (Station)",
-     "up_time": "6:40 AM",
+     "up_time": "6:40 PM",
      "down_time": "5:00 PM"
     },
     {
@@ -99484,7 +99484,7 @@
     {
      "no": 1,
      "name": "Bankura",
-     "up_time": "6:10 AM",
+     "up_time": "6:10 PM",
      "down_time": "5:30 PM"
     },
     {
@@ -99581,7 +99581,7 @@
     {
      "no": 1,
      "name": "Khatra",
-     "up_time": "6:30 AM",
+     "up_time": "6:30 PM",
      "down_time": "6:30 PM"
     },
     {
@@ -101423,7 +101423,7 @@
      "no": 11,
      "name": "Raiganj",
      "up_time": "3:30 AM",
-     "down_time": "9:00 AM"
+     "down_time": "9:00 PM"
     },
     {
      "no": 12,
@@ -102211,7 +102211,7 @@
      "no": 7,
      "name": "Bandwan",
      "up_time": "10:10 AM",
-     "down_time": "2:55 AM"
+     "down_time": "2:55 PM"
     },
     {
      "no": 8,
@@ -106724,7 +106724,7 @@
     {
      "no": 1,
      "name": "Parsola",
-     "up_time": "6:40 AM",
+     "up_time": "6:40 PM",
      "down_time": ""
     },
     {
@@ -106937,7 +106937,7 @@
      "no": 8,
      "name": "Belpahari",
      "up_time": "7:35 AM",
-     "down_time": "4:00 AM"
+     "down_time": "4:00 PM"
     },
     {
      "no": 9,
