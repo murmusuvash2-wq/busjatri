@@ -64,3 +64,6 @@ print(f'finalized pages with stats: {stops:,} stops, {routes:,} routes, {buses:,
 # --- GA4 analytics: keep the tag on every (re)generated page (idempotent) ---
 import subprocess, sys
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_ga4.py')], check=True)
+
+# --- Data-driven FAQ (visible + JSON-LD) on every route page (idempotent) ---
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_faq.py')], check=True)

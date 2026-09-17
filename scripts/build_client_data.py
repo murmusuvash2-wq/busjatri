@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-source = json.loads((ROOT / "data/busjatri_data.json").read_text(encoding="utf-8"))
+source = json.loads((ROOT / "data" / "busjatri_data.json").read_text(encoding="utf-8"))
 
 sn = []
 sn_index = {}
@@ -39,7 +39,7 @@ def t2m(t):
         h = 0
     return (h % 24) * 60 + mi
 
-search_fields = ("id", "bus_name", "bus_type", "origin", "destination", "departure_time", "total_stoppages")
+search_fields = ("id", "bus_name", "reg_no", "bus_type", "origin", "destination", "departure_time", "total_stoppages")
 search_buses = []
 for bus in source["buses"]:
     b = {k: bus.get(k) for k in search_fields}
@@ -62,8 +62,8 @@ index = {
     "routes": source["routes"],
     "stops": stops,
 }
-(ROOT / "data/app-index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-(ROOT / "data/bus-details.json").write_text(json.dumps({b["id"]: b for b in source["buses"]}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+(ROOT / "data" / "app-index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+(ROOT / "data" / "bus-details.json").write_text(json.dumps({b["id"]: b for b in source["buses"]}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print("Built app-index.json (compact + stop indexes + times) and bus-details.json")
-print("Initial index bytes:", (ROOT / "data/app-index.json").stat().st_size)
-print("Lazy detail bytes:", (ROOT / "data/bus-details.json").stat().st_size)
+print("Initial index bytes:", (ROOT / "data" / "app-index.json").stat().st_size)
+print("Lazy detail bytes:", (ROOT / "data" / "bus-details.json").stat().st_size)
