@@ -42,7 +42,7 @@ patch('js/ux-fixes.js',
         try { await bjTimedLoad(); } catch (e) {}
         all = Object.values(FULL_BUSES || BUSES);""",
 """      if (routeMode) {
-        /* compact index has full stop coverage - no 5MB download, instant results */
+        /* compact index has full stop coverage \u2014 no 5MB download, instant results */
         all = Object.values(BUSES);""")
 
 patch('js/ux-fixes.js',
