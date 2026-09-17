@@ -99,7 +99,7 @@ def build_qa(fr, to, buses):
     deps = [d for d in (first_dep(b) for b in pool) if d is not None]
     qa = []
     if deps:
-        qa.append((f"What is the first bus from {fr_t} to {to_t}?.strip()",
+        qa.append((f"What is the first bus from {fr_t} to {to_t}?",
                    f"The first bus from {fr_t} to {to_t} departs at {fmt(min(deps))}."))
         qa.append((f"What is the last bus from {fr_t} to {to_t}?",
                    f"The last bus from {fr_t} to {to_t} departs at {fmt(max(deps))}."))
