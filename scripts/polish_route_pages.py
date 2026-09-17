@@ -18,7 +18,7 @@
 5. ROUTE MAP TRIM: route pages with many stops get the middle stops
    collapsed into a '+N more' marker so names don't overlap on phones.
 
-Run with no arguments. (rev 2026-09-18a)
+Run with no arguments. (rev 2026-09-18b)
 """
 import json, re
 from pathlib import Path
@@ -162,13 +162,13 @@ def beautify_place_page(s, stem, stems):
     return s, changed
 
 STATS_RE = re.compile(
-    r'<section style="\s*display:flex;\s*gap:10px;\s*flex-wrap:wrap;\s*margin-bottom:32px;\s*">\s*'
-    r'<div style="\s*flex:1 1 170px;\s*background:var\(-\-panel\);\s*border:1px solid var\(-\-border\);\s*border-radius:14px;\s*padding:15px;\s*">\s*'
+    r'<section style="\s*display:flex;\s*gap:10px;\s*flex-wrap:wrap;\s*margin-bottom:32px;?\s*">\s*'
+    r'<div style="\s*flex:1 1 170px;\s*background:var\(-\-panel\);\s*border:1px solid var\(-\-border\);\s*border-radius:14px;\s*padding:15px;?\s*">\s*'
     r'<div style="font-size:12px;color:var\(-\-ink-dim\)">\s*([^<]+?)\s*</div>\s*'
-    r'<strong style="font-size:1\.25rem">\s*([^<]+?)\s*</strong>\s*</div>\s*'
-    r'<div style="\s*flex:1 1 170px;\s*background:var\(-\-panel\);\s*border:1px solid var\(-\-border\);\s*border-radius:14px;\s*padding:15px;\s*">\s*'
+    r'<strong[^>]*>\s*([^<]+?)\s*</strong>\s*</div>\s*'
+    r'<div style="\s*flex:1 1 170px;\s*background:var\(-\-panel\);\s*border:1px solid var\(-\-border\);\s*border-radius:14px;\s*padding:15px;?\s*">\s*'
     r'<div style="font-size:12px;color:var\(-\-ink-dim\)">\s*([^<]+?)\s*</div>\s*'
-    r'<strong style="font-size:1\.25rem">\s*([^<]+?)\s*</strong>\s*</div>\s*</section>', re.S)
+    r'<strong[^>]*>\s*([^<]+?)\s*</strong>\s*</div>\s*</section>', re.S)
 
 ONE_BOX_T = ('<section style="display:flex;gap:30px;flex-wrap:wrap;margin-bottom:32px;'
              'background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:15px 18px">'
