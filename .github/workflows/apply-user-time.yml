@@ -22,9 +22,13 @@ jobs:
         run: python3 scripts/patches/patch_user_time.py
 
       - name: Syntax check
+        env:
+          SITE_BASE: https://busjatri.in
         run: python3 -c "import py_compile; py_compile.compile('scripts/gen_seo_pages.py', doraise=True)"
 
       - name: Generate all SEO pages
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           python3 scripts/gen_seo_pages.py
           python3 scripts/build_client_data.py
@@ -41,6 +45,8 @@ jobs:
           python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml')"
 
       - name: Commit and push
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

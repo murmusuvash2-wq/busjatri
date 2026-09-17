@@ -23,6 +23,8 @@ jobs:
         run: python3 scripts/add_railway_stations.py
 
       - name: Regenerate SEO pages
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           python3 scripts/gen_seo_pages.py
           python3 scripts/build_client_data.py

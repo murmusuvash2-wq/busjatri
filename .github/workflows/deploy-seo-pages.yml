@@ -19,6 +19,8 @@ jobs:
           rm files.zip
 
       - name: Validate contents
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           test -f sitemap.xml && test -f robots.txt && test -f bus-time-table/index.html
           test -f scripts/scrape_bussathi.py && test -f scripts/rebuild_data.py && test -f scripts/gen_seo_pages.py

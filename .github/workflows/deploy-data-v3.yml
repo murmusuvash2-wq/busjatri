@@ -33,6 +33,8 @@ jobs:
           python3 scripts/patches/fix_animation.py
 
       - name: Regenerate SEO pages
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           rm -rf bus-time-table
           python3 scripts/gen_seo_pages.py
