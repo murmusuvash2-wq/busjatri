@@ -6,7 +6,9 @@ data/busjatri_data.json: first bus, last bus, night buses, journey duration,
 operators, via-stoppages and (for SBSTC routes) fare. The generator's own
 plain FAQ section is removed (superseded); the FAQPage JSON-LD is replaced;
 the visible FAQ section is re-created idempotently. Times may be AM/PM or
-24-hour (09:00) format. Run with no arguments.
+24-hour (09:00) format. The answer class is `bjfa` (NOT `faq-a` — that
+class is used by seo.css with max-height:0 and would hide the answers).
+Run with no arguments.
 """
 import json, re
 from pathlib import Path
@@ -71,7 +73,7 @@ if sb.exists():
     except Exception as e:
         print('  sbstc fares skipped:', e)
 
-FAQ_CSS = '<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\\2013"}.bj-faq .faq-a{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>'
+FAQ_CSS = '<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\\2013"}.bj-faq .bjfa{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>'
 
 JSONLD_RE = re.compile(r'<script type="application/ld\+json">\{"@context": "https://schema\.org", "@type": "FAQPage".*?</script>', re.S)
 FAQ_SECTION_RE = re.compile(r'<section class="bj-faq".*?</section>', re.S)
@@ -155,7 +157,7 @@ def build_qa(fr, to, buses):
 
 def render(qa, fr_t, to_t):
     items = "".join(
-        f'<details class="faq-item"><summary>{esc(q)}</summary><div class="faq-a">{esc(a)}</div></details>'
+        f'<details class="faq-item"><summary>{esc(q)}</summary><div class="bjfa">{esc(a)}</div></details>'
         for q, a in qa)
     sec = (f'{FAQ_CSS}\n<section class="bj-faq" aria-label="FAQ">'
            f'<h2>Frequently Asked Questions — {esc(fr_t)} to {esc(to_t)}</h2>{items}</section>')
