@@ -13,8 +13,12 @@
 3. PLACE PAGE DESIGN: buses-from-* pages get their plain dot-separated
    destination paragraph converted to pill-chip links (matching route-page
    chip design) and their popular-route rows get hover polish.
+4. ONE STAT BOX: place/operator pages merge the two stat boxes (Listed
+   services + Destinations) into a single box.
+5. ROUTE MAP TRIM: route pages with many stops get the middle stops
+   collapsed into a '+N more' marker so names don't overlap on phones.
 
-Run with no arguments. (rev 2026-09-17c)
+Run with no arguments. (rev 2026-09-18a)
 """
 import json, re
 from pathlib import Path
@@ -157,6 +161,52 @@ def beautify_place_page(s, stem, stems):
         changed = True
     return s, changed
 
+STATS_RE = re.compile(
+    r'<section style="\s*display:flex;\s*gap:10px;\s*flex-wrap:wrap;\s*margin-bottom:32px;\s*">\s*'
+    r'<div style="\s*flex:1 1 170px;\s*background:var\(-\-panel\);\s*border:1px solid var\(-\-border\);\s*border-radius:14px;\s*padding:15px;\s*">\s*'
+    r'<div style="font-size:12px;color:var\(-\-ink-dim\)">\s*([^<]+?)\s*</div>\s*'
+    r'<strong style="font-size:1\.25rem">\s*([^<]+?)\s*</strong>\s*</div>\s*'
+    r'<div style="\s*flex:1 1 170px;\s*background:var\(-\-panel\);\s*border:1px solid var\(-\-border\);\s*border-radius:14px;\s*padding:15px;\s*">\s*'
+    r'<div style="font-size:12px;color:var\(-\-ink-dim\)">\s*([^<]+?)\s*</div>\s*'
+    r'<strong style="font-size:1\.25rem">\s*([^<]+?)\s*</strong>\s*</div>\s*</section>', re.S)
+
+ONE_BOX_T = ('<section style="display:flex;gap:30px;flex-wrap:wrap;margin-bottom:32px;'
+             'background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:15px 18px">'
+             '<div><div style="font-size:12px;color:var(--ink-dim)">{l1}</div>'
+             '<strong style="font-size:1.25rem">{v1}</strong></div>'
+             '<div><div style="font-size:12px;color:var(--ink-dim)">{l2}</div>'
+             '<strong style="font-size:1.25rem">{v2}</strong></div>'
+             '</section>')
+
+def merge_stats(s):
+    """Place/operator pages: merge the two stat boxes into a single box."""
+    m = STATS_RE.search(s)
+    if not m:
+        return s, False
+    box = ONE_BOX_T.format(l1=m.group(1), v1=m.group(2), l2=m.group(3), v2=m.group(4))
+    return s[:m.start()] + box + s[m.end():], True
+
+RM_STOP_RE = re.compile(r'<div class="rm-stop[^">]*">.*?</div></div>', re.S)
+
+def trim_routemap(s):
+    """Route map: with many stops the names overlap on phones. Keep the first
+    4 and last 2 stops and collapse the middle into a '+N more' marker."""
+    if 'rm-dot" style="opacity:.35' in s:  # already trimmed (idempotency guard)
+        return s, False
+    stops = RM_STOP_RE.findall(s)
+    if len(stops) <= 7:
+        return s, False
+    more = len(stops) - 6
+    marker = ('<div class="rm-stop"><div class="rm-dot" style="opacity:.35;border-style:dashed"></div>'
+              f'<div class="rm-name" style="color:var(--ink-dim)">+{more} more</div></div>')
+    keep = stops[:4] + [marker] + stops[-2:]
+    inner_old = ''.join(stops)
+    inner_new = ''.join(keep)
+    i = s.find(inner_old)
+    if i == -1:
+        return s, False
+    return s[:i] + inner_new + s[i + len(inner_old):], True
+
 def main():
     n_pages = n_linked = n_rows = 0
     stems = None
@@ -178,6 +228,12 @@ def main():
                 s = s2
                 if PLACE_CSS not in s and '</head>' in s:
                     s = s.replace('</head>', PLACE_CSS + '\n</head>', 1)
+        s2, ch = merge_stats(s)
+        if ch:
+            s = s2
+        s2, ch = trim_routemap(s)
+        if ch:
+            s = s2
         if 'id="bjThemeBtn"' not in s and '</nav>' in s:
             s = s.replace('</nav>', THEME_BTN + '\n</nav>', 1)
         if 'a.bus-row' in s and LINK_CSS not in s and '</head>' in s:
