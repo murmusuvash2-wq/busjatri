@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Generate operator/brand pages (SBSTC, NBSTC, WBTC, Shyamoli Paribahan,
 Volvo AC buses) under bus-time-table/ — same design language as the place
-pages — and register them in sitemap.xml + link them from the timetable
-index. Idempotent: pages are regenerated, sitemap/index edits are guarded.
+pages — and register them in sitemap.xml. Idempotent: pages are regenerated,
+sitemap edits are guarded. The Operators chip row was REMOVED from the
+timetable index on user request (operators stay reachable from the home
+page); update_tti() now strips it if present.
 Run with no arguments (called from finalize_pages.py).
 """
 import json, re
@@ -226,22 +228,24 @@ TTI_BLOCK = '''<h3 class="section-title" style="margin-bottom:2px">Operators</h3
 '''
 
 def update_tti():
+    """Remove the Operators chip row from the timetable index (user request:
+    operators stay reachable from the home page instead)."""
     p = PAGES / 'index.html'
     if not p.exists():
         return
     s = p.read_text(encoding='utf-8')
-    if TTI_MARKER in s:
-        print('  tti: operator links already present')
+    if TTI_MARKER not in s:
+        print('  tti: operators row not present')
         return
-    anchor = '<main'
-    i = s.find(anchor)
-    if i == -1:
-        print('  tti: no <main> anchor, skipped')
-        return
-    j = s.find('>', i) + 1
-    s = s[:j] + '\n' + TTI_BLOCK + s[j:]
-    p.write_text(s, encoding='utf-8')
-    print('  tti: operator links added')
+    before = len(s)
+    s2 = s.replace('\n' + TTI_BLOCK, '', 1)
+    if TTI_MARKER in s2:
+        # fallback: strip from the Operators heading through the bjOpsRow chip-row
+        s2 = re.sub(r'\n?<h3 class="section-title"[^>]*>Operators</h3>\s*\n?<div class="chip-row" id="bjOpsRow".*?</div>\n', '', s, count=1, flags=re.S)
+    if TTI_MARKER in s2:
+        raise SystemExit('tti: operators row marker still present after strip - review bus-time-table/index.html')
+    p.write_text(s2, encoding='utf-8')
+    print(f'  tti: operators row removed ({before - len(s2)} bytes)')
 
 def main():
     stems = {p.stem for p in PAGES.glob('*.html')}
