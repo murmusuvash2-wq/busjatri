@@ -1,0 +1,159 @@
+mode	source	origin	destination	operator	bus_type	dep	arr	target_id
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	12:05 PM	4:40 PM	
+ADD	santoshbusservice.com	Tajpur	Kolkata	Santosh Bus Service	Private - AC	12:30 PM	4:40 PM	
+ADD	santoshbusservice.com	Mandarmani	Kolkata	Santosh Bus Service	Private - AC	12:40 PM	4:40 PM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	1:05 PM	4:40 PM	
+ADD	santoshbusservice.com	Ramnagar	Kolkata	Santosh Bus Service	Private - AC	12:25 PM	4:40 PM	
+ADD	santoshbusservice.com	Henria	Kolkata	Santosh Bus Service	Private - AC	1:40 PM	4:40 PM	
+ADD	santoshbusservice.com	Bajkul	Kolkata	Santosh Bus Service	Private - AC	1:55 PM	4:40 PM	
+ADD	santoshbusservice.com	Nandakumar	Kolkata	Santosh Bus Service	Private - AC	2:20 PM	4:40 PM	
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	8:30 AM	12:50 PM	
+ADD	santoshbusservice.com	Shankarpur	Kolkata	Santosh Bus Service	Private - AC	9:10 AM	12:50 PM	
+ADD	santoshbusservice.com	Tajpur	Kolkata	Santosh Bus Service	Private - AC	9:15 AM	12:50 PM	
+ADD	santoshbusservice.com	Mandarmani	Kolkata	Santosh Bus Service	Private - AC	9:25 AM	12:50 PM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	9:45 AM	12:50 PM	
+ADD	santoshbusservice.com	Habra	Digha	Santosh Bus Service	Private - AC	5:15 AM	10:20 AM	
+ADD	santoshbusservice.com	Barasat	Contai	Santosh Bus Service	Private - AC	5:55 AM	9:20 AM	
+ADD	santoshbusservice.com	Kolkata	Contai	Santosh Bus Service	Private - AC	6:00 AM	9:20 AM	
+ADD	santoshbusservice.com	Barasat	Mandarmani	Santosh Bus Service	Private - AC	5:55 AM	9:45 AM	
+ADD	santoshbusservice.com	Kolkata	Mandarmani	Santosh Bus Service	Private - AC	6:00 AM	9:45 AM	
+ADD	santoshbusservice.com	Barasat	Tajpur	Santosh Bus Service	Private - AC	5:55 AM	9:55 AM	
+ADD	santoshbusservice.com	Kolkata	Tajpur	Santosh Bus Service	Private - AC	6:00 AM	9:55 AM	
+ADD	santoshbusservice.com	Barasat	Shankarpur	Santosh Bus Service	Private - AC	5:55 AM	10:00 AM	
+ADD	santoshbusservice.com	Kolkata	Shankarpur	Santosh Bus Service	Private - AC	6:00 AM	10:00 AM	
+ADD	santoshbusservice.com	Barasat	Digha	Santosh Bus Service	Private - AC	5:55 AM	10:20 AM	
+ADD	santoshbusservice.com	Kolkata	Digha	Santosh Bus Service	Private - AC	6:00 AM	10:20 AM	
+ADD	santoshbusservice.com	Habra	Digha	Santosh Bus Service	Private - AC	5:10 AM	10:20 AM	
+ADD	santoshbusservice.com	Habra	Contai	Santosh Bus Service	Private - AC	5:10 AM	9:30 AM	
+ADD	santoshbusservice.com	Habra	Mandarmani	Santosh Bus Service	Private - AC	5:10 AM	9:45 AM	
+ADD	santoshbusservice.com	Habra	Tajpur	Santosh Bus Service	Private - AC	5:10 AM	9:55 AM	
+ADD	santoshbusservice.com	Digha	Salt Lake	Santosh Bus Service	Private - AC	4:30 AM	9:50 AM	
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	4:30 AM	9:00 AM	
+ADD	santoshbusservice.com	Mandarmani	Salt Lake	Santosh Bus Service	Private - AC	5:15 AM	9:50 AM	
+ADD	santoshbusservice.com	Contai	Salt Lake	Santosh Bus Service	Private - AC	5:45 AM	9:50 AM	
+ADD	santoshbusservice.com	Bajkul	Salt Lake	Santosh Bus Service	Private - AC	6:10 AM	9:30 AM	
+ADD	santoshbusservice.com	Nandakumar	Salt Lake	Santosh Bus Service	Private - AC	6:40 AM	9:40 AM	
+ADD	santoshbusservice.com	Egra	Kolkata	Santosh Bus Service	Private - AC	5:10 AM	9:55 AM	
+ADD	santoshbusservice.com	Egra	Salt Lake	Santosh Bus Service	Private - AC	5:10 AM	10:00 AM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	5:55 AM	9:55 AM	
+ADD	santoshbusservice.com	Bajkul	Kolkata	Santosh Bus Service	Private - AC	6:40 AM	9:55 AM	
+ADD	santoshbusservice.com	Nandakumar	Kolkata	Santosh Bus Service	Private - AC	7:00 AM	9:55 AM	
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	9:55 AM	2:20 PM	
+ADD	santoshbusservice.com	Tajpur	Kolkata	Santosh Bus Service	Private - AC	10:20 AM	2:20 PM	
+ADD	santoshbusservice.com	Mandarmani	Kolkata	Santosh Bus Service	Private - AC	10:30 AM	2:20 PM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	11:00 AM	2:20 PM	
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	10:56 AM	3:15 PM	
+ADD	santoshbusservice.com	Tajpur	Kolkata	Santosh Bus Service	Private - AC	11:20 AM	3:15 PM	
+ADD	santoshbusservice.com	Mandarmani	Kolkata	Santosh Bus Service	Private - AC	11:30 AM	3:15 PM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	11:55 AM	3:15 PM	
+ADD	santoshbusservice.com	Digha	Howrah	Santosh Bus Service	Private - AC	5:05 PM	10:05 PM	
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	5:05 PM	9:30 PM	
+ADD	santoshbusservice.com	Tajpur	Kolkata	Santosh Bus Service	Private - AC	5:25 PM	9:30 PM	
+ADD	santoshbusservice.com	Mandarmani	Kolkata	Santosh Bus Service	Private - AC	5:35 PM	9:30 PM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	6:05 PM	9:30 PM	
+ADD	santoshbusservice.com	Digha	Kolkata	Santosh Bus Service	Private - AC	1:40 PM	6:00 PM	
+ADD	santoshbusservice.com	Ramnagar	Kolkata	Santosh Bus Service	Private - AC	1:50 PM	6:00 PM	
+ADD	santoshbusservice.com	Shankarpur	Kolkata	Santosh Bus Service	Private - AC	2:00 PM	6:00 PM	
+ADD	santoshbusservice.com	Tajpur	Kolkata	Santosh Bus Service	Private - AC	2:05 PM	6:00 PM	
+ADD	santoshbusservice.com	Mandarmani	Kolkata	Santosh Bus Service	Private - AC	2:10 PM	6:00 PM	
+ADD	santoshbusservice.com	Contai	Kolkata	Santosh Bus Service	Private - AC	2:30 PM	6:00 PM	
+ADD	santoshbusservice.com	Bajkul	Kolkata	Santosh Bus Service	Private - AC	3:05 PM	6:00 PM	
+ADD	durgapurhub.com	Durgapur	Babughat	Simran Travels	Private - Non AC	12:30 AM	5:30 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Royal Cruiser	Private - AC	2:00 AM	6:00 AM	
+ADD	durgapurhub.com	Durgapur	Babughat	PAMMI Travels	Private - Non AC	2:00 AM	6:00 AM	
+ADD	durgapurhub.com	Durgapur	Howrah	JGD Travels	Private - AC	2:30 AM	6:00 AM	
+ADD	durgapurhub.com	Durgapur	Babughat	PAMMI Travels	Private - AC	3:00 AM	6:30 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	6:20 AM	9:30 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Greenline	Private - AC Volvo	6:30 AM	9:45 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	6:40 AM	10:00 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Express Line	Private - AC Volvo	6:50 AM	10:00 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	6:55 AM	10:10 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	7:00 AM	10:15 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Express Line	Private - AC Volvo	7:10 AM	11:10 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	7:15 AM	10:30 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Express Line	Private - AC Volvo	7:20 AM	11:20 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	7:30 AM	10:45 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	7:50 AM	11:50 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	8:00 AM	12:00 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Express Line	Private - AC Volvo	8:05 AM	11:05 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Greenline	Private - AC Volvo	8:10 AM	11:00 AM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	8:30 AM	11:10 AM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Express Line	Private - AC Volvo	8:30 AM	12:30 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	8:45 AM	12:45 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	9:30 AM	1:30 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	9:45 AM	1:45 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	10:00 AM	2:00 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Express Line	Private - AC Volvo	10:30 AM	2:30 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	10:40 AM	2:40 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	10:45 AM	2:45 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Greenline	Private - AC Volvo	11:30 AM	3:30 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	12:00 PM	3:50 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	12:30 PM	4:30 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	12:55 PM	4:45 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	1:10 PM	5:10 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	1:45 PM	5:45 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	2:10 PM	6:00 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Express Line	Private - AC Volvo	2:20 PM	6:10 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	2:35 PM	6:35 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Greenline	Private - AC Volvo	2:50 PM	6:50 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Express Line	Private - AC Volvo	3:10 PM	7:00 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	3:30 PM	7:20 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	3:30 PM	7:30 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	4:00 PM	8:00 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Greenline	Private - AC Volvo	4:00 PM	7:50 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Express Line	Private - AC Volvo	4:20 PM	8:25 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	4:30 PM	8:30 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	4:45 PM	8:45 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Greenline	Private - AC Volvo	5:10 PM	9:00 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Greenline	Private - AC Volvo	5:30 PM	9:20 PM	
+ADD	durgapurhub.com	Durgapur	Karunamoyee	Shyamoli Paribahan	Private - AC Volvo	5:50 PM	9:35 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Shyamoli Paribahan	Private - AC Volvo	6:15 PM	10:00 PM	
+ADD	durgapurhub.com	Durgapur	Esplanade	Express Line	Private - AC Volvo	6:30 PM	10:50 PM	
+ADD	durgapurhub.com	Kolkata	Purulia	WBTC	Government - AC Volvo	9:10 AM	12:10 PM	
+ADD	siligurismc.in	Siliguri	Kalyani	NBSTC	Government	5:30 AM		
+ADD	siligurismc.in	Siliguri	Balurghat	NBSTC	Government	6:15 AM		
+ADD	siligurismc.in	Siliguri	Raghunathganj	NBSTC	Government	7:00 AM		
+ADD	siligurismc.in	Siliguri	Omarpur	NBSTC	Government	8:00 AM		
+ADD	siligurismc.in	Siliguri	Farakka	NBSTC	Government	9:00 AM		
+ADD	siligurismc.in	Siliguri	Ranchi	NBSTC	Government	11:00 AM		
+ADD	siligurismc.in	Siliguri	Raiganj	NBSTC	Government	8:00 AM		
+ADD	siligurismc.in	Siliguri	Raiganj	NBSTC	Government - AC	7:00 AM		
+ADD	siligurismc.in	Siliguri	Sukna	NBSTC	Government	9:00 AM		
+ADD	siligurismc.in	Siliguri	Bindu	NBSTC	Government	7:00 AM		
+ADD	siligurismc.in	Siliguri	Bindu	NBSTC	Government	1:30 PM		
+ADD	siligurismc.in	Siliguri	Panitanki	NBSTC	Government	6:30 AM		
+ADD	siligurismc.in	Siliguri	Panitanki	NBSTC	Government	7:00 AM		
+ADD	siligurismc.in	Siliguri	Panitanki	NBSTC	Government	7:30 AM		
+ADD	siligurismc.in	Siliguri	Panitanki	NBSTC	Government	8:00 AM		
+ADD	siligurismc.in	Siliguri	Panitanki	NBSTC	Government	8:30 AM		
+ADD	siligurismc.in	Siliguri	Panitanki	NBSTC	Government	9:00 AM		
+ADD	siligurismc.in	Siliguri	Kharibari	NBSTC	Government	6:00 AM		
+ADD	siligurismc.in	Siliguri	Kharibari	NBSTC	Government	7:00 AM		
+ADD	siligurismc.in	Siliguri	Mirik	NBSTC	Government	11:30 AM		
+ADD	siligurismc.in	Siliguri	Mirik	NBSTC	Government	3:30 PM		
+ADD	siligurismc.in	Siliguri	Darjeeling	NBSTC	Government	8:30 AM		
+ADD	siligurismc.in	Siliguri	Darjeeling	NBSTC	Government	10:30 AM		
+ADD	siligurismc.in	Siliguri	Kalimpong	NBSTC	Government	6:30 AM		
+ADD	siligurismc.in	Siliguri	Kalimpong	NBSTC	Government	7:15 AM		
+ADD	siligurismc.in	Siliguri	Kalimpong	NBSTC	Government	8:45 AM		
+ADD	siligurismc.in	Siliguri	Kalimpong	NBSTC	Government	10:30 AM		
+ADD	siligurismc.in	Siliguri	Kalimpong	NBSTC	Government	11:40 AM		
+ADD	siligurismc.in	Siliguri	Kalimpong	NBSTC	Government	1:15 PM		
+ADD	siligurismc.in	Siliguri	Cooch Behar	NBSTC	Government - AC	7:30 AM		
+ADD	siligurismc.in	Siliguri	Cooch Behar	NBSTC	Government	3:00 PM		
+ADD	siligurismc.in	Siliguri	Bijanbari	NBSTC	Government	2:00 PM		
+ADD	siligurismc.in	Siliguri	Bagdogra	NBSTC	Government	8:00 AM		
+ADD	siligurismc.in	Siliguri	Dhapra	NBSTC	Government	8:00 AM		
+ADD	siligurismc.in	Salugara	NJP	NBSTC	Government	7:00 AM		
+ADD	siligurismc.in	Salugara	NJP	NBSTC	Government	7:45 AM		
+ADD	siligurismc.in	NJP	Salugara	NBSTC	Government	7:00 AM		
+ADD	siligurismc.in	NJP	Salugara	NBSTC	Government	7:45 AM		
+ADD	siligurismc.in	Milan More	NJP	NBSTC	Government	7:10 AM		
+ADD	siligurismc.in	Milan More	NJP	NBSTC	Government	9:00 AM		
+ADD	siligurismc.in	Milan More	NJP	NBSTC	Government	10:40 AM		
+ADD	siligurismc.in	NJP	Milan More	NBSTC	Government	7:10 AM		
+ADD	siligurismc.in	NJP	Milan More	NBSTC	Government	9:00 AM		
+ADD	siligurismc.in	NJP	Milan More	NBSTC	Government	10:40 AM		
+FILL	siligurismc.in	Siliguri	Kolkata	NBSTC	Government	6:00 PM		ktr-government-kolkata-to-siliguri-rocket-1
+FILL	durgapurhub.com	Durgapur	Karunamoyee	SBSTC	Government	5:15 AM	9:15 AM	
+FILL	santoshbusservice.com	Habra	Digha	Santosh Bus Service	Private - AC	5:15 AM	10:20 AM	
