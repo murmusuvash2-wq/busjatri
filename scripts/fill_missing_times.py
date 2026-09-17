@@ -57,7 +57,7 @@ def phase_a(data, write=False):
         if not clean(b.get("arrival_time")):
             t = clean(stops[-1].get("down_time")) or clean(stops[-1].get("up_time"))
             if valid_time(t):
-                b[arrival_placeholder] = t
+                b["arrival_time"] = t
                 filled_arr += 1
     still_missing = sum(1 for b in data["buses"] if not clean(b.get("departure_time")))
     print(f"Phase A: filled departure_time for {filled_dep} buses, arrival_time for {filled_arr} buses")
@@ -85,6 +85,7 @@ def find_candidate_urls_on_wbbustime(missing_buses):
     """Discover wbbustime.in route pages and index them by (from, to)."""
     html = fetch("https://wbbustime.in/all-routes/")
     links = re.findall(r'href="(https://wbbustime\.in/bus-timetable/[^"]+)"[^>]*>([^<]+)', html)
+    # links text like "Kharagpur to Burdwan Bus Timetable, ..."
     idx = {}
     for url, text in links:
         m = re.search(r"([A-Za-z .&()'-]+?)\s*(?:→| to )\s*([A-Za-z .&()'-]+?)(?:\s+Bus\b|$)", text)
