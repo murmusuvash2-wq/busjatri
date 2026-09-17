@@ -10,8 +10,11 @@
    this adds a small toggle button to the header and remembers the choice
    in localStorage under the same "seo-theme" key the timetable index uses,
    so dark mode stays in sync across all pages.
+3. PLACE PAGE DESIGN: buses-from-* pages get their plain dot-separated
+   destination paragraph converted to pill-chip links (matching route-page
+   chip design) and their popular-route rows get hover polish.
 
-Run with no arguments. (rev 2026-09-17b)
+Run with no arguments. (rev 2026-09-17c)
 """
 import json, re
 from pathlib import Path
@@ -107,13 +110,56 @@ THEME_BTN = ('<button id="bjThemeBtn" aria-label="Toggle dark mode" '
              'padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;'
              'font-family:inherit;line-height:1.2">\u25d0</button>')
 LINK_CSS = '<style>a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}</style>'
+PLACE_CSS = '<style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>'
 THEME_JS = ('<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;'
             'if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\\u2600";}'
             'b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");'
             'localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\\u2600":"\\u25d0";});}catch(e){}})();</script>')
 
+AMP = chr(38)
+def esc_h(s):
+    return (s or '').replace(AMP, AMP + 'amp;').replace('<', AMP + 'lt;').replace('>', AMP + 'gt;')
+
+DEST_P_RE = re.compile(r'<p style="\s*line-height:1\.9;\s*color:var\(--ink-dim\);\s*">\s*([^<]+?)\s*</p>', re.S)
+POP_ROW_RE = re.compile(r'<a href="([^"]+)"(\s+)style="([^"]*justify-content:space-between[^"]*)"')
+
+def beautify_place_page(s, stem, stems):
+    """Place pages: turn the plain dot-separated destination paragraph into
+    pill-chip links (route-page design language) and class up the popular
+    route rows for hover polish."""
+    changed = False
+    m = DEST_P_RE.search(s)
+    if m:
+        place = stem[len('buses-from-'):] if stem.startswith('buses-from-') else None
+        entries = [e.strip() for e in m.group(1).split('\u00b7') if e.strip()]
+        chips = []
+        for i, e in enumerate(entries):
+            cm = re.match(r'^(.*?)\s*\((\d+)\)$', e)
+            name, cnt = (cm.group(1), cm.group(2)) if cm else (e, None)
+            label = f'{name} ({cnt})' if cnt else name
+            style_i = f' style="--i:{min(i, 15)}"'
+            href = None
+            if place:
+                target = f'{place}-to-{slug(name)}'
+                if target in stems:
+                    href = target + '.html'
+            if href:
+                chips.append(f'<a class="via-chip"{style_i} href="{href}">{esc_h(label)}</a>')
+            else:
+                chips.append(f'<span class="via-chip"{style_i}>{esc_h(label)}</span>')
+        chiprow = ('<div class="chip-row" aria-label="All destinations">'
+                   + ''.join(chips) + '</div>')
+        s = s[:m.start()] + chiprow + s[m.end():]
+        changed = True
+    s2 = POP_ROW_RE.sub(lambda mm: f'<a href="{mm.group(1)}"{mm.group(2)}class="bj-pop-row" style="{mm.group(3)}"', s)
+    if s2 != s:
+        s = s2
+        changed = True
+    return s, changed
+
 def main():
     n_pages = n_linked = n_rows = 0
+    stems = None
     for p in sorted(PAGES.glob('*.html')):
         if p.name == 'index.html':
             continue
@@ -124,6 +170,14 @@ def main():
             s, linked, total = link_rows(s, key)
             n_linked += linked
             n_rows += total
+        if DEST_P_RE.search(s) or ('buses-from-' in p.stem and 'bj-pop-row' not in s):
+            if stems is None:
+                stems = {q.stem for q in PAGES.glob('*.html')}
+            s2, changed = beautify_place_page(s, p.stem, stems)
+            if changed:
+                s = s2
+                if PLACE_CSS not in s and '</head>' in s:
+                    s = s.replace('</head>', PLACE_CSS + '\n</head>', 1)
         if 'id="bjThemeBtn"' not in s and '</nav>' in s:
             s = s.replace('</nav>', THEME_BTN + '\n</nav>', 1)
         if 'a.bus-row' in s and LINK_CSS not in s and '</head>' in s:
