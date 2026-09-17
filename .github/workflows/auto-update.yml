@@ -49,6 +49,8 @@ jobs:
 
       - name: Rebuild data + imports + SEO pages
         if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           python3 scripts/rebuild_data.py
           python3 scripts/import_sbstc.py data/sbstc_routes.json sbstc_buses.json --merge

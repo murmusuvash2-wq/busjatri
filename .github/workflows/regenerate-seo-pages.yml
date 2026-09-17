@@ -35,12 +35,16 @@ jobs:
         run: python3 scripts/apply_ux_fixes.py
 
       - name: Regenerate SEO pages
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           python3 scripts/gen_seo_pages.py
           python3 scripts/build_client_data.py
           python3 scripts/finalize_pages.py
 
       - name: Commit and push
+        env:
+          SITE_BASE: https://busjatri.in
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
