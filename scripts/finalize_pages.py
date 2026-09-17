@@ -60,3 +60,7 @@ for p in (ROOT / 'bus-time-table').glob('*.html'):
     p.write_text(s, encoding='utf-8')
 
 print(f'finalized pages with stats: {stops:,} stops, {routes:,} routes, {buses:,} buses; refreshed {updated}')
+
+# --- GA4 analytics: keep the tag on every (re)generated page (idempotent) ---
+import subprocess, sys
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_ga4.py')], check=True)

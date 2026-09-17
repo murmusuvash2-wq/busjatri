@@ -1,0 +1,29 @@
+name: Add GA4 analytics
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ga4:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Inject GA4 into all pages
+        run: python3 scripts/add_ga4.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add '*.html' bus-time-table
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add GA4 analytics (G-L4E3D1YX9X) to all pages + privacy policy update"
+            git push
+          fi
