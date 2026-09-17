@@ -317341,7 +317341,7 @@
    "bus_type": "Government - NON AC",
    "origin": "Siliguri",
    "destination": "Esplanade",
-   "departure_time": "",
+   "departure_time": "6:00 PM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
@@ -317350,7 +317350,7 @@
     {
      "no": 1,
      "name": "Siliguri",
-     "up_time": "",
+     "up_time": "6:00 PM",
      "down_time": ""
     },
     {
@@ -317518,7 +317518,8 @@
    ],
    "source": "kolkata-travel-router (GitHub)",
    "total_stoppages": 28,
-   "detail_url": "https://kolkata-bus.vercel.app/"
+   "detail_url": "https://kolkata-bus.vercel.app/",
+   "time_source": "siligurismc.in"
   },
   {
    "id": "ktr-government-kolkata-to-siliguri-ac-rocket-1",
@@ -349949,8 +349950,8 @@
    "bus_type": "Government - NON AC",
    "origin": "Durgapur",
    "destination": "Karunamoyee",
-   "departure_time": "",
-   "arrival_time": "",
+   "departure_time": "5:15 AM",
+   "arrival_time": "9:15 AM",
    "contact_number": "Not Available !",
    "depot_name": "",
    "route": "Durgapur - Karunamoyee",
@@ -349958,7 +349959,7 @@
     {
      "no": 1,
      "name": "Durgapur",
-     "up_time": "",
+     "up_time": "5:15 AM",
      "down_time": ""
     },
     {
@@ -350036,13 +350037,14 @@
     {
      "no": 14,
      "name": "Karunamoyee",
-     "up_time": "",
+     "up_time": "9:15 AM",
      "down_time": ""
     }
    ],
    "source": "kolkata-travel-router (GitHub)",
    "total_stoppages": 14,
-   "detail_url": "https://kolkata-bus.vercel.app/"
+   "detail_url": "https://kolkata-bus.vercel.app/",
+   "time_source": "durgapurhub.com"
   },
   {
    "id": "ktr-government-karunamoyee-to-kalna-1",
@@ -415066,6 +415068,4902 @@
    "source": "shyamolibus.com",
    "total_stoppages": 2,
    "detail_url": "https://www.shyamolibus.com/"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4019",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "12:05 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "12:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-tajpur-kolkata-4020",
+   "bus_name": "Santosh Bus Service Tajpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Tajpur",
+   "destination": "Kolkata",
+   "departure_time": "12:30 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tajpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tajpur",
+     "up_time": "12:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-kolkata-4021",
+   "bus_name": "Santosh Bus Service Mandarmani-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Kolkata",
+   "departure_time": "12:40 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "12:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4022",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "1:05 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "1:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-ramnagar-kolkata-4023",
+   "bus_name": "Santosh Bus Service Ramnagar-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Ramnagar",
+   "destination": "Kolkata",
+   "departure_time": "12:25 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Ramnagar - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Ramnagar",
+     "up_time": "12:25 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-henria-kolkata-4024",
+   "bus_name": "Santosh Bus Service Henria-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Henria",
+   "destination": "Kolkata",
+   "departure_time": "1:40 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Henria - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Henria",
+     "up_time": "1:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-bajkul-kolkata-4025",
+   "bus_name": "Santosh Bus Service Bajkul-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Bajkul",
+   "destination": "Kolkata",
+   "departure_time": "1:55 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Bajkul - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bajkul",
+     "up_time": "1:55 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-nandakumar-kolkata-4026",
+   "bus_name": "Santosh Bus Service Nandakumar-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Nandakumar",
+   "destination": "Kolkata",
+   "departure_time": "2:20 PM",
+   "arrival_time": "4:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Nandakumar - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Nandakumar",
+     "up_time": "2:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4027",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "8:30 AM",
+   "arrival_time": "12:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-shankarpur-kolkata-4028",
+   "bus_name": "Santosh Bus Service Shankarpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Shankarpur",
+   "destination": "Kolkata",
+   "departure_time": "9:10 AM",
+   "arrival_time": "12:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Shankarpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Shankarpur",
+     "up_time": "9:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-tajpur-kolkata-4029",
+   "bus_name": "Santosh Bus Service Tajpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Tajpur",
+   "destination": "Kolkata",
+   "departure_time": "9:15 AM",
+   "arrival_time": "12:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tajpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tajpur",
+     "up_time": "9:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-kolkata-4030",
+   "bus_name": "Santosh Bus Service Mandarmani-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Kolkata",
+   "departure_time": "9:25 AM",
+   "arrival_time": "12:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "9:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4031",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "9:45 AM",
+   "arrival_time": "12:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "9:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-habra-digha-4032",
+   "bus_name": "Santosh Bus Service Habra-Digha",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "5:15 AM",
+   "arrival_time": "10:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Habra - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Digha",
+     "up_time": "10:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-barasat-contai-4033",
+   "bus_name": "Santosh Bus Service Barasat-Contai",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Barasat",
+   "destination": "Contai",
+   "departure_time": "5:55 AM",
+   "arrival_time": "9:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Barasat - Contai",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Contai",
+     "up_time": "9:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-kolkata-contai-4034",
+   "bus_name": "Santosh Bus Service Kolkata-Contai",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Kolkata",
+   "destination": "Contai",
+   "departure_time": "6:00 AM",
+   "arrival_time": "9:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kolkata - Contai",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Contai",
+     "up_time": "9:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-barasat-mandarmani-4035",
+   "bus_name": "Santosh Bus Service Barasat-Mandarmani",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Barasat",
+   "destination": "Mandarmani",
+   "departure_time": "5:55 AM",
+   "arrival_time": "9:45 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Barasat - Mandarmani",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mandarmani",
+     "up_time": "9:45 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-kolkata-mandarmani-4036",
+   "bus_name": "Santosh Bus Service Kolkata-Mandarmani",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Kolkata",
+   "destination": "Mandarmani",
+   "departure_time": "6:00 AM",
+   "arrival_time": "9:45 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kolkata - Mandarmani",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mandarmani",
+     "up_time": "9:45 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-barasat-tajpur-4037",
+   "bus_name": "Santosh Bus Service Barasat-Tajpur",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Barasat",
+   "destination": "Tajpur",
+   "departure_time": "5:55 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Barasat - Tajpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Tajpur",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-kolkata-tajpur-4038",
+   "bus_name": "Santosh Bus Service Kolkata-Tajpur",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Kolkata",
+   "destination": "Tajpur",
+   "departure_time": "6:00 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kolkata - Tajpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Tajpur",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-barasat-shankarpur-4039",
+   "bus_name": "Santosh Bus Service Barasat-Shankarpur",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Barasat",
+   "destination": "Shankarpur",
+   "departure_time": "5:55 AM",
+   "arrival_time": "10:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Barasat - Shankarpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Shankarpur",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-kolkata-shankarpur-4040",
+   "bus_name": "Santosh Bus Service Kolkata-Shankarpur",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Kolkata",
+   "destination": "Shankarpur",
+   "departure_time": "6:00 AM",
+   "arrival_time": "10:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kolkata - Shankarpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Shankarpur",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-barasat-digha-4041",
+   "bus_name": "Santosh Bus Service Barasat-Digha",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Barasat",
+   "destination": "Digha",
+   "departure_time": "5:55 AM",
+   "arrival_time": "10:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Barasat - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Digha",
+     "up_time": "10:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-kolkata-digha-4042",
+   "bus_name": "Santosh Bus Service Kolkata-Digha",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Kolkata",
+   "destination": "Digha",
+   "departure_time": "6:00 AM",
+   "arrival_time": "10:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kolkata - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Digha",
+     "up_time": "10:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-habra-digha-4043",
+   "bus_name": "Santosh Bus Service Habra-Digha",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "5:10 AM",
+   "arrival_time": "10:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Habra - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Digha",
+     "up_time": "10:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-habra-contai-4044",
+   "bus_name": "Santosh Bus Service Habra-Contai",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Habra",
+   "destination": "Contai",
+   "departure_time": "5:10 AM",
+   "arrival_time": "9:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Habra - Contai",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Contai",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-habra-mandarmani-4045",
+   "bus_name": "Santosh Bus Service Habra-Mandarmani",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Habra",
+   "destination": "Mandarmani",
+   "departure_time": "5:10 AM",
+   "arrival_time": "9:45 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Habra - Mandarmani",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mandarmani",
+     "up_time": "9:45 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-habra-tajpur-4046",
+   "bus_name": "Santosh Bus Service Habra-Tajpur",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Habra",
+   "destination": "Tajpur",
+   "departure_time": "5:10 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Habra - Tajpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Tajpur",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-salt-lake-4047",
+   "bus_name": "Santosh Bus Service Digha-Salt Lake",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Salt Lake",
+   "departure_time": "4:30 AM",
+   "arrival_time": "9:50 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Salt Lake",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "4:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salt Lake",
+     "up_time": "9:50 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4048",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "4:30 AM",
+   "arrival_time": "9:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "4:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-salt-lake-4049",
+   "bus_name": "Santosh Bus Service Mandarmani-Salt Lake",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Salt Lake",
+   "departure_time": "5:15 AM",
+   "arrival_time": "9:50 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Salt Lake",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "5:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salt Lake",
+     "up_time": "9:50 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-salt-lake-4050",
+   "bus_name": "Santosh Bus Service Contai-Salt Lake",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Salt Lake",
+   "departure_time": "5:45 AM",
+   "arrival_time": "9:50 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Salt Lake",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "5:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salt Lake",
+     "up_time": "9:50 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-bajkul-salt-lake-4051",
+   "bus_name": "Santosh Bus Service Bajkul-Salt Lake",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Bajkul",
+   "destination": "Salt Lake",
+   "departure_time": "6:10 AM",
+   "arrival_time": "9:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Bajkul - Salt Lake",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bajkul",
+     "up_time": "6:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salt Lake",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-nandakumar-salt-lake-4052",
+   "bus_name": "Santosh Bus Service Nandakumar-Salt Lake",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Nandakumar",
+   "destination": "Salt Lake",
+   "departure_time": "6:40 AM",
+   "arrival_time": "9:40 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Nandakumar - Salt Lake",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Nandakumar",
+     "up_time": "6:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salt Lake",
+     "up_time": "9:40 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-egra-kolkata-4053",
+   "bus_name": "Santosh Bus Service Egra-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Egra",
+   "destination": "Kolkata",
+   "departure_time": "5:10 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Egra - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Egra",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-egra-salt-lake-4054",
+   "bus_name": "Santosh Bus Service Egra-Salt Lake",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Egra",
+   "destination": "Salt Lake",
+   "departure_time": "5:10 AM",
+   "arrival_time": "10:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Egra - Salt Lake",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Egra",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salt Lake",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4055",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "5:55 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-bajkul-kolkata-4056",
+   "bus_name": "Santosh Bus Service Bajkul-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Bajkul",
+   "destination": "Kolkata",
+   "departure_time": "6:40 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Bajkul - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bajkul",
+     "up_time": "6:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-nandakumar-kolkata-4057",
+   "bus_name": "Santosh Bus Service Nandakumar-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Nandakumar",
+   "destination": "Kolkata",
+   "departure_time": "7:00 AM",
+   "arrival_time": "9:55 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Nandakumar - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Nandakumar",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4058",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "9:55 AM",
+   "arrival_time": "2:20 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "9:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "2:20 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-tajpur-kolkata-4059",
+   "bus_name": "Santosh Bus Service Tajpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Tajpur",
+   "destination": "Kolkata",
+   "departure_time": "10:20 AM",
+   "arrival_time": "2:20 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tajpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tajpur",
+     "up_time": "10:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "2:20 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-kolkata-4060",
+   "bus_name": "Santosh Bus Service Mandarmani-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Kolkata",
+   "departure_time": "10:30 AM",
+   "arrival_time": "2:20 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "10:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "2:20 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4061",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "11:00 AM",
+   "arrival_time": "2:20 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "11:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "2:20 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4062",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "10:56 AM",
+   "arrival_time": "3:15 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "10:56 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-tajpur-kolkata-4063",
+   "bus_name": "Santosh Bus Service Tajpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Tajpur",
+   "destination": "Kolkata",
+   "departure_time": "11:20 AM",
+   "arrival_time": "3:15 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tajpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tajpur",
+     "up_time": "11:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-kolkata-4064",
+   "bus_name": "Santosh Bus Service Mandarmani-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Kolkata",
+   "departure_time": "11:30 AM",
+   "arrival_time": "3:15 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "11:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4065",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "11:55 AM",
+   "arrival_time": "3:15 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "11:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-howrah-4066",
+   "bus_name": "Santosh Bus Service Digha-Howrah",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Howrah",
+   "departure_time": "5:05 PM",
+   "arrival_time": "10:05 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Howrah",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "5:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Howrah",
+     "up_time": "10:05 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4067",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "5:05 PM",
+   "arrival_time": "9:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "5:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-tajpur-kolkata-4068",
+   "bus_name": "Santosh Bus Service Tajpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Tajpur",
+   "destination": "Kolkata",
+   "departure_time": "5:25 PM",
+   "arrival_time": "9:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tajpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tajpur",
+     "up_time": "5:25 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-kolkata-4069",
+   "bus_name": "Santosh Bus Service Mandarmani-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Kolkata",
+   "departure_time": "5:35 PM",
+   "arrival_time": "9:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "5:35 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4070",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "6:05 PM",
+   "arrival_time": "9:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "6:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "9:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-digha-kolkata-4071",
+   "bus_name": "Santosh Bus Service Digha-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Kolkata",
+   "departure_time": "1:40 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "1:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-ramnagar-kolkata-4072",
+   "bus_name": "Santosh Bus Service Ramnagar-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Ramnagar",
+   "destination": "Kolkata",
+   "departure_time": "1:50 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Ramnagar - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Ramnagar",
+     "up_time": "1:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-shankarpur-kolkata-4073",
+   "bus_name": "Santosh Bus Service Shankarpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Shankarpur",
+   "destination": "Kolkata",
+   "departure_time": "2:00 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Shankarpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Shankarpur",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-tajpur-kolkata-4074",
+   "bus_name": "Santosh Bus Service Tajpur-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Tajpur",
+   "destination": "Kolkata",
+   "departure_time": "2:05 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tajpur - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tajpur",
+     "up_time": "2:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-mandarmani-kolkata-4075",
+   "bus_name": "Santosh Bus Service Mandarmani-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Mandarmani",
+   "destination": "Kolkata",
+   "departure_time": "2:10 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Mandarmani - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Mandarmani",
+     "up_time": "2:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-contai-kolkata-4076",
+   "bus_name": "Santosh Bus Service Contai-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Contai",
+   "destination": "Kolkata",
+   "departure_time": "2:30 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Contai - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Contai",
+     "up_time": "2:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "santosh-bus-service-bajkul-kolkata-4077",
+   "bus_name": "Santosh Bus Service Bajkul-Kolkata",
+   "reg_no": "",
+   "operator": "Santosh Bus Service",
+   "bus_type": "Private - AC",
+   "origin": "Bajkul",
+   "destination": "Kolkata",
+   "departure_time": "3:05 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Bajkul - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bajkul",
+     "up_time": "3:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "santoshbusservice.com",
+   "time_source": "santoshbusservice.com",
+   "total_stoppages": 2,
+   "detail_url": "https://www.santoshbusservice.com/schedules"
+  },
+  {
+   "id": "simran-travels-durgapur-babughat-4078",
+   "bus_name": "Simran Travels Durgapur-Babughat",
+   "reg_no": "",
+   "operator": "Simran Travels",
+   "bus_type": "Private - Non AC",
+   "origin": "Durgapur",
+   "destination": "Babughat",
+   "departure_time": "12:30 AM",
+   "arrival_time": "5:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Babughat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "12:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Babughat",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "royal-cruiser-durgapur-esplanade-4079",
+   "bus_name": "Royal Cruiser Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Royal Cruiser",
+   "bus_type": "Private - AC",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "2:00 AM",
+   "arrival_time": "6:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "pammi-travels-durgapur-babughat-4080",
+   "bus_name": "PAMMI Travels Durgapur-Babughat",
+   "reg_no": "",
+   "operator": "PAMMI Travels",
+   "bus_type": "Private - Non AC",
+   "origin": "Durgapur",
+   "destination": "Babughat",
+   "departure_time": "2:00 AM",
+   "arrival_time": "6:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Babughat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Babughat",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "jgd-travels-durgapur-howrah-4081",
+   "bus_name": "JGD Travels Durgapur-Howrah",
+   "reg_no": "",
+   "operator": "JGD Travels",
+   "bus_type": "Private - AC",
+   "origin": "Durgapur",
+   "destination": "Howrah",
+   "departure_time": "2:30 AM",
+   "arrival_time": "6:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Howrah",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Howrah",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "pammi-travels-durgapur-babughat-4082",
+   "bus_name": "PAMMI Travels Durgapur-Babughat",
+   "reg_no": "",
+   "operator": "PAMMI Travels",
+   "bus_type": "Private - AC",
+   "origin": "Durgapur",
+   "destination": "Babughat",
+   "departure_time": "3:00 AM",
+   "arrival_time": "6:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Babughat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "3:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Babughat",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4083",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "6:20 AM",
+   "arrival_time": "9:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-esplanade-4084",
+   "bus_name": "Greenline Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "6:30 AM",
+   "arrival_time": "9:45 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "9:45 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4085",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "6:40 AM",
+   "arrival_time": "10:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-esplanade-4086",
+   "bus_name": "Express Line Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "6:50 AM",
+   "arrival_time": "10:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4087",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "6:55 AM",
+   "arrival_time": "10:10 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "10:10 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4088",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "7:00 AM",
+   "arrival_time": "10:15 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "10:15 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-karunamoyee-4089",
+   "bus_name": "Express Line Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "7:10 AM",
+   "arrival_time": "11:10 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "7:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "11:10 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4090",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "7:15 AM",
+   "arrival_time": "10:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "7:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "10:30 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-karunamoyee-4091",
+   "bus_name": "Express Line Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "7:20 AM",
+   "arrival_time": "11:20 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "7:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "11:20 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4092",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "7:30 AM",
+   "arrival_time": "10:45 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "10:45 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4093",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "7:50 AM",
+   "arrival_time": "11:50 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "7:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "11:50 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4094",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "8:00 AM",
+   "arrival_time": "12:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "12:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-esplanade-4095",
+   "bus_name": "Express Line Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "8:05 AM",
+   "arrival_time": "11:05 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "8:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "11:05 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-esplanade-4096",
+   "bus_name": "Greenline Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "8:10 AM",
+   "arrival_time": "11:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "8:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "11:00 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4097",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "8:30 AM",
+   "arrival_time": "11:10 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "11:10 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-karunamoyee-4098",
+   "bus_name": "Express Line Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "8:30 AM",
+   "arrival_time": "12:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "12:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4099",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "8:45 AM",
+   "arrival_time": "12:45 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "8:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "12:45 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4100",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "9:30 AM",
+   "arrival_time": "1:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "1:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4101",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "9:45 AM",
+   "arrival_time": "1:45 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "9:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "1:45 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4102",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "10:00 AM",
+   "arrival_time": "2:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-esplanade-4103",
+   "bus_name": "Express Line Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "10:30 AM",
+   "arrival_time": "2:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "10:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "2:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4104",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "10:40 AM",
+   "arrival_time": "2:40 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "10:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "2:40 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4105",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "10:45 AM",
+   "arrival_time": "2:45 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "10:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "2:45 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-esplanade-4106",
+   "bus_name": "Greenline Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "11:30 AM",
+   "arrival_time": "3:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "11:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "3:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4107",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "12:00 PM",
+   "arrival_time": "3:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "12:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "3:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4108",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "12:30 PM",
+   "arrival_time": "4:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "12:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "4:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4109",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "12:55 PM",
+   "arrival_time": "4:45 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "12:55 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "4:45 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4110",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "1:10 PM",
+   "arrival_time": "5:10 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "1:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "5:10 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4111",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "1:45 PM",
+   "arrival_time": "5:45 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "1:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "5:45 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4112",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "2:10 PM",
+   "arrival_time": "6:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-karunamoyee-4113",
+   "bus_name": "Express Line Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "2:20 PM",
+   "arrival_time": "6:10 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "6:10 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4114",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "2:35 PM",
+   "arrival_time": "6:35 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:35 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "6:35 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-esplanade-4115",
+   "bus_name": "Greenline Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "2:50 PM",
+   "arrival_time": "6:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "2:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "6:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-esplanade-4116",
+   "bus_name": "Express Line Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "3:10 PM",
+   "arrival_time": "7:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "3:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "7:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4117",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "3:30 PM",
+   "arrival_time": "7:20 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "3:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "7:20 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4118",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "3:30 PM",
+   "arrival_time": "7:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "3:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "7:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4119",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "4:00 PM",
+   "arrival_time": "8:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "8:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-esplanade-4120",
+   "bus_name": "Greenline Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "4:00 PM",
+   "arrival_time": "7:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "7:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-karunamoyee-4121",
+   "bus_name": "Express Line Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "4:20 PM",
+   "arrival_time": "8:25 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "4:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "8:25 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4122",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "4:30 PM",
+   "arrival_time": "8:30 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "4:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "8:30 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4123",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "4:45 PM",
+   "arrival_time": "8:45 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "4:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "8:45 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-esplanade-4124",
+   "bus_name": "Greenline Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "5:10 PM",
+   "arrival_time": "9:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "5:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "9:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "greenline-durgapur-karunamoyee-4125",
+   "bus_name": "Greenline Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Greenline",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "5:30 PM",
+   "arrival_time": "9:20 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "5:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "9:20 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-karunamoyee-4126",
+   "bus_name": "Shyamoli Paribahan Durgapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Karunamoyee",
+   "departure_time": "5:50 PM",
+   "arrival_time": "9:35 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "5:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "9:35 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "shyamoli-paribahan-durgapur-esplanade-4127",
+   "bus_name": "Shyamoli Paribahan Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Shyamoli Paribahan",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "6:15 PM",
+   "arrival_time": "10:00 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "10:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "express-line-durgapur-esplanade-4128",
+   "bus_name": "Express Line Durgapur-Esplanade",
+   "reg_no": "",
+   "operator": "Express Line",
+   "bus_type": "Private - AC Volvo",
+   "origin": "Durgapur",
+   "destination": "Esplanade",
+   "departure_time": "6:30 PM",
+   "arrival_time": "10:50 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Durgapur - Esplanade",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "6:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "10:50 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "wbtc-kolkata-purulia-4129",
+   "bus_name": "WBTC Kolkata-Purulia",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Kolkata",
+   "destination": "Purulia",
+   "departure_time": "9:10 AM",
+   "arrival_time": "12:10 PM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kolkata - Purulia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "9:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Purulia",
+     "up_time": "12:10 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "durgapurhub.com",
+   "time_source": "durgapurhub.com",
+   "total_stoppages": 2,
+   "detail_url": "https://durgapurhub.com/durgapur-to-kolkata-buses-routes-timings-and-fares/"
+  },
+  {
+   "id": "nbstc-siliguri-kalyani-4130",
+   "bus_name": "NBSTC Siliguri-Kalyani",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalyani",
+   "departure_time": "5:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalyani",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalyani",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-balurghat-4131",
+   "bus_name": "NBSTC Siliguri-Balurghat",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Balurghat",
+   "departure_time": "6:15 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Balurghat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "6:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Balurghat",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-raghunathganj-4132",
+   "bus_name": "NBSTC Siliguri-Raghunathganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Raghunathganj",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Raghunathganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raghunathganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-omarpur-4133",
+   "bus_name": "NBSTC Siliguri-Omarpur",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Omarpur",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Omarpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Omarpur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-farakka-4134",
+   "bus_name": "NBSTC Siliguri-Farakka",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Farakka",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Farakka",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-ranchi-4135",
+   "bus_name": "NBSTC Siliguri-Ranchi",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Ranchi",
+   "departure_time": "11:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Ranchi",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "11:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Ranchi",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-raiganj-4136",
+   "bus_name": "NBSTC Siliguri-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Raiganj",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-raiganj-4137",
+   "bus_name": "NBSTC Siliguri-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government - AC",
+   "origin": "Siliguri",
+   "destination": "Raiganj",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-sukna-4138",
+   "bus_name": "NBSTC Siliguri-Sukna",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Sukna",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Sukna",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Sukna",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-bindu-4139",
+   "bus_name": "NBSTC Siliguri-Bindu",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Bindu",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Bindu",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Bindu",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-bindu-4140",
+   "bus_name": "NBSTC Siliguri-Bindu",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Bindu",
+   "departure_time": "1:30 PM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Bindu",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "1:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Bindu",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-panitanki-4141",
+   "bus_name": "NBSTC Siliguri-Panitanki",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Panitanki",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Panitanki",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Panitanki",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-panitanki-4142",
+   "bus_name": "NBSTC Siliguri-Panitanki",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Panitanki",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Panitanki",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Panitanki",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-panitanki-4143",
+   "bus_name": "NBSTC Siliguri-Panitanki",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Panitanki",
+   "departure_time": "7:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Panitanki",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Panitanki",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-panitanki-4144",
+   "bus_name": "NBSTC Siliguri-Panitanki",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Panitanki",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Panitanki",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Panitanki",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-panitanki-4145",
+   "bus_name": "NBSTC Siliguri-Panitanki",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Panitanki",
+   "departure_time": "8:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Panitanki",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Panitanki",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-panitanki-4146",
+   "bus_name": "NBSTC Siliguri-Panitanki",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Panitanki",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Panitanki",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Panitanki",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kharibari-4147",
+   "bus_name": "NBSTC Siliguri-Kharibari",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kharibari",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kharibari",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kharibari",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-mirik-4148",
+   "bus_name": "NBSTC Siliguri-Mirik",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Mirik",
+   "departure_time": "11:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Mirik",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "11:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mirik",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-mirik-4149",
+   "bus_name": "NBSTC Siliguri-Mirik",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Mirik",
+   "departure_time": "3:30 PM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Mirik",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "3:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mirik",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-darjeeling-4150",
+   "bus_name": "NBSTC Siliguri-Darjeeling",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Darjeeling",
+   "departure_time": "8:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Darjeeling",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Darjeeling",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-darjeeling-4151",
+   "bus_name": "NBSTC Siliguri-Darjeeling",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Darjeeling",
+   "departure_time": "10:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Darjeeling",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "10:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Darjeeling",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kalimpong-4152",
+   "bus_name": "NBSTC Siliguri-Kalimpong",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalimpong",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalimpong",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kalimpong-4153",
+   "bus_name": "NBSTC Siliguri-Kalimpong",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "7:15 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalimpong",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "7:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalimpong",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kalimpong-4154",
+   "bus_name": "NBSTC Siliguri-Kalimpong",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "8:45 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalimpong",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalimpong",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kalimpong-4155",
+   "bus_name": "NBSTC Siliguri-Kalimpong",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "10:30 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalimpong",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "10:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalimpong",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kalimpong-4156",
+   "bus_name": "NBSTC Siliguri-Kalimpong",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "11:40 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalimpong",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "11:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalimpong",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-kalimpong-4157",
+   "bus_name": "NBSTC Siliguri-Kalimpong",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "1:15 PM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Kalimpong",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "1:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kalimpong",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-cooch-behar-4158",
+   "bus_name": "NBSTC Siliguri-Cooch Behar",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Cooch Behar",
+   "departure_time": "3:00 PM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Cooch Behar",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "3:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Cooch Behar",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-bijanbari-4159",
+   "bus_name": "NBSTC Siliguri-Bijanbari",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Bijanbari",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Bijanbari",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Bijanbari",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-bagdogra-4160",
+   "bus_name": "NBSTC Siliguri-Bagdogra",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Bagdogra",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Bagdogra",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Bagdogra",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-siliguri-dhapra-4161",
+   "bus_name": "NBSTC Siliguri-Dhapra",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Siliguri",
+   "destination": "Dhapra",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Siliguri - Dhapra",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Siliguri",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dhapra",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-salugara-njp-4162",
+   "bus_name": "NBSTC Salugara-NJP",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Salugara",
+   "destination": "NJP",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Salugara - NJP",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Salugara",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "NJP",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-salugara-njp-4163",
+   "bus_name": "NBSTC Salugara-NJP",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Salugara",
+   "destination": "NJP",
+   "departure_time": "7:45 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Salugara - NJP",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Salugara",
+     "up_time": "7:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "NJP",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-njp-salugara-4164",
+   "bus_name": "NBSTC NJP-Salugara",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "NJP",
+   "destination": "Salugara",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "NJP - Salugara",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "NJP",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salugara",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-njp-salugara-4165",
+   "bus_name": "NBSTC NJP-Salugara",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "NJP",
+   "destination": "Salugara",
+   "departure_time": "7:45 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "NJP - Salugara",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "NJP",
+     "up_time": "7:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Salugara",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-milan-more-njp-4166",
+   "bus_name": "NBSTC Milan More-NJP",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Milan More",
+   "destination": "NJP",
+   "departure_time": "7:10 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Milan More - NJP",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Milan More",
+     "up_time": "7:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "NJP",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-milan-more-njp-4167",
+   "bus_name": "NBSTC Milan More-NJP",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Milan More",
+   "destination": "NJP",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Milan More - NJP",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Milan More",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "NJP",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-milan-more-njp-4168",
+   "bus_name": "NBSTC Milan More-NJP",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Milan More",
+   "destination": "NJP",
+   "departure_time": "10:40 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "Milan More - NJP",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Milan More",
+     "up_time": "10:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "NJP",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-njp-milan-more-4169",
+   "bus_name": "NBSTC NJP-Milan More",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "NJP",
+   "destination": "Milan More",
+   "departure_time": "7:10 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "NJP - Milan More",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "NJP",
+     "up_time": "7:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Milan More",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-njp-milan-more-4170",
+   "bus_name": "NBSTC NJP-Milan More",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "NJP",
+   "destination": "Milan More",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "NJP - Milan More",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "NJP",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Milan More",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
+  },
+  {
+   "id": "nbstc-njp-milan-more-4171",
+   "bus_name": "NBSTC NJP-Milan More",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "NJP",
+   "destination": "Milan More",
+   "departure_time": "10:40 AM",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Siliguri",
+   "route": "NJP - Milan More",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "NJP",
+     "up_time": "10:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Milan More",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "siligurismc.in",
+   "time_source": "siligurismc.in",
+   "total_stoppages": 2,
+   "detail_url": "https://www.siligurismc.in/bus-schedule.php"
   }
  ],
  "routes": {
@@ -505531,7 +510429,7 @@
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
-  "last_updated": "2026-09-13",
+  "last_updated": "2026-09-18",
   "name": "BusJatri",
   "tagline_en": "West Bengal's largest bus timetable",
   "tagline_bn": "পশ্চিমবঙ্গের সবচেয়ে বড় বাস টাইম টেবিল",
