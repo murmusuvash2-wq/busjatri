@@ -34,7 +34,7 @@ s = old_desc.sub(new_desc, s)
 s = re.sub(r'<strong data-count="[0-9]+">[0-9]+</strong> <span class="label-en">places</span>', f'<strong data-count="{stops}">{stops:,}</strong> <span class="label-en">stops</span>', s)
 s = re.sub(r'<strong data-count="[0-9]+">[0-9]+</strong> <span class="label-en">routes</span>', f'<strong data-count="{routes}">{routes:,}</strong> <span class="label-en">routes</span>', s)
 s = re.sub(r'<strong data-count="[0-9]+">[0-9]+</strong> <span class="label-en">bus services</span>', f'<strong data-count="{buses}">{buses:,}</strong> <span class="label-en">bus services</span>', s)
-s = s.replace('<span class="label-bn">\u09b8\u09cd\u09a5\u09be\u09a8</span>', '<span class="label-bn">\u09b8\u09cd\u099f\u09aa</span>')
+s = s.replace('<span class="label-bn">স্থান</span>', '<span class="label-bn">স্টপ</span>')
 s = re.sub(r'The timetable covers [^<]+daily bus services listed[.]', f'The timetable covers {routes:,} bus routes connecting {stops:,} stops across West Bengal, with {buses:,} listed bus services.', s)
 s = s.replace('<b>No matches found</b>', '<b class="no-results">No matches found</b>')
 s = s.replace('buses daily', 'listed buses')
@@ -56,8 +56,11 @@ for p in (ROOT / 'bus-time-table').glob('*.html'):
 
 print(f'finalized pages with stats: {stops:,} stops, {routes:,} routes, {buses:,} buses; refreshed {updated}')
 
-# --- GA4 analytics: keep the tag on every (re)generated page (idempotent) ---
+# --- Operator pages (SBSTC/NBSTC/WBTC/Shyamoli/Volvo AC) + sitemap + index links ---
 import subprocess, sys
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'gen_operator_pages.py')], check=True)
+
+# --- GA4 analytics: keep the tag on every (re)generated page (idempotent) ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_ga4.py')], check=True)
 
 # --- Data-driven FAQ (visible + JSON-LD) on every route page (idempotent) ---
