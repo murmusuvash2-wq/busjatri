@@ -20,15 +20,9 @@ def patch(old, new):
     print('  patched')
 
 patch(
-'''def find_candidate_urls_on_wbbustime(missing_buses):
-    """Discover wbbustime.in route pages and index them by (from, to)."""
-    html = fetch("https://wbbustime.in/all-routes/")
-    links = re.findall(r'href="(https://wbbustime\\.in/bus-timetable/[^"#?]+)"[^>]*>([^<]+)', html)''',
-'''def find_candidate_urls_on_wbbustime(missing_buses):
-    """Discover wbbustime.in route pages and index them by (from, to)."""
-    html = fetch("https://wbbustime.in/all-routes/")
-    # links may be absolute (https://wbbustime.in/bus-timetable/...) or relative (/bus-timetable/...)
-    links = re.findall(r'href="(?:https://wbbustime\\.in)?(/bus-timetable/[^"#?]+)"[^>]*>([^<]+)', html)''')
+'''    links = re.findall(r'href="(https://wbbustime\\.in/bus-timetable/[^"]+)"[^>]*>([^<]+)', html)''',
+'''    # links may be absolute (https://wbbustime.in/bus-timetable/...) or relative (/bus-timetable/...)
+    links = re.findall(r'href="(?:https://wbbustime\\.in)?(/bus-timetable/[^"]+)"[^>]*>([^<]+)', html)''')
 
 patch(
 '''    idx = {}
