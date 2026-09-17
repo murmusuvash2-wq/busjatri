@@ -460,11 +460,9 @@ async function renderSearch(el) {
   const from = (params.get('from') || '').toLowerCase().trim();
   const to = (params.get('to') || '').toLowerCase().trim();
   const stop = (params.get('stop') || '').toLowerCase().trim();
-  if (from || to || stop) {
-    el.innerHTML = '<div class="container" style="padding:40px"><div class="loading">Searching the full timetable…</div></div>';
-    try { await loadFullBusData(); } catch (e) { /* fall back to compact index below */ }
-  }
-  let results = Object.values(FULL_BUSES || BUSES);
+  /* compact index (app-index.json) already carries stop names + times:
+     search no longer downloads the 5MB detail file */
+  let results = Object.values(BUSES);
 
   if (from && to) {
     const posIn = (b, q) => {

@@ -132,8 +132,12 @@
     }).join('');
     field.appendChild(d);
   }
+  var acTimer = null;
   document.addEventListener('input', function (e) {
-    if (isSearchInput(e.target)) showDrop(e.target);
+    if (!isSearchInput(e.target)) return;
+    if (acTimer) clearTimeout(acTimer);
+    var t = e.target;
+    acTimer = setTimeout(function () { showDrop(t); }, 110);
   });
   document.addEventListener('click', function (e) {
     var item = e.target.closest ? e.target.closest('.ac-item') : null;
@@ -283,9 +287,8 @@
       var rows = [];
 
       if (routeMode) {
-        el.innerHTML = '<div class="container" style="padding:40px"><div class="loading">Searching the full timetable…</div></div>';
-        try { await bjTimedLoad(); } catch (e) {}
-        all = Object.values(FULL_BUSES || BUSES);
+        /* compact index has full stop coverage — no 5MB download, instant results */
+        all = Object.values(BUSES);
         all.forEach(function (b) {
           var fi = bjPosIn(b, from), ti = bjPosIn(b, to);
           if (fi < 0 || ti < 0 || fi === ti) return;
