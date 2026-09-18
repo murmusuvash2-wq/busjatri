@@ -86497,15 +86497,15 @@
   },
   {
    "id": "bussathi-sohana-749",
-   "bus_name": "SOHANA",
-   "reg_no": "WB29C4818",
-   "operator": "—",
+   "bus_name": "SOHANA PARIBAHAN",
+   "reg_no": "WB 29C 4818",
+   "operator": "Sohana Paribahan",
    "bus_type": "Private - AC",
    "origin": "Digha",
    "destination": "Barasat",
    "departure_time": "6:20 AM",
    "arrival_time": "11:00 AM",
-   "contact_number": "7478378088",
+   "contact_number": "9647062600, 9091294818",
    "depot_name": "Digha",
    "route": "Digha - Barasat",
    "stoppages": [
@@ -86517,121 +86517,187 @@
     },
     {
      "no": 2,
-     "name": "Ramnagar",
-     "up_time": "6:40 AM",
+     "name": "Digha Border (Udaypur)",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 3,
-     "name": "Contai",
-     "up_time": "7:20 AM",
+     "name": "New Digha",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 4,
-     "name": "Henria",
+     "name": "Old Digha",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 5,
-     "name": "Bajkul",
+     "name": "Ramnagar",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 6,
-     "name": "Chandipur",
+     "name": "Chaulkhola (Mandarmani)",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 7,
-     "name": "Nandakumar",
+     "name": "Pichabani",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 8,
-     "name": "Nimtouri",
-     "up_time": "",
+     "name": "Kanthi",
+     "up_time": "7:20 AM",
      "down_time": ""
     },
     {
      "no": 9,
-     "name": "Mecheda",
-     "up_time": "2:45 PM",
+     "name": "Nachinda",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 10,
-     "name": "Kolaghat",
-     "up_time": "9:00 AM",
+     "name": "Heria",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 11,
-     "name": "Bagnan",
+     "name": "Bajkul",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 12,
-     "name": "Uluberia",
+     "name": "Chandipur",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 13,
-     "name": "Dhulagarh",
+     "name": "Nandakumar",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 14,
-     "name": "Kona Express More",
-     "up_time": "1:45 PM",
+     "name": "Nimtouri",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 15,
-     "name": "Salap",
+     "name": "Radhamani",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 16,
-     "name": "Bally",
+     "name": "Mecheda",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 17,
-     "name": "Dakshineswar",
+     "name": "Kolaghat",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 18,
-     "name": "Dunlop",
-     "up_time": "1:25 PM",
+     "name": "Bagnan",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 19,
-     "name": "Dum Dum Airport",
+     "name": "Uluberia",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 20,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Kona",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Bali Halt",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Dakshineswar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Dunlop",
+     "up_time": "10:20 AM",
+     "down_time": "1:10 PM"
+    },
+    {
+     "no": 25,
+     "name": "Belgharia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Expressway",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Airport No.3",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Birati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Madhyamgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Champadali More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 31,
      "name": "Barasat",
-     "up_time": "11:00 AM",
-     "down_time": "12:45 PM"
+     "up_time": "",
+     "down_time": "12:15 PM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 20,
+   "total_stoppages": 31,
    "detail_url": "https://bussathi.in/bus/1075"
   },
   {
@@ -401894,6 +401960,206 @@
    "source": "facebook (community report)",
    "time_source": "facebook (community report)",
    "total_stoppages": 12,
+   "detail_url": ""
+  },
+  {
+   "id": "ayush-riya-berhampore-digha-4010",
+   "bus_name": "Ayush Riya (Devi Maa Bargabhima) Berhampore-Digha AC Sleeper",
+   "reg_no": "WB 29J 9676",
+   "operator": "Ayush Riya",
+   "bus_type": "Private - AC Sleeper (2/1)",
+   "origin": "Berhampore",
+   "destination": "Digha",
+   "departure_time": "6:50 PM",
+   "arrival_time": "",
+   "contact_number": "9647062600",
+   "depot_name": "",
+   "route": "Berhampore - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Berhampore",
+     "up_time": "6:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Beldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Rejinagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Palashi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dhubulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Krishnanagar",
+     "up_time": "9:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Santipur Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Fulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Ranaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Chakdaha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Jagulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Awalsiddhi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Madhyamgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Ultodanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Sealdah",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Dharmatala",
+     "up_time": "2:00 AM",
+     "down_time": "2:00 AM"
+    },
+    {
+     "no": 20,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Nimtouri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Nachinda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Kanthi",
+     "up_time": "",
+     "down_time": "10:00 PM"
+    },
+    {
+     "no": 28,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": "9:00 PM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 30,
    "detail_url": ""
   }
  ],

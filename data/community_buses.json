@@ -748,6 +748,172 @@
      "down": "12:30 PM"
     }
    ]
+  },
+  {
+   "operator": "Ayush Riya",
+   "bus_name": "Ayush Riya (Devi Maa Bargabhima) Berhampore-Digha AC Sleeper",
+   "bus_type": "Private - AC Sleeper (2/1)",
+   "reg_no": "WB 29J 9676",
+   "origin": "Berhampore",
+   "destination": "Digha",
+   "departure_time": "6:50 PM",
+   "arrival_time": "",
+   "route": "Berhampore - Digha",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9647062600",
+   "stops": [
+    {
+     "name": "Berhampore",
+     "up": "6:50 PM",
+     "down": ""
+    },
+    {
+     "name": "Beldanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rejinagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Palashi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhubulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Krishnanagar",
+     "up": "9:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Santipur Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Fulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chakdaha",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jagulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Awalsiddhi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barasat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Madhyamgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Airport",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Baguihati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ultodanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sealdah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dharmatala",
+     "up": "2:00 AM",
+     "down": "2:00 AM"
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulagarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mecheda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nimtouri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nandakumar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nachinda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kanthi",
+     "up": "",
+     "down": "10:00 PM"
+    },
+    {
+     "name": "Chaulkhola",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramnagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Digha",
+     "up": "",
+     "down": "9:00 PM"
+    }
+   ]
   }
  ],
  "enrich": []
