@@ -53,6 +53,7 @@ jobs:
           python3 scripts/build_client_data.py
           python3 scripts/finalize_pages.py
           python3 scripts/gen_stop_network.py --write
+          python3 scripts/gen_blog.py --write
 
       - name: Commit and push if changed
         run: |
