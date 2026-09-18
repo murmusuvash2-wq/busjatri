@@ -24,7 +24,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MIN_BUSES = 2
-MAX_ROWS = 150
+MAX_ROWS = 1000
 MAX_CHIPS = 80
 TODAY = date.today().isoformat()
 BASE = "https://busjatri.in"
@@ -249,7 +249,33 @@ def stop_page(stop, e, route_pages):
 
     shown = rows[:MAX_ROWS]
     more = len(rows) - len(shown)
-    board = "".join(row_html(r, route_pages) for r in shown)
+
+    def bucket(m):
+        if m is None:
+            return None
+        if m < 5 * 60:
+            return "Early Morning"
+        if m < 12 * 60:
+            return "Morning"
+        if m < 17 * 60:
+            return "Afternoon"
+        if m < 22 * 60:
+            return "Evening"
+        return "Late Night"
+
+    parts = []
+    cur_bucket = None
+    for r in shown:
+        bkt = bucket(r[0])
+        if bkt and bkt != cur_bucket:
+            cur_bucket = bkt
+            parts.append(
+                '<div style="margin:20px 0 8px;font-size:.85rem;font-weight:700;color:var(--ink-dim,#665);'
+                'border-bottom:1px solid var(--line,#e5dcc7);padding-bottom:4px;letter-spacing:.5px">'
+                + bkt.upper() + "</div>"
+            )
+        parts.append(row_html(r, route_pages))
+    board = "".join(parts)
     more_note = f'<p style="font-size:13px;color:var(--ink-dim);margin:8px 2px">Showing first {MAX_ROWS} of {len(rows)} departures.</p>' if more > 0 else ""
 
     routes = Counter()
