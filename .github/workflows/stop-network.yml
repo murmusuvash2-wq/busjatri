@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Generate stop network (via hubs + chip links + sitemap)
-        run: python3 scripts/gen_stop_network.py
+        run: python3 scripts/gen_stop_network.py --write
 
       - name: Validate
         run: |
