@@ -1,0 +1,58 @@
+name: FB community update
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply FB update patch
+        run: python3 scripts/patch_fb_vishwakarma.py --write
+
+      - name: Add community buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert 3900 <= n <= 4200, f'unexpected bus count {n}'
+          ml = [b for b in d['buses'] if b['id'] == 'bussathi-maa-laxmi-892'][0]
+          assert ml['origin'] == 'Indas' and ml['destination'] == 'Bardhaman', 'maa laxmi not updated'
+          sn = [b for b in d['buses'] if 'Snemita Paribahan' in (b.get('bus_name') or '') and 'Digha Border' in (b.get('destination') or '')]
+          assert len(sn) == 1, f'snemita not added ({len(sn)})'
+          print(f'OK: {n} buses, MAA LAXMI rerouted, SNEMITA added')
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "FB update: MAA LAXMI route change to Indas-Bardhaman + Snemita Paribahan AC Kolkata-Digha Border + rebuild"
+            git push
+          fi
