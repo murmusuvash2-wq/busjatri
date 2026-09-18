@@ -49,8 +49,8 @@ edit(gsp, [
 about = ROOT / "about.html"
 edit(about, [
     (
-        '<h1 style="font-size:clamp(1.2rem,3.5vw,1.6rem);margin-top:20px">\u0995\u09c3\u09a4\u099c\u09cd\u099e\u09a4\u09be \u0993 \u09a5\u09cd\u09af\u09b8\u09c2\u09a4\u09cd\u09b0</h1>',
-        '<h2 style="font-size:clamp(1.2rem,3.5vw,1.6rem);margin-top:20px">\u0995\u09c3\u09a4\u099c\u09cd\u099e\u09a4\u09be \u0993 \u09a5\u09cd\u09af\u09b8\u09c2\u09a4\u09cd\u09b0</h2>',
+        '<h1 style="font-size:clamp(1.2rem,3.5vw,1.6rem);margin-top:20px">কৃতজ্ঞতা ও তথ্যসূত্র</h1>',
+        '<h2 style="font-size:clamp(1.2rem,3.5vw,1.6rem);margin-top:20px">কৃতজ্ঞতা ও তথ্যসূত্র</h2>',
     ),
 ], "about.html (H1 -> H2)")
 
