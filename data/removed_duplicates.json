@@ -1,1 +1,90 @@
-[]
+[
+ {
+  "id": "wbbus-in-abhishek-1235",
+  "bus_name": "ABHISHEK",
+  "route": "Khatra - Purulia",
+  "time": "5:40 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-dakshayani-1282",
+  "bus_name": "DAKSHAYANI",
+  "route": "Medinipur - Digha",
+  "time": "7:40 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-devi-laxmi-1292",
+  "bus_name": "DEVI LAXMI",
+  "route": "Bardhaman - Garhbeta",
+  "time": "7:15 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-duronto-1301",
+  "bus_name": "DURONTO",
+  "route": "Balarampur - Bolpur",
+  "time": "4:20 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-gangaram-1307",
+  "bus_name": "GANGARAM",
+  "route": "Medinipur - Contai",
+  "time": "9:25 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-krishna-gopal-1342",
+  "bus_name": "KRISHNA GOPAL",
+  "route": "Silda - Tarkeshwar",
+  "time": "3:40 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-maa-satyadevi-1379",
+  "bus_name": "MAA SATYADEVI",
+  "route": "Purulia - Pandaveswar",
+  "time": "6:45 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-monalisha-1405",
+  "bus_name": "MONALISHA",
+  "route": "Bandwan - Kolkata (Esplanade)",
+  "time": "3:50 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "wbbus-in-narayani-1414",
+  "bus_name": "NARAYANI",
+  "route": "Bishnupur - Purulia",
+  "time": "8:30 AM",
+  "source": "wbbus.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "bussathi-baba-bholanath-registration-wb67c2148-typ-0",
+  "bus_name": "BABA BHOLANATH",
+  "route": "Gobindapur - Bankura",
+  "time": "5:30 AM",
+  "source": "bussathi.in",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "bussathi-raidul-registration-wb33f3096-type-oper-0",
+  "bus_name": "RAIDUL",
+  "route": "Moyna - Bishnupur",
+  "time": "6:45 AM",
+  "source": "bussathi.in",
+  "reason": "same route+time+name as kept copy"
+ }
+]

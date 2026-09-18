@@ -6397,109 +6397,6 @@
    "detail_url": "https://wbbustime.in/bus-timetable/howrah-station-to-telami/"
   },
   {
-   "id": "wbbus-in-abhishek-1235",
-   "bus_name": "ABHISHEK",
-   "reg_no": "WB55F6221",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Khatra",
-   "destination": "Purulia",
-   "departure_time": "5:40 AM",
-   "arrival_time": "10:50 AM",
-   "contact_number": "7679208142",
-   "depot_name": "Khatra",
-   "route": "Khatra - Purulia",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Khatra",
-     "up_time": "5:40 AM",
-     "down_time": "6:30 PM"
-    },
-    {
-     "no": 2,
-     "name": "Ranibandh",
-     "up_time": "6:10 AM",
-     "down_time": "6:00 PM"
-    },
-    {
-     "no": 3,
-     "name": "Poradih",
-     "up_time": "6:50 AM",
-     "down_time": "5:20 PM"
-    },
-    {
-     "no": 4,
-     "name": "Kuilapal",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Chhirudi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Bandwan",
-     "up_time": "7:40 AM",
-     "down_time": "4:45 PM"
-    },
-    {
-     "no": 7,
-     "name": "Katin",
-     "up_time": "8:10 AM",
-     "down_time": "4:10 PM"
-    },
-    {
-     "no": 8,
-     "name": "Barabazar",
-     "up_time": "8:50 AM",
-     "down_time": "3:40 PM"
-    },
-    {
-     "no": 9,
-     "name": "Salboni",
-     "up_time": "9:20 AM",
-     "down_time": "3:10 PM"
-    },
-    {
-     "no": 10,
-     "name": "Balarampur",
-     "up_time": "9:40 AM",
-     "down_time": "2:50 PM"
-    },
-    {
-     "no": 11,
-     "name": "Urma",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Damda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Simulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Purulia",
-     "up_time": "10:50 AM",
-     "down_time": "1:40 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 14,
-   "detail_url": "https://wbbus.in/bus/abhishek-wb55f6221-khatra-purulia-1295"
-  },
-  {
    "id": "wbbus-in-ad-express-1236",
    "bus_name": "AD EXPRESS",
    "reg_no": "WB81C6847",
@@ -7986,79 +7883,6 @@
    "detail_url": "https://wbbus.in/bus/chiranjit-wb433535-asansol-krishnanagar-1373"
   },
   {
-   "id": "wbbus-in-dakshayani-1282",
-   "bus_name": "DAKSHAYANI",
-   "reg_no": "WB35D2754",
-   "operator": "—",
-   "bus_type": "Private - AC",
-   "origin": "Medinipur",
-   "destination": "Digha",
-   "departure_time": "7:40 AM",
-   "arrival_time": "11:20 AM",
-   "contact_number": "9609863278",
-   "depot_name": "Medinipur",
-   "route": "Medinipur - Digha",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Medinipur",
-     "up_time": "7:40 AM",
-     "down_time": "8:10 PM"
-    },
-    {
-     "no": 2,
-     "name": "Mohanpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Kharagpur",
-     "up_time": "8:35 AM",
-     "down_time": "7:40 PM"
-    },
-    {
-     "no": 4,
-     "name": "Belda",
-     "up_time": "9:35 AM",
-     "down_time": "6:40 PM"
-    },
-    {
-     "no": 5,
-     "name": "Khakurda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Egra",
-     "up_time": "10:20 AM",
-     "down_time": "6:00 PM"
-    },
-    {
-     "no": 7,
-     "name": "Paniparul",
-     "up_time": "10:50 AM",
-     "down_time": "5:15 PM"
-    },
-    {
-     "no": 8,
-     "name": "Ramnagar",
-     "up_time": "11:05 AM",
-     "down_time": "4:50 PM"
-    },
-    {
-     "no": 9,
-     "name": "Digha",
-     "up_time": "11:20 AM",
-     "down_time": "4:10 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 9,
-   "detail_url": "https://wbbus.in/bus/dakshayani-wb35d2754-medinipur-digha-1317"
-  },
-  {
    "id": "wbbus-in-dakshayani-1283",
    "bus_name": "DAKSHAYANI",
    "reg_no": "WB33H7161",
@@ -8417,109 +8241,6 @@
    "source": "wbbus.in",
    "total_stoppages": 6,
    "detail_url": "https://wbbus.in/bus/deblina-wb33c3916-ramjibanpur-medinipur-606"
-  },
-  {
-   "id": "wbbus-in-devi-laxmi-1292",
-   "bus_name": "DEVI LAXMI",
-   "reg_no": "WB67G9555",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Bardhaman",
-   "destination": "Garhbeta",
-   "departure_time": "7:15 AM",
-   "arrival_time": "11:30 AM",
-   "contact_number": "8391036954",
-   "depot_name": "Bardhaman",
-   "route": "Bardhaman - Garhbeta",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bardhaman",
-     "up_time": "7:15 AM",
-     "down_time": "4:20 PM"
-    },
-    {
-     "no": 2,
-     "name": "Telipukur",
-     "up_time": "7:35 AM",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Khandaghosh",
-     "up_time": "8:15 AM",
-     "down_time": "3:45 PM"
-    },
-    {
-     "no": 4,
-     "name": "Rasulpur",
-     "up_time": "8:30 AM",
-     "down_time": "3:25 PM"
-    },
-    {
-     "no": 5,
-     "name": "Kankardanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Patrasayer",
-     "up_time": "9:00 AM",
-     "down_time": "3:05 PM"
-    },
-    {
-     "no": 7,
-     "name": "Balsi",
-     "up_time": "9:15 AM",
-     "down_time": "2:50 PM"
-    },
-    {
-     "no": 8,
-     "name": "Pandua",
-     "up_time": "9:40 AM",
-     "down_time": "2:30 PM"
-    },
-    {
-     "no": 9,
-     "name": "Hinjuri",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Joykrishnapur",
-     "up_time": "10:10 AM",
-     "down_time": "2:00 PM"
-    },
-    {
-     "no": 11,
-     "name": "Bishnupur",
-     "up_time": "10:50 AM",
-     "down_time": "1:30 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bankadaha",
-     "up_time": "11:10 AM",
-     "down_time": "12:45 PM"
-    },
-    {
-     "no": 13,
-     "name": "Dhadika",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Garhbeta",
-     "up_time": "11:30 AM",
-     "down_time": "12:25 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 14,
-   "detail_url": "https://wbbus.in/bus/devi-laxmi-wb67g9555-bardhaman-garhbeta-1315"
   },
   {
    "id": "wbbus-in-dey-travels-1293",
@@ -8965,145 +8686,6 @@
    "detail_url": "https://wbbus.in/bus/durga-wb41k1665-bardhaman-ghatal-409"
   },
   {
-   "id": "wbbus-in-duronto-1301",
-   "bus_name": "DURONTO",
-   "reg_no": "WB55E9765",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Balarampur",
-   "destination": "Bolpur",
-   "departure_time": "4:20 AM",
-   "arrival_time": "11:35 AM",
-   "contact_number": "7864813698",
-   "depot_name": "Balarampur",
-   "route": "Balarampur - Bolpur",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Balarampur",
-     "up_time": "4:20 AM",
-     "down_time": "9:00 PM"
-    },
-    {
-     "no": 2,
-     "name": "Barabazar",
-     "up_time": "4:50 AM",
-     "down_time": "8:35 PM"
-    },
-    {
-     "no": 3,
-     "name": "Katin",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Bandwan",
-     "up_time": "5:30 AM",
-     "down_time": "7:55 PM"
-    },
-    {
-     "no": 5,
-     "name": "Ranibandh",
-     "up_time": "6:35 AM",
-     "down_time": "6:55 PM"
-    },
-    {
-     "no": 6,
-     "name": "Khatra",
-     "up_time": "7:05 AM",
-     "down_time": "6:35 PM"
-    },
-    {
-     "no": 7,
-     "name": "Hatirampur",
-     "up_time": "7:25 AM",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Bangla",
-     "up_time": "7:45 AM",
-     "down_time": "5:50 PM"
-    },
-    {
-     "no": 9,
-     "name": "Indpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Puabagan",
-     "up_time": "8:05 AM",
-     "down_time": "5:40 PM"
-    },
-    {
-     "no": 11,
-     "name": "Dhaldanga",
-     "up_time": "8:10 AM",
-     "down_time": "5:35 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bankura",
-     "up_time": "8:15 AM",
-     "down_time": "5:30 PM"
-    },
-    {
-     "no": 13,
-     "name": "Makurgram",
-     "up_time": "8:25 AM",
-     "down_time": "5:20 PM"
-    },
-    {
-     "no": 14,
-     "name": "Beliatore",
-     "up_time": "8:35 AM",
-     "down_time": "5:00 PM"
-    },
-    {
-     "no": 15,
-     "name": "Barjora",
-     "up_time": "8:50 AM",
-     "down_time": "4:40 PM"
-    },
-    {
-     "no": 16,
-     "name": "Durgapur (Station)",
-     "up_time": "9:30 AM",
-     "down_time": "4:15 PM"
-    },
-    {
-     "no": 17,
-     "name": "Durgapur (Muchipara)",
-     "up_time": "9:45 AM",
-     "down_time": "3:55 PM"
-    },
-    {
-     "no": 18,
-     "name": "Panagarh",
-     "up_time": "10:15 AM",
-     "down_time": "3:35 PM"
-    },
-    {
-     "no": 19,
-     "name": "Illambazar",
-     "up_time": "11:05 AM",
-     "down_time": "2:50 PM"
-    },
-    {
-     "no": 20,
-     "name": "Bolpur",
-     "up_time": "11:35 AM",
-     "down_time": "2:15 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 20,
-   "detail_url": "https://wbbus.in/bus/duronto-wb55e9765-balarampur-bolpur-1323"
-  },
-  {
    "id": "wbbus-in-gangaram-1303",
    "bus_name": "GANGARAM",
    "reg_no": "WB339069",
@@ -9169,67 +8751,6 @@
    "source": "wbbus.in",
    "total_stoppages": 8,
    "detail_url": "https://wbbus.in/bus/gangaram-wb339069-medinipur-digha-205"
-  },
-  {
-   "id": "wbbus-in-gangaram-1307",
-   "bus_name": "GANGARAM",
-   "reg_no": "WB33A6649",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Medinipur",
-   "destination": "Contai",
-   "departure_time": "9:25 AM",
-   "arrival_time": "12:15 PM",
-   "contact_number": "Not Available !",
-   "depot_name": "Medinipur",
-   "route": "Medinipur - Contai",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Medinipur",
-     "up_time": "9:25 AM",
-     "down_time": "5:30 PM"
-    },
-    {
-     "no": 2,
-     "name": "Mohanpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Kharagpur",
-     "up_time": "10:05 AM",
-     "down_time": "5:00 PM"
-    },
-    {
-     "no": 4,
-     "name": "Belda",
-     "up_time": "11:00 AM",
-     "down_time": "4:10 PM"
-    },
-    {
-     "no": 5,
-     "name": "Khakurda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Egra",
-     "up_time": "11:40 AM",
-     "down_time": "3:20 PM"
-    },
-    {
-     "no": 7,
-     "name": "Contai",
-     "up_time": "12:15 PM",
-     "down_time": "2:45 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 7,
-   "detail_url": "https://wbbus.in/bus/gangaram-wb33a6649-medinipur-contai-1331"
   },
   {
    "id": "wbbus-in-hilltop-super-1309",
@@ -10893,151 +10414,6 @@
    "detail_url": "https://wbbus.in/bus/krishna-wb41j7273-bardhaman-beldanga-1385"
   },
   {
-   "id": "wbbus-in-krishna-gopal-1342",
-   "bus_name": "KRISHNA GOPAL",
-   "reg_no": "WB#######",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Silda",
-   "destination": "Tarkeshwar",
-   "departure_time": "3:40 AM",
-   "arrival_time": "9:30 AM",
-   "contact_number": "Not Available !",
-   "depot_name": "Silda",
-   "route": "Silda - Tarkeshwar",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Silda",
-     "up_time": "3:40 AM",
-     "down_time": "3:50 PM"
-    },
-    {
-     "no": 2,
-     "name": "Fulkusma",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Motgoda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Raipur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "P More",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Bikrampur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Simlapal",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Taldangra",
-     "up_time": "5:10 AM",
-     "down_time": "2:20 PM"
-    },
-    {
-     "no": 9,
-     "name": "Panchmura",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Sabrakon",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Piardoba",
-     "up_time": "6:00 AM",
-     "down_time": "1:40 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bankadaha",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Uparsol",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Ramdiha",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Jayrambati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Kamarpukur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Goghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Arambagh",
-     "up_time": "8:15 AM",
-     "down_time": "11:35 AM"
-    },
-    {
-     "no": 19,
-     "name": "Mayapur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Champadanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Tarkeshwar",
-     "up_time": "9:30 AM",
-     "down_time": "10:30 AM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 21,
-   "detail_url": "https://wbbus.in/bus/krishna-gopal-wb-silda-tarkeshwar-146"
-  },
-  {
    "id": "wbbus-in-krishna-kanhaiaya-1343",
    "bus_name": "KRISHNA KANHAIAYA",
    "reg_no": "WB316111",
@@ -12190,91 +11566,6 @@
    "source": "wbbus.in",
    "total_stoppages": 8,
    "detail_url": "https://wbbus.in/bus/maa-sandhya-wb41g0209-kushdwip-bardhaman-868"
-  },
-  {
-   "id": "wbbus-in-maa-satyadevi-1379",
-   "bus_name": "MAA SATYADEVI",
-   "reg_no": "WB55B7564",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Purulia",
-   "destination": "Pandaveswar",
-   "departure_time": "6:45 AM",
-   "arrival_time": "12:20 PM",
-   "contact_number": "9635670801",
-   "depot_name": "Purulia",
-   "route": "Purulia - Pandaveswar",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Purulia",
-     "up_time": "6:45 AM",
-     "down_time": "7:10 PM"
-    },
-    {
-     "no": 2,
-     "name": "Golkunda",
-     "up_time": "7:10 AM",
-     "down_time": "6:45 PM"
-    },
-    {
-     "no": 3,
-     "name": "Anara",
-     "up_time": "7:40 AM",
-     "down_time": "6:20 PM"
-    },
-    {
-     "no": 4,
-     "name": "Sanka",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Raghunathpur",
-     "up_time": "8:00 AM",
-     "down_time": "6:00 PM"
-    },
-    {
-     "no": 6,
-     "name": "Santuri",
-     "up_time": "8:35 AM",
-     "down_time": "5:05 PM"
-    },
-    {
-     "no": 7,
-     "name": "Saltora",
-     "up_time": "9:05 AM",
-     "down_time": "4:45 PM"
-    },
-    {
-     "no": 8,
-     "name": "Pabra",
-     "up_time": "9:15 AM",
-     "down_time": "4:25 PM"
-    },
-    {
-     "no": 9,
-     "name": "Mejia",
-     "up_time": "9:30 AM",
-     "down_time": "4:05 PM"
-    },
-    {
-     "no": 10,
-     "name": "Raniganj",
-     "up_time": "10:50 AM",
-     "down_time": "3:45 PM"
-    },
-    {
-     "no": 11,
-     "name": "Pandaveswar",
-     "up_time": "12:20 PM",
-     "down_time": "1:50 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 11,
-   "detail_url": "https://wbbus.in/bus/maa-satyadevi-wb55b7564-purulia-pandaveswar-1288"
   },
   {
    "id": "wbbus-in-maa-tara-1380",
@@ -13611,151 +12902,6 @@
    "detail_url": "https://wbbus.in/bus/mishra-wb55f9732-bhagabanpur-purulia-1357"
   },
   {
-   "id": "wbbus-in-monalisha-1405",
-   "bus_name": "MONALISHA",
-   "reg_no": "WB55A8224",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Bandwan",
-   "destination": "Kolkata (Esplanade)",
-   "departure_time": "3:50 AM",
-   "arrival_time": "11:10 AM",
-   "contact_number": "9735747584",
-   "depot_name": "Bandwan",
-   "route": "Bandwan - Kolkata (Esplanade)",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bandwan",
-     "up_time": "3:50 AM",
-     "down_time": "10:30 PM"
-    },
-    {
-     "no": 2,
-     "name": "Manbazar",
-     "up_time": "4:50 AM",
-     "down_time": "9:45 PM"
-    },
-    {
-     "no": 3,
-     "name": "Pairachali",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Hatirampur",
-     "up_time": "5:30 AM",
-     "down_time": "9:15 PM"
-    },
-    {
-     "no": 5,
-     "name": "Bangla",
-     "up_time": "5:55 AM",
-     "down_time": "8:55 PM"
-    },
-    {
-     "no": 6,
-     "name": "Indpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Puabagan",
-     "up_time": "6:15 AM",
-     "down_time": "8:30 PM"
-    },
-    {
-     "no": 8,
-     "name": "Dhaldanga",
-     "up_time": "6:20 AM",
-     "down_time": "8:25 PM"
-    },
-    {
-     "no": 9,
-     "name": "Bankura",
-     "up_time": "6:25 AM",
-     "down_time": "8:20 PM"
-    },
-    {
-     "no": 10,
-     "name": "Makurgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Beliatore",
-     "up_time": "6:45 AM",
-     "down_time": "7:40 PM"
-    },
-    {
-     "no": 12,
-     "name": "Barjora",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Durgapur (Muchipara)",
-     "up_time": "7:20 AM",
-     "down_time": "7:20 PM"
-    },
-    {
-     "no": 14,
-     "name": "Panagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Bardhaman",
-     "up_time": "8:35 AM",
-     "down_time": "6:10 PM"
-    },
-    {
-     "no": 16,
-     "name": "Saktigarh",
-     "up_time": "9:10 AM",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Dankuni",
-     "up_time": "10:30 AM",
-     "down_time": "4:25 PM"
-    },
-    {
-     "no": 18,
-     "name": "Salap",
-     "up_time": "10:40 AM",
-     "down_time": "4:10 PM"
-    },
-    {
-     "no": 19,
-     "name": "Kona Express More",
-     "up_time": "10:43 AM",
-     "down_time": "4:05 PM"
-    },
-    {
-     "no": 20,
-     "name": "Santragachi",
-     "up_time": "10:50 AM",
-     "down_time": "3:55 PM"
-    },
-    {
-     "no": 21,
-     "name": "Kolkata (Esplanade)",
-     "up_time": "11:10 AM",
-     "down_time": "3:40 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 21,
-   "detail_url": "https://wbbus.in/bus/monalisha-wb55a8224-bandwan-kolkata-%28esplanade%29-1338"
-  },
-  {
    "id": "wbbus-in-nandan-1411",
    "bus_name": "NANDAN",
    "reg_no": "WB33D1133",
@@ -13785,103 +12931,6 @@
    "source": "wbbus.in",
    "total_stoppages": 6,
    "detail_url": "https://wbbus.in/bus/nandan-wb33d1133-goaltore-jhargram-1240"
-  },
-  {
-   "id": "wbbus-in-narayani-1414",
-   "bus_name": "NARAYANI",
-   "reg_no": "WB55 3855",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
-   "origin": "Bishnupur",
-   "destination": "Purulia",
-   "departure_time": "8:30 AM",
-   "arrival_time": "1:30 PM",
-   "contact_number": "Not Available !",
-   "depot_name": "Bishnupur",
-   "route": "Bishnupur - Purulia",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bishnupur",
-     "up_time": "8:30 AM",
-     "down_time": "8:10 PM"
-    },
-    {
-     "no": 2,
-     "name": "Ramsagar",
-     "up_time": "8:45 AM",
-     "down_time": "7:55 PM"
-    },
-    {
-     "no": 3,
-     "name": "Onda",
-     "up_time": "9:05 AM",
-     "down_time": "7:35 PM"
-    },
-    {
-     "no": 4,
-     "name": "Dhaldanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Bankura",
-     "up_time": "10:50 AM",
-     "down_time": "6:35 PM"
-    },
-    {
-     "no": 6,
-     "name": "Chhatna",
-     "up_time": "11:25 AM",
-     "down_time": "6:00 PM"
-    },
-    {
-     "no": 7,
-     "name": "Kharbona",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Kamalpur",
-     "up_time": "11:50 PM",
-     "down_time": "5:25 PM"
-    },
-    {
-     "no": 9,
-     "name": "Bishpuria",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Hura",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Lalpur",
-     "up_time": "12:25 PM",
-     "down_time": "4:40 PM"
-    },
-    {
-     "no": 12,
-     "name": "Ladhurka",
-     "up_time": "12:45 PM",
-     "down_time": "4:20 PM"
-    },
-    {
-     "no": 13,
-     "name": "Purulia",
-     "up_time": "1:30 PM",
-     "down_time": "3:30 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 13,
-   "detail_url": "https://wbbus.in/bus/narayani-wb55-3855-bishnupur-purulia-4"
   },
   {
    "id": "wbbus-in-nayan-1416",
@@ -98342,8 +97391,8 @@
   },
   {
    "id": "bussathi-abhishek-registration-wb55f6221-type-op-0",
-   "bus_name": "ABHISHEK Registration WB55F6221 Type — Op",
-   "reg_no": "",
+   "bus_name": "ABHISHEK",
+   "reg_no": "WB55F6221",
    "operator": "—",
    "bus_type": "",
    "origin": "Khatra",
@@ -98360,8 +97409,8 @@
   },
   {
    "id": "bussathi-kalosona-registration-wb29g9687-type-op-0",
-   "bus_name": "KALOSONA Registration WB29G9687 Type — Op",
-   "reg_no": "",
+   "bus_name": "KALOSONA",
+   "reg_no": "WB29G9687",
    "operator": "—",
    "bus_type": "",
    "origin": "Asansol",
@@ -98378,8 +97427,8 @@
   },
   {
    "id": "bussathi-maa-satyadevi-registration-wb55b7564-type-0",
-   "bus_name": "MAA SATYADEVI Registration WB55B7564 Type",
-   "reg_no": "",
+   "bus_name": "MAA SATYADEVI",
+   "reg_no": "WB55B7564",
    "operator": "—",
    "bus_type": "",
    "origin": "Purulia",
@@ -98396,8 +97445,8 @@
   },
   {
    "id": "bussathi-pallirani-861",
-   "bus_name": "PALLIRANI Registration WB55B9276 Type — O",
-   "reg_no": "",
+   "bus_name": "PALLIRANI",
+   "reg_no": "WB55B9276",
    "operator": "—",
    "bus_type": "",
    "origin": "Danrikadoba",
@@ -98414,7 +97463,7 @@
   },
   {
    "id": "bussathi-krishna-gopal-862",
-   "bus_name": "KRISHNA GOPAL Registration govtb2 Type —",
+   "bus_name": "KRISHNA GOPAL",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -98511,8 +97560,8 @@
   },
   {
    "id": "bussathi-radha-damodar-864",
-   "bus_name": "RADHA DAMODAR Registration WB39B0662 Type",
-   "reg_no": "",
+   "bus_name": "RADHA DAMODAR",
+   "reg_no": "WB39B0662",
    "operator": "—",
    "bus_type": "",
    "origin": "Bajitpur",
@@ -98644,8 +97693,8 @@
   },
   {
    "id": "bussathi-sahin-865",
-   "bus_name": "SAHIN Registration WB41G3535 Type — Opera",
-   "reg_no": "",
+   "bus_name": "SAHIN",
+   "reg_no": "WB41G3535",
    "operator": "—",
    "bus_type": "",
    "origin": "Guskara",
@@ -98783,7 +97832,7 @@
   },
   {
    "id": "bussathi-narayani-866",
-   "bus_name": "NARAYANI Registration govtb3 Type — Opera",
+   "bus_name": "NARAYANI",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -98801,8 +97850,8 @@
   },
   {
    "id": "bussathi-western-diamond-869",
-   "bus_name": "WESTERN DIAMOND Registration WB33P3897 Ty",
-   "reg_no": "",
+   "bus_name": "WESTERN DIAMOND",
+   "reg_no": "WB33P3897",
    "operator": "—",
    "bus_type": "",
    "origin": "Ramgarh",
@@ -98910,8 +97959,8 @@
   },
   {
    "id": "bussathi-krishna-sarathi-868",
-   "bus_name": "KRISHNA SARATHI Registration WB39D0880 Ty",
-   "reg_no": "",
+   "bus_name": "KRISHNA SARATHI",
+   "reg_no": "WB39D0880",
    "operator": "—",
    "bus_type": "",
    "origin": "Joydeb",
@@ -98928,7 +97977,7 @@
   },
   {
    "id": "bussathi-sbstc-870",
-   "bus_name": "SBSTC Registration govtb5 Type Government",
+   "bus_name": "SBSTC",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -99055,7 +98104,7 @@
   },
   {
    "id": "bussathi-sbstc-871",
-   "bus_name": "SBSTC Registration govtb6 Type Government",
+   "bus_name": "SBSTC",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -99182,7 +98231,7 @@
   },
   {
    "id": "bussathi-sbstc-872",
-   "bus_name": "SBSTC Registration govtb7 Type Government",
+   "bus_name": "SBSTC",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -99309,7 +98358,7 @@
   },
   {
    "id": "bussathi-sbstc-873",
-   "bus_name": "SBSTC Registration govtb8 Type Government",
+   "bus_name": "SBSTC",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -99436,7 +98485,7 @@
   },
   {
    "id": "bussathi-sbstc-875",
-   "bus_name": "SBSTC Registration govtb9 Type Government",
+   "bus_name": "SBSTC",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -99563,7 +98612,7 @@
   },
   {
    "id": "bussathi-sbstc-874",
-   "bus_name": "SBSTC Registration govtb10 Type Governmen",
+   "bus_name": "SBSTC",
    "reg_no": "",
    "operator": "—",
    "bus_type": "",
@@ -99690,8 +98739,8 @@
   },
   {
    "id": "bussathi-sonar-bangla-registration-wb41c6565-type-0",
-   "bus_name": "SONAR BANGLA Registration WB41C6565 Type",
-   "reg_no": "",
+   "bus_name": "SONAR BANGLA",
+   "reg_no": "WB41C6565",
    "operator": "—",
    "bus_type": "",
    "origin": "Benachity",
@@ -99707,27 +98756,9 @@
    "detail_url": "https://bussathi.in/bus/1254"
   },
   {
-   "id": "bussathi-baba-bholanath-registration-wb67c2148-typ-0",
-   "bus_name": "BABA BHOLANATH Registration WB67C2148 Typ",
-   "reg_no": "",
-   "operator": "—",
-   "bus_type": "",
-   "origin": "Gobindapur",
-   "destination": "Bankura",
-   "departure_time": "5:30 AM",
-   "arrival_time": "8:20 AM",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Gobindapur - Bankura",
-   "stoppages": [],
-   "source": "bussathi.in",
-   "total_stoppages": 0,
-   "detail_url": "https://bussathi.in/bus/1256"
-  },
-  {
    "id": "bussathi-banhisikha-registration-wb55f9390-type-0",
-   "bus_name": "BANHISIKHA Registration WB55F9390 Type —",
-   "reg_no": "",
+   "bus_name": "BANHISIKHA",
+   "reg_no": "WB55F9390",
    "operator": "—",
    "bus_type": "",
    "origin": "Purulia",
@@ -99743,27 +98774,9 @@
    "detail_url": "https://bussathi.in/bus/1257"
   },
   {
-   "id": "bussathi-raidul-registration-wb33f3096-type-oper-0",
-   "bus_name": "RAIDUL Registration WB33F3096 Type — Oper",
-   "reg_no": "",
-   "operator": "—",
-   "bus_type": "",
-   "origin": "Moyna",
-   "destination": "Bishnupur",
-   "departure_time": "6:45 AM",
-   "arrival_time": "12:40 PM",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Moyna - Bishnupur",
-   "stoppages": [],
-   "source": "bussathi.in",
-   "total_stoppages": 0,
-   "detail_url": "https://bussathi.in/bus/1258"
-  },
-  {
    "id": "bussathi-rakhalraja-registration-wb33p6696-type-0",
-   "bus_name": "RAKHALRAJA Registration WB33P6696 Type —",
-   "reg_no": "",
+   "bus_name": "RAKHALRAJA",
+   "reg_no": "WB33P6696",
    "operator": "—",
    "bus_type": "",
    "origin": "Khatra",
@@ -99780,8 +98793,8 @@
   },
   {
    "id": "bussathi-soumyajeet-876",
-   "bus_name": "SOUMYAJEET Registration WB49N1227 Type —",
-   "reg_no": "",
+   "bus_name": "SOUMYAJEET",
+   "reg_no": "WB49N1227",
    "operator": "—",
    "bus_type": "",
    "origin": "Durgapur (Station)",
@@ -99798,8 +98811,8 @@
   },
   {
    "id": "bussathi-utsav-877",
-   "bus_name": "UTSAV Registration WB55D9963 Type — Opera",
-   "reg_no": "",
+   "bus_name": "UTSAV",
+   "reg_no": "WB55D9963",
    "operator": "—",
    "bus_type": "",
    "origin": "Kutni",
@@ -99865,8 +98878,8 @@
   },
   {
    "id": "bussathi-adorini-879",
-   "bus_name": "ADORINI Registration WB513095 Type — Oper",
-   "reg_no": "",
+   "bus_name": "ADORINI",
+   "reg_no": "WB513095",
    "operator": "—",
    "bus_type": "",
    "origin": "Baharampur",
@@ -99883,8 +98896,8 @@
   },
   {
    "id": "bussathi-bhagyalaxmi-878",
-   "bus_name": "BHAGYALAXMI Registration WB55F6227 Type —",
-   "reg_no": "",
+   "bus_name": "BHAGYALAXMI",
+   "reg_no": "WB55F6227",
    "operator": "—",
    "bus_type": "",
    "origin": "Manbazar",
@@ -99968,8 +98981,8 @@
   },
   {
    "id": "bussathi-krishna-kanhaiaya-881",
-   "bus_name": "KRISHNA KANHAIAYA Registration WB29A7002",
-   "reg_no": "",
+   "bus_name": "KRISHNA KANHAIAYA",
+   "reg_no": "WB29A7002",
    "operator": "—",
    "bus_type": "",
    "origin": "Contai",
@@ -100035,8 +99048,8 @@
   },
   {
    "id": "bussathi-arman-884",
-   "bus_name": "ARMAN Registration WB33F0743 Type — Opera",
-   "reg_no": "",
+   "bus_name": "ARMAN",
+   "reg_no": "WB33F0743",
    "operator": "—",
    "bus_type": "",
    "origin": "Digha",
@@ -100174,8 +99187,8 @@
   },
   {
    "id": "bussathi-belal-registration-wb33c9785-type-opera-0",
-   "bus_name": "BELAL Registration WB33C9785 Type — Opera",
-   "reg_no": "",
+   "bus_name": "BELAL",
+   "reg_no": "WB33C9785",
    "operator": "—",
    "bus_type": "",
    "origin": "Fulberia",
@@ -100192,8 +99205,8 @@
   },
   {
    "id": "bussathi-dakshayani-registration-wb35d2754-type-0",
-   "bus_name": "DAKSHAYANI Registration WB35D2754 Type —",
-   "reg_no": "",
+   "bus_name": "DAKSHAYANI",
+   "reg_no": "WB35D2754",
    "operator": "—",
    "bus_type": "",
    "origin": "Medinipur",
@@ -100210,8 +99223,8 @@
   },
   {
    "id": "bussathi-devi-laxmi-registration-wb67g9555-type-0",
-   "bus_name": "DEVI LAXMI Registration WB67G9555 Type —",
-   "reg_no": "",
+   "bus_name": "DEVI LAXMI",
+   "reg_no": "WB67G9555",
    "operator": "—",
    "bus_type": "",
    "origin": "Bardhaman",
@@ -100228,8 +99241,8 @@
   },
   {
    "id": "bussathi-duronto-registration-wb55e9765-type-ope-0",
-   "bus_name": "DURONTO Registration WB55E9765 Type — Ope",
-   "reg_no": "",
+   "bus_name": "DURONTO",
+   "reg_no": "WB55E9765",
    "operator": "—",
    "bus_type": "",
    "origin": "Balarampur",
@@ -100246,8 +99259,8 @@
   },
   {
    "id": "bussathi-gangaram-registration-wb33a6649-type-op-0",
-   "bus_name": "GANGARAM Registration WB33A6649 Type — Op",
-   "reg_no": "",
+   "bus_name": "GANGARAM",
+   "reg_no": "WB33A6649",
    "operator": "—",
    "bus_type": "",
    "origin": "Medinipur",
@@ -100264,8 +99277,8 @@
   },
   {
    "id": "bussathi-green-valley-885",
-   "bus_name": "GREEN VALLEY Registration WB33C3120 Type",
-   "reg_no": "",
+   "bus_name": "GREEN VALLEY",
+   "reg_no": "WB33C3120",
    "operator": "—",
    "bus_type": "",
    "origin": "Medinipur",
@@ -100385,8 +99398,8 @@
   },
   {
    "id": "bussathi-gurjot-886",
-   "bus_name": "GURJOT Registration WB41R5567 Type — Oper",
-   "reg_no": "",
+   "bus_name": "GURJOT",
+   "reg_no": "WB41R5567",
    "operator": "—",
    "bus_type": "",
    "origin": "Samaspur",
@@ -100488,8 +99501,8 @@
   },
   {
    "id": "bussathi-kojagori-889",
-   "bus_name": "KOJAGORI Registration WB33C6445 Type — Op",
-   "reg_no": "",
+   "bus_name": "KOJAGORI",
+   "reg_no": "WB33C6445",
    "operator": "—",
    "bus_type": "",
    "origin": "Medinipur",
@@ -100506,8 +99519,8 @@
   },
   {
    "id": "bussathi-laxmi-narayan-890",
-   "bus_name": "LAXMI NARAYAN Registration WB67B6593 Type",
-   "reg_no": "",
+   "bus_name": "LAXMI NARAYAN",
+   "reg_no": "WB67B6593",
    "operator": "—",
    "bus_type": "",
    "origin": "Chandrakona Road",
@@ -100633,8 +99646,8 @@
   },
   {
    "id": "bussathi-maa-bhabani-891",
-   "bus_name": "MAA BHABANI Registration WB33C6832 Type —",
-   "reg_no": "",
+   "bus_name": "MAA BHABANI",
+   "reg_no": "WB33C6832",
    "operator": "—",
    "bus_type": "",
    "origin": "Kharagpur",
@@ -100772,8 +99785,8 @@
   },
   {
    "id": "bussathi-maa-kali-893",
-   "bus_name": "MAA KALI Registration WB50AB8597 Type — O",
-   "reg_no": "",
+   "bus_name": "MAA KALI",
+   "reg_no": "WB50AB8597",
    "operator": "—",
    "bus_type": "",
    "origin": "Panskura",
@@ -100972,8 +99985,8 @@
   },
   {
    "id": "bussathi-maa-nayandevi-894",
-   "bus_name": "MAA NAYANDEVI Registration WB11C0144 Type",
-   "reg_no": "",
+   "bus_name": "MAA NAYANDEVI",
+   "reg_no": "WB11C0144",
    "operator": "—",
    "bus_type": "",
    "origin": "Dantol",
@@ -100990,8 +100003,8 @@
   },
   {
    "id": "bussathi-maa-sarada-895",
-   "bus_name": "MAA SARADA Registration WB23D5724 Type —",
-   "reg_no": "",
+   "bus_name": "MAA SARADA",
+   "reg_no": "WB23D5724",
    "operator": "—",
    "bus_type": "",
    "origin": "Kolkata",
@@ -101135,8 +100148,8 @@
   },
   {
    "id": "bussathi-maa-saradamayee-896",
-   "bus_name": "MAA SARADAMAYEE Registration WB50AB3369 T",
-   "reg_no": "",
+   "bus_name": "MAA SARADAMAYEE",
+   "reg_no": "WB50AB3369",
    "operator": "—",
    "bus_type": "",
    "origin": "Kolkata",
@@ -101153,8 +100166,8 @@
   },
   {
    "id": "bussathi-madan-mohan-897",
-   "bus_name": "MADAN MOHAN Registration WB67A8830 Type —",
-   "reg_no": "",
+   "bus_name": "MADAN MOHAN",
+   "reg_no": "WB67A8830",
    "operator": "—",
    "bus_type": "",
    "origin": "Bankura",
@@ -101286,8 +100299,8 @@
   },
   {
    "id": "bussathi-magnetic-898",
-   "bus_name": "MAGNETIC Registration WB33C4997 Type — Op",
-   "reg_no": "",
+   "bus_name": "MAGNETIC",
+   "reg_no": "WB33C4997",
    "operator": "—",
    "bus_type": "",
    "origin": "Medinipur",
@@ -101304,8 +100317,8 @@
   },
   {
    "id": "bussathi-mintu-899",
-   "bus_name": "MINTU Registration WB41H6209 Type — Opera",
-   "reg_no": "",
+   "bus_name": "MINTU",
+   "reg_no": "WB41H6209",
    "operator": "—",
    "bus_type": "",
    "origin": "Bardhaman",
@@ -101322,8 +100335,8 @@
   },
   {
    "id": "bussathi-mishra-registration-wb55f9732-type-oper-0",
-   "bus_name": "MISHRA Registration WB55F9732 Type — Oper",
-   "reg_no": "",
+   "bus_name": "MISHRA",
+   "reg_no": "WB55F9732",
    "operator": "—",
    "bus_type": "",
    "origin": "Bhagabanpur",
@@ -101340,8 +100353,8 @@
   },
   {
    "id": "bussathi-monalisha-registration-wb55a8224-type-o-0",
-   "bus_name": "MONALISHA Registration WB55A8224 Type — O",
-   "reg_no": "",
+   "bus_name": "MONALISHA",
+   "reg_no": "WB55A8224",
    "operator": "—",
    "bus_type": "",
    "origin": "Bandwan",
@@ -101358,8 +100371,8 @@
   },
   {
    "id": "bussathi-nusrat-900",
-   "bus_name": "NUSRAT Registration WB11C1746 Type — Oper",
-   "reg_no": "",
+   "bus_name": "NUSRAT",
+   "reg_no": "WB11C1746",
    "operator": "—",
    "bus_type": "",
    "origin": "Nadanghat",
@@ -101376,8 +100389,8 @@
   },
   {
    "id": "bussathi-pally-duth-901",
-   "bus_name": "PALLY DUTH Registration WB131628 Type — O",
-   "reg_no": "",
+   "bus_name": "PALLY DUTH",
+   "reg_no": "WB131628",
    "operator": "—",
    "bus_type": "",
    "origin": "Bainchi",
@@ -101479,8 +100492,8 @@
   },
   {
    "id": "bussathi-parama-902",
-   "bus_name": "PARAMA Registration WB67E5152 Type — Oper",
-   "reg_no": "",
+   "bus_name": "PARAMA",
+   "reg_no": "WB67E5152",
    "operator": "—",
    "bus_type": "",
    "origin": "Indus",
@@ -101588,8 +100601,8 @@
   },
   {
    "id": "bussathi-puspak-904",
-   "bus_name": "PUSPAK Registration WB37M2489 Type — Oper",
-   "reg_no": "",
+   "bus_name": "PUSPAK",
+   "reg_no": "WB37M2489",
    "operator": "—",
    "bus_type": "",
    "origin": "Barakar",
@@ -101606,8 +100619,8 @@
   },
   {
    "id": "bussathi-raja-coach-905",
-   "bus_name": "RAJA COACH Registration WB67D1827 Type —",
-   "reg_no": "",
+   "bus_name": "RAJA COACH",
+   "reg_no": "WB67D1827",
    "operator": "—",
    "bus_type": "",
    "origin": "Sonamukhi",
@@ -101697,8 +100710,8 @@
   },
   {
    "id": "bussathi-raju-906",
-   "bus_name": "RAJU Registration WB51A1165 Type — Operat",
-   "reg_no": "",
+   "bus_name": "RAJU",
+   "reg_no": "WB51A1165",
    "operator": "—",
    "bus_type": "",
    "origin": "Nabadwip",
