@@ -2262,6 +2262,1129 @@
      "down": "2:30 PM"
     }
    ]
+  },
+  {
+   "operator": "RBN Travels",
+   "bus_name": "RBN Travels Kharagpur-Barabazar",
+   "bus_type": "Private",
+   "reg_no": "WB 55B 7065",
+   "origin": "Kharagpur",
+   "destination": "Barabazar",
+   "departure_time": "4:40 AM",
+   "arrival_time": "11:20 AM",
+   "route": "Kharagpur - Barabazar",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "7584871470",
+   "stops": [
+    {
+     "name": "Kharagpur Station",
+     "up": "4:40 AM",
+     "down": "8:00 PM"
+    },
+    {
+     "name": "Chowringhee",
+     "up": "4:50 AM",
+     "down": "7:50 PM"
+    },
+    {
+     "name": "Lodhashuli",
+     "up": "5:40 AM",
+     "down": "6:55 PM"
+    },
+    {
+     "name": "Jhargram Central Bus Stand",
+     "up": "6:20 AM",
+     "down": ""
+    },
+    {
+     "name": "Jhargram Panch Mathar More",
+     "up": "",
+     "down": "6:30 PM"
+    },
+    {
+     "name": "Binpur",
+     "up": "7:00 AM",
+     "down": "5:55 PM"
+    },
+    {
+     "name": "Shilda",
+     "up": "7:30 AM",
+     "down": "5:35 PM"
+    },
+    {
+     "name": "Fulkusma",
+     "up": "7:55 AM",
+     "down": "5:05 PM"
+    },
+    {
+     "name": "Raipur",
+     "up": "8:20 AM",
+     "down": "4:30 PM"
+    },
+    {
+     "name": "Haludkanali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ankukhuta More",
+     "up": "9:00 AM",
+     "down": "3:30 PM"
+    },
+    {
+     "name": "Khatra",
+     "up": "9:20 AM",
+     "down": "3:05 PM"
+    },
+    {
+     "name": "Hatirampur",
+     "up": "9:40 AM",
+     "down": "2:40 PM"
+    },
+    {
+     "name": "Payrachali",
+     "up": "10:00 AM",
+     "down": "2:15 PM"
+    },
+    {
+     "name": "Manbazar",
+     "up": "10:20 AM",
+     "down": "1:45 PM"
+    },
+    {
+     "name": "Sindri",
+     "up": "10:50 AM",
+     "down": "1:10 PM"
+    },
+    {
+     "name": "Barabazar",
+     "up": "11:20 AM",
+     "down": "12:45 PM"
+    }
+   ]
+  },
+  {
+   "operator": "Maa Parul (Maa Santoshi)",
+   "bus_name": "Maa Parul Jayrambati-Durgapur",
+   "bus_type": "Private",
+   "reg_no": "WB 67 3747",
+   "origin": "Jayrambati",
+   "destination": "Durgapur",
+   "departure_time": "4:30 AM",
+   "arrival_time": "9:55 AM",
+   "route": "Jayrambati - Durgapur",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Jayrambati",
+     "up": "4:30 AM",
+     "down": "5:45 PM"
+    },
+    {
+     "name": "Ramdiha",
+     "up": "4:50 AM",
+     "down": "5:30 PM"
+    },
+    {
+     "name": "Kuchakol",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Moynapur",
+     "up": "5:15 AM",
+     "down": "4:40 PM"
+    },
+    {
+     "name": "Jaypur",
+     "up": "5:35 AM",
+     "down": "4:25 PM"
+    },
+    {
+     "name": "Bishnupur",
+     "up": "6:20 AM",
+     "down": "3:40 PM"
+    },
+    {
+     "name": "Ramsagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Onda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kalisen",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dholdanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura",
+     "up": "8:10 AM",
+     "down": "2:10 PM"
+    },
+    {
+     "name": "Hevry More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bikna",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Beliatore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Durgapur Station",
+     "up": "9:55 AM",
+     "down": "11:40 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Samrat",
+   "bus_name": "Samrat Bolpur-Suri-Dumka (Priti Coach)",
+   "bus_type": "Private",
+   "reg_no": "WB 53C 5564",
+   "origin": "Bolpur",
+   "destination": "Dumka",
+   "departure_time": "6:50 AM",
+   "arrival_time": "10:40 AM",
+   "route": "Bolpur - Suri - Dumka",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9294700029, 9933178823, 6294700092",
+   "stops": [
+    {
+     "name": "Bolpur (Jambuni)",
+     "up": "6:50 AM",
+     "down": "3:30 PM"
+    },
+    {
+     "name": "Sriniketan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Debgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pandui",
+     "up": "7:30 AM",
+     "down": "3:10 PM"
+    },
+    {
+     "name": "Purandpur",
+     "up": "7:45 AM",
+     "down": "2:50 PM"
+    },
+    {
+     "name": "Suri",
+     "up": "8:15 AM",
+     "down": "2:30 PM"
+    },
+    {
+     "name": "Tilpara Barrage",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khoyrakuri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Shyorakuri",
+     "up": "8:45 AM",
+     "down": "1:55 PM"
+    },
+    {
+     "name": "Hingla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sukjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranishwar",
+     "up": "9:15 AM",
+     "down": "1:30 PM"
+    },
+    {
+     "name": "Kumirdah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranibahal",
+     "up": "9:40 AM",
+     "down": "1:05 PM"
+    },
+    {
+     "name": "Nadatala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Massanjore",
+     "up": "9:50 AM",
+     "down": "12:55 PM"
+    },
+    {
+     "name": "Jitpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chaklota",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Indrabani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Patabari",
+     "up": "10:15 AM",
+     "down": "12:45 PM"
+    },
+    {
+     "name": "Katijdiya",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Karmatar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gidhni Pahar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dumka",
+     "up": "10:40 AM",
+     "down": "11:45 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Mahamaya (STA Super Fast)",
+   "bus_name": "Mahamaya Kolkata Station-Manbazar (STA Super Fast)",
+   "bus_type": "Private",
+   "reg_no": "WB 29E 4991 & WB 29E 4954",
+   "origin": "Kolkata (Station)",
+   "destination": "Manbazar",
+   "departure_time": "4:30 AM",
+   "arrival_time": "12:10 PM",
+   "route": "Kolkata Station - Manbazar",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9474154532",
+   "stops": [
+    {
+     "name": "Kolkata Station",
+     "up": "4:30 AM",
+     "down": "5:50 PM"
+    },
+    {
+     "name": "Shyambazar",
+     "up": "4:40 AM",
+     "down": "5:40 PM"
+    },
+    {
+     "name": "Chiria More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sinthi More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Baranagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dunlop",
+     "up": "4:57 AM",
+     "down": "5:30 PM"
+    },
+    {
+     "name": "Dakshineswar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bali Halt",
+     "up": "5:05 AM",
+     "down": "5:20 PM"
+    },
+    {
+     "name": "Dankuni",
+     "up": "5:20 AM",
+     "down": "5:10 PM"
+    },
+    {
+     "name": "Chanditala",
+     "up": "5:30 AM",
+     "down": "5:05 PM"
+    },
+    {
+     "name": "Mashat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siyakhala",
+     "up": "5:45 AM",
+     "down": "4:45 PM"
+    },
+    {
+     "name": "Gajar More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Champadanga",
+     "up": "6:20 AM",
+     "down": "4:10 PM"
+    },
+    {
+     "name": "Sodepur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Arambagh",
+     "up": "7:20 AM",
+     "down": "3:25 PM"
+    },
+    {
+     "name": "Bengai",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khatul",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kotulpur",
+     "up": "8:05 AM",
+     "down": "2:30 PM"
+    },
+    {
+     "name": "Jaypur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up": "9:15 AM",
+     "down": "1:25 PM"
+    },
+    {
+     "name": "Ramsagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Onda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dholdanga More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tamlibandh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Pump More",
+     "up": "10:50 AM",
+     "down": "11:55 AM"
+    },
+    {
+     "name": "Shunukpahari",
+     "up": "11:00 AM",
+     "down": "11:30 AM"
+    },
+    {
+     "name": "Puabagan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bangla",
+     "up": "11:15 AM",
+     "down": "11:15 AM"
+    },
+    {
+     "name": "Molian",
+     "up": "11:35 AM",
+     "down": "10:55 AM"
+    },
+    {
+     "name": "Gadapathar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Payrachali",
+     "up": "11:55 AM",
+     "down": "10:35 AM"
+    },
+    {
+     "name": "Manbazar",
+     "up": "12:10 PM",
+     "down": "10:20 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Lalkamal",
+   "bus_name": "Lalkamal Kharagpur-Manbazar (Super Fast)",
+   "bus_type": "Private",
+   "reg_no": "WB 33L 8127",
+   "origin": "Kharagpur",
+   "destination": "Manbazar",
+   "departure_time": "4:20 AM",
+   "arrival_time": "9:00 AM",
+   "route": "Kharagpur - Medinipur - Manbazar",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9749595372",
+   "stops": [
+    {
+     "name": "Kharagpur",
+     "up": "4:20 AM",
+     "down": "2:40 PM"
+    },
+    {
+     "name": "Chowringhee",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Medinipur",
+     "up": "4:55 AM",
+     "down": "2:00 PM"
+    },
+    {
+     "name": "Bhadutala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Moupal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pirakata",
+     "up": "",
+     "down": "12:55 PM"
+    },
+    {
+     "name": "Sijua",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Goaltore",
+     "up": "6:20 AM",
+     "down": "12:20 PM"
+    },
+    {
+     "name": "Pingbani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sarenga",
+     "up": "6:50 AM",
+     "down": "11:45 AM"
+    },
+    {
+     "name": "P. More",
+     "up": "7:05 AM",
+     "down": "11:25 AM"
+    },
+    {
+     "name": "Raipur",
+     "up": "7:15 AM",
+     "down": "11:10 AM"
+    },
+    {
+     "name": "Ankukhuta More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khatra",
+     "up": "8:05 AM",
+     "down": "10:25 AM"
+    },
+    {
+     "name": "Hatirampur",
+     "up": "8:20 AM",
+     "down": "10:05 AM"
+    },
+    {
+     "name": "Payrachali",
+     "up": "8:45 AM",
+     "down": "9:35 AM"
+    },
+    {
+     "name": "Manbazar",
+     "up": "9:00 AM",
+     "down": "9:25 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Express Line",
+   "bus_name": "Express Line Kolkata-Bangalore (Volvo AC Sleeper)",
+   "bus_type": "Private - Interstate AC Sleeper",
+   "reg_no": "WB 11K 6999",
+   "origin": "Kolkata (Karunamoyee)",
+   "destination": "Bangalore",
+   "departure_time": "5:30 PM",
+   "arrival_time": "8:20 AM (2nd day)",
+   "route": "Kolkata - Kharagpur - Bhubaneswar - Visakhapatnam - Tirupati - Bangalore",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9088900002, 9088900003, 9088811120",
+   "stops": [
+    {
+     "name": "Kolkata (Karunamoyee)",
+     "up": "5:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Dharmatala",
+     "up": "7:30 PM",
+     "down": "6:45 AM"
+    },
+    {
+     "name": "Santragachi",
+     "up": "7:45 PM",
+     "down": ""
+    },
+    {
+     "name": "Kharagpur Bypass",
+     "up": "10:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Baleswar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhadrak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Cuttack",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhubaneswar",
+     "up": "5:30 AM",
+     "down": "9:45 PM"
+    },
+    {
+     "name": "Berhampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sompeta",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ichchapuram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Srikakulam",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Vizianagaram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Visakhapatnam",
+     "up": "",
+     "down": "3:25 PM"
+    },
+    {
+     "name": "Tallapalem",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nakkapali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jaggampeta",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rajanagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rajahmundry",
+     "up": "4:59 PM",
+     "down": ""
+    },
+    {
+     "name": "Ananthapalli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Eluru",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Vijayawada",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Guntur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ongole",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nellore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Renigunta",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tirupati",
+     "up": "",
+     "down": "3:00 AM"
+    },
+    {
+     "name": "Chittoor",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bangalore (Attibele)",
+     "up": "8:20 AM",
+     "down": "7:45 PM"
+    },
+    {
+     "name": "Chandpura",
+     "up": "",
+     "down": "8:30 PM"
+    },
+    {
+     "name": "Bommasandra",
+     "up": "",
+     "down": "8:45 PM"
+    },
+    {
+     "name": "Electronic City",
+     "up": "",
+     "down": "9:10 PM"
+    }
+   ]
+  },
+  {
+   "operator": "Ishika Traders",
+   "bus_name": "Ishika Traders Asansol-Digha (AC Sleeper)",
+   "bus_type": "Private - AC Sleeper (2x2)",
+   "reg_no": "WB 41K 2500 & WB 41K 2452",
+   "origin": "Asansol",
+   "destination": "Digha",
+   "departure_time": "8:00 PM",
+   "arrival_time": "5:00 AM",
+   "route": "Asansol - Medinipur - Digha",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "7699995927, 9749437344",
+   "stops": [
+    {
+     "name": "Asansol",
+     "up": "8:00 PM",
+     "down": "6:20 PM"
+    },
+    {
+     "name": "Raniganj",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up": "",
+     "down": "5:20 PM"
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up": "9:20 PM",
+     "down": "5:00 PM"
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Beliatore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "10:20 PM",
+     "down": "4:00 PM"
+    },
+    {
+     "name": "Dholdanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Onda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramsagar",
+     "up": "11:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up": "",
+     "down": "3:00 PM"
+    },
+    {
+     "name": "Bankadah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhadika",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Garhbeta",
+     "up": "",
+     "down": "2:20 PM"
+    },
+    {
+     "name": "Chandrakona Road",
+     "up": "",
+     "down": "2:05 PM"
+    },
+    {
+     "name": "Salboni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhadutala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Medinipur",
+     "up": "",
+     "down": "1:00 PM"
+    },
+    {
+     "name": "Kharagpur Chowringhee",
+     "up": "",
+     "down": "12:20 PM"
+    },
+    {
+     "name": "Kharagpur Station",
+     "up": "1:45 AM",
+     "down": ""
+    },
+    {
+     "name": "Makrampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Narayangarh",
+     "up": "",
+     "down": "11:55 AM"
+    },
+    {
+     "name": "Bakhra Bad",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Belda",
+     "up": "",
+     "down": "11:45 AM"
+    },
+    {
+     "name": "Thakurchak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khakurda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sauri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jahalda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Lalat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Egra",
+     "up": "",
+     "down": "11:15 AM"
+    },
+    {
+     "name": "Dobadhi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Balighai",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tajpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhabanichak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Satmile",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rautara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kanthi Central Bus Stand",
+     "up": "",
+     "down": "10:25 AM"
+    },
+    {
+     "name": "Ghatua",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pichabani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chaulkhola (Mandarmani)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Balisai (Tajpur)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chhodomile (Shankarpur)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramnagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Thikra More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Old Digha",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "New Digha",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Digha",
+     "up": "5:00 AM",
+     "down": "9:10 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Promila",
+   "bus_name": "Promila Bolpur-Barakar",
+   "bus_type": "Private",
+   "reg_no": "WB 53B 5780",
+   "origin": "Bolpur",
+   "destination": "Barakar",
+   "departure_time": "6:20 AM",
+   "arrival_time": "10:15 AM",
+   "route": "Bolpur - Ilambazar - Panagarh - Durgapur - Asansol - Barakar",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Bolpur (Jambuni)",
+     "up": "6:20 AM",
+     "down": "4:20 PM"
+    },
+    {
+     "name": "Suratheswar",
+     "up": "6:32 AM",
+     "down": "4:12 PM"
+    },
+    {
+     "name": "Ilambazar",
+     "up": "6:55 AM",
+     "down": "3:40 PM"
+    },
+    {
+     "name": "11 Mile",
+     "up": "7:10 AM",
+     "down": "3:30 PM"
+    },
+    {
+     "name": "Panagarh",
+     "up": "7:40 AM",
+     "down": "2:55 PM"
+    },
+    {
+     "name": "Darjiling More",
+     "up": "7:47 AM",
+     "down": "3:02 PM"
+    },
+    {
+     "name": "Muchipara",
+     "up": "8:05 AM",
+     "down": "2:35 PM"
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up": "8:15 AM",
+     "down": "2:20 PM"
+    },
+    {
+     "name": "Raniganj More",
+     "up": "8:50 AM",
+     "down": "1:50 PM"
+    },
+    {
+     "name": "Andal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Asansol",
+     "up": "9:20 AM",
+     "down": "1:05 PM"
+    },
+    {
+     "name": "Barakar",
+     "up": "10:15 AM",
+     "down": "12:25 PM"
+    }
+   ]
   }
  ],
  "enrich": []
