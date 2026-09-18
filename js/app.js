@@ -239,7 +239,7 @@ const PLACE_ALIAS_GROUPS = [
   ['contai', 'kanthi'],
   ['berhampore', 'baharampur'],
   ['bardhaman', 'burdwan'],
-  ['kolkata', 'calcutta'],
+  ['kolkata', 'calcutta', 'esplanade', 'howrah', 'santragachi', 'garia', 'tollygunge', 'kudghat', 'karunamoyee'],
   ['bolpur', 'santiniketan'],
   ['tarakeswar', 'tarakeshwar'],
   ['malda', 'english bazar', 'malda town'],
