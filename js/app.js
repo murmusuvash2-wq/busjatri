@@ -97,8 +97,7 @@ function renderInitialSkeleton() {
 async function loadData() {
   renderInitialSkeleton();
   try {
-    let res = await fetch('data/app-index-lite.json');
-    if (!res.ok) res = await fetch('data/app-index.json');
+    const res = await fetch('data/app-index.json');
     if (!res.ok) throw new Error('HTTP ' + res.status);
     DATA = await res.json();
     BUSES = {};
@@ -107,7 +106,6 @@ async function loadData() {
     STOPS = DATA.stops || {};
     window.addEventListener('hashchange', render);
     render();
-    loadFullIndex();
   } catch (e) {
     document.getElementById('app').innerHTML = `
     <div class="container"><div class="error-panel">
@@ -266,21 +264,6 @@ function placeMatches(value, query) {
   return false;
 }
 
-async function loadFullIndex() {
-  /* background: full stop index (sx/ux/dx + sn) for stoppage search */
-  try {
-    const res = await fetch('data/app-index.json');
-    if (!res.ok) return;
-    const full = await res.json();
-    if (full.sn && DATA) DATA.sn = full.sn;
-    (full.buses || []).forEach(fb => {
-      const b = BUSES[fb.id];
-      if (b && !b.sx && fb.sx) { b.sx = fb.sx; b.ux = fb.ux; b.dx = fb.dx; }
-    });
-    try { window.__bjStopsRebuilt = false; } catch (e) {}
-    if (location.hash.startsWith('#/search') || location.hash.startsWith('#/stop')) render();
-  } catch (e) { /* stoppage search needs the full index; quiet fail */ }
-}
 async function loadFullBus(id) {
   if (FULL_BUSES && FULL_BUSES[id]) return FULL_BUSES[id];
   try {
