@@ -16,13 +16,16 @@ jobs:
       - name: Add community-reported buses
         run: python3 scripts/add_community_buses.py --write
 
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
       - name: Validate
         run: |
           python3 - <<'EOF'
           import json
           d = json.load(open('data/busjatri_data.json'))
           n = len(d['buses'])
-          assert n >= 4171, f'bus count dropped to {n} - aborting'
+          assert n >= 3900, f'bus count dropped to {n} - aborting'
           print(f'OK: {n} buses')
           EOF
 
@@ -43,6 +46,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Add community-reported buses (FB group reports) + rebuild"
+            git commit -m "Add community-reported buses (FB group reports) + dedup + rebuild"
             git push
           fi

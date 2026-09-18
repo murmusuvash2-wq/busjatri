@@ -26,11 +26,6 @@ jobs:
           print(f'OK: {n} buses')
           EOF
 
-      - name: Update count guards in other workflows
-        run: |
-          sed -i 's/assert n >= 4171/assert n >= 3900/' .github/workflows/community-buses.yml .github/workflows/mobile-fixes.yml .github/workflows/seo-extras.yml || true
-          sed -i 's/assert n >= 4018/assert n >= 3900/' .github/workflows/fill-new-sources.yml || true
-
       - name: Rebuild pages
         env:
           SITE_BASE: https://busjatri.in

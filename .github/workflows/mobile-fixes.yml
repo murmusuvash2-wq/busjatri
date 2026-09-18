@@ -30,7 +30,7 @@ jobs:
           import json, pathlib
           d = json.load(open('data/busjatri_data.json'))
           n = len(d['buses'])
-          assert n >= 4171, f'bus count dropped to {n}'
+          assert n >= 3900, f'bus count dropped to {n}'
           lite = json.load(open('data/app-index-lite.json'))
           full = json.load(open('data/app-index.json'))
           assert len(lite['buses']) == n, 'lite bus count mismatch'

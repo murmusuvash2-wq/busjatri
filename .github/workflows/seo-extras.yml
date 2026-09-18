@@ -32,7 +32,7 @@ jobs:
           python3 - <<'EOF'
           import json
           d = json.load(open('data/busjatri_data.json'))
-          assert len(d['buses']) >= 4171
+          assert len(d['buses']) >= 3900
           print('OK')
           EOF
 
