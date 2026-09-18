@@ -210,7 +210,7 @@ function quickSearch(name) {
   location.hash = '#/search?' + q.toString();
 }
 
-function placeMatches(value, query) {
+function placeMatchesCore(value, query) {
   const v = String(value || '').toLowerCase().trim();
   const q = String(query || '').toLowerCase().trim();
   if (!v || !q) return false;
@@ -226,6 +226,41 @@ function placeMatches(value, query) {
   const skel = s => s.replace(/[^bcdfghjklmnpqrstvwxyz]/g, '');
   const vs = skel(v), qs = skel(q);
   if (qs.length >= 4 && (vs === qs || vs.includes(qs))) return true;
+  return false;
+}
+
+/* Place alias groups: same town, different names (Bengali vs English
+   spellings). The data mixes these spellings, so expand both sides of
+   every comparison through the group table. Covers from/to route
+   search, stoppage search and place pages (all use placeMatches). */
+const PLACE_ALIAS_GROUPS = [
+  ['contai', 'kanthi'],
+  ['berhampore', 'baharampur'],
+  ['bardhaman', 'burdwan'],
+  ['kolkata', 'calcutta'],
+  ['bolpur', 'santiniketan'],
+  ['tarakeswar', 'tarakeshwar'],
+  ['malda', 'english bazar', 'malda town'],
+  ['cooch behar', 'koch bihar'],
+  ['krishnanagar', 'krishnagar']
+];
+const PLACE_ALIAS = {};
+PLACE_ALIAS_GROUPS.forEach(function (g) { g.forEach(function (n) { PLACE_ALIAS[n] = g; }); });
+function aliasVariants(name) {
+  const k = String(name || '').toLowerCase().trim();
+  const g = PLACE_ALIAS[k];
+  return g ? [k].concat(g) : [k];
+}
+function placeMatches(value, query) {
+  if (placeMatchesCore(value, query)) return true;
+  let aq = aliasVariants(query);
+  for (let i = 0; i < aq.length; i++) {
+    if (placeMatchesCore(value, aq[i])) return true;
+  }
+  let av = aliasVariants(value);
+  for (let i = 0; i < av.length; i++) {
+    if (placeMatchesCore(av[i], query)) return true;
+  }
   return false;
 }
 
