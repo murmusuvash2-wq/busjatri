@@ -1,0 +1,32 @@
+name: Kolkata metro alias
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply kolkata alias patch
+        run: python3 scripts/patch_kolkata_alias.py --write
+
+      - name: Syntax check
+        run: node --check js/app.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Search: kolkata metro aliases (esplanade/howrah/garia = kolkata)"
+            git push
+          fi
