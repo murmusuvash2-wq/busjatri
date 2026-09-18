@@ -1,146 +1,678 @@
 {
-  "add": [
+ "add": [
+  {
+   "operator": "Monika Travels",
+   "bus_name": "Monika Travels Ramharipur-Purulia",
+   "bus_type": "Private - Non AC",
+   "reg_no": "WB 67 9660",
+   "origin": "Ramharipur",
+   "destination": "Purulia",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "route": "Ramharipur - Purulia",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
     {
-      "operator": "Monika Travels",
-      "bus_name": "Monika Travels Ramharipur-Purulia",
-      "bus_type": "Private - Non AC",
-      "reg_no": "WB 67 9660",
-      "origin": "Ramharipur",
-      "destination": "Purulia",
-      "departure_time": "6:30 AM",
-      "arrival_time": "",
-      "route": "Ramharipur - Purulia",
-      "source": "facebook (community report)",
-      "detail_url": "",
-      "stops": [
-        {"name": "Ramharipur", "up": "6:30 AM", "down": ""},
-        {"name": "Ji Ghati", "up": "", "down": ""},
-        {"name": "Amarakanan", "up": "", "down": ""},
-        {"name": "Bankura", "up": "9:00 AM", "down": "5:45 PM"},
-        {"name": "Chhatna", "up": "9:15 AM", "down": "3:45 PM"},
-        {"name": "Kharbona", "up": "9:30 AM", "down": "3:35 PM"},
-        {"name": "Kamalpur", "up": "9:50 AM", "down": "3:15 PM"},
-        {"name": "Hura", "up": "", "down": ""},
-        {"name": "Purulia", "up": "", "down": "1:25 PM"}
-      ]
+     "name": "Ramharipur",
+     "up": "6:30 AM",
+     "down": ""
     },
     {
-      "operator": "SBSTC",
-      "bus_name": "SBSTC Egra-Kolkata (Bhagwanpur-Manglamaro)",
-      "bus_type": "Government",
-      "reg_no": "WB 39B 3627",
-      "origin": "Egra",
-      "destination": "Kolkata",
-      "departure_time": "6:00 AM",
-      "arrival_time": "",
-      "route": "Egra - Kolkata",
-      "source": "facebook (community report)",
-      "detail_url": "",
-      "stops": [
-        {"name": "Egra", "up": "6:00 AM", "down": ""},
-        {"name": "Khar Bazar", "up": "", "down": ""},
-        {"name": "Kharai More", "up": "", "down": ""},
-        {"name": "Junpukur", "up": "", "down": ""},
-        {"name": "Patashpur", "up": "6:20 AM", "down": ""},
-        {"name": "Teporpara", "up": "", "down": ""},
-        {"name": "Singda More", "up": "", "down": ""},
-        {"name": "Amorshi", "up": "", "down": ""},
-        {"name": "Bhanjerpukur", "up": "", "down": ""},
-        {"name": "Manglamaro", "up": "6:50 AM", "down": ""},
-        {"name": "Palpara", "up": "", "down": ""},
-        {"name": "Totanala", "up": "", "down": ""},
-        {"name": "Bhibishanpur", "up": "", "down": ""},
-        {"name": "Taltala", "up": "", "down": ""},
-        {"name": "Bhimeshwari", "up": "", "down": ""},
-        {"name": "Bhagwanpur", "up": "7:15 AM", "down": ""},
-        {"name": "Kalaberia", "up": "", "down": ""},
-        {"name": "Mirzapur", "up": "", "down": ""},
-        {"name": "Kajalgar", "up": "", "down": ""},
-        {"name": "Bajkul", "up": "", "down": ""},
-        {"name": "Chandipur", "up": "", "down": ""},
-        {"name": "Nandakumar", "up": "", "down": ""},
-        {"name": "Nimtauri", "up": "", "down": ""},
-        {"name": "Radhamani", "up": "", "down": ""},
-        {"name": "Mecheda", "up": "", "down": ""},
-        {"name": "Kolaghat", "up": "", "down": ""},
-        {"name": "Bagnan", "up": "", "down": ""},
-        {"name": "Uluberia", "up": "", "down": ""},
-        {"name": "Ranihati", "up": "", "down": ""},
-        {"name": "Dhulagar", "up": "", "down": ""},
-        {"name": "Kona", "up": "", "down": ""},
-        {"name": "Santragachi", "up": "", "down": ""},
-        {"name": "Vidyasagar Setu", "up": "", "down": ""},
-        {"name": "Esplanade", "up": "", "down": "3:25 PM"}
-      ]
+     "name": "Ji Ghati",
+     "up": "",
+     "down": ""
     },
     {
-      "operator": "Aradhana Travels",
-      "bus_name": "Aradhana Travels Berhampore-Kolkata (AC)",
-      "bus_type": "Private - AC",
-      "reg_no": "WB 57Q 0197",
-      "origin": "Berhampore",
-      "destination": "Kolkata",
-      "departure_time": "6:53 AM",
-      "arrival_time": "12:20 PM",
-      "contact_number": "7047215420",
-      "route": "Berhampore - Kolkata",
-      "source": "facebook (community report)",
-      "detail_url": "https://aradhanatravel.com",
-      "stops": [
-        {"name": "Berhampore", "up": "6:53 AM", "down": "10:05 PM"},
-        {"name": "Beldanga", "up": "7:20 AM", "down": "9:35 PM"},
-        {"name": "Palashi", "up": "8:00 AM", "down": "9:00 PM"},
-        {"name": "Debgram", "up": "", "down": ""},
-        {"name": "Bethuadahari", "up": "", "down": ""},
-        {"name": "Dhubulia", "up": "", "down": ""},
-        {"name": "Krishnanagar", "up": "8:20 AM", "down": "8:35 PM"},
-        {"name": "Shantipur", "up": "", "down": ""},
-        {"name": "Ranaghat", "up": "9:35 AM", "down": "7:55 PM"},
-        {"name": "Jaguli", "up": "", "down": ""},
-        {"name": "Barasat", "up": "11:15 AM", "down": "5:20 PM"},
-        {"name": "Airport", "up": "", "down": ""},
-        {"name": "Ultadanga", "up": "", "down": ""},
-        {"name": "Esplanade", "up": "12:20 PM", "down": "4:15 PM"}
-      ]
+     "name": "Amarakanan",
+     "up": "",
+     "down": ""
     },
     {
-      "operator": "Shree Krishna Travels",
-      "bus_name": "Shree Krishna Travels Khatra-Medinipur",
-      "bus_type": "Private - Non AC",
-      "reg_no": "WB 33E 5415",
-      "origin": "Khatra",
-      "destination": "Medinipur",
-      "departure_time": "6:10 AM",
-      "arrival_time": "11:15 AM",
-      "contact_number": "9732328874",
-      "route": "Khatra - Medinipur",
-      "source": "facebook (community report)",
-      "detail_url": "",
-      "stops": [
-        {"name": "Khatra", "up": "6:10 AM", "down": "6:30 PM"},
-        {"name": "Arkama", "up": "", "down": ""},
-        {"name": "Hadmasra", "up": "7:00 AM", "down": "5:20 PM"},
-        {"name": "Machatora", "up": "", "down": ""},
-        {"name": "Simlapal", "up": "7:30 AM", "down": "4:40 PM"},
-        {"name": "Bikrampur", "up": "7:40 AM", "down": ""},
-        {"name": "P. More", "up": "8:10 AM", "down": "4:30 PM"},
-        {"name": "Amjhor", "up": "", "down": ""},
-        {"name": "Sarenga", "up": "8:40 AM", "down": "4:00 PM"},
-        {"name": "Bulanpur", "up": "", "down": ""},
-        {"name": "Pingbani", "up": "", "down": ""},
-        {"name": "Goaltore", "up": "9:25 AM", "down": "3:25 PM"},
-        {"name": "Kiamacha", "up": "", "down": ""},
-        {"name": "Nayabasat", "up": "", "down": ""},
-        {"name": "Chandrakona Road", "up": "10:10 AM", "down": "2:40 PM"},
-        {"name": "Duki", "up": "", "down": ""},
-        {"name": "Mandalkupi", "up": "", "down": ""},
-        {"name": "Salbani", "up": "10:30 AM", "down": "1:45 PM"},
-        {"name": "Sitarampur", "up": "", "down": ""},
-        {"name": "Godapiashal", "up": "", "down": ""},
-        {"name": "Bhadutala", "up": "", "down": "1:30 PM"},
-        {"name": "Medinipur", "up": "11:15 AM", "down": "1:00 PM"}
-      ]
+     "name": "Bankura",
+     "up": "9:00 AM",
+     "down": "5:45 PM"
+    },
+    {
+     "name": "Chhatna",
+     "up": "9:15 AM",
+     "down": "3:45 PM"
+    },
+    {
+     "name": "Kharbona",
+     "up": "9:30 AM",
+     "down": "3:35 PM"
+    },
+    {
+     "name": "Kamalpur",
+     "up": "9:50 AM",
+     "down": "3:15 PM"
+    },
+    {
+     "name": "Hura",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Purulia",
+     "up": "",
+     "down": "1:25 PM"
     }
-  ],
-  "enrich": []
+   ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Egra-Kolkata (Bhagwanpur-Manglamaro)",
+   "bus_type": "Government",
+   "reg_no": "WB 39B 3627",
+   "origin": "Egra",
+   "destination": "Kolkata",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "route": "Egra - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Egra",
+     "up": "6:00 AM",
+     "down": ""
+    },
+    {
+     "name": "Khar Bazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kharai More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Junpukur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Patashpur",
+     "up": "6:20 AM",
+     "down": ""
+    },
+    {
+     "name": "Teporpara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Singda More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Amorshi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhanjerpukur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Manglamaro",
+     "up": "6:50 AM",
+     "down": ""
+    },
+    {
+     "name": "Palpara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Totanala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhibishanpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Taltala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhimeshwari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhagwanpur",
+     "up": "7:15 AM",
+     "down": ""
+    },
+    {
+     "name": "Kalaberia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mirzapur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kajalgar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bajkul",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chandipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nandakumar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nimtauri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Radhamani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mecheda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bagnan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Uluberia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranihati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kona",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Vidyasagar Setu",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Esplanade",
+     "up": "",
+     "down": "3:25 PM"
+    }
+   ]
+  },
+  {
+   "operator": "Aradhana Travels",
+   "bus_name": "Aradhana Travels Berhampore-Kolkata (AC)",
+   "bus_type": "Private - AC",
+   "reg_no": "WB 57Q 0197",
+   "origin": "Berhampore",
+   "destination": "Kolkata",
+   "departure_time": "6:53 AM",
+   "arrival_time": "12:20 PM",
+   "contact_number": "7047215420",
+   "route": "Berhampore - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "https://aradhanatravel.com",
+   "stops": [
+    {
+     "name": "Berhampore",
+     "up": "6:53 AM",
+     "down": "10:05 PM"
+    },
+    {
+     "name": "Beldanga",
+     "up": "7:20 AM",
+     "down": "9:35 PM"
+    },
+    {
+     "name": "Palashi",
+     "up": "8:00 AM",
+     "down": "9:00 PM"
+    },
+    {
+     "name": "Debgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bethuadahari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhubulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Krishnanagar",
+     "up": "8:20 AM",
+     "down": "8:35 PM"
+    },
+    {
+     "name": "Shantipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranaghat",
+     "up": "9:35 AM",
+     "down": "7:55 PM"
+    },
+    {
+     "name": "Jaguli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barasat",
+     "up": "11:15 AM",
+     "down": "5:20 PM"
+    },
+    {
+     "name": "Airport",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ultadanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Esplanade",
+     "up": "12:20 PM",
+     "down": "4:15 PM"
+    }
+   ]
+  },
+  {
+   "operator": "Shree Krishna Travels",
+   "bus_name": "Shree Krishna Travels Khatra-Medinipur",
+   "bus_type": "Private - Non AC",
+   "reg_no": "WB 33E 5415",
+   "origin": "Khatra",
+   "destination": "Medinipur",
+   "departure_time": "6:10 AM",
+   "arrival_time": "11:15 AM",
+   "contact_number": "9732328874",
+   "route": "Khatra - Medinipur",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Khatra",
+     "up": "6:10 AM",
+     "down": "6:30 PM"
+    },
+    {
+     "name": "Arkama",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hadmasra",
+     "up": "7:00 AM",
+     "down": "5:20 PM"
+    },
+    {
+     "name": "Machatora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Simlapal",
+     "up": "7:30 AM",
+     "down": "4:40 PM"
+    },
+    {
+     "name": "Bikrampur",
+     "up": "7:40 AM",
+     "down": ""
+    },
+    {
+     "name": "P. More",
+     "up": "8:10 AM",
+     "down": "4:30 PM"
+    },
+    {
+     "name": "Amjhor",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sarenga",
+     "up": "8:40 AM",
+     "down": "4:00 PM"
+    },
+    {
+     "name": "Bulanpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pingbani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Goaltore",
+     "up": "9:25 AM",
+     "down": "3:25 PM"
+    },
+    {
+     "name": "Kiamacha",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nayabasat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chandrakona Road",
+     "up": "10:10 AM",
+     "down": "2:40 PM"
+    },
+    {
+     "name": "Duki",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mandalkupi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salbani",
+     "up": "10:30 AM",
+     "down": "1:45 PM"
+    },
+    {
+     "name": "Sitarampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Godapiashal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhadutala",
+     "up": "",
+     "down": "1:30 PM"
+    },
+    {
+     "name": "Medinipur",
+     "up": "11:15 AM",
+     "down": "1:00 PM"
+    }
+   ]
+  },
+  {
+   "operator": "Snemita Paribahan",
+   "bus_name": "Snemita Paribahan Kolkata-Digha Border (AC Coach)",
+   "bus_type": "Private - AC Seater/Sleeper",
+   "reg_no": "WB 31AB 4746",
+   "origin": "Kolkata (Dharmatala)",
+   "destination": "Digha Border (Udaypur)",
+   "departure_time": "7:00 AM",
+   "arrival_time": "11:45 AM",
+   "route": "Kolkata (Dharmatala) - Digha Border (Udaypur)",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9635766935",
+   "stops": [
+    {
+     "name": "Kolkata (Dharmatala)",
+     "up": "7:00 AM",
+     "down": ""
+    },
+    {
+     "name": "Park Street",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "PTI",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hastings",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Second Hooghly Bridge",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nabanna",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Carry Road",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Belepole",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ankurhati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Alampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulagarh",
+     "up": "8:00 AM",
+     "down": ""
+    },
+    {
+     "name": "Ranihati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Panchla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Uluberia (Nimidighi)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bagnan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mecheda",
+     "up": "9:00 AM",
+     "down": "1:00 AM"
+    },
+    {
+     "name": "Radhamani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nimtouri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nandakumar (Highroad)",
+     "up": "9:30 AM",
+     "down": ""
+    },
+    {
+     "name": "Norghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chandipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bajkul",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Heria",
+     "up": "10:05 AM",
+     "down": "11:55 PM"
+    },
+    {
+     "name": "Kalingar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nachinda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Marishda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kanthi Rupsi Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kanthi Central Bus Stand",
+     "up": "10:35 AM",
+     "down": "11:25 PM"
+    },
+    {
+     "name": "Ghatua",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pichabani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chaulkhola (Mandarmani)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Balisai (Tajpur)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chhodomile (Shankarpur)",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Thikra More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Alankarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Old Digha",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "New Digha",
+     "up": "",
+     "down": "10:20 PM"
+    },
+    {
+     "name": "Digha Border (Udaypur)",
+     "up": "11:45 AM",
+     "down": ""
+    }
+   ]
+  }
+ ],
+ "enrich": []
 }

@@ -99968,76 +99968,76 @@
   },
   {
    "id": "bussathi-maa-laxmi-892",
-   "bus_name": "MAA LAXMI Registration WB41S6980 Type — O",
-   "reg_no": "",
-   "operator": "—",
-   "bus_type": "",
-   "origin": "Manbazar",
+   "bus_name": "MAA LAXMI",
+   "reg_no": "WB 41S 6980",
+   "operator": "Maa Laxmi Travels",
+   "bus_type": "Private - Non AC",
+   "origin": "Indas",
    "destination": "Bardhaman",
-   "departure_time": "5:25 AM",
-   "arrival_time": "10:40 AM",
-   "contact_number": "Not Available !",
+   "departure_time": "9:40 AM",
+   "arrival_time": "11:05 AM",
+   "contact_number": "",
    "depot_name": "",
-   "route": "Manbazar - Bardhaman",
+   "route": "Indas - Bardhaman",
    "stoppages": [
     {
      "no": 1,
-     "name": "Ranaghat",
-     "up_time": "6:40 AM",
-     "down_time": ""
+     "name": "Indas",
+     "up_time": "9:40 AM",
+     "down_time": "2:10 PM"
     },
     {
      "no": 2,
-     "name": "Phulia",
-     "up_time": "",
-     "down_time": ""
+     "name": "Sashpur",
+     "up_time": "9:50 AM",
+     "down_time": "1:25 PM"
     },
     {
      "no": 3,
-     "name": "Santipur",
-     "up_time": "7:20 AM",
-     "down_time": "3:30 PM"
+     "name": "Bamniahat",
+     "up_time": "10:20 AM",
+     "down_time": "1:05 PM"
     },
     {
      "no": 4,
-     "name": "Dignagar",
-     "up_time": "",
-     "down_time": ""
+     "name": "Uchalan",
+     "up_time": "10:30 AM",
+     "down_time": "12:50 PM"
     },
     {
      "no": 5,
-     "name": "Krishnanagar",
-     "up_time": "8:30 AM",
-     "down_time": "2:30 PM"
+     "name": "Moghalmari",
+     "up_time": "10:40 AM",
+     "down_time": "12:40 PM"
     },
     {
      "no": 6,
-     "name": "Nabadwip",
-     "up_time": "9:10 AM",
-     "down_time": "1:30 PM"
+     "name": "Seharabazar",
+     "up_time": "10:45 AM",
+     "down_time": "12:35 PM"
     },
     {
      "no": 7,
-     "name": "Hematpur",
-     "up_time": "",
-     "down_time": ""
+     "name": "Bankura More",
+     "up_time": "10:55 AM",
+     "down_time": "12:20 PM"
     },
     {
      "no": 8,
-     "name": "Parulia",
-     "up_time": "",
-     "down_time": ""
+     "name": "Telipukur",
+     "up_time": "11:00 AM",
+     "down_time": "12:10 PM"
     },
     {
      "no": 9,
-     "name": "Katwa",
-     "up_time": "",
-     "down_time": "12:05 PM"
+     "name": "Bardhaman Alisha Bus Stand",
+     "up_time": "11:05 AM",
+     "down_time": "11:50 AM"
     }
    ],
-   "source": "bussathi.in",
+   "source": "facebook (community report)",
    "total_stoppages": 9,
-   "detail_url": "https://bussathi.in/bus/1282"
+   "detail_url": ""
   },
   {
    "id": "bussathi-maa-nayandevi-894",
@@ -401476,6 +401476,266 @@
    "source": "facebook (community report)",
    "time_source": "facebook (community report)",
    "total_stoppages": 22,
+   "detail_url": ""
+  },
+  {
+   "id": "snemita-paribahan-kolkata-dharmatala-digha-border-udaypur-4008",
+   "bus_name": "Snemita Paribahan Kolkata-Digha Border (AC Coach)",
+   "reg_no": "WB 31AB 4746",
+   "operator": "Snemita Paribahan",
+   "bus_type": "Private - AC Seater/Sleeper",
+   "origin": "Kolkata (Dharmatala)",
+   "destination": "Digha Border (Udaypur)",
+   "departure_time": "7:00 AM",
+   "arrival_time": "11:45 AM",
+   "contact_number": "9635766935",
+   "depot_name": "",
+   "route": "Kolkata (Dharmatala) - Digha Border (Udaypur)",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata (Dharmatala)",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Park Street",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "PTI",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Hastings",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Second Hooghly Bridge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Nabanna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Carry Road",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Belepole",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Ankurhati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Alampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Dhulagarh",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Panchla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Uluberia (Nimidighi)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Mecheda",
+     "up_time": "9:00 AM",
+     "down_time": "1:00 AM"
+    },
+    {
+     "no": 19,
+     "name": "Radhamani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Nimtouri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Nandakumar (Highroad)",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Norghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Chandipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Bajkul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Heria",
+     "up_time": "10:05 AM",
+     "down_time": "11:55 PM"
+    },
+    {
+     "no": 26,
+     "name": "Kalingar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Nachinda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Marishda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Kanthi Rupsi Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Kanthi Central Bus Stand",
+     "up_time": "10:35 AM",
+     "down_time": "11:25 PM"
+    },
+    {
+     "no": 31,
+     "name": "Ghatua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Pichabani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Chaulkhola (Mandarmani)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 34,
+     "name": "Balisai (Tajpur)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 35,
+     "name": "Chhodomile (Shankarpur)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Thikra More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Alankarpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 38,
+     "name": "Old Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 39,
+     "name": "New Digha",
+     "up_time": "",
+     "down_time": "10:20 PM"
+    },
+    {
+     "no": 40,
+     "name": "Digha Border (Udaypur)",
+     "up_time": "11:45 AM",
+     "down_time": ""
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 40,
    "detail_url": ""
   }
  ],

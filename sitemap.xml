@@ -1444,6 +1444,7 @@
 <url><loc>https://busjatri.in/bus-time-table/hura-to-kharagpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/illambazar-to-krishnanagar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/illambazar-to-nabadwip.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/indas-to-bardhaman.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/indus-to-medinipur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/indus-via-kolkata-to-midnapur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/itaberia-to-barddhaman-alisha-bus-stand.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -1743,6 +1744,7 @@
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-varanasi.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-vijayawada.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-visakhapatnam.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/kolkata-dharmatala-to-digha-border-udaypur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-esplanade-to-beta.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-esplanade-to-chandrakona-road.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-esplanade-to-digha.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -1835,7 +1837,6 @@
 <url><loc>https://busjatri.in/bus-time-table/malipanchghara-to-sealdah.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-bankura.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-barddhaman-alisha-bus-stand.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/manbazar-to-bardhaman.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-chandrakona-road.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-esplanade.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-jhargram.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -2601,8 +2602,8 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-babughat.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-barddhaman-alisha-bus-stand.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-manbazar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-garia.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-barasat.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/nabadwip-to-asansol-via-nadanghat.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/nabadwip-to-asansol-via-budbud.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/benachity-to-krishnanagar-via-nadanghat.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
