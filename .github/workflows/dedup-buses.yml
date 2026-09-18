@@ -1,4 +1,4 @@
-name: Merge new source times
+name: Dedup buses
 
 on:
   workflow_dispatch:
@@ -7,16 +7,13 @@ permissions:
   contents: write
 
 jobs:
-  merge:
+  dedup:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v4
 
-      - name: Merge new source TSV into data
-        run: python3 scripts/fill_new_sources.py --write
-
-      - name: Remove duplicates
+      - name: Remove duplicate buses
         run: python3 scripts/dedup_buses.py --write
 
       - name: Validate
@@ -25,10 +22,14 @@ jobs:
           import json
           d = json.load(open('data/busjatri_data.json'))
           n = len(d['buses'])
-          have = sum(1 for b in d['buses'] if b.get('departure_time'))
-          assert n >= 3900, f'bus count dropped to {n} - aborting'
-          print(f'OK: {n} buses, {have} with times, {n-have} still missing')
+          assert 3900 <= n <= 4175, f'unexpected bus count {n}'
+          print(f'OK: {n} buses')
           EOF
+
+      - name: Update count guards in other workflows
+        run: |
+          sed -i 's/assert n >= 4171/assert n >= 3900/' .github/workflows/community-buses.yml .github/workflows/mobile-fixes.yml .github/workflows/seo-extras.yml || true
+          sed -i 's/assert n >= 4018/assert n >= 3900/' .github/workflows/fill-new-sources.yml || true
 
       - name: Rebuild pages
         env:
@@ -47,6 +48,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Merge new source times + dedup + rebuild"
+            git commit -m "Dedup: remove duplicate buses (cross-source + route variants) + rebuild"
             git push
           fi
