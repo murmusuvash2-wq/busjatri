@@ -195,9 +195,7 @@
 
   /* ---- 5. Compact search completeness: rebuild stoppages from index ---- */
   function rebuildCompactStops() {
-    if (window.__bjStopsRebuilt) return;
     if (typeof DATA === 'undefined' || !DATA || !DATA.buses || !DATA.sn) return;
-    window.__bjStopsRebuilt = true;
     DATA.buses.forEach(function (b) {
       if (b.sx && !b.stoppages) {
         b.stoppages = b.sx.map(function (i, k) {

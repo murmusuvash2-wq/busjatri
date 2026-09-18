@@ -277,6 +277,7 @@ async function loadFullIndex() {
       const b = BUSES[fb.id];
       if (b && !b.sx && fb.sx) { b.sx = fb.sx; b.ux = fb.ux; b.dx = fb.dx; }
     });
+    try { window.__bjStopsRebuilt = false; } catch (e) {}
     if (location.hash.startsWith('#/search') || location.hash.startsWith('#/stop')) render();
   } catch (e) { /* stoppage search needs the full index; quiet fail */ }
 }
