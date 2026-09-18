@@ -1769,6 +1769,499 @@
      "down": "10:15 AM"
     }
    ]
+  },
+  {
+   "operator": "Bishwabharati Ray Travels",
+   "bus_name": "Bishwabharati Ray Travels Bolpur-Bardhaman",
+   "bus_type": "Private",
+   "reg_no": "WB 41F 9125",
+   "origin": "Bolpur",
+   "destination": "Bardhaman",
+   "departure_time": "7:20 AM",
+   "arrival_time": "",
+   "route": "Bolpur - Bardhaman",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Bolpur",
+     "up": "7:20 AM",
+     "down": "3:45 PM"
+    },
+    {
+     "name": "Supur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhediya",
+     "up": "7:50 AM",
+     "down": "2:30 PM"
+    },
+    {
+     "name": "Kalidah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kurumba",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dinnathpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Uttar Ramnagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Morbandh",
+     "up": "8:30 AM",
+     "down": "2:10 PM"
+    },
+    {
+     "name": "Banbagram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ausgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Somaipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Alutia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Guskara Railgate",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Guskara Bus Stand",
+     "up": "9:25 AM",
+     "down": "1:05 PM"
+    },
+    {
+     "name": "Bolgona More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Shibda More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Odgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jhnapur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barachaumatha",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kayrapur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Natungram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mainagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Haldi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Alampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Talit",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Talit Railgate",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jhinguti More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "108 Shiva Mandir",
+     "up": "",
+     "down": "12:10 PM"
+    }
+   ]
+  },
+  {
+   "operator": "MDG Paribahan",
+   "bus_name": "MDG Paribahan Bishnupur-Karunamoyee",
+   "bus_type": "Private",
+   "reg_no": "WB 18AP 8592",
+   "origin": "Bishnupur",
+   "destination": "Karunamoyee",
+   "departure_time": "5:10 AM",
+   "arrival_time": "",
+   "route": "Bishnupur - Karunamoyee",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9093202629",
+   "stops": [
+    {
+     "name": "Bishnupur",
+     "up": "5:10 AM",
+     "down": ""
+    },
+    {
+     "name": "Birai More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jaypur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chatra",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kotulpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khatul",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bengai",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Arambagh",
+     "up": "6:35 AM",
+     "down": "4:30 PM"
+    },
+    {
+     "name": "Mayapur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Champadanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Haripal More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siyakhala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mashat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chanditala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dakshineswar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dunlop",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Belgharia Expressway",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Airport",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kaikhali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chinar Park",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Akanksha More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Eco Park",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Narkelbagan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Biswabangla Gate",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Newtown",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "DLF",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mahishbathan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "College More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sector V",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Karunamoyee",
+     "up": "",
+     "down": "1:50 PM"
+    }
+   ]
+  },
+  {
+   "operator": "",
+   "bus_name": "Kulpi-Newtown (Shapoorji) New BS6 Bus",
+   "bus_type": "Private - New BS6",
+   "reg_no": "WB 07AA 1323",
+   "origin": "Kulpi",
+   "destination": "Newtown (Shapoorji)",
+   "departure_time": "7:15 AM",
+   "arrival_time": "11:00 AM",
+   "route": "Kulpi - Newtown (Shapoorji)",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Kulpi",
+     "up": "7:15 AM",
+     "down": "6:00 PM"
+    },
+    {
+     "name": "Hatugung",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Netra",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Usthi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sirakole",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Amtala",
+     "up": "8:15 AM",
+     "down": "5:00 PM"
+    },
+    {
+     "name": "Thakurpukur",
+     "up": "8:45 AM",
+     "down": "4:30 PM"
+    },
+    {
+     "name": "Behala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Taratala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Majerhat",
+     "up": "",
+     "down": "4:05 PM"
+    },
+    {
+     "name": "Mominpur",
+     "up": "9:10 AM",
+     "down": ""
+    },
+    {
+     "name": "Bhawani Bhawan",
+     "up": "9:20 AM",
+     "down": ""
+    },
+    {
+     "name": "Alipore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "PG/PTS",
+     "up": "9:25 AM",
+     "down": "3:55 PM"
+    },
+    {
+     "name": "Rabindra Sadan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Esplanade",
+     "up": "9:40 AM",
+     "down": "3:45 PM"
+    },
+    {
+     "name": "Moulali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sealdah",
+     "up": "10:00 AM",
+     "down": "3:30 PM"
+    },
+    {
+     "name": "Beleghata",
+     "up": "10:10 AM",
+     "down": "3:20 PM"
+    },
+    {
+     "name": "Building More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chingrighata",
+     "up": "10:20 AM",
+     "down": "3:10 PM"
+    },
+    {
+     "name": "Nicco Park",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sector V",
+     "up": "10:35 AM",
+     "down": "2:55 PM"
+    },
+    {
+     "name": "Technopolis",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Newtown",
+     "up": "10:50 AM",
+     "down": "2:40 PM"
+    },
+    {
+     "name": "Biswabangla Gate",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Candor Gate",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "UEM IEM Campus",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Karigari Bhawan",
+     "up": "10:55 AM",
+     "down": "2:35 PM"
+    },
+    {
+     "name": "Shapoorji",
+     "up": "11:00 AM",
+     "down": "2:30 PM"
+    }
+   ]
   }
  ],
  "enrich": []
