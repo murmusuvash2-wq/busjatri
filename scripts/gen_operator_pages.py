@@ -30,16 +30,20 @@ def btype(b):
     return (b.get('bus_type') or '')
 
 def is_sbstc(b):
-    return 'sbstc' in src(b) or 'SBSTC' in btype(b)
+    return 'sbstc' in src(b) or 'SBSTC' in btype(b) or _op(b) == 'sbstc'
+
+
+def _op(b):
+    return (b.get('operator') or '').strip().lower()
 
 def is_nbstc(b):
-    return 'nbstc' in src(b)
+    return 'nbstc' in src(b) or _op(b) == 'nbstc'
 
 def is_wbtc(b):
-    return 'wbtc' in src(b)
+    return 'wbtc' in src(b) or _op(b) == 'wbtc'
 
 def is_shyamoli(b):
-    return 'shyamoli' in src(b) or 'shyamoli' in (b.get('bus_name') or '').lower()
+    return 'shyamoli' in src(b) or 'shyamoli' in (b.get('bus_name') or '').lower() or _op(b) == 'shyamoli paribahan'
 
 def is_volvo_ac(b):
     t = btype(b)

@@ -340,7 +340,6 @@
 <url><loc>https://busjatri.in/bus-time-table/barabazar-to-bankura.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/barabazar-to-durgapur-city-center.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/barabazar-to-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/barabazar-to-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/barabazar-to-gopiballabpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/barabazar-to-kolkata-esplanade.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/barakar-to-arambagh.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -959,6 +958,7 @@
 <url><loc>https://busjatri.in/bus-time-table/durgapur-city-center-to-kuli.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-city-center-to-manbazar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-city-center-to-tatanagar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/durgapur-st-to-arambagh.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-ambika-nagar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-arambagh.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-bandwan.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -975,9 +975,6 @@
 <url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-sarenga.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-suri.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-tatanagar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/durgapur-st-to-arambagh.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-purulia.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-suri.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/duttaphulia-to-bongaon.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ecospace-to-andul-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ecospace-to-santragachi.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -2609,9 +2606,9 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-khatra.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-krishnanagar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-mathabhanga.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-bolpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-benachity.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-babughat.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-barddhaman-alisha-bus-stand.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-garia.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -2637,8 +2634,6 @@
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-digha-via-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/katwa-to-asansol-via-guskara.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/katwa-to-asansol-via-budbud.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/bankura-to-durgapur-station-via-beliatore.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/bankura-to-durgapur-station-via-barjora.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jhargram-to-bankura-via-dahijuri.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jhargram-to-bankura-via-binpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/khatra-to-medinipur-via-chandrakona-road.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -2649,8 +2644,6 @@
 <url><loc>https://busjatri.in/bus-time-table/tarkeshwar-to-bankura-via-bengai.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/digha-to-medinipur-via-egra.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/digha-to-medinipur-via-belda.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-purulia-via-barjora.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-purulia-via-maliara.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bishnupur-to-bankura-via-dhaldanga.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bishnupur-to-bankura-via-panchmura.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bishnupur-to-digha-via-ramnagar.html</loc><lastmod>2026-09-18</lastmod><priority>0.7</priority></url>
@@ -2691,12 +2684,15 @@
 <url><loc>https://busjatri.in/bus-time-table/khatra-to-balarampur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/siliguri-to-bandwan.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-bankura.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-barabazar.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/arambagh-to-barakar.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/suri-to-bardhaman.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/badanganj-to-berada.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-bishnupur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-bishnupur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/silda-to-chandrakona-road.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/suri-to-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/purulia-to-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/belpahari-to-haldia.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bankura-to-haldia.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/raniganj-to-khatra.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
@@ -2771,7 +2767,6 @@
 <url><loc>https://busjatri.in/bus-time-table/bankura-to-lalgarh.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ramgarh-to-contai.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/nabadwip-to-garchakraberia.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/purulia-to-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ghatal-to-binpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/howrah-to-amlasuli.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/howrah-to-garhbeta.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
@@ -3066,7 +3061,6 @@
 <url><loc>https://busjatri.in/bus-time-table/medinipur-to-mohanpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ranchi-to-kharagpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ranchi-to-gopiballabpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/durgapur-station-to-barabazar.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/digha-to-tarkeshwar.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/manbazar-to-begunkodor.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bishnupur-to-kultikri.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
@@ -3090,7 +3084,6 @@
 <url><loc>https://busjatri.in/bus-time-table/nandigram-to-baruipur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-bajitpur.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jhargram-to-garhbeta.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/suri-to-durgapur-station.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/tatanagar-to-nirsa.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ranchi-to-asansol.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bardhaman-to-digha.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>

@@ -65,7 +65,7 @@ for key, s in (source.get("stops") or {}).items():
     stops[ck] = {"name": ck, "nearest_station": s.get("nearest_station")}
 
 index = {
-    "meta": source["meta"],
+    "meta": {**source["meta"], "total_buses": len(source["buses"])},
     "sn": sn,
     "buses": search_buses,
     "routes": source["routes"],

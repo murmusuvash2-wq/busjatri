@@ -109,9 +109,18 @@ def badge_for(bus):
 
 def stop_time(b, name, key):
     for s in b.get("stoppages") or []:
-        if (s.get("name") or "").strip() == (name or "").strip() and s.get(key):
+        if norm_stop(s.get("name")) == norm_stop(name) and s.get(key):
             return s[key]
     return None
+
+PLACE_ALIAS = {
+    # merge spelling variants of the same place (must match gen_seo_pages.py)
+    "Durgapur (Station)": "Durgapur Station",
+}
+
+def norm_stop(name):
+    t = (name or "").strip()
+    return PLACE_ALIAS.get(t, t)
 
 
 def main():
@@ -120,7 +129,7 @@ def main():
 
     fwd = defaultdict(list)
     for b in buses:
-        o, dd = (b.get("origin") or "").strip(), (b.get("destination") or "").strip()
+        o, dd = norm_stop(b.get("origin")), norm_stop(b.get("destination"))
         if o and dd and o != dd and o not in {"—"} and dd not in {"—"}:
             fwd[(o, dd)].append(b)
 
@@ -128,6 +137,7 @@ def main():
 
     pages = 0
     added_urls = []
+    written = set()
     for (o, dd), bs in fwd.items():
         if (dd, o) in fwd:
             continue
@@ -138,6 +148,13 @@ def main():
             arr = stop_time(b, o, "down_time")
             if dep:
                 rows.append((to_min(dep) if to_min(dep) is None else to_min(dep), dep, arr, b))
+            else:
+                # untimed return service: still list it with an honest dash
+                rows.append((None, "—", arr, b))
+        _timed = [r for r in rows if r[0] is not None]
+        if not _timed:
+            # no timed return info at all -> no page (all-dash page is useless)
+            continue
         if not rows:
             continue
         rows.sort(key=lambda r: (r[0] if r[0] is not None else 9999, str(r[3].get("bus_name") or "")))
@@ -157,8 +174,8 @@ def main():
         chip_html = "".join(chips[:12])
 
         n_stops_total = len({id(r[3]) for r in rows})
-        first_t = rows[0][1] if rows else "—"
-        last_t = rows[-1][1] if rows else "—"
+        first_t = _timed[0][1] if _timed else "—"
+        last_t = _timed[-1][1] if _timed else "—"
 
         board = ""
         for m, dep, arr, b in rows:
@@ -249,10 +266,26 @@ def main():
         if "--write" in sys.argv:
             out = ROOT / "bus-time-table" / f"{slug(dd)}-to-{slug(o)}.html"
             out.write_text(page, encoding="utf-8")
+            written.add(out.name)
             added_urls.append(f"{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}.html")
         pages += 1
 
     print(f"reverse route pages: {pages}")
+
+    # cleanup: delete stale reverse pages from earlier runs
+    if "--write" in sys.argv:
+        fwd_slug = {f"{slug(o)}-to-{slug(dd)}" for (o, dd) in fwd}
+        rev_slug = {f"{slug(dd)}-to-{slug(o)}" for (o, dd) in fwd if (dd, o) not in fwd}
+        removed = 0
+        for p in (ROOT / "bus-time-table").glob("*-to-*.html"):
+            if "-via-" in p.name:
+                continue
+            base = p.name[:-5]
+            if base in rev_slug and p.name not in written:
+                p.unlink()
+                removed += 1
+        if removed:
+            print(f"reverse cleanup: removed {removed} stale pages")
 
     if "--write" in sys.argv and added_urls:
         sm = ROOT / "sitemap.xml"
