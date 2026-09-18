@@ -218,7 +218,15 @@ function placeMatches(value, query) {
   const compact = s => s.replace(/[^a-z0-9]/g, '');
   const vc = compact(v).replace(/ac$/, '');
   const qc = compact(q).replace(/ac$/, '');
-  return vc === qc || vc.includes(qc);
+  if (vc === qc || vc.includes(qc)) return true;
+  /* Fuzzy tier for Bengali transliteration variants: compare consonant
+     skeletons (Mallarpur/Mollarpur, Medinipur/Midnapore, Tarapith/...
+     Tarapeeth). Only for queries with at least 4 consonants so short
+     words like 'pur' cannot match every place. */
+  const skel = s => s.replace(/[^bcdfghjklmnpqrstvwxyz]/g, '');
+  const vs = skel(v), qs = skel(q);
+  if (qs.length >= 4 && (vs === qs || vs.includes(qs))) return true;
+  return false;
 }
 
 async function loadFullBus(id) {

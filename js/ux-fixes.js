@@ -304,10 +304,10 @@
         all.forEach(function (b) {
           var mS = null;
           (b.stoppages || []).forEach(function (s) {
-            if (!mS && (s.name || '').toLowerCase().includes(stop)) mS = s;
+            if (!mS && placeMatches(s.name, stop)) mS = s;
           });
-          var isO = (b.origin || '').toLowerCase().includes(stop);
-          var isD = (b.destination || '').toLowerCase().includes(stop);
+          var isO = placeMatches(b.origin, stop);
+          var isD = placeMatches(b.destination, stop);
           if (!mS && !isO && !isD) return;
           if (!seenIds[b.id]) { seenIds[b.id] = 1; nBuses++; }
           var tU = mS ? bjFromStop(mS, 'up') : null;
@@ -327,7 +327,7 @@
           return placeMatches(b.origin, q) || placeMatches(b.destination, q) ||
                  (b.bus_name || '').toLowerCase().includes(q) ||
                  (b.route || '').toLowerCase().includes(q) ||
-                 (b.stoppages || []).some(function (s) { return (s.name || '').toLowerCase().includes(q); });
+                 (b.stoppages || []).some(function (s) { return placeMatches(s.name, q); });
         }).map(function (b) { return { b: b, fwd: true, depMin: parseTime(b.departure_time) }; });
         if (!rows.length && q.length >= 3) {
           var partial = q.slice(0, 5);
@@ -414,7 +414,7 @@
       var related = Object.values(BUSES).filter(function (b) {
         return (b.origin || '').toLowerCase().includes(q) ||
                (b.destination || '').toLowerCase().includes(q) ||
-               (b.stoppages || []).some(function (s) { return (s.name || '').toLowerCase().includes(q); });
+               (b.stoppages || []).some(function (s) { return placeMatches(s.name, q); });
       });
       var nowM = minutesNow();
       related.sort(function (x, y) {
