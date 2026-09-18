@@ -1,0 +1,53 @@
+name: Mobile UX and perf fixes
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply mobile fixes patch
+        run: python3 scripts/patch_mobile_fixes.py --write
+
+      - name: Syntax checks
+        run: |
+          node --check js/app.js
+          python3 -m py_compile scripts/build_client_data.py
+
+      - name: Build data files
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json, pathlib
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n >= 4171, f'bus count dropped to {n}'
+          lite = json.load(open('data/app-index-lite.json'))
+          full = json.load(open('data/app-index.json'))
+          assert len(lite['buses']) == n, 'lite bus count mismatch'
+          assert len(full['buses']) == n, 'full bus count mismatch'
+          files = list(pathlib.Path('data/bus-details').glob('*.json'))
+          assert len(files) == n, f'per-bus files {len(files)} != {n}'
+          print(f'OK: {n} buses, lite+full+per-bus all consistent')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Mobile UX + perf: tap targets, no truncation, lite index + per-bus details"
+            git push
+          fi
