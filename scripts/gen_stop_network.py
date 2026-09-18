@@ -242,6 +242,9 @@ def stop_page(stop, e, route_pages):
     for r in e["rows"]:
         if r[2]:
             dests[r[2]] += 1
+    for self_name in list(dests):
+        if slug(self_name) == slug(stop):
+            del dests[self_name]
     top_dests = [d for d, _ in dests.most_common(8)]
 
     shown = rows[:MAX_ROWS]
