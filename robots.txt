@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://busjatri.in/sitemap.xml
+Sitemap: https://busjatri.in/sitemap-extra.xml
