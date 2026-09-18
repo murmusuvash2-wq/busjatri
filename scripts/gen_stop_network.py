@@ -264,6 +264,12 @@ def stop_page(stop, e, route_pages):
 
     faq_visible, faq_ld = faq_block(stop, n_buses, first, last, top_dests, night)
 
+    crumb_ld = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
+        {"@type": "ListItem", "position": 2, "name": "Stops", "item": BASE + "/via/"},
+        {"@type": "ListItem", "position": 3, "name": stop}
+    ]})
+
     title = f"Buses via {stop} — Timings at {stop} | BusJatri"
     desc = (f"All buses passing through {stop} — {n_buses} bus services with timings at {stop}, "
             f"routes and destinations across West Bengal. Bus timetable on BusJatri.")
@@ -289,11 +295,7 @@ def stop_page(stop, e, route_pages):
 <link rel="stylesheet" href="../css/extras.css">
 {GA4}<style>.bj-faq{{margin:26px 0 6px}}.bj-faq h2{{font-size:1.12rem;margin:0 0 10px}}.bj-faq details{{border:1px solid var(--line,#e5dcc7);border-radius:12px;padding:10px 14px;margin:8px 0;background:var(--surface,#fffcf4)}}.bj-faq summary{{cursor:pointer;font-weight:600;font-size:.92rem}}.bj-faq p{{margin:8px 0 0;font-size:.88rem;color:var(--ink-dim,#665)}}</style>
 {POLISH_CSS}
-<script type="application/ld+json">{json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-    {{"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"}},
-    {{"@type": "ListItem", "position": 2, "name": "Stops", "item": BASE + "/via/"}},
-    {{"@type": "ListItem", "position": 3, "name": stop}}
-]})}</script>
+<script type="application/ld+json">{crumb_ld}</script>
 <script type="application/ld+json">{faq_ld}</script>
 </head>
 <body>
