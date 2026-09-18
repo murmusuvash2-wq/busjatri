@@ -132,7 +132,7 @@ a:hover { text-decoration: underline; }
 .header-actions { display: flex; align-items: center; gap: 8px; }
 
 .icon-btn {
-  width: 34px; height: 34px; display: inline-flex; align-items: center; justify-content: center;
+  width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
   background: var(--surface-2); border: 1px solid var(--line); border-radius: 50%;
   cursor: pointer; color: var(--ink); font-size: 15px; transition: border-color .2s, transform .3s;
 }
@@ -143,7 +143,7 @@ a:hover { text-decoration: underline; }
 .lang-group { display: flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; background: var(--surface-2); }
 .lang-btn {
   background: transparent; border: none; border-radius: 999px;
-  padding: 5px 12px; font-size: 12.5px; font-weight: 600; cursor: pointer; color: var(--ink-dim);
+  padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; color: var(--ink-dim);
   transition: .2s; font-family: var(--font-body);
 }
 .lang-btn.active { background: var(--amber); color: #fff9ee; }
@@ -232,8 +232,8 @@ body.lang-bn .tagline.bn { font-family: var(--font-body); }
 .search-field { flex: 1; min-width: 130px; padding: 2px 14px; position: relative; }
 .search-field + .search-field { border-left: 1px dashed var(--line-strong); }
 .search-field label {
-  display: flex; align-items: center; gap: 5px; font-family: var(--font-mono); font-size: 10.5px; font-weight: 600;
-  color: var(--ink-dim); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .1em;
+  display: flex; align-items: center; gap: 5px; font-family: var(--font-mono); font-size: 11.5px; font-weight: 600;
+  color: var(--amber-ink); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .1em;
 }
 .search-field input {
   width: 100%; padding: 7px 0; border: none; border-bottom: 2px solid transparent;
@@ -336,8 +336,8 @@ body.lang-bn .tagline.bn { font-family: var(--font-body); }
 .empty-state p { font-size: 14.5px; margin-bottom: 16px; }
 .chip-row { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
 .sugg-chip {
-  background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px;
-  font-size: 12.5px; font-weight: 600; color: var(--ink); cursor: pointer; transition: .15s;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 9px 15px;
+  font-size: 13px; font-weight: 600; color: var(--ink); cursor: pointer; transition: .15s;
 }
 .sugg-chip:hover { border-color: var(--amber); color: var(--amber-ink); }
 

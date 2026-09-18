@@ -134,9 +134,9 @@
   scrollbar-width: thin;
 }
 .place-card {
-  flex: 0 0 128px;
+  flex: 0 0 142px;
   scroll-snap-align: start;
-  padding: 13px 12px;
+  padding: 13px 13px;
 }
 .place-card .icon-badge { width: 34px; height: 34px; margin-bottom: 8px; }
 .place-cards::-webkit-scrollbar { height: 6px; }
@@ -197,3 +197,7 @@ body.lang-bn .route-chip{letter-spacing:0}
 .ac-item{padding:11px 14px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--line,rgba(33,28,22,.13))}
 .ac-item:last-child{border-bottom:0}
 .ac-item:hover,.ac-item:active{background:rgba(184,121,31,.12)}
+
+/* Mobile audit fixes 18 Sept 2026: destination cards must not clip text */
+.place-card .name { overflow-wrap: anywhere; }
+.place-card .place-tag { white-space: normal; max-width: 100%; }

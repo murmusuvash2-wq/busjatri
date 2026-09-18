@@ -72,7 +72,19 @@ index = {
     "stops": stops,
 }
 (ROOT / "data" / "app-index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+lite = dict(index)
+lite["buses"] = [{k: v for k, v in b.items() if k not in ("sx", "ux", "dx")} for b in search_buses]
+(ROOT / "data" / "app-index-lite.json").write_text(json.dumps(lite, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 (ROOT / "data" / "bus-details.json").write_text(json.dumps({b["id"]: b for b in source["buses"]}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-print("Built app-index.json (compact + stop indexes + times) and bus-details.json")
-print("Initial index bytes:", (ROOT / "data" / "app-index.json").stat().st_size)
-print("Lazy detail bytes:", (ROOT / "data" / "bus-details.json").stat().st_size)
+import shutil
+details_dir = ROOT / "data" / "bus-details"
+if details_dir.exists():
+    shutil.rmtree(details_dir)
+details_dir.mkdir(parents=True)
+for bus in source["buses"]:
+    (details_dir / (bus["id"] + ".json")).write_text(json.dumps(bus, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+print("Built app-index.json, app-index-lite.json and per-bus details")
+print("Lite index bytes:", (ROOT / "data" / "app-index-lite.json").stat().st_size)
+print("Full index bytes:", (ROOT / "data" / "app-index.json").stat().st_size)
+print("Per-bus detail files:", len(list(details_dir.glob("*.json"))))
+print("Legacy bulk detail bytes:", (ROOT / "data" / "bus-details.json").stat().st_size)
