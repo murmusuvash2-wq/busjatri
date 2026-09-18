@@ -1,0 +1,39 @@
+name: Stop network pages
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate stop network (via hubs + chip links + sitemap)
+        run: python3 scripts/gen_stop_network.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          from pathlib import Path
+          n = len(list(Path('via').glob('*.html')))
+          assert 1500 <= n <= 4000, f'unexpected via page count {n}'
+          sm = Path('sitemap.xml').read_text(encoding='utf-8')
+          assert sm.count('/via/') >= n, 'sitemap missing via urls'
+          print(f'OK: {n} stop hub pages, sitemap updated')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Stop network: via hub pages + stoppage chip links + sitemap"
+            git push
+          fi

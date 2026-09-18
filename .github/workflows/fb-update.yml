@@ -1,5 +1,4 @@
 name: FB community update
-
 on:
   workflow_dispatch:
 
@@ -53,6 +52,7 @@ jobs:
           python3 scripts/gen_seo_pages.py
           python3 scripts/build_client_data.py
           python3 scripts/finalize_pages.py
+          python3 scripts/gen_stop_network.py
 
       - name: Commit and push if changed
         run: |
