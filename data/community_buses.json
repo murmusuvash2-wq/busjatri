@@ -1,0 +1,29 @@
+{
+  "add": [
+    {
+      "operator": "Monika Travels",
+      "bus_name": "Monika Travels Ramharipur-Purulia",
+      "bus_type": "Private - Non AC",
+      "reg_no": "WB 67 9660",
+      "origin": "Ramharipur",
+      "destination": "Purulia",
+      "departure_time": "6:30 AM",
+      "arrival_time": "",
+      "route": "Ramharipur - Purulia",
+      "source": "facebook (community report)",
+      "detail_url": "",
+      "stops": [
+        {"name": "Ramharipur", "up": "6:30 AM", "down": ""},
+        {"name": "Ji Ghati", "up": "", "down": ""},
+        {"name": "Amarakanan", "up": "", "down": ""},
+        {"name": "Bankura", "up": "9:00 AM", "down": "5:45 PM"},
+        {"name": "Chhatna", "up": "9:15 AM", "down": "3:45 PM"},
+        {"name": "Kharbona", "up": "9:30 AM", "down": "3:35 PM"},
+        {"name": "Kamalpur", "up": "9:50 AM", "down": "3:15 PM"},
+        {"name": "Hura", "up": "", "down": ""},
+        {"name": "Purulia", "up": "", "down": "1:25 PM"}
+      ]
+    }
+  ],
+  "enrich": []
+}
