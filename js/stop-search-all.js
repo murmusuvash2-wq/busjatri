@@ -1,14 +1,18 @@
 /* ============================================================
-   BusJatri stop-search overlay (2026-09-18) - loaded LAST, after ux-fixes.js
-   Search v3: stop searches list ALL buses serving the stop.
-   ux-fixes.js v2 only rendered rows that had a recorded time at the
-   stop (e.g. Mallarpur showed 2 PAPAI rows while 10 buses serve it).
-   This overlay re-overrides renderSearch:
-   1. Untimed services render too, after the timed ones, with a
-      "Time not listed" pill - nothing silently hidden.
-   2. Header reads "N buses - M with timings" instead of the
-      confusing "N buses - M departures today".
-   3. Times already past today get an explicit "tomorrow" tag.
+   BusJatri search overlay (2026-09-18) - loaded LAST, after ux-fixes.js
+   Search v3 + Autocomplete v2.
+   1. Stop searches list ALL buses serving the stop - untimed services
+      render after the timed ones with a "Time not listed" pill
+      (ux-fixes v2 showed only timed rows: Mallarpur said "10 buses"
+      but rendered 2).
+   2. Header reads "N buses - M with timings"; times already past
+      today get an explicit "tomorrow" tag.
+   3. Autocomplete v2: ranked prefix -> substring -> fuzzy/alias
+      (placeMatches), sourced from STOPS + sn + origins/destinations,
+      so typos like "mollarpur" and aliases like "kanthi" suggest
+      results instead of an empty box (374 names were never suggested).
+   4. canonName resolves titles through the same fuzzy tiers, so the
+      page title shows "Mallarpur" even when the query was misspelled.
    Helpers below are copies of closure-local functions from ux-fixes.js.
    ============================================================ */
 (function () {
@@ -43,6 +47,17 @@
         }
       });
     }
+    if (!best) {
+      /* fuzzy tiers: prefix, then placeMatches (typos + aliases), so a
+         misspelled query still gets the real place name in the title */
+      var t = String(q || '').toLowerCase();
+      acNames().forEach(function (n) {
+        if (!best) {
+          if (n.toLowerCase().indexOf(t) === 0) best = n;
+          else if (t.length >= 4 && placeMatches(n, t)) best = n;
+        }
+      });
+    }
     return best || q;
   }
   function bjPosIn(b, q) {
@@ -74,7 +89,96 @@
     return sts.length ? bjFromStop(sts[0], 'up') : parseTime(b.arrival_time);
   }
 
-    renderSearch = async function (el) {
+    /* ---- 4. Autocomplete v2: fuzzy + alias aware, full name coverage ----
+     ux-fixes.js autocomplete does prefix/substring only and reads just the
+     STOPS dict (2,740 names; 374 real names are never suggested, and any
+     typo or alias input gets an empty box). This replacement ranks:
+       tier 1 - prefix matches
+       tier 2 - substring matches
+       tier 3 - placeMatches (compact + consonant-skeleton typo tolerance
+                + alias groups), only when the query has 4+ letters
+     and sources names from STOPS + DATA.sn + all origins/destinations.
+     Registered after ux-fixes.js, so its dropdown wins (last write). */
+  var AC_LIMIT = 10;
+  var AC_NAMES = null;
+  function acNames() {
+    if (AC_NAMES) return AC_NAMES;
+    var seen = Object.create(null);
+    var out = [];
+    function add(n) { if (n && !seen[n]) { seen[n] = 1; out.push(n); } }
+    Object.values(STOPS || {}).forEach(function (s) { if (s && s.name) add(s.name); });
+    if (typeof DATA !== 'undefined' && DATA && DATA.sn) DATA.sn.forEach(add);
+    Object.values(BUSES).forEach(function (b) { add(b.origin); add(b.destination); });
+    AC_NAMES = out;
+    return out;
+  }
+  function acFind(q) {
+    var t = (q || '').toLowerCase().trim();
+    if (!t) return [];
+    var t1 = [], t2 = [], t3 = [];
+    var names = acNames();
+    for (var i = 0; i < names.length; i++) {
+      var n = names[i], ln = n.toLowerCase();
+      if (ln.indexOf(t) === 0) t1.push(n);
+      else if (ln.indexOf(t) !== -1) t2.push(n);
+      else if (t.length >= 4 && placeMatches(n, t)) t3.push(n);
+    }
+    var res = t1.concat(t2);
+    if (res.length < AC_LIMIT) res = res.concat(t3);
+    return res.slice(0, AC_LIMIT);
+  }
+  function acHtml(s) {
+    var A = String.fromCharCode(38);
+    var M = {};
+    M[A] = A + 'amp;';
+    M[String.fromCharCode(60)] = A + 'lt;';
+    M[String.fromCharCode(62)] = A + 'gt;';
+    M['"'] = A + 'quot;';
+    M["'"] = A + '#39;';
+    return String(s).replace(/[&<>"']/g, function (c) { return M[c]; });
+  }
+  function acHide() {
+    document.querySelectorAll('.ac-drop').forEach(function (d) { d.remove(); });
+  }
+  function acShow(input) {
+    acHide();
+    var m = acFind(input.value);
+    if (!m.length) return;
+    var field = input.closest('.search-field');
+    if (!field) return;
+    var d = document.createElement('div');
+    d.className = 'ac-drop';
+    d.innerHTML = m.map(function (n) {
+      return '<div class="ac-item">' + acHtml(n) + '</div>';
+    }).join('');
+    field.appendChild(d);
+  }
+  function acIsInput(el) {
+    return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));
+  }
+  var acTimer = null;
+  document.addEventListener('input', function (e) {
+    if (!acIsInput(e.target)) return;
+    if (acTimer) clearTimeout(acTimer);
+    acTimer = setTimeout(function () { acShow(e.target); }, 160);
+  });
+  document.addEventListener('click', function (e) {
+    var item = e.target.closest ? e.target.closest('.ac-item') : null;
+    if (item) {
+      var field = item.closest('.search-field');
+      var input = field && field.querySelector('input');
+      if (input) {
+        input.value = item.textContent;
+        acHide();
+        input.focus();
+      }
+      return;
+    }
+    if (acIsInput(e.target)) { acShow(e.target); return; }
+    acHide();
+  });
+
+  renderSearch = async function (el) {
       rebuildCompactStops();
       var params = new URLSearchParams(location.hash.split('?')[1] || '');
       var from = (params.get('from') || '').toLowerCase().trim();
