@@ -641,7 +641,15 @@ def generate_route_page(origin, destination, buses):
     dur_text = fmt_duration(duration) if duration else "—"
 
     title = f"{origin} to {destination} Bus Time Table | {SITE_NAME}"
-    description = f"{origin} to {destination} bus timings, operators, stoppages. {count} buses listed. First {first}, last {last}."[:300]
+    bus_word = "bus" if count == 1 else "buses"
+    ops = [o for o in operators if o and o.strip() and o.strip() not in ("—", "-")][:3]
+    run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
+    if stats["first"] is None:
+        description = f"{origin} to {destination} bus time table with routes, stoppages and operators on {SITE_NAME}."[:300]
+    elif count == 1:
+        description = f"{origin} to {destination} bus time table — 1 bus daily at {first}.{run_by} Timings and stoppages on {SITE_NAME}."[:300]
+    else:
+        description = f"{origin} to {destination} bus time table — {count} {bus_word} daily, first {first}, last {last}.{run_by} Timings and stoppages on {SITE_NAME}."[:300]
     canonical = f"{BASE}/bus-time-table/{filename}"
     major_stops = stoppage_summary(buses)
 
@@ -651,7 +659,7 @@ def generate_route_page(origin, destination, buses):
         (f"What is the last bus from {origin} to {destination}?",
          f"The last bus departs at {last}." if stats["last"] is not None else "Check the timetable above."),
         (f"How many buses run from {origin} to {destination}?",
-         f"{count} bus services are listed on this route."),
+         f"{count} bus " + ('service is' if count == 1 else 'services are') + " listed on this route."),
     ]
 
     bn_sub = f'<p class="bn-sub">{esc(route_bn)} বাসের সময়সূচী</p>' if route_bn else ""
