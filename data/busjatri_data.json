@@ -44946,15 +44946,15 @@
   },
   {
    "id": "bussathi-kalyan-322",
-   "bus_name": "KALYAN",
-   "reg_no": "WB55B9666",
-   "operator": "—",
+   "bus_name": "KALYAN TRAVELS",
+   "reg_no": "WB 55B 9666",
+   "operator": "Kalyan Travels",
    "bus_type": "Private - NON AC",
    "origin": "Jhalda",
    "destination": "Jhargram",
    "departure_time": "4:00 AM",
-   "arrival_time": "10:10 AM",
-   "contact_number": "Not Available !",
+   "arrival_time": "10:00 AM",
+   "contact_number": "",
    "depot_name": "Jhalda",
    "route": "Jhalda - Jhargram",
    "stoppages": [
@@ -44966,85 +44966,151 @@
     },
     {
      "no": 2,
-     "name": "Chas",
+     "name": "Jaypur",
+     "up_time": "4:30 AM",
+     "down_time": "7:10 PM"
+    },
+    {
+     "no": 3,
+     "name": "Chashmoda",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 3,
+     "no": 4,
+     "name": "Lagda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
      "name": "Purulia",
      "up_time": "5:30 AM",
      "down_time": "6:20 PM"
     },
     {
-     "no": 4,
-     "name": "Chakaltore",
+     "no": 6,
+     "name": "Tamna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Chakoltor",
      "up_time": "5:50 AM",
      "down_time": "3:45 PM"
     },
     {
-     "no": 5,
-     "name": "Bamundiha",
+     "no": 8,
+     "name": "Tokariya",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Bamundaha",
      "up_time": "6:10 AM",
      "down_time": "3:05 PM"
     },
     {
-     "no": 6,
+     "no": 10,
+     "name": "Manpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
      "name": "Barabazar",
      "up_time": "6:40 AM",
      "down_time": "2:50 PM"
     },
     {
-     "no": 7,
-     "name": "Bandwan",
+     "no": 12,
+     "name": "Jamboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Katin",
+     "up_time": "7:00 AM",
+     "down_time": "2:10 PM"
+    },
+    {
+     "no": 14,
+     "name": "Madhupur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Bandowan",
      "up_time": "7:30 AM",
      "down_time": "1:40 PM"
     },
     {
-     "no": 8,
+     "no": 16,
      "name": "Kuilapal",
      "up_time": "8:00 AM",
-     "down_time": "12:55 PM"
+     "down_time": "1:00 PM"
     },
     {
-     "no": 9,
+     "no": 17,
      "name": "Jhilimili",
      "up_time": "8:10 AM",
      "down_time": "12:50 PM"
     },
     {
-     "no": 10,
+     "no": 18,
+     "name": "Chakadoba",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Bhulabheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
      "name": "Belpahari",
      "up_time": "8:50 AM",
      "down_time": "12:10 PM"
     },
     {
-     "no": 11,
-     "name": "Silda",
+     "no": 21,
+     "name": "Shilda",
      "up_time": "9:15 AM",
      "down_time": "11:55 AM"
     },
     {
-     "no": 12,
+     "no": 22,
      "name": "Binpur",
      "up_time": "9:30 AM",
-     "down_time": "11:30 AM"
+     "down_time": "11:40 AM"
     },
     {
-     "no": 13,
+     "no": 23,
      "name": "Dahijuri",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 14,
-     "name": "Jhargram",
-     "up_time": "10:10 AM",
+     "no": 24,
+     "name": "Panchmathar More",
+     "up_time": "",
      "down_time": "11:00 AM"
+    },
+    {
+     "no": 25,
+     "name": "Jhargram",
+     "up_time": "10:00 AM",
+     "down_time": "10:50 AM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 14,
+   "total_stoppages": 25,
    "detail_url": "https://bussathi.in/bus/430"
   },
   {
@@ -401736,6 +401802,98 @@
    "source": "facebook (community report)",
    "time_source": "facebook (community report)",
    "total_stoppages": 40,
+   "detail_url": ""
+  },
+  {
+   "id": "ayan-express-jhargram-digha-4009",
+   "bus_name": "Ayan Express Jhargram-Digha (Super Fast)",
+   "reg_no": "",
+   "operator": "Ayan Express",
+   "bus_type": "Private",
+   "origin": "Jhargram",
+   "destination": "Digha",
+   "departure_time": "5:30 AM",
+   "arrival_time": "10:25 AM",
+   "contact_number": "9382172869",
+   "depot_name": "",
+   "route": "Jhargram - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Jhargram",
+     "up_time": "5:30 AM",
+     "down_time": "6:30 PM"
+    },
+    {
+     "no": 2,
+     "name": "Lodhashuli",
+     "up_time": "5:50 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 3,
+     "name": "Feko",
+     "up_time": "6:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Gopiballabpur",
+     "up_time": "6:30 AM",
+     "down_time": "5:25 PM"
+    },
+    {
+     "no": 5,
+     "name": "Kharika",
+     "up_time": "7:30 AM",
+     "down_time": "4:15 PM"
+    },
+    {
+     "no": 6,
+     "name": "Keshiary",
+     "up_time": "8:00 AM",
+     "down_time": "3:35 PM"
+    },
+    {
+     "no": 7,
+     "name": "Belda",
+     "up_time": "8:25 AM",
+     "down_time": "2:55 PM"
+    },
+    {
+     "no": 8,
+     "name": "Egra",
+     "up_time": "9:15 AM",
+     "down_time": "2:05 PM"
+    },
+    {
+     "no": 9,
+     "name": "Paniparul",
+     "up_time": "9:45 AM",
+     "down_time": "1:35 PM"
+    },
+    {
+     "no": 10,
+     "name": "Ramnagar",
+     "up_time": "10:10 AM",
+     "down_time": "1:10 PM"
+    },
+    {
+     "no": 11,
+     "name": "New Digha",
+     "up_time": "",
+     "down_time": "12:40 PM"
+    },
+    {
+     "no": 12,
+     "name": "Digha",
+     "up_time": "10:25 AM",
+     "down_time": "12:30 PM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 12,
    "detail_url": ""
   }
  ],

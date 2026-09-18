@@ -672,6 +672,82 @@
      "down": ""
     }
    ]
+  },
+  {
+   "operator": "Ayan Express",
+   "bus_name": "Ayan Express Jhargram-Digha (Super Fast)",
+   "bus_type": "Private",
+   "reg_no": "",
+   "origin": "Jhargram",
+   "destination": "Digha",
+   "departure_time": "5:30 AM",
+   "arrival_time": "10:25 AM",
+   "route": "Jhargram - Digha",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9382172869",
+   "stops": [
+    {
+     "name": "Jhargram",
+     "up": "5:30 AM",
+     "down": "6:30 PM"
+    },
+    {
+     "name": "Lodhashuli",
+     "up": "5:50 AM",
+     "down": "6:10 PM"
+    },
+    {
+     "name": "Feko",
+     "up": "6:10 AM",
+     "down": ""
+    },
+    {
+     "name": "Gopiballabpur",
+     "up": "6:30 AM",
+     "down": "5:25 PM"
+    },
+    {
+     "name": "Kharika",
+     "up": "7:30 AM",
+     "down": "4:15 PM"
+    },
+    {
+     "name": "Keshiary",
+     "up": "8:00 AM",
+     "down": "3:35 PM"
+    },
+    {
+     "name": "Belda",
+     "up": "8:25 AM",
+     "down": "2:55 PM"
+    },
+    {
+     "name": "Egra",
+     "up": "9:15 AM",
+     "down": "2:05 PM"
+    },
+    {
+     "name": "Paniparul",
+     "up": "9:45 AM",
+     "down": "1:35 PM"
+    },
+    {
+     "name": "Ramnagar",
+     "up": "10:10 AM",
+     "down": "1:10 PM"
+    },
+    {
+     "name": "New Digha",
+     "up": "",
+     "down": "12:40 PM"
+    },
+    {
+     "name": "Digha",
+     "up": "10:25 AM",
+     "down": "12:30 PM"
+    }
+   ]
   }
  ],
  "enrich": []
