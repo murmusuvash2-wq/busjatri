@@ -65168,7 +65168,7 @@
     {
      "no": 16,
      "name": "Mechogram",
-     "up_time": "",
+     "up_time": "9:05 AM",
      "down_time": ""
     },
     {
@@ -65186,14 +65186,14 @@
     {
      "no": 19,
      "name": "Nandakumar",
-     "up_time": "",
-     "down_time": ""
+     "up_time": "10:50 AM",
+     "down_time": "4:00 PM"
     },
     {
      "no": 20,
      "name": "Mahishadal",
-     "up_time": "",
-     "down_time": ""
+     "up_time": "11:00 AM",
+     "down_time": "3:50 PM"
     },
     {
      "no": 21,
@@ -404418,6 +404418,56 @@
    "time_source": "facebook (community report)",
    "total_stoppages": 38,
    "detail_url": ""
+  },
+  {
+   "id": "baba-baidyanath-junput-baligeria-4010",
+   "bus_name": "BABA BAIDYANATH",
+   "reg_no": "",
+   "operator": "Baba Baidyanath",
+   "bus_type": "Private - Non AC",
+   "origin": "Junput",
+   "destination": "Baligeria",
+   "departure_time": "6:30 AM",
+   "arrival_time": "10:40 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Junput - Baligeria",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Junput",
+     "up_time": "6:30 AM",
+     "down_time": "6:20 PM"
+    },
+    {
+     "no": 2,
+     "name": "Contai",
+     "up_time": "7:30 AM",
+     "down_time": "4:40 PM"
+    },
+    {
+     "no": 3,
+     "name": "Egra",
+     "up_time": "8:15 AM",
+     "down_time": "3:50 PM"
+    },
+    {
+     "no": 4,
+     "name": "Kharika",
+     "up_time": "10:30 AM",
+     "down_time": "1:30 PM"
+    },
+    {
+     "no": 5,
+     "name": "Baligeria",
+     "up_time": "10:40 AM",
+     "down_time": "1:05 PM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 5,
+   "detail_url": ""
   }
  ],
  "routes": {
@@ -494879,7 +494929,7 @@
   }
  },
  "meta": {
-  "total_buses": 4009,
+  "total_buses": 4010,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",

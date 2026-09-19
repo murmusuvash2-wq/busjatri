@@ -3208,12 +3208,189 @@
      "down": "11:10 AM"
     }
    ]
+  },
+  {
+   "operator": "Baba Baidyanath",
+   "bus_name": "BABA BAIDYANATH",
+   "bus_type": "Private - Non AC",
+   "reg_no": "",
+   "origin": "Junput",
+   "destination": "Baligeria",
+   "departure_time": "6:30 AM",
+   "arrival_time": "10:40 AM",
+   "route": "Junput - Baligeria",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Junput",
+     "up": "6:30 AM",
+     "down": "6:20 PM"
+    },
+    {
+     "name": "Contai",
+     "up": "7:30 AM",
+     "down": "4:40 PM"
+    },
+    {
+     "name": "Egra",
+     "up": "8:15 AM",
+     "down": "3:50 PM"
+    },
+    {
+     "name": "Kharika",
+     "up": "10:30 AM",
+     "down": "1:30 PM"
+    },
+    {
+     "name": "Baligeria",
+     "up": "10:40 AM",
+     "down": "1:05 PM"
+    }
+   ]
   }
  ],
  "enrich": [
   {
    "target_id": "nbstc-in-nbstc-cooch-behar-si-930",
    "departure_time": "12:00 PM"
+  },
+  {
+   "target_id": "bussathi-new-ahan-529",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Brahmandiha",
+     "up_time": "5:10 AM",
+     "down_time": "9:45 PM"
+    },
+    {
+     "no": 2,
+     "name": "Ramgarh",
+     "up_time": "5:30 AM",
+     "down_time": "9:25 PM"
+    },
+    {
+     "no": 3,
+     "name": "Pingboni",
+     "up_time": "5:45 AM",
+     "down_time": "9:10 PM"
+    },
+    {
+     "no": 4,
+     "name": "Goaltore",
+     "up_time": "6:00 AM",
+     "down_time": "8:55 PM"
+    },
+    {
+     "no": 5,
+     "name": "Chandrakona Road",
+     "up_time": "6:30 AM",
+     "down_time": "8:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Chandrakona Town",
+     "up_time": "7:15 AM",
+     "down_time": "7:45 PM"
+    },
+    {
+     "no": 7,
+     "name": "Khirpai",
+     "up_time": "7:35 AM",
+     "down_time": "7:25 PM"
+    },
+    {
+     "no": 8,
+     "name": "Radhanagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Baroda Chowkan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Ghatal",
+     "up_time": "8:10 AM",
+     "down_time": "6:35 PM"
+    },
+    {
+     "no": 11,
+     "name": "Daspur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Sultannagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Goura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Khukur Daha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Keshapat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Mechogram",
+     "up_time": "9:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Panskura",
+     "up_time": "9:10 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 18,
+     "name": "Tamluk",
+     "up_time": "10:20 AM",
+     "down_time": "4:30 PM"
+    },
+    {
+     "no": 19,
+     "name": "Nandakumar",
+     "up_time": "10:50 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "no": 20,
+     "name": "Mahishadal",
+     "up_time": "11:00 AM",
+     "down_time": "3:50 PM"
+    },
+    {
+     "no": 21,
+     "name": "Chaitanyapur",
+     "up_time": "11:15 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "no": 22,
+     "name": "Kukrahati",
+     "up_time": "11:30 AM",
+     "down_time": "3:15 PM"
+    }
+   ]
   }
  ]
 }
