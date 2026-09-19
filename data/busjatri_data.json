@@ -14257,7 +14257,7 @@
     {
      "no": 6,
      "name": "Durgapur (City Center)",
-     "up_time": "8:05 AM",
+     "up_time": "8:05 PM",
      "down_time": "1:25 PM"
     },
     {
@@ -14275,7 +14275,7 @@
     {
      "no": 9,
      "name": "Asansol",
-     "up_time": "9:10 AM",
+     "up_time": "9:10 PM",
      "down_time": "12:20 PM"
     }
    ],
@@ -15226,7 +15226,7 @@
     {
      "no": 10,
      "name": "Durgapur (City Center)",
-     "up_time": "10:25 AM",
+     "up_time": "10:25 PM",
      "down_time": "2:50 PM"
     },
     {
@@ -15244,7 +15244,7 @@
     {
      "no": 13,
      "name": "Asansol",
-     "up_time": "11:30 AM",
+     "up_time": "11:30 PM",
      "down_time": "1:30 PM"
     }
    ],
@@ -21927,7 +21927,7 @@
     {
      "no": 11,
      "name": "Bankura",
-     "up_time": "11:05 AM",
+     "up_time": "11:05 PM",
      "down_time": "4:45 PM"
     }
    ],
@@ -25871,13 +25871,13 @@
     {
      "no": 1,
      "name": "Manihara",
-     "up_time": "9:00 PM",
+     "up_time": "9:00 AM",
      "down_time": "7:30 PM"
     },
     {
      "no": 2,
      "name": "Jorehira",
-     "up_time": "9:30 PM",
+     "up_time": "9:30 AM",
      "down_time": "7:00 PM"
     },
     {
@@ -37008,7 +37008,7 @@
     {
      "no": 10,
      "name": "Bankura",
-     "up_time": "9:20 AM",
+     "up_time": "9:20 PM",
      "down_time": "3:05 PM"
     }
    ],
@@ -39546,13 +39546,13 @@
     {
      "no": 1,
      "name": "Bankura",
-     "up_time": "4:50 PM",
+     "up_time": "4:50 AM",
      "down_time": "4:40 PM"
     },
     {
      "no": 2,
      "name": "Dhaldanga",
-     "up_time": "5:10 PM",
+     "up_time": "5:10 AM",
      "down_time": "4:20 PM"
     },
     {
@@ -42872,13 +42872,13 @@
     {
      "no": 1,
      "name": "Khatra",
-     "up_time": "6:00 PM",
+     "up_time": "6:00 AM",
      "down_time": "5:30 PM"
     },
     {
      "no": 2,
      "name": "Hatirampur",
-     "up_time": "6:30 PM",
+     "up_time": "6:30 AM",
      "down_time": "5:00 PM"
     },
     {
@@ -49916,7 +49916,7 @@
     {
      "no": 4,
      "name": "Durgapur (City Center)",
-     "up_time": "4:40 PM",
+     "up_time": "4:40 AM",
      "down_time": "5:45 PM"
     },
     {
@@ -49928,7 +49928,7 @@
     {
      "no": 6,
      "name": "Raniganj",
-     "up_time": "5:20 PM",
+     "up_time": "5:20 AM",
      "down_time": "4:40 PM"
     },
     {
@@ -52769,7 +52769,7 @@
     {
      "no": 11,
      "name": "Bankura",
-     "up_time": "9:40 AM",
+     "up_time": "9:40 PM",
      "down_time": "1:00 PM"
     }
    ],
@@ -53727,7 +53727,7 @@
     {
      "no": 6,
      "name": "Silda",
-     "up_time": "10:40 PM",
+     "up_time": "10:40 AM",
      "down_time": "4:10 PM"
     },
     {
@@ -65447,7 +65447,7 @@
     {
      "no": 14,
      "name": "Arambagh",
-     "up_time": "10:00 AM",
+     "up_time": "10:00 PM",
      "down_time": "1:25 PM"
     },
     {
@@ -65465,7 +65465,7 @@
     {
      "no": 17,
      "name": "Tarkeshwar",
-     "up_time": "11:00 AM",
+     "up_time": "11:00 PM",
      "down_time": "12:25 PM"
     }
    ],
@@ -74062,7 +74062,7 @@
     {
      "no": 19,
      "name": "Karunamoyee",
-     "up_time": "9:00 AM",
+     "up_time": "9:00 PM",
      "down_time": "2:35 PM"
     }
    ],
@@ -76927,7 +76927,7 @@
     {
      "no": 13,
      "name": "Lodhasuli",
-     "up_time": "10:55 PM",
+     "up_time": "10:55 AM",
      "down_time": "1:25 PM"
     },
     {
@@ -76939,7 +76939,7 @@
     {
      "no": 15,
      "name": "Kharagpur",
-     "up_time": "11:50 PM",
+     "up_time": "11:50 AM",
      "down_time": "12:25 PM"
     }
    ],
@@ -78159,13 +78159,13 @@
      "no": 2,
      "name": "Guniada",
      "up_time": "6:45 AM",
-     "down_time": "6:20 AM"
+     "down_time": "6:20 PM"
     },
     {
      "no": 3,
      "name": "Belut",
      "up_time": "7:00 AM",
-     "down_time": "6:05 AM"
+     "down_time": "6:05 PM"
     },
     {
      "no": 4,
@@ -78642,7 +78642,7 @@
     {
      "no": 16,
      "name": "Kharagpur",
-     "up_time": "11:50 PM",
+     "up_time": "11:50 AM",
      "down_time": "12:40 PM"
     }
    ],
@@ -79856,13 +79856,13 @@
     {
      "no": 10,
      "name": "Durgapur (City Center)",
-     "up_time": "11:10 AM",
+     "up_time": "11:10 PM",
      "down_time": "3:40 PM"
     },
     {
      "no": 11,
      "name": "Benachity",
-     "up_time": "11:25 AM",
+     "up_time": "11:25 PM",
      "down_time": "3:20 PM"
     }
    ],
@@ -82832,7 +82832,7 @@
     {
      "no": 2,
      "name": "P More",
-     "up_time": "12:00 AM",
+     "up_time": "12:00 PM",
      "down_time": "6:45 PM"
     },
     {
@@ -84611,7 +84611,7 @@
     {
      "no": 1,
      "name": "Baruipur",
-     "up_time": "6:05 PM",
+     "up_time": "6:05 AM",
      "down_time": ""
     },
     {
@@ -84629,7 +84629,7 @@
     {
      "no": 4,
      "name": "Exide More",
-     "up_time": "6:10 PM",
+     "up_time": "6:10 AM",
      "down_time": ""
     },
     {
@@ -90639,7 +90639,7 @@
     {
      "no": 18,
      "name": "Kalyani",
-     "up_time": "10:50 AM",
+     "up_time": "10:50 PM",
      "down_time": "3:00 PM"
     }
    ],
@@ -92510,7 +92510,7 @@
     {
      "no": 6,
      "name": "Egra",
-     "up_time": "12:05 AM",
+     "up_time": "12:05 PM",
      "down_time": "4:20 PM"
     },
     {
@@ -93588,7 +93588,7 @@
     {
      "no": 7,
      "name": "Contai",
-     "up_time": "12:50 AM",
+     "up_time": "12:50 PM",
      "down_time": "5:00 PM"
     }
    ],
@@ -97063,7 +97063,7 @@
      "no": 15,
      "name": "Tamluk",
      "up_time": "8:05 AM",
-     "down_time": "11:45 PM"
+     "down_time": "11:45 AM"
     },
     {
      "no": 16,
