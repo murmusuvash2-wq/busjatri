@@ -91,6 +91,30 @@ def main():
         for b in v_sorted[1:]:
             removed.append((b, "same route+time+name as kept copy"))
 
+    # rule 3: same reg_no + same route + same departure time
+    # (same physical service listed by two sources, e.g. WB29G9687
+    # KALOSONA Asansol->Digha from both wbbus.in and bussathi.in)
+    r3 = defaultdict(list)
+    for b in buses:
+        reg = re.sub(r"[^A-Z0-9]", "", str(b.get("reg_no") or "").upper())
+        if not reg or reg in ("NA", "-"):
+            continue
+        key = (
+            b.get("origin", "").strip().lower(),
+            b.get("destination", "").strip().lower(),
+            norm_time(b.get("departure_time")),
+            reg,
+        )
+        r3[key].append(b)
+    for key, v in r3.items():
+        if len(v) < 2:
+            continue
+        v_sorted = sorted(v, key=keeper_rank)
+        for b in v_sorted[1:]:
+            if b["id"] in keep_ids:
+                keep_ids.discard(b["id"])
+                removed.append((b, "same reg+route+time as kept copy"))
+
     # rule 2: untimed copy shadowed by a timed copy (same route+name,
     # matching first/last stop)
     rn = defaultdict(list)

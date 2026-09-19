@@ -1173,9 +1173,13 @@ for bus in BUSES:
 
 
 top_places = sorted(
-    place_buses,
+    (
+        place
+        for place, buses_ in place_buses.items()
+        if len(buses_) >= 10
+    ),
     key=lambda place: -len(place_buses[place]),
-)[:30]
+)
 
 
 for place in top_places:
@@ -1684,6 +1688,39 @@ with open(
         + _extra
     )
 
+
+# ------------------------------------------------------------
+# CLEANUP: remove zombie pages the generators no longer emit
+# (stale via pages + ghost route pages whose data no longer exists)
+# ------------------------------------------------------------
+
+import glob as _glob
+
+_live_via = {w for w in written if "-via-" in w}
+_fwd_slugs = {f"{slug(o)}-to-{slug(t)}" for (o, t) in route_meta}
+_rev_slugs = {f"{slug(t)}-to-{slug(o)}" for (o, t) in route_meta}
+_removed = []
+for p in _glob.glob(os.path.join(OUT, "*.html")):
+    fn = os.path.basename(p)
+    if fn == "index.html" or fn.endswith("-buses.html"):
+        continue
+    if fn.startswith("buses-from-"):
+        if fn not in written:
+            os.remove(p)
+            _removed.append(fn)
+        continue
+    if "-via-" in fn:
+        if fn not in _live_via:
+            os.remove(p)
+            _removed.append(fn)
+        continue
+    if "-to-" in fn:
+        base = fn[:-5]
+        if base not in _fwd_slugs and base not in _rev_slugs:
+            os.remove(p)
+            _removed.append(fn)
+
+print(f"cleanup: removed {len(_removed)} stale pages")
 
 # ------------------------------------------------------------
 # CLEANUP: remove zombie pages the generators no longer emit

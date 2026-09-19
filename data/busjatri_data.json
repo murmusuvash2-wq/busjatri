@@ -2269,13 +2269,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "New Town\n(Sapoorji)",
+   "origin": "New Town (Sapoorji)",
    "destination": "Howrah",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "New Town\n(Sapoorji) - Howrah",
+   "route": "New Town (Sapoorji) - Howrah",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2305,13 +2305,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Baruipur New\nTerminus",
-   "destination": "Karunamoyee\n(Salt Lake)",
+   "origin": "Baruipur New Terminus",
+   "destination": "Karunamoyee (Salt Lake)",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Baruipur New\nTerminus - Karunamoyee\n(Salt Lake)",
+   "route": "Baruipur New Terminus - Karunamoyee (Salt Lake)",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2341,13 +2341,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Salt Lake Depot\nGate",
+   "origin": "Salt Lake Depot Gate",
    "destination": "Rajchandrapur",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Salt Lake Depot\nGate - Rajchandrapur",
+   "route": "Salt Lake Depot Gate - Rajchandrapur",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2377,13 +2377,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Lake Town (Jaya\nCinema)",
+   "origin": "Lake Town (Jaya Cinema)",
    "destination": "Howrah Station",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Lake Town (Jaya\nCinema) - Howrah Station",
+   "route": "Lake Town (Jaya Cinema) - Howrah Station",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2391,7 +2391,7 @@
   },
   {
    "id": "wbtc-gov-wbtc-ac-30s-it-spl-1039",
-   "bus_name": "WBTC AC-30S\n(IT Spl.)",
+   "bus_name": "WBTC AC-30S (IT Spl.)",
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
@@ -2413,13 +2413,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Behala\nChowrastha",
+   "origin": "Behala Chowrastha",
    "destination": "Jadavpur",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Behala\nChowrastha - Jadavpur",
+   "route": "Behala Chowrastha - Jadavpur",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2467,13 +2467,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Dum Dum\n11A Stand",
+   "origin": "Dum Dum 11A Stand",
    "destination": "Karunamoyee",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Dum Dum\n11A Stand - Karunamoyee",
+   "route": "Dum Dum 11A Stand - Karunamoyee",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2503,13 +2503,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Airport Gate No.\n1",
+   "origin": "Airport Gate No. 1",
    "destination": "Howrah Maidan",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Airport Gate No.\n1 - Howrah Maidan",
+   "route": "Airport Gate No. 1 - Howrah Maidan",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2612,12 +2612,12 @@
    "operator": "WBTC",
    "bus_type": "Government",
    "origin": "Howrah",
-   "destination": "H M Ghosh\nCollege",
+   "destination": "H M Ghosh College",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Howrah - H M Ghosh\nCollege",
+   "route": "Howrah - H M Ghosh College",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -2845,13 +2845,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Barasat/\nEcospace",
+   "origin": "Barasat/ Ecospace",
    "destination": "Baruipur",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Barasat/\nEcospace - Baruipur",
+   "route": "Barasat/ Ecospace - Baruipur",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -3169,13 +3169,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Sonamukhi\nBazar",
+   "origin": "Sonamukhi Bazar",
    "destination": "Kankurgachi",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Sonamukhi\nBazar - Kankurgachi",
+   "route": "Sonamukhi Bazar - Kankurgachi",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -3205,13 +3205,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Khudiram Park\n(Sarsuna)",
-   "destination": "Sealdah\n(Rajabazar T.D.)",
+   "origin": "Khudiram Park (Sarsuna)",
+   "destination": "Sealdah (Rajabazar T.D.)",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Khudiram Park\n(Sarsuna) - Sealdah\n(Rajabazar T.D.)",
+   "route": "Khudiram Park (Sarsuna) - Sealdah (Rajabazar T.D.)",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -3260,12 +3260,12 @@
    "operator": "WBTC",
    "bus_type": "Government",
    "origin": "Howrah Maidan",
-   "destination": "Rajabazar Tram\nDepot",
+   "destination": "Rajabazar Tram Depot",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Howrah Maidan - Rajabazar Tram\nDepot",
+   "route": "Howrah Maidan - Rajabazar Tram Depot",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -3583,13 +3583,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Howrah Station\nto",
-   "destination": "Hiland Willow/\nPicnic Park",
+   "origin": "Howrah Station to",
+   "destination": "Hiland Willow/ Picnic Park",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Howrah Station\nto - Hiland Willow/\nPicnic Park",
+   "route": "Howrah Station to - Hiland Willow/ Picnic Park",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -3741,7 +3741,7 @@
   },
   {
    "id": "wbtc-gov-wbtc-s-30-it-spl-1114",
-   "bus_name": "WBTC S-30 (IT.\nSpl.)",
+   "bus_name": "WBTC S-30 (IT. Spl.)",
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
@@ -3763,13 +3763,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Ultadanga - Salt\nLake-Ultadanga",
-   "destination": "Circuitous\nService",
+   "origin": "Ultadanga - Salt Lake-Ultadanga",
+   "destination": "Circuitous Service",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Ultadanga - Salt\nLake-Ultadanga - Circuitous\nService",
+   "route": "Ultadanga - Salt Lake-Ultadanga - Circuitous Service",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -3835,13 +3835,13 @@
    "reg_no": "",
    "operator": "WBTC",
    "bus_type": "Government",
-   "origin": "Barrackpur\nCourt",
-   "destination": "W. B. State\nUniversity\n(Barasat)",
+   "origin": "Barrackpur Court",
+   "destination": "W. B. State University (Barasat)",
    "departure_time": "",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Barrackpur\nCourt - W. B. State\nUniversity\n(Barasat)",
+   "route": "Barrackpur Court - W. B. State University (Barasat)",
    "stoppages": [],
    "source": "WBTC (govt)",
    "total_stoppages": 0,
@@ -9704,295 +9704,6 @@
    "source": "wbbus.in",
    "total_stoppages": 11,
    "detail_url": "https://wbbus.in/bus/kailash-wb553831-kenjakura-purulia-415"
-  },
-  {
-   "id": "wbbus-in-kalosona-1331",
-   "bus_name": "KALOSONA DREAMLINE (AC Seater/Sleeper)",
-   "reg_no": "WB29G9687",
-   "operator": "Kalosona Dreamline",
-   "bus_type": "Private - AC Seater/Sleeper (Bio-Toilet)",
-   "origin": "Asansol",
-   "destination": "Digha",
-   "departure_time": "8:15 PM",
-   "arrival_time": "5:35 AM",
-   "contact_number": "9382209568, 8653434855",
-   "depot_name": "Asansol",
-   "route": "Asansol - Kharagpur - Digha",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Asansol",
-     "up_time": "8:15 PM",
-     "down_time": "7:15 PM"
-    },
-    {
-     "no": 2,
-     "name": "Raniganj",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Durgapur (City Center)",
-     "up_time": "9:20 PM",
-     "down_time": "6:10 PM"
-    },
-    {
-     "no": 4,
-     "name": "Durgapur (Station)",
-     "up_time": "9:30 PM",
-     "down_time": "6:00 PM"
-    },
-    {
-     "no": 5,
-     "name": "Barjora",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Beliatore",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Bankura Bypass",
-     "up_time": "",
-     "down_time": "4:35 PM"
-    },
-    {
-     "no": 8,
-     "name": "Dholdanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Onda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Ramsagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Bishnupur",
-     "up_time": "",
-     "down_time": "3:45 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bankadah",
-     "up_time": "",
-     "down_time": "3:30 PM"
-    },
-    {
-     "no": 13,
-     "name": "Dhadika",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Garhbeta",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Chandrakona Road",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Salboni",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Bhadutala",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Medinipur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Kharagpur Chowringhee",
-     "up_time": "2:25 AM",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Makrampur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Narayangarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 22,
-     "name": "Bakhra Bad",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 23,
-     "name": "Belda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 24,
-     "name": "Thakurchak",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 25,
-     "name": "Khakurda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 26,
-     "name": "Sauri",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 27,
-     "name": "Jahalda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 28,
-     "name": "Lalat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 29,
-     "name": "Egra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 30,
-     "name": "Dobadhi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 31,
-     "name": "Balighai",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 32,
-     "name": "Tajpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 33,
-     "name": "Bhabanichak",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 34,
-     "name": "Satmile",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 35,
-     "name": "Rautara",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 36,
-     "name": "Kanthi Central Bus Stand",
-     "up_time": "4:30 AM",
-     "down_time": "11:20 AM"
-    },
-    {
-     "no": 37,
-     "name": "Pichabani",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 38,
-     "name": "Chaulkhola (Mandarmani)",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 39,
-     "name": "Balisai (Tajpur)",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 40,
-     "name": "Chhodomile (Shankarpur)",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 41,
-     "name": "Ramnagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 42,
-     "name": "Thikra More",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 43,
-     "name": "Old Digha",
-     "up_time": "",
-     "down_time": "10:05 AM"
-    },
-    {
-     "no": 44,
-     "name": "New Digha",
-     "up_time": "",
-     "down_time": "10:15 AM"
-    },
-    {
-     "no": 45,
-     "name": "Digha Border",
-     "up_time": "5:35 AM",
-     "down_time": ""
-    }
-   ],
-   "source": "wbbus.in",
-   "total_stoppages": 45,
-   "detail_url": "https://wbbus.in/bus/kalosona-wb29g9687-asansol-digha-1290"
   },
   {
    "id": "wbbus-in-kalosona-1332",
@@ -346203,7 +345914,7 @@
   },
   {
    "id": "ktr-private-asha-barakar-to-krishnanagar-3294",
-   "bus_name": "Asha Barakar to Krishnanagar  3294",
+   "bus_name": "Asha Barakar to Krishnanagar 3294",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -346402,7 +346113,7 @@
   },
   {
    "id": "ktr-private-asha-barakar-to-krishnanagar-3294-1",
-   "bus_name": "Asha Barakar to Krishnanagar  3294",
+   "bus_name": "Asha Barakar to Krishnanagar 3294",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -349137,7 +348848,7 @@
   },
   {
    "id": "ktr-private-sweety-krishnanagar-to-benachity-8865",
-   "bus_name": "Sweety Krishnanagar To Benachity  8865",
+   "bus_name": "Sweety Krishnanagar To Benachity 8865",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -349300,7 +349011,7 @@
   },
   {
    "id": "ktr-private-sweety-krishnanagar-to-benachity-8865-1",
-   "bus_name": "Sweety Krishnanagar To Benachity  8865",
+   "bus_name": "Sweety Krishnanagar To Benachity 8865",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -370457,7 +370168,7 @@
   },
   {
    "id": "ktr-private-devi-laxmi-banduan-to-barddhaman-5178",
-   "bus_name": "Devi Laxmi Banduan to Barddhaman  5178",
+   "bus_name": "Devi Laxmi Banduan to Barddhaman 5178",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -370584,7 +370295,7 @@
   },
   {
    "id": "ktr-private-devi-laxmi-banduan-to-barddhaman-5178-1",
-   "bus_name": "Devi Laxmi Banduan to Barddhaman  5178",
+   "bus_name": "Devi Laxmi Banduan to Barddhaman 5178",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -370711,7 +370422,7 @@
   },
   {
    "id": "ktr-private-devi-parul-ranibandh-to-barddhaman-5978",
-   "bus_name": "Devi Parul Ranibandh to Barddhaman  5978",
+   "bus_name": "Devi Parul Ranibandh to Barddhaman 5978",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -370838,7 +370549,7 @@
   },
   {
    "id": "ktr-private-devi-parul-ranibandh-to-barddhaman-5978-1",
-   "bus_name": "Devi Parul Ranibandh to Barddhaman  5978",
+   "bus_name": "Devi Parul Ranibandh to Barddhaman 5978",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -370965,7 +370676,7 @@
   },
   {
    "id": "ktr-private-devi-laxmi-kutni-to-barddhaman-5978",
-   "bus_name": "Devi Laxmi Kutni to Barddhaman  5978",
+   "bus_name": "Devi Laxmi Kutni to Barddhaman 5978",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -371092,7 +370803,7 @@
   },
   {
    "id": "ktr-private-devi-laxmi-kutni-to-barddhaman-5978-1",
-   "bus_name": "Devi Laxmi Kutni to Barddhaman  5978",
+   "bus_name": "Devi Laxmi Kutni to Barddhaman 5978",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -371219,7 +370930,7 @@
   },
   {
    "id": "ktr-private-sweety-manihara-to-barddhaman-4536",
-   "bus_name": "Sweety Manihara to Barddhaman  4536",
+   "bus_name": "Sweety Manihara to Barddhaman 4536",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -371328,7 +371039,7 @@
   },
   {
    "id": "ktr-private-sweety-manihara-to-barddhaman-4536-1",
-   "bus_name": "Sweety Manihara to Barddhaman  4536",
+   "bus_name": "Sweety Manihara to Barddhaman 4536",
    "reg_no": "",
    "operator": "Private",
    "bus_type": "Private - NON AC",
@@ -495168,7 +494879,7 @@
   }
  },
  "meta": {
-  "total_buses": 4010,
+  "total_buses": 4009,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",

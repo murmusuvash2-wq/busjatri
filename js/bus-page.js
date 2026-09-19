@@ -86,7 +86,7 @@ async function renderBus(el, id) {
         (returnDeparture ? '<div class="return-journey"><strong>Return journey</strong><span>' + esc(pn(b.destination)) + ' → ' + esc(pn(b.origin)) + '</span><span>Departs ' + esc(returnDeparture) + (returnArrival ? ' · arrives around ' + esc(returnArrival) : '') + '</span></div>' : '') +
       '</div>' +
       '<div class="wa-row">' +
-        (mapUrl ? '<a class="map-btn" href="' + mapUrl + '" target="_blank" rel="noopener">' + icon('map') + ' <span class="label-en">Route on Google Maps</span></a>' : '') +
+        (mapUrl ? '<a class="map-btn" href="' + mapUrl + '" target="_blank" rel="noopener">' + icon('map') + ' <span class="label-en">Route on Google Maps</span><span class="label-bn">গুগল ম্যাপে রুট দেখুন</span></a>' : '') +
         '<a class="wa-btn" href="javascript:void(0)" onclick="shareWhatsApp(this.dataset.bus,this.dataset.org,this.dataset.dest,this.dataset.dep,this.dataset.stops)" data-bus="' + esc(b.bus_name) + '" data-org="' + esc(pn(b.origin)) + '" data-dest="' + esc(pn(b.destination)) + '" data-dep="' + esc(b.departure_time||'') + '" data-stops="' + (stops.length||0) + '">' + icon('waves') + ' <span class="label-en">Share on WhatsApp</span></a>' +
         '<a class="share-x-btn" href="javascript:void(0)" onclick="shareTwitter(this.dataset)" data-bus="' + esc(b.bus_name) + '" data-org="' + esc(pn(b.origin)) + '" data-dest="' + esc(pn(b.destination)) + '" data-dep="' + esc(b.departure_time||'') + '">' + icon('info') + ' <span class="label-en">Share on X</span></a>' +
       '</div>' +

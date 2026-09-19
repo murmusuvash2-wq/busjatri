@@ -10,6 +10,9 @@
 .wa-row{gap:8px;margin-top:10px}
 .wa-row .map-btn,.wa-row .wa-btn,.wa-row .share-x-btn{flex:1 1 0;min-width:0;padding:8px 10px;font-size:12px;border-radius:9px;gap:5px}
 .wa-row .map-btn svg,.wa-row .wa-btn svg,.wa-row .share-x-btn svg{width:14px;height:14px}
+/* Map button: solid amber + same size as WhatsApp/Share (audit 2026-09-19) */
+.wa-row .map-btn{background:var(--amber);color:#fff;border:1.5px solid var(--amber)}
+.wa-row .map-btn:hover{background:#a06a1a;border-color:#a06a1a;color:#fff}
 
 /* Bus page — compact top, small weather, via line, perfect-fit timetable */
 .bus-head{padding:14px 16px;border-radius:16px}

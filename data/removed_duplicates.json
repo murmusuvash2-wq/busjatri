@@ -1,1 +1,10 @@
-[]
+[
+ {
+  "id": "wbbus-in-kalosona-1331",
+  "bus_name": "KALOSONA DREAMLINE (AC Seater/Sleeper)",
+  "route": "Asansol - Digha",
+  "time": "8:15 PM",
+  "source": "wbbus.in",
+  "reason": "same reg+route+time as kept copy"
+ }
+]
