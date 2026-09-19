@@ -404468,6 +404468,398 @@
    "time_source": "facebook (community report)",
    "total_stoppages": 5,
    "detail_url": ""
+  },
+  {
+   "id": "maa-binapani-kantakhali-jhargram-4011",
+   "bus_name": "MAA BINAPANI",
+   "reg_no": "",
+   "operator": "Maa Binapani",
+   "bus_type": "Private - Non AC",
+   "origin": "Kantakhali",
+   "destination": "Jhargram",
+   "departure_time": "6:30 AM",
+   "arrival_time": "11:00 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Kantakhali - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kantakhali",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Ruinan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Sabong",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Temathani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Jamna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Barbetia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Medinipur",
+     "up_time": "9:45 AM",
+     "down_time": "1:15 PM"
+    },
+    {
+     "no": 9,
+     "name": "Gurguripal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Chandra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Dherua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Baita",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Sebayatan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Radhanagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Panchmathar More",
+     "up_time": "",
+     "down_time": "11:35 AM"
+    },
+    {
+     "no": 16,
+     "name": "Jhargram",
+     "up_time": "11:00 AM",
+     "down_time": "11:20 AM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 16,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-purulia-durgapur-4012",
+   "bus_name": "SBSTC Purulia-Durgapur",
+   "reg_no": "WB 39B 9072",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Purulia",
+   "destination": "Durgapur",
+   "departure_time": "9:05 AM",
+   "arrival_time": "1:00 PM",
+   "contact_number": "",
+   "depot_name": "Purulia Depot",
+   "route": "Purulia - Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Purulia",
+     "up_time": "9:05 AM",
+     "down_time": "12:45 PM"
+    },
+    {
+     "no": 2,
+     "name": "Lalpur",
+     "up_time": "10:00 AM",
+     "down_time": "11:45 AM"
+    },
+    {
+     "no": 3,
+     "name": "Hura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Bishpuriya",
+     "up_time": "10:20 AM",
+     "down_time": "11:25 AM"
+    },
+    {
+     "no": 5,
+     "name": "Kamalpur",
+     "up_time": "10:40 AM",
+     "down_time": "11:00 AM"
+    },
+    {
+     "no": 6,
+     "name": "Kharbona",
+     "up_time": "11:00 AM",
+     "down_time": "10:50 AM"
+    },
+    {
+     "no": 7,
+     "name": "Chhatna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Bankura",
+     "up_time": "11:25 AM",
+     "down_time": "10:20 AM"
+    },
+    {
+     "no": 9,
+     "name": "Beliator",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": "8:40 AM"
+    },
+    {
+     "no": 12,
+     "name": "City Center",
+     "up_time": "1:00 PM",
+     "down_time": ""
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 12,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-durgapur-balrampur-4013",
+   "bus_name": "SBSTC Durgapur-Balrampur",
+   "reg_no": "WB 39C 5072",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Durgapur",
+   "destination": "Balrampur",
+   "departure_time": "5:30 AM",
+   "arrival_time": "10:10 AM",
+   "contact_number": "",
+   "depot_name": "Durgapur Depot",
+   "route": "Durgapur - Asansol - Purulia - Balrampur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur",
+     "up_time": "5:30 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "no": 2,
+     "name": "City Center",
+     "up_time": "5:40 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "no": 3,
+     "name": "Andal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Asansol",
+     "up_time": "6:40 AM",
+     "down_time": "2:40 PM"
+    },
+    {
+     "no": 6,
+     "name": "Niyamatpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "D. Ghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Sorbari More",
+     "up_time": "7:20 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "no": 9,
+     "name": "Gobag",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Raghunathpur",
+     "up_time": "8:10 AM",
+     "down_time": "1:10 PM"
+    },
+    {
+     "no": 11,
+     "name": "Anara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Jhapra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Golakunda",
+     "up_time": "8:40 AM",
+     "down_time": "12:30 PM"
+    },
+    {
+     "no": 14,
+     "name": "Purulia",
+     "up_time": "9:15 AM",
+     "down_time": "12:00 PM"
+    },
+    {
+     "no": 15,
+     "name": "Kantadi",
+     "up_time": "9:40 AM",
+     "down_time": "11:10 AM"
+    },
+    {
+     "no": 16,
+     "name": "Urma",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Balrampur",
+     "up_time": "10:10 AM",
+     "down_time": "10:35 AM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 17,
+   "detail_url": ""
+  },
+  {
+   "id": "gobinda-aishani-medinipur-contai-4014",
+   "bus_name": "GOBINDA AISHANI",
+   "reg_no": "",
+   "operator": "Gobinda Aishani",
+   "bus_type": "Private - Non AC",
+   "origin": "Medinipur",
+   "destination": "Contai",
+   "departure_time": "8:05 AM",
+   "arrival_time": "11:35 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Medinipur - Belda - Contai",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Medinipur",
+     "up_time": "8:05 AM",
+     "down_time": "5:15 PM"
+    },
+    {
+     "no": 2,
+     "name": "Kharagpur",
+     "up_time": "9:05 AM",
+     "down_time": "4:40 PM"
+    },
+    {
+     "no": 3,
+     "name": "Belda",
+     "up_time": "10:05 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "no": 4,
+     "name": "Thakurchak",
+     "up_time": "10:15 AM",
+     "down_time": "4:10 PM"
+    },
+    {
+     "no": 5,
+     "name": "Khakurda",
+     "up_time": "10:35 AM",
+     "down_time": "4:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Egra",
+     "up_time": "10:55 AM",
+     "down_time": "3:15 PM"
+    },
+    {
+     "no": 7,
+     "name": "Contai",
+     "up_time": "11:35 AM",
+     "down_time": "2:30 PM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 7,
+   "detail_url": ""
   }
  ],
  "routes": {
@@ -494929,7 +495321,7 @@
   }
  },
  "meta": {
-  "total_buses": 4010,
+  "total_buses": 4014,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
