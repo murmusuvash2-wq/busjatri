@@ -1,0 +1,40 @@
+name: Scrape states (raw data)
+
+# Daily raw-data accumulation for future JH/BR/OD expansion.
+# Collects public timetable data into data-raw/ only - NEVER touches the
+# live site, pages, sitemaps or the FB pipeline. Filter/convert later
+# when we decide to expand.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 21 * * *"  # 03:00 IST daily
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PDF parser
+        run: pip install pdfplumber
+
+      - name: Scrape raw data
+        run: python3 scripts/scrape_states.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data-raw/
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "state-data: daily raw scrape (BR/JH)"
+            git pull --rebase origin main || true
+            git push
+          fi
