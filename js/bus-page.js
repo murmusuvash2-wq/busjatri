@@ -12,12 +12,26 @@ function normalizeCommunityTime(value) {
   if (!m || Number(m[1]) < 1 || Number(m[1]) > 12 || Number(m[2]) > 59) return '';
   return Number(m[1]) + ':' + m[2] + ' ' + m[3];
 }
-function addCommunityTime(busId, stopIndex, direction) {
+function addCommunityTime(busId, stopIndex, direction, stopName) {
   var value = normalizeCommunityTime(window.prompt('Enter time, for example 11:30 AM'));
   if (!value) { window.alert('Please enter time like 11:30 AM.'); return; }
   var times = communityTimes();
   times[communityTimeKey(busId, stopIndex, direction)] = value;
   try { localStorage.setItem(COMMUNITY_TIME_KEY, JSON.stringify(times)); } catch (e) {}
+  /* silently report the addition to the team (no email, no popup) */
+  try {
+    var bb = (typeof BUSES !== 'undefined' && BUSES && BUSES[busId]) || {};
+    if (typeof sendReport === 'function') {
+      sendReport({
+        bus: bb.bus_name || busId, reg: bb.reg_no || '',
+        route: (bb.origin || '') + ' \u21c4 ' + (bb.destination || ''),
+        current: (direction === 'up' ? 'not available' : (bb.departure_time || '')),
+        time: value,
+        note: 'Stop: ' + (stopName || '?') + ' \u00b7 ' + (direction === 'up' ? 'outbound' : 'return'),
+        page: location.href, bus_id: busId
+      });
+    }
+  } catch (e) {}
   render();
 }
 function timeCell(stop, stopIndex, direction, busId) {
@@ -25,7 +39,7 @@ function timeCell(stop, stopIndex, direction, busId) {
   if (official) return '<span>' + esc(official) + '</span>';
   var userTime = communityTimes()[communityTimeKey(busId, stopIndex, direction)];
   if (userTime) return '<span class="community-time">' + esc(userTime) + '<small>User updated</small></span>';
-  return '<button class="add-time-btn" onclick="addCommunityTime(\'' + esc(busId) + '\',' + stopIndex + ',\'' + direction + '\')">+ Add time</button>';
+  return '<button class="add-time-btn" onclick="addCommunityTime(\'' + esc(busId) + '\',' + stopIndex + ',\'' + direction + '\',\'' + esc(stop.name) + '\')">+ Add time</button>';
 }
 async function renderBus(el, id) {
   id = id.split('?')[0];

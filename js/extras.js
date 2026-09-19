@@ -83,14 +83,23 @@ function sendContact() {
 
 /* ---------- Report Time — on bus detail pages ----------
    Submits to a Google Form (config below); until the form is wired,
-   falls back to email. Reports flow into data/time-reports.json via
-   the fetch-reports workflow and appear in the admin panel. */
+   the thank-you is cosmetic. No email, no mail id — just Submit. */
 var REPORT_FORM = {
   action: "",
-  entries: { bus: "", reg: "", route: "", current: "", time: "", note: "", page: "", bus_id: "" },
-  fallbackEmail: "busjatri@zohomail.in"
+  entries: { bus: "", reg: "", route: "", current: "", time: "", note: "", page: "", bus_id: "" }
 };
 var REPORT_CTX = null;
+/* Silent report submit — no email, no popup. Fire-and-forget. */
+function sendReport(payload) {
+  if (!(REPORT_FORM.action && REPORT_FORM.entries.time)) return;
+  try {
+    var body = new URLSearchParams();
+    Object.keys(payload).forEach(function (k) {
+      if (REPORT_FORM.entries[k]) body.append(REPORT_FORM.entries[k], payload[k]);
+    });
+    fetch(REPORT_FORM.action, { method: "POST", mode: "no-cors", body: body });
+  } catch (e) { /* never bother the user */ }
+}
 function toggleReport(btn) {
   var existing = document.getElementById("bjReportForm");
   if (existing) { existing.remove(); return; }
@@ -137,22 +146,8 @@ function submitReport() {
     var r = document.getElementById("bjReportForm");
     if (r) { var rw = r.querySelector(".rf-row"); if (rw) rw.style.display = "none"; }
   };
-  if (REPORT_FORM.action && REPORT_FORM.entries.time) {
-    var body = new URLSearchParams();
-    Object.keys(payload).forEach(function (k) {
-      if (REPORT_FORM.entries[k]) body.append(REPORT_FORM.entries[k], payload[k]);
-    });
-    fetch(REPORT_FORM.action, { method: "POST", mode: "no-cors", body: body }).then(done, done);
-  } else {
-    var msg = "BusJatri time report:\nBus: " + payload.bus + (payload.reg ? " (" + payload.reg + ")" : "") +
-      "\nRoute: " + payload.route + "\nCurrent time: " + (payload.current || "-") +
-      "\nCorrect time: " + payload.time + (payload.note ? "\nNote: " + payload.note : "") +
-      "\nPage: " + payload.page + "\nBus ID: " + payload.bus_id;
-    window.location.href = "mailto:" + REPORT_FORM.fallbackEmail +
-      "?subject=" + encodeURIComponent("[Time Report] " + payload.bus) +
-      "&body=" + encodeURIComponent(msg);
-    done();
-  }
+  sendReport(payload);
+  done();
 }
 
 /* ---------- Admin Dashboard (demo actions) ---------- */
