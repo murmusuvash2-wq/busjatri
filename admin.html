@@ -177,6 +177,7 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
     <div class="nav-sep">Manage</div>
     <div class="nav-item" data-view="buses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="13" height="10" rx="2"/><path d="M16 9h3l2 3v4h-5z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>Bus Times</div>
     <div class="nav-item" data-view="blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13l3 3v13H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Blog</div>
+    <div class="nav-item" data-view="reports"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Reports <span class="tag g" id="repBadge" style="display:none;margin-left:auto">0</span></div>
     <div class="nav-sep">System</div>
     <div class="nav-item" data-view="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6A7 7 0 0 0 19 12z"/></svg>Settings</div>
     <div class="spacer"></div>
@@ -200,6 +201,7 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
           <div class="stat"><div class="lbl">Total Buses</div><div class="val" id="stBuses">—</div><div class="sub">data/app-index.json</div></div>
           <div class="stat"><div class="lbl">Time Overrides</div><div class="val" id="stOvr">—</div><div class="sub">data/time-overrides.json</div></div>
           <div class="stat"><div class="lbl">Blog Posts</div><div class="val" id="stBlog">—</div><div class="sub">data/blog-manifest.json</div></div>
+          <div class="stat"><div class="lbl">Pending Reports</div><div class="val" id="stReports">—</div><div class="sub">data/time-reports.json</div></div>
           <div class="stat"><div class="lbl">Repo</div><div class="val" style="font-size:15px;line-height:1.7;margin-top:10px" id="stRepo">—</div><div class="sub">github.com</div></div>
         </div>
         <div class="grid2">
@@ -208,6 +210,7 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
             <div style="display:flex;flex-direction:column;gap:10px">
               <button class="btn btn-primary" onclick="go('buses')">Fix a Bus Time</button>
               <button class="btn btn-ghost" onclick="go('blog')">Write a Blog Post</button>
+              <button class="btn btn-ghost" onclick="go('reports')">Check User Reports</button>
               <button class="btn btn-ghost" id="rebuildBtn">↻ Rebuild & Publish Site</button>
               <div class="hint">Rebuild workflow SEO pages + app data regenerate karta hai. Sirf zaroorat pe chalayein — normally runtime overrides turant live hote hain.</div>
             </div>
@@ -264,6 +267,15 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
         </div>
       </section>
 
+      <!-- REPORTS -->
+      <section id="view-reports" class="view" style="display:none">
+        <div class="card">
+          <h3>🐞 User Time Reports</h3>
+          <div class="hint" style="margin:0 0 14px">Users jo bus pages pe "Report wrong time" se correction bhejte hain wo yahan aate hain. Verify karo → <b>Fix</b> karke override save karo → phir <b>✓ Done</b>.</div>
+          <div class="scrollbox" style="max-height:620px"><table><thead><tr><th>Bus</th><th>Route</th><th>Time (current → correct)</th><th>Note</th><th>When</th><th style="width:180px">Actions</th></tr></thead><tbody id="reportRows"></tbody></table></div>
+        </div>
+      </section>
+
       <!-- SETTINGS -->
       <section id="view-settings" class="view" style="display:none">
         <div class="card">
@@ -276,6 +288,7 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
           <h3>ℹ How it works</h3>
           <div class="hint" style="font-size:13px;line-height:1.8">
           • <b>Bus time fix:</b> aapki changes <span class="kbd">data/time-overrides.json</span> mein jaati hain — ek chhoti file. Site ka runtime patch (<span class="kbd">js/time-overrides.js</span>) use har page load pe apply karta hai. Monday auto-rebuild inhe permanently data mein merge kar deta hai.<br>
+          • <b>Reports:</b> users ke time reports <span class="kbd">data/time-reports.json</span> mein aate hain (Google Form se, har 3 ghante).<br>
           • <b>Blog:</b> posts <span class="kbd">blog/</span> folder mein directly save hoti hain, manifest ke saath.<br>
           • <b>Safety:</b> har change ek GitHub commit hai — kuch galat ho to repo history se revert ek click.<br>
           • Ye page <span class="kbd">busjatri.in/admin.html</span> pe hai lekin token ke bina koi isse kuch nahi kar sakta.</div>
@@ -339,10 +352,10 @@ function go(v){
   $$('.nav-item[data-view]').forEach(n=>n.classList.toggle('active',n.dataset.view===v));
   $$('.view').forEach(x=>x.style.display='none');
   $('#view-'+v).style.display='block';
-  $('#viewTitle').textContent=({dash:'Dashboard',buses:'Bus Times',blog:'Blog Manager',settings:'Settings'})[v];
-  $('#crumb').textContent='BusJatri / '+({dash:'overview',buses:'manage times',blog:'content',settings:'config'})[v];
+  $('#viewTitle').textContent=({dash:'Dashboard',buses:'Bus Times',blog:'Blog Manager',reports:'User Reports',settings:'Settings'})[v];
+  $('#crumb').textContent='BusJatri / '+({dash:'overview',buses:'manage times',blog:'content',reports:'user reports',settings:'config'})[v];
   $('#sidebar').classList.remove('open');
-  if(v==='dash')loadDash();if(v==='blog')loadBlog();
+  if(v==='dash')loadDash();if(v==='blog')loadBlog();if(v==='reports')loadReports();
 }
 $$('.nav-item[data-view]').forEach(n=>n.onclick=()=>go(n.dataset.view));
 $('#burger').onclick=()=>$('#sidebar').classList.toggle('open');
@@ -363,6 +376,43 @@ async function loadDash(){
     const stops=Object.keys(OVR[k]).map(s=>`<span class="tag" style="margin:2px 3px 2px 0">${s}: ${OVR[k][s].up||OVR[k][s].down||''}</span>`).join('');
     return `<div style="padding:10px 4px;border-bottom:1px solid var(--line)"><div style="font-size:13px;font-weight:600">${nm}</div><div>${stops}</div></div>`}).join('')}
   try{BLOGM=JSON.parse(await rawGet('data/blog-manifest.json'));$('#stBlog').textContent=BLOGM.length}catch(e){$('#stBlog').textContent='—'}
+  try{const rp=JSON.parse(await rawGet('data/time-reports.json'));const pend=rp.filter(r=>r.status!=='done').length;$('#stReports').textContent=pend;const bb=$('#repBadge');if(bb){bb.style.display=pend?'inline-flex':'none';bb.textContent=pend}}catch(e){$('#stReports').textContent='0'}
+}
+
+/* ---------- user reports ---------- */
+let REPORTS=null;
+async function loadReports(){
+  const tb=$('#reportRows');
+  try{REPORTS=JSON.parse(await rawGet('data/time-reports.json'))}catch(e){REPORTS=[]}
+  const pend=REPORTS.filter(r=>r.status!=='done').length;
+  const bd=$('#repBadge');if(bd){bd.style.display=pend?'inline-flex':'none';bd.textContent=pend}
+  const st=$('#stReports');if(st)st.textContent=pend;
+  tb.innerHTML=REPORTS.length?REPORTS.slice().reverse().map((r,ri)=>{
+    const i=REPORTS.length-1-ri,done=r.status==='done';
+    return `<tr style="${done?'opacity:.5':''}">
+    <td><b>${esc(r.bus||'?')}</b><div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.reg||'')}${r.bus_id?' · <span class=\'mono\'>'+esc(r.bus_id)+'</span>':''}</div></td>
+    <td>${esc(r.route||'')}</td>
+    <td class="mono">${esc(r.current||'—')} → <b style="color:var(--ok)">${esc(r.time)}</b></td>
+    <td style="max-width:220px;font-size:12px">${esc(r.note||'')}</td>
+    <td class="mono" style="white-space:nowrap;font-size:11.5px">${esc(r.ts||'')}</td>
+    <td>${done?'<span class="tag g">done</span>':`<button class="btn btn-primary btn-sm" data-a="fix" data-i="${i}">Fix</button> <button class="btn btn-ghost btn-sm" data-a="done" data-i="${i}" style="margin-left:6px">✓ Done</button>`}</td></tr>`}).join('')
+  :`<tr><td colspan="6" class="empty">Abhi koi report nahi. (Form wire hone ke baad users ke reports yahan aayenge)</td></tr>`;
+  tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>{
+    const r=REPORTS[+btn.dataset.i];if(!r)return;
+    if(btn.dataset.a==='fix'){
+      if(r.bus_id){go('buses');openBus(r.bus_id)}else{toast('Is report mein bus ID nahi — Bus Times se search karo','err')}
+    }else markDone(+btn.dataset.i);
+  });
+}
+async function markDone(i){
+  const r=REPORTS[i];if(!r)return;
+  if(!await confirmBox('Mark done?','<b>'+esc(r.bus||'?')+'</b> report ko done mark karein? (data/time-reports.json update hoga)'))return;
+  try{
+    let sha=null;try{const rr=await gh(`/repos/${S.repo}/contents/data/time-reports.json`);sha=rr.sha}catch(e){}
+    r.status='done';
+    await ghPut('data/time-reports.json',JSON.stringify(REPORTS,null,2)+'\n','Admin: report done — '+(r.bus||''),sha);
+    toast('✓ Done marked','ok');loadReports();
+  }catch(e){toast('✗ Fail: '+e.message,'err')}
 }
 $('#rebuildBtn')?.addEventListener('click',async()=>{
   if(!await confirmBox('Rebuild & Publish?','SEO pages + app data regenerate honge (GitHub Actions). 2-3 minute lagte hain. Continue?'))return;
@@ -422,7 +472,6 @@ $('#saveTimes').onclick=async()=>{
   const dirtyRows=[...$('#stopRows').querySelectorAll('tr.dirty')];
   if(!dirtyRows.length){toast('Koi change nahi hai','');return}
   if(!BUS)return;
-  // validate time format
   const bad=[];
   dirtyRows.forEach(tr=>tr.querySelectorAll('input').forEach(inp=>{
     const v=inp.value.trim();if(v&&!/^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(v))bad.push(v);
@@ -431,7 +480,6 @@ $('#saveTimes').onclick=async()=>{
   if(!await confirmBox('Save time overrides?',`<b>${esc(BUS.bus_name)}</b> (${dirtyRows.length} stop${dirtyRows.length>1?'s':''} changed) — data/time-overrides.json commit hoga.`))return;
   const b=$('#saveTimes');b.disabled=true;b.innerHTML='<span class="spin"></span> Saving…';
   try{
-    // fresh copy of overrides (with sha)
     let sha=null,ovr={};
     try{const r=await gh(`/repos/${S.repo}/contents/data/time-overrides.json`);sha=r.sha;ovr=JSON.parse(b64d(r.content))}catch(e){}
     if(!ovr[BUS.id])ovr[BUS.id]={};
@@ -557,11 +605,9 @@ $('#savePost').onclick=async()=>{
   if(!/^[a-z0-9][a-z0-9-]*$/.test(slug)){toast('Slug galat: sirf chhote letters, numbers, dash','err');return}
   const b=$('#savePost');b.disabled=true;b.innerHTML='<span class="spin"></span> Saving…';
   try{
-    // save html
     let sha=null;try{const r=await gh(`/repos/${S.repo}/contents/blog/${slug}.html`);sha=r.sha}catch(e){}
     const html=BLOG_TMPL(title.replace(/\"/g,'\u0026quot;'),slug,excerpt.replace(/\"/g,'\u0026quot;'),body);
     await ghPut('blog/'+slug+'.html',html,`Admin: blog post — ${title}` + (sha?' (update)':''),sha);
-    // update manifest
     let msha=null,m=BLOGM.slice();
     try{const r=await gh(`/repos/${S.repo}/contents/data/blog-manifest.json`);msha=r.sha}catch(e){}
     m=m.filter(x=>x.slug!==slug);
