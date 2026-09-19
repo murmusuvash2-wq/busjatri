@@ -429,6 +429,7 @@ def shell(title, description, canonical, body, schema=""):
 {body}
 </main>
 {footer_html()}
+<script defer src="../js/route-slider.js"></script>
 </body>
 </html>"""
 
@@ -704,7 +705,7 @@ def generate_route_page(origin, destination, buses):
         chips = "".join(f'<span class="via-chip">{esc(s)}</span>' for s in major_stops)
         major_section = f"""<section class="seo-section">
   <h3 class="section-title">Via Stoppages</h3>
-  <div class="chip-row">{chips}</div>
+  <div class="chip-row hscroll">{chips}</div>
 </section>"""
 
     faq_html = "".join(
@@ -1481,7 +1482,31 @@ function doSearch(){
   rm.style.display=routeChips.length?"":"none";
   info.textContent="Showing "+shown+" places and "+routeChips.length+(routeChips.length>=24?"+":"")+" routes matching \\u201c"+q+"\\u201d";
   info.style.display="block";
-  if(!shown&&!routeChips.length)empty.style.display="block";else empty.style.display="none";
+  if(!shown&&!routeChips.length){bjBusSearch(q,rm,rmc,info,empty);}else{empty.style.display="none";}
+}
+function bjBusSearch(q,rm,rmc,info,empty){
+  if(window.__bjBuses){
+    var hits=window.__bjBuses.filter(function(b){return (b.bus_name||"").toLowerCase().indexOf(q)>=0;}).slice(0,24);
+    if(hits.length){
+      var chips=hits.map(function(b){
+        return '<a class="rm-chip" href="../index.html#/bus/'+encodeURIComponent(b.id)+'">'+(b.bus_name||"Bus")+(b.departure_time?' <span class="n">'+b.departure_time+'</span>':'')+(b.origin?' <span class="n">'+b.origin+' '+(b.destination||"")+'</span>':'')+'</a>';
+      }).join("");
+      rmc.innerHTML=chips;
+      rm.style.display="";
+      info.textContent="Showing "+hits.length+" bus services matching "+q;
+      info.style.display="block";
+      empty.style.display="none";
+      return;
+    }
+  }
+  if(!window.__bjBuses&&window.fetch){
+    fetch("../data/app-index.json").then(function(r){return r.json();}).then(function(d){
+      window.__bjBuses=(d&&d.buses)?d.buses:[];
+      bjBusSearch(q,rm,rmc,info,empty);
+    }).catch(function(){});
+    return;
+  }
+  empty.style.display="block";
 }
 function countUp(el,target,dur){
   var s=performance.now();
@@ -1514,7 +1539,7 @@ function initAnim(){
   try{
     var t=localStorage.getItem("seo-theme");
     if(t==="dark")document.body.classList.add("dark");
-    if(t==="dark"&&document.getElementById("themeBtn"))document.getElementById("themeBtn").textContent="\\u2600\\ufe0f";
+    if(t==="dark"&&document.getElementById("bjThemeBtn"))document.getElementById("bjThemeBtn").textContent="\\u2600\\ufe0f";
     var l=localStorage.getItem("seo-lang");
     if(l==="bn"){document.body.classList.add("lang-bn");if(document.getElementById("langBtn"))document.getElementById("langBtn").textContent="English"}
   }catch(e){}
@@ -1558,7 +1583,7 @@ _index_body = f"""{_btt_css}
 
 <section class="section" id="routeMatchesSec" style="display:none">
   <div class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> Matching Routes</div>
-  <div class="chip-row" id="rmChips"></div>
+  <div class="chip-row hscroll" id="rmChips"></div>
 </section>
 
 <section class="section" id="popSection">

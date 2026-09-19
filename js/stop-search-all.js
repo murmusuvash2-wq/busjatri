@@ -180,6 +180,21 @@
 
   renderSearch = async function (el) {
       rebuildCompactStops();
+      function looksLikeTime(q) {
+        q = String(q || '').trim().toLowerCase();
+        return /^\d{1,2}:\d{2}\s*(am|pm)?$/.test(q) || /^\d{1,2}\s*(am|pm)$/.test(q);
+      }
+      function parseClock(q) {
+        q = String(q || '').trim().toLowerCase().replace(/\s+/g, '');
+        var m = /^(\d{1,2})(?::(\d{2}))?(am|pm)?$/.exec(q);
+        if (!m) return null;
+        var h = +m[1], mi = m[2] ? +m[2] : 0, ap = m[3];
+        if (mi > 59) return null;
+        if (ap) { if (h < 1 || h > 12) return null; h %= 12; if (ap === 'pm') h += 12; }
+        else if (h > 23) return null;
+        return h * 60 + mi;
+      }
+      window.__bjTimeQuery = null;
       var params = new URLSearchParams(location.hash.split('?')[1] || '');
       var from = (params.get('from') || '').toLowerCase().trim();
       var to = (params.get('to') || '').toLowerCase().trim();
@@ -225,6 +240,13 @@
         });
         window.__bjStopCount = nBuses;
         window.__bjDepCount = rows.filter(function (r) { return r.depMin != null; }).length;
+      } else if ((from || to) && looksLikeTime(from || to) && parseClock(from || to) != null) {
+        var q = from || to;
+        var target = parseClock(q);
+        function bjDist(t) { var d = Math.abs(t - target) % 1440; return Math.min(d, 1440 - d); }
+        rows = all.filter(function (b) { return parseTime(b.departure_time) != null && bjDist(parseTime(b.departure_time)) <= 90; });
+        rows.sort(function (x, y) { return bjDist(parseTime(x.b.departure_time)) - bjDist(parseTime(y.b.departure_time)); });
+        window.__bjTimeQuery = q;
       } else {
         var q = from || to;
         rows = all.filter(function (b) {
@@ -277,11 +299,12 @@
           viaHtml = '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0"><span class="label-en">via </span><span class="label-bn">হয়ে </span>' + esc(viaTop.join(' · ')) + '</p>';
         }
       }
+      var timeHtml = window.__bjTimeQuery ? '<p style="text-align:center;font-size:12.5px;color:var(--amber);font-weight:600;margin:2px 0 10px">Buses departing around ' + esc(window.__bjTimeQuery) + ' (±90 min)</p>' : '';
       el.innerHTML =
         '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
         '<div class="back-btn" onclick="location.hash=' + String.fromCharCode(39) + '#/' + String.fromCharCode(39) + '">' + icon('chevronLeft') + ' <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>' +
         '<h2 class="page-title" style="text-align:center;margin-bottom:2px">' + esc(titleTxt) + ' <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(' + rows.length + ')</span></h2>' +
-        viaHtml +
+        viaHtml + timeHtml +
         (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0">' + window.__bjStopCount + ' <span class="label-en">buses · </span><span class="label-bn">বাস · </span>' + window.__bjDepCount + ' <span class="label-en">with timings</span><span class="label-bn">সময় সহ</span></p>' : '') +
         (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:2px 0 10px"><span class="label-en">timed departures first · rest listed below</span><span class="label-bn">সময় সহ বাস আগে · বাকি নিচে</span></p>' : '') +
         (near.length ? '<p class="near-label">' + icon('clock') + ' <span class="label-en">' + near.length + ' buses around current time</span><span class="label-bn">' + near.length + ' বাস বর্তমান সময়ের কাছাকাছি</span></p>' : '') +

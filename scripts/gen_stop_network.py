@@ -348,7 +348,7 @@ def stop_page(stop, e, route_pages):
 </section>
 <section class="seo-section">
   <h3 class="section-title">Routes via {esc(stop)}</h3>
-  <div class="chip-row">{''.join(chips)}</div>
+  <div class="chip-row hscroll">{''.join(chips)}</div>
 </section>
 <section class="seo-section">
   <a class="rel-chip" href="./">📚 Browse all stops A–Z</a>
@@ -357,6 +357,7 @@ def stop_page(stop, e, route_pages):
 </main>
 {FOOTER}
 {THEME_JS}
+<script defer src="../js/route-slider.js"></script>
 </body>
 </html>
 """
@@ -416,6 +417,7 @@ def index_page(entries):
 </main>
 {FOOTER}
 {THEME_JS}
+<script defer src="../js/route-slider.js"></script>
 </body>
 </html>
 """

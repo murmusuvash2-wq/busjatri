@@ -182,6 +182,21 @@ function timeOrDash(t) {
   return t ? `<span class="stop-time">${esc(t)}</span>` : `<span class="no-time">—</span>`;
 }
 
+/* Time query support (UX audit 2026-09-19): "8:15", "8pm", "20:00" */
+function looksLikeTime(q) {
+  q = String(q || '').trim().toLowerCase();
+  return /^\d{1,2}:\d{2}\s*(am|pm)?$/.test(q) || /^\d{1,2}\s*(am|pm)$/.test(q);
+}
+function parseClock(q) {
+  q = String(q || '').trim().toLowerCase().replace(/\s+/g, '');
+  const m = /^(\d{1,2})(?::(\d{2}))?(am|pm)?$/.exec(q);
+  if (!m) return null;
+  let h = +m[1], mi = m[2] ? +m[2] : 0, ap = m[3];
+  if (mi > 59) return null;
+  if (ap) { if (h < 1 || h > 12) return null; h %= 12; if (ap === 'pm') h += 12; }
+  else if (h > 23) return null;
+  return h * 60 + mi;
+}
 function doSearch() {
   const from = (document.getElementById('fromInput')?.value || '').trim();
   const to = (document.getElementById('toInput')?.value || '').trim();
@@ -509,6 +524,7 @@ function renderHome(el) {
 }
 
 async function renderSearch(el) {
+  window.__bjTimeQuery = null;
   const params = new URLSearchParams(location.hash.split('?')[1] || '');
   const from = (params.get('from') || '').toLowerCase().trim();
   const to = (params.get('to') || '').toLowerCase().trim();
@@ -547,6 +563,13 @@ async function renderSearch(el) {
       (b.origin || '').toLowerCase().includes(stop) ||
       (b.destination || '').toLowerCase().includes(stop)
     );
+  } else if ((from || to) && looksLikeTime(from || to) && parseClock(from || to) != null) {
+    const q = from || to;
+    const target = parseClock(q);
+    const cd = t => { const d = Math.abs(t - target) % 1440; return Math.min(d, 1440 - d); };
+    results = results.filter(b => parseTime(b.departure_time) != null && cd(parseTime(b.departure_time)) <= 90);
+    results.sort((a, b) => cd(parseTime(a.departure_time)) - cd(parseTime(b.departure_time)));
+    window.__bjTimeQuery = q;
   } else if (from || to) {
     const q = from || to;
     results = results.filter(b =>
@@ -589,7 +612,7 @@ async function renderSearch(el) {
     <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <h2 class="page-title"><span class="label-en">Search Results</span><span class="label-bn">সার্চ ফলাফল</span> <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(${results.length})</span></h2>
     <p style="font-size:12px;color:var(--ink-dim);margin:2px 0 4px">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>
-    ${from || to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${esc(from || '…')} → ${esc(to || '…')}${stop ? ` <span class="badge badge-ac">stop ${esc(stop)}</span>` : ''}</p>` : ''}
+    ${window.__bjTimeQuery ? `<p style="color:var(--amber);font-size:13.5px;font-weight:600;margin-bottom:18px">${icon('clock')} Buses departing around ${esc(window.__bjTimeQuery)} (±90 min)</p>` : from || to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${esc(from || '…')} → ${esc(to || '…')}${stop ? ` <span class="badge badge-ac">stop ${esc(stop)}</span>` : ''}</p>` : ''}
     ${stop && !from && !to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${LANG==='bn'?'এই স্টপেজে থামে: ':'Buses halting at '}${esc(stop)}</p>` : ''}
     ${near.length ? `<p class="near-label">${icon('clock')} <span class="label-en">${near.length} buses around current time</span><span class="label-bn">${near.length} বাস বর্তমান সময়ের কাছাকাছি</span></p>` : ''}
     ${results.length ? results.map((b, i) => {

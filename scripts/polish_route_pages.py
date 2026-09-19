@@ -151,7 +151,7 @@ def beautify_place_page(s, stem, stems):
                 chips.append(f'<a class="via-chip"{style_i} href="{href}">{esc_h(label)}</a>')
             else:
                 chips.append(f'<span class="via-chip"{style_i}>{esc_h(label)}</span>')
-        chiprow = ('<div class="chip-row" aria-label="All destinations">'
+        chiprow = ('<div class="chip-row hscroll" aria-label="All destinations">'
                    + ''.join(chips) + '</div>')
         s = s[:m.start()] + chiprow + s[m.end():]
         changed = True
@@ -194,7 +194,7 @@ def trim_routemap(s):
     if 'rm-dot" style="opacity:.35' in s:  # already trimmed (idempotency guard)
         return s, False
     stops = RM_STOP_RE.findall(s)
-    if len(stops) <= 7:
+    if len(stops) <= 10:
         return s, False
     more = len(stops) - 6
     marker = ('<div class="rm-stop"><div class="rm-dot" style="opacity:.35;border-style:dashed"></div>'
@@ -211,8 +211,6 @@ def main():
     n_pages = n_linked = n_rows = 0
     stems = None
     for p in sorted(PAGES.glob('*.html')):
-        if p.name == 'index.html':
-            continue
         s = p.read_text(encoding='utf-8')
         orig = s
         if 'bus-row' in s:

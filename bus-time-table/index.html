@@ -46,7 +46,8 @@
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
       <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
-    </nav>
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◐</button>
+</nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
@@ -144,7 +145,7 @@
 
 <section class="section" id="routeMatchesSec" style="display:none">
   <div class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> Matching Routes</div>
-  <div class="chip-row" id="rmChips"></div>
+  <div class="chip-row hscroll" id="rmChips"></div>
 </section>
 
 <section class="section" id="popSection">
@@ -264,7 +265,31 @@ function doSearch(){
   rm.style.display=routeChips.length?"":"none";
   info.textContent="Showing "+shown+" places and "+routeChips.length+(routeChips.length>=24?"+":"")+" routes matching \u201c"+q+"\u201d";
   info.style.display="block";
-  if(!shown&&!routeChips.length)empty.style.display="block";else empty.style.display="none";
+  if(!shown&&!routeChips.length){bjBusSearch(q,rm,rmc,info,empty);}else{empty.style.display="none";}
+}
+function bjBusSearch(q,rm,rmc,info,empty){
+  if(window.__bjBuses){
+    var hits=window.__bjBuses.filter(function(b){return (b.bus_name||"").toLowerCase().indexOf(q)>=0;}).slice(0,24);
+    if(hits.length){
+      var chips=hits.map(function(b){
+        return '<a class="rm-chip" href="../index.html#/bus/'+encodeURIComponent(b.id)+'">'+(b.bus_name||"Bus")+(b.departure_time?' <span class="n">'+b.departure_time+'</span>':'')+(b.origin?' <span class="n">'+b.origin+' '+(b.destination||"")+'</span>':'')+'</a>';
+      }).join("");
+      rmc.innerHTML=chips;
+      rm.style.display="";
+      info.textContent="Showing "+hits.length+" bus services matching "+q;
+      info.style.display="block";
+      empty.style.display="none";
+      return;
+    }
+  }
+  if(!window.__bjBuses&&window.fetch){
+    fetch("../data/app-index.json").then(function(r){return r.json();}).then(function(d){
+      window.__bjBuses=(d&&d.buses)?d.buses:[];
+      bjBusSearch(q,rm,rmc,info,empty);
+    }).catch(function(){});
+    return;
+  }
+  empty.style.display="block";
 }
 function countUp(el,target,dur){
   var s=performance.now();
@@ -297,7 +322,7 @@ function initAnim(){
   try{
     var t=localStorage.getItem("seo-theme");
     if(t==="dark")document.body.classList.add("dark");
-    if(t==="dark"&&document.getElementById("themeBtn"))document.getElementById("themeBtn").textContent="\u2600\ufe0f";
+    if(t==="dark"&&document.getElementById("bjThemeBtn"))document.getElementById("bjThemeBtn").textContent="\u2600\ufe0f";
     var l=localStorage.getItem("seo-lang");
     if(l==="bn"){document.body.classList.add("lang-bn");if(document.getElementById("langBtn"))document.getElementById("langBtn").textContent="English"}
   }catch(e){}
@@ -320,5 +345,7 @@ function initAnim(){
     Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
   </div>
 </footer>
+<script defer src="../js/route-slider.js"></script>
+<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
 </body>
 </html>

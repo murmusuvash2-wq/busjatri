@@ -768,7 +768,9 @@ def main():
 
     for u in UPDATES:
         b = by_id.get(u["id"])
-        assert b, f"missing {u['id']}"
+        if not b:
+            print(f"{u['id']}: no longer in data (deduped) - skip")
+            continue
         names = [s.get("name") for s in b.get("stoppages") or []]
         if u["marker"] in names:
             print(f"{u['id']}: already updated - skip")
