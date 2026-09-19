@@ -42,7 +42,7 @@ HEADER = """<header class="header">
 FOOTER = """<footer class="footer">
   <div class="container">
     <div style="display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;font-size:13px">
-      <a href="../blog/">ব্লগ</a>
+      <a href="../blog/">Blog</a>
       <a href="../about.html">About Us</a>
       <a href="../contact.html">Contact Us</a>
       <a href="../privacy-policy.html">Privacy Policy</a>
@@ -174,7 +174,7 @@ def article_page(a):
 <body>
 {HEADER}
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
-<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">ব্লগ</a> › <span>{a["title"][:34]}…</span></div>
+<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Blog</a> › <span>{a["title"][:34]}…</span></div>
 <article>
 <h1 style="font-size:1.5rem;line-height:1.35;margin:14px 0 4px">{a["title"]}</h1>
 <div class="article-meta">{a["date"]} · BusJatri টিম</div>
@@ -183,11 +183,11 @@ def article_page(a):
 </div>
 </article>
 <section class="seo-section" style="margin-top:26px">
-  <h3 class="section-title">সম্পর্কিত পেজ</h3>
+  <h3 class="section-title">Related Pages</h3>
   <div class="chip-row">{related}</div>
 </section>
 <section class="seo-section">
-  <a class="rel-chip" href="./">📚 সব লেখা</a>
+  <a class="rel-chip" href="./">📚 All Posts</a>
 </section>
 </main>
 {FOOTER}
@@ -196,10 +196,24 @@ def article_page(a):
 """
 
 
+def manifest_articles():
+    """Daily auto-generated route posts (data/blog-manifest.json)."""
+    import json
+    p = ROOT / "data" / "blog-manifest.json"
+    if not p.exists():
+        return []
+    try:
+        return json.loads(p.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+
 def index_page():
     import html as _h
+    all_posts = manifest_articles() + ARTICLES
+    all_posts.sort(key=lambda a: a["date"], reverse=True)
     cards = ""
-    for a in ARTICLES:
+    for a in all_posts:
         cards += f"""<a class="bus-row" href="{a["slug"]}.html" style="display:block">
   <div class="bmid">
     <div class="op" style="font-size:1rem">{a["title"]}</div>
@@ -212,11 +226,11 @@ def index_page():
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ব্লগ — বাস ভ্রমণের গাইড | BusJatri</title>
-<meta name="description" content="পশ্চিমবঙ্গের বাস ভ্রমণ নিয়ে BusJatri-র বাংলা ব্লগ — রুট গাইড, সময়সূচি টিপস এবং বাস্তব অভিজ্ঞতা।">
+<title>Blog — Bus Travel Guides | BusJatri</title>
+<meta name="description" content="West Bengal bus travel guides: route timetables, first and last bus timings, operators and travel tips from BusJatri.">
 <link rel="canonical" href="{BASE}/blog/">
-<meta property="og:title" content="ব্লগ — বাস ভ্রমণের গাইড | BusJatri">
-<meta property="og:description" content="পশ্চিমবঙ্গের বাস ভ্রমণ নিয়ে BusJatri-র বাংলা ব্লগ।">
+<meta property="og:title" content="Blog — Bus Travel Guides | BusJatri">
+<meta property="og:description" content="West Bengal bus travel guides: route timetables, operators and travel tips from BusJatri.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
@@ -227,10 +241,10 @@ def index_page():
 <body>
 {HEADER}
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
-<div class="crumbs"><a href="../index.html">Home</a> › <span>ব্লগ</span></div>
+<div class="crumbs"><a href="../index.html">Home</a> › <span>Blog</span></div>
 <div class="seo-hero">
-  <h1>ব্লগ <span class="arr">—</span> বাস ভ্রমণের গাইড</h1>
-  <p class="bn-sub">পশ্চিমবঙ্গের বাসপথ নিয়ে বাংলায় লেখা</p>
+  <h1>Blog <span class="arr">—</span> Bus Travel Guides</h1>
+  <p class="bn-sub">West Bengal bus routes, timetables and travel tips</p>
 </div>
 {cards}
 </main>
@@ -256,7 +270,7 @@ def main():
         if 'href="blog/"' not in s:
             anchor = '<a href="about.html">About Us</a>'
             if anchor in s:
-                s = s.replace(anchor, '<a href="blog/">ব্লগ (Blog)</a>\n      ' + anchor, 1)
+                s = s.replace(anchor, '<a href="blog/">Blog</a>\n      ' + anchor, 1)
                 hp.write_text(s, encoding="utf-8")
                 print("homepage: blog link added to footer")
 
@@ -265,7 +279,7 @@ def main():
         s = sm.read_text(encoding="utf-8")
         s = re.sub(r"<url><loc>" + re.escape(BASE) + r"/blog/[^<]*</loc>.*?</url>\n?", "", s)
         add = f"<url><loc>{BASE}/blog/</loc><lastmod>{TODAY}</lastmod><priority>0.8</priority></url>\n"
-        for a in ARTICLES:
+        for a in manifest_articles() + ARTICLES:
             add += f"<url><loc>{BASE}/blog/{a['slug']}.html</loc><lastmod>{TODAY}</lastmod><priority>0.7</priority></url>\n"
         s = s.replace("</urlset>", add + "</urlset>")
         sm.write_text(s, encoding="utf-8")

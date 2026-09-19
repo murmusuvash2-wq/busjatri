@@ -64,7 +64,7 @@ FOOTER = """<footer class="footer">
       <a href="../about.html">About Us</a>
       <a href="../contact.html">Contact Us</a>
       <a href="../privacy-policy.html">Privacy Policy</a>
-      <a href="../blog/">ব্লগ</a>
+      <a href="../blog/">Blog</a>
     </div>
     <p style="margin:14px 0 0;text-align:center">BusJatri — West Bengal Bus Timetable</p>
     <p style="margin:6px 0 0;text-align:center">Contact: busjatri@zohomail.in</p>
