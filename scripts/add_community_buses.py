@@ -113,6 +113,7 @@ def main(write=False):
           % (before, added, enriched, skipped, len(buses)))
     assert len(buses) >= before, "bus count dropped - aborting"
     if write:
+        data.setdefault("meta", {})["total_buses"] = len(buses)
         data.setdefault("meta", {})["last_updated"] = "2026-09-18"
         with open(DATA, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)

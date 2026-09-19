@@ -143,6 +143,7 @@ def main():
         json.dumps(log, ensure_ascii=False, indent=1), encoding="utf-8"
     )
     d["buses"] = out_buses
+    d.setdefault("meta", {})["total_buses"] = len(d["buses"])
     path.write_text(json.dumps(d, ensure_ascii=False), encoding="utf-8")
     print("removed-duplicates log: data/removed_duplicates.json")
 

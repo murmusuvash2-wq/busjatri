@@ -57,10 +57,6 @@ def to_min(t):
     h, mi, ap = int(m.group(1)), int(m.group(2)), (m.group(3) or "").upper()
     if mi > 59:
         return None
-    # NBSTC source data quirk: one bus shows "12:00 AM" sandwiched between
-    # 11:40 AM and 12:20 PM — it is noon, not midnight.
-    if h == 12 and ap == "AM":
-        return 720
     if ap == "PM" and h < 12:
         h += 12
     if ap == "AM" and h == 12:

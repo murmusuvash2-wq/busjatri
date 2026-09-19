@@ -453,7 +453,7 @@
    "bus_type": "Government",
    "origin": "Cooch Behar",
    "destination": "Siliguri",
-   "departure_time": "12:00 AM",
+   "departure_time": "12:00 PM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
@@ -404459,6 +404459,254 @@
    "time_source": "facebook (community report)",
    "total_stoppages": 12,
    "detail_url": ""
+  },
+  {
+   "id": "swapnamay-travels-haldia-durgapur-city-center-4010",
+   "bus_name": "Swapnamay Travels Haldia-Durgapur",
+   "reg_no": "WB 29H 4087",
+   "operator": "Swapnamay Travels",
+   "bus_type": "Private - Non AC Pushback (Air Suspension)",
+   "origin": "Haldia",
+   "destination": "Durgapur (City Center)",
+   "departure_time": "12:05 AM",
+   "arrival_time": "8:35 AM",
+   "contact_number": "7478294087 / 9679133932",
+   "depot_name": "",
+   "route": "Haldia - Durgapur (City Center)",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Haldia",
+     "up_time": "12:05 AM",
+     "down_time": "8:35 PM"
+    },
+    {
+     "no": 2,
+     "name": "Durgachak",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Sutahata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Chaitanyapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Mahishadal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Tamluk",
+     "up_time": "1:45 AM",
+     "down_time": "6:50 PM"
+    },
+    {
+     "no": 7,
+     "name": "Mecheda",
+     "up_time": "2:15 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 8,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Keshapat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Khukur Daha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Goura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Sultannagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Bakultala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Daspur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Ghatal",
+     "up_time": "3:45 AM",
+     "down_time": "4:35 PM"
+    },
+    {
+     "no": 16,
+     "name": "Barada Chaukun",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Radhanagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Khirpai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Kalikapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Chandrakona Town",
+     "up_time": "4:30 AM",
+     "down_time": "3:45 PM"
+    },
+    {
+     "no": 21,
+     "name": "Bahrashol",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Andarnayan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Dabcha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Chandrakona Road",
+     "up_time": "5:05 AM",
+     "down_time": "3:15 PM"
+    },
+    {
+     "no": 25,
+     "name": "Kadamdiha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Kiyabani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Garhbeta",
+     "up_time": "5:25 AM",
+     "down_time": "2:50 PM"
+    },
+    {
+     "no": 28,
+     "name": "Dadhika",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Bankadah",
+     "up_time": "5:45 AM",
+     "down_time": "2:25 PM"
+    },
+    {
+     "no": 30,
+     "name": "Bishnupur Bypass",
+     "up_time": "6:15 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "no": 31,
+     "name": "Ramsagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Onda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Dhaladanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 34,
+     "name": "Bankura Bypass",
+     "up_time": "7:10 AM",
+     "down_time": "12:50 PM"
+    },
+    {
+     "no": 35,
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Durgapur Station",
+     "up_time": "8:15 AM",
+     "down_time": "11:50 AM"
+    },
+    {
+     "no": 38,
+     "name": "Durgapur (City Center)",
+     "up_time": "8:35 AM",
+     "down_time": "11:10 AM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 38,
+   "detail_url": ""
   }
  ],
  "routes": {
@@ -494920,7 +495168,7 @@
   }
  },
  "meta": {
-  "total_buses": 4018,
+  "total_buses": 4010,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
