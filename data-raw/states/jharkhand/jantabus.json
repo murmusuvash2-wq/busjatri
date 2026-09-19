@@ -1,0 +1,105 @@
+{
+ "state": "jharkhand",
+ "operator": "Janta Bus Service (private)",
+ "fetched_at": "2026-09-19T02:41:09+00:00",
+ "source_url": "https://www.jantabus.in/schedules.html",
+ "rows": [
+  {
+   "service": "Ranchi- Varanasi (01)",
+   "route": "Ranchi to Varanasi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 700/ 1050/ 900/ 800/ 800",
+   "departure": "17:00",
+   "journey": "12:30hrs"
+  },
+  {
+   "service": "Ranchi- Varanasi (01)",
+   "route": "Hazaribagh to Varanasi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 700/ 1050/ 900/ 800/ 800",
+   "departure": "20:00",
+   "journey": "09:30hrs"
+  },
+  {
+   "service": "Ranchi- Varanasi (01)",
+   "route": "Ramgarah to Varanasi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 700/ 1050/ 900/ 800/ 800",
+   "departure": "20:45",
+   "journey": "08:45hrs"
+  },
+  {
+   "service": "Varanasi - Ranchi (01)",
+   "route": "Varanasi to Ranchi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 800/ 1150/ 1100/ 1000/ 1000",
+   "departure": "18:30",
+   "journey": "10:30hrs"
+  },
+  {
+   "service": "Varanasi - Ranchi (01)",
+   "route": "Varanasi to Hazaribagh",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 800/ 1150/ 1100/ 1000/ 1000",
+   "departure": "18:30",
+   "journey": "09:30hrs"
+  },
+  {
+   "service": "Varanasi - Ranchi (01)",
+   "route": "Varanasi to Ramgarah",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 800/ 1150/ 1100/ 1000/ 1000",
+   "departure": "18:30",
+   "journey": "10:00hrs"
+  },
+  {
+   "service": "Varanasi - Ranchi (02)",
+   "route": "Varanasi to Ranchi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 700/ 1050/ 900/ 800/ 800",
+   "departure": "18:00",
+   "journey": "10:30hrs"
+  },
+  {
+   "service": "Varanasi - Ranchi (02)",
+   "route": "Varanasi to Hazaribagh",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 700/ 1050/ 900/ 800/ 800",
+   "departure": "18:00",
+   "journey": "09:30hrs"
+  },
+  {
+   "service": "Varanasi - Ranchi (02)",
+   "route": "Varanasi to Ramgarah",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 700/ 1050/ 900/ 800/ 800",
+   "departure": "18:00",
+   "journey": "10:00hrs"
+  },
+  {
+   "service": "Ranchi- Varanasi (02)",
+   "route": "Ranchi to Varanasi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 800/ 1150/ 1000/ 900/ 900",
+   "departure": "17:15",
+   "journey": "12:30hrs"
+  },
+  {
+   "service": "Ranchi- Varanasi (02)",
+   "route": "Hazaribagh to Varanasi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 800/ 1150/ 1000/ 900/ 900",
+   "departure": "20:15",
+   "journey": "09:30hrs"
+  },
+  {
+   "service": "Ranchi- Varanasi (02)",
+   "route": "Ramgarah to Varanasi",
+   "coach": "2+1, Sleeper/Seater, AC (38 seats)",
+   "fare": "₹ 800/ 1150/ 1000/ 900/ 900",
+   "departure": "21:00",
+   "journey": "08:45hrs"
+  }
+ ],
+ "sha256": "6f77e9f4ba6c101a"
+}

@@ -1,0 +1,16 @@
+[
+ {
+  "ts": "2026-09-19T02:41:09+00:00",
+  "source": "bihar/bsrtc",
+  "rows": 323,
+  "sha256": "d7fc8ab0a6dfda64",
+  "changed": true
+ },
+ {
+  "ts": "2026-09-19T02:41:09+00:00",
+  "source": "jharkhand/jantabus",
+  "rows": 12,
+  "sha256": "6f77e9f4ba6c101a",
+  "changed": true
+ }
+]

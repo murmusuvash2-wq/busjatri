@@ -1,0 +1,2514 @@
+{
+ "state": "bihar",
+ "operator": "BSRTC",
+ "fetched_at": "2026-09-19T02:41:09+00:00",
+ "depots": {
+  "Aurangabad": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Aurangabad_Details.pdf",
+   "rows": 14
+  },
+  "Bankipur(Patna)": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Bankipur(Patna)_Details.pdf",
+   "rows": 58
+  },
+  "Bhagalpur": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Bhagalpur_Details.pdf",
+   "rows": 14
+  },
+  "Chhapra": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Chhapra_Details.pdf",
+   "rows": 12
+  },
+  "Electric_Bus.pdf": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Electric_Bus.pdf",
+   "rows": 6
+  },
+  "Gaya": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Gaya_Details.pdf",
+   "rows": 96
+  },
+  "Motihari": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Motihari_Details.pdf",
+   "rows": 47
+  },
+  "Muzaffarpur": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Muzaffarpur_Details.pdf",
+   "rows": 11
+  },
+  "Nawada": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Nawada_Details.pdf",
+   "rows": 16
+  },
+  "Patna_Volvo.pdf": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Patna_Volvo.pdf",
+   "rows": 8
+  },
+  "Purnea": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Purnea_Details.pdf",
+   "rows": 30
+  },
+  "Saharsa": {
+   "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Saharsa_Details.pdf",
+   "rows": 11
+  }
+ },
+ "rows": [
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Patna",
+   "departure": "5:40 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Patna",
+   "to": "Aurangabad",
+   "departure": "1:20 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Patna",
+   "departure": "7:00 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Patna",
+   "to": "Aurangabad",
+   "departure": "2:00 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Patna",
+   "departure": "8:30 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Patna",
+   "to": "Aurangabad",
+   "departure": "3:00 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "5:00 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "8:30 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "12:15 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "11:00 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "7:30 AM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "3:30 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "2:30 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Aurangabad",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "6:00 PM",
+   "seats": 32,
+   "raw_extra": "2+1"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Begusarai",
+   "departure": "9:15 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Begusarai",
+   "to": "Patna",
+   "departure": "4:00 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Begusarai",
+   "departure": "7:15 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Begusarai",
+   "to": "Patna",
+   "departure": "1:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Bhabhua",
+   "departure": "8:00 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Bhabhua",
+   "to": "Patna",
+   "departure": "2:00 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Bhabhua",
+   "departure": "9:00 AM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Bhabhua",
+   "to": "Patna",
+   "departure": "3:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Khagariya",
+   "departure": "8:00 AM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Khagariya",
+   "to": "Patna",
+   "departure": "5:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Khagariya",
+   "departure": "6:30 AM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Khagariya",
+   "to": "Patna",
+   "departure": "3:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Rajgir",
+   "departure": "6:30 AM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Rajgir",
+   "to": "Patna",
+   "departure": "10:30 AM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Rajgir",
+   "departure": "2:15 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Rajgir",
+   "to": "Patna",
+   "departure": "6:15 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Rajgir",
+   "departure": "7:30 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Rajgir",
+   "to": "Patna",
+   "departure": "11:30 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Rajgir",
+   "departure": "3:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Rajgir",
+   "to": "Patna",
+   "departure": "7:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Bihar Shariff",
+   "departure": "5:30 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Bihar",
+   "to": "Shariff Patna",
+   "departure": "8:05 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Bihar Shariff",
+   "departure": "10:40 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Bihar",
+   "to": "Shariff Patna",
+   "departure": "1:15 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Buxar",
+   "departure": "7:00 AM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Buxar",
+   "to": "Patna",
+   "departure": "12:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Sasaram",
+   "departure": "7:00 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Sasaram",
+   "to": "Patna",
+   "departure": "1:23 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Sheikhpura",
+   "departure": "6:30 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Sheikhpura",
+   "to": "Patna",
+   "departure": "12:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Purnea",
+   "departure": "9:30 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Purnea",
+   "to": "Patna",
+   "departure": "8:00 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Madhepura",
+   "departure": "8:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Madhepura",
+   "to": "Patna",
+   "departure": "8:00 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Madhepura",
+   "departure": "8:30 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Madhepura",
+   "to": "Patna",
+   "departure": "8:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Balmikinagar",
+   "departure": "6:30 AM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Balmikinagar",
+   "to": "Patna",
+   "departure": "6:00 AM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Kathmandu",
+   "departure": "2:10 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Kathmandu",
+   "to": "Patna",
+   "departure": "8:00 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Bettiah",
+   "departure": "9:00 AM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Bettiah",
+   "to": "Patna",
+   "departure": "8:30 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Bettiah",
+   "departure": "6:00 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Bettiah",
+   "to": "Patna",
+   "departure": "2:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Aurangabad",
+   "departure": "6:30 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Aurangabad",
+   "to": "Patna",
+   "departure": "1:30 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Aurangabad",
+   "departure": "7:00 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Aurangabad",
+   "to": "Patna",
+   "departure": "2:15 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Samastipur",
+   "departure": "7:00 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Samastipur",
+   "to": "Patna",
+   "departure": "1:00 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Samastipur",
+   "departure": "9:00 AM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Samastipur",
+   "to": "Patna",
+   "departure": "3:00 PM",
+   "seats": 53,
+   "bus_type": "2+3/Non AC/Semi",
+   "raw_extra": "Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Katihar",
+   "departure": "8:30 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Katihar",
+   "to": "Patna",
+   "departure": "7:30 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Patna",
+   "to": "Katihar",
+   "departure": "9:30 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Katihar",
+   "to": "Patna",
+   "departure": "8:00 PM",
+   "seats": 44,
+   "bus_type": "2+2/AC"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Buxar",
+   "to": "Ghaziabad",
+   "departure": "2:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bankipur(Patna)",
+   "from": "Ghaziabad",
+   "to": "Buxar",
+   "departure": "2:00 PM",
+   "seats": 41,
+   "bus_type": "2+2/Non AC/Deluxe"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Patna",
+   "departure": "6:30 AM",
+   "service_id": "150165"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Patna",
+   "departure": "7:00 AM",
+   "service_id": "150167"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "7:30 AM",
+   "service_id": "150172"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Katihar",
+   "departure": "7:50 AM",
+   "service_id": "150170"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "8:15 AM",
+   "service_id": "150174"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "10:00 AM",
+   "service_id": "150176"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "10:30 AM",
+   "service_id": "150179"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "11:30 AM",
+   "service_id": "150173"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "1:15 PM",
+   "service_id": "150175"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "3:00 PM",
+   "service_id": "150177"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Katihar",
+   "to": "Bhagalpur",
+   "departure": "3:30 PM",
+   "service_id": "150171"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "4:00 PM",
+   "service_id": "150180"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Patna",
+   "to": "Bhagalpur",
+   "departure": "4:20 PM",
+   "service_id": "150166"
+  },
+  {
+   "depot": "Bhagalpur",
+   "from": "Patna",
+   "to": "Bhagalpur",
+   "departure": "5:50 PM",
+   "service_id": "150168"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Chhapra",
+   "to": "Patna",
+   "departure": "5:00 AM",
+   "service_id": "149825"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Chhapra",
+   "to": "Patna",
+   "departure": "5:30 AM",
+   "service_id": "149827"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Chhapra",
+   "to": "Patna",
+   "departure": "7:00 AM",
+   "service_id": "149829"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Chhapra",
+   "to": "Patna",
+   "departure": "7:30 AM",
+   "service_id": "149831"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Chhapra",
+   "to": "Patna",
+   "departure": "8:00 AM",
+   "service_id": "149833"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Chhapra",
+   "to": "Patna",
+   "departure": "9:00 AM",
+   "service_id": "149835"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Patna",
+   "to": "Chhapra",
+   "departure": "3:00 PM",
+   "service_id": "149826"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Patna",
+   "to": "Chhapra",
+   "departure": "3:30 PM",
+   "service_id": "149828"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Patna",
+   "to": "Chhapra",
+   "departure": "4:00 PM",
+   "service_id": "149830"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Patna",
+   "to": "Chhapra",
+   "departure": "4:30 PM",
+   "service_id": "149832"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Patna",
+   "to": "Chhapra",
+   "departure": "5:30 PM",
+   "service_id": "149834"
+  },
+  {
+   "depot": "Chhapra",
+   "from": "Patna",
+   "to": "Chhapra",
+   "departure": "6:00 PM",
+   "service_id": "149836"
+  },
+  {
+   "depot": "Electric_Bus.pdf",
+   "from": "Patna",
+   "to": "Rajgir",
+   "departure": "8:30 AM",
+   "service_id": "149182",
+   "seats": 45,
+   "bus_type": "2+2/Electric",
+   "raw_extra": "20470661,"
+  },
+  {
+   "depot": "Electric_Bus.pdf",
+   "from": "Patna",
+   "to": "Rajgir",
+   "departure": "9:30 AM",
+   "service_id": "149186",
+   "seats": 45,
+   "bus_type": "2+2/Electric",
+   "raw_extra": "20470661,"
+  },
+  {
+   "depot": "Electric_Bus.pdf",
+   "from": "Rajgir",
+   "to": "Patna",
+   "departure": "2:20 PM",
+   "service_id": "149187",
+   "seats": 45,
+   "bus_type": "2+2/Electric",
+   "raw_extra": "20470661,"
+  },
+  {
+   "depot": "Electric_Bus.pdf",
+   "from": "Rajgir",
+   "to": "Patna",
+   "departure": "4:00 PM",
+   "service_id": "149189",
+   "seats": 45,
+   "bus_type": "2+2/Electric",
+   "raw_extra": "20470661,"
+  },
+  {
+   "depot": "Electric_Bus.pdf",
+   "from": "Darbhanga",
+   "to": "Patna",
+   "departure": "7:20 AM",
+   "service_id": "149191",
+   "seats": 45,
+   "bus_type": "2+2/Electric",
+   "raw_extra": "20470661,"
+  },
+  {
+   "depot": "Electric_Bus.pdf",
+   "from": "Patna",
+   "to": "Darbhanga",
+   "departure": "12:30 PM",
+   "service_id": "149190",
+   "seats": 45,
+   "bus_type": "2+2/Electric",
+   "raw_extra": "20470661,"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "5:00 AM",
+   "service_id": "149351"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "5:20 AM",
+   "service_id": "149316"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "5:30 AM",
+   "service_id": "149257"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "5:35 AM",
+   "service_id": "149237"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Dumariya",
+   "departure": "6:00 AM",
+   "service_id": "149295"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "6:00 AM",
+   "service_id": "149361"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Dumariya",
+   "to": "Gaya",
+   "departure": "6:15 AM",
+   "service_id": "149313"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "6:20 AM",
+   "service_id": "149262"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "6:20 AM",
+   "service_id": "149241"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Ranchi",
+   "to": "Gaya",
+   "departure": "6:30 AM",
+   "service_id": "149382"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Haspura",
+   "departure": "6:30 AM",
+   "service_id": "149308"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "6:30 AM",
+   "service_id": "149353"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "6:50 AM",
+   "service_id": "149266"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Guruwa",
+   "departure": "7:00 AM",
+   "service_id": "149289"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "7:00 AM",
+   "service_id": "149370"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Guruwa",
+   "to": "Gaya",
+   "departure": "7:10 AM",
+   "service_id": "149283"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "7:10 AM",
+   "service_id": "149246"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gobindpur",
+   "to": "Gaya",
+   "departure": "7:25 AM",
+   "service_id": "149281"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "7:25 AM",
+   "service_id": "149362"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "7:40 AM",
+   "service_id": "149317"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "8:00 AM",
+   "service_id": "149377"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "8:00 AM",
+   "service_id": "149251"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "8:00 AM",
+   "service_id": "149277"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "8:50 AM",
+   "service_id": "149365"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "8:50 AM",
+   "service_id": "149371"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Ranchi",
+   "to": "Gaya",
+   "departure": "9:00 AM",
+   "service_id": "149385"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Guruwa",
+   "departure": "9:00 AM",
+   "service_id": "149284"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Guruwa",
+   "to": "Gaya",
+   "departure": "9:00 AM",
+   "service_id": "149290"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "9:00 AM",
+   "service_id": "149238"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "9:05 AM",
+   "service_id": "149258"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "9:15 AM",
+   "service_id": "149318"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Dumariya",
+   "to": "Gaya",
+   "departure": "9:25 AM",
+   "service_id": "149305"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Haspura",
+   "to": "Gaya",
+   "departure": "9:30 AM",
+   "service_id": "149310"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "9:30 AM",
+   "service_id": "149354"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "10:10 AM",
+   "service_id": "149242"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "9:45 AM",
+   "service_id": "149263"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "10:15 AM",
+   "service_id": "149366"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "10:40 AM",
+   "service_id": "149248"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "10:40 AM",
+   "service_id": "149267"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "10:45 AM",
+   "service_id": "149320"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Guruwa",
+   "departure": "11:00 AM",
+   "service_id": "149291"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "11:00 AM",
+   "service_id": "149372"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Guruwa",
+   "to": "Gaya",
+   "departure": "11:20 AM",
+   "service_id": "149285"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "11:20 AM",
+   "service_id": "149252"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "11:20 AM",
+   "service_id": "149355"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "11:30 AM",
+   "service_id": "149278"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "12:00 PM",
+   "service_id": "149381"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "12:00 PM",
+   "service_id": "149321"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Gobindpur",
+   "departure": "12:27 PM",
+   "service_id": "149282"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Haspura",
+   "departure": "12:30 PM",
+   "service_id": "149311"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "12:40 PM",
+   "service_id": "149260"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "12:45 PM",
+   "service_id": "149239"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "12:50 PM",
+   "service_id": "149373"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "12:55 PM",
+   "service_id": "149367"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "1:00 PM",
+   "service_id": "149358"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "1:15 PM",
+   "service_id": "149244"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Guruwa",
+   "departure": "1:30 PM",
+   "service_id": "149286"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Guruwa",
+   "to": "Gaya",
+   "departure": "1:30 PM",
+   "service_id": "149292"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "1:30 PM",
+   "service_id": "149264"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Dumariya",
+   "departure": "2:00 PM",
+   "service_id": "149306"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "2:05 PM",
+   "service_id": "149268"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "2:05 PM",
+   "service_id": "149275"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "2:15 PM",
+   "service_id": "149249"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "6:45 PM",
+   "service_id": "149255"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "2:20 PM",
+   "service_id": "149374"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "2:40 PM",
+   "service_id": "149369"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "2:50 PM",
+   "service_id": "149254"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "3:00 PM",
+   "service_id": "149279"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Dumariya",
+   "departure": "3:10 PM",
+   "service_id": "149315"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "3:20 PM",
+   "service_id": "149350"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "3:20 PM",
+   "service_id": "149322"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Guruwa",
+   "to": "Gaya",
+   "departure": "3:30 PM",
+   "service_id": "149287"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Guruwa",
+   "departure": "3:30 PM",
+   "service_id": "149293"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Haspura",
+   "to": "Gaya",
+   "departure": "3:50 PM",
+   "service_id": "149312"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "4:00 PM",
+   "service_id": "149261"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Tekari",
+   "departure": "4:00 PM",
+   "service_id": "149360"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Tekari",
+   "to": "Gaya",
+   "departure": "4:00 PM",
+   "service_id": "149375"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "4:10 PM",
+   "service_id": "149240"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "5:00 PM",
+   "service_id": "149265"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Guruwa",
+   "departure": "5:30 PM",
+   "service_id": "149288"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Guruwa",
+   "to": "Gaya",
+   "departure": "5:30 PM",
+   "service_id": "149294"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Aurangabad",
+   "departure": "5:30 PM",
+   "service_id": "149276"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "5:40 PM",
+   "service_id": "149245"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Dumariya",
+   "to": "Gaya",
+   "departure": "6:00 PM",
+   "service_id": "149307"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "6:15 PM",
+   "service_id": "149250"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Aurangabad",
+   "to": "Gaya",
+   "departure": "6:25 PM",
+   "service_id": "149280"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "7:00 AM",
+   "service_id": "149915"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "8:00 AM",
+   "service_id": "149917"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "9:00 AM",
+   "service_id": "149919"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "11:00 AM",
+   "service_id": "149921"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "12:00 PM",
+   "service_id": "149924"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Gaya",
+   "to": "Ranchi",
+   "departure": "3:00 PM",
+   "service_id": "149926"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Ranchi",
+   "to": "Gaya",
+   "departure": "7:30 AM",
+   "service_id": "149920"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Ranchi",
+   "to": "Gaya",
+   "departure": "8:15 AM",
+   "service_id": "149916"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Ranchi",
+   "to": "Gaya",
+   "departure": "9:00 AM",
+   "service_id": "149918"
+  },
+  {
+   "depot": "Gaya",
+   "from": "Ranchi",
+   "to": "Gaya",
+   "departure": "6:30 PM",
+   "service_id": "149927"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Patna",
+   "departure": "6:00 AM",
+   "service_id": "149788"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Patna",
+   "departure": "6:15 AM",
+   "service_id": "149791"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Raxaul",
+   "departure": "6:30 AM",
+   "service_id": "149793"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Patna",
+   "departure": "6:40 AM",
+   "service_id": "149795"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "7:00 AM",
+   "service_id": "149797"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "7:00 AM",
+   "service_id": "149912"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Raxaul",
+   "to": "Motihari",
+   "departure": "7:00 AM",
+   "service_id": "149909"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "7:30 AM",
+   "service_id": "149800"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Patna",
+   "to": "Motihari",
+   "departure": "7:30 AM",
+   "service_id": "149904"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "8:00 AM",
+   "service_id": "149802"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Patna",
+   "departure": "8:10 AM",
+   "service_id": "149804"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Sahebganj",
+   "to": "Motihari",
+   "departure": "8:10 AM",
+   "service_id": "149899"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "8:45 AM",
+   "service_id": "149880"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "9:00 AM",
+   "service_id": "149906"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "9:15 AM",
+   "service_id": "149882"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "9:45 AM",
+   "service_id": "149884"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "10:00 AM",
+   "service_id": "149799"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "10:15 AM",
+   "service_id": "149886"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "10:30 AM",
+   "service_id": "149801"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Raxaul",
+   "to": "Motihari",
+   "departure": "10:30 AM",
+   "service_id": "149794"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "10:45 AM",
+   "service_id": "149888"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "11:00 AM",
+   "service_id": "149803"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Patna",
+   "departure": "11:30 AM",
+   "service_id": "149890"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "12:00 PM",
+   "service_id": "149881"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "12:15 PM",
+   "service_id": "149892"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Patna",
+   "to": "Motihari",
+   "departure": "12:30 PM",
+   "service_id": "149790"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "12:30 PM",
+   "service_id": "149883"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "12:45 PM",
+   "service_id": "149894"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "1:00 PM",
+   "service_id": "149885"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "1:15 PM",
+   "service_id": "149896"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Patna",
+   "to": "Motihari",
+   "departure": "1:30 PM",
+   "service_id": "149792"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "1:30 PM",
+   "service_id": "149887"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Patna",
+   "to": "Motihari",
+   "departure": "2:00 PM",
+   "service_id": "149796"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "2:00 PM",
+   "service_id": "149889"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "2:30 PM",
+   "service_id": "149893"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "2:45 PM",
+   "service_id": "149901"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "3:00 PM",
+   "service_id": "149895"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Patna",
+   "departure": "3:00 PM",
+   "service_id": "149903"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "3:30 PM",
+   "service_id": "149897"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "3:30 PM",
+   "service_id": "149905"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Patna",
+   "to": "Motihari",
+   "departure": "4:00 PM",
+   "service_id": "149805"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Sahebganj",
+   "departure": "4:00 PM",
+   "service_id": "149898"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Muzaffarpur",
+   "to": "Motihari",
+   "departure": "4:00 PM",
+   "service_id": "149902"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "4:00 PM",
+   "service_id": "149907"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Raxaul",
+   "departure": "4:30 PM",
+   "service_id": "149908"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Motihari",
+   "to": "Muzaffarpur",
+   "departure": "5:30 PM",
+   "service_id": "149910"
+  },
+  {
+   "depot": "Motihari",
+   "from": "Patna",
+   "to": "Motihari",
+   "departure": "8:45 PM",
+   "service_id": "149891"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Muzaffarpur",
+   "to": "Patna",
+   "departure": "5:00 AM",
+   "service_id": "149214"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Muzaffarpur",
+   "to": "Patna",
+   "departure": "6:40 AM",
+   "service_id": "149217"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Patna",
+   "to": "Sitamarhi",
+   "departure": "7:00 AM",
+   "service_id": "149216"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Raxaul",
+   "to": "Patna",
+   "departure": "8:30 AM",
+   "service_id": "149221"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Raxaul",
+   "to": "Muzaffarpur",
+   "departure": "9:00 AM",
+   "service_id": "149220"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Patna",
+   "to": "Muzaffarpur",
+   "departure": "10:10 AM",
+   "service_id": "149219"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Patna",
+   "to": "Sitamarhi",
+   "departure": "11:00 AM",
+   "service_id": "149218"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Muzaffarpur",
+   "to": "Patna",
+   "departure": "11:30 AM",
+   "service_id": "149210"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Patna",
+   "to": "Raxaul",
+   "departure": "2:00 PM",
+   "service_id": "149211"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Muzaffarpur",
+   "to": "Raxaul",
+   "departure": "2:30 PM",
+   "service_id": "149212"
+  },
+  {
+   "depot": "Muzaffarpur",
+   "from": "Patna",
+   "to": "Muzaffarpur",
+   "departure": "7:00 PM",
+   "service_id": "149223"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "5:25 AM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "5:50 AM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "6:25 AM",
+   "seats": 41,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "7:00 AM",
+   "seats": 53,
+   "raw_extra": "2+3"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "8:15 AM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "8:40 AM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "9:05 AM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Nawada",
+   "to": "Patna",
+   "departure": "10:25 AM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "12:25 PM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "1:25 PM",
+   "seats": 41,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "2:00 PM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "2:15 PM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "3:30 PM",
+   "seats": 53,
+   "raw_extra": "2+3"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "4:00 PM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "4:30 PM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Nawada",
+   "from": "Patna",
+   "to": "Nawada",
+   "departure": "5:30 PM",
+   "seats": 32,
+   "raw_extra": "2+2"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Patna",
+   "to": "Delhi",
+   "departure": "4:00 PM",
+   "service_id": "117805",
+   "bus_type": "2+2/Seater",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Delhi",
+   "to": "Patna",
+   "departure": "5:00 PM",
+   "service_id": "117806",
+   "bus_type": "2+2/Seater",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Delhi",
+   "to": "Kishanganj",
+   "departure": "5:00 PM",
+   "service_id": "117809",
+   "bus_type": "2+2/Seater",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Bihar",
+   "to": "Shariff Delhi",
+   "departure": "12:00 PM",
+   "service_id": "117812",
+   "bus_type": "2+2/Seater",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Delhi",
+   "to": "Bihar Shariff",
+   "departure": "5:00 PM",
+   "service_id": "117813",
+   "bus_type": "2+2/Seater",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Kishanganj",
+   "to": "Delhi",
+   "departure": "11:30 AM",
+   "service_id": "118814",
+   "bus_type": "2+2/Seater",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Patna",
+   "to": "Delhi",
+   "departure": "4:30 PM",
+   "service_id": "117799",
+   "bus_type": "/2+2/Sleeper",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Patna_Volvo.pdf",
+   "from": "Delhi",
+   "to": "Patna",
+   "departure": "4:30 PM",
+   "service_id": "117804",
+   "bus_type": "/2+2/Sleeper",
+   "raw_extra": "29862346, Volvo"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Patna",
+   "to": "Purnea",
+   "departure": "6:30 AM",
+   "service_id": "150091"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bihariganj",
+   "departure": "6:40 AM",
+   "service_id": "150048"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Patna",
+   "departure": "7:30 AM",
+   "service_id": "150087"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Kishanganj",
+   "to": "Siliguri",
+   "departure": "7:30 AM",
+   "service_id": "150092"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bihariganj",
+   "departure": "7:40 AM",
+   "service_id": "150052"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Siliguri",
+   "to": "Kishanganj",
+   "departure": "8:00 AM",
+   "service_id": "150093"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Katihar",
+   "departure": "8:30 AM",
+   "service_id": "150060"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "8:45 AM",
+   "service_id": "150073"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "8:50 AM",
+   "service_id": "150084"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "9:00 AM",
+   "service_id": "150078"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "9:15 AM",
+   "service_id": "150076"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "9:30 AM",
+   "service_id": "150079"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Katihar",
+   "departure": "9:50 AM",
+   "service_id": "150067"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "10:00 AM",
+   "service_id": "150081"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Katihar",
+   "to": "Purnea",
+   "departure": "10:45 AM",
+   "service_id": "150061"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bihariganj",
+   "to": "Purnea",
+   "departure": "12:30 PM",
+   "service_id": "150050"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "12:30 PM",
+   "service_id": "150085"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Katihar",
+   "to": "Purnea",
+   "departure": "12:45 PM",
+   "service_id": "150068"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "12:45 PM",
+   "service_id": "150075"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Katihar",
+   "departure": "1:10 PM",
+   "service_id": "150064"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "1:15 PM",
+   "service_id": "150077"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "1:15 PM",
+   "service_id": "150080"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bihariganj",
+   "to": "Purnea",
+   "departure": "1:30 PM",
+   "service_id": "150054"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bhagalpur",
+   "departure": "1:30 PM",
+   "service_id": "150083"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Bihariganj",
+   "departure": "3:00 PM",
+   "service_id": "150055"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Purnea",
+   "to": "Katihar",
+   "departure": "3:00 PM",
+   "service_id": "150069"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "3:30 PM",
+   "service_id": "150086"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Bhagalpur",
+   "to": "Purnea",
+   "departure": "4:00 PM",
+   "service_id": "150082"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Katihar",
+   "to": "Purnea",
+   "departure": "4:30 PM",
+   "service_id": "150066"
+  },
+  {
+   "depot": "Purnea",
+   "from": "Katihar",
+   "to": "Purnea",
+   "departure": "5:00 PM",
+   "service_id": "150070"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Saharsa",
+   "to": "Birpur",
+   "departure": "6:30 AM",
+   "service_id": "150235"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Saharsa",
+   "to": "Darbhanga",
+   "departure": "7:00 AM",
+   "service_id": "150237"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Patna",
+   "to": "Saharsa",
+   "departure": "9:20 AM",
+   "service_id": "150241"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Saharsa",
+   "to": "Patna",
+   "departure": "10:00 AM",
+   "service_id": "150240"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Birpur",
+   "to": "Saharsa",
+   "departure": "11:20 AM",
+   "service_id": "150236"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Darbhanga",
+   "to": "Saharsa",
+   "departure": "1:40 PM",
+   "service_id": "150238"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Saharsa",
+   "to": "Birpur",
+   "departure": "2:05 PM",
+   "service_id": "150239"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Bhagalpur",
+   "to": "Saharsa",
+   "departure": "2:50 PM",
+   "service_id": "150246"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Saharsa",
+   "to": "Patna",
+   "departure": "7:00 AM",
+   "service_id": "150242"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Patna",
+   "to": "Saharsa",
+   "departure": "10:00 PM",
+   "service_id": "150243"
+  },
+  {
+   "depot": "Saharsa",
+   "from": "Saharsa",
+   "to": "Bhagalpur",
+   "departure": "6:40 AM",
+   "service_id": "150244"
+  }
+ ],
+ "raw_pages": {
+  "Aurangabad": [
+   "Srl No From To Bus Type Total Seat Time\n1 Aurangabad Patna 2+1 32 5:40 AM\n2 Patna Aurangabad 2+1 32 1:20 PM\n3 Aurangabad Patna 2+1 32 7:00 AM\n4 Patna Aurangabad 2+1 32 2:00 PM\n5 Aurangabad Patna 2+1 32 8:30 AM\n6 Patna Aurangabad 2+1 32 3:00 PM\n7 Aurangabad Gaya 2+1 32 5:00 AM\n8 Gaya Aurangabad 2+1 32 8:30 AM\n9 Aurangabad Gaya 2+1 32 12:15 PM\n10 Gaya Aurangabad 2+1 32 11:00 AM\n11 Aurangabad Gaya 2+1 32 7:30 AM\n12 Gaya Aurangabad 2+1 32 3:30 PM\n13 Aurangabad Gaya 2+1 32 2:30 PM\n14 Gaya Aurangabad 2+1 32 6:00 PM"
+  ],
+  "Bankipur(Patna)": [
+   "S.No. From To Bus Type Total Seat Time\n1 Patna Begusarai 2+3/Non AC/Semi Deluxe 53 9:15 AM\n2 Begusarai Patna 2+3/Non AC/Semi Deluxe 53 4:00 PM\n3 Patna Begusarai 2+3/Non AC/Semi Deluxe 53 7:15 AM\n4 Begusarai Patna 2+3/Non AC/Semi Deluxe 53 1:30 PM\n5 Patna Bhabhua 2+3/Non AC/Semi Deluxe 53 8:00 AM\n6 Bhabhua Patna 2+3/Non AC/Semi Deluxe 53 2:00 PM\n7 Patna Bhabhua 2+2/Non AC/Deluxe 41 9:00 AM\n8 Bhabhua Patna 2+2/Non AC/Deluxe 41 3:00 PM\n9 Patna Khagariya 2+2/Non AC/Deluxe 41 8:00 AM\n10 Khagariya Patna 2+2/Non AC/Deluxe 41 5:00 PM\n11 Patna Khagariya 2+2/Non AC/Deluxe 41 6:30 AM\n12 Khagariya Patna 2+2/Non AC/Deluxe 41 3:00 PM\n13 Patna Rajgir 2+2/AC 44 6:30 AM\n14 Rajgir Patna 2+2/AC 44 10:30 AM\n15 Patna Rajgir 2+2/AC 44 2:15 PM\n16 Rajgir Patna 2+2/AC 44 6:15 PM\n17 Patna Rajgir 2+3/Non AC/Semi Deluxe 53 7:30 AM\n18 Rajgir Patna 2+3/Non AC/Semi Deluxe 53 11:30 AM\n19 Patna Rajgir 2+3/Non AC/Semi Deluxe 53 3:30 PM\n20 Rajgir Patna 2+3/Non AC/Semi Deluxe 53 7:30 PM\n21 Patna Bihar Shariff 2+3/Non AC/Semi Deluxe 53 5:30 AM\n22 Bihar Shariff Patna 2+3/Non AC/Semi Deluxe 53 8:05 AM\n23 Patna Bihar Shariff 2+3/Non AC/Semi Deluxe 53 10:40 AM\n24 Bihar Shariff Patna 2+3/Non AC/Semi Deluxe 53 1:15 PM\n25 Patna Buxar 2+2/Non AC/Deluxe 41 7:00 AM\n26 Buxar Patna 2+2/Non AC/Deluxe 41 12:00 PM\n27 Patna Sasaram 2+3/Non AC/Semi Deluxe 53 7:00 AM\n28 Sasaram Patna 2+3/Non AC/Semi Deluxe 53 1:23 PM\n29 Patna Sheikhpura 2+3/Non AC/Semi Deluxe 53 6:30 AM",
+   "S.No. From To Bus Type Total Seat Time\n30 Sheikhpura Patna 2+3/Non AC/Semi Deluxe 53 12:30 PM\n31 Patna Purnea 2+2/AC 44 9:30 PM\n32 Purnea Patna 2+2/AC 44 8:00 PM\n33 Patna Madhepura 2+3/Non AC/Semi Deluxe 53 8:30 PM\n34 Madhepura Patna 2+3/Non AC/Semi Deluxe 53 8:00 PM\n35 Patna Madhepura 2+2/Non AC/Deluxe 41 8:30 PM\n36 Madhepura Patna 2+2/Non AC/Deluxe 41 8:00 PM\n37 Patna Balmikinagar 2+2/AC 44 6:30 AM\n38 Balmikinagar Patna 2+2/AC 44 6:00 AM\n39 Patna Kathmandu 2+2/AC 44 2:10 PM\n40 Kathmandu Patna 2+2/AC 44 8:00 PM\n41 Patna Bettiah 2+2/Non AC/Deluxe 41 9:00 AM\n42 Bettiah Patna 2+2/Non AC/Deluxe 41 8:30 PM\n43 Patna Bettiah 2+3/Non AC/Semi Deluxe 53 6:00 AM\n44 Bettiah Patna 2+3/Non AC/Semi Deluxe 53 2:30 PM\n45 Patna Aurangabad 2+3/Non AC/Semi Deluxe 53 6:30 AM\n46 Aurangabad Patna 2+3/Non AC/Semi Deluxe 53 1:30 PM\n47 Patna Aurangabad 2+3/Non AC/Semi Deluxe 53 7:00 AM\n48 Aurangabad Patna 2+3/Non AC/Semi Deluxe 53 2:15 PM\n49 Patna Samastipur 2+3/Non AC/Semi Deluxe 53 7:00 AM\n50 Samastipur Patna 2+3/Non AC/Semi Deluxe 53 1:00 PM\n51 Patna Samastipur 2+3/Non AC/Semi Deluxe 53 9:00 AM\n52 Samastipur Patna 2+3/Non AC/Semi Deluxe 53 3:00 PM\n53 Patna Katihar 2+2/Non AC/Deluxe 41 8:30 PM\n54 Katihar Patna 2+2/Non AC/Deluxe 41 7:30 PM\n55 Patna Katihar 2+2/AC 44 9:30 PM\n56 Katihar Patna 2+2/AC 44 8:00 PM\n57 Buxar Ghaziabad 2+2/Non AC/Deluxe 41 2:00 PM\n58 Ghaziabad Buxar 2+2/Non AC/Deluxe 41 2:00 PM",
+   "S.No. From To Bus Type Total Seat Time\n2774"
+  ],
+  "Bhagalpur": [
+   "S.No. From To Service Id Time\n1 Bhagalpur Patna 150165 6:30 AM\n2 Bhagalpur Patna 150167 7:00 AM\n3 Bhagalpur Purnea 150172 7:30 AM\n4 Bhagalpur Katihar 150170 7:50 AM\n5 Bhagalpur Purnea 150174 8:15 AM\n6 Bhagalpur Purnea 150176 10:00 AM\n7 Bhagalpur Purnea 150179 10:30 AM\n8 Purnea Bhagalpur 150173 11:30 AM\n9 Purnea Bhagalpur 150175 1:15 PM\n10 Purnea Bhagalpur 150177 3:00 PM\n11 Katihar Bhagalpur 150171 3:30 PM\n12 Purnea Bhagalpur 150180 4:00 PM\n13 Patna Bhagalpur 150166 4:20 PM\n14 Patna Bhagalpur 150168 5:50 PM"
+  ],
+  "Chhapra": [
+   "S.No. From To Service Id Time\n1 Chhapra Patna 149825 5:00 AM\n2 Chhapra Patna 149827 5:30 AM\n3 Chhapra Patna 149829 7:00 AM\n4 Chhapra Patna 149831 7:30 AM\n5 Chhapra Patna 149833 8:00 AM\n6 Chhapra Patna 149835 9:00 AM\n7 Patna Chhapra 149826 3:00 PM\n8 Patna Chhapra 149828 3:30 PM\n9 Patna Chhapra 149830 4:00 PM\n10 Patna Chhapra 149832 4:30 PM\n11 Patna Chhapra 149834 5:30 PM\n12 Patna Chhapra 149836 6:00 PM"
+  ],
+  "Electric_Bus.pdf": [
+   "S.No. From To Division Taging Bus Type Total Seat Dept. Time\n1 Patna Rajgir 20470661, 149182 2+2/Electric 45 8:30 AM\n2 Patna Rajgir 20470661, 149186 2+2/Electric 45 9:30 AM\n3 Rajgir Patna 20470661, 149187 2+2/Electric 45 2:20 PM\n4 Rajgir Patna 20470661, 149189 2+2/Electric 45 4:00 PM\n5 Darbhanga Patna 20470661, 149191 2+2/Electric 45 7:20 AM\n6 Patna Darbhanga 20470661, 149190 2+2/Electric 45 12:30 PM"
+  ],
+  "Gaya": [
+   "Sr.No. From To Time Service Id Total Seat Bank Name Account Number IFSC Details\n1 Gaya Tekari 5:00 AM 149351\n2 Tekari Gaya 5:20 AM 149316\n3 Aurangabad Gaya 5:30 AM 149257\n4 Gaya Aurangabad 5:35 AM 149237\n5 Gaya Dumariya 6:00 AM 149295\n6 Gaya Tekari 6:00 AM 149361\n7 Dumariya Gaya 6:15 AM 149313\n8 Aurangabad Gaya 6:20 AM 149262\n9 Gaya Aurangabad 6:20 AM 149241\n10 Ranchi Gaya 6:30 AM 149382\n11 Gaya Haspura 6:30 AM 149308\n12 Gaya Tekari 6:30 AM 149353\n13 Aurangabad Gaya 6:50 AM 149266\n14 Gaya Guruwa 7:00 AM 149289\n15 Gaya Tekari 7:00 AM 149370\n16 Guruwa Gaya 7:10 AM 149283\n17 Gaya Aurangabad 7:10 AM 149246\n18 Gobindpur Gaya 7:25 AM 149281\n19 Tekari Gaya 7:25 AM 149362\n20 Gaya Tekari 7:40 AM 149317\n21 Gaya Ranchi 8:00 AM 149377\n22 Gaya Aurangabad 8:00 AM 149251\n23 Aurangabad Gaya 8:00 AM 149277\n24 Gaya Tekari 8:50 AM 149365\n25 Tekari Gaya 8:50 AM 149371\n26 Ranchi Gaya 9:00 AM 149385\n27 Gaya Guruwa 9:00 AM 149284\n28 Guruwa Gaya 9:00 AM 149290\n29 Aurangabad Gaya 9:00 AM 149238\n30 Gaya Aurangabad 9:05 AM 149258\n31 Tekari Gaya 9:15 AM 149318\n32 Dumariya Gaya 9:25 AM 149305\n33 Haspura Gaya 9:30 AM 149310\n34 Tekari Gaya 9:30 AM 149354\n35 Aurangabad Gaya 10:10 AM 149242",
+   "Sr.No. From To Time Service Id Total Seat Bank Name Account Number IFSC Details\n36 Gaya Aurangabad 9:45 AM 149263\n37 Tekari Gaya 10:15 AM 149366\n38 Aurangabad Gaya 10:40 AM 149248\n39 Gaya Aurangabad 10:40 AM 149267\n40 Gaya Tekari 10:45 AM 149320\n41 Gaya Guruwa 11:00 AM 149291\n42 Gaya Tekari 11:00 AM 149372\n43 Guruwa Gaya 11:20 AM 149285\n44 Aurangabad Gaya 11:20 AM 149252\n45 Gaya Tekari 11:20 AM 149355\n46 Gaya Aurangabad 11:30 AM 149278\n47 Gaya Ranchi 12:00 PM 149381\n48 Tekari Gaya 12:00 PM 149321\n49 Gaya Gobindpur 12:27 PM 149282\n50 Gaya Haspura 12:30 PM 149311\n51 Aurangabad Gaya 12:40 PM 149260\n52 Gaya Aurangabad 12:45 PM 149239\n53 Tekari Gaya 12:50 PM 149373\n54 Gaya Tekari 12:55 PM 149367\n55 Tekari Gaya 1:00 PM 149358\n56 Gaya Aurangabad 1:15 PM 149244\n57 Gaya Guruwa 1:30 PM 149286\n58 Guruwa Gaya 1:30 PM 149292\n59 Aurangabad Gaya 1:30 PM 149264\n60 Gaya Dumariya 2:00 PM 149306\n61 Aurangabad Gaya 2:05 PM 149268\n62 Aurangabad Gaya 2:05 PM 149275\n63 Gaya Aurangabad 2:15 PM 149249\n64 Aurangabad Gaya 6:45 PM 149255\n65 Gaya Tekari 2:20 PM 149374\n66 Tekari Gaya 2:40 PM 149369\n67 Gaya Aurangabad 2:50 PM 149254\n68 Aurangabad Gaya 3:00 PM 149279\n69 Gaya Dumariya 3:10 PM 149315\n70 Gaya Tekari 3:20 PM 149350",
+   "Sr.No. From To Time Service Id Total Seat Bank Name Account Number IFSC Details\n71 Gaya Tekari 3:20 PM 149322\n72 Guruwa Gaya 3:30 PM 149287\n73 Gaya Guruwa 3:30 PM 149293\n74 Haspura Gaya 3:50 PM 149312\n75 Gaya Aurangabad 4:00 PM 149261\n76 Gaya Tekari 4:00 PM 149360\n77 Tekari Gaya 4:00 PM 149375\n78 Aurangabad Gaya 4:10 PM 149240\n79 Gaya Aurangabad 5:00 PM 149265\n80 Gaya Guruwa 5:30 PM 149288\n81 Guruwa Gaya 5:30 PM 149294\n82 Gaya Aurangabad 5:30 PM 149276\n83 Aurangabad Gaya 5:40 PM 149245\n84 Dumariya Gaya 6:00 PM 149307\n85 Aurangabad Gaya 6:15 PM 149250\n86 Aurangabad Gaya 6:25 PM 149280\n87 Gaya Ranchi 149915 7:00 AM\n88 Gaya Ranchi 149917 8:00 AM\n89 Gaya Ranchi 149919 9:00 AM\n90 Gaya Ranchi 149921 11:00 AM\n91 Gaya Ranchi 149924 12:00 PM\n92 Gaya Ranchi 149926 3:00 PM\n93 Ranchi Gaya 149920 7:30 AM\n94 Ranchi Gaya 149916 8:15 AM\n95 Ranchi Gaya 149918 9:00 AM\n96 Ranchi Gaya 149927 6:30 PM"
+  ],
+  "Motihari": [
+   "S.No. From To Service ID Time\n1 Motihari Patna 149788 6:00 AM\n2 Motihari Patna 149791 6:15 AM\n3 Motihari Raxaul 149793 6:30 AM\n4 Motihari Patna 149795 6:40 AM\n5 Motihari Muzaffarpur 149797 7:00 AM\n6 Muzaffarpur Motihari 149912 7:00 AM\n7 Raxaul Motihari 149909 7:00 AM\n8 Motihari Muzaffarpur 149800 7:30 AM\n9 Patna Motihari 149904 7:30 AM\n10 Motihari Muzaffarpur 149802 8:00 AM\n11 Motihari Patna 149804 8:10 AM\n12 Sahebganj Motihari 149899 8:10 AM\n13 Motihari Muzaffarpur 149880 8:45 AM\n14 Muzaffarpur Motihari 149906 9:00 AM\n15 Motihari Muzaffarpur 149882 9:15 AM\n16 Motihari Muzaffarpur 149884 9:45 AM\n17 Muzaffarpur Motihari 149799 10:00 AM\n18 Motihari Muzaffarpur 149886 10:15 AM\n19 Muzaffarpur Motihari 149801 10:30 AM\n20 Raxaul Motihari 149794 10:30 AM\n21 Motihari Muzaffarpur 149888 10:45 AM\n22 Muzaffarpur Motihari 149803 11:00 AM\n23 Motihari Patna 149890 11:30 AM\n24 Muzaffarpur Motihari 149881 12:00 PM\n25 Motihari Muzaffarpur 149892 12:15 PM\n26 Patna Motihari 149790 12:30 PM\n27 Muzaffarpur Motihari 149883 12:30 PM\n28 Motihari Muzaffarpur 149894 12:45 PM\n29 Muzaffarpur Motihari 149885 1:00 PM\n30 Motihari Muzaffarpur 149896 1:15 PM\n31 Patna Motihari 149792 1:30 PM",
+   "S.No. From To Service ID Time\n32 Muzaffarpur Motihari 149887 1:30 PM\n33 Patna Motihari 149796 2:00 PM\n34 Muzaffarpur Motihari 149889 2:00 PM\n35 Muzaffarpur Motihari 149893 2:30 PM\n36 Motihari Muzaffarpur 149901 2:45 PM\n37 Muzaffarpur Motihari 149895 3:00 PM\n38 Motihari Patna 149903 3:00 PM\n39 Muzaffarpur Motihari 149897 3:30 PM\n40 Motihari Muzaffarpur 149905 3:30 PM\n41 Patna Motihari 149805 4:00 PM\n42 Motihari Sahebganj 149898 4:00 PM\n43 Muzaffarpur Motihari 149902 4:00 PM\n44 Motihari Muzaffarpur 149907 4:00 PM\n45 Motihari Raxaul 149908 4:30 PM\n46 Motihari Muzaffarpur 149910 5:30 PM\n47 Patna Motihari 149891 8:45 PM"
+  ],
+  "Muzaffarpur": [
+   "S.No. From To Time Service ID\n1 Muzaffarpur Patna 5:00 AM 149214\n2 Muzaffarpur Patna 6:40 AM 149217\n3 Patna Sitamarhi 7:00 AM 149216\n4 Raxaul Patna 8:30 AM 149221\n5 Raxaul Muzaffarpur 9:00 AM 149220\n6 Patna Muzaffarpur 10:10 AM 149219\n7 Patna Sitamarhi 11:00 AM 149218\n8 Muzaffarpur Patna 11:30 AM 149210\n9 Patna Raxaul 2:00 PM 149211\n10 Muzaffarpur Raxaul 2:30 PM 149212\n11 Patna Muzaffarpur 7:00 PM 149223"
+  ],
+  "Nawada": [
+   "S.No. From To Bus Type Total Seat Time\n1 Nawada Patna 2+2 32 5:25 AM\n2 Nawada Patna 2+2 32 5:50 AM\n3 Nawada Patna 2+2 41 6:25 AM\n4 Nawada Patna 2+3 53 7:00 AM\n5 Nawada Patna 2+2 32 8:15 AM\n6 Nawada Patna 2+2 32 8:40 AM\n7 Nawada Patna 2+2 32 9:05 AM\n8 Nawada Patna 2+2 32 10:25 AM\n9 Patna Nawada 2+2 32 12:25 PM\n10 Patna Nawada 2+2 41 1:25 PM\n11 Patna Nawada 2+2 32 2:00 PM\n12 Patna Nawada 2+2 32 2:15 PM\n13 Patna Nawada 2+3 53 3:30 PM\n14 Patna Nawada 2+2 32 4:00 PM\n15 Patna Nawada 2+2 32 4:30 PM\n16 Patna Nawada 2+2 32 5:30 PM\n572"
+  ],
+  "Patna_Volvo.pdf": [
+   "Srl No From To Division Taging Bus Type Dept. Time\n1 Patna Delhi 29862346, 117805 Volvo 2+2/Seater 4:00 PM\n2 Delhi Patna 29862346, 117806 Volvo 2+2/Seater 5:00 PM\n3 Delhi Kishanganj 29862346, 117809 Volvo 2+2/Seater 5:00 PM\n4 Bihar Shariff Delhi 29862346, 117812 Volvo 2+2/Seater 12:00 PM\n5 Delhi Bihar Shariff 29862346, 117813 Volvo 2+2/Seater 5:00 PM\n6 Kishanganj Delhi 29862346, 118814 Volvo 2+2/Seater 11:30 AM\n7 Patna Delhi 29862346, 117799 Volvo /2+2/Sleeper 4:30 PM\n8 Delhi Patna 29862346, 117804 Volvo /2+2/Sleeper 4:30 PM"
+  ],
+  "Purnea": [
+   "S.No. From To Service Id Time Total Seat\n1 Patna Purnea 150091 6:30 AM\n2 Purnea Bihariganj 150048 6:40 AM\n3 Purnea Patna 150087 7:30 AM\n4 Kishanganj Siliguri 150092 7:30 AM\n5 Purnea Bihariganj 150052 7:40 AM\n6 Siliguri Kishanganj 150093 8:00 AM\n7 Purnea Katihar 150060 8:30 AM\n8 Purnea Bhagalpur 150073 8:45 AM\n9 Bhagalpur Purnea 150084 8:50 AM\n10 Purnea Bhagalpur 150078 9:00 AM\n11 Purnea Bhagalpur 150076 9:15 AM\n12 Purnea Bhagalpur 150079 9:30 AM\n13 Purnea Katihar 150067 9:50 AM\n14 Purnea Bhagalpur 150081 10:00 AM\n15 Katihar Purnea 150061 10:45 AM\n16 Bihariganj Purnea 150050 12:30 PM\n17 Purnea Bhagalpur 150085 12:30 PM\n18 Katihar Purnea 150068 12:45 PM\n19 Bhagalpur Purnea 150075 12:45 PM\n20 Purnea Katihar 150064 1:10 PM\n21 Bhagalpur Purnea 150077 1:15 PM\n22 Bhagalpur Purnea 150080 1:15 PM\n23 Bihariganj Purnea 150054 1:30 PM\n24 Purnea Bhagalpur 150083 1:30 PM\n25 Purnea Bihariganj 150055 3:00 PM\n26 Purnea Katihar 150069 3:00 PM\n27 Bhagalpur Purnea 150086 3:30 PM\n28 Bhagalpur Purnea 150082 4:00 PM\n29 Katihar Purnea 150066 4:30 PM\n30 Katihar Purnea 150070 5:00 PM"
+  ],
+  "Saharsa": [
+   "S. No. From To Service Id Time\n1 Saharsa Birpur 150235 6:30 AM\n2 Saharsa Darbhanga 150237 7:00 AM\n3 Patna Saharsa 150241 9:20 AM\n4 Saharsa Patna 150240 10:00 AM\n5 Birpur Saharsa 150236 11:20 AM\n6 Darbhanga Saharsa 150238 1:40 PM\n7 Saharsa Birpur 150239 2:05 PM\n8 Bhagalpur Saharsa 150246 2:50 PM\n9 Saharsa Patna 150242 7:00 AM\n10 Patna Saharsa 150243 10:00 PM\n11 Saharsa Bhagalpur 150244 6:40 AM"
+  ]
+ },
+ "sha256": "d7fc8ab0a6dfda64"
+}
