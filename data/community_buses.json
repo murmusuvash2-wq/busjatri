@@ -3713,6 +3713,168 @@
      "down_time": "3:15 PM"
     }
    ]
+  },
+  {
+   "target_id": "bussathi-tanima-810",
+   "origin": "Kolkata (Chandpal)",
+   "destination": "Contai",
+   "departure_time": "8:35 AM",
+   "arrival_time": "12:45 PM",
+   "route": "Kolkata (Chandpal) - Contai",
+   "contact_number": "8967633936, 7001548338",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Chandpal",
+     "up_time": "8:35 AM",
+     "down_time": "8:00 PM"
+    },
+    {
+     "no": 2,
+     "name": "Rohini",
+     "up_time": "9:40 AM",
+     "down_time": "6:55 PM"
+    },
+    {
+     "no": 3,
+     "name": "Kultikri",
+     "up_time": "10:00 AM",
+     "down_time": "6:35 PM"
+    },
+    {
+     "no": 4,
+     "name": "Keshiari",
+     "up_time": "10:40 AM",
+     "down_time": "5:55 PM"
+    },
+    {
+     "no": 5,
+     "name": "Belda",
+     "up_time": "11:15 AM",
+     "down_time": "5:20 PM"
+    },
+    {
+     "no": 6,
+     "name": "Khakurda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Egra",
+     "up_time": "12:00 PM",
+     "down_time": "4:35 PM"
+    },
+    {
+     "no": 8,
+     "name": "Contai",
+     "up_time": "12:45 PM",
+     "down_time": "3:50 PM"
+    }
+   ]
+  },
+  {
+   "target_id": "bussathi-basundhara-120",
+   "contact_number": "7595824650",
+   "departure_time": "7:30 AM",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Shyambazar",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "7:50 AM",
+     "down_time": "6:55 PM"
+    },
+    {
+     "no": 3,
+     "name": "Dakshineswar",
+     "up_time": "8:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Bally",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dankuni",
+     "up_time": "8:20 AM",
+     "down_time": "6:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Chanditala",
+     "up_time": "8:35 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 7,
+     "name": "Mosat",
+     "up_time": "8:50 AM",
+     "down_time": "6:05 PM"
+    },
+    {
+     "no": 8,
+     "name": "Siakhala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Champadanga",
+     "up_time": "9:30 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 10,
+     "name": "Mayapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Arambagh",
+     "up_time": "10:25 AM",
+     "down_time": "4:45 PM"
+    },
+    {
+     "no": 12,
+     "name": "Bengai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Khatul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Kotulpur",
+     "up_time": "11:20 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "no": 15,
+     "name": "Joypur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bishnupur",
+     "up_time": "12:25 PM",
+     "down_time": "2:35 PM"
+    }
+   ]
   }
  ]
 }

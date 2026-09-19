@@ -25304,22 +25304,22 @@
    "bus_type": "Private - NON AC",
    "origin": "Shyambazar",
    "destination": "Bishnupur",
-   "departure_time": "7:35 AM",
+   "departure_time": "7:30 AM",
    "arrival_time": "12:25 PM",
-   "contact_number": "8013445577",
+   "contact_number": "7595824650",
    "depot_name": "Shyambazar",
    "route": "Shyambazar - Bishnupur",
    "stoppages": [
     {
      "no": 1,
      "name": "Shyambazar",
-     "up_time": "7:35 AM",
+     "up_time": "7:30 AM",
      "down_time": ""
     },
     {
      "no": 2,
      "name": "Dunlop",
-     "up_time": "7:55 AM",
+     "up_time": "7:50 AM",
      "down_time": "6:55 PM"
     },
     {
@@ -25337,7 +25337,7 @@
     {
      "no": 5,
      "name": "Dankuni",
-     "up_time": "8:25 AM",
+     "up_time": "8:20 AM",
      "down_time": "6:25 PM"
     },
     {
@@ -25373,7 +25373,7 @@
     {
      "no": 11,
      "name": "Arambagh",
-     "up_time": "10:15 AM",
+     "up_time": "10:25 AM",
      "down_time": "4:45 PM"
     },
     {
@@ -92469,55 +92469,61 @@
    "reg_no": "WB490684",
    "operator": "GHOSH MOTORS",
    "bus_type": "Private - NON AC",
-   "origin": "Rohini",
+   "origin": "Kolkata (Chandpal)",
    "destination": "Contai",
-   "departure_time": "9:35 AM",
+   "departure_time": "8:35 AM",
    "arrival_time": "12:45 PM",
-   "contact_number": "8967633936",
+   "contact_number": "8967633936, 7001548338",
    "depot_name": "Rohini",
-   "route": "Rohini - Contai",
+   "route": "Kolkata (Chandpal) - Contai",
    "stoppages": [
     {
      "no": 1,
-     "name": "Rohini",
-     "up_time": "9:35 AM",
-     "down_time": "6:50 PM"
+     "name": "Chandpal",
+     "up_time": "8:35 AM",
+     "down_time": "8:00 PM"
     },
     {
      "no": 2,
-     "name": "Kultikri",
-     "up_time": "",
-     "down_time": ""
+     "name": "Rohini",
+     "up_time": "9:40 AM",
+     "down_time": "6:55 PM"
     },
     {
      "no": 3,
-     "name": "Keshiary",
-     "up_time": "10:35 AM",
-     "down_time": "5:50 PM"
+     "name": "Kultikri",
+     "up_time": "10:00 AM",
+     "down_time": "6:35 PM"
     },
     {
      "no": 4,
-     "name": "Belda",
-     "up_time": "11:05 AM",
-     "down_time": "5:15 PM"
+     "name": "Keshiari",
+     "up_time": "10:40 AM",
+     "down_time": "5:55 PM"
     },
     {
      "no": 5,
+     "name": "Belda",
+     "up_time": "11:15 AM",
+     "down_time": "5:20 PM"
+    },
+    {
+     "no": 6,
      "name": "Khakurda",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 6,
+     "no": 7,
      "name": "Egra",
-     "up_time": "12:05 PM",
-     "down_time": "4:20 PM"
+     "up_time": "12:00 PM",
+     "down_time": "4:35 PM"
     },
     {
-     "no": 7,
+     "no": 8,
      "name": "Contai",
      "up_time": "12:45 PM",
-     "down_time": "3:20 PM"
+     "down_time": "3:50 PM"
     }
    ],
    "source": "bussathi.in",
