@@ -1,0 +1,39 @@
+name: Perf fix index
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply index.html perf patch
+        run: python3 scripts/patch_perf_index.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          s = open('index.html', encoding='utf-8').read()
+          assert s.count('busjatri-ux-polish') == 1, 'inline style block count != 1'
+          assert 'media="print" onload' in s, 'async fonts missing'
+          assert '<html' in s and '</html>' in s, 'html broken'
+          assert 'https://fonts.googleapis.com/css2' in s, 'fonts link missing'
+          print('index.html OK')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Perf: load Google Fonts async, remove duplicate inline CSS (index.html)"
+            git push
+          fi
