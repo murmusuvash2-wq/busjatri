@@ -129,6 +129,24 @@ textarea.code{font-family:'JetBrains Mono',monospace;font-size:12.5px;line-heigh
 .spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;display:inline-block;vertical-align:-3px}
 @keyframes sp{to{transform:rotate(360deg)}}
 .kbd{font-family:'JetBrains Mono',monospace;font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid var(--line2);border-radius:6px;padding:2px 7px}
+.iconbtn{background:var(--panel2);border:1px solid var(--line2);border-radius:10px;color:var(--text);width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:16px;transition:background .15s}
+.iconbtn:hover{background:rgba(127,140,180,.25)}
+
+/* ---------- LIGHT THEME ---------- */
+body[data-theme="light"]{--bg:#eef1f8;--bg2:#e4e9f4;--panel:rgba(255,255,255,.8);--panel2:rgba(30,41,66,.06);
+  --line:rgba(30,41,66,.12);--line2:rgba(30,41,66,.22);--text:#1c2434;--muted:#5b6577;--muted2:#8a92a5;
+  --shadow:0 8px 32px rgba(40,55,100,.14)}
+body[data-theme="light"]::before{background:
+ radial-gradient(900px 500px at 85% -10%,rgba(99,102,241,.09),transparent 60%),
+ radial-gradient(700px 500px at -10% 110%,rgba(34,211,238,.07),transparent 60%)}
+body[data-theme="light"] input,body[data-theme="light"] textarea,body[data-theme="light"] select{background:rgba(255,255,255,.9)}
+body[data-theme="light"] .sidebar{background:rgba(255,255,255,.94);border-color:rgba(30,41,66,.12)}
+body[data-theme="light"] .topbar{background:rgba(255,255,255,.75)}
+body[data-theme="light"] .scrollbox thead th{background:#e6ebf7}
+body[data-theme="light"] .toast{background:#ffffff;color:#1c2434}
+body[data-theme="light"] .modal-card{background:#ffffff}
+body[data-theme="light"] .nav-item.active{color:#3730a3}
+body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
 </style>
 </head>
 <body>
@@ -171,6 +189,7 @@ textarea.code{font-family:'JetBrains Mono',monospace;font-size:12.5px;line-heigh
       <button class="burger" id="burger">☰</button>
       <div><div class="crumb" id="crumb">BusJatri Admin</div><h2 id="viewTitle">Dashboard</h2></div>
       <div style="flex:1"></div>
+      <button class="iconbtn" id="themeBtn" title="Dark / Light toggle">☀️</button>
       <span class="tag g" id="connTag" style="display:none">● Live</span>
     </div>
 
@@ -568,6 +587,19 @@ $('#loginBtn').onclick=()=>doLogin($('#tok').value.trim(),$('#repo').value.trim(
 $('#tok').addEventListener('keydown',e=>{if(e.key==='Enter')$('#loginBtn').click()});
 const t=localStorage.getItem(LS.tok),r=localStorage.getItem(LS.repo)||'murmusuvash2-wq/busjatri';
 if(t){$('#tok').value=t;$('#repo').value=r;doLogin(t,r)}else{$('#repo').value=r}
+
+/* ---------- theme toggle ---------- */
+(function(){
+  const KEY='bj_admin_theme';
+  function apply(th){
+    document.body.dataset.theme=th;
+    const b=document.getElementById('themeBtn');
+    if(b)b.textContent=th==='light'?'🌙':'☀️';
+    try{localStorage.setItem(KEY,th)}catch(e){}
+  }
+  document.getElementById('themeBtn').onclick=()=>apply(document.body.dataset.theme==='light'?'dark':'light');
+  apply((function(){try{return localStorage.getItem(KEY)||'dark'}catch(e){return 'dark'}})());
+})();
 </script>
 </body>
 </html>
