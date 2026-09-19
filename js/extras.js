@@ -81,23 +81,78 @@ function sendContact() {
   window.location.href = url;
 }
 
-/* ---------- Report Time — on bus detail pages ---------- */
+/* ---------- Report Time — on bus detail pages ----------
+   Submits to a Google Form (config below); until the form is wired,
+   falls back to email. Reports flow into data/time-reports.json via
+   the fetch-reports workflow and appear in the admin panel. */
+var REPORT_FORM = {
+  action: "",
+  entries: { bus: "", reg: "", route: "", current: "", time: "", note: "", page: "", bus_id: "" },
+  fallbackEmail: "busjatri@zohomail.in"
+};
+var REPORT_CTX = null;
 function toggleReport(btn) {
-  var form = document.getElementById("reportForm");
-  if (!form) return;
-  var showing = form.classList.toggle("show");
-  if (btn) btn.style.display = showing ? "none" : "inline-flex";
+  var existing = document.getElementById("bjReportForm");
+  if (existing) { existing.remove(); return; }
+  REPORT_CTX = {
+    id: btn.getAttribute("data-id") || "",
+    bus: btn.getAttribute("data-bus") || "",
+    reg: btn.getAttribute("data-reg") || "",
+    org: btn.getAttribute("data-org") || "",
+    dest: btn.getAttribute("data-dest") || "",
+    dep: btn.getAttribute("data-dep") || ""
+  };
+  var f = document.createElement("div");
+  f.className = "report-form show";
+  f.id = "bjReportForm";
+  var bn = document.body.classList.contains("lang-bn");
+  f.innerHTML =
+    '<div class="rf-title">' + (bn ? "সময় ভুল? সঠিক সময় দিন:" : "Time galat hai? Sahi time batayein:") + '</div>' +
+    '<div class="rf-row">' +
+      '<input type="time" id="bjReportTime" aria-label="Correct time">' +
+      '<input type="text" id="bjReportNote" placeholder="Note (optional)" maxlength="140">' +
+      '<button class="rf-send" onclick="submitReport()">Send</button>' +
+    '</div>' +
+    '<div class="rf-done" id="bjReportDone">\u2713 ' + (bn ? "ধন্যবাদ! রিপোর্ট পাঠানো হয়েছে।" : "Dhanyavaad! Report team ko mil gaya.") + '</div>';
+  var row = btn.closest(".wa-row");
+  if (row && row.parentNode) row.parentNode.insertBefore(f, row.nextSibling);
+  var t = document.getElementById("bjReportTime"); if (t) t.focus();
 }
 function submitReport() {
-  var form = document.getElementById("reportForm");
-  var done = document.getElementById("reportDone");
-  var t = (document.getElementById("reportTime") || {}).value || "";
-  if (!t) { alert("Please enter the correct time."); return; }
-  if (form) form.classList.remove("show");
-  if (done) done.classList.add("show");
-  /* Time corrections go to the team via email */
-  var msg = "BusJatri time correction:\n" + document.title + "\nCorrect time: " + t;
-  window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+  var inp = document.getElementById("bjReportTime");
+  if (!inp || !inp.value) { alert("Please enter the correct time"); return; }
+  var parts = inp.value.split(":"); var h = parseInt(parts[0], 10); var m = parts[1];
+  var ap = h >= 12 ? "PM" : "AM"; var h12 = h % 12 || 12;
+  var timeStr = h12 + ":" + m + " " + ap;
+  var c = REPORT_CTX || {};
+  var note = (document.getElementById("bjReportNote") || {}).value || "";
+  var payload = {
+    bus: c.bus, reg: c.reg, route: (c.org || "") + " \u21c4 " + (c.dest || ""),
+    current: c.dep, time: timeStr, note: note,
+    page: location.href, bus_id: c.id
+  };
+  var done = function () {
+    var d = document.getElementById("bjReportDone");
+    if (d) d.style.display = "block";
+    var r = document.getElementById("bjReportForm");
+    if (r) { var rw = r.querySelector(".rf-row"); if (rw) rw.style.display = "none"; }
+  };
+  if (REPORT_FORM.action && REPORT_FORM.entries.time) {
+    var body = new URLSearchParams();
+    Object.keys(payload).forEach(function (k) {
+      if (REPORT_FORM.entries[k]) body.append(REPORT_FORM.entries[k], payload[k]);
+    });
+    fetch(REPORT_FORM.action, { method: "POST", mode: "no-cors", body: body }).then(done, done);
+  } else {
+    var msg = "BusJatri time report:\nBus: " + payload.bus + (payload.reg ? " (" + payload.reg + ")" : "") +
+      "\nRoute: " + payload.route + "\nCurrent time: " + (payload.current || "-") +
+      "\nCorrect time: " + payload.time + (payload.note ? "\nNote: " + payload.note : "") +
+      "\nPage: " + payload.page + "\nBus ID: " + payload.bus_id;
+    window.location.href = "mailto:" + REPORT_FORM.fallbackEmail +
+      "?subject=" + encodeURIComponent("[Time Report] " + payload.bus) +
+      "&body=" + encodeURIComponent(msg);
+    done();
+  }
 }
 
 /* ---------- Admin Dashboard (demo actions) ---------- */

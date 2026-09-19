@@ -201,3 +201,11 @@ body.lang-bn .route-chip{letter-spacing:0}
 /* Mobile audit fixes 18 Sept 2026: destination cards must not clip text */
 .place-card .name { overflow-wrap: anywhere; }
 .place-card .place-tag { white-space: normal; max-width: 100%; }
+
+/* Report time form (bus detail pages) */
+.rf-title{font-size:13px;font-weight:700;color:var(--ink);margin-bottom:8px}
+.rf-row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.rf-row input[type=time]{padding:8px 10px;border:1px solid var(--line-strong);border-radius:8px;background:var(--surface);color:var(--ink);font-family:var(--font-mono);font-size:14px;font-weight:700;min-height:42px}
+.rf-row input[type=text]{flex:1;min-width:150px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:13px;min-height:42px}
+.rf-send{background:var(--amber);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-weight:700;font-size:13px;cursor:pointer;min-height:42px}
+.rf-done{display:none;margin-top:8px;font-size:13px;font-weight:600;color:#1a7f37}
