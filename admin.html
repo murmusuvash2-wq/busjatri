@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>BusJatri Admin — Management Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e1a; --bg2:#0d1222; --panel:rgba(255,255,255,.045); --panel2:rgba(255,255,255,.07);
+  --line:rgba(255,255,255,.09); --line2:rgba(255,255,255,.16);
+  --text:#e8edf7; --muted:#8b94a8; --muted2:#5d6577;
+  --acc:#6366f1; --acc2:#22d3ee; --grad:linear-gradient(135deg,#6366f1,#22d3ee);
+  --ok:#34d399; --warn:#fbbf24; --bad:#f87171;
+  --r:14px; --shadow:0 8px 32px rgba(0,0,0,.45);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%}
+body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background:
+ radial-gradient(900px 500px at 85% -10%,rgba(99,102,241,.16),transparent 60%),
+ radial-gradient(700px 500px at -10% 110%,rgba(34,211,238,.10),transparent 60%);pointer-events:none;z-index:0}
+a{color:var(--acc2);text-decoration:none}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* ---------- LOGIN ---------- */
+#login{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:50;background:var(--bg)}
+.login-card{width:min(420px,92vw);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:40px 36px;backdrop-filter:blur(20px);box-shadow:var(--shadow);position:relative;z-index:1}
+.login-logo{display:flex;align-items:center;gap:12px;justify-content:center;margin-bottom:6px}
+.logo-mark{width:44px;height:44px;border-radius:12px;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:20px;color:#fff;box-shadow:0 6px 18px rgba(99,102,241,.45)}
+.login-card h1{font-size:20px;font-weight:700;text-align:center}
+.login-card p.sub{color:var(--muted);font-size:13px;text-align:center;margin:6px 0 26px}
+.login-card label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin:14px 0 7px;letter-spacing:.04em;text-transform:uppercase}
+input,textarea,select{width:100%;background:rgba(0,0,0,.35);border:1px solid var(--line2);border-radius:10px;color:var(--text);font-family:inherit;font-size:14px;padding:11px 13px;outline:none;transition:border .15s,box-shadow .15s}
+input:focus,textarea:focus,select:focus{border-color:var(--acc);box-shadow:0 0 0 3px rgba(99,102,241,.18)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:none;border-radius:10px;padding:11px 18px;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;transition:transform .12s,opacity .15s,background .15s}
+.btn:active{transform:scale(.98)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 6px 20px rgba(99,102,241,.35)}
+.btn-primary:hover{filter:brightness(1.08)}
+.btn-ghost{background:var(--panel2);color:var(--text);border:1px solid var(--line2)}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-danger{background:rgba(248,113,113,.14);color:var(--bad);border:1px solid rgba(248,113,113,.35)}
+.btn-sm{padding:7px 12px;font-size:12.5px;border-radius:8px}
+.w100{width:100%}
+.hint{font-size:12px;color:var(--muted2);margin-top:8px;line-height:1.5}
+.err-box{background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.35);color:var(--bad);font-size:13px;border-radius:10px;padding:10px 13px;margin-top:14px;display:none}
+
+/* ---------- SHELL ---------- */
+#app{display:none;min-height:100vh;position:relative;z-index:1}
+.shell{display:grid;grid-template-columns:242px 1fr;min-height:100vh}
+@media(max-width:860px){.shell{grid-template-columns:1fr}.sidebar{position:fixed;left:-280px;transition:left .25s;z-index:40}.sidebar.open{left:0}.main{margin-left:0}}
+.sidebar{background:rgba(10,14,26,.92);border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:4px;backdrop-filter:blur(16px)}
+.brand{display:flex;align-items:center;gap:10px;padding:6px 10px 20px;font-weight:800;font-size:17px}
+.brand small{display:block;font-size:10px;font-weight:500;color:var(--muted2);letter-spacing:.12em}
+.nav-item{display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:10px;color:var(--muted);font-size:13.5px;font-weight:600;cursor:pointer;transition:all .15s;border:1px solid transparent}
+.nav-item svg{width:17px;height:17px;flex:none;opacity:.85}
+.nav-item:hover{color:var(--text);background:var(--panel)}
+.nav-item.active{color:#fff;background:linear-gradient(135deg,rgba(99,102,241,.22),rgba(34,211,238,.13));border-color:rgba(99,102,241,.35)}
+.nav-sep{margin:14px 8px 8px;font-size:10px;letter-spacing:.14em;color:var(--muted2);text-transform:uppercase}
+.sidebar .spacer{flex:1}
+.side-user{display:flex;align-items:center;gap:10px;padding:10px;border-top:1px solid var(--line);margin-top:10px}
+.avatar{width:34px;height:34px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;color:#fff}
+.side-user .nm{font-size:13px;font-weight:600;line-height:1.2}
+.side-user .rl{font-size:11px;color:var(--muted2)}
+.main{display:flex;flex-direction:column;min-width:0}
+.topbar{display:flex;align-items:center;gap:14px;padding:16px 28px;border-bottom:1px solid var(--line);background:rgba(10,14,26,.6);backdrop-filter:blur(14px);position:sticky;top:0;z-index:20}
+.topbar h2{font-size:17px;font-weight:700}
+.topbar .crumb{font-size:12px;color:var(--muted2)}
+.burger{display:none;background:none;border:1px solid var(--line2);border-radius:8px;color:var(--text);font-size:18px;padding:6px 11px;cursor:pointer}
+@media(max-width:860px){.burger{display:block}}
+.content{padding:28px;max-width:1100px;width:100%}
+
+/* ---------- CARDS / STATS ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:22px;backdrop-filter:blur(10px)}
+.card h3{font-size:15px;font-weight:700;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:26px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:20px;position:relative;overflow:hidden}
+.stat::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:.7}
+.stat .lbl{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.stat .val{font-size:30px;font-weight:800;margin-top:6px;font-family:'JetBrains Mono',monospace}
+.stat .sub{font-size:12px;color:var(--muted2);margin-top:3px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}}
+
+/* ---------- SEARCH / TABLES ---------- */
+.searchbar{display:flex;gap:10px;margin-bottom:16px}
+.searchbar input{flex:1}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th{text-align:left;padding:10px 12px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted2);border-bottom:1px solid var(--line2)}
+td{padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:middle}
+tr.rowlink{cursor:pointer;transition:background .12s}
+tr.rowlink:hover{background:var(--panel2)}
+.tag{display:inline-block;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:600;background:rgba(99,102,241,.16);color:#a5b4fc;border:1px solid rgba(99,102,241,.3)}
+.tag.g{background:rgba(52,211,153,.12);color:var(--ok);border-color:rgba(52,211,153,.3)}
+.dirty{background:rgba(251,191,36,.07)}
+.dirty input{border-color:rgba(251,191,36,.55)}
+input.tcell{font-family:'JetBrains Mono',monospace;font-size:12.5px;padding:7px 9px;text-align:center}
+.bus-head{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-bottom:18px;padding:18px;border-radius:var(--r);background:linear-gradient(135deg,rgba(99,102,241,.13),rgba(34,211,238,.07));border:1px solid var(--line2)}
+.bus-head .bn{font-size:19px;font-weight:800}
+.bus-head .meta{font-size:12.5px;color:var(--muted)}
+.empty{padding:40px;text-align:center;color:var(--muted2);font-size:13.5px}
+.scrollbox{max-height:430px;overflow:auto;border-radius:12px;border:1px solid var(--line)}
+.scrollbox table{margin:0}
+.scrollbox thead th{position:sticky;top:0;background:#101628;z-index:2}
+
+/* ---------- EDITOR ---------- */
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:6px;letter-spacing:.03em}
+textarea.code{font-family:'JetBrains Mono',monospace;font-size:12.5px;line-height:1.6;min-height:340px;resize:vertical}
+.actions{display:flex;gap:10px;margin-top:18px;flex-wrap:wrap}
+
+/* ---------- BLOG ---------- */
+.post-row td .pt{font-weight:600}
+.post-row td .pe{color:var(--muted2);font-size:12px;margin-top:2px}
+
+/* ---------- TOAST / MODAL ---------- */
+#toasts{position:fixed;bottom:22px;right:22px;z-index:100;display:flex;flex-direction:column;gap:10px}
+.toast{background:#111830;border:1px solid var(--line2);border-left:3px solid var(--acc);border-radius:12px;padding:13px 18px;font-size:13.5px;box-shadow:var(--shadow);min-width:260px;animation:tin .25s ease}
+.toast.ok{border-left-color:var(--ok)} .toast.err{border-left-color:var(--bad)}
+@keyframes tin{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+#modal{position:fixed;inset:0;background:rgba(5,8,16,.72);backdrop-filter:blur(4px);z-index:90;display:none;align-items:center;justify-content:center}
+#modal.show{display:flex}
+.modal-card{width:min(440px,92vw);background:#0f1526;border:1px solid var(--line2);border-radius:16px;padding:26px;box-shadow:var(--shadow)}
+.modal-card h3{font-size:16px;margin-bottom:8px}
+.modal-card p{color:var(--muted);font-size:13.5px;line-height:1.55;margin-bottom:20px}
+.spin{width:15px;height:15px;border:2px solid rgba(255,255,255,.25);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;display:inline-block;vertical-align:-3px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.kbd{font-family:'JetBrains Mono',monospace;font-size:11.5px;background:rgba(255,255,255,.08);border:1px solid var(--line2);border-radius:6px;padding:2px 7px}
+</style>
+</head>
+<body>
+
+<!-- ================= LOGIN ================= -->
+<div id="login">
+  <div class="login-card">
+    <div class="login-logo"><div class="logo-mark">B</div></div>
+    <h1>BusJatri Admin</h1>
+    <p class="sub">Management panel — bus times & blog</p>
+    <label>GitHub Access Token</label>
+    <input id="tok" type="password" placeholder="github_pat_… (fine-grained, Contents: Read & Write)" autocomplete="off">
+    <label>Repository</label>
+    <input id="repo" value="murmusuvash2-wq/busjatri" spellcheck="false">
+    <div class="err-box" id="loginErr"></div>
+    <button class="btn btn-primary w100" id="loginBtn" style="margin-top:20px">Connect</button>
+    <div class="hint">Token sirf is browser mein save hota hai (localStorage), kahin upload nahi hota.<br>
+    Banane ke liye: GitHub → Settings → Developer settings → Fine-grained tokens → Repository access: <span class="kbd">busjatri</span>, permission: <b>Contents: Read & Write</b> (+ Actions: Write, agar rebuild button chahiye).</div>
+  </div>
+</div>
+
+<!-- ================= APP ================= -->
+<div id="app">
+ <div class="shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="logo-mark" style="width:34px;height:34px;font-size:15px">B</div><div>BusJatri<small>ADMIN PANEL</small></div></div>
+    <div class="nav-item active" data-view="dash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dashboard</div>
+    <div class="nav-sep">Manage</div>
+    <div class="nav-item" data-view="buses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="13" height="10" rx="2"/><path d="M16 9h3l2 3v4h-5z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>Bus Times</div>
+    <div class="nav-item" data-view="blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13l3 3v13H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Blog</div>
+    <div class="nav-sep">System</div>
+    <div class="nav-item" data-view="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6A7 7 0 0 0 19 12z"/></svg>Settings</div>
+    <div class="spacer"></div>
+    <div class="side-user"><div class="avatar" id="avatar">?</div><div><div class="nm" id="uname">…</div><div class="rl" id="urepo">…</div></div></div>
+    <div class="nav-item" id="logout" style="color:var(--bad)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5M21 12H9"/></svg>Logout</div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <button class="burger" id="burger">☰</button>
+      <div><div class="crumb" id="crumb">BusJatri Admin</div><h2 id="viewTitle">Dashboard</h2></div>
+      <div style="flex:1"></div>
+      <span class="tag g" id="connTag" style="display:none">● Live</span>
+    </div>
+
+    <div class="content" id="content">
+      <!-- DASHBOARD -->
+      <section id="view-dash" class="view">
+        <div class="stats">
+          <div class="stat"><div class="lbl">Total Buses</div><div class="val" id="stBuses">—</div><div class="sub">data/app-index.json</div></div>
+          <div class="stat"><div class="lbl">Time Overrides</div><div class="val" id="stOvr">—</div><div class="sub">data/time-overrides.json</div></div>
+          <div class="stat"><div class="lbl">Blog Posts</div><div class="val" id="stBlog">—</div><div class="sub">data/blog-manifest.json</div></div>
+          <div class="stat"><div class="lbl">Repo</div><div class="val" style="font-size:15px;line-height:1.7;margin-top:10px" id="stRepo">—</div><div class="sub">github.com</div></div>
+        </div>
+        <div class="grid2">
+          <div class="card"><h3>⏱ Recent Time Overrides</h3><div id="ovrList" class="empty">Loading…</div></div>
+          <div class="card"><h3>⚡ Quick Actions</h3>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <button class="btn btn-primary" onclick="go('buses')">Fix a Bus Time</button>
+              <button class="btn btn-ghost" onclick="go('blog')">Write a Blog Post</button>
+              <button class="btn btn-ghost" id="rebuildBtn">↻ Rebuild & Publish Site</button>
+              <div class="hint">Rebuild workflow SEO pages + app data regenerate karta hai. Sirf zaroorat pe chalayein — normally runtime overrides turant live hote hain.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUS TIMES -->
+      <section id="view-buses" class="view" style="display:none">
+        <div class="card" id="busSearchCard">
+          <h3>🔍 Search Bus</h3>
+          <div class="searchbar">
+            <input id="busQ" placeholder="Bus name, registration number, ya route likhein… (jaise: BHARAT LAXMI / WB67C2286 / Manihara)">
+          </div>
+          <div class="scrollbox" style="display:none" id="busResultsBox">
+            <table><thead><tr><th>Bus</th><th>Reg No</th><th>Route</th><th>Departs</th><th></th></tr></thead><tbody id="busResults"></tbody></table>
+          </div>
+          <div class="empty" id="busSearchHint">4,000+ buses mein search karein — naam, number ya stoppage.</div>
+        </div>
+        <div class="card" id="busEditor" style="display:none;margin-top:18px">
+          <div class="bus-head" id="busHead"></div>
+          <h3>🛑 Stoppages & Times <span class="tag" id="dirtyTag" style="display:none">changes pending</span></h3>
+          <div class="scrollbox"><table><thead><tr><th style="width:36px">#</th><th>Stop</th><th style="width:130px">Up (Outbound)</th><th style="width:130px">Down (Return)</th></tr></thead><tbody id="stopRows"></tbody></table></div>
+          <div class="actions">
+            <button class="btn btn-primary" id="saveTimes">💾 Save Time Overrides</button>
+            <button class="btn btn-ghost" id="backToSearch">← Back to Search</button>
+          </div>
+          <div class="hint">Save karne se sirf <span class="kbd">data/time-overrides.json</span> update hota hai — chhota safe commit. Site pe turant apply hota hai (runtime patch). Note: stop ka naam change karke row naya add ho jata hai; purana wala reh jata hai, isliye naam mat badlein.</div>
+        </div>
+      </section>
+
+      <!-- BLOG -->
+      <section id="view-blog" class="view" style="display:none">
+        <div class="card" id="blogListCard">
+          <h3 style="justify-content:space-between">📰 Blog Posts <button class="btn btn-primary btn-sm" id="newPostBtn">+ New Post</button></h3>
+          <div class="scrollbox"><table><thead><tr><th>Title</th><th>Date</th><th style="width:150px">Actions</th></tr></thead><tbody id="blogRows"></tbody></table></div>
+        </div>
+        <div class="card" id="blogEditor" style="display:none;margin-top:18px">
+          <h3 id="blogEditorTitle">New Post</h3>
+          <div class="grid2">
+            <div class="field"><label>Title</label><input id="pTitle" placeholder="Durgapur to Karunamoyee Bus Time Table (30 Buses)"></div>
+            <div class="field"><label>Slug (URL)</label><input id="pSlug" placeholder="durgapur-to-karunamoyee" class="mono"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Date</label><input id="pDate" type="date"></div>
+            <div class="field"><label>Excerpt (search/OG)</label><input id="pExcerpt" placeholder="1-2 lines ka summary"></div>
+          </div>
+          <div class="field"><label>Content (HTML)</label><textarea id="pBody" class="code" placeholder="<h2>Heading</h2><p>Content…</p>"></textarea></div>
+          <div class="actions">
+            <button class="btn btn-primary" id="savePost">💾 Save Post</button>
+            <button class="btn btn-ghost" id="backToBlog">← Back</button>
+          </div>
+          <div class="hint">Save karne pe <span class="kbd">blog/[slug].html</span> + manifest update hota hai. Blog template automatically SEO meta + aapke site ka look use karta hai.</div>
+        </div>
+      </section>
+
+      <!-- SETTINGS -->
+      <section id="view-settings" class="view" style="display:none">
+        <div class="card">
+          <h3>⚙ Connection</h3>
+          <div class="field"><label>Repository (owner/name)</label><input id="setRepo" class="mono"></div>
+          <div class="field"><label>GitHub Token</label><input id="setTok" type="password" placeholder="naya token paste karke Update dabayein"></div>
+          <div class="actions"><button class="btn btn-primary" id="saveSettings">Update Connection</button></div>
+        </div>
+        <div class="card" style="margin-top:16px">
+          <h3>ℹ How it works</h3>
+          <div class="hint" style="font-size:13px;line-height:1.8">
+          • <b>Bus time fix:</b> aapki changes <span class="kbd">data/time-overrides.json</span> mein jaati hain — ek chhoti file. Site ka runtime patch (<span class="kbd">js/time-overrides.js</span>) use har page load pe apply karta hai. Monday auto-rebuild inhe permanently data mein merge kar deta hai.<br>
+          • <b>Blog:</b> posts <span class="kbd">blog/</span> folder mein directly save hoti hain, manifest ke saath.<br>
+          • <b>Safety:</b> har change ek GitHub commit hai — kuch galat ho to repo history se revert ek click.<br>
+          • Ye page <span class="kbd">busjatri.in/admin.html</span> pe hai lekin token ke bina koi isse kuch nahi kar sakta.</div>
+        </div>
+      </section>
+    </div>
+  </div>
+ </div>
+</div>
+
+<div id="toasts"></div>
+<div id="modal"><div class="modal-card"><h3 id="mTitle">Confirm</h3><p id="mBody">Are you sure?</p><div style="display:flex;gap:10px;justify-content:flex-end"><button class="btn btn-ghost" id="mNo">Cancel</button><button class="btn btn-danger" id="mYes">Confirm</button></div></div></div>
+
+<script>
+/* ================================================================
+   BusJatri Admin — GitHub-backed management panel (no server)
+   Auth: fine-grained PAT (localStorage only). Writes via Contents API.
+   ================================================================ */
+const API='https://api.github.com';
+const LS={tok:'bj_admin_token',repo:'bj_admin_repo'};
+let S={tok:'',repo:'',user:null};
+let IDX=null, OVR=null, BLOGM=null, CUR=null;
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
+function toast(msg,cls=''){const t=document.createElement('div');t.className='toast '+cls;t.innerHTML=msg;$('#toasts').appendChild(t);setTimeout(()=>t.style.opacity='0',3200);setTimeout(()=>t.remove(),3600)}
+function b64e(s){return btoa(unescape(encodeURIComponent(s)))}
+function b64d(s){return decodeURIComponent(escape(atob(s.replace(/\n/g,''))))}
+async function gh(path,opts={}){const r=await fetch(API+path,{...opts,headers:{Authorization:'token '+S.tok,'Accept':'application/vnd.github+json',...(opts.headers||{})}});if(!r.ok){let e='';try{e=(await r.json()).message}catch(_){}throw new Error((r.status)+' '+(e||r.statusText))}return r}
+async function rawGet(path){const r=await fetch(`https://raw.githubusercontent.com/${S.repo}/main/${path}`);if(!r.ok)throw new Error(path+': '+r.status);return r.text()}
+async function ghPut(path,content,message,sha){const r=await gh(`/repos/${S.repo}/contents/${encodeURI(path)}`,{method:'PUT',body:JSON.stringify({message,content:b64e(content),sha:sha||undefined})});return r.json()}
+async function ghDel(path,message,sha){await gh(`/repos/${S.repo}/contents/${encodeURI(path)}`,{method:'DELETE',body:JSON.stringify({message,sha})})}
+function confirmBox(title,body){return new Promise(res=>{$('#mTitle').textContent=title;$('#mBody').innerHTML=body;$('#modal').classList.add('show');const done=v=>{$('#modal').classList.remove('show');$('#mYes').onclick=null;$('#mNo').onclick=null;res(v)};$('#mYes').onclick=()=>done(true);$('#mNo').onclick=()=>done(false)})}
+
+/* ---------- login ---------- */
+async function doLogin(tok,repo){
+  $('#loginErr').style.display='none';
+  const b=$('#loginBtn');b.disabled=true;b.innerHTML='<span class="spin"></span> Connecting…';
+  try{
+    const u=await fetch(API+'/user',{headers:{Authorization:'token '+tok}});
+    if(!u.ok)throw new Error(u.status===401?'Token invalid hai — dobara check karein':'GitHub ne mana kar diya ('+u.status+')');
+    S.user=await u.json();
+    const rr=await fetch(API+'/repos/'+repo,{headers:{Authorization:'token '+tok}});
+    if(!rr.ok)throw new Error('Repo access nahi mila: '+repo+' ('+rr.status+')');
+    S.tok=tok;S.repo=repo;
+    localStorage.setItem(LS.tok,tok);localStorage.setItem(LS.repo,repo);
+    showApp();
+  }catch(e){const eb=$('#loginErr');eb.textContent='⚠ '+e.message;eb.style.display='block'}
+  b.disabled=false;b.textContent='Connect';
+}
+function showApp(){
+  $('#login').style.display='none';$('#app').style.display='block';
+  $('#uname').textContent=S.user.login;$('#avatar').textContent=(S.user.login||'?')[0].toUpperCase();
+  $('#urepo').textContent=S.repo;$('#stRepo').textContent=S.repo;$('#setRepo').value=S.repo;
+  $('#connTag').style.display='inline-block';
+  loadDash();
+}
+
+/* ---------- views ---------- */
+function go(v){
+  $$('.nav-item[data-view]').forEach(n=>n.classList.toggle('active',n.dataset.view===v));
+  $$('.view').forEach(x=>x.style.display='none');
+  $('#view-'+v).style.display='block';
+  $('#viewTitle').textContent=({dash:'Dashboard',buses:'Bus Times',blog:'Blog Manager',settings:'Settings'})[v];
+  $('#crumb').textContent='BusJatri / '+({dash:'overview',buses:'manage times',blog:'content',settings:'config'})[v];
+  $('#sidebar').classList.remove('open');
+  if(v==='dash')loadDash();if(v==='blog')loadBlog();
+}
+$$('.nav-item[data-view]').forEach(n=>n.onclick=()=>go(n.dataset.view));
+$('#burger').onclick=()=>$('#sidebar').classList.toggle('open');
+$('#logout').onclick=()=>{localStorage.removeItem(LS.tok);location.reload()};
+
+/* ---------- dashboard ---------- */
+async function loadDash(){
+  try{const j=JSON.parse(await rawGet('data/app-index.json'));IDX=j;$('#stBuses').textContent=(j.meta&&j.meta.total_buses)||j.buses.length}
+  catch(e){$('#stBuses').textContent='—'}
+  try{OVR=JSON.parse(await rawGet('data/time-overrides.json'))}
+  catch(e){OVR={}}
+  const keys=Object.keys(OVR);
+  $('#stOvr').textContent=keys.length;
+  const ol=$('#ovrList');
+  if(!keys.length){ol.className='empty';ol.textContent='Koi override nahi — sab original data.'}
+  else{ol.className='';ol.innerHTML=keys.slice(-8).reverse().map(k=>{
+    const bus=IDX&&IDX.buses.find(b=>b.id===k);const nm=bus?bus.bus_name+' '+(bus.reg_no||''):'k';
+    const stops=Object.keys(OVR[k]).map(s=>`<span class="tag" style="margin:2px 3px 2px 0">${s}: ${OVR[k][s].up||OVR[k][s].down||''}</span>`).join('');
+    return `<div style="padding:10px 4px;border-bottom:1px solid var(--line)"><div style="font-size:13px;font-weight:600">${nm}</div><div>${stops}</div></div>`}).join('')}
+  try{BLOGM=JSON.parse(await rawGet('data/blog-manifest.json'));$('#stBlog').textContent=BLOGM.length}catch(e){$('#stBlog').textContent='—'}
+}
+$('#rebuildBtn')?.addEventListener('click',async()=>{
+  if(!await confirmBox('Rebuild & Publish?','SEO pages + app data regenerate honge (GitHub Actions). 2-3 minute lagte hain. Continue?'))return;
+  const b=$('#rebuildBtn');b.disabled=true;b.innerHTML='<span class="spin"></span> Triggering…';
+  try{
+    await gh(`/repos/${S.repo}/actions/workflows/apply-overrides.yml/dispatches`,{method:'POST',body:JSON.stringify({ref:'main'})});
+    toast('✓ Rebuild workflow chal pada — 2-3 min mein complete.','ok');
+  }catch(e){toast('✗ Workflow trigger fail: '+e.message+' (Actions:Write permission chahiye token mein)','err')}
+  b.disabled=false;b.innerHTML='↻ Rebuild & Publish Site';
+});
+
+/* ---------- bus times ---------- */
+let searchTimer=null;
+$('#busQ').addEventListener('input',e=>{
+  clearTimeout(searchTimer);searchTimer=setTimeout(()=>busSearch(e.target.value),250);
+});
+async function ensureIdx(){if(!IDX){try{IDX=JSON.parse(await rawGet('data/app-index.json'))}catch(e){toast('App index load fail: '+e.message,'err');return}}}
+async function busSearch(q){
+  q=(q||'').trim().toLowerCase();await ensureIdx();if(!IDX)return;
+  const box=$('#busResultsBox'),tb=$('#busResults'),hint=$('#busSearchHint');
+  if(q.length<2){box.style.display='none';hint.style.display='block';return}
+  const terms=q.split(/\s+/);
+  const res=IDX.buses.filter(b=>{
+    const hay=((b.bus_name||'')+' '+(b.reg_no||'')+' '+(b.origin||'')+' '+(b.destination||'')).toLowerCase();
+    return terms.every(t=>hay.includes(t));
+  }).slice(0,40);
+  hint.style.display='none';box.style.display='block';
+  tb.innerHTML=res.length?res.map(b=>`<tr class="rowlink" data-id="${b.id}"><td><b>${esc(b.bus_name)}</b></td><td class="mono">${esc(b.reg_no||'—')}</td><td>${esc(b.origin)} → ${esc(b.destination)}</td><td class="mono">${esc(b.departure_time||'—')}</td><td>›</td></tr>`).join('')
+    :`<tr><td colspan="5" class="empty">Kuch nahi mila — spelling check karein</td></tr>`;
+  tb.querySelectorAll('tr.rowlink').forEach(tr=>tr.onclick=()=>openBus(tr.dataset.id));
+}
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'\u0026amp;','<':'\u0026lt;','>':'\u0026gt;','"':'\u0026quot;',"'":'\u0026#39;'}[c]})}
+let BUS=null;
+async function openBus(id){
+  const card=$('#busEditor');card.style.display='block';
+  $('#busHead').innerHTML='<span class="spin"></span> Loading…';
+  card.scrollIntoView({behavior:'smooth'});
+  try{BUS=JSON.parse(await rawGet('data/bus-details/'+id+'.json'))}catch(e){$('#busHead').textContent='Load fail: '+e.message;return}
+  const ov=OVR&&OVR[id]||{};
+  $('#busHead').innerHTML=`<div><div class="bn">${esc(BUS.bus_name)} <span class="tag">${esc(BUS.reg_no||'')}</span></div>
+   <div class="meta">${esc(BUS.origin)} ⇄ ${esc(BUS.destination)} · ${BUS.stoppages.length} stops · dep ${esc(BUS.departure_time||'—')} · ${esc(BUS.source||'')}</div></div>
+   <div style="flex:1"></div><div class="meta mono">id: ${esc(id)}</div>`;
+  $('#stopRows').innerHTML=BUS.stoppages.map((s,i)=>{
+    const o=ov[s.name]||{};
+    return `<tr data-i="${i}" data-stop="${esc(s.name)}">
+     <td class="mono" style="color:var(--muted2)">${s.no}</td>
+     <td><b>${esc(s.name)}</b>${o.up||o.down?' <span class="tag g" style="font-size:10px">override</span>':''}</td>
+     <td><input class="tcell" data-col="up" value="${esc(s.up_time||'')}" placeholder="—"></td>
+     <td><input class="tcell" data-col="down" value="${esc(s.down_time||'')}" placeholder="—"></td></tr>`}).join('');
+  $('#stopRows').querySelectorAll('input').forEach(inp=>{
+    inp.addEventListener('input',()=>{inp.closest('tr').classList.add('dirty');$('#dirtyTag').style.display='inline-block'});
+  });
+  $('#dirtyTag').style.display='none';
+}
+$('#backToSearch').onclick=()=>{$('#busEditor').style.display='none'};
+$('#saveTimes').onclick=async()=>{
+  const dirtyRows=[...$('#stopRows').querySelectorAll('tr.dirty')];
+  if(!dirtyRows.length){toast('Koi change nahi hai','');return}
+  if(!BUS)return;
+  // validate time format
+  const bad=[];
+  dirtyRows.forEach(tr=>tr.querySelectorAll('input').forEach(inp=>{
+    const v=inp.value.trim();if(v&&!/^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(v))bad.push(v);
+  }));
+  if(bad.length){toast('✗ Galat time format: '+bad.join(', ')+' — jaise "9:30 AM" likhein','err');return}
+  if(!await confirmBox('Save time overrides?',`<b>${esc(BUS.bus_name)}</b> (${dirtyRows.length} stop${dirtyRows.length>1?'s':''} changed) — data/time-overrides.json commit hoga.`))return;
+  const b=$('#saveTimes');b.disabled=true;b.innerHTML='<span class="spin"></span> Saving…';
+  try{
+    // fresh copy of overrides (with sha)
+    let sha=null,ovr={};
+    try{const r=await gh(`/repos/${S.repo}/contents/data/time-overrides.json`);sha=r.sha;ovr=JSON.parse(b64d(r.content))}catch(e){}
+    if(!ovr[BUS.id])ovr[BUS.id]={};
+    dirtyRows.forEach(tr=>{
+      const stop=tr.dataset.stop;const up=tr.querySelector('[data-col=up]').value.trim();
+      const down=tr.querySelector('[data-col=down]').value.trim();
+      const cur=ovr[BUS.id][stop]||{};
+      if(up)cur.up=up;if(down)cur.down=down;
+      if(!up)delete cur.up;if(!down)delete cur.down;
+      if(Object.keys(cur).length)ovr[BUS.id][stop]=cur;else delete ovr[BUS.id][stop];
+    });
+    if(!Object.keys(ovr[BUS.id]).length)delete ovr[BUS.id];
+    const msg=`Admin: time override — ${BUS.bus_name} ${BUS.reg_no||''} (${dirtyRows.map(t=>t.dataset.stop).join(', ')})`;
+    await ghPut('data/time-overrides.json',JSON.stringify(ovr,null,2)+'\n',msg,sha);
+    OVR=ovr;
+    dirtyRows.forEach(tr=>tr.classList.remove('dirty'));
+    $('#dirtyTag').style.display='none';
+    toast('✓ Saved! Site pe turant live ho jayega.','ok');
+  }catch(e){toast('✗ Save fail: '+e.message,'err')}
+  b.disabled=false;b.innerHTML='💾 Save Time Overrides';
+};
+
+/* ---------- blog ---------- */
+const BLOG_TMPL=(t,slug,excerpt,body)=>`<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${t}</title>
+<meta name="description" content="${excerpt}">
+<link rel="canonical" href="https://busjatri.in/blog/${slug}.html">
+<meta property="og:title" content="${t}">
+<meta property="og:description" content="${excerpt}">
+<meta property="og:image" content="https://busjatri.in/og-image.png">
+<meta property="og:type" content="article">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c2333;--mut:#5b6472;--line:#e5e9f2;--acc:#4f46e5}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:#fbfcfe;line-height:1.75}
+.wrap{max-width:760px;margin:0 auto;padding:36px 22px 70px}
+header{border-bottom:1px solid var(--line);padding-bottom:22px;margin-bottom:30px}
+.logo{font-weight:700;font-size:15px;color:var(--mut);letter-spacing:.02em}
+.logo b{color:var(--acc)}
+h1{font-family:'Fraunces',serif;font-size:clamp(26px,4.6vw,38px);line-height:1.2;margin:18px 0 10px}
+.meta{color:var(--mut);font-size:13.5px}
+.meta a{color:var(--acc)}
+article h2{font-family:'Fraunces',serif;font-size:24px;margin:34px 0 12px}
+article h3{font-size:18px;margin:26px 0 10px}
+article p{margin:0 0 16px}
+article ul,article ol{margin:0 0 16px 22px}
+article table{width:100%;border-collapse:collapse;font-size:14px;margin:18px 0}
+article th{background:#eef1fa;text-align:left;padding:9px 12px;border:1px solid var(--line)}
+article td{padding:9px 12px;border:1px solid var(--line)}
+article img{max-width:100%;border-radius:12px}
+article blockquote{border-left:3px solid var(--acc);padding:4px 18px;color:var(--mut);margin:16px 0}
+footer{margin-top:44px;padding-top:20px;border-top:1px solid var(--line);color:var(--mut);font-size:13.5px}
+footer a{color:var(--acc)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<div class="logo"><a href="/">🚌 Bus<b>Jatri</b></a> — West Bengal Bus Timetable</div>
+<h1>${t}</h1>
+<div class="meta">Published ${new Date().toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'})} · <a href="/blog/">All posts</a></div>
+</header>
+<article>
+${body}
+</article>
+<footer>
+Live bus timings ke liye <a href="/">BusJatri.in</a> kholo — 4,000+ buses, poora West Bengal.<br>
+<small>Times badal sakte hain; final update ke liye operator/conductor se confirm karein.</small>
+</footer>
+</div>
+</body>
+</html>
+`;
+let EDIT_MODE='new';
+async function loadBlog(){
+  try{BLOGM=JSON.parse(await rawGet('data/blog-manifest.json'))}catch(e){BLOGM=[]}
+  BLOGM.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  $('#blogRows').innerHTML=BLOGM.length?BLOGM.map(p=>`<tr class="post-row" data-slug="${esc(p.slug)}">
+   <td><div class="pt">${esc(p.title)}</div><div class="pe">${esc(p.excerpt||'')}</div></td>
+   <td class="mono" style="white-space:nowrap">${esc(p.date||'')}</td>
+   <td><button class="btn btn-ghost btn-sm" data-act="edit" data-slug="${esc(p.slug)}">Edit</button>
+       <button class="btn btn-ghost btn-sm" style="margin-left:6px" data-act="view" data-slug="${esc(p.slug)}">↗</button></td></tr>`).join('')
+  :`<tr><td colspan="3" class="empty">Koi post nahi — "+ New Post" se shuru karein</td></tr>`;
+  $('#blogRows').querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    if(b.dataset.act==='view'){window.open('/blog/'+b.dataset.slug+'.html','_blank')}
+    else editPost(b.dataset.slug);
+  });
+}
+function newPost(){EDIT_MODE='new';
+  $('#blogListCard').style.display='none';$('#blogEditor').style.display='block';
+  $('#blogEditorTitle').textContent='✍ New Post';
+  $('#pTitle').value='';$('#pSlug').value='';$('#pExcerpt').value='';
+  $('#pDate').value=new Date().toISOString().slice(0,10);
+  $('#pBody').value='<h2>Introduction</h2>\n<p>…</p>\n<h2>Bus Time Table</h2>\n<table>\n<tr><th>Bus</th><th>Departure</th><th>Arrival</th></tr>\n<tr><td></td><td></td><td></td></tr>\n</table>\n<h2>Tips</h2>\n<ul><li></li></ul>';
+}
+function editPost(slug){
+  const p=BLOGM.find(x=>x.slug===slug);if(!p)return;
+  $('#blogListCard').style.display='none';$('#blogEditor').style.display='block';
+  $('#blogEditorTitle').textContent='✏ Edit Post';
+  $('#pTitle').value=p.title;$('#pSlug').value=p.slug;$('#pExcerpt').value=p.excerpt||'';
+  $('#pDate').value=p.date||'';
+  $('#pBody').value='<span class="spin"></span> Loading content…';
+  rawGet('blog/'+slug+'.html').then(h=>{
+    const m=h.match(/<article>([\s\S]*?)<\/article>/);
+    $('#pBody').value=m?m[1].trim():h;
+  }).catch(e=>{$('#pBody').value='';toast('Content load fail: '+e.message,'err')});
+  EDIT_MODE=slug;
+}
+$('#newPostBtn').onclick=newPost;
+$('#backToBlog').onclick=()=>{$('#blogEditor').style.display='none';$('#blogListCard').style.display='block'};
+$('#pTitle').addEventListener('input',()=>{
+  if(EDIT_MODE==='new')$('#pSlug').value=$('#pTitle').value.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,80);
+});
+$('#savePost').onclick=async()=>{
+  const title=$('#pTitle').value.trim(),slug=$('#pSlug').value.trim().toLowerCase().replace(/[^a-z0-9-]/g,'');
+  const excerpt=$('#pExcerpt').value.trim(),date=$('#pDate').value,body=$('#pBody').value.trim();
+  if(!title||!slug||!body){toast('Title, slug aur content zaroori hain','err');return}
+  if(!/^[a-z0-9][a-z0-9-]*$/.test(slug)){toast('Slug galat: sirf chhote letters, numbers, dash','err');return}
+  const b=$('#savePost');b.disabled=true;b.innerHTML='<span class="spin"></span> Saving…';
+  try{
+    // save html
+    let sha=null;try{const r=await gh(`/repos/${S.repo}/contents/blog/${slug}.html`);sha=r.sha}catch(e){}
+    const html=BLOG_TMPL(title.replace(/\"/g,'\u0026quot;'),slug,excerpt.replace(/\"/g,'\u0026quot;'),body);
+    await ghPut('blog/'+slug+'.html',html,`Admin: blog post — ${title}` + (sha?' (update)':''),sha);
+    // update manifest
+    let msha=null,m=BLOGM.slice();
+    try{const r=await gh(`/repos/${S.repo}/contents/data/blog-manifest.json`);msha=r.sha}catch(e){}
+    m=m.filter(x=>x.slug!==slug);
+    m.unshift({slug,title,date:date||new Date().toISOString().slice(0,10),excerpt:excerpt||title});
+    await ghPut('data/blog-manifest.json',JSON.stringify(m,null,2)+'\n',`Admin: blog manifest — ${title}`,msha);
+    BLOGM=m;
+    toast('✓ Post saved: /blog/'+slug+'.html','ok');
+    $('#blogEditor').style.display='none';$('#blogListCard').style.display='block';loadBlog();
+  }catch(e){toast('✗ Save fail: '+e.message,'err')}
+  b.disabled=false;b.innerHTML='💾 Save Post';
+};
+
+/* ---------- settings ---------- */
+$('#saveSettings').onclick=()=>{
+  const repo=$('#setRepo').value.trim(),tok=$('#setTok').value.trim();
+  if(tok){localStorage.setItem(LS.tok,tok)}
+  if(repo){localStorage.setItem(LS.repo,repo)}
+  toast('Saved — reload ho raha hai…','ok');setTimeout(()=>location.reload(),900);
+};
+
+/* ---------- boot ---------- */
+$('#loginBtn').onclick=()=>doLogin($('#tok').value.trim(),$('#repo').value.trim());
+$('#tok').addEventListener('keydown',e=>{if(e.key==='Enter')$('#loginBtn').click()});
+const t=localStorage.getItem(LS.tok),r=localStorage.getItem(LS.repo)||'murmusuvash2-wq/busjatri';
+if(t){$('#tok').value=t;$('#repo').value=r;doLogin(t,r)}else{$('#repo').value=r}
+</script>
+</body>
+</html>
