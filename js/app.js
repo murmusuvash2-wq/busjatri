@@ -559,9 +559,9 @@ async function renderSearch(el) {
     }
   } else if (stop) {
     results = results.filter(b =>
-      (b.stoppages || []).some(s => (s.name || '').toLowerCase().includes(stop)) ||
-      (b.origin || '').toLowerCase().includes(stop) ||
-      (b.destination || '').toLowerCase().includes(stop)
+      (b.stoppages || []).some(s => placeMatches(s.name, stop)) ||
+      placeMatches(b.origin, stop) ||
+      placeMatches(b.destination, stop)
     );
   } else if ((from || to) && looksLikeTime(from || to) && parseClock(from || to) != null) {
     const q = from || to;
@@ -577,7 +577,7 @@ async function renderSearch(el) {
       placeMatches(b.destination, q) ||
       (b.bus_name || '').toLowerCase().includes(q) ||
       (b.route || '').toLowerCase().includes(q) ||
-      (b.stoppages || []).some(s => (s.name || '').toLowerCase().includes(q))
+      (b.stoppages || []).some(s => placeMatches(s.name, q))
     );
     if (!results.length && q.length >= 3) {
       const partial = q.slice(0, 5);
@@ -646,9 +646,9 @@ async function renderSearch(el) {
 function renderPlace(el, placeName) {
   const q = placeName.toLowerCase();
   const related = Object.values(BUSES).filter(b =>
-    (b.origin || '').toLowerCase().includes(q) ||
-    (b.destination || '').toLowerCase().includes(q) ||
-    (b.stoppages || []).some(s => (s.name || '').toLowerCase().includes(q))
+    placeMatches(b.origin, q) ||
+    placeMatches(b.destination, q) ||
+    (b.stoppages || []).some(s => placeMatches(s.name, q))
   );
   related.sort((a, b) => {
     const ta = parseTime(a.departure_time), tb = parseTime(b.departure_time);
