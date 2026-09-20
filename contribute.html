@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Add a Bus — BusJatri</title>
-<meta name="description" content="Add a new bus to BusJatri — West Bengal Bus Timetable. Submit bus name, route, times and stoppages.">
+<title>Bus Contribution — BusJatri</title>
+<meta name="description" content="Contribute a new bus to BusJatri — West Bengal Bus Timetable. Submit bus name, route, times and stoppages.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'><path d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10M4 16h16M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2M6 10h12'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,10 +45,10 @@ footer a{color:var(--acc);text-decoration:none}
 <div class="wrap">
 <header>
   <div><a class="logo" href="/">🚌 Bus<b>Jatri</b></a></div>
-  <h1>Add a Bus</h1>
+  <h1>Bus Contribution</h1>
   <div class="meta">নতুন বাসের তথ্য দিন — West Bengal</div>
 </header>
-<p class="lead">Know a bus that is not on BusJatri yet? Fill this form — our team verifies every bus before it goes live. Times shown on the site only after checking.</p>
+<p class="lead">Know a bus that is not on BusJatri yet? Fill this form — our team verifies every bus before it goes live. Top contributors may get rewards in the future.</p>
 <form id="f" onsubmit="return submitBus(event)">
   <div class="field">
     <label>Bus name <small>বাসের নাম</small></label>
@@ -89,9 +89,15 @@ footer a{color:var(--acc);text-decoration:none}
     <div id="stops"></div>
     <button type="button" class="addstop" onclick="addStop()">+ Add stoppage</button>
   </div>
-  <div class="field">
-    <label>Your name <small>আপনার নাম (optional — credit দেখানো হবে)</small></label>
-    <input id="bWho" maxlength="40" placeholder="Rahul">
+  <div class="two">
+    <div class="field">
+      <label>Your name <small>আপনার নাম (optional)</small></label>
+      <input id="bWho" maxlength="40" placeholder="Rahul">
+    </div>
+    <div class="field">
+      <label>Your email <small>ই-মেইল (optional — credit & rewards)</small></label>
+      <input id="bEmail" type="email" maxlength="60" placeholder="you@example.com">
+    </div>
   </div>
   <div class="err" id="err"></div>
   <button class="send" type="submit">Submit Bus</button>
@@ -126,8 +132,17 @@ function submitBus(ev) {
   var from = document.getElementById('bFrom').value.trim();
   var to = document.getElementById('bTo').value.trim();
   var dep = fmt12(document.getElementById('bDep').value);
+  var email = document.getElementById('bEmail').value.trim();
   if (!bus || !from || !to || !dep) {
     err.textContent = 'Please fill: bus name, from, to and departure time.';
+    err.style.display = 'block'; return false;
+  }
+  if (bus.length < 3) {
+    err.textContent = 'Bus name is too short.';
+    err.style.display = 'block'; return false;
+  }
+  if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    err.textContent = 'Please enter a valid email (or leave it empty).';
     err.style.display = 'block'; return false;
   }
   var stops = [];
@@ -148,6 +163,7 @@ function submitBus(ev) {
   body.append('stops', stopsStr);
   body.append('contact', document.getElementById('bContact').value.trim());
   body.append('name', document.getElementById('bWho').value.trim());
+  body.append('email', email);
   body.append('page', location.href);
   body.append('route', from + ' \u21c4 ' + to);
   body.append('current', dep);
