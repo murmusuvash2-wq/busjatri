@@ -1,0 +1,73 @@
+name: Fuzzy stop search patch
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fuzzy-stop:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch app.js stop search to use placeMatches
+        run: |
+          python3 - << 'PYEOF'
+          import io
+
+          def rep(s, old, new, label, count=1):
+              n = s.count(old)
+              assert n == count, label + ': found ' + str(n) + ', expected ' + str(count)
+              return s.replace(old, new)
+
+          p = 'js/app.js'
+          g = io.open(p, encoding='utf-8').read()
+          assert "(s.name || '').toLowerCase().includes(stop)" in g, 'anchor missing'
+
+          g = rep(g, "(b.stoppages || []).some(s => (s.name || '').toLowerCase().includes(stop)) ||",
+                  "(b.stoppages || []).some(s => placeMatches(s.name, stop)) ||", 'stop-branch stoppages')
+          g = rep(g, "(b.origin || '').toLowerCase().includes(stop) ||",
+                  "placeMatches(b.origin, stop) ||", 'stop-branch origin')
+          g = rep(g, "(b.destination || '').toLowerCase().includes(stop)",
+                  "placeMatches(b.destination, stop)", 'stop-branch destination')
+          g = rep(g, "(b.stoppages || []).some(s => (s.name || '').toLowerCase().includes(q))",
+                  "(b.stoppages || []).some(s => placeMatches(s.name, q))", 'stoppages q', count=2)
+          g = rep(g, "(b.origin || '').toLowerCase().includes(q) ||",
+                  "placeMatches(b.origin, q) ||", 'renderplace origin')
+          g = rep(g, "(b.destination || '').toLowerCase().includes(q) ||",
+                  "placeMatches(b.destination, q) ||", 'renderplace destination')
+
+          io.open(p, 'w', encoding='utf-8').write(g)
+          print('app.js patched')
+
+          ip = 'index.html'
+          h = io.open(ip, encoding='utf-8').read()
+          old_v = 'js/app.js?v=mob20260918d'
+          new_v = 'js/app.js?v=mob20260920a'
+          assert old_v in h, 'version anchor missing'
+          h = h.replace(old_v, new_v)
+          io.open(ip, 'w', encoding='utf-8').write(h)
+          print('index.html version bumped')
+          PYEOF
+
+      - name: Validate
+        run: |
+          node --check js/app.js
+          grep -q "placeMatches(s.name, stop)" js/app.js
+          grep -q "placeMatches(s.name, q)" js/app.js
+          grep -q "js/app.js?v=mob20260920a" index.html
+          echo "all validations passed"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Search: fuzzy placeMatches on stoppage names (single query + stop search + place page)"
+            git push
+          fi
