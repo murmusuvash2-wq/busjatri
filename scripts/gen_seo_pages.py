@@ -425,7 +425,7 @@ def shell(title, description, canonical, body, schema=""):
 </head>
 <body>
 {header_html()}
-<main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
+<main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
 {body}
 </main>
 {footer_html()}
@@ -808,32 +808,13 @@ def generate_place_page(place, buses):
         )
 
         route_links.append(
-            f"""
-<a href="{href}"
-   style="
-     display:flex;
-     justify-content:space-between;
-     gap:12px;
-     padding:13px 14px;
-     border-bottom:1px solid var(--border);
-     text-decoration:none;
-   ">
-
-  <span>
-    {esc(place)} → {esc(destination)}
-  </span>
-
-  <span style="
-    color:var(--ink-dim);
-    font-size:13px;
-    white-space:nowrap;
-  ">
-    {number} bus{'es' if number != 1 else ''}
-  </span>
-
-</a>
-"""
+            f'<a href="{href}" class="op-card">'
+            f'<span class="rt">{esc(place)} <span class="arr">→</span> {esc(destination)}</span>'
+            f'<span class="meta">🚌 {number} bus{"es" if number != 1 else ""}</span>'
+            f'<span class="go">View Schedule ›</span>'
+            f'</a>'
         )
+
 
     if not route_links:
         route_links = [
@@ -846,13 +827,7 @@ def generate_place_page(place, buses):
         ]
 
     body = f"""
-<section style="
-  background:var(--panel);
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:24px;
-  margin-bottom:24px;
-">
+<section class="op-hero">
 
   <div style="
     font-size:13px;
@@ -889,63 +864,18 @@ def generate_place_page(place, buses):
 
 </section>
 
-<section style="
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:32px;
-">
-
-  <div style="
-    flex:1 1 170px;
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:15px;
-  ">
-
-    <div style="font-size:12px;color:var(--ink-dim)">
-      Listed services
-    </div>
-
-    <strong style="font-size:1.25rem">
-      {count}
-    </strong>
-
-  </div>
-
-  <div style="
-    flex:1 1 170px;
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:15px;
-  ">
-
-    <div style="font-size:12px;color:var(--ink-dim)">
-      Destinations
-    </div>
-
-    <strong style="font-size:1.25rem">
-      {len(destinations)}
-    </strong>
-
-  </div>
-
+<section class="op-stats">
+  <div class="op-stat"><div class="lbl">🚌 Listed services</div><div class="val">{count}</div></div>
+  <div class="op-stat"><div class="lbl">📍 Destinations</div><div class="val">{len(destinations)}</div></div>
 </section>
 
 <section>
 
-  <h2 style="font-size:1.35rem">
+  <h2 class="op-h2">
     Popular Bus Routes from {esc(place)}
   </h2>
 
-  <div style="
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:16px;
-    overflow:hidden;
-  ">
+  <div class="op-grid">
     {''.join(route_links)}
   </div>
 
@@ -953,7 +883,7 @@ def generate_place_page(place, buses):
 
 <section style="margin-top:34px">
 
-  <h2 style="font-size:1.35rem">
+  <h2 class="op-h2">
     All Destinations from {esc(place)}
   </h2>
 
