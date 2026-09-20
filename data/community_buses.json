@@ -3570,6 +3570,71 @@
      "down": "2:30 PM"
     }
    ]
+  },
+  {
+   "operator": "Madhusudan",
+   "bus_name": "APURBA",
+   "bus_type": "Private - Non AC",
+   "reg_no": "WB 49D 0372",
+   "origin": "Khatra",
+   "destination": "Kharagpur",
+   "departure_time": "6:45 AM",
+   "arrival_time": "11:20 AM",
+   "route": "Khatra - Ranibandh - Belpahari - Jhargram - Kharagpur",
+   "source": "facebook (Manbazar Bus Route Update)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Khatra",
+     "up": "6:45 AM",
+     "down": "4:55 PM"
+    },
+    {
+     "name": "Ranibandh",
+     "up": "7:15 AM",
+     "down": "4:25 PM"
+    },
+    {
+     "name": "Paradi",
+     "up": "7:55 AM",
+     "down": "3:50 PM"
+    },
+    {
+     "name": "Belpahari",
+     "up": "8:40 AM",
+     "down": "2:50 PM"
+    },
+    {
+     "name": "Shilda",
+     "up": "9:00 AM",
+     "down": "2:30 PM"
+    },
+    {
+     "name": "Binpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jhargram",
+     "up": "9:55 AM",
+     "down": "1:40 PM"
+    },
+    {
+     "name": "Lodhasuli",
+     "up": "10:25 AM",
+     "down": "1:10 PM"
+    },
+    {
+     "name": "Chaurangi",
+     "up": "11:05 AM",
+     "down": "12:30 PM"
+    },
+    {
+     "name": "Kharagpur Station",
+     "up": "11:20 AM",
+     "down": "12:15 PM"
+    }
+   ]
   }
  ],
  "enrich": [
