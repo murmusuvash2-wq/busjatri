@@ -271,7 +271,7 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
       <section id="view-reports" class="view" style="display:none">
         <div class="card">
           <h3>🐞 User Time Reports</h3>
-          <div class="hint" style="margin:0 0 14px">Users jo bus pages pe "Report wrong time" se correction bhejte hain wo yahan aate hain. Verify karo → <b>Fix</b> karke override save karo → phir <b>✓ Done</b>.</div>
+          <div class="hint" style="margin:0 0 14px">Site se aaye reports yahan dikhte hain (Google Sheet se). <b>Approve</b> = time site pe live. <b>Fix</b> = khud edit karke save. <b>Reject</b> = nikaal do.</div>
           <div class="scrollbox" style="max-height:620px"><table><thead><tr><th>Bus</th><th>Route</th><th>Time (current → correct)</th><th>Note</th><th>When</th><th style="width:180px">Actions</th></tr></thead><tbody id="reportRows"></tbody></table></div>
         </div>
       </section>
@@ -282,6 +282,7 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
           <h3>⚙ Connection</h3>
           <div class="field"><label>Repository (owner/name)</label><input id="setRepo" class="mono"></div>
           <div class="field"><label>GitHub Token</label><input id="setTok" type="password" placeholder="naya token paste karke Update dabayein"></div>
+          <div class="field"><label>Report Receiver Token (Sheet se reports ke liye)</label><input id="setRtok" type="password" placeholder="bj-adm- wala token paste karo"></div>
           <div class="actions"><button class="btn btn-primary" id="saveSettings">Update Connection</button></div>
         </div>
         <div class="card" style="margin-top:16px">
@@ -379,41 +380,87 @@ async function loadDash(){
   try{const rp=JSON.parse(await rawGet('data/time-reports.json'));const pend=rp.filter(r=>r.status!=='done').length;$('#stReports').textContent=pend;const bb=$('#repBadge');if(bb){bb.style.display=pend?'inline-flex':'none';bb.textContent=pend}}catch(e){$('#stReports').textContent='0'}
 }
 
-/* ---------- user reports ---------- */
+/* ---------- user reports (Google Sheet via Apps Script) ---------- */
+const RPT_URL='https://script.google.com/macros/s/AKfycbyf-rjtn606T1FUfGaPiYnyIMCZIU99ZlwqmkI3cVfPT0SarjTY12MZQpu2exLczdUD/exec';
 let REPORTS=null;
+function rptTok(){try{return localStorage.getItem('bj_rpt_token')||''}catch(e){return ''}}
+function canAutoRpt(r){return r&&r.type==='add-time'&&r.bus_id&&r.stop&&/^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(r.time||'')}
+async function rptAct(action,key){
+  const body=new URLSearchParams({action:action,key:key,token:rptTok()});
+  try{
+    const r=await fetch(RPT_URL,{method:'POST',body:body});
+    try{const j=await r.json();return !!j.ok}catch(_){return true}
+  }catch(e){
+    try{fetch(RPT_URL,{method:'POST',mode:'no-cors',body:body})}catch(_){}
+    return true;
+  }
+}
 async function loadReports(){
   const tb=$('#reportRows');
-  try{REPORTS=JSON.parse(await rawGet('data/time-reports.json'))}catch(e){REPORTS=[]}
-  const pend=REPORTS.filter(r=>r.status!=='done').length;
-  const bd=$('#repBadge');if(bd){bd.style.display=pend?'inline-flex':'none';bd.textContent=pend}
-  const st=$('#stReports');if(st)st.textContent=pend;
-  tb.innerHTML=REPORTS.length?REPORTS.slice().reverse().map((r,ri)=>{
-    const i=REPORTS.length-1-ri,done=r.status==='done';
-    return `<tr style="${done?'opacity:.5':''}">
-    <td><b>${esc(r.bus||'?')}</b><div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.reg||'')}${r.bus_id?' · <span class=\'mono\'>'+esc(r.bus_id)+'</span>':''}</div></td>
-    <td>${esc(r.route||'')}</td>
-    <td class="mono">${esc(r.current||'—')} → <b style="color:var(--ok)">${esc(r.time)}</b></td>
-    <td style="max-width:220px;font-size:12px">${esc(r.note||'')}</td>
-    <td class="mono" style="white-space:nowrap;font-size:11.5px">${esc(r.ts||'')}</td>
-    <td>${done?'<span class="tag g">done</span>':`<button class="btn btn-primary btn-sm" data-a="fix" data-i="${i}">Fix</button> <button class="btn btn-ghost btn-sm" data-a="done" data-i="${i}" style="margin-left:6px">✓ Done</button>`}</td></tr>`}).join('')
-  :`<tr><td colspan="6" class="empty">Abhi koi report nahi. (Form wire hone ke baad users ke reports yahan aayenge)</td></tr>`;
-  tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>{
-    const r=REPORTS[+btn.dataset.i];if(!r)return;
-    if(btn.dataset.a==='fix'){
-      if(r.bus_id){go('buses');openBus(r.bus_id)}else{toast('Is report mein bus ID nahi — Bus Times se search karo','err')}
-    }else markDone(+btn.dataset.i);
-  });
-}
-async function markDone(i){
-  const r=REPORTS[i];if(!r)return;
-  if(!await confirmBox('Mark done?','<b>'+esc(r.bus||'?')+'</b> report ko done mark karein? (data/time-reports.json update hoga)'))return;
+  const tk=rptTok();
+  if(!tk){tb.innerHTML='<tr><td colspan="6" class="empty">Pehle Settings mein <b>Report Receiver Token</b> daalo (bj-adm- wala), phir yahan wapas aao.</td></tr>';const bb=$('#repBadge');if(bb)bb.style.display='none';return}
+  tb.innerHTML='<tr><td colspan="6" class="empty">Loading…</td></tr>';
+  let rows=[];
   try{
-    let sha=null;try{const rr=await gh(`/repos/${S.repo}/contents/data/time-reports.json`);sha=rr.sha}catch(e){}
-    r.status='done';
-    await ghPut('data/time-reports.json',JSON.stringify(REPORTS,null,2)+'\n','Admin: report done — '+(r.bus||''),sha);
-    toast('✓ Done marked','ok');loadReports();
+    const r=await fetch(RPT_URL+'?action=list&token='+encodeURIComponent(tk));
+    const j=await r.json();
+    rows=j.rows||[];
+  }catch(e){tb.innerHTML='<tr><td colspan="6" class="empty">Load fail: '+esc(e.message)+' — thodi der baad phir kholo</td></tr>';return}
+  REPORTS=rows.filter(x=>x.status==='new');
+  const done=rows.length-REPORTS.length;
+  const pend=REPORTS.length;
+  const bb=$('#repBadge');if(bb){bb.style.display=pend?'inline-flex':'none';bb.textContent=pend}
+  const st=$('#stReports');if(st)st.textContent=pend;
+  tb.innerHTML=pend?REPORTS.map((r,i)=>{
+    const meta=[r.type,r.stop?('stop: '+r.stop):'',r.dir?('dir: '+r.dir):'',r.name?('naam: '+r.name):''].filter(Boolean).join(' · ');
+    return `<tr>
+    <td><b>${esc(r.bus||'?')}</b><div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.reg||'')}${r.bus_id?' · <span class="mono">'+esc(r.bus_id)+'</span>':''}</div></td>
+    <td>${esc(r.route||'')}</td>
+    <td class="mono">${esc(r.current||'—')} → <b style="color:var(--ok)">${esc(r.time||'—')}</b></td>
+    <td style="max-width:220px;font-size:12px">${esc(r.note||'')}<div class="pe" style="font-size:11px;color:var(--muted2)">${esc(meta)}</div></td>
+    <td class="mono" style="white-space:nowrap;font-size:11.5px">${esc(String(r.key).split('|')[0])}</td>
+    <td>${canAutoRpt(r)?`<button class="btn btn-primary btn-sm" data-a="approve" data-i="${i}">Approve</button> `:''}<button class="btn btn-ghost btn-sm" data-a="fix" data-i="${i}">Fix</button> <button class="btn btn-danger btn-sm" data-a="reject" data-i="${i}">Reject</button></td></tr>`
+  }).join(''):'<tr><td colspan="6" class="empty">Koi nayi report nahi — sab clear!'+(done?' ('+done+' purane done/rejected)':'')+'</td></tr>';
+  tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>rptAction(btn.dataset.a,+btn.dataset.i));
+}
+async function rptAction(a,i){
+  const r=REPORTS[i];if(!r)return;
+  if(a==='fix'){
+    if(r.bus_id){go('buses');openBus(r.bus_id)}else toast('Is report mein bus ID nahi — Bus Times se search karo','err');
+    return;
+  }
+  if(a==='reject'){
+    if(!await confirmBox('Reject?','<b>'+esc(r.bus||'?')+'</b> report reject karein? (Sheet mein rejected mark hoga)'))return;
+    await rptAct('reject',r.key);
+    toast('✓ Rejected','ok');loadReports();return;
+  }
+  if(!canAutoRpt(r)){toast('Is report mein stop ya time poora nahi — Fix se manually karo','err');return}
+  if(!await confirmBox('Approve & live karein?','<b>'+esc(r.bus||'?')+'</b> — stop <b>'+esc(r.stop)+'</b> ka time <b>'+esc(r.time)+'</b> site pe live ho jayega (2-3 min).'))return;
+  const dir=(r.dir==='down')?'down':'up';
+  try{
+    let sha=null,ovr={};
+    try{const rr=await gh('/repos/'+S.repo+'/contents/data/time-overrides.json');sha=rr.sha;ovr=JSON.parse(b64d(rr.content))}catch(e){}
+    if(!ovr[r.bus_id])ovr[r.bus_id]={};
+    const cur=ovr[r.bus_id][r.stop]||{};
+    cur[dir]=r.time;
+    ovr[r.bus_id][r.stop]=cur;
+    const msg='Report approved: '+r.bus+' '+(r.reg||'')+' — '+r.stop+' '+dir+' '+r.time+(r.name?(' (by '+r.name+')'):'');
+    await ghPut('data/time-overrides.json',JSON.stringify(ovr,null,2)+'\n',msg,sha);
+    OVR=ovr;
+    if(r.name){
+      let csha=null,list=[];
+      try{const cr=await gh('/repos/'+S.repo+'/contents/data/contributors.json');csha=cr.sha;list=JSON.parse(b64d(cr.content))}catch(e){}
+      const f=list.find(c=>(c.name||'').toLowerCase()===String(r.name).toLowerCase());
+      if(f)f.count=(f.count||1)+1;else list.push({name:r.name,count:1});
+      list.sort((x,y)=>(y.count||0)-(x.count||0));
+      await ghPut('data/contributors.json',JSON.stringify(list.slice(0,20),null,2)+'\n','contributors — '+r.name,csha);
+    }
+    await rptAct('approve',r.key);
+    toast('✓ Approved — site pe 2-3 min mein live','ok');
+    loadReports();
   }catch(e){toast('✗ Fail: '+e.message,'err')}
 }
+
 $('#rebuildBtn')?.addEventListener('click',async()=>{
   if(!await confirmBox('Rebuild & Publish?','SEO pages + app data regenerate honge (GitHub Actions). 2-3 minute lagte hain. Continue?'))return;
   const b=$('#rebuildBtn');b.disabled=true;b.innerHTML='<span class="spin"></span> Triggering…';
@@ -633,6 +680,8 @@ $('#saveSettings').onclick=()=>{
   const repo=$('#setRepo').value.trim(),tok=$('#setTok').value.trim();
   if(tok){localStorage.setItem(LS.tok,tok)}
   if(repo){localStorage.setItem(LS.repo,repo)}
+  const rt=$('#setRtok').value.trim();
+  if(rt){localStorage.setItem('bj_rpt_token',rt)}
   toast('Saved — reload ho raha hai…','ok');setTimeout(()=>location.reload(),900);
 };
 
