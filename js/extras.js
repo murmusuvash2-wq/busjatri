@@ -124,7 +124,7 @@ function toggleReport(btn) {
         '<option value="route-change">' + (bn ? "\u09b0\u09c1\u099f \u09ac\u09a6\u09b2\u09c7 \u0997\u09c7\u099b\u09c7" : "Route has changed") + '</option>' +
       '</select>' +
       '<input type="text" id="bjReportNote" placeholder="' + (bn ? "\u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af (\u0990\u099a\u09cd\u099b\u09bf\u0995)" : "Note (optional)") + '" maxlength="140">' +
-      '<input type="text" id="bjReportName" placeholder="' + (bn ? "\u09a8\u09be\u09ae (\u0990\u099a\u09cd\u099b\u09bf\u0995)" : "Name (optional)") + '" maxlength="30" value="' + savedName.replace(/"/g, '"') + '">' +
+      '<input type="text" id="bjReportName" placeholder="' + (bn ? "\u09a8\u09be\u09ae (\u0990\u099a\u09cd\u099b\u09bf\u0995)" : "Name (optional)") + '" maxlength="30" value="' + savedName.replace(/"/g, '&quot;') + '">' +
       '<button class="rf-send" onclick="submitReport()">Send</button>' +
     '</div>' +
     '<div class="rf-done" id="bjReportDone">\u2713 ' + (bn ? "\u0985\u09ac\u09a6\u09be\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6!" : "Thank you for contributing!") + '</div>';
