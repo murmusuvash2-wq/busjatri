@@ -19,6 +19,20 @@
 <link rel="stylesheet" href="../css/seo.css?v=rt20260920">
 <link rel="stylesheet" href="../css/extras.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://busjatri.in/"}, {"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "https://busjatri.in/bus-time-table/"}, {"@type": "ListItem", "position": 3, "name": "Buses from Suri", "item": "https://busjatri.in/bus-time-table/buses-from-suri.html"}]}</script>
+<style id="busjatri-ux-polish">
+.trust-note{margin:12px 0;padding:10px 14px;border:1px solid color-mix(in srgb,var(--accent,#b8791f) 35%,transparent);border-radius:12px;background:color-mix(in srgb,var(--accent,#b8791f) 8%,transparent);color:var(--ink-dim,#665);font-size:.82rem;line-height:1.5}.trust-note strong{color:var(--ink,#222)}
+.no-results,.empty-state{display:none}.bus-card{transition:transform .18s ease,box-shadow .18s ease}.bus-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(50,35,10,.10)}.bus-card .dep{font-variant-numeric:tabular-nums;white-space:nowrap}.missing-data{color:var(--ink-dim,#777);font-style:italic}
+@media(min-width:760px){.bus-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bus-card{height:fit-content}.search-panel,.search-box{position:sticky;top:10px;z-index:4}.letter-nav{position:sticky;top:0;z-index:3;background:var(--paper,#fbf7ee);padding:8px 0}}
+@media(max-width:759px){.bus-card{border-radius:14px}.trust-note{font-size:.76rem}.letter-nav{overflow-x:auto;white-space:nowrap}}
+</style><!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4E3D1YX9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L4E3D1YX9X');
+</script>
+<style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
 </head>
 <body>
 <header class="header">
@@ -32,7 +46,8 @@
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
       <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
-    </nav>
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◐</button>
+</nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
@@ -84,50 +99,7 @@
 
 </section>
 
-<section style="
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:32px;
-">
-
-  <div style="
-    flex:1 1 170px;
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:15px;
-  ">
-
-    <div style="font-size:12px;color:var(--ink-dim)">
-      Listed services
-    </div>
-
-    <strong style="font-size:1.25rem">
-      21
-    </strong>
-
-  </div>
-
-  <div style="
-    flex:1 1 170px;
-    background:var(--panel);
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:15px;
-  ">
-
-    <div style="font-size:12px;color:var(--ink-dim)">
-      Destinations
-    </div>
-
-    <strong style="font-size:1.25rem">
-      9
-    </strong>
-
-  </div>
-
-</section>
+<section style="display:flex;gap:30px;flex-wrap:wrap;margin-bottom:32px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:15px 18px"><div><div style="font-size:12px;color:var(--ink-dim)">Listed services</div><strong style="font-size:1.25rem">21</strong></div><div><div style="font-size:12px;color:var(--ink-dim)">Destinations</div><strong style="font-size:1.25rem">9</strong></div></section>
 
 <section>
 
@@ -143,7 +115,7 @@
   ">
     
 <a href="suri-to-barddhaman-nawabhat-bus-stand.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -167,7 +139,7 @@
 </a>
 
 <a href="suri-to-digha.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -191,7 +163,7 @@
 </a>
 
 <a href="suri-to-kolkata.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -215,7 +187,7 @@
 </a>
 
 <a href="suri-to-esplanade.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -239,7 +211,7 @@
 </a>
 
 <a href="suri-to-katwa.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -263,7 +235,7 @@
 </a>
 
 <a href="suri-to-karunamoyee.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -287,7 +259,7 @@
 </a>
 
 <a href="suri-to-habra.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -311,7 +283,7 @@
 </a>
 
 <a href="suri-to-barasat.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -335,7 +307,7 @@
 </a>
 
 <a href="suri-to-krishnanagar.html"
-   style="
+   class="bj-pop-row" style="
      display:flex;
      justify-content:space-between;
      gap:12px;
@@ -368,12 +340,7 @@
     All Destinations from Suri
   </h2>
 
-  <p style="
-    line-height:1.9;
-    color:var(--ink-dim);
-  ">
-    Barddhaman Nawabhat Bus Stand (7) · Digha (4) · Kolkata (3) · Esplanade (2) · Katwa (1) · Karunamoyee (1) · Habra (1) · Barasat (1) · Krishnanagar (1)
-  </p>
+  <div class="chip-row hscroll" aria-label="All destinations"><a class="via-chip" style="--i:0" href="suri-to-barddhaman-nawabhat-bus-stand.html">Barddhaman Nawabhat Bus Stand (7)</a><a class="via-chip" style="--i:1" href="suri-to-digha.html">Digha (4)</a><a class="via-chip" style="--i:2" href="suri-to-kolkata.html">Kolkata (3)</a><a class="via-chip" style="--i:3" href="suri-to-esplanade.html">Esplanade (2)</a><a class="via-chip" style="--i:4" href="suri-to-katwa.html">Katwa (1)</a><a class="via-chip" style="--i:5" href="suri-to-karunamoyee.html">Karunamoyee (1)</a><a class="via-chip" style="--i:6" href="suri-to-habra.html">Habra (1)</a><a class="via-chip" style="--i:7" href="suri-to-barasat.html">Barasat (1)</a><a class="via-chip" style="--i:8" href="suri-to-krishnanagar.html">Krishnanagar (1)</a></div>
 
 </section>
 
@@ -393,5 +360,6 @@
   </div>
 </footer>
 <script defer src="../js/route-slider.js"></script>
+<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
 </body>
 </html>

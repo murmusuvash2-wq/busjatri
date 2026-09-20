@@ -18,8 +18,21 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../css/seo.css?v=rt20260920">
 <link rel="stylesheet" href="../css/extras.css">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the first bus from Digha to Aranghata?", "acceptedAnswer": {"@type": "Answer", "text": "Check the timetable above."}}, {"@type": "Question", "name": "What is the last bus from Digha to Aranghata?", "acceptedAnswer": {"@type": "Answer", "text": "Check the timetable above."}}, {"@type": "Question", "name": "How many buses run from Digha to Aranghata?", "acceptedAnswer": {"@type": "Answer", "text": "1 bus service is listed on this route."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the bus timing from Digha to Aranghata?", "acceptedAnswer": {"@type": "Answer", "text": "Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand."}}, {"@type": "Question", "name": "How many buses run from Digha to Aranghata?", "acceptedAnswer": {"@type": "Answer", "text": "1 bus services are listed on this route."}}, {"@type": "Question", "name": "Which operators run buses on the Digha to Aranghata route?", "acceptedAnswer": {"@type": "Answer", "text": "Services include government operators such as Digha to Bagula."}}, {"@type": "Question", "name": "Which places does the Digha to Aranghata bus pass through (via)?", "acceptedAnswer": {"@type": "Answer", "text": "The main stoppages on the way are New Digha, Ramnagar, Balisai, Contai, Henria, Nandakumar, Mecheda, Radhamoni."}}, {"@type": "Question", "name": "What is the bus fare from Digha to Aranghata?", "acceptedAnswer": {"@type": "Answer", "text": "Fares for this route are not listed yet. West Bengal bus fares depend on distance and bus type — confirm the exact fare with the conductor or the bus stand counter."}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://busjatri.in/"}, {"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "https://busjatri.in/bus-time-table/"}, {"@type": "ListItem", "position": 3, "name": "Digha to Aranghata", "item": "https://busjatri.in/bus-time-table/digha-to-aranghata.html"}]}</script>
+<style id="busjatri-ux-polish">
+.trust-note{margin:12px 0;padding:10px 14px;border:1px solid color-mix(in srgb,var(--accent,#b8791f) 35%,transparent);border-radius:12px;background:color-mix(in srgb,var(--accent,#b8791f) 8%,transparent);color:var(--ink-dim,#665);font-size:.82rem;line-height:1.5}.trust-note strong{color:var(--ink,#222)}
+.no-results,.empty-state{display:none}.bus-card{transition:transform .18s ease,box-shadow .18s ease}.bus-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(50,35,10,.10)}.bus-card .dep{font-variant-numeric:tabular-nums;white-space:nowrap}.missing-data{color:var(--ink-dim,#777);font-style:italic}
+@media(min-width:760px){.bus-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bus-card{height:fit-content}.search-panel,.search-box{position:sticky;top:10px;z-index:4}.letter-nav{position:sticky;top:0;z-index:3;background:var(--paper,#fbf7ee);padding:8px 0}}
+@media(max-width:759px){.bus-card{border-radius:14px}.trust-note{font-size:.76rem}.letter-nav{overflow-x:auto;white-space:nowrap}}
+</style><!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4E3D1YX9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L4E3D1YX9X');
+</script>
 </head>
 <body>
 <header class="header">
@@ -33,7 +46,8 @@
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
       <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
-    </nav>
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◐</button>
+</nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
@@ -41,14 +55,14 @@
 <div class="seo-hero">
   <h1>Digha <span class="arr">→</span> Aranghata</h1>
   
-  <div class="stat-chips">
+  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-09-18</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
     <span class="schip">🚌 1 bus</span>
     <span class="schip hot">⏰ First —</span>
     <span class="schip">⏰ Last —</span>
     <span class="schip">⏱ ~—</span>
   </div>
 </div><section class="seo-section">
-  <h3 class="section-title">Today's Departures</h3>
+  <h3 class="section-title">Scheduled Departures</h3>
   <div class="bus-row">
   <div class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="no-time">Time N/A</span></div>
   <div class="bmid">
@@ -64,14 +78,13 @@
     <div class="rm-more">▸ full timetable below</div>
   </div>
 </section><section class="seo-section">
-  <h3 class="section-title">FAQ</h3>
-  <details open><summary>What is the first bus from Digha to Aranghata?</summary><div class="fa-body">Check the timetable above.</div></details><details><summary>What is the last bus from Digha to Aranghata?</summary><div class="fa-body">Check the timetable above.</div></details><details><summary>How many buses run from Digha to Aranghata?</summary><div class="fa-body">1 bus service is listed on this route.</div></details>
-</section><section class="seo-section">
   <a class="rel-chip" href="aranghata-to-digha.html">↩ Aranghata → Digha (return)</a>
 </section><section class="seo-section">
   <h3 class="section-title">More Routes from Digha</h3>
   <div class="chip-row"><a class="rel-chip" href="digha-to-kolkata.html">Digha → Kolkata</a><a class="rel-chip" href="digha-to-garia.html">Digha → Garia</a><a class="rel-chip" href="digha-to-barasat.html">Digha → Barasat</a><a class="rel-chip" href="digha-to-esplanade.html">Digha → Esplanade</a><a class="rel-chip" href="digha-to-habra.html">Digha → Habra</a><a class="rel-chip" href="digha-to-medinipur.html">Digha → Medinipur</a><a class="rel-chip" href="digha-to-baruipur.html">Digha → Baruipur</a><a class="rel-chip" href="digha-to-karunamoyee.html">Digha → Karunamoyee</a></div>
 </section>
+<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\2013"}.bj-faq .bjfa{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>
+<section class="bj-faq" aria-label="FAQ"><h2>Frequently Asked Questions — Digha to Aranghata</h2><details class="faq-item"><summary>What is the bus timing from Digha to Aranghata?</summary><div class="bjfa">Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand.</div></details><details class="faq-item"><summary>How many buses run from Digha to Aranghata?</summary><div class="bjfa">1 bus services are listed on this route.</div></details><details class="faq-item"><summary>Which operators run buses on the Digha to Aranghata route?</summary><div class="bjfa">Services include government operators such as Digha to Bagula.</div></details><details class="faq-item"><summary>Which places does the Digha to Aranghata bus pass through (via)?</summary><div class="bjfa">The main stoppages on the way are New Digha, Ramnagar, Balisai, Contai, Henria, Nandakumar, Mecheda, Radhamoni.</div></details><details class="faq-item"><summary>What is the bus fare from Digha to Aranghata?</summary><div class="bjfa">Fares for this route are not listed yet. West Bengal bus fares depend on distance and bus type — confirm the exact fare with the conductor or the bus stand counter.</div></details></section>
 </main>
 <footer class="footer">
   <div class="container">
@@ -88,5 +101,6 @@
   </div>
 </footer>
 <script defer src="../js/route-slider.js"></script>
+<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
 </body>
 </html>
