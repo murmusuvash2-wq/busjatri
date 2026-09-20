@@ -1,0 +1,121 @@
+name: Add copy details button to bus pages
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add-copy-btn:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch bus-page.js and bump index.html version
+        run: |
+          python3 - << 'PYEOF'
+          import io
+
+          HELPERS = r"""
+          function fmtRegNo(r) {
+            var m = String(r || '').trim().toUpperCase().match(/^([A-Z]{2})(\d{2}[A-Z]?)(\d{4})$/);
+            return m ? (m[1] + ' ' + m[2] + ' ' + m[3]) : String(r || '').trim();
+          }
+          function buildBusCopyText(b, stops) {
+            var E = String.fromCharCode;
+            var BUS = E(0xD83D,0xDE8C), NUM = E(0xD83D,0xDD22), PHONE = E(0xD83D,0xDCDE), PIN = E(0xD83D,0xDCCD), STOP = E(0xD83D,0xDE8F);
+            var DOT = E(0xB7), ARROW = E(0x2192), DASH = E(0x2014), NL = E(10);
+            var L = [];
+            L.push(BUS + ' ' + (b.bus_name || ''));
+            if (b.reg_no) L.push(NUM + ' ' + fmtRegNo(b.reg_no));
+            if (b.contact_number && b.contact_number !== 'Not Available !') L.push(PHONE + ' ' + b.contact_number);
+            if (b.origin && b.destination) L.push(PIN + ' ' + pn(b.origin) + ' ' + ARROW + ' ' + pn(b.destination) + (b.departure_time ? ' ' + DOT + ' ' + b.departure_time : ''));
+            var timed = stops.filter(function (s) { return s.up_time; }).map(function (s) { return pn(s.name) + ' ' + s.up_time; });
+            if (!timed.length) timed = stops.filter(function (s) { return s.down_time; }).map(function (s) { return pn(s.name) + ' ' + s.down_time; });
+            if (timed.length) { L.push(''); L.push(STOP + ' ' + timed.join(' ' + DOT + ' ')); }
+            L.push('');
+            L.push(DASH + ' BusJatri.in ' + BUS);
+            return L.join(NL);
+          }
+          var BJ_COPY_ICON = '<svg viewBox="0 0 24 24" style="width:19px;height:19px;fill:#b8791f" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg>';
+          function copyBusDetails(btn) {
+            var txt = window.BJ_COPY_TEXT || '';
+            if (!txt || !btn) return;
+            function done() {
+              btn.style.background = '#2b7a3e'; btn.style.borderColor = '#2b7a3e';
+              btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:19px;height:19px;fill:#fff" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg>';
+              setTimeout(function () {
+                btn.style.background = 'linear-gradient(135deg,#fdf6e6,#f7ecd4)'; btn.style.borderColor = '#e5dcc9';
+                btn.innerHTML = BJ_COPY_ICON;
+              }, 2000);
+            }
+            function fallback() {
+              try {
+                var ta = document.createElement('textarea');
+                ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+                document.body.appendChild(ta); ta.focus(); ta.select();
+                document.execCommand('copy'); document.body.removeChild(ta); done();
+              } catch (e) {}
+            }
+            if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done, fallback); }
+            else { fallback(); }
+          }
+          """
+
+          p = 'js/bus-page.js'
+          g = io.open(p, encoding='utf-8').read()
+          assert 'copyBusDetails' not in g, 'already patched'
+
+          anchor1 = 'async function renderBus(el, id) {'
+          assert g.count(anchor1) == 1
+          g = g.replace(anchor1, HELPERS + chr(10) + anchor1)
+
+          a2 = 'window.BJ_SHARE = { bus: b.bus_name'
+          i = g.find(a2)
+          assert i > 0
+          j = g.find('};', i)
+          assert j > 0
+          ins = chr(10) + '  window.BJ_COPY_TEXT = buildBusCopyText(b, stops);'
+          g = g[:j + 2] + ins + g[j + 2:]
+
+          old_h2 = """'<h2>' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + '</h2>' +"""
+          assert g.count(old_h2) == 1, 'h2 anchor count != 1'
+          new_h2 = """'<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">' +
+                  '<h2 style="flex:1 1 auto;min-width:0">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + '</h2>' +
+                  '<button onclick="copyBusDetails(this)" title="Copy bus details" aria-label="Copy bus details" style="flex:0 0 auto;width:42px;height:42px;border-radius:12px;border:1px solid #e5dcc9;background:linear-gradient(135deg,#fdf6e6,#f7ecd4);display:flex;align-items:center;justify-content:center;cursor:pointer;margin-top:2px;padding:0">' + BJ_COPY_ICON + '</button>' +
+                '</div>' +"""
+          g = g.replace(old_h2, new_h2)
+
+          io.open(p, 'w', encoding='utf-8').write(g)
+          print('bus-page.js patched')
+
+          ip = 'index.html'
+          h = io.open(ip, encoding='utf-8').read()
+          old_v = 'bus-page.js?v=bj20260920f'
+          new_v = 'bus-page.js?v=bj20260920g'
+          assert old_v in h, 'version anchor missing'
+          h = h.replace(old_v, new_v)
+          io.open(ip, 'w', encoding='utf-8').write(h)
+          print('index.html version bumped')
+          PYEOF
+
+      - name: Validate
+        run: |
+          node --check js/bus-page.js
+          grep -q 'copyBusDetails' js/bus-page.js
+          grep -q 'BJ_COPY_TEXT' js/bus-page.js
+          grep -q 'bus-page.js?v=bj20260920g' index.html
+          echo "all validations passed"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/bus-page.js index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bus page: copy details button next to bus name (clipboard + fallback)"
+            git push
+          fi
