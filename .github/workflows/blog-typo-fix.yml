@@ -1,0 +1,44 @@
+name: Blog typo fix
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix one word
+        run: |
+          python3 - << 'PYEOF'
+          import io
+          p = 'blog/cooch-behar-to-siliguri.html'
+          s = io.open(p, encoding='utf-8').read()
+          old = '\u098f\u0987 \u09b0\u09c1\u09b8\u09cd\u09a4\u09be\u099f\u09be'
+          new = '\u098f\u0987 \u09b0\u09be\u09b8\u09cd\u09a4\u09be\u099f\u09be'
+          assert s.count(old) == 1, 'anchor count wrong: ' + str(s.count(old))
+          s = s.replace(old, new)
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('fixed')
+          PYEOF
+
+      - name: Validate
+        run: |
+          grep -c "রাস্তাটা" blog/cooch-behar-to-siliguri.html
+          ! grep -q "রুস্তাটা" blog/cooch-behar-to-siliguri.html
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog/cooch-behar-to-siliguri.html
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Blog: fix one word in Cooch Behar post"
+            git push
+          fi
