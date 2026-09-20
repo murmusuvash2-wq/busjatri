@@ -1,0 +1,42 @@
+name: Quote escape fix
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix quote escape
+        run: python3 scripts/patch_quote_fix.py
+
+      - name: Validate
+        run: |
+          python3 - << 'PY'
+          Q = chr(34); A = chr(39)
+          s = open('js/extras.js', encoding='utf-8').read()
+          old = 'savedName.replace(/' + Q + '/g, ' + A + Q + A + ')'
+          new = 'savedName.replace(/' + Q + '/g, ' + A + '&' + 'quot;' + A + ')'
+          assert old not in s, 'bad quote escape still present'
+          assert new in s, 'good quote escape missing'
+          print('quote escape verified')
+          PY
+          node --check js/extras.js
+          echo "all checks passed"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/extras.js
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "extras.js: escape quotes in saved report name"
+            git push
+          fi
