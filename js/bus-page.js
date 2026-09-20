@@ -41,6 +41,51 @@ function timeCell(stop, stopIndex, direction, busId) {
   if (userTime) return '<span class="community-time">' + esc(userTime) + '<small>User updated</small></span>';
   return '<button class="add-time-btn" onclick="addCommunityTime(\'' + esc(busId) + '\',' + stopIndex + ',\'' + direction + '\',\'' + esc(stop.name) + '\')">+ Add time</button>';
 }
+
+function fmtRegNo(r) {
+  var m = String(r || '').trim().toUpperCase().match(/^([A-Z]{2})(\d{2}[A-Z]?)(\d{4})$/);
+  return m ? (m[1] + ' ' + m[2] + ' ' + m[3]) : String(r || '').trim();
+}
+function buildBusCopyText(b, stops) {
+  var E = String.fromCharCode;
+  var BUS = E(0xD83D,0xDE8C), NUM = E(0xD83D,0xDD22), PHONE = E(0xD83D,0xDCDE), PIN = E(0xD83D,0xDCCD), STOP = E(0xD83D,0xDE8F);
+  var DOT = E(0xB7), ARROW = E(0x2192), DASH = E(0x2014), NL = E(10);
+  var L = [];
+  L.push(BUS + ' ' + (b.bus_name || ''));
+  if (b.reg_no) L.push(NUM + ' ' + fmtRegNo(b.reg_no));
+  if (b.contact_number && b.contact_number !== 'Not Available !') L.push(PHONE + ' ' + b.contact_number);
+  if (b.origin && b.destination) L.push(PIN + ' ' + pn(b.origin) + ' ' + ARROW + ' ' + pn(b.destination) + (b.departure_time ? ' ' + DOT + ' ' + b.departure_time : ''));
+  var timed = stops.filter(function (s) { return s.up_time; }).map(function (s) { return pn(s.name) + ' ' + s.up_time; });
+  if (!timed.length) timed = stops.filter(function (s) { return s.down_time; }).map(function (s) { return pn(s.name) + ' ' + s.down_time; });
+  if (timed.length) { L.push(''); L.push(STOP + ' ' + timed.join(' ' + DOT + ' ')); }
+  L.push('');
+  L.push(DASH + ' BusJatri.in ' + BUS);
+  return L.join(NL);
+}
+var BJ_COPY_ICON = '<svg viewBox="0 0 24 24" style="width:19px;height:19px;fill:#b8791f" aria-hidden="true"><path d="M16 1H4a2 2 0 0 0-2 2v14h2V3h12V1Zm3 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Zm0 16H8V7h11v14Z"/></svg>';
+function copyBusDetails(btn) {
+  var txt = window.BJ_COPY_TEXT || '';
+  if (!txt || !btn) return;
+  function done() {
+    btn.style.background = '#2b7a3e'; btn.style.borderColor = '#2b7a3e';
+    btn.innerHTML = '<svg viewBox="0 0 24 24" style="width:19px;height:19px;fill:#fff" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2Z"/></svg>';
+    setTimeout(function () {
+      btn.style.background = 'linear-gradient(135deg,#fdf6e6,#f7ecd4)'; btn.style.borderColor = '#e5dcc9';
+      btn.innerHTML = BJ_COPY_ICON;
+    }, 2000);
+  }
+  function fallback() {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+      document.body.appendChild(ta); ta.focus(); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta); done();
+    } catch (e) {}
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) { navigator.clipboard.writeText(txt).then(done, fallback); }
+  else { fallback(); }
+}
+
 async function renderBus(el, id) {
   id = id.split('?')[0];
   const b = typeof loadFullBus === 'function' ? await loadFullBus(id) : BUSES[id];
@@ -83,12 +128,16 @@ async function renderBus(el, id) {
   }
 
   window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),
-    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };
+    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' };
+  window.BJ_COPY_TEXT = buildBusCopyText(b, stops); }) };
   el.innerHTML =
     '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
       '<div class="back-btn" onclick="history.length>1?history.back():location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class="label-en">Back</span></div>' +
       '<div class="bus-head">' +
-        '<h2>' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + '</h2>' +
+        '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">' +
+        '<h2 style="flex:1 1 auto;min-width:0">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + '</h2>' +
+        '<button onclick="copyBusDetails(this)" title="Copy bus details" aria-label="Copy bus details" style="flex:0 0 auto;width:42px;height:42px;border-radius:12px;border:1px solid #e5dcc9;background:linear-gradient(135deg,#fdf6e6,#f7ecd4);display:flex;align-items:center;justify-content:center;cursor:pointer;margin-top:2px;padding:0">' + BJ_COPY_ICON + '</button>' +
+      '</div>' +
         '<div class="route-line">' + icon('bus') + ' ' + esc(pn(b.origin)) + ' \u21c4 ' + esc(pn(b.destination)) + '</div>' +
         '<div class="info-grid">' +
           (b.departure_time ? '<div class="info-item"><div class="lbl">Departure</div><div class="val">' + esc(b.departure_time) + '</div></div>' : '') +
