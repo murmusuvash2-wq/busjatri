@@ -1,0 +1,39 @@
+name: Switch report endpoint v2
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 scripts/patch_endpoint2.py
+
+      - name: Validate
+        run: |
+          grep -q 'AKfycby3uePQMRoPwXg-7rWRgtF5TIyHe7e1brhGscIC_t_CtzVJiHke8DOf3-Ff5zMk1VZv' js/extras.js
+          grep -q 'AKfycby3uePQMRoPwXg' contribute.html
+          grep -q 'AKfycby3uePQMRoPwXg' admin.html
+          ! grep -q 'AKfycbyf-rjtn' js/extras.js
+          ! grep -q 'AKfycbyf-rjtn' contribute.html
+          ! grep -q 'AKfycbyf-rjtn' admin.html
+          node --check js/extras.js
+          echo 'all checks passed'
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/extras.js contribute.html admin.html index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Switch report/contribute endpoint to new v4 Apps Script deployment"
+            git push
+          fi
