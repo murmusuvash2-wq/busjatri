@@ -1,0 +1,37 @@
+name: Solid icon style
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 scripts/patch_solid_icons.py
+
+      - name: Validate
+        run: |
+          node --check js/bus-page.js
+          node scripts/render_test.js
+          grep -q 'fill-rule="evenodd"' js/bus-page.js
+          grep -q 'M14.4 6L14 4H5v17h2v-7h5.6' js/bus-page.js
+          ! grep -q 'stroke="currentColor" stroke-width="2"><path d="M20 10c0' js/bus-page.js
+          echo 'all checks passed'
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/bus-page.js index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bus page: solid filled map/report icons - consistent icon style"
+            git push
+          fi
