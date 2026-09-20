@@ -1,0 +1,41 @@
+name: Action row v3 icon-only
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch v3
+        run: python3 scripts/patch_action_row2.py
+
+      - name: Validate syntax + real render
+        run: |
+          node --check js/bus-page.js
+          node scripts/render_test.js
+          python3 - << 'PY'
+          import re
+          s = open('js/bus-page.js', encoding='utf-8').read()
+          assert not re.search(r"'\s*\n\s*'", s), 'ASI hazard present'
+          assert 'title="Report issue"' in s
+          assert 'label-en">WhatsApp' not in s, 'text labels should be gone'
+          print('static checks ok')
+          PY
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/bus-page.js css/ux-fixes.css index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bus page: icon-only action row (4 brand buttons) + restore broken concat/timetable"
+            git push
+          fi
