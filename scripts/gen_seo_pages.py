@@ -419,7 +419,7 @@ def shell(title, description, canonical, body, schema=""):
 <meta name="twitter:description" content="{esc(description)}">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="../css/seo.css">
+<link rel="stylesheet" href="../css/seo.css?v=rt20260920">
 <link rel="stylesheet" href="../css/extras.css">
 {schema}
 </head>
@@ -598,6 +598,7 @@ def bus_card(bus):
     duration = calculate_duration(bus)
     dur_text = fmt_duration(duration) if duration else "—"
     fare = clean_text(bus.get("fare")) or "—"
+    bid = bus.get("id") or ""
     bt_raw = (bus.get("bus_type") or "").lower()
     if "gov" in bt_raw or "sbstc" in bt_raw or "nbstc" in bt_raw or "wbtc" in bt_raw:
         badge = '<span class="badge badge-govt">Govt</span>'
@@ -608,17 +609,27 @@ def bus_card(bus):
     op_line = esc(name)
     if operator:
         op_line += f' · {esc(operator)}'
+    clock = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
     if dep == "—":
-        dep_html = '<span class="no-time">Time N/A</span>'
+        dep_html = f"{clock}<span class=\"no-time\">Time N/A</span>"
     else:
-        dep_html = f"{esc(dep)}<small>{esc(arr)} arr</small>"
+        small = f"<small>{esc(arr)} arr</small>" if arr != "—" else ""
+        dep_html = f"{clock}<div class=\"depcol\"><span class=\"dep-t\">{esc(dep)}</span>{small}</div>"
+    meta_bits = []
+    if fare != "—":
+        meta_bits.append(f'<span class="fare">{esc(fare)}</span>')
+    meta_bits.append(f"⏱ ~{esc(dur_text)}")
+    meta_bits.append(f"🚏 {stops or 0} stops")
+    link = ""
+    if bid:
+        link = f'<a class="bd-link" href="../index.html#/bus/{esc(bid)}" aria-label="View full timetable for {esc(name)}">Details ›</a>'
     return f"""<div class="bus-row">
   <div class="dep">{dep_html}</div>
   <div class="bmid">
     <div class="op">{op_line}</div>
-    <div class="mrow"><span>{esc(fare)}</span><span>~{esc(dur_text)}</span><span>{stops or 0} stops</span></div>
+    <div class="mrow">{' · '.join(meta_bits)}</div>
   </div>
-  {badge}
+  <div class="bright">{badge}{link}</div>
 </div>"""
 
 
