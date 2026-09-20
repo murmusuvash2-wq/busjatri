@@ -1,0 +1,110 @@
+name: Bus stand page redesign
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  redesign:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch place page template
+        run: |
+          python3 - << 'PYEOF'
+          import io
+          def rep(s, old, new, label, count=1):
+              n = s.count(old)
+              assert n == count, label + ': found ' + str(n) + ', expected ' + str(count)
+              return s.replace(old, new)
+          def seg(s, start, end, new, label):
+              i = s.find(start)
+              assert i >= 0, label + ' start missing'
+              j = s.find(end, i)
+              assert j >= 0, label + ' end missing'
+              assert s.find(start, i + 1) < 0, label + ' duplicated'
+              return s[:i] + new + s[j + len(end):]
+          p = 'scripts/gen_seo_pages.py'
+          g = io.open(p, encoding='utf-8').read()
+          assert 'op-hero' not in g, 'already patched'
+          HERO_OLD = ('<section style="\n'
+                      '  background:var(--panel);\n'
+                      '  border:1px solid var(--border);\n'
+                      '  border-radius:20px;\n'
+                      '  padding:24px;\n'
+                      '  margin-bottom:24px;\n'
+                      '">')
+          g = rep(g, HERO_OLD, '<section class="op-hero">', 'hero section')
+          STATS_OLD = ('<section style="\n'
+                       '  display:flex;\n'
+                       '  gap:10px;\n'
+                       '  flex-wrap:wrap;\n'
+                       '  margin-bottom:32px;\n'
+                       '">')
+          i = g.find(STATS_OLD)
+          assert i > 0, 'stats start missing'
+          j = g.find('</section>', i)
+          assert j > 0, 'stats end missing'
+          stats_new = ('<section class="op-stats">\n'
+                       '  <div class="op-stat"><div class="lbl">\U0001F68C Listed services</div>'
+                       '<div class="val">{count}</div></div>\n'
+                       '  <div class="op-stat"><div class="lbl">\U0001F4CD Destinations</div>'
+                       '<div class="val">{len(destinations)}</div></div>\n'
+                       '</section>')
+          g = g[:i] + stats_new + g[j + len('</section>'):]
+          RL_START = 'route_links.append(\n            f"""'
+          RL_END = '</a>\n"""\n        )'
+          RL_NEW = (
+              "route_links.append(\n"
+              "            f'<a href=\"{href}\" class=\"op-card\">'\n"
+              "            f'<span class=\"rt\">{esc(place)} <span class=\"arr\">\u2192</span> {esc(destination)}</span>'\n"
+              "            f'<span class=\"meta\">\U0001F68C {number} bus{\"es\" if number != 1 else \"\"}</span>'\n"
+              "            f'<span class=\"go\">View Schedule \u203a</span>'\n"
+              "            f'</a>'\n"
+              "        )\n"
+          )
+          g = seg(g, RL_START, RL_END, RL_NEW, 'route_links')
+          PANEL_OLD = ('<div style="\n'
+                       '    background:var(--panel);\n'
+                       '    border:1px solid var(--border);\n'
+                       '    border-radius:16px;\n'
+                       '    overflow:hidden;\n'
+                       '  ">')
+          g = rep(g, PANEL_OLD, '<div class="op-grid">', 'popular grid div')
+          g = rep(g, '<h2 style="font-size:1.35rem">', '<h2 class="op-h2">', 'h2 tags', count=2)
+          g = rep(g, 'max-width:720px">', 'max-width:860px">', 'main width')
+          io.open(p, 'w', encoding='utf-8').write(g)
+          import py_compile
+          py_compile.compile(p, doraise=True)
+          print('place page patch applied + compiles')
+          PYEOF
+
+      - name: Regenerate SEO pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: python3 scripts/gen_seo_pages.py
+
+      - name: Validate generated pages
+        run: |
+          grep -q 'op-card' bus-time-table/buses-from-esplanade.html
+          grep -q 'op-hero' bus-time-table/buses-from-esplanade.html
+          grep -q 'op-stats' bus-time-table/buses-from-esplanade.html
+          grep -q 'op-grid' bus-time-table/buses-from-esplanade.html
+          grep -q 'bus-row' bus-time-table/bankura-to-jhargram.html
+          grep -q '860px' bus-time-table/buses-from-esplanade.html
+          grep -q 'View Schedule' bus-time-table/buses-from-bankura.html
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_seo_pages.py bus-time-table sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bus stand pages redesign: card grid + gradient hero + metric stats"
+            git push
+          fi
