@@ -381,7 +381,7 @@ async function loadDash(){
 }
 
 /* ---------- user reports (Google Sheet via Apps Script) ---------- */
-const RPT_URL='https://script.google.com/macros/s/AKfycbyf-rjtn606T1FUfGaPiYnyIMCZIU99ZlwqmkI3cVfPT0SarjTY12MZQpu2exLczdUD/exec';
+const RPT_URL='https://script.google.com/macros/s/AKfycby3uePQMRoPwXg-7rWRgtF5TIyHe7e1brhGscIC_t_CtzVJiHke8DOf3-Ff5zMk1VZv/exec';
 let REPORTS=null;
 function rptTok(){try{return localStorage.getItem('bj_rpt_token')||''}catch(e){return ''}}
 function canAutoRpt(r){return r&&r.type==='add-time'&&r.bus_id&&r.stop&&/^\d{1,2}:\d{2}\s*(AM|PM)$/i.test(r.time||'')}
