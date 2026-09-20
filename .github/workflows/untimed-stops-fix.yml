@@ -1,0 +1,36 @@
+name: Untimed stops fix
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply untimed-stops patch (ux-fixes.js + index.html)
+        run: python3 scripts/patch_untimed_stops.py --write
+
+      - name: Validate
+        run: |
+          node --check js/ux-fixes.js
+          grep -q 'Time not listed' js/ux-fixes.js
+          grep -q 'js/ux-fixes.js?v=untimed20260920a' index.html
+          python3 -c "s=open('index.html',encoding='utf-8').read(); assert '<html' in s and '</html>' in s; print('index.html OK')"
+          echo "all checks passed"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/ux-fixes.js index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Search: show untimed buses with 'Time not listed' instead of hiding them"
+            git push
+          fi
