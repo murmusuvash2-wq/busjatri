@@ -88,3 +88,17 @@
 
 /* add-time box: contributor name input */
 .bj-timebox input.bj-name{width:118px;text-align:left;font:600 13px var(--font-body,var(--font-body));}
+
+/* ==== Action row redesign: 4 brand buttons, 2x2 grid on mobile (2026-09-20) ==== */
+.wa-row{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{display:flex;align-items:center;justify-content:center;gap:6px;min-width:0;padding:11px 6px;font-size:12.5px;font-weight:600;border-radius:10px;text-decoration:none;line-height:1.15;white-space:nowrap}
+.wa-row .map-btn svg,.wa-row .wa-btn svg,.wa-row .fb-btn svg,.wa-row .report-btn svg{width:15px;height:15px;flex:0 0 auto}
+.wa-row .map-btn{background:var(--amber,#b8791f);color:#fff;border:1.5px solid var(--amber,#b8791f)}
+.wa-row .map-btn:hover{background:#a06a1a;border-color:#a06a1a;color:#fff}
+.wa-row .wa-btn{background:#25D366;color:#fff;border:1.5px solid #25D366}
+.wa-row .wa-btn:hover{background:#1fbf5a;border-color:#1fbf5a;color:#fff}
+.wa-row .fb-btn{background:#1877F2;color:#fff;border:1.5px solid #1877F2}
+.wa-row .fb-btn:hover{background:#1667d9;border-color:#1667d9;color:#fff}
+.wa-row .report-btn{background:#fff;color:#c0392b;border:1.5px solid #d8dee9;font-family:var(--font-body);cursor:pointer}
+.wa-row .report-btn:hover{background:#fdf0ee;border-color:#e5b7b1}
+@media(max-width:560px){.wa-row{grid-template-columns:repeat(2,1fr)}.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{padding:12px 6px;font-size:13px}}
