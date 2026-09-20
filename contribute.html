@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add a Bus — BusJatri</title>
+<meta name="description" content="Add a new bus to BusJatri — West Bengal Bus Timetable. Submit bus name, route, times and stoppages.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'><path d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10M4 16h16M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2M6 10h12'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700;900&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c2333;--mut:#5b6472;--line:#e5e9f2;--acc:#b8791f;--bg:#fbfcfe}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+.wrap{max-width:640px;margin:0 auto;padding:30px 20px 70px}
+header{border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:24px}
+.logo{font-weight:700;font-size:15px;color:var(--mut);letter-spacing:.02em;text-decoration:none}
+.logo b{color:var(--acc)}
+h1{font-family:'Fraunces',serif;font-size:clamp(26px,5vw,34px);margin:14px 0 4px}
+.meta{color:var(--mut);font-size:14px}
+.lead{font-size:14.5px;color:var(--mut);margin-bottom:24px;background:#fff6e9;border:1px solid #f0e0c2;border-radius:12px;padding:12px 14px}
+form{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px;box-shadow:0 6px 24px rgba(28,35,51,.05)}
+.field{margin-bottom:15px}
+label{display:block;font-size:13px;font-weight:600;margin-bottom:5px}
+label small{display:block;font-weight:400;color:var(--mut);font-size:12px}
+input,select{width:100%;border:1px solid var(--line);border-radius:10px;padding:11px 12px;font-family:inherit;font-size:15px;background:#fff;color:var(--ink)}
+input:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(184,121,31,.14)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stoprow{display:grid;grid-template-columns:1fr 130px 34px;gap:8px;margin-bottom:8px;align-items:center}
+.stoprow button{border:1px solid var(--line);background:#fff;border-radius:10px;height:42px;font-size:16px;color:#c0392b;cursor:pointer}
+.addstop{border:1px dashed #cbb894;background:#fffdf7;color:var(--acc);border-radius:10px;padding:10px;width:100%;font-family:inherit;font-size:14px;font-weight:600;cursor:pointer;margin-top:4px}
+.send{width:100%;background:linear-gradient(135deg,#c78a2b,#b8791f);color:#fff;border:none;border-radius:12px;padding:14px;font-family:inherit;font-size:16px;font-weight:700;cursor:pointer;margin-top:8px}
+.send:active{transform:scale(.99)}
+.err{color:#c0392b;font-size:13px;margin-top:10px;display:none}
+.done{display:none;background:#e9f9ef;border:1px solid #b7e4c7;color:#1b7a3d;border-radius:14px;padding:22px;text-align:center;font-size:16px;font-weight:600;margin-top:18px}
+.done b{display:block;font-size:22px;margin-bottom:6px}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:var(--mut);font-size:13px;text-align:center}
+footer a{color:var(--acc);text-decoration:none}
+@media(max-width:480px){.two{grid-template-columns:1fr}.stoprow{grid-template-columns:1fr 110px 34px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><a class="logo" href="/">🚌 Bus<b>Jatri</b></a></div>
+  <h1>Add a Bus</h1>
+  <div class="meta">নতুন বাসের তথ্য দিন — West Bengal</div>
+</header>
+<p class="lead">Know a bus that is not on BusJatri yet? Fill this form — our team verifies every bus before it goes live. Times shown on the site only after checking.</p>
+<form id="f" onsubmit="return submitBus(event)">
+  <div class="field">
+    <label>Bus name <small>বাসের নাম</small></label>
+    <input id="bName" maxlength="60" placeholder="e.g. SHAKTI SREE" required>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>Bus number <small>বাসের নম্বর (WB-…)</small></label>
+      <input id="bReg" maxlength="30" placeholder="WB67C2286">
+    </div>
+    <div class="field">
+      <label>Bus contact <small>বাসের ফোন (optional)</small></label>
+      <input id="bContact" maxlength="20" placeholder="98XXXXXXXX">
+    </div>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>From <small>কোথা থেকে</small></label>
+      <input id="bFrom" maxlength="60" placeholder="Howrah" required>
+    </div>
+    <div class="field">
+      <label>To <small>কোথায়</small></label>
+      <input id="bTo" maxlength="60" placeholder="Bankura" required>
+    </div>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>Departure time <small>ছাড়ার সময়</small></label>
+      <input id="bDep" type="time" required>
+    </div>
+    <div class="field">
+      <label>Arrival time <small>পৌঁছানোর সময় (optional)</small></label>
+      <input id="bArr" type="time">
+    </div>
+  </div>
+  <div class="field">
+    <label>Stoppages with times <small>স্টপেজ ও সময় — যতগুলো জানা থাকে</small></label>
+    <div id="stops"></div>
+    <button type="button" class="addstop" onclick="addStop()">+ Add stoppage</button>
+  </div>
+  <div class="field">
+    <label>Your name <small>আপনার নাম (optional — credit দেখানো হবে)</small></label>
+    <input id="bWho" maxlength="40" placeholder="Rahul">
+  </div>
+  <div class="err" id="err"></div>
+  <button class="send" type="submit">Submit Bus</button>
+</form>
+<div class="done" id="done"><b>✓</b>Thank you for contributing!<br><small style="font-weight:400;color:#2c6e49">ধন্যবাদ! আমাদের টিম যাচাই করে বাসটি যোগ করবে।</small></div>
+<footer>Back to <a href="/">BusJatri — West Bengal Bus Timetable</a></footer>
+</div>
+<script>
+var URL_ = "https://script.google.com/macros/s/AKfycbyf-rjtn606T1FUfGaPiYnyIMCZIU99ZlwqmkI3cVfPT0SarjTY12MZQpu2exLczdUD/exec";
+function addStop(n, t) {
+  var d = document.createElement('div');
+  d.className = 'stoprow';
+  d.innerHTML = '<input class="sName" maxlength="60" placeholder="Stop name">' +
+    '<input class="sTime" type="time" title="Time at this stop (optional)">' +
+    '<button type="button" title="Remove" onclick="this.parentNode.remove()">✕</button>';
+  d.querySelector('.sName').value = n || '';
+  d.querySelector('.sTime').value = t || '';
+  document.getElementById('stops').appendChild(d);
+}
+addStop(); addStop();
+function fmt12(v) {
+  if (!v) return '';
+  var parts = v.split(':'); var h = parseInt(parts[0], 10); var m = parts[1];
+  var ap = h >= 12 ? 'PM' : 'AM'; var h12 = h % 12 || 12;
+  return h12 + ':' + m + ' ' + ap;
+}
+function submitBus(ev) {
+  ev.preventDefault();
+  var err = document.getElementById('err');
+  err.style.display = 'none';
+  var bus = document.getElementById('bName').value.trim();
+  var from = document.getElementById('bFrom').value.trim();
+  var to = document.getElementById('bTo').value.trim();
+  var dep = fmt12(document.getElementById('bDep').value);
+  if (!bus || !from || !to || !dep) {
+    err.textContent = 'Please fill: bus name, from, to and departure time.';
+    err.style.display = 'block'; return false;
+  }
+  var stops = [];
+  document.querySelectorAll('#stops .stoprow').forEach(function (r) {
+    var n = r.querySelector('.sName').value.trim();
+    var t = fmt12(r.querySelector('.sTime').value);
+    if (n) stops.push(n + (t ? ' @ ' + t : ''));
+  });
+  var stopsStr = stops.join('; ');
+  var body = new URLSearchParams();
+  body.append('type', 'new-bus');
+  body.append('bus', bus);
+  body.append('reg', document.getElementById('bReg').value.trim());
+  body.append('from', from);
+  body.append('to', to);
+  body.append('dep', dep);
+  body.append('arr', fmt12(document.getElementById('bArr').value));
+  body.append('stops', stopsStr);
+  body.append('contact', document.getElementById('bContact').value.trim());
+  body.append('name', document.getElementById('bWho').value.trim());
+  body.append('page', location.href);
+  body.append('route', from + ' \u21c4 ' + to);
+  body.append('current', dep);
+  body.append('note', 'stops: ' + (stopsStr || '—'));
+  try { fetch(URL_, { method: 'POST', mode: 'no-cors', body: body }); } catch (e) {}
+  document.getElementById('f').style.display = 'none';
+  document.getElementById('done').style.display = 'block';
+  window.scrollTo(0, 0);
+  return false;
+}
+</script>
+</body>
+</html>
