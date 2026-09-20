@@ -85,3 +85,6 @@
 .community-time small{color:var(--amber-ink,#7a5210)}
 .bj-del{width:34px;height:34px;border-radius:8px;border:1px solid #c0392b;background:none;color:#c0392b;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;padding:0}
 .bj-del:hover{background:#c0392b;color:#fff}
+
+/* add-time box: contributor name input */
+.bj-timebox input.bj-name{width:118px;text-align:left;font:600 13px var(--font-body,var(--font-body));}

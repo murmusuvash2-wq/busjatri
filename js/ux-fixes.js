@@ -800,6 +800,7 @@
     box.className = 'bj-timebox';
     box.innerHTML = '<input type="tel" placeholder="11:30" maxlength="5" aria-label="time" value="' + escHtml(existing ? existing.split(' ')[0] : '') + '">' +
       '<button type="button" class="bj-mer" title="AM/PM"></button>' +
+      '<input type="text" class="bj-name" placeholder="Naam (optional)" maxlength="30" aria-label="name">' +
       '<button type="button" class="bj-ok" title="Save">✓</button>' +
       (existing ? '<button type="button" class="bj-del" title="Delete">' + TRASH_SVG + '</button>' : '') +
       '<button type="button" class="bj-no" title="Close">✕</button>';
@@ -817,6 +818,20 @@
       var times = communityTimes();
       times[communityTimeKey(busId, stopIndex, direction)] = v;
       try { localStorage.setItem(COMMUNITY_TIME_KEY, JSON.stringify(times)); } catch (e) {}
+      /* also send to the review queue - approved ones go live for everyone */
+      try {
+        var nmI = box.querySelector('.bj-name');
+        var nm = nmI ? nmI.value.trim() : '';
+        if (nm) { try { localStorage.setItem('bj-name', nm); } catch (e2) {} }
+        var bb = (typeof BUSES !== 'undefined' && BUSES[busId]) || null;
+        var stn = (bb && bb.stoppages && bb.stoppages[stopIndex]) ? bb.stoppages[stopIndex].name : '';
+        if (typeof sendReport === 'function') {
+          sendReport({ type: 'add-time', bus: bb ? bb.bus_name : '', bus_id: busId,
+            stop: stn || '', dir: direction, time: v, note: '',
+            page: location.href, name: nm, reg: bb ? (bb.reg_no || '') : '',
+            route: bb ? ((bb.origin || '') + ' \u21c4 ' + (bb.destination || '')) : '', current: '' });
+        }
+      } catch (e3) { /* never block saving */ }
       box.remove();
       render();
     }

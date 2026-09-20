@@ -209,3 +209,6 @@ body.lang-bn .route-chip{letter-spacing:0}
 .rf-row input[type=text]{flex:1;min-width:150px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:13px;min-height:42px}
 .rf-send{background:var(--amber);color:#fff;border:none;border-radius:8px;padding:9px 18px;font-weight:700;font-size:13px;cursor:pointer;min-height:42px}
 .rf-done{display:none;margin-top:8px;font-size:13px;font-weight:600;color:#1a7f37}
+
+/* report form: type select */
+.rf-row select{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:13px;min-height:42px;max-width:100%}
