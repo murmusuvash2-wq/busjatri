@@ -1,7 +1,9 @@
-name: Fetch user reports
+name: Fetch user reports (legacy)
+# NOTE: the live report pipeline is now the Apps Script v4 receiver +
+# admin panel (submissions go straight to the Google Sheet). This legacy
+# CSV flow is kept for manual use only - the 3-hourly schedule was
+# disabled on 2026-09-20 because CSV_URL was never configured.
 on:
-  schedule:
-    - cron: '0 */3 * * *'   # every 3 hours
   workflow_dispatch:
 
 permissions:

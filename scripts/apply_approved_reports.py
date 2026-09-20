@@ -1,94 +1,72 @@
 #!/usr/bin/env python3
-"""Apply approved user reports (report system Phase B).
+"""Apply approved user time reports (legacy CSV pipeline).
 
-Reads data/time-reports.json (synced from the Google Sheet by
-scripts/fetch_time_reports.py). Rows whose Status is 'approved':
+Reads data/time-reports.json (list of reports). Reports with
+status='approved' and a usable time are merged into
+data/time-overrides.json, contributor counts are bumped in
+data/contributors.json, and processed reports are marked 'done'.
 
-  * type 'add-time'  -> merged into data/time-overrides.json, so the
-    approved stop time shows on the live site instantly (runtime patch;
-    apply_time_overrides.py folds them into the source data on rebuilds)
-  * any approved row with a non-empty Name -> counted in
-    data/contributors.json for the footer credit line
-
-Rejected/blank rows are ignored. Applied rows keep their 'approved'
-status so they are never applied twice (merge is idempotent anyway).
+The live site now uses the Apps Script v4 receiver + admin panel
+Approve button, which writes time-overrides.json directly - this
+script only remains for the legacy Fetch user reports workflow.
 """
 import json
-import re
-from collections import Counter
-from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
-REP = ROOT / 'data' / 'time-reports.json'
-OVR = ROOT / 'data' / 'time-overrides.json'
-CON = ROOT / 'data' / 'contributors.json'
+OVR = "data/time-overrides.json"
+REP = "data/time-reports.json"
+CON = "data/contributors.json"
 
 
-def norm_time(t):
-    """'9:5 AM' / '09:05 am' -> '9:05 AM'; None if unparseable."""
-    m = re.match(r'^\s*(\d{1,2}):ÌŸJWÊŠS_JWÊ‰	ËİŠÜˆ	ÉÊKœİš\
+def load(path, default):
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return default
 
-K\\Š
-JBˆYˆ›İN‚ˆ™]\›ˆ›Û™BˆZK\H[
-K™Ü›İ\
-JJKK™Ü›İ\
-ŠKK™Ü›İ\
-ÊBˆYˆ\OH	ÔIÈ[™OHL‚ˆ
-ÏHL‚ˆYˆ\OH	ĞSIÈ[™OHL‚ˆHˆYˆˆŒÎ‚ˆ™]\›ˆ›Û™BˆLˆH	HLˆÜˆL‚ˆ™]\›ˆˆÚLŸNÛZ_HÉÔIÈYˆHLˆ[ÙH	ĞSIßH‚‚‚™YˆÛX[—Û˜[YJŠN‚ˆˆH™KœİXŠ‰ÖÏ‰ˆ—IË	ÉËİŠˆÜˆ	ÉÊJKœİš\
 
-Bˆ™]\›ˆ–ÎŒÌB‚‚™YˆXZ[Š
-N‚ˆ™\ÜÈHœÛÛ‹›ØYÊ‘Tœ™XYİ^
-[˜ÛÙ[™ÏIİ]‹N	ÊJHYˆ‘T™^\İÊ
-H[ÙH×BˆİˆHœÛÛ‹›ØYÊÕ”‹œ™XYİ^
-[˜ÛÙ[™ÏIİ]‹N	ÊJHYˆÕ”‹™^\İÊ
-H[ÙHßB‚ˆ—Ø\YYHˆÚÚ\YH×Bˆ›Üˆˆ[ˆ™\ÜÎ‚ˆYˆ
-‹™Ù]
-	Üİ]\ÉÊHÜˆ	ÉÊKœİš\
+def main():
+    reports = load(REP, [])
+    if not reports:
+        print("no reports file / empty - nothing to do")
+        return
+    ovr = load(OVR, {})
+    contributors = load(CON, [])
+    applied = 0
+    for r in reports:
+        if r.get("status") != "approved":
+            continue
+        bus_id = r.get("bus_id")
+        stop = r.get("stop")
+        time = r.get("time")
+        if not (bus_id and stop and time):
+            continue
+        ovr.setdefault(bus_id, {})
+        cur = ovr[bus_id].setdefault(stop, {})
+        cur["up" if r.get("dir") != "down" else "down"] = time
+        r["status"] = "done"
+        applied += 1
+        name = r.get("name")
+        if name:
+            for c in contributors:
+                if (c.get("name") or "").lower() == name.lower():
+                    c["count"] = c.get("count", 1) + 1
+                    break
+            else:
+                contributors.append({"name": name, "count": 1})
+    if applied:
+        contributors.sort(key=lambda c: c.get("count", 0), reverse=True)
+        with open(OVR, "w", encoding="utf-8") as f:
+            json.dump(ovr, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        with open(CON, "w", encoding="utf-8") as f:
+            json.dump(contributors[:20], f, ensure_ascii=False, indent=2)
+            f.write("\n")
+        with open(REP, "w", encoding="utf-8") as f:
+            json.dump(reports, f, ensure_ascii=False, indent=2)
+            f.write("\n")
+    print("applied:", applied)
 
-K›İÙ\Š
-HOH	Ø\›İ™Y	Î‚ˆÛÛ[YBˆYˆ
-‹™Ù]
-	İ\IÊHÜˆ	İ[YK\™\Ü	ÊKœİš\
 
-HOH	ØY][YIÎ‚ˆÛÛ[YHÈ\Ë\İÜYÈ›İ]KXÚ[™ÙHÈ\Ë[]™[[YH™\ÜÈİ^H™]šY]Ë[Û›BˆšYH
-‹™Ù]
-	Ø\×ÚY	ÊHÜˆ	ÉÊKœİš\
-
-BˆİÜH
-‹™Ù]
-	ÜİÜ	ÊHÜˆ	ÉÊKœİš\
-
-BˆH›Ü›Wİ[YJ‹™Ù]
-	İ[YIÊJBˆYˆ›İ
-šY[™İÜ[™
-N‚ˆÚÚ\Y˜\[™
-ŠBˆÛÛ[YBˆH	ÙİÛ‰ÈYˆ
-‹™Ù]
-	Ù\‰ÊHÜˆ	ÉÊKœİš\
-
-K›İÙ\Š
-Kœİ\İÚ]
-	Ù	ÊH[ÙH	İ\	Âˆİ‹œÙ]Y˜][
-šYßJKœÙ]Y˜][
-İÜßJVÙHHˆ—Ø\YY
-ÏHB‚ˆÕ”‹Üš]Wİ^
-œÛÛ‹™[\Êİ‹[œİ\™WØ\ØÚZOQ˜[ÙK[™[LJK[˜ÛÙ[™ÏIİ]‹N	ÊB‚ˆÛİ[ÈHÛİ[\Š
-Bˆ›Üˆˆ[ˆ™\ÜÎ‚ˆYˆ
-‹™Ù]
-	Üİ]\ÉÊHÜˆ	ÉÊKœİš\
-
-K›İÙ\Š
-HOH	Ø\›İ™Y	Î‚ˆˆHÛX[—Û˜[YJ‹™Ù]
-	Û˜[YIÊJBˆYˆˆ[™‹›İÙ\Š
-H›İ[ˆ
-	Ø[›Û[[İ\ÉË	ÙİY\İ	Ë	Û˜IÊN‚ˆÛİ[ÖÛ—H
-ÏHBˆÜHŞÉÛ˜[YIÎˆ‹	Û‰ÎˆßH›Üˆ‹È[ˆÛİ[Ë›[ÜİØÛÛ[[ÛŠL
-WBˆÓÓ‹Üš]Wİ^
-œÛÛ‹™[\ÊÜ[œİ\™WØ\ØÚZOQ˜[ÙK[™[LJK[˜ÛÙ[™ÏIİ]‹N	ÊB‚ˆš[
-‰Ø\YYÛ—Ø\YYH\›İ™YY][YH™\ÜÈ	Âˆ‰Êİ[İ™\œšYHİÜ][Y\È›İÎˆÜİ[J[ŠŠH›Üˆˆ[ˆİ‹˜[Y\Ê
-J_JIÊBˆYˆÚÚ\Y‚ˆš[
-‰ÜÚÚ\YÛ[ŠÚÚ\Y
-_H\›İ™Y›İÜÈÚ]Z\ÜÚ[™È\ËÜİÜİ[YIÊBˆš[
-‰ØÛÛšX]ÜœÎˆÛ[ŠÜ
-_IÊB‚‚šYˆ×Û˜[YW×ÈOH	××ÛXZ[—×ÉÎ‚ˆXZ[Š
-B
+if __name__ == "__main__":
+    main()
