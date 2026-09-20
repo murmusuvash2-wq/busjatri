@@ -177,7 +177,9 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
     <div class="nav-sep">Manage</div>
     <div class="nav-item" data-view="buses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="13" height="10" rx="2"/><path d="M16 9h3l2 3v4h-5z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17.5" cy="18" r="1.6"/></svg>Bus Times</div>
     <div class="nav-item" data-view="blog"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h13l3 3v13H4z"/><path d="M8 10h8M8 14h8M8 18h5"/></svg>Blog</div>
-    <div class="nav-item" data-view="reports"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Reports <span class="tag g" id="repBadge" style="display:none;margin-left:auto">0</span></div>
+    <div class="nav-item" data-view="reports"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Time Updates <span class="tag g" id="repBadge" style="display:none;margin-left:auto">0</span></div>
+    <div class="nav-item" data-view="issues"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.3 3.9 2.4 18a2 2 0 0 0 1.7 3h15.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg>Issues <span class="tag o" id="issBadge" style="display:none;margin-left:auto">0</span></div>
+    <div class="nav-item" data-view="newbuses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9v6M14 9v6"/></svg>New Buses <span class="tag g" id="busBadge" style="display:none;margin-left:auto">0</span></div>
     <div class="nav-sep">System</div>
     <div class="nav-item" data-view="settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19 12a7 7 0 0 0-.1-1.2l2-1.6-2-3.4-2.4 1a7 7 0 0 0-2-1.2L14 3h-4l-.5 2.6a7 7 0 0 0-2 1.2l-2.4-1-2 3.4 2 1.6A7 7 0 0 0 5 12a7 7 0 0 0 .1 1.2l-2 1.6 2 3.4 2.4-1a7 7 0 0 0 2 1.2L10 21h4l.5-2.6a7 7 0 0 0 2-1.2l2.4 1 2-3.4-2-1.6A7 7 0 0 0 19 12z"/></svg>Settings</div>
     <div class="spacer"></div>
@@ -201,7 +203,9 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
           <div class="stat"><div class="lbl">Total Buses</div><div class="val" id="stBuses">—</div><div class="sub">data/app-index.json</div></div>
           <div class="stat"><div class="lbl">Time Overrides</div><div class="val" id="stOvr">—</div><div class="sub">data/time-overrides.json</div></div>
           <div class="stat"><div class="lbl">Blog Posts</div><div class="val" id="stBlog">—</div><div class="sub">data/blog-manifest.json</div></div>
-          <div class="stat"><div class="lbl">Pending Reports</div><div class="val" id="stReports">—</div><div class="sub">data/time-reports.json</div></div>
+          <div class="stat"><div class="lbl">Time Updates</div><div class="val" id="stReports">—</div><div class="sub">pending user times</div></div>
+          <div class="stat"><div class="lbl">Issue Reports</div><div class="val" id="stIssues">—</div><div class="sub">bus-stopped / route</div></div>
+          <div class="stat"><div class="lbl">New Buses</div><div class="val" id="stBusesNew">—</div><div class="sub">contributions pending</div></div>
           <div class="stat"><div class="lbl">Repo</div><div class="val" style="font-size:15px;line-height:1.7;margin-top:10px" id="stRepo">—</div><div class="sub">github.com</div></div>
         </div>
         <div class="grid2">
@@ -210,7 +214,9 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
             <div style="display:flex;flex-direction:column;gap:10px">
               <button class="btn btn-primary" onclick="go('buses')">Fix a Bus Time</button>
               <button class="btn btn-ghost" onclick="go('blog')">Write a Blog Post</button>
-              <button class="btn btn-ghost" onclick="go('reports')">Check User Reports</button>
+              <button class="btn btn-ghost" onclick="go('reports')">Time Updates</button>
+              <button class="btn btn-ghost" onclick="go('issues')">Issue Reports</button>
+              <button class="btn btn-ghost" onclick="go('newbuses')">New Buses</button>
               <button class="btn btn-ghost" id="rebuildBtn">↻ Rebuild & Publish Site</button>
               <div class="hint">Rebuild workflow SEO pages + app data regenerate karta hai. Sirf zaroorat pe chalayein — normally runtime overrides turant live hote hain.</div>
             </div>
@@ -267,12 +273,30 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
         </div>
       </section>
 
-      <!-- REPORTS -->
+      <!-- TIME UPDATES -->
       <section id="view-reports" class="view" style="display:none">
         <div class="card">
-          <h3>🐞 User Time Reports</h3>
-          <div class="hint" style="margin:0 0 14px">Site se aaye reports yahan dikhte hain (Google Sheet se). <b>Approve</b> = time site pe live. <b>Fix</b> = khud edit karke save. <b>Reject</b> = nikaal do.</div>
+          <h3>⏱ User Time Updates</h3>
+          <div class="hint" style="margin:0 0 14px">Stoppage time ke corrections yahan aate hain. <b>Approve</b> = time site pe live. <b>Fix</b> = khud edit karke save. <b>Reject</b> = nikaal do.</div>
           <div class="scrollbox" style="max-height:620px"><table><thead><tr><th>Bus</th><th>Route</th><th>Time (current → correct)</th><th>Note</th><th>When</th><th style="width:180px">Actions</th></tr></thead><tbody id="reportRows"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- ISSUE REPORTS -->
+      <section id="view-issues" class="view" style="display:none">
+        <div class="card">
+          <h3>🛑 Issue Reports</h3>
+          <div class="hint" style="margin:0 0 14px">Bus band / route badal gayi — ye reports yahan. <b>Handled</b> = dekh liya. <b>Fix</b> = bus editor mein kholo. <b>Reject</b> = nikaal do.</div>
+          <div class="scrollbox" style="max-height:620px"><table><thead><tr><th>Bus</th><th>Route</th><th>Type</th><th>Note</th><th>When</th><th style="width:190px">Actions</th></tr></thead><tbody id="issueRows"></tbody></table></div>
+        </div>
+      </section>
+
+      <!-- NEW BUSES -->
+      <section id="view-newbuses" class="view" style="display:none">
+        <div class="card">
+          <h3>🚌 New Bus Contributions</h3>
+          <div class="hint" style="margin:0 0 14px">Form se aayi nayi buses. <b>Approve</b> = site pe live (community_buses.json + rebuild, 3-5 min). Duplicate ho to warning dikhega. <b>Reject</b> = nikaal do. <i>invalid</i> wali rows galat data hain.</div>
+          <div class="scrollbox" style="max-height:620px"><table><thead><tr><th>Bus</th><th>Route</th><th>Times</th><th>Stops</th><th>Contributor</th><th>When</th><th style="width:170px">Actions</th></tr></thead><tbody id="busRows"></tbody></table></div>
         </div>
       </section>
 
@@ -353,10 +377,10 @@ function go(v){
   $$('.nav-item[data-view]').forEach(n=>n.classList.toggle('active',n.dataset.view===v));
   $$('.view').forEach(x=>x.style.display='none');
   $('#view-'+v).style.display='block';
-  $('#viewTitle').textContent=({dash:'Dashboard',buses:'Bus Times',blog:'Blog Manager',reports:'User Reports',settings:'Settings'})[v];
-  $('#crumb').textContent='BusJatri / '+({dash:'overview',buses:'manage times',blog:'content',reports:'user reports',settings:'config'})[v];
+  $('#viewTitle').textContent=({dash:'Dashboard',buses:'Bus Times',blog:'Blog Manager',reports:'Time Updates',issues:'Issue Reports',newbuses:'New Buses',settings:'Settings'})[v];
+  $('#crumb').textContent='BusJatri / '+({dash:'overview',buses:'manage times',blog:'content',reports:'time updates',issues:'issue reports',newbuses:'new buses',settings:'config'})[v];
   $('#sidebar').classList.remove('open');
-  if(v==='dash')loadDash();if(v==='blog')loadBlog();if(v==='reports')loadReports();
+  if(v==='dash')loadDash();if(v==='blog')loadBlog();if(v==='reports')loadReports('time');if(v==='issues')loadReports('issues');if(v==='newbuses')loadNewBuses();
 }
 $$('.nav-item[data-view]').forEach(n=>n.onclick=()=>go(n.dataset.view));
 $('#burger').onclick=()=>$('#sidebar').classList.toggle('open');
@@ -377,7 +401,14 @@ async function loadDash(){
     const stops=Object.keys(OVR[k]).map(s=>`<span class="tag" style="margin:2px 3px 2px 0">${s}: ${OVR[k][s].up||OVR[k][s].down||''}</span>`).join('');
     return `<div style="padding:10px 4px;border-bottom:1px solid var(--line)"><div style="font-size:13px;font-weight:600">${nm}</div><div>${stops}</div></div>`}).join('')}
   try{BLOGM=JSON.parse(await rawGet('data/blog-manifest.json'));$('#stBlog').textContent=BLOGM.length}catch(e){$('#stBlog').textContent='—'}
-  try{const rp=JSON.parse(await rawGet('data/time-reports.json'));const pend=rp.filter(r=>r.status!=='done').length;$('#stReports').textContent=pend;const bb=$('#repBadge');if(bb){bb.style.display=pend?'inline-flex':'none';bb.textContent=pend}}catch(e){$('#stReports').textContent='0'}
+  const tkd=rptTok();
+  if(tkd){
+    try{const r=await fetch(RPT_URL+'?action=list&token='+encodeURIComponent(tkd));const j=await r.json();const fresh=(j.rows||[]).filter(x=>x.status==='new');
+      const tc=fresh.filter(x=>x.type==='add-time').length;const ic=fresh.length-tc;
+      $('#stReports').textContent=tc;$('#stIssues').textContent=ic;setBadge('repBadge',tc);setBadge('issBadge',ic);}catch(e){$('#stReports').textContent='—';$('#stIssues').textContent='—'}
+    try{const r=await fetch(RPT_URL+'?action=list-buses&token='+encodeURIComponent(tkd));const j=await r.json();const bc=(j.rows||[]).filter(x=>x.status==='new').length;
+      $('#stBusesNew').textContent=bc;setBadge('busBadge',bc);}catch(e){$('#stBusesNew').textContent='—'}
+  }else{$('#stReports').textContent='—';$('#stIssues').textContent='—';$('#stBusesNew').textContent='—'}
 }
 
 /* ---------- user reports (Google Sheet via Apps Script) ---------- */
@@ -395,10 +426,12 @@ async function rptAct(action,key){
     return true;
   }
 }
-async function loadReports(){
-  const tb=$('#reportRows');
+async function loadReports(mode){
+  mode=mode||'time';
+  const timeMode=mode==='time';
+  const tb=$(timeMode?'#reportRows':'#issueRows');
   const tk=rptTok();
-  if(!tk){tb.innerHTML='<tr><td colspan="6" class="empty">Pehle Settings mein <b>Report Receiver Token</b> daalo (bj-adm- wala), phir yahan wapas aao.</td></tr>';const bb=$('#repBadge');if(bb)bb.style.display='none';return}
+  if(!tk){tb.innerHTML='<tr><td colspan="6" class="empty">Pehle Settings mein <b>Report Receiver Token</b> daalo (bj-adm- wala), phir yahan wapas aao.</td></tr>';return}
   tb.innerHTML='<tr><td colspan="6" class="empty">Loading…</td></tr>';
   let rows=[];
   try{
@@ -406,22 +439,38 @@ async function loadReports(){
     const j=await r.json();
     rows=j.rows||[];
   }catch(e){tb.innerHTML='<tr><td colspan="6" class="empty">Load fail: '+esc(e.message)+' — thodi der baad phir kholo</td></tr>';return}
-  REPORTS=rows.filter(x=>x.status==='new');
-  const done=rows.length-REPORTS.length;
-  const pend=REPORTS.length;
-  const bb=$('#repBadge');if(bb){bb.style.display=pend?'inline-flex':'none';bb.textContent=pend}
-  const st=$('#stReports');if(st)st.textContent=pend;
-  tb.innerHTML=pend?REPORTS.map((r,i)=>{
-    const meta=[r.type,r.stop?('stop: '+r.stop):'',r.dir?('dir: '+r.dir):'',r.name?('naam: '+r.name):''].filter(Boolean).join(' · ');
-    return `<tr>
+  const fresh=rows.filter(x=>x.status==='new');
+  const timeRows=fresh.filter(x=>x.type==='add-time');
+  const issRows=fresh.filter(x=>x.type!=='add-time');
+  REPORTS=timeRows;ISSUES=issRows;
+  setBadge('repBadge',timeRows.length);
+  setBadge('issBadge',issRows.length);
+  const st=$('#stReports');if(st)st.textContent=timeRows.length;
+  const st2=$('#stIssues');if(st2)st2.textContent=issRows.length;
+  const done=rows.length-fresh.length;
+  if(timeMode){
+    tb.innerHTML=timeRows.length?timeRows.map((r,i)=>{
+      const meta=[r.type,r.stop?('stop: '+r.stop):'',r.dir?('dir: '+r.dir):'',r.name?('naam: '+r.name):''].filter(Boolean).join(' · ');
+      return `<tr>
     <td><b>${esc(r.bus||'?')}</b><div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.reg||'')}${r.bus_id?' · <span class="mono">'+esc(r.bus_id)+'</span>':''}</div></td>
     <td>${esc(r.route||'')}</td>
-    <td class="mono">${esc(r.current||'—')} → <b style="color:var(--ok)">${esc(r.time||'—')}</b></td>
+    <td class="mono">${esc(fmtTime(r.current||'—'))} → <b style="color:var(--ok)">${esc(fmtTime(r.time||'—'))}</b></td>
     <td style="max-width:220px;font-size:12px">${esc(r.note||'')}<div class="pe" style="font-size:11px;color:var(--muted2)">${esc(meta)}</div></td>
     <td class="mono" style="white-space:nowrap;font-size:11.5px">${esc(String(r.key).split('|')[0])}</td>
     <td>${canAutoRpt(r)?`<button class="btn btn-primary btn-sm" data-a="approve" data-i="${i}">Approve</button> `:''}<button class="btn btn-ghost btn-sm" data-a="fix" data-i="${i}">Fix</button> <button class="btn btn-danger btn-sm" data-a="reject" data-i="${i}">Reject</button></td></tr>`
-  }).join(''):'<tr><td colspan="6" class="empty">Koi nayi report nahi — sab clear!'+(done?' ('+done+' purane done/rejected)':'')+'</td></tr>';
-  tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>rptAction(btn.dataset.a,+btn.dataset.i));
+    }).join(''):'<tr><td colspan="6" class="empty">Koi naya time update nahi — sab clear!'+(done?' ('+done+' purane done/rejected)':'')+'</td></tr>';
+    tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>rptAction(btn.dataset.a,+btn.dataset.i));
+  }else{
+    const tname=(r)=>r.type==='bus-stopped'?'Bus nahi chalti':(r.type==='route-change'?'Route badli':(r.type||'report'));
+    tb.innerHTML=issRows.length?issRows.map((r,i)=>`<tr>
+    <td><b>${esc(r.bus||'?')}</b><div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.reg||'')}${r.bus_id?' · <span class="mono">'+esc(r.bus_id)+'</span>':''}</div></td>
+    <td>${esc(r.route||'')}</td>
+    <td><span class="tag o">${esc(tname(r))}</span></td>
+    <td style="max-width:220px;font-size:12px">${esc(r.note||'')}<div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.name?('naam: '+r.name):'')}</div></td>
+    <td class="mono" style="white-space:nowrap;font-size:11.5px">${esc(String(r.key).split('|')[0])}</td>
+    <td>${r.bus_id?`<button class="btn btn-ghost btn-sm" data-a="fix" data-i="${i}">Fix</button> `:''}<button class="btn btn-primary btn-sm" data-a="done" data-i="${i}">Handled</button> <button class="btn btn-danger btn-sm" data-a="reject" data-i="${i}">Reject</button></td></tr>`).join(''):'<tr><td colspan="6" class="empty">Koi issue report nahi — sab clear!</td></tr>';
+    tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>issAction(btn.dataset.a,+btn.dataset.i));
+  }
 }
 async function rptAction(a,i){
   const r=REPORTS[i];if(!r)return;
@@ -458,6 +507,142 @@ async function rptAction(a,i){
     await rptAct('approve',r.key);
     toast('✓ Approved — site pe 2-3 min mein live','ok');
     loadReports();
+  }catch(e){toast('✗ Fail: '+e.message,'err')}
+}
+
+/* ---------- issue reports + new bus contributions ---------- */
+let ISSUES=null,BUSROWS=null;
+function setBadge(id,n){const b=document.getElementById(id);if(b){b.style.display=n?'inline-flex':'none';b.textContent=n}}
+function fmtTime(v){
+  if(v==null||v==='')return '—';
+  const s=String(v).trim();
+  let m=s.match(/^\d{4}-\d{2}-\d{2}T(\d{2}):(\d{2})/);
+  if(m){let h=+m[1];h=h%24;const ap=h>=12?'PM':'AM';h=h%12||12;return h+':'+m[2]+' '+ap}
+  m=s.match(/^(\d{1,2}):(\d{2})(?::\d{2})?$/);
+  if(m){let h=+m[1];h=((h%24)+24)%24;const ap=h>=12?'PM':'AM';h=h%12||12;return h+':'+m[2]+' '+ap}
+  return s;
+}
+async function issAction(a,i){
+  const r=ISSUES&&ISSUES[i];if(!r)return;
+  if(a==='fix'){go('buses');openBus(r.bus_id);return}
+  if(a==='reject'){
+    if(!await confirmBox('Reject?','<b>'+esc(r.bus||'?')+'</b> issue reject karein?'))return;
+    await rptAct('reject',r.key);toast('✓ Rejected','ok');loadReports('issues');return;
+  }
+  if(!await confirmBox('Handled mark karein?','<b>'+esc(r.bus||'?')+'</b> — ye issue dekh liya? Sheet mein approved mark ho jayega.'))return;
+  await rptAct('approve',r.key);toast('✓ Marked handled','ok');loadReports('issues');
+}
+async function findDup(r){
+  try{await ensureIdx()}catch(e){}
+  let cb={add:[]};
+  try{cb=JSON.parse(await rawGet('data/community_buses.json'))}catch(e){}
+  const nreg=String(r.reg||'').replace(/\s+/g,'').toUpperCase();
+  const nb=String(r.bus||'').toLowerCase().replace(/[^a-z0-9]/g,'');
+  const ofrom=String(r.from||'').toLowerCase().trim(),oto=String(r.to||'').toLowerCase().trim();
+  const all=[];
+  if(IDX&&IDX.buses)for(const b of IDX.buses)all.push([b.bus_name||'',b.reg_no||'',b.origin||'',b.destination||'']);
+  if(cb.add)for(const b of cb.add)all.push([b.bus_name||'',b.reg_no||'',b.origin||'',b.destination||'']);
+  for(const b of all){
+    const breg=String(b[1]).replace(/\s+/g,'').toUpperCase();
+    if(nreg&&breg&&nreg===breg)return{bus_name:b[0],reg_no:b[1],origin:b[2],destination:b[3]};
+    const bb=String(b[0]).toLowerCase().replace(/[^a-z0-9]/g,'');
+    if(nb&&bb&&nb===bb&&String(b[2]).toLowerCase().trim()===ofrom&&String(b[3]).toLowerCase().trim()===oto)return{bus_name:b[0],reg_no:b[1],origin:b[2],destination:b[3]};
+  }
+  return null;
+}
+function parseStops(r){
+  const out=[];
+  const parts=String(r.stops||'').split(';').map(x=>x.trim()).filter(Boolean);
+  for(const p of parts){
+    const m=p.match(/^(.+?)\s*@\s*(.+)$/);
+    if(m)out.push({name:m[1].trim(),up:m[2].trim(),down:''});
+    else out.push({name:p,up:'',down:''});
+  }
+  if(!out.length){
+    out.push({name:r.from||'',up:fmtTime(r.dep)==='—'?'':fmtTime(r.dep),down:''});
+    out.push({name:r.to||'',up:'',down:''});
+  }
+  return out;
+}
+async function loadNewBuses(){
+  const tb=$('#busRows');
+  const tk=rptTok();
+  if(!tk){tb.innerHTML='<tr><td colspan="7" class="empty">Pehle Settings mein <b>Report Receiver Token</b> daalo.</td></tr>';return}
+  tb.innerHTML='<tr><td colspan="7" class="empty">Loading…</td></tr>';
+  let rows=[];
+  try{
+    const r=await fetch(RPT_URL+'?action=list-buses&token='+encodeURIComponent(tk));
+    const j=await r.json();
+    rows=(j.rows||[]).filter(x=>x.status==='new'||x.status==='invalid');
+  }catch(e){tb.innerHTML='<tr><td colspan="7" class="empty">Load fail: '+esc(e.message)+'</td></tr>';return}
+  BUSROWS=rows;
+  const fresh=rows.filter(x=>x.status==='new');
+  setBadge('busBadge',fresh.length);
+  const st=$('#stBusesNew');if(st)st.textContent=fresh.length;
+  if(!rows.length){tb.innerHTML='<tr><td colspan="7" class="empty">Koi nayi bus submission nahi — sab clear!</td></tr>';return}
+  tb.innerHTML=rows.map((r,i)=>{
+    const inv=r.status==='invalid';
+    const stopNames=String(r.stops||'').split(';').map(x=>x.trim().split('@')[0].trim()).filter(Boolean).join(', ');
+    return `<tr style="${inv?'opacity:.55':''}">
+    <td><b>${esc(r.bus||'?')}</b>${inv?' <span class="tag o">invalid</span>':''}<div class="pe" style="font-size:11px;color:var(--muted2)">${esc(r.reg||'—')}</div><div id="dup${i}" style="font-size:11px;color:#b8791f;font-weight:600"></div></td>
+    <td>${esc(r.from||'?')} → ${esc(r.to||'?')}</td>
+    <td class="mono" style="white-space:nowrap">${esc(fmtTime(r.dep))}${r.arr?' – '+esc(fmtTime(r.arr)):''}</td>
+    <td style="max-width:180px;font-size:12px">${esc(stopNames||'—')}</td>
+    <td style="font-size:12px">${esc(r.name||'')}${r.email?'<div class="pe" style="font-size:11px;color:var(--muted2)">'+esc(r.email)+'</div>':''}${r.contact?'<div class="pe" style="font-size:11px;color:var(--muted2)">'+esc(r.contact)+'</div>':''}</td>
+    <td class="mono" style="white-space:nowrap;font-size:11.5px">${esc(String(r.key).split('|')[0])}</td>
+    <td>${inv?`<button class="btn btn-danger btn-sm" data-a="reject" data-i="${i}">Delete</button>`:`<button class="btn btn-primary btn-sm" data-a="approve" data-i="${i}">Approve</button> <button class="btn btn-danger btn-sm" data-a="reject" data-i="${i}">Reject</button>`}</td></tr>`;
+  }).join('');
+  tb.querySelectorAll('button[data-a]').forEach(btn=>btn.onclick=()=>busAction(btn.dataset.a,+btn.dataset.i));
+  rows.forEach(async (r,i)=>{
+    if(r.status!=='new')return;
+    try{
+      const d=await findDup(r);
+      if(d){const c=document.getElementById('dup'+i);if(c)c.innerHTML='⚠ Duplicate mila: '+esc(d.bus_name||'')+' '+(d.reg_no?'('+esc(d.reg_no)+') ':'')+(d.origin?esc(d.origin)+'→'+esc(d.destination):'')}
+    }catch(e){}
+  });
+}
+async function busAction(a,i){
+  const r=BUSROWS&&BUSROWS[i];if(!r)return;
+  if(a==='reject'){
+    if(!await confirmBox('Reject?','<b>'+esc(r.bus||'?')+'</b> submission reject karein?'))return;
+    await rptAct('reject-bus',r.key);toast('✓ Rejected','ok');loadNewBuses();return;
+  }
+  const dup=await findDup(r).catch(()=>null);
+  if(dup&&!await confirmBox('Duplicate lag raha hai!','Ye bus shayad pehle se site pe hai ('+esc(dup.bus_name||'')+'). Phir bhi add karein?'))return;
+  if(!await confirmBox('Approve & site pe add?','<b>'+esc(r.bus||'?')+'</b> ('+esc(r.from||'?')+' → '+esc(r.to||'?')+') — community_buses.json update hoga + rebuild chalega (3-5 min live).'))return;
+  try{
+    let sha=null,cb={add:[],enrich:[]};
+    try{const cr=await gh('/repos/'+S.repo+'/contents/data/community_buses.json');sha=cr.sha;cb=JSON.parse(b64d(cr.content))}catch(e){}
+    if(!cb.add)cb.add=[];
+    if(!cb.enrich)cb.enrich=[];
+    cb.add.push({
+      operator:r.bus||'Community',
+      bus_name:r.bus||'',
+      bus_type:'Private - Non AC',
+      reg_no:r.reg||'',
+      origin:r.from||'',
+      destination:r.to||'',
+      departure_time:fmtTime(r.dep)==='—'?'':fmtTime(r.dep),
+      arrival_time:fmtTime(r.arr)==='—'?'':fmtTime(r.arr),
+      route:(r.from||'')+' - '+(r.to||''),
+      source:'community contribution (form)',
+      detail_url:'',
+      contact_number:r.contact||'',
+      stops:parseStops(r)
+    });
+    await ghPut('data/community_buses.json',JSON.stringify(cb,null,2)+'\n','New bus approved: '+(r.bus||'')+' '+(r.from||'')+'-'+(r.to||'')+(r.name?(' (by '+r.name+')'):''),sha);
+    try{await gh('/repos/'+S.repo+'/actions/workflows/apply-overrides.yml/dispatches',{method:'POST',body:JSON.stringify({ref:'main'})})}catch(e){}
+    await rptAct('approve-bus',r.key);
+    if(r.name){
+      let csha=null,list=[];
+      try{const cr=await gh('/repos/'+S.repo+'/contents/data/contributors.json');csha=cr.sha;list=JSON.parse(b64d(cr.content))}catch(e){}
+      const f=list.find(c=>(c.name||'').toLowerCase()===String(r.name).toLowerCase());
+      if(f)f.count=(f.count||1)+1;else list.push({name:r.name,count:1});
+      list.sort((x,y)=>(y.count||0)-(x.count||0));
+      await ghPut('data/contributors.json',JSON.stringify(list.slice(0,20),null,2)+'\n','contributors — '+r.name,csha);
+    }
+    toast('✓ Approved — rebuild chal pada, 3-5 min mein live','ok');
+    loadNewBuses();
   }catch(e){toast('✗ Fail: '+e.message,'err')}
 }
 
