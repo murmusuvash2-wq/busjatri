@@ -1,0 +1,45 @@
+name: Action row redesign
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild action row
+        run: python3 scripts/patch_action_row.py
+
+      - name: Validate
+        run: |
+          node --check js/bus-page.js
+          grep -q 'fb-btn' js/bus-page.js
+          grep -q 'fb-btn' css/ux-fixes.css
+          python3 - << 'PY'
+          s = open('js/bus-page.js', encoding='utf-8').read()
+          assert 'share-x-btn' not in s, 'share-x button still present'
+          assert 'Share on X' not in s, 'share on X label still present'
+          assert '\u270f' not in s, 'pencil emoji still present'
+          assert s.count('<svg') >= 4, 'missing svg icons'
+          assert 'WhatsApp</span>' in s and 'Facebook</span>' in s and 'Report issue</span>' in s
+          assert 'Map</span>' in s
+          print('action row verified')
+          PY
+          echo "all checks passed"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/bus-page.js css/ux-fixes.css index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bus page: action row redesign - 4 brand buttons, real SVG logos, 2x2 mobile grid"
+            git push
+          fi
