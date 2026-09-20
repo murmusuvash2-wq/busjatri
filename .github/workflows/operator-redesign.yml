@@ -12,18 +12,85 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Restore patch script (base64, unicode-safe)
+      - name: Patch operator template
         run: |
-          echo 'IyEvdXNyL2Jpbi9lbnYgcHl0aG9uMwoiIiJPcGVyYXRvciBwYWdlIHJlZGVzaWduICgyMDI2LTA5LTIwKToKLSBoZXJvOiBncmFkaWVudCBjYXJkIChzYW1lIGxhbmd1YWdlIGFzIHJvdXRlIHBhZ2VzKQotIHN0YXRzOiBtZXRyaWMgY2FyZHMgd2l0aCBpY29ucwotIHBvcHVsYXIgcm91dGVzOiBjYXJkIGdyaWQgd2l0aCBWaWV3IFNjaGVkdWxlIGJ1dHRvbnMKLSB3aWRlciBjb250YWluZXIgKDg2MHB4KQotIENTUyBjYWNoZS1idXN0ID92PW9wdDIwMjYwOTIwIiIiCmltcG9ydCBpbwoKZGVmIHJlcChzLCBvbGQsIG5ldywgbGFiZWwpOgogICAgbiA9IHMuY291bnQob2xkKQogICAgYXNzZXJ0IG4gPT0gMSwgJyVzOiBmb3VuZCAlZCcgJSAobGFiZWwsIG4pCiAgICByZXR1cm4gcy5yZXBsYWNlKG9sZCwgbmV3KQoKQ1NTX0xJTktfT0xEID0gJzxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iLi4vY3NzL3Nlby5jc3MiPicKQ1NTX0xJTktfTkVXID0gJzxsaW5rIHJlbD0ic3R5bGVzaGVldCIgaHJlZj0iLi4vY3NzL3Nlby5jc3M/dj1vcHQyMDI2MDkyMCI+JwoKTUFJTl9PTEQgPSAnPG1haW4gY2xhc3M9ImNvbnRhaW5lciBzZW8tbWFpbiIgc3R5bGU9InBhZGRpbmctdG9wOjE4cHg7cGFkZGluZy1ib3R0b206NDhweDttYXgtd2lkdGg6NzIwcHgiPicKTUFJTl9ORVcgPSAnPG1haW4gY2xhc3M9ImNvbnRhaW5lciBzZW8tbWFpbiIgc3R5bGU9InBhZGRpbmctdG9wOjE4cHg7cGFkZGluZy1ib3R0b206NDhweDttYXgtd2lkdGg6ODYwcHgiPicKCkhFUk9fT0xEID0gJycnPGgxIHN0eWxlPSJmb250LXNpemU6Y2xhbXAoMS44cmVtLDV2dywyLjVyZW0pO2xpbmUtaGVpZ2h0OjEuMjttYXJnaW46MCI+e2gxfTwvaDE+CjxkaXYgc3R5bGU9ImNvbG9yOnZhcigtLWluay1kaW0pO21hcmdpbi10b3A6NnB4Ij57Ym59PC9kaXY+CjxwIHN0eWxlPSJjb2xvcjp2YXIoLS1pbmstZGltKTtsaW5lLWhlaWdodDoxLjc7bWF4LXdpZHRoOjcwMHB4O21hcmdpbi1ib3R0b206MCI+e2ludHJvfTwvcD4nJycKCkhFUk9fTkVXID0gJycnPGRpdiBjbGFzcz0ib3AtaGVybyI+CjxoMSBzdHlsZT0iZm9udC1zaXplOmNsYW1wKDEuOHJlbSw1dncsMi41cmVtKTtsaW5lLWhlaWdodDoxLjI7bWFyZ2luOjAiPntoMX08L2gxPgo8ZGl2IGNsYXNzPSJibi1saW5lIiBzdHlsZT0iY29sb3I6dmFyKC0taW5rLWRpbSk7bWFyZ2luLXRvcDo2cHgiPntibn08L2Rpdj4KPHAgY2xhc3M9ImludHJvIiBzdHlsZT0iY29sb3I6dmFyKC0taW5rLWRpbSk7bGluZS1oZWlnaHQ6MS43O21heC13aWR0aDo3MDBweDttYXJnaW46OHB4IDAgMCI+e2ludHJvfTwvcD4KPC9kaXY+JycnCgpST1dfT0xEID0gJycnUk9XX1QgPSBcJ1wnXCc8YSBocmVmPSJ7aHJlZn0iIGNsYXNzPSJiai1wb3Atcm93IiBzdHlsZT0iCiAgICAgZGlzcGxheTpmbGV4OwogICAgIGp1c3RpZnktY29udGVudDpzcGFjZS1iZXR3ZWVuOwogICAgIGdhcDoxMnB4OwogICAgIHBhZGRpbmc6MTNweCAxNHB4OwogICAgIGJvcmRlci1ib3R0b206MXB4IHNvbGlkIHZhcigtLWJvcmRlcik7CiAgICAgdGV4dC1kZWNvcmF0aW9uOm5vbmU7CiAgICI+CiAgPHNwYW4+e2ZyfSDihpIge3RvfTwvc3Bhbj4KICA8c3BhbiBzdHlsZT0iY29sb3I6dmFyKC0taW5rLWRpbSk7Zm9udC1zaXplOjEzcHg7d2hpdGUtc3BhY2U6bm93cmFwIj57bn0gYnVzZXM8L3NwYW4+CjwvYT5cJ1wnXCcnJycKClJPV19ORVcgPSAnJydST1dfVCA9IFwnXCdcJzxhIGhyZWY9IntocmVmfSIgY2xhc3M9Im9wLWNhcmQiPgogIDxzcGFuIGNsYXNzPSJydCI+e2ZyfSA8c3BhbiBjbGFzcz0iYXJyIj7ihpI8L3NwYW4+IHt0b308L3NwYW4+CiAgPHNwYW4gY2xhc3M9Im1ldGEiPvCfmowge259IGJ1c2VzPC9zcGFuPgogIDxzcGFuIGNsYXNzPSJnbyI+VmlldyBTY2hlZHVsZSDigLo8L3NwYW4+CjwvYT5cJ1wnXCcnJycKClNUQVRTX09MRCA9ICIiIiAgICBzdGF0cyA9IGYnJyc8c2VjdGlvbiBzdHlsZT0iZGlzcGxheTpmbGV4O2dhcDoxMHB4O2ZsZXgtd3JhcDp3cmFwO21hcmdpbi1ib3R0b206MzJweCI+CiAgPGRpdiBzdHlsZT0iZmxleDoxIDEgMTcwcHg7YmFja2dyb3VuZDp2YXIoLS1wYW5lbCk7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1ib3JkZXIpO2JvcmRlci1yYWRpdXM6MTRweDtwYWRkaW5nOjE1cHgiPgogICAgPGRpdiBzdHlsZT0iZm9udC1zaXplOjEycHg7Y29sb3I6dmFyKC0taW5rLWRpbSkiPkxpc3RlZCBzZXJ2aWNlczwvZGl2PgogICAgPHN0cm9uZyBzdHlsZT0iZm9udC1zaXplOjEuNnJlbSI+e2xlbihidXNlcyl9PC9zdHJvbmc+CiAgPC9kaXY+CiAgPGRpdiBzdHlsZT0iZmxleDoxIDEgMTcwcHg7YmFja2dyb3VuZDp2YXIoLS1wYW5lbCk7Ym9yZGVyOjFweCBzb2xpZCB2YXIoLS1ib3JkZXIpO2JvcmRlci1yYWRpdXM6MTRweDtwYWRkaW5nOjE1cHgiPgogICAgPGRpdiBzdHlsZT0iZm9udC1zaXplOjEycHg7Y29sb3I6dmFyKC0taW5rLWRpbSkiPlJvdXRlczwvZGl2PgogICAgPHN0cm9uZyBzdHlsZT0iZm9udC1zaXplOjEuNnJlbSI+e2xlbihyb3V0ZXMpfTwvc3Ryb25nPgogIDwvZGl2Pgo8L3NlY3Rpb24+JycnIiIiCgpTVEFUU19ORVcgPSAiIiIgICAgc3RhdHMgPSBmJycnPHNlY3Rpb24gY2xhc3M9Im9wLXN0YXRzIj4KICA8ZGl2IGNsYXNzPSJvcC1zdGF0Ij48ZGl2IGNsYXNzPSJsYmwiPvCfmowgTGlzdGVkIHNlcnZpY2VzPC9kaXY+PGRpdiBjbGFzcz0idmFsIj57bGVuKGJ1c2VzKX08L2Rpdj48L2Rpdj4KICA8ZGl2IGNsYXNzPSJvcC1zdGF0Ij48ZGl2IGNsYXNzPSJsYmwiPvCfl7ogUm91dGVzIGNvdmVyZWQ8L2Rpdj48ZGl2IGNsYXNzPSJ2YWwiPntsZW4ocm91dGVzKX08L2Rpdj48L2Rpdj4KPC9zZWN0aW9uPicnJyIiIgoKUE9QX09MRCA9ICIiIiAgICBwb3B1bGFyID0gZicnJzxoMiBzdHlsZT0iZm9udC1zaXplOjEuMjVyZW07bWFyZ2luOjAgMCAxMnB4Ij5Qb3B1bGFyIHtlc2Mob3BbJ25hbWUnXSl9IFJvdXRlczwvaDI+CjxkaXYgc3R5bGU9ImJhY2tncm91bmQ6dmFyKC0tcGFuZWwpO2JvcmRlcjoxcHggc29saWQgdmFyKC0tYm9yZGVyKTtib3JkZXItcmFkaXVzOjE2cHg7b3ZlcmZsb3c6aGlkZGVuIj4keycnLmpvaW4ocm93cyl9CjwvZGl2PicnJyIiIgoKUE9QX05FVyA9ICIiIiAgICBwb3B1bGFyID0gZicnJzxoMiBjbGFzcz0ib3AtaDIiPlBvcHVsYXIge2VzYyhvcFsnbmFtZSddKX0gUm91dGVzPC9oMj4KPGRpdiBjbGFzcz0ib3AtZ3JpZCI+CnsnJy5qb2luKHJvd3MpfQo8L2Rpdj4KPGRpdiBzdHlsZT0iY2xlYXI6Ym90aCI+PC9kaXY+JycnIiIiCgpDSElQX09MRCA9ICcnJzxoMiBzdHlsZT0iZm9udC1zaXplOjEuMjVyZW07bWFyZ2luOjI2cHggMCAxMnB4Ij5BbGwgRGVzdGluYXRpb25zPC9oMj4nJycKQ0hJUF9ORVcgPSAnJyc8aDIgY2xhc3M9Im9wLWgyIiBzdHlsZT0ibWFyZ2luLXRvcDoyNnB4Ij5BbGwgRGVzdGluYXRpb25zPC9oMj4nJycKCkNTU19BREQgPSAnJycKLyogPT09PT0gb3BlcmF0b3IgcGFnZSByZWRlc2lnbiAoMjAyNi0wOS0yMCkgPT09PT0gKi8KLm9wLWhlcm97cGFkZGluZzoxNnB4IDE4cHg7YmFja2dyb3VuZDpsaW5lYXItZ3JhZGllbnQoMTM1ZGVnLGNvbG9yLW1peChpbiBzcmdiLHZhcigtLWFtYmVyKSAxMiUsdmFyKC0tc3VyZmFjZSkpLHZhcigtLXN1cmZhY2UpIDYwJSk7Ym9yZGVyOjFweCBzb2xpZCBjb2xvci1taXgoaW4gc3JnYix2YXIoLS1hbWJlcikgMzAlLHRyYW5zcGFyZW50KTtib3JkZXItcmFkaXVzOjE4cHg7bWFyZ2luOjRweCAwIDE4cHh9Ci5vcC1oZXJvIGgxe2ZvbnQtZmFtaWx5OnZhcigtLWZvbnQtZGlzcGxheSl9Ci5vcC1zdGF0c3tkaXNwbGF5OmZsZXg7Z2FwOjEycHg7ZmxleC13cmFwOndyYXA7bWFyZ2luLWJvdHRvbToyNnB4fQoub3Atc3RhdHtmbGV4OjEgMSAxNzBweDtiYWNrZ3JvdW5kOnZhcigtLXN1cmZhY2UpO2JvcmRlcjoxcHggc29saWQgdmFyKC0tYm9yZGVyLXN0cm9uZyk7Ym9yZGVyLXJhZGl1czoxNnB4O3BhZGRpbmc6MTRweCAxNnB4O2JveC1zaGFkb3c6MCAxcHggM3B4IHJnYmEoMjgsMjUsMjMsLjA2KX0KLm9wLXN0YXQgLmxibHtmb250LXNpemU6MTJweDtjb2xvcjp2YXIoLS1pbmstZGltKTtkaXNwbGF5OmZsZXg7YWxpZ24taXRlbXM6Y2VudGVyO2dhcDo2cHh9Ci5vcC1zdGF0IC52YWx7Zm9udC1zaXplOjEuN3JlbTtmb250LXdlaWdodDo3MDA7Y29sb3I6dmFyKC0tYW1iZXItaW5rKX0KLm9wLWgye2ZvbnQtc2l6ZToxLjI1cmVtO21hcmdpbjowIDAgMTJweDtmb250LWZhbWlseTp2YXIoLS1mb250LWRpc3BsYXkpfQoub3AtZ3JpZHtkaXNwbGF5OmdyaWQ7Z3JpZC10ZW1wbGF0ZS1jb2x1bW5zOnJlcGVhdChhdXRvLWZpbGwsbWlubWF4KDIzMHB4LDFmcikpO2dhcDoxMnB4O21hcmdpbjowIDAgNnB4fQoub3AtY2FyZHtkaXNwbGF5OmZsZXg7ZmxleC1kaXJlY3Rpb246Y29sdW1uO2dhcDo5cHg7YmFja2dyb3VuZDp2YXIoLS1zdXJmYWNlKTtib3JkZXI6MXB4IHNvbGlkIHZhcigtLWJvcmRlci1zdHJvbmcpO2JvcmRlci1yYWRpdXM6MTZweDtwYWRkaW5nOjE0cHggMTZweDt0ZXh0LWRlY29yYXRpb246bm9uZTtib3gtc2hhZG93OjAgMXB4IDNweCByZ2JhKDI4LDI1LDIzLC4wNik7dHJhbnNpdGlvbjp0cmFuc2Zvcm0gLjE2cyBlYXNlLGJveC1zaGFkb3cgLjE2cyBlYXNlLGJvcmRlci1jb2xvciAuMTZzIGVhc2V9Ci5vcC1jYXJkOmhvdmVye3RyYW5zZm9ybTp0cmFuc2xhdGVZKC0ycHgpO2JveC1zaGFkb3c6MCA4cHggMjJweCByZ2JhKDI4LDI1LDIzLC4xMCk7Ym9yZGVyLWNvbG9yOmNvbG9yLW1peChpbiBzcmdiLHZhcigtLWFtYmVyKSA0NSUsdHJhbnNwYXJlbnQpfQoub3AtY2FyZCAucnR7Zm9udC13ZWlnaHQ6NzAwO2ZvbnQtc2l6ZToxNC41cHg7bGluZS1oZWlnaHQ6MS4zNTtjb2xvcjppbmhlcml0fQoub3AtY2FyZCAucnQgLmFycntjb2xvcjp2YXIoLS1hbWJlcil9Ci5vcC1jYXJkIC5tZXRhe2ZvbnQtc2l6ZToxMnB4O2NvbG9yOnZhcigtLWluay1kaW0pO2Rpc3BsYXk6ZmxleDthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjZweH0KLm9wLWNhcmQgLmdve2ZvbnQtc2l6ZToxMXB4O2ZvbnQtd2VpZ2h0OjcwMDtsZXR0ZXItc3BhY2luZzouMDJlbTtjb2xvcjp2YXIoLS1hbWJlci1pbmspO2JhY2tncm91bmQ6dmFyKC0tYW1iZXItc29mdCk7Ym9yZGVyOjFweCBzb2xpZCBjb2xvci1taXgoaW4gc3JnYix2YXIoLS1hbWJlcikgMzUlLHRyYW5zcGFyZW50KTtwYWRkaW5nOjRweCAxMHB4O2JvcmRlci1yYWRpdXM6OHB4O2FsaWduLXNlbGY6ZmxleC1zdGFydDt3aGl0ZS1zcGFjZTpub3dyYXB9Ci5vcC1jYXJkOmhvdmVyIC5nb3tiYWNrZ3JvdW5kOmNvbG9yLW1peChpbiBzcmdiLHZhcigtLWFtYmVyKSAxOCUsdmFyKC0tc3VyZmFjZSkpfQpAbWVkaWEobWF4LXdpZHRoOjY0MHB4KXsKIC5vcC1ncmlke2dyaWQtdGVtcGxhdGUtY29sdW1uczpyZXBlYXQoYXV0by1maWxsLG1pbm1heCgxNjBweCwxZnIpKTtnYXA6MTBweH0KIC5vcC1jYXJke3BhZGRpbmc6MTJweCAxM3B4fQogLm9wLXN0YXR7cGFkZGluZzoxMnB4IDEzcHh9Cn0KLyogPT09PT0gZW5kIG9wZXJhdG9yIHBhZ2UgcmVkZXNpZ24gPT09PT0gKi8KJycnCgpkZWYgbWFpbigpOgogICAgZyA9IGlvLm9wZW4oJ3NjcmlwdHMvZ2VuX29wZXJhdG9yX3BhZ2VzLnB5JywgZW5jb2Rpbmc9J3V0Zi04JykucmVhZCgpCiAgICBpZiAnb3AtY2FyZCcgaW4gZzoKICAgICAgICBwcmludCgnZ2VuX29wZXJhdG9yX3BhZ2VzLnB5OiBhbHJlYWR5IHBhdGNoZWQnKQogICAgZWxzZToKICAgICAgICBnID0gcmVwKGcsIENTU19MSU5LX09MRCwgQ1NTX0xJTktfTkVXLCAnY3NzIGxpbmsnKQogICAgICAgIGcgPSByZXAoZywgTUFJTl9PTEQsIE1BSU5fTkVXLCAnbWFpbiB3aWR0aCcpCiAgICAgICAgZyA9IHJlcChnLCBIRVJPX09MRCwgSEVST19ORVcsICdoZXJvIGJsb2NrJykKICAgICAgICBnID0gcmVwKGcsIFJPV19PTEQsIFJPV19ORVcsICdyb3cgdGVtcGxhdGUnKQogICAgICAgIGcgPSByZXAoZywgU1RBVFNfT0xELCBTVEFUU19ORVcsICdzdGF0cyBibG9jaycpCiAgICAgICAgZyA9IHJlcChnLCBQT1BfT0xELCBQT1BfTkVXLCAncG9wdWxhciBibG9jaycpCiAgICAgICAgZyA9IHJlcChnLCBDSElQX09MRCwgQ0hJUF9ORVcsICdjaGlwIGgyJykKICAgICAgICBpby5vcGVuKCdzY3JpcHRzL2dlbl9vcGVyYXRvcl9wYWdlcy5weScsICd3JywgZW5jb2Rpbmc9J3V0Zi04Jykud3JpdGUoZykKICAgICAgICBwcmludCgnZ2VuX29wZXJhdG9yX3BhZ2VzLnB5OiBoZXJvICsgc3RhdHMgKyBjYXJkIGdyaWQgZG9uZScpCgogICAgYyA9IGlvLm9wZW4oJ2Nzcy9zZW8uY3NzJywgZW5jb2Rpbmc9J3V0Zi04JykucmVhZCgpCiAgICBpZiAnb3BlcmF0b3IgcGFnZSByZWRlc2lnbiAoMjAyNi0wOS0yMCknIGluIGM6CiAgICAgICAgcHJpbnQoJ3Nlby5jc3M6IGFscmVhZHkgcGF0Y2hlZCcpCiAgICBlbHNlOgogICAgICAgIGlmIG5vdCBjLmVuZHN3aXRoKCdcbicpOgogICAgICAgICAgICBjICs9ICdcbicKICAgICAgICBjICs9IENTU19BREQKICAgICAgICBpby5vcGVuKCdjc3Mvc2VvLmNzcycsICd3JywgZW5jb2Rpbmc9J3V0Zi04Jykud3JpdGUoYykKICAgICAgICBwcmludCgnc2VvLmNzczogb3BlcmF0b3IgcmVkZXNpZ24gc3R5bGVzIGFwcGVuZGVkJykKCmlmIF9fbmFtZV9fID09ICdfX21haW5fXyc6CiAgICBtYWluKCkK' | base64 -d > scripts/patch_operator_redesign.py
+          python3 - << 'PYEOF'
+          import io
+          p = 'scripts/gen_operator_pages.py'
+          g = io.open(p, encoding='utf-8').read()
+          assert 'op-card' not in g, 'already patched'
+          def rep(s, old, new, label):
+              n = s.count(old)
+              assert n == 1, label + ': found ' + str(n)
+              return s.replace(old, new)
+          g = rep(g, '<link rel="stylesheet" href="../css/seo.css">', '<link rel="stylesheet" href="../css/seo.css?v=opt20260920">', 'css link')
+          g = rep(g, 'padding-bottom:48px;max-width:720px', 'padding-bottom:48px;max-width:860px', 'main width')
+          i = g.find('<h1 style="font-size:clamp(1.8rem')
+          assert i > 0, 'h1 not found'
+          g = g[:i] + '<div class="op-hero">' + chr(10) + g[i:]
+          g = rep(g, '<div style="color:var(--ink-dim);margin-top:6px">{bn}</div>', '<div class="bn-line" style="color:var(--ink-dim);margin-top:6px">{bn}</div>', 'bn line')
+          g = rep(g, '<p style="color:var(--ink-dim);line-height:1.7;max-width:700px;margin-bottom:0">{intro}</p>', '<p class="intro" style="color:var(--ink-dim);line-height:1.7;max-width:700px;margin:8px 0 0">{intro}</p>' + chr(10) + '</div>', 'intro')
+          def seg(s, start, end, new, label):
+              i = s.find(start)
+              assert i >= 0, label + ' start missing'
+              j = s.find(end, i)
+              assert j >= 0, label + ' end missing'
+              assert s.find(start, i + 1) < 0, label + ' duplicated'
+              return s[:i] + new + s[j + len(end):]
+          TQ = chr(39) * 3
+          row_start = 'ROW_T = ' + TQ + '<a href="{href}" class="bj-pop-row"'
+          row_end = '</a>' + TQ
+          row_new = ('ROW_T = ' + TQ + '<a href="{href}" class="op-card">' + chr(10)
+              + '  <span class="rt">{fr} <span class="arr">' + chr(0x2192) + '</span> {to}</span>' + chr(10)
+              + '  <span class="meta">' + chr(0x1F68C) + ' {n} buses</span>' + chr(10)
+              + '  <span class="go">View Schedule ' + chr(0x203A) + '</span>' + chr(10)
+              + '</a>' + TQ)
+          g = seg(g, row_start, row_end, row_new, 'ROW_T')
+          st_start = '    stats = f' + TQ + '<section style="display:flex;gap:10px'
+          st_end = '</section>' + TQ
+          st_new = ('    stats = f' + TQ + '<section class="op-stats">' + chr(10)
+              + '  <div class="op-stat"><div class="lbl">' + chr(0x1F68C) + ' Listed services</div><div class="val">{len(buses)}</div></div>' + chr(10)
+              + '  <div class="op-stat"><div class="lbl">' + chr(0x1F5FA) + ' Routes covered</div><div class="val">{len(routes)}</div></div>' + chr(10)
+              + '</section>' + TQ)
+          g = seg(g, st_start, st_end, st_new, 'stats')
+          g = rep(g, '<h2 style="font-size:1.25rem;margin:0 0 12px">Popular', '<h2 class="op-h2">Popular', 'popular h2')
+          g = rep(g, '<div style="background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden">', '<div class="op-grid">', 'grid div')
+          g = rep(g, '<h2 style="font-size:1.25rem;margin:26px 0 12px">All Destinations</h2>', '<h2 class="op-h2" style="margin-top:26px">All Destinations</h2>', 'chip h2')
+          io.open(p, 'w', encoding='utf-8').write(g)
+          import py_compile
+          py_compile.compile(p, doraise=True)
+          print('operator template patched + compiles')
+          PYEOF
 
-      - name: Apply patch
-        run: python3 scripts/patch_operator_redesign.py
-
-      - name: Validate source
+      - name: Append operator CSS
         run: |
-          python3 -m py_compile scripts/gen_operator_pages.py
-          grep -q 'op-card' scripts/gen_operator_pages.py
-          grep -q 'opt20260920' scripts/gen_operator_pages.py
+          if ! grep -q 'operator page redesign (2026-09-20)' css/seo.css; then
+            cat >> css/seo.css << 'CSSEOF'
+
+          /* ===== operator page redesign (2026-09-20) ===== */
+          .op-hero{padding:16px 18px;background:linear-gradient(135deg,color-mix(in srgb,var(--amber) 12%,var(--surface)),var(--surface) 60%);border:1px solid color-mix(in srgb,var(--amber) 30%,transparent);border-radius:18px;margin:4px 0 18px}
+          .op-hero h1{font-family:var(--font-display)}
+          .op-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+          .op-stat{flex:1 1 170px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;box-shadow:0 1px 3px rgba(28,25,23,.06)}
+          .op-stat .lbl{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px}
+          .op-stat .val{font-size:1.7rem;font-weight:700;color:var(--amber-ink)}
+          .op-h2{font-size:1.25rem;margin:0 0 12px;font-family:var(--font-display)}
+          .op-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:0 0 6px}
+          .op-card{display:flex;flex-direction:column;gap:9px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;text-decoration:none;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+          .op-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(28,25,23,.10);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+          .op-card .rt{font-weight:700;font-size:14.5px;line-height:1.35;color:inherit}
+          .op-card .rt .arr{color:var(--amber)}
+          .op-card .meta{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px}
+          .op-card .go{font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--amber-ink);background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 35%,transparent);padding:4px 10px;border-radius:8px;align-self:flex-start;white-space:nowrap}
+          .op-card:hover .go{background:color-mix(in srgb,var(--amber) 18%,var(--surface))}
+          @media(max-width:640px){
+           .op-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+           .op-card{padding:12px 13px}
+           .op-stat{padding:12px 13px}
+          }
+          /* ===== end operator page redesign ===== */
+          CSSEOF
+          fi
           grep -q 'operator page redesign (2026-09-20)' css/seo.css
 
       - name: Regenerate operator pages
@@ -40,7 +107,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add scripts/gen_operator_pages.py css/seo.css scripts/patch_operator_redesign.py bus-time-table sitemap.xml
+          git add scripts/gen_operator_pages.py css/seo.css bus-time-table sitemap.xml
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
