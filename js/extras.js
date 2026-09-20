@@ -86,7 +86,7 @@ function sendContact() {
    REPORT_FORM.action holds the web-app URL once deployed.
    Types: time-report | bus-stopped | route-change | add-time (from the
    + mini box in ux-fixes.js). No email, no login, no popup. */
-var REPORT_FORM = { action: "" };   // <-- Apps Script web-app URL goes here
+var REPORT_FORM = { action: "https://script.google.com/macros/s/AKfycbyf-rjtn606T1FUfGaPiYnyIMCZIU99ZlwqmkI3cVfPT0SarjTY12MZQpu2exLczdUD/exec" };
 var REPORT_CTX = null;
 /* Silent report submit - no email, no popup. Fire-and-forget. */
 function sendReport(payload) {
