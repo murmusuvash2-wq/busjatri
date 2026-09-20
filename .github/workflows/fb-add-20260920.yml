@@ -1,0 +1,148 @@
+name: Add FB buses 2026-09-20
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append 2 new buses + 1 enrich to community_buses.json
+        run: |
+          python3 - << 'PYEOF'
+          import json
+          p = 'data/community_buses.json'
+          cb = json.load(open(p, encoding='utf-8'))
+          names = [e.get('bus_name','') for e in cb.get('add',[])]
+          def stop(n, u='', d=''):
+              return {'name': n, 'up': u, 'down': d}
+          if 'Monikanchan Bus Service' not in names:
+              cb['add'].append({
+                  'operator': 'Monikanchan Bus Service',
+                  'bus_name': 'Monikanchan Bus Service',
+                  'bus_type': 'Private - Non AC',
+                  'reg_no': 'WB 29C 4457',
+                  'origin': 'Egra',
+                  'destination': 'Karunamoyee',
+                  'departure_time': '4:25 AM',
+                  'arrival_time': '',
+                  'route': 'Egra - Karunamoyee',
+                  'source': 'facebook (community report)',
+                  'detail_url': '',
+                  'contact_number': '9647062600',
+                  'stops': [
+                      stop('Egra','4:25 AM'), stop('Kharai More'), stop('Patashpur'),
+                      stop('Monglamado','5:25 AM'), stop('Bhagwanpur','5:45 AM'),
+                      stop('Bajkul','6:20 AM'), stop('Chandipur'), stop('Nandakumar'),
+                      stop('Mecheda'), stop('Kolaghat'), stop('Bagnan'), stop('Kona'),
+                      stop('Dakshineswar'), stop('Dunlop'), stop('Airport'), stop('Kaikhali'),
+                      stop('Haldiram'), stop('Chinar Park'), stop('Ecopark'),
+                      stop('Narkel Bagan'), stop('New Town'), stop('Technopolis'),
+                      stop('Sector 5'), stop('Karunamoyee','','10:45 AM')
+                  ]
+              })
+          if 'SAO Travels (Pari Pallabi)' not in names:
+              cb['add'].append({
+                  'operator': 'SAO Travels',
+                  'bus_name': 'SAO Travels (Pari Pallabi)',
+                  'bus_type': 'Private - Non AC',
+                  'reg_no': 'WB 55F 7775 / WB 55F 7760',
+                  'origin': 'Purulia',
+                  'destination': 'Lalgola',
+                  'departure_time': '7:00 PM',
+                  'arrival_time': '3:40 AM',
+                  'route': 'Purulia - Lalgola',
+                  'source': 'facebook (community report)',
+                  'detail_url': '',
+                  'contact_number': '9932663057 / 9382677077',
+                  'stops': [
+                      stop('Purulia','7:00 PM','4:40 AM'), stop('Golakunda'), stop('Anara'),
+                      stop('Raghunathpur','8:20 PM','3:30 AM'), stop('Sarbari More'),
+                      stop('Parbelia'), stop('Dishergarh Ghat'), stop('Niamatpur'),
+                      stop('Asansol','9:50 PM','1:50 AM'), stop('Kalipahari More'),
+                      stop('Raniganj Punjabi More'), stop('Pandaveswar'),
+                      stop('Dubrajpur','11:20 PM','12:20 AM'), stop('Siuri','12:00 AM','11:40 PM'),
+                      stop('Mallarpur'), stop('Rampurhat','1:30 AM','10:10 PM'), stop('Nalhati'),
+                      stop('Omarpur'), stop('Raghunathganj','3:00 AM','8:40 PM'), stop('Jangipur'),
+                      stop('Lalgola','3:40 AM','8:00 PM')
+                  ]
+              })
+          tgt = 'bussathi-raidul-0'
+          if not any(e.get('target_id') == tgt for e in cb.get('enrich', [])):
+              def rstop(no, n, u='', d=''):
+                  return {'no': no, 'name': n, 'up_time': u, 'down_time': d}
+              cb['enrich'].append({
+                  'target_id': tgt,
+                  'reg_no': 'WB 33F 3096',
+                  'contact_number': '9647410063',
+                  'stoppages': [
+                      rstop(1,'Moyna','6:45 AM','9:00 PM'),
+                      rstop(2,'Balaipanda','7:15 AM','8:50 PM'),
+                      rstop(3,'Barisha'), rstop(4,'Jalchak'), rstop(5,'Maligram'),
+                      rstop(6,'Pingla','8:00 AM','8:10 PM'),
+                      rstop(7,'Mundumari','8:10 AM','8:00 PM'),
+                      rstop(8,'Balichak','8:20 AM','7:50 PM'),
+                      rstop(9,'Debra','8:40 AM','7:20 PM'),
+                      rstop(10,'Basantpur'), rstop(11,'Madpur'), rstop(12,'Mohanpur'),
+                      rstop(13,'Medinipur','10:00 AM','6:10 PM'),
+                      rstop(14,'Bhadutala'), rstop(15,'Godapiashal'),
+                      rstop(16,'Salbani','11:00 AM','5:00 PM'),
+                      rstop(17,'Mandalkupi'),
+                      rstop(18,'Chandrakona Road','11:30 AM','4:40 PM'),
+                      rstop(19,'Garhbeta','11:45 AM','4:15 PM'),
+                      rstop(20,'Dhadhika'), rstop(21,'Bankadaha'), rstop(22,'1 No. Camp'),
+                      rstop(23,'Bishnupur','12:40 PM','3:20 PM')
+                  ]
+              })
+          with open(p, 'w', encoding='utf-8') as f:
+              json.dump(cb, f, ensure_ascii=False, indent=1)
+              f.write('\n')
+          print('community_buses.json updated:', len(cb['add']), 'adds,', len(cb['enrich']), 'enriches')
+          PYEOF
+
+      - name: Merge into site data
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - << 'PYEOF'
+          import json
+          d = json.load(open('data/busjatri_data.json', encoding='utf-8'))
+          buses = d['buses']
+          assert len(buses) == 4019, 'expected 4019 buses, got ' + str(len(buses))
+          ids = {b['id'] for b in buses}
+          eg = [b for b in buses if b.get('origin') == 'Egra' and b.get('destination') == 'Karunamoyee']
+          assert any('Monikanchan' in (b.get('bus_name') or '') for b in eg), 'Monikanchan missing'
+          pl = [b for b in buses if b.get('origin') == 'Purulia' and b.get('destination') == 'Lalgola']
+          assert any('SAO' in (b.get('bus_name') or '') for b in pl), 'SAO Travels missing'
+          rd = next(b for b in buses if b['id'] == 'bussathi-raidul-0')
+          assert len(rd.get('stoppages', [])) == 23, 'Raidul enrich failed: ' + str(len(rd.get('stoppages', []))) + ' stops'
+          assert rd.get('reg_no') == 'WB 33F 3096', 'Raidul reg not updated'
+          print('OK: 4019 buses, Monikanchan + SAO added, Raidul enriched (23 stops)')
+          PYEOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add FB buses: Monikanchan (Egra-Karunamoyee), SAO Travels (Purulia-Lalgola) + enrich Raidul"
+            git push
+          fi
