@@ -82,6 +82,8 @@ async function renderBus(el, id) {
     showMoreBtn = '<button class="show-all" onclick="location.hash=\'#/bus/' + encodeURIComponent(id) + '\'">Show less \u21d1</button>';
   }
 
+  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),
+    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };
   el.innerHTML =
     '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
       '<div class="back-btn" onclick="history.length>1?history.back():location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class="label-en">Back</span></div>' +
@@ -101,9 +103,10 @@ async function renderBus(el, id) {
       '</div>' +
       '<div class="wa-row">' +
         (mapUrl ? '<a class="map-btn" href="' + mapUrl + '" target="_blank" rel="noopener">' + icon('map') + ' <span class="label-en">Route on Google Maps</span><span class="label-bn">গুগল ম্যাপে রুট দেখুন</span></a>' : '') +
-        '<a class="wa-btn" href="javascript:void(0)" onclick="shareWhatsApp(this.dataset.bus,this.dataset.org,this.dataset.dest,this.dataset.dep,this.dataset.stops)" data-bus="' + esc(b.bus_name) + '" data-org="' + esc(pn(b.origin)) + '" data-dest="' + esc(pn(b.destination)) + '" data-dep="' + esc(b.departure_time||'') + '" data-stops="' + (stops.length||0) + '">' + icon('waves') + ' <span class="label-en">Share on WhatsApp</span></a>' +
+        '<a class="wa-btn" href="javascript:void(0)" onclick="shareBusWhatsApp()">' + icon('waves') + ' <span class="label-en">Share on WhatsApp</span></a>' +
+        '<a class="wa-btn" href="javascript:void(0)" onclick="shareBusFacebook()"><svg viewBox="0 0 24 24" style="width:16px;height:16px;flex:0 0 auto" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8V11H8.2v3h2.3v7h3z"/></svg> <span class="label-en">Share on Facebook</span></a>' +
         '<a class="share-x-btn" href="javascript:void(0)" onclick="shareTwitter(this.dataset)" data-bus="' + esc(b.bus_name) + '" data-org="' + esc(pn(b.origin)) + '" data-dest="' + esc(pn(b.destination)) + '" data-dep="' + esc(b.departure_time||'') + '">' + icon('info') + ' <span class="label-en">Share on X</span></a>' +
-        '<a class="report-btn" href="javascript:void(0)" onclick="toggleReport(this)" data-id="' + esc(id) + '" data-bus="' + esc(b.bus_name) + '" data-reg="' + esc(b.reg_no || '') + '" data-org="' + esc(pn(b.origin)) + '" data-dest="' + esc(pn(b.destination)) + '" data-dep="' + esc(b.departure_time || '') + '">✏ <span class="label-en">Report wrong time</span></a>' +
+        '<a class="report-btn" href="javascript:void(0)" onclick="toggleReport(this)" data-id="' + esc(id) + '" data-bus="' + esc(b.bus_name) + '" data-reg="' + esc(b.reg_no || '') + '" data-org="' + esc(pn(b.origin)) + '" data-dest="' + esc(pn(b.destination)) + '" data-dep="' + esc(b.departure_time || '') + '">✏ <span class="label-en">Report issue</span><span class="label-bn">\u09b0\u09bf\u09aa\u09cb\u09b0\u09cd\u099f \u0995\u09b0\u09c1\u09a8</span></a>' +
       '</div>' +
       (b.destination && b.destination !== '\u2014' ? '<div class="weather-card" id="weatherCard" data-dest="' + esc(b.destination) + '"><div class="lbl">Weather in ' + esc(b.destination) + ' (now)</div><div class="val" id="weatherVal">Loading\u2026</div></div>' : '') +
       (stops.length ? '<h3 class="section-title" style="margin-top:22px">' + icon('ticket') + ' <span class="label-en">Route Timetable</span></h3><div class="schedule-legend"><span><i class="legend-dot outbound"></i> From ' + esc(pn(b.origin)) + '</span><span><i class="legend-dot inbound"></i> Return to ' + esc(pn(b.origin)) + '</span><span class="community-note">Times marked “User updated” are community-submitted.</span></div><div class="schedule-table"><div class="schedule-head"><span>Stop</span><span>Outbound</span><span>Return</span></div><div class="stop-list">' + stopHTML + showMoreBtn + '</div></div>' : '<p style="color:var(--ink-dim);margin-top:12px">Stoppage details not available.</p>') +

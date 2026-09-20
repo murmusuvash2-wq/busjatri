@@ -117,41 +117,32 @@ function toggleReport(btn) {
   var savedName = "";
   try { savedName = localStorage.getItem("bj-name") || ""; } catch (e) {}
   f.innerHTML =
-    '<div class="rf-title">' + (bn ? "\u0995\u09bf\u099b\u09c1 \u09ad\u09c1\u09b2? \u099c\u09be\u09a8\u09bf\u09df\u09c7 \u09a6\u09bf\u09a8:" : "Kuch galat? Bata dein:") + '</div>' +
+    '<div class="rf-title">' + (bn ? "\u0995\u09bf\u099b\u09c1 \u09ad\u09c1\u09b2? \u099c\u09be\u09a8\u09bf\u09df\u09c7 \u09a6\u09bf\u09a8:" : "Something wrong? Tell us:") + '</div>' +
     '<div class="rf-row">' +
       '<select id="bjReportType" aria-label="Report type">' +
-        '<option value="time-report">' + (bn ? "\u09b8\u09ae\u09df \u09ad\u09c1\u09b2" : "Time galat hai") + '</option>' +
-        '<option value="bus-stopped">' + (bn ? "\u09ac\u09be\u09b8 \u098f\u0996\u09a8 \u099a\u09b2\u09c7 \u09a8\u09be" : "Bus abhi nahi chalti") + '</option>' +
-        '<option value="route-change">' + (bn ? "\u09b0\u09c1\u099f \u09ac\u09a6\u09b2\u09c7 \u0997\u09c7\u099b\u09c7" : "Route badal gaya") + '</option>' +
+        '<option value="bus-stopped">' + (bn ? "\u09ac\u09be\u09b8 \u098f\u0996\u09a8 \u099a\u09b2\u09c7 \u09a8\u09be" : "Bus no longer runs") + '</option>' +
+        '<option value="route-change">' + (bn ? "\u09b0\u09c1\u099f \u09ac\u09a6\u09b2\u09c7 \u0997\u09c7\u099b\u09c7" : "Route has changed") + '</option>' +
       '</select>' +
-      '<input type="time" id="bjReportTime" aria-label="Correct time">' +
-      '<input type="text" id="bjReportNote" placeholder="Note (optional)" maxlength="140">' +
-      '<input type="text" id="bjReportName" placeholder="' + (bn ? "\u09a8\u09be\u09ae (optional)" : "Naam (optional)") + '" maxlength="30" value="' + savedName.replace(/"/g, '"') + '">' +
+      '<input type="text" id="bjReportNote" placeholder="' + (bn ? "\u09ae\u09a8\u09cd\u09a4\u09ac\u09cd\u09af (\u0990\u099a\u09cd\u099b\u09bf\u0995)" : "Note (optional)") + '" maxlength="140">' +
+      '<input type="text" id="bjReportName" placeholder="' + (bn ? "\u09a8\u09be\u09ae (\u0990\u099a\u09cd\u099b\u09bf\u0995)" : "Name (optional)") + '" maxlength="30" value="' + savedName.replace(/"/g, '"') + '">' +
       '<button class="rf-send" onclick="submitReport()">Send</button>' +
     '</div>' +
-    '<div class="rf-done" id="bjReportDone">\u2713 ' + (bn ? "\u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6! \u09b0\u09bf\u09aa\u09cb\u09b0\u09cd\u099f \u09aa\u09be\u09a0\u09be\u09a8\u09cb \u09b9\u09df\u09c7\u099b\u09c7\u0964" : "Dhanyavaad! Report team ko mil gaya.") + '</div>';
+    '<div class="rf-done" id="bjReportDone">\u2713 ' + (bn ? "\u0985\u09ac\u09a6\u09be\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6!" : "Thank you for contributing!") + '</div>';
   var row = btn.closest(".wa-row");
   if (row && row.parentNode) row.parentNode.insertBefore(f, row.nextSibling);
-  var t = document.getElementById("bjReportTime"); if (t) t.focus();
+  var n = document.getElementById("bjReportNote");
+  if (n) n.focus();
 }
 function submitReport() {
   var c = REPORT_CTX || {};
   var sel = document.getElementById("bjReportType");
-  var type = sel ? sel.value : "time-report";
-  var timeStr = "";
-  var inp = document.getElementById("bjReportTime");
-  if (type === "time-report") {
-    if (!inp || !inp.value) { alert("Please enter the correct time"); return; }
-    var parts = inp.value.split(":"); var h = parseInt(parts[0], 10); var m = parts[1];
-    var ap = h >= 12 ? "PM" : "AM"; var h12 = h % 12 || 12;
-    timeStr = h12 + ":" + m + " " + ap;
-  }
+  var type = sel ? sel.value : "bus-stopped";
   var note = (document.getElementById("bjReportNote") || {}).value || "";
   var name = (document.getElementById("bjReportName") || {}).value || "";
   try { if (name) localStorage.setItem("bj-name", name); } catch (e) {}
   var payload = {
     type: type, bus: c.bus, reg: c.reg, route: (c.org || "") + " \u21c4 " + (c.dest || ""),
-    current: c.dep, time: timeStr, note: note, page: location.href,
+    current: c.dep, time: "", note: note, page: location.href,
     bus_id: c.id, name: name
   };
   sendReport(payload);
@@ -162,6 +153,33 @@ function submitReport() {
     if (r) { var rw = r.querySelector(".rf-row"); if (rw) rw.style.display = "none"; }
   };
   done();
+}
+
+/* ---------- Bus share (WhatsApp / Facebook) - full stoppage list ---------- */
+function bjBuildBusText() {
+  var s = window.BJ_SHARE;
+  if (!s) return "";
+  var msg = "BusJatri \u2014 West Bengal Bus Timetable\n\n";
+  msg += "Bus: " + (s.bus || "\u2014") + (s.reg ? " (" + s.reg + ")" : "") + "\n";
+  msg += "Route: " + (s.org || "\u2014") + " \u21c4 " + (s.dest || "\u2014") + "\n";
+  if (s.dep) msg += "Departure: " + s.dep + "\n";
+  if (s.stops && s.stops.length) {
+    msg += "\nStoppages (outbound / return):\n";
+    s.stops.forEach(function (st, i) {
+      msg += (i + 1) + ". " + st.name + " \u2014 " + (st.up || "\u2014") + " / " + (st.down || "\u2014") + "\n";
+    });
+  }
+  msg += "\nView full timetable:\n" + location.href;
+  msg += "\n\nMore buses on BusJatri (\u09ac\u09be\u09b8 \u09af\u09be\u09a4\u09cd\u09b0\u09c0)";
+  return msg;
+}
+function shareBusWhatsApp() {
+  var msg = bjBuildBusText(); if (!msg) return;
+  window.open("https://wa.me/?text=" + encodeURIComponent(msg), "_blank");
+}
+function shareBusFacebook() {
+  var msg = bjBuildBusText(); if (!msg) return;
+  window.open("https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(location.href) + "&quote=" + encodeURIComponent(msg), "_blank", "noopener");
 }
 
 /* ---------- Footer contributors credit line ---------- */

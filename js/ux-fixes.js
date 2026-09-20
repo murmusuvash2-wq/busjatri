@@ -790,6 +790,15 @@
 
   /* ---- 12b. Community times: add, EDIT and DELETE ---- */
   var TRASH_SVG = '<svg viewBox="0 0 24 24" style="width:15px;height:15px" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/><path d="M6.5 7l.8 12a2 2 0 0 0 2 1.9h5.4a2 2 0 0 0 2-1.9l.8-12"/><path d="M10 11v6M14 11v6"/></svg>';
+  window.bjToast = function (msg) {
+    var d = document.createElement('div');
+    d.textContent = msg;
+    d.style.cssText = 'position:fixed;left:50%;bottom:84px;transform:translate(-50%,10px);background:#1c2333;color:#fff;padding:10px 18px;border-radius:12px;font-size:13.5px;font-weight:600;box-shadow:0 8px 22px rgba(0,0,0,.28);opacity:0;transition:opacity .25s,transform .25s;z-index:99999;max-width:88vw;text-align:center;pointer-events:none';
+    document.body.appendChild(d);
+    requestAnimationFrame(function () { d.style.opacity = '1'; d.style.transform = 'translate(-50%,0)'; });
+    setTimeout(function () { d.style.opacity = '0'; setTimeout(function () { d.remove(); }, 350); }, 2600);
+  };
+
   function openBjTimeBox(busId, stopIndex, direction, existing) {
     document.querySelectorAll('.bj-timebox').forEach(function (x) { x.remove(); });
     var other = communityTimes()[communityTimeKey(busId, stopIndex, direction === 'up' ? 'down' : 'up')];
@@ -800,7 +809,7 @@
     box.className = 'bj-timebox';
     box.innerHTML = '<input type="tel" placeholder="11:30" maxlength="5" aria-label="time" value="' + escHtml(existing ? existing.split(' ')[0] : '') + '">' +
       '<button type="button" class="bj-mer" title="AM/PM"></button>' +
-      '<input type="text" class="bj-name" placeholder="Naam (optional)" maxlength="30" aria-label="name">' +
+      '<input type="text" class="bj-name" placeholder="' + (typeof LANG !== 'undefined' && LANG === 'bn' ? '\u09a8\u09be\u09ae (\u0990\u099a\u09cd\u099b\u09bf\u0995)' : 'Name (optional)') + '" maxlength="30" aria-label="name">' +
       '<button type="button" class="bj-ok" title="Save">✓</button>' +
       (existing ? '<button type="button" class="bj-del" title="Delete">' + TRASH_SVG + '</button>' : '') +
       '<button type="button" class="bj-no" title="Close">✕</button>';
@@ -834,6 +843,7 @@
       } catch (e3) { /* never block saving */ }
       box.remove();
       render();
+      try { bjToast((typeof LANG !== 'undefined' && LANG === 'bn') ? '\u0985\u09ac\u09a6\u09be\u09a8\u09c7\u09b0 \u099c\u09a8\u09cd\u09af \u09a7\u09a8\u09cd\u09af\u09ac\u09be\u09a6!' : 'Thank you for contributing!'); } catch (e4) {}
     }
     box.querySelector('.bj-ok').addEventListener('click', save);
     box.querySelector('.bj-no').addEventListener('click', function () { box.remove(); });
