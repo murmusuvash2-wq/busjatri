@@ -12,6 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Merge community bus contributions
+        run: python3 scripts/add_community_buses.py --write
+
       - name: Merge admin time overrides into source data
         run: python3 scripts/apply_time_overrides.py
 
