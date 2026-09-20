@@ -316,6 +316,7 @@
           }
           if (tU != null) rows.push({ b: b, fwd: true, depMin: tU });
           if (tD != null) rows.push({ b: b, fwd: false, depMin: tD });
+          if (tU == null && tD == null) rows.push({ b: b, fwd: true, depMin: null });
         });
         window.__bjStopCount = nBuses;
         window.__bjDepCount = rows.length;
@@ -387,7 +388,7 @@
           var revBadge = isRet ? '<span style="font-size:10px;font-weight:700;color:var(--maroon);border:1px solid var(--maroon);border-radius:6px;padding:2px 7px;margin-left:6px;white-space:nowrap"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
           var ro = isRet ? b.destination : b.origin;
           var rd = isRet ? b.origin : b.destination;
-          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '';
+          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:.7">' + icon('clock') + ' <span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
           return '<div class="result-item ' + (isNear ? 'near' : '') + '" style="--i:' + i + '" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
             '<div class="ri-main">' +
             (isNear ? '<div class="near-label">' + icon('clock') + ' <span class="label-en">Coming up</span><span class="label-bn">আসছে</span></div>' : '') +
@@ -590,25 +591,26 @@
             }
             if (tU != null) allDeps.push({ b: b, t: tU, fwd: true });
             if (tD != null) allDeps.push({ b: b, t: tD, fwd: false });
+            if (tU == null && tD == null) allDeps.push({ b: b, t: null, fwd: true });
           });
           var nowM = minutesNow();
           allDeps.sort(function (x, y) {
-            var ax = x.t < nowM ? x.t + 1440 : x.t;
-            var ay = y.t < nowM ? y.t + 1440 : y.t;
+            var ax = x.t == null ? Infinity : (x.t < nowM ? x.t + 1440 : x.t);
+            var ay = y.t == null ? Infinity : (y.t < nowM ? y.t + 1440 : y.t);
             return ax - ay;
           });
           return allDeps.map(function (n, i) {
             var isRet = !n.fwd;
             var head = isRet ? n.b.origin : n.b.destination;
             var tail = isRet ? n.b.destination : n.b.origin;
-            var dd = n.t - nowM; if (dd < 0) dd += 1440;
-            var near = dd <= 180 ? ' · <b style="color:var(--amber)">' + countdownText(dd) + '</b>' : '';
+            var dd = n.t == null ? null : n.t - nowM; if (dd != null && dd < 0) dd += 1440;
+            var near = dd != null && dd <= 180 ? ' · <b style="color:var(--amber)">' + countdownText(dd) + '</b>' : '';
             var badge = isRet ? ' <span style="font-size:10px;font-weight:700;color:var(--maroon);border:1px solid var(--maroon);border-radius:6px;padding:2px 7px;white-space:nowrap"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
             return '<div class="result-item" style="--i:' + i + '" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(n.b.id) + String.fromCharCode(39) + '">' +
               '<div class="ri-main"><div class="name">' + esc(n.b.bus_name) + badge + '</div>' +
               '<div class="route">' + esc(pn(tail)) + ' <span class="rarr">→</span> ' + esc(pn(head)) + '</div>' +
               '<div class="meta"><span>' + icon('stops') + ' ' + ((n.b.stoppages || []).length || n.b.total_stoppages || 0) + ' stops</span></div></div>' +
-              '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(n.t) + near + '</span></div>';
+              '<span class="time-pill">' + icon('clock') + ' ' + (n.t == null ? '<span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span>' : fmtTime(n.t)) + near + '</span></div>';
           }).join('');
         })() +
         '</div>';
