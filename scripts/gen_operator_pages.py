@@ -91,7 +91,7 @@ HEAD = '''<!DOCTYPE html>
 <meta property="og:url" content="{BASE}/bus-time-table/{stem}.html">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="../css/seo.css">
+<link rel="stylesheet" href="../css/seo.css?v=opt20260920">
 <link rel="stylesheet" href="../css/extras.css">
 <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{{"@type": "ListItem", "position": 1, "name": "Home", "item": "{BASE}/"}}, {{"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "{BASE}/bus-time-table/"}}, {{"@type": "ListItem", "position": 3, "name": "{h1}", "item": "{BASE}/bus-time-table/{stem}.html"}}]}}</script>
 </head>
@@ -110,23 +110,19 @@ HEAD = '''<!DOCTYPE html>
     </nav>
   </div>
 </header>
-<main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
+<main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
 <div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>{h1}</span></div>
+<div class="op-hero">
 <h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">{h1}</h1>
-<div style="color:var(--ink-dim);margin-top:6px">{bn}</div>
-<p style="color:var(--ink-dim);line-height:1.7;max-width:700px;margin-bottom:0">{intro}</p>
+<div class="bn-line" style="color:var(--ink-dim);margin-top:6px">{bn}</div>
+<p class="intro" style="color:var(--ink-dim);line-height:1.7;max-width:700px;margin:8px 0 0">{intro}</p>
+</div>
 '''
 
-ROW_T = '''<a href="{href}" class="bj-pop-row" style="
-     display:flex;
-     justify-content:space-between;
-     gap:12px;
-     padding:13px 14px;
-     border-bottom:1px solid var(--border);
-     text-decoration:none;
-   ">
-  <span>{fr} → {to}</span>
-  <span style="color:var(--ink-dim);font-size:13px;white-space:nowrap">{n} buses</span>
+ROW_T = '''<a href="{href}" class="op-card">
+  <span class="rt">{fr} <span class="arr">→</span> {to}</span>
+  <span class="meta">🚌 {n} buses</span>
+  <span class="go">View Schedule ›</span>
 </a>'''
 
 FOOT = '''<footer class="footer">
@@ -181,23 +177,17 @@ def build_page(op, stems):
         else:
             chips.append(f'<span class="via-chip" style="--i:{min(i, 15)}">{esc(label)}</span>')
 
-    stats = f'''<section style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:32px">
-  <div style="flex:1 1 170px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:15px">
-    <div style="font-size:12px;color:var(--ink-dim)">Listed services</div>
-    <strong style="font-size:1.6rem">{len(buses)}</strong>
-  </div>
-  <div style="flex:1 1 170px;background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:15px">
-    <div style="font-size:12px;color:var(--ink-dim)">Routes</div>
-    <strong style="font-size:1.6rem">{len(routes)}</strong>
-  </div>
+    stats = f'''<section class="op-stats">
+  <div class="op-stat"><div class="lbl">🚌 Listed services</div><div class="val">{len(buses)}</div></div>
+  <div class="op-stat"><div class="lbl">🗺 Routes covered</div><div class="val">{len(routes)}</div></div>
 </section>'''
 
-    popular = f'''<h2 style="font-size:1.25rem;margin:0 0 12px">Popular {esc(op['name'])} Routes</h2>
-<div style="background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden">
+    popular = f'''<h2 class="op-h2">Popular {esc(op['name'])} Routes</h2>
+<div class="op-grid">
 {''.join(rows)}
 </div>'''
 
-    chiprow = f'''<h2 style="font-size:1.25rem;margin:26px 0 12px">All Destinations</h2>
+    chiprow = f'''<h2 class="op-h2" style="margin-top:26px">All Destinations</h2>
 <div class="chip-row" aria-label="All destinations">{''.join(chips)}</div>'''
 
     body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'],

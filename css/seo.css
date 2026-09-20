@@ -342,3 +342,26 @@ body.lang-bn .badge{text-transform:none;letter-spacing:0}
  .bd-link{padding:3px 8px;font-size:10.5px}
 }
 /* ===== end route page redesign ===== */
+
+/* ===== operator page redesign (2026-09-20) ===== */
+.op-hero{padding:16px 18px;background:linear-gradient(135deg,color-mix(in srgb,var(--amber) 12%,var(--surface)),var(--surface) 60%);border:1px solid color-mix(in srgb,var(--amber) 30%,transparent);border-radius:18px;margin:4px 0 18px}
+.op-hero h1{font-family:var(--font-display)}
+.op-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.op-stat{flex:1 1 170px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;box-shadow:0 1px 3px rgba(28,25,23,.06)}
+.op-stat .lbl{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px}
+.op-stat .val{font-size:1.7rem;font-weight:700;color:var(--amber-ink)}
+.op-h2{font-size:1.25rem;margin:0 0 12px;font-family:var(--font-display)}
+.op-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:0 0 6px}
+.op-card{display:flex;flex-direction:column;gap:9px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;text-decoration:none;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.op-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(28,25,23,.10);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+.op-card .rt{font-weight:700;font-size:14.5px;line-height:1.35;color:inherit}
+.op-card .rt .arr{color:var(--amber)}
+.op-card .meta{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px}
+.op-card .go{font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--amber-ink);background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 35%,transparent);padding:4px 10px;border-radius:8px;align-self:flex-start;white-space:nowrap}
+.op-card:hover .go{background:color-mix(in srgb,var(--amber) 18%,var(--surface))}
+@media(max-width:640px){
+ .op-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+ .op-card{padding:12px 13px}
+ .op-stat{padding:12px 13px}
+}
+/* ===== end operator page redesign ===== */
