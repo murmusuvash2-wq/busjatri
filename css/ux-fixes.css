@@ -52,8 +52,12 @@
 .bj-relbuses{margin-top:10px}
 .bj-rel-title{font-size:12px;font-weight:700;color:var(--ink-dim);margin-bottom:6px;display:flex;align-items:center;gap:5px}
 .bj-rel-title svg{width:13px;height:13px;color:var(--amber)}
-.bj-rel-item{display:inline-flex;align-items:center;gap:5px;margin:0 6px 6px 0;padding:5px 10px;border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:9px;background:var(--surface,#fffcf4);color:var(--ink,#221c16);text-decoration:none;font-size:12px}
-.bj-rel-item b{font-family:var(--font-mono);color:var(--amber-ink,#7a5210)}
+.bj-rel-item{display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;margin:0 0 8px 0;padding:11px 12px;border:1px solid var(--line,rgba(33,28,22,.15));border-radius:12px;background:var(--surface,#fffcf4);color:var(--ink,#221c16);text-decoration:none;font-size:13px;font-weight:600}
+.bj-rel-item b{font-family:var(--font-mono);color:var(--amber-ink,#7a5210);background:color-mix(in srgb,var(--amber,#b8791f) 12%,transparent);padding:3px 8px;border-radius:7px;font-size:12.5px;font-weight:700;white-space:nowrap;flex:0 0 auto}
+.bj-rel-item .bj-rel-notime{font-size:11px;color:var(--ink-dim,#777);background:rgba(120,120,120,.12);padding:3px 8px;border-radius:7px;white-space:nowrap;flex:0 0 auto}
+.bj-rel-item .bj-rel-name{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bj-rel-item .bj-rel-arrow{width:15px;height:15px;flex:0 0 auto;color:var(--ink-dim,#777)}
+.bj-rel-item:hover{border-color:var(--amber,#b8791f)}
 
 /* v10: board search line, smaller clock, horizontal popular routes */
 .lv-search{position:relative;margin-bottom:11px}
@@ -103,5 +107,6 @@
 .wa-row .report-btn:hover{background:#fdf0ee;border-color:#e5b7b1}
 
 /* 2026-09-21: fix share button label clipping on narrow screens */
-.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12.5px;gap:6px}
+.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12px;gap:6px;height:48px;min-width:0;padding:12px 4px;align-items:center}
+.wa-row .map-btn svg,.wa-row .wa-btn svg,.wa-row .fb-btn svg,.wa-row .report-btn svg{flex:0 0 auto}
 .wa-row .map-btn .label-en,.wa-row .map-btn .label-bn,.wa-row .wa-btn .label-en,.wa-row .wa-btn .label-bn,.wa-row .fb-btn .label-en,.wa-row .fb-btn .label-bn,.wa-row .report-btn .label-en,.wa-row .report-btn .label-bn{overflow:hidden;text-overflow:ellipsis}

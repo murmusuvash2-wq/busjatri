@@ -755,8 +755,8 @@
           sec.className = 'bj-relbuses';
           sec.innerHTML = '<div class="bj-rel-title">' + icon('bus') + ' <span class="label-en">More buses on this route</span><span class="label-bn">এই রুটের আরও বাস</span></div>' +
             rel.map(function (r) {
-              var tt = r.t != null ? fmtTime(r.t) : '—';
-              return '<a class="bj-rel-item" href="#/bus/' + encodeURIComponent(r.o.id) + '"><b>' + tt + '</b> ' + escHtml(r.o.bus_name || '') + '</a>';
+              var tt = r.t != null ? '<b>' + fmtTime(r.t) + '</b>' : '<span class="bj-rel-notime"><span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
+              return '<a class="bj-rel-item" href="#/bus/' + encodeURIComponent(r.o.id) + '">' + tt + '<span class="bj-rel-name">' + escHtml(r.o.bus_name || '') + '</span><svg viewBox="0 0 24 24" class="bj-rel-arrow" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>';
             }).join('');
           rj.parentNode.insertBefore(sec, rj.nextSibling);
         }

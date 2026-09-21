@@ -128,8 +128,8 @@ async function renderBus(el, id) {
   }
 
   window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),
-    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' };
-  window.BJ_COPY_TEXT = buildBusCopyText(b, stops); }) };
+    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };
+  window.BJ_COPY_TEXT = buildBusCopyText(b, stops);
   el.innerHTML =
     '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
       '<div class="back-btn" onclick="history.length>1?history.back():location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class="label-en">Back</span></div>' +
