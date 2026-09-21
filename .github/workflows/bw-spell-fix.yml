@@ -1,0 +1,31 @@
+name: Burdwan spelling fix
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fix
+        run: |
+          python3 - << 'PYEOF'
+          import io
+          p = 'blog/burdwan-to-kolkata.html'
+          s = io.open(p, encoding='utf-8').read()
+          OLD = '\u0995\u09cd\u09b7\u09aa\u09c7 \u0993\u09a0\u09c7'
+          NEW = '\u0995\u09cd\u09b7\u09c7\u09aa\u09c7 \u0993\u09a0\u09c7'
+          n = s.count(OLD)
+          assert n == 1, 'anchor count: %d' % n
+          s = s.replace(OLD, NEW)
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('replaced', n)
+
+          PYEOF
+      - name: commit
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "busjatri@zohomail.in"
+          git add blog/burdwan-to-kolkata.html
+          git commit -m "fix: burdwan story spelling (khepe othe)" || echo "no changes"
+          git push
