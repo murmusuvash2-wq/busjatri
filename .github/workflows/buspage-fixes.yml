@@ -1,0 +1,67 @@
+name: Bus page fixes - copy button, buttons, more-buses
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: apply patches
+        run: |
+          python3 - << 'PYEOF'
+          import io
+          # 1) bus-page.js: copy button dead-code fix
+          p = 'js/bus-page.js'
+          s = io.open(p, encoding='utf-8').read()
+          OLD = "  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),\n    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' };\n  window.BJ_COPY_TEXT = buildBusCopyText(b, stops); }) };"
+          NEW = "  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),\n    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };\n  window.BJ_COPY_TEXT = buildBusCopyText(b, stops);"
+          assert s.count(OLD) == 1, 'bus-page anchor'
+          s = s.replace(OLD, NEW)
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('bus-page.js OK')
+          # 2) ux-fixes.js: more-buses redesign
+          p = 'js/ux-fixes.js'
+          s = io.open(p, encoding='utf-8').read()
+          OLD = "            rel.map(function (r) {\n              var tt = r.t != null ? fmtTime(r.t) : '\\u2014';\n              return '<a class=\\\"bj-rel-item\\\" href=\\\"#/bus/' + encodeURIComponent(r.o.id) + '\\\'><b>' + tt + '</b> ' + escHtml(r.o.bus_name || '') + '</a>';\n            }).join('')"
+          NEW = "            rel.map(function (r) {\n              var tt = r.t != null ? '<b>' + fmtTime(r.t) + '</b>' : '<span class=\\\"bj-rel-notime\\\"><span class=\\\"label-en\\\">Time not listed</span><span class=\\\"label-bn\\\">\\u09b8\\u09ae\\u09af\\u09bc \\u099c\\u09be\\u09a8\\u09be \\u09a8\\u09c7\\u0987</span></span>';\n              return '<a class=\\\"bj-rel-item\\\" href=\\\"#/bus/' + encodeURIComponent(r.o.id) + '\\\'>' + tt + '<span class=\\\"bj-rel-name\\\">' + escHtml(r.o.bus_name || '') + '</span><svg viewBox=\\\"0 0 24 24\\\" class=\\\"bj-rel-arrow\\\" fill=\\\"none\\\" stroke=\\\"currentColor\\\" stroke-width=\\\"2.2\\\" stroke-linecap=\\\"round\\\" stroke-linejoin=\\\"round\\\" aria-hidden=\\\"true\\\"><path d=\\\"m9 6 6 6-6 6\\\"/></svg></a>';\n            }).join('')"
+          assert s.count(OLD) == 1, 'ux-fixes anchor'
+          s = s.replace(OLD, NEW)
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('ux-fixes.js OK')
+          # 3) ux-fixes.css: equal buttons + rel-item redesign
+          p = 'css/ux-fixes.css'
+          s = io.open(p, encoding='utf-8').read()
+          OLD = '.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12.5px;gap:6px}'
+          NEW = '.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12px;gap:6px;height:48px;min-width:0;padding:12px 4px;align-items:center}\n.wa-row .map-btn svg,.wa-row .wa-btn svg,.wa-row .fb-btn svg,.wa-row .report-btn svg{flex:0 0 auto}'
+          assert s.count(OLD) == 1, 'css btn anchor'
+          s = s.replace(OLD, NEW)
+          OLD2 = '.bj-rel-item{display:inline-flex;align-items:center;gap:5px;margin:0 6px 6px 0;padding:5px 10px;border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:9px;background:var(--surface,#fffcf4);color:var(--ink,#221c16);text-decoration:none;font-size:12px}\n.bj-rel-item b{font-family:var(--font-mono);color:var(--amber-ink,#7a5210)}'
+          NEW2 = '.bj-rel-item{display:flex;align-items:center;gap:10px;width:100%;box-sizing:border-box;margin:0 0 8px 0;padding:11px 12px;border:1px solid var(--line,rgba(33,28,22,.15));border-radius:12px;background:var(--surface,#fffcf4);color:var(--ink,#221c16);text-decoration:none;font-size:13px;font-weight:600}\n.bj-rel-item b{font-family:var(--font-mono);color:var(--amber-ink,#7a5210);background:color-mix(in srgb,var(--amber,#b8791f) 12%,transparent);padding:3px 8px;border-radius:7px;font-size:12.5px;font-weight:700;white-space:nowrap;flex:0 0 auto}\n.bj-rel-item .bj-rel-notime{font-size:11px;color:var(--ink-dim,#777);background:rgba(120,120,120,.12);padding:3px 8px;border-radius:7px;white-space:nowrap;flex:0 0 auto}\n.bj-rel-item .bj-rel-name{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}\n.bj-rel-item .bj-rel-arrow{width:15px;height:15px;flex:0 0 auto;color:var(--ink-dim,#777)}\n.bj-rel-item:hover{border-color:var(--amber,#b8791f)}'
+          assert s.count(OLD2) == 1, 'css rel anchor'
+          s = s.replace(OLD2, NEW2)
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('ux-fixes.css OK')
+          # 4) index.html version bumps
+          p = 'index.html'
+          s = io.open(p, encoding='utf-8').read()
+          assert s.count('js/bus-page.js?v=bj20260920g') == 1
+          s = s.replace('js/bus-page.js?v=bj20260920g', 'js/bus-page.js?v=bj20260921a')
+          assert s.count('js/ux-fixes.js?v=rpt20260921a') == 1
+          s = s.replace('js/ux-fixes.js?v=rpt20260921a', 'js/ux-fixes.js?v=rpt20260921b')
+          assert s.count('css/ux-fixes.css?v=ux20260921a') == 1
+          s = s.replace('css/ux-fixes.css?v=ux20260921a', 'css/ux-fixes.css?v=ux20260921b')
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('index.html OK')
+
+          PYEOF
+      - name: commit
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "busjatri@zohomail.in"
+          git add js/bus-page.js js/ux-fixes.js css/ux-fixes.css index.html
+          git commit -m "fix: copy button dead-code, equal action buttons, more-buses card design (bj20260921a)" || echo "no changes"
+          git push
