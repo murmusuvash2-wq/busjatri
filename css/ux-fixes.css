@@ -101,3 +101,7 @@
 .wa-row .fb-btn:hover{background:#1667d9;border-color:#1667d9;color:#fff}
 .wa-row .report-btn{background:#fff;color:#c0392b;border:1.5px solid #d8dee9}
 .wa-row .report-btn:hover{background:#fdf0ee;border-color:#e5b7b1}
+
+/* 2026-09-21: fix share button label clipping on narrow screens */
+.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12.5px;gap:6px}
+.wa-row .map-btn .label-en,.wa-row .map-btn .label-bn,.wa-row .wa-btn .label-en,.wa-row .wa-btn .label-bn,.wa-row .fb-btn .label-en,.wa-row .fb-btn .label-bn,.wa-row .report-btn .label-en,.wa-row .report-btn .label-bn{overflow:hidden;text-overflow:ellipsis}

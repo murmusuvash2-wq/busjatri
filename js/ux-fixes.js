@@ -619,30 +619,32 @@
   }
 
   /* ---- 8b. Compact share row + full-route map link ---- */
-  var BJ_LABELS = {
-    'Route on Google Maps': 'Map',
-    'View route on Google Maps': 'Map',
-    'গুগল ম্যাপে রুট দেখুন': 'ম্যাপ',
-    'Share on WhatsApp': 'WhatsApp',
-    'শেয়ার করুন': 'শেয়ার',
-    'Share on X': 'X'
+  var BJ_ROW_LABELS = {
+    'map-btn': ['Map', 'ম্যাপ'],
+    'wa-btn': ['WhatsApp', 'WhatsApp'],
+    'fb-btn': ['Facebook', 'ফেসবুক'],
+    'share-x-btn': ['Facebook', 'ফেসবুক'],
+    'report-btn': ['Report', 'রিপোর্ট']
   };
   var FB_SVG = '<svg viewBox="0 0 24 24" style="width:14px;height:14px" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-8h2.7l.4-3.1h-3.1V7.9c0-.9.25-1.5 1.55-1.5h1.65V3.6c-.3-.04-1.3-.13-2.45-.13-2.4 0-4.05 1.47-4.05 4.15v2.3H7.4V13h2.75v8h3.35z"/></svg>';
   var FIND_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg>';
   function compactShareRow() {
-    document.querySelectorAll('.wa-row .map-btn, .wa-row .wa-btn, .wa-row .share-x-btn').forEach(function (btn) {
+    document.querySelectorAll('.wa-row .map-btn, .wa-row .wa-btn, .wa-row .fb-btn, .wa-row .share-x-btn, .wa-row .report-btn').forEach(function (btn) {
       if (btn.classList.contains('share-x-btn') && !btn.dataset.bjFb) {
         btn.dataset.bjFb = '1';
         btn.removeAttribute('onclick');
-        btn.innerHTML = FB_SVG + ' <span class="label-en">Share</span><span class="label-bn">শেয়ার</span>';
         btn.addEventListener('click', function () {
           window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), '_blank', 'noopener');
         });
       }
-      btn.querySelectorAll('.label-en, .label-bn').forEach(function (sp) {
-        var t = (sp.textContent || '').trim();
-        if (BJ_LABELS[t]) sp.textContent = BJ_LABELS[t];
-      });
+      var lab = null;
+      for (var cls in BJ_ROW_LABELS) { if (btn.classList.contains(cls)) { lab = BJ_ROW_LABELS[cls]; break; } }
+      if (!lab) return;
+      var spE = btn.querySelector('.label-en'), spB = btn.querySelector('.label-bn');
+      if (spE && spB && (spE.textContent || '').trim() === lab[0] && (spB.textContent || '').trim() === lab[1]) { btn.style.whiteSpace = 'nowrap'; return; }
+      var svg = btn.querySelector('svg');
+      btn.innerHTML = (svg ? svg.outerHTML + ' ' : '') + '<span class="label-en">' + lab[0] + '</span><span class="label-bn">' + lab[1] + '</span>';
+      btn.style.whiteSpace = 'nowrap';
     });
   }
   function fixMapLink() {
