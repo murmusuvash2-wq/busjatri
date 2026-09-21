@@ -17,12 +17,8 @@ jobs:
           # 1) bus-page.js: copy button dead-code fix
           p = 'js/bus-page.js'
           s = io.open(p, encoding='utf-8').read()
-          OLD = """  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),
-    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' };
-  window.BJ_COPY_TEXT = buildBusCopyText(b, stops); }) };"""
-          NEW = """  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),
-    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };
-  window.BJ_COPY_TEXT = buildBusCopyText(b, stops);"""
+          OLD = "  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),\n    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' };\n  window.BJ_COPY_TEXT = buildBusCopyText(b, stops); }) };"
+          NEW = "  window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),\n    dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };\n  window.BJ_COPY_TEXT = buildBusCopyText(b, stops);"
           assert s.count(OLD) == 1, 'bus-page anchor'
           s = s.replace(OLD, NEW)
           io.open(p, 'w', encoding='utf-8').write(s)
@@ -30,14 +26,8 @@ jobs:
           # 2) ux-fixes.js: more-buses redesign
           p = 'js/ux-fixes.js'
           s = io.open(p, encoding='utf-8').read()
-          OLD = """            rel.map(function (r) {
-              var tt = r.t != null ? fmtTime(r.t) : '\u2014';
-              return '<a class="bj-rel-item" href="#/bus/' + encodeURIComponent(r.o.id) + '"><b>' + tt + '</b> ' + escHtml(r.o.bus_name || '') + '</a>';
-            }).join('')"""
-          NEW = """            rel.map(function (r) {
-              var tt = r.t != null ? '<b>' + fmtTime(r.t) + '</b>' : '<span class="bj-rel-notime"><span class="label-en">Time not listed</span><span class="label-bn">\u09b8\u09ae\u09af\u09bc \u099c\u09be\u09a8\u09be \u09a8\u09c7\u0987</span></span>';
-              return '<a class="bj-rel-item" href="#/bus/' + encodeURIComponent(r.o.id) + '">' + tt + '<span class="bj-rel-name">' + escHtml(r.o.bus_name || '') + '</span><svg viewBox="0 0 24 24" class="bj-rel-arrow" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></a>';
-            }).join('')"""
+          OLD = "            rel.map(function (r) {\n              var tt = r.t != null ? fmtTime(r.t) : '\u2014';\n              return '<a class=\"bj-rel-item\" href=\"#/bus/' + encodeURIComponent(r.o.id) + '\"><b>' + tt + '</b> ' + escHtml(r.o.bus_name || '') + '</a>';\n            }).join('')"
+          NEW = "            rel.map(function (r) {\n              var tt = r.t != null ? '<b>' + fmtTime(r.t) + '</b>' : '<span class=\"bj-rel-notime\"><span class=\"label-en\">Time not listed</span><span class=\"label-bn\">\u09b8\u09ae\u09af\u09bc \u099c\u09be\u09a8\u09be \u09a8\u09c7\u0987</span></span>';\n              return '<a class=\"bj-rel-item\" href=\"#/bus/' + encodeURIComponent(r.o.id) + '\">' + tt + '<span class=\"bj-rel-name\">' + escHtml(r.o.bus_name || '') + '</span><svg viewBox=\"0 0 24 24\" class=\"bj-rel-arrow\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m9 6 6 6-6 6\"/></svg></a>';\n            }).join('')"
           assert s.count(OLD) == 1, 'ux-fixes anchor'
           s = s.replace(OLD, NEW)
           io.open(p, 'w', encoding='utf-8').write(s)
