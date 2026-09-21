@@ -1,0 +1,58 @@
+name: UX fixes - share buttons + speed preload
+on: workflow_dispatch
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: apply patches
+        run: |
+          python3 - << 'PYEOF'
+          import io, re
+          # 1) ux-fixes.js
+          p = 'js/ux-fixes.js'
+          s = io.open(p, encoding='utf-8').read()
+          START = "  var BJ_LABELS = {"
+          END = "if (BJ_LABELS[t]) sp.textContent = BJ_LABELS[t];\n      });\n    });\n  }"
+          i = s.find(START); j = s.find(END)
+          assert i > 0 and j > i, (i, j)
+          old = s[i:j + len(END)]
+          FB = re.search(r"  var FB_SVG = '.*?';\n", old).group(0)
+          FIND = re.search(r"  var FIND_SVG = '.*?';\n", old).group(0)
+          NEW = "  var BJ_ROW_LABELS = {\n    'map-btn': ['Map', '\u09ae\u09cd\u09af\u09be\u09aa'],\n    'wa-btn': ['WhatsApp', 'WhatsApp'],\n    'fb-btn': ['Facebook', '\u09ab\u09c7\u09b8\u09ac\u09c1\u0995'],\n    'share-x-btn': ['Facebook', '\u09ab\u09c7\u09b8\u09ac\u09c1\u0995'],\n    'report-btn': ['Report', '\u09b0\u09bf\u09aa\u09cb\u09b0\u09cd\u099f']\n  };\n" + FB + FIND + "  function compactShareRow() {\n    document.querySelectorAll('.wa-row .map-btn, .wa-row .wa-btn, .wa-row .fb-btn, .wa-row .share-x-btn, .wa-row .report-btn').forEach(function (btn) {\n      if (btn.classList.contains('share-x-btn') && !btn.dataset.bjFb) {\n        btn.dataset.bjFb = '1';\n        btn.removeAttribute('onclick');\n        btn.addEventListener('click', function () {\n          window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(location.href), '_blank', 'noopener');\n        });\n      }\n      var lab = null;\n      for (var cls in BJ_ROW_LABELS) { if (btn.classList.contains(cls)) { lab = BJ_ROW_LABELS[cls]; break; } }\n      if (!lab) return;\n      var spE = btn.querySelector('.label-en'), spB = btn.querySelector('.label-bn');\n      if (spE && spB && (spE.textContent || '').trim() === lab[0] && (spB.textContent || '').trim() === lab[1]) { btn.style.whiteSpace = 'nowrap'; return; }\n      var svg = btn.querySelector('svg');\n      btn.innerHTML = (svg ? svg.outerHTML + ' ' : '') + '<span class=\"label-en\">' + lab[0] + '</span><span class=\"label-bn\">' + lab[1] + '</span>';\n      btn.style.whiteSpace = 'nowrap';\n    });\n  }"
+          s = s.replace(old, NEW)
+          io.open(p, 'w', encoding='utf-8').write(s)
+          print('ux-fixes.js patched')
+          # 2) ux-fixes.css
+          p = 'css/ux-fixes.css'
+          c = io.open(p, encoding='utf-8').read()
+          ADD = '\n/* 2026-09-21: fix share button label clipping on narrow screens */\n.wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12.5px;gap:6px}\n.wa-row .map-btn .label-en,.wa-row .map-btn .label-bn,.wa-row .wa-btn .label-en,.wa-row .wa-btn .label-bn,.wa-row .fb-btn .label-en,.wa-row .fb-btn .label-bn,.wa-row .report-btn .label-en,.wa-row .report-btn .label-bn{overflow:hidden;text-overflow:ellipsis}\n'
+          assert 'fix share button label clipping' not in c
+          io.open(p, 'w', encoding='utf-8').write(c + ADD)
+          print('ux-fixes.css patched')
+          # 3) index.html
+          p = 'index.html'
+          h = io.open(p, encoding='utf-8').read()
+          anchor = '  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n'
+          assert h.count(anchor) == 1
+          h = h.replace(anchor, anchor + '  <link rel="preload" as="fetch" href="data/app-index.json" />\n  <link rel="preconnect" href="https://www.googletagmanager.com" />\n')
+          assert h.count('css/ux-fixes.css?v=ux20260920c') == 1
+          h = h.replace('css/ux-fixes.css?v=ux20260920c', 'css/ux-fixes.css?v=ux20260921a')
+          assert h.count('js/ux-fixes.js?v=rpt20260920c') == 1
+          h = h.replace('js/ux-fixes.js?v=rpt20260920c', 'js/ux-fixes.js?v=rpt20260921a')
+          io.open(p, 'w', encoding='utf-8').write(h)
+          print('index.html patched')
+
+          PYEOF
+      - name: commit
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "busjatri@zohomail.in"
+          git add js/ux-fixes.js css/ux-fixes.css index.html
+          git commit -m "fix: share button label clipping + preload app-index for speed (ux20260921a)" || echo "no changes"
+          git push
