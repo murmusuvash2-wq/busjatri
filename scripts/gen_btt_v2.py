@@ -136,7 +136,9 @@ def generate_btt_page():
              + '<span class="schip">🚌 {:,} buses</span>'.format(n_buses))
 
     # ---- FAQ (5 EN + 5 BN) ----
-    top3 = sorted(stats, key=lambda r: -r[2])[:3]
+    # top-3 from the popular stands only — alias groups (Kolkata/Esplanade/Garia
+    # all list the same 687 buses) would otherwise show up as duplicates
+    top3 = sorted(popular, key=lambda r: -r[2])[:3]
     top3_txt = ", ".join("{} ({} listed)".format(r[0], r[2]) for r in top3)
     en = [
         ("Where can I find all West Bengal bus time tables?",
