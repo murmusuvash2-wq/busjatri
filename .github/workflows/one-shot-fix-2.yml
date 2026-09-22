@@ -1,0 +1,30 @@
+name: One-shot fix 2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch gen_route_v2 and commit
+        run: |
+          echo "$PATCH_B64" | base64 -d > patch_gen.py
+          python3 patch_gen.py
+          rm patch_gen.py
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_route_v2.py
+          if git diff --cached --quiet; then
+            echo "nothing to fix"
+          else
+            git commit -m "fix: hide nonsense >12h through-journey arrival/duration"
+            git push
+          fi
+        env:
+          PATCH_B64: aW1wb3J0IGlvCnAgPSAic2NyaXB0cy9nZW5fcm91dGVfdjIucHkiCnNyYyA9IG9wZW4ocCwgZW5jb2Rpbmc9InV0Zi04IikucmVhZCgpCm9sZDEgPSAnJycgICAgaWYgZGVwX21pbiBpcyBub3QgTm9uZToKICAgICAgICBkZXAgPSBnLmZvcm1hdF90aW1lKGRlcF9taW4pCiAgICAgICAgYXJyID0gZy5mb3JtYXRfdGltZShhcnJfbWluKQogICAgICAgIGR1cmF0aW9uID0gTm9uZQogICAgICAgIGlmIGFycl9taW4gaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGR1cmF0aW9uID0gYXJyX21pbiAtIGRlcF9taW4KICAgICAgICAgICAgaWYgZHVyYXRpb24gPCAwOgogICAgICAgICAgICAgICAgZHVyYXRpb24gKz0gMTQ0MCcnJwpuZXcxID0gJycnICAgIGlmIGRlcF9taW4gaXMgbm90IE5vbmU6CiAgICAgICAgZGVwID0gZy5mb3JtYXRfdGltZShkZXBfbWluKQogICAgICAgIGR1cmF0aW9uID0gTm9uZQogICAgICAgIGlmIGFycl9taW4gaXMgbm90IE5vbmU6CiAgICAgICAgICAgIGR1cmF0aW9uID0gYXJyX21pbiAtIGRlcF9taW4KICAgICAgICAgICAgaWYgZHVyYXRpb24gPCAwOgogICAgICAgICAgICAgICAgZHVyYXRpb24gKz0gMTQ0MAogICAgICAgICAgICBpZiBkdXJhdGlvbiA+IDcyMDoKICAgICAgICAgICAgICAgICMgZG93bi1kaXJlY3Rpb24gc3RvcCB0aW1lcyBjYW4gcGFpciB1cCBub25zZW5zZSBqb3VybmV5czsKICAgICAgICAgICAgICAgICMga2VlcCB0aGUgZGVwYXJ0dXJlICsgcm91dGUsIGRyb3AgdGhlIGFycml2YWwvZHVyYXRpb24KICAgICAgICAgICAgICAgIGR1cmF0aW9uID0gTm9uZQogICAgICAgICAgICAgICAgYXJyX21pbiA9IE5vbmUKICAgICAgICBhcnIgPSBnLmZvcm1hdF90aW1lKGFycl9taW4pJycnCm9sZDIgPSAnJycgICAgZm9yIF9zaywgYnVzLCBkLCBhIGluIHRocm91Z2g6CiAgICAgICAgdmIgPSBkaWN0KGJ1cykKICAgICAgICBpZiBkIGlzIG5vdCBOb25lOgogICAgICAgICAgICB2YlsiZGVwYXJ0dXJlX3RpbWUiXSA9IGcuZm9ybWF0X3RpbWUoZCknJycKbmV3MiA9ICcnJyAgICBmb3IgX3NrLCBidXMsIGQsIGEgaW4gdGhyb3VnaDoKICAgICAgICB2YiA9IGRpY3QoYnVzKQogICAgICAgIGlmIGQgaXMgbm90IE5vbmUgYW5kIGEgaXMgbm90IE5vbmUgYW5kICgoYSAtIGQpICUgMTQ0MCkgPiA3MjA6CiAgICAgICAgICAgIGEgPSBOb25lCiAgICAgICAgaWYgZCBpcyBub3QgTm9uZToKICAgICAgICAgICAgdmJbImRlcGFydHVyZV90aW1lIl0gPSBnLmZvcm1hdF90aW1lKGQpJycnCmFzc2VydCBzcmMuY291bnQob2xkMSkgPT0gMSwgIm9sZDEgbm90IGZvdW5kIGV4YWN0bHkgb25jZSIKYXNzZXJ0IHNyYy5jb3VudChvbGQyKSA9PSAxLCAib2xkMiBub3QgZm91bmQgZXhhY3RseSBvbmNlIgpzcmMgPSBzcmMucmVwbGFjZShvbGQxLCBuZXcxKS5yZXBsYWNlKG9sZDIsIG5ldzIpCm9wZW4ocCwgInciLCBlbmNvZGluZz0idXRmLTgiKS53cml0ZShzcmMpCnByaW50KCJwYXRjaGVkIE9LIikK
