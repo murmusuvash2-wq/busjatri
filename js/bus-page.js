@@ -149,7 +149,7 @@ async function renderBus(el, id) {
     if (dur < 10 || dur > 900) return '';
     var h = Math.floor(dur / 60), m2 = dur % 60;
     var txt = (h ? h + 'h ' : '') + (h ? String(m2).padStart(2, '0') : m2) + 'm';
-    return '<div class="info-item"><div class="lbl"><span class="label-en">Travel time</span></div><div class="val">\u2248 ' + txt + '</div></div>';
+    return '<div class="info-item"><div class="lbl">Travel time</div><div class="val">\u2248 ' + txt + '</div></div>';
   })();
   el.innerHTML =
     '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
