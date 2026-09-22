@@ -1,7 +1,7 @@
 {
  "state": "bihar",
  "operator": "BSRTC",
- "fetched_at": "2026-09-22T00:12:41+00:00",
+ "fetched_at": "2026-09-22T23:41:33+00:00",
  "depots": {
   "Aurangabad": {
    "url": "https://s3.rdbuz.com/Images/WL/CMS/BSRTC/Aurangabad_Details.pdf",
@@ -2510,5 +2510,5 @@
    "S. No. From To Service Id Time\n1 Saharsa Birpur 150235 6:30 AM\n2 Saharsa Darbhanga 150237 7:00 AM\n3 Patna Saharsa 150241 9:20 AM\n4 Saharsa Patna 150240 10:00 AM\n5 Birpur Saharsa 150236 11:20 AM\n6 Darbhanga Saharsa 150238 1:40 PM\n7 Saharsa Birpur 150239 2:05 PM\n8 Bhagalpur Saharsa 150246 2:50 PM\n9 Saharsa Patna 150242 7:00 AM\n10 Patna Saharsa 150243 10:00 PM\n11 Saharsa Bhagalpur 150244 6:40 AM"
   ]
  },
- "sha256": "43e2bf650c3ed0ce"
+ "sha256": "2bd15d36e37badc7"
 }
