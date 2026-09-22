@@ -1,0 +1,76 @@
+name: SEO v2 stand pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      stands:
+        description: "Comma list of stand names (empty = all 72)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify generator parts (SHA guard)
+        if: hashFiles('scripts/stand_parts/p00.txt') != ''
+        run: |
+          python3 - <<'PY'
+          import subprocess, sys
+          expect = {
+              "p00.txt": "42bdf57a9e63c5b97b1777cb7cec89be9799cbc1",
+              "p01.txt": "8c847cd316c040e97af91bb0dc1edd186f0f18e0",
+              "p02.txt": "bfcbaf1d9b9937971830498f2e26ecee3387fba6",
+              "p03.txt": "c7c9ce6d8a1fca6d73e1c2e2aa00fc1d180302be",
+              "p04.txt": "dc5888c4fc9c36e50f6dc96acdd107f94abf06d7",
+              "p05.txt": "04cd647720697668c634968485949d0df11d73fe",
+              "p06.txt": "dc38f3861012eb1913e73af547870a15805a0d33",
+          }
+          bad = []
+          for name, want in expect.items():
+              path = "scripts/stand_parts/" + name
+              stripped = open(path).read().replace("\n", "")
+              got = subprocess.run(["git", "hash-object", "--stdin"],
+                                   input=stripped, capture_output=True,
+                                   text=True).stdout.strip()
+              print("%s: %s" % (name, "OK" if got == want else "MISMATCH got=" + got))
+              if got != want:
+                  bad.append(name)
+          if bad:
+              sys.exit("BAD PARTS (re-commit them): " + ",".join(bad))
+          PY
+
+      - name: Assemble generator
+        if: hashFiles('scripts/stand_parts/p00.txt') != ''
+        run: |
+          cat scripts/stand_parts/p*.txt | tr -d '\n' | base64 -d > scripts/gen_stand_v2.py
+          GOT=$(git hash-object scripts/gen_stand_v2.py)
+          echo "assembled sha: $GOT (want 01da1bedd394388d4c1fa497e205b86cee10cb70)"
+          [ "$GOT" = "01da1bedd394388d4c1fa497e205b86cee10cb70" ] || { echo 'ASSEMBLED FILE MISMATCH - aborting'; exit 1; }
+          python3 -c "import ast; ast.parse(open('scripts/gen_stand_v2.py').read())"
+
+      - name: Generate stand pages
+        run: |
+          if [ -n "${{ github.event.inputs.stands }}" ]; then
+            python3 scripts/gen_stand_v2.py --stands "${{ github.event.inputs.stands }}"
+          else
+            python3 scripts/gen_stand_v2.py --all
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_stand_v2.py bus-time-table/buses-from-*.html
+          if [ -d scripts/stand_parts ]; then git rm -r -q scripts/stand_parts; fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "SEO v2: regenerate stand pages (buses-from-X) in v2 design"
+            git push
+          fi
