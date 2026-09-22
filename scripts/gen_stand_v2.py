@@ -2,19 +2,20 @@
 """
 Stand page generator v3 — "X Bus Stand" destination cards + travel guide.
 
-Demo-approved design (2026-09-22, Bankura final demo):
-  1. Hero: "X Bus Stand" + Bengali subtitle + chips
-     (buses listed / destinations / first / last)
-  2. Search filter (filters cards + destination rows)
-  3. Popular Routes: top-12 destination cards, time chips (max 8,
-     "+N more times"), "N buses with Time N/A" note, route-page links
-  4. All Destinations: big A-Z rows, 8 visible + "See more" (+8 per tap)
-  5. Travel Guide (only for stands with curated content): attraction
-     cards — real bus data from this timetable, Maps links, why go,
-     best time, stay (Maps link, never fabricated names)
-  6. FAQ: 5 English + 5 Bengali, data-driven
-  7. Safe wording: "N buses listed", never "only N buses run";
-     more services may exist — ask at the stand
+Demo-approved design (2026-09-22/23, Bankura final demo + homepage parity):
+  1. SAME look as the homepage: colours, sticky header (logo + theme +
+     EN/বাংলা language buttons), fadeUp animation, dark mode via
+     data-theme + localStorage (bj-theme / bj-lang, shared with homepage)
+  2. Hero: "X Bus Stand" + Bengali subtitle + stat chips
+  3. Popular Routes: top-12 destination cards, time chips (max 8),
+     "+N more times", "N buses with Time N/A" note, route-page links
+  4. All Destinations: big A-Z rows + HOMEPAGE-STYLE search box,
+     8 visible + "See more" (+8 per tap)
+  5. Travel Guide: only attractions that BELONG to this stand's area
+     (Bishnupur on Bankura, Ajodhya on Purulia — never mixed around);
+     real bus data from this timetable, Maps links, never fabricated names
+  6. FAQ: 5 English + 5 Bengali (language buttons switch them)
+  7. Safe wording: "N buses listed", never "only N buses run"
 
 Same URL as before: bus-time-table/buses-from-<slug>.html
 (design change only, no page moves, no deletions).
@@ -32,6 +33,8 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_route_v2 as v2
 
 g = v2.g
+L = v2.L
+bn_num = v2.bn_num
 
 
 # ------------------------------------------------------------
@@ -76,7 +79,7 @@ def display_name(stand):
 # ------------------------------------------------------------
 
 def destination_groups(stand, buses):
-    """[dict(display, bn, count, times, na, link)] sorted by count desc.
+    """[dict(display, count, times, na, link)] sorted by count desc.
 
     Each bus destination is resolved against the stand's route_meta pairs
     so 'Kolkata (Esplanade)' and 'Kolkata' merge into one group that
@@ -206,7 +209,7 @@ def faq_pairs_stand(stand, buses, dest_groups):
                    v2.bn_time(last), g.clean_text(last_bus.get("bus_name")) or "একটি বাস", v2.bnplace(dest_of(last_bus)))))
     bn.append(("{} থেকে দিনে কতটি বাস ছাড়ে?".format(p_bn),
                "তালিকায় {}টি বাস, {}টি গন্তব্যে। আরও বাস থাকতে পারে, স্ট্যান্ডে জেনে নিন।".format(
-                   v2.bn_num(count), v2.bn_num(len(dest_groups)))))
+                   bn_num(count), bn_num(len(dest_groups)))))
     if top:
         bn.append(("{} থেকে কোথায় কোথায় বাস যায়?".format(p_bn),
                    "{} থেকে যাওয়া যায় {} জায়গায় — বাসের সংখ্যাসহ পুরো তালিকা এই পেজেই দেওয়া আছে।".format(
@@ -225,7 +228,8 @@ def faq_pairs_stand(stand, buses, dest_groups):
 
 
 # ------------------------------------------------------------
-# travel guides — curated content, REAL bus data only
+# travel guides — ONE attraction belongs to ONE stand (its own area).
+# Real bus data only, never fabricated lodge/hostel names.
 # ------------------------------------------------------------
 
 def _maps(query):
@@ -234,7 +238,7 @@ def _maps(query):
 
 GUIDES = {
     "bankura": {
-        "intro": "Bankura ke aas-paas",
+        "intro": ("Around Bankura", "বাঁকুড়ার আশপাশ"),
         "note": "🚉 <b>Rail:</b> Bankura Junction (Howrah–Adra line) · 🛣️ <b>Road:</b> NH-14 to Durgapur/Asansol, SH to Bishnupur–Purulia.",
         "cards": [
             {"icon": "🛕", "name": "Bishnupur", "bn": "বিষ্ণুপুর",
@@ -259,51 +263,48 @@ GUIDES = {
              "when": "October–February, go early morning",
              "stay": None, "stay_extra": "Day trip from Bankura — {LINK}",
              "stay_link": "hotels+in+Bankura+town", "stay_text": "stay in town"},
-            {"icon": "⛰️", "name": "Ajodhya Hills", "bn": "অযোধ্যা পাহাড়",
-             "desc": "Purulia's hill spot — waterfalls, forests and tribal villages",
-             "bus": "🚆 No listed bus from this stand — take a train to Jhalda, then local transport (or ask at the stand)",
-             "maps": "Ajodhya+Hills+Purulia",
-             "why": "Upper & Lower falls, hill viewpoints, peaceful forest roads",
-             "when": "September–February; monsoon for the falls",
-             "stay": "stay+Ajodhya+Hills+Purulia"},
         ],
     },
     "kolkata": {
-        "intro": "Kolkata se weekend spots",
+        "intro": ("Around Kolkata", "কলকাতার আশপাশ"),
         "note": "🚉 <b>Rail:</b> Howrah & Sealdah — India's biggest rail hub · 🛣️ <b>Road:</b> NH-16 (Kharagpur) and NH-19 (Dhanbad) start here.",
         "cards": [
-            {"icon": "🏖️", "name": "Digha", "bn": "দীঘা",
-             "desc": "Bengal's favourite sea beach — 3-4 hours from the city",
-             "bus": "🚌 <b>37 buses listed</b> direct — first SBSTC 4:30 AM, BAROMA 6:30 AM, JACKSON 8:00 AM, AC coaches available",
-             "maps": "New+Digha+beach",
-             "why": "sea beach, marine aquarium & science centre, seafood, sunrise",
-             "when": "October–February",
-             "stay": "hotels+in+New+Digha"},
-            {"icon": "🌊", "name": "Mandarmani & Shankarpur", "bn": "মন্দারমণি",
-             "desc": "Long driveable beach with red crabs — quieter than Digha",
-             "bus": "🚌 <b>SANTOSH BUS SERVICE</b> 6:00 AM — direct Kolkata–Mandarmani and Kolkata–Shankarpur",
-             "maps": "Mandarmani+beach",
-             "why": "longest motorable beach drive, red crab colonies, casuarina groves",
-             "when": "October–February",
-             "stay": "hotels+in+Mandarmani"},
-            {"icon": "🛕", "name": "Bishnupur", "bn": "বিষ্ণুপুর",
-             "desc": "Terracotta temple town of the Malla kings — a day full of history",
-             "bus": "🚌 <b>NOOR TRAVELS</b> 4:30 AM · <b>SBSTC</b> 9:30 AM — direct from Kolkata",
-             "maps": "Bishnupur+temples+Bankura",
-             "why": "Rasmancha, Jorbangla, Madan Mohan temple, Baluchari sarees",
-             "when": "October–March",
-             "stay": "hotels+in+Bishnupur+Bankura"},
-            {"icon": "🎓", "name": "Shantiniketan", "bn": "শান্তিনিকেতন",
-             "desc": "Tagore's university town — Visva-Bharati, Sonajhuri haat",
-             "bus": "🚆 Only one bus is listed (time not in timetable) — Howrah→Bolpur trains are frequent; or ask at the stand",
-             "maps": "Shantiniketan+Bolpur",
-             "why": "Visva-Bharati campus, Sonajhuri forest haat, Tagore heritage",
-             "when": "October–March (Poush Mela in December)",
-             "stay": "hotels+in+Bolpur+Shantiniketan"},
+            {"icon": "🛕", "name": "Dakshineswar Temple", "bn": "দক্ষিণেশ্বর মন্দির",
+             "desc": "Historic Kali temple on the Hooghly — Ramakrishna Paramahansa's seat",
+             "bus": "🚌 Route <b>43</b> runs to Dakshineswar — 23 listed buses touch the area",
+             "maps": "Dakshineswar+Kali+Temple",
+             "why": "riverside temple complex, 12 Shiva shrines, morning aarti",
+             "when": "Year-round; early morning for aarti",
+             "stay": None, "stay_extra": "Day trip in the city — {LINK}",
+             "stay_link": "hotels+near+Dakshineswar+Kolkata", "stay_text": "stay nearby"},
+            {"icon": "🕉️", "name": "Belur Math", "bn": "বেলুড় মঠ",
+             "desc": "Ramakrishna Mission headquarters across the river at Bally",
+             "bus": "🚌 Many listed buses run to <b>Bally</b> (Howrah side) — Belur Math is a short ride from Bally ghat",
+             "maps": "Belur+Math+Howrah",
+             "why": "serene marble temple, Swami Vivekananda's samadhi, evening arati",
+             "when": "Year-round; afternoon for the sunset arati",
+             "stay": None, "stay_extra": "Day trip in the city — {LINK}",
+             "stay_link": "hotels+in+Howrah+Kolkata", "stay_text": "stay in the city"},
+            {"icon": "🌿", "name": "Botanical Garden", "bn": "উদ্ভিদ উদ্যান",
+             "desc": "The 200-year-old AJC Bose garden with the Great Banyan tree",
+             "bus": "🚌 Route <b>55A</b> to Shibpur (Howrah side) — the garden is a short ride from there",
+             "maps": "Acharya+Jagadish+Chandra+Bose+Botanical+Garden",
+             "why": "the Great Banyan, palm house, riverside walk",
+             "when": "October–March, mornings",
+             "stay": None, "stay_extra": "Day trip in the city — {LINK}",
+             "stay_link": "hotels+in+Howrah+Kolkata", "stay_text": "stay in the city"},
+            {"icon": "🌳", "name": "Eco Park, New Town", "bn": "ইকো পার্ক",
+             "desc": "Kolkata's biggest urban park — lake, themed gardens, ice skating",
+             "bus": "🚌 27 listed buses to New Town — routes <b>EB-3</b> (Ecospace), <b>AS-3</b> (Newtown), <b>VS-10</b> (Amity)",
+             "maps": "Eco+Park+New+Town+Kolkata",
+             "why": "480-acre park, boating, butterfly garden, food courts",
+             "when": "October–February, late afternoon",
+             "stay": None, "stay_extra": "Day trip in the city — {LINK}",
+             "stay_link": "hotels+in+New+Town+Kolkata", "stay_text": "stay in New Town"},
         ],
     },
     "digha": {
-        "intro": "Digha ke aas-paas",
+        "intro": ("Around Digha", "দীঘার আশপাশ"),
         "note": "🚉 <b>Rail:</b> direct trains from Howrah (check timings) · 🛣️ <b>Road:</b> Kolaghat–Nandakumar–Contai route, about 4 hours from Kolkata. Return: 18 buses listed to Kolkata, first 4:30 AM, last 10:00 PM.",
         "cards": [
             {"icon": "🏖️", "name": "New Digha Beach", "bn": "নিউ দীঘা বীচ",
@@ -314,7 +315,7 @@ GUIDES = {
              "when": "October–February; early morning for sunrise",
              "stay": "hotels+in+New+Digha"},
             {"icon": "🛕", "name": "Chandaneswar Temple", "bn": "চন্ডনেশ্বর মন্দির",
-             "desc": "Old Shiva temple, 4 km from Digha — Baba Taraknath route",
+             "desc": "Old Shiva temple, 4 km from Digha",
              "bus": "🚌 Local vans and buses run from the stand — not yet in the timetable, ask at the stand",
              "maps": "Chandaneswar+Temple+Digha",
              "why": "centuries-old temple, morning aarti, small weekly haat",
@@ -337,82 +338,128 @@ GUIDES = {
              "stay": "hotels+in+Mandarmani"},
         ],
     },
+    "purulia": {
+        "intro": ("Around Purulia", "পুরুলিয়ার আশপাশ"),
+        "note": "🚉 <b>Rail:</b> Purulia Junction (Howrah–Purulia line) · 🛣️ <b>Road:</b> NH-18 to Ranchi, SH to Bankura–Ajodhya.",
+        "cards": [
+            {"icon": "⛰️", "name": "Ajodhya Hills", "bn": "অযোধ্যা পাহাড়",
+             "desc": "Purulia's hill spot — waterfalls, forests and tribal villages",
+             "bus": "🚌 <b>GOUTAM</b> 10:30 AM · <b>KALYAN</b> 2:05 PM — direct to Ajodhya Hills; <b>HILLTOP SUPER</b> 11:05 AM via Baghmundi",
+             "maps": "Ajodhya+Hills+Purulia",
+             "why": "Upper & Lower falls, hill viewpoints, peaceful forest roads",
+             "when": "September–February; monsoon for the falls",
+             "stay": "stay+Ajodhya+Hills+Purulia"},
+            {"icon": "🏔️", "name": "Joychandi Pahar", "bn": "জয়চণ্ডী পাহাড়",
+             "desc": "Rocky hill with a ropeway, 5 km from Purulia town",
+             "bus": "🚶 A short local ride from the stand (about 5 km) — ask at the stand",
+             "maps": "Joychandi+Pahar+Purulia",
+             "why": "Chotanagpur rocks, ropeway, sunset point, picnic spot",
+             "when": "October–February, early morning or sunset",
+             "stay": None, "stay_extra": "Day trip from Purulia — {LINK}",
+             "stay_link": "hotels+in+Purulia+town", "stay_text": "stay in town"},
+        ],
+    },
 }
 
 
 # ------------------------------------------------------------
-# page template (self-contained: inline CSS + JS, dark mode)
+# page template — SAME design language as the homepage
 # ------------------------------------------------------------
 
-CSS = """:root{--amber:#b8791f;--amber2:#8a5a12;--bg:#fffcf4;--ink:#211c16;--mut:#7a6a4f;--line:#e8dfc8;--card:#fffdf8;--chipbg:#faf1dd}
+CSS = """:root{--bg:#f5efe1;--surface:#fffcf4;--surface-2:#efe6d3;--ink:#211c16;--ink-dim:#6f6653;--line:rgba(33,28,22,.13);--line-strong:rgba(33,28,22,.24);--amber:#b8791f;--amber-ink:#6b4610;--amber-soft:rgba(184,121,31,.14);--shadow:0 10px 34px -12px rgba(33,28,22,.28);--shadow-sm:0 2px 12px rgba(33,28,22,.1);--radius-lg:20px;--radius:14px;--font-display:'Fraunces',Georgia,serif;--font-body:'IBM Plex Sans','IBM Plex Sans Bengali',system-ui,sans-serif}
+[data-theme="dark"]{--bg:#15121d;--surface:#201c2b;--surface-2:#29243570;--ink:#f1ead8;--ink-dim:#a89b87;--line:rgba(241,234,216,.1);--line-strong:rgba(241,234,216,.2);--amber:#eda94a;--amber-ink:#f6cd8f;--amber-soft:rgba(237,169,74,.16);--shadow:0 14px 44px -14px rgba(0,0,0,.5);--shadow-sm:0 2px 12px rgba(0,0,0,.3)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-body.dark{--bg:#17130c;--ink:#f3e8d2;--mut:#b8a480;--line:#3a3222;--card:#221c11;--chipbg:#33290f}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.55}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;backdrop-filter:blur(14px) saturate(1.1);background:color-mix(in srgb,var(--surface) 88%,transparent)}
+.header::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:6px;background-image:radial-gradient(circle at 10px 0,var(--bg) 5px,transparent 5.5px);background-size:20px 6px;background-repeat:repeat-x}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;gap:10px;position:relative;z-index:1;max-width:788px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-size:1.32rem;font-weight:700;color:var(--ink);cursor:pointer;letter-spacing:-.2px;text-decoration:none}
+.logo .icon{width:1.35rem;height:1.35rem;color:var(--amber);stroke-width:1.6}
+.logo span{color:var(--amber-ink)}
+.header-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-2);border:1px solid var(--line);border-radius:50%;cursor:pointer;color:var(--ink);font-size:15px;transition:border-color .2s,transform .3s}
+.icon-btn:hover{border-color:var(--amber)}
+.icon-btn:active{transform:scale(.92)}
+.icon-btn svg{width:17px;height:17px;transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .2s}
+.lang-group{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;background:var(--surface-2)}
+.lang-btn{background:transparent;border:none;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink-dim);transition:.2s;font-family:var(--font-body)}
+.lang-btn.active{background:var(--amber);color:#fff9ee}
+[data-theme="dark"] .lang-btn.active{color:#241706}
 .wrap{max-width:760px;margin:0 auto;padding:14px 14px 60px}
-header{display:flex;justify-content:space-between;align-items:center;padding:14px 2px}
-.logo{font-size:22px;font-weight:900;text-decoration:none;color:inherit}.logo em{color:var(--amber);font-style:normal}
-.pills{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:700}
-.pill{border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
-.crumbs{font-size:12px;color:var(--mut);margin:6px 0 14px}.crumbs a{color:var(--mut)}
-.hero{background:linear-gradient(135deg,var(--amber) 0%,var(--amber2) 100%);border-radius:18px;padding:26px 20px;color:#fff;margin-bottom:14px}
-.hero h1{font-size:30px;letter-spacing:-.5px;line-height:1.15}
+.crumbs{font-size:12px;color:var(--ink-dim);margin:14px 0 14px}.crumbs a{color:var(--ink-dim)}
+.hero{background:linear-gradient(135deg,#b8791f 0%,#8a5a12 100%);border-radius:var(--radius-lg);padding:26px 20px;color:#fff;margin-bottom:14px;animation:fadeUp .5s .05s ease both}
+.hero h1{font-size:30px;letter-spacing:-.5px;line-height:1.15;font-family:var(--font-display)}
 .hero .hbn{font-size:15px;opacity:.92;margin-top:4px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .schip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 13px;font-size:12.5px;font-weight:700}
-.schip.hot{background:#fff;color:var(--amber2)}
-.search{display:flex;gap:8px;margin:0 0 18px}
-.search input{flex:1;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:12px 14px;font-size:15px;font-weight:600;outline:none}
+.schip.hot{background:#fff;color:#6b4610}
+[data-theme="dark"] .schip.hot{background:rgba(21,18,29,.55);color:var(--amber-ink)}
 .sec{margin:22px 0 10px;display:flex;align-items:baseline;justify-content:space-between}
-.sec h3{font-size:17px}.sec .bn{font-size:12px;color:var(--mut);margin-left:8px}
-.dgrid{display:grid;grid-template-columns:1fr;gap:10px}
+.sec h3{font-size:17px;font-family:var(--font-display)}
+.sec .cnt{font-size:12px;color:var(--ink-dim)}
+.dsearch{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin:0 0 12px;animation:fadeUp .6s .15s ease both}
+.dsearch input{width:100%;border:none;background:transparent;color:var(--ink);border-radius:var(--radius);padding:13px 16px;font-size:15px;font-weight:600;outline:none;font-family:var(--font-body)}
+.dgrid{display:grid;grid-template-columns:1fr;gap:10px;animation:fadeUp .5s .2s ease both}
 @media(min-width:560px){.dgrid{grid-template-columns:1fr 1fr}}
-.dcard{display:block;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+.dcard{display:block;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
 .dcard:hover{transform:translateY(-2px);border-color:var(--amber)}
 .dhead{display:flex;justify-content:space-between;align-items:center}
-.dname{font-size:16.5px;font-weight:800}.dbn{font-size:12.5px;color:var(--mut);font-weight:600;margin-left:6px}
-.dcount{font-size:12px;color:var(--amber2);font-weight:700;margin-top:2px}
-body.dark .dcount{color:var(--amber)}
-.arr{font-size:22px;color:var(--mut)}
+.dname{font-size:16.5px;font-weight:800}.dbn{font-size:12.5px;color:var(--ink-dim);font-weight:600;margin-left:6px}
+.dcount{font-size:12px;color:var(--amber-ink);font-weight:700;margin-top:2px}
+[data-theme="dark"] .dcount{color:var(--amber)}
+.arr{font-size:22px;color:var(--ink-dim)}
 .dtimes{margin-top:10px;display:flex;flex-wrap:wrap;gap:6px}
-.tchip{background:var(--chipbg);border:1px solid var(--line);border-radius:8px;padding:4px 9px;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
-.tmore{font-size:12px;color:var(--mut);align-self:center}
-.ntime{margin-top:8px;font-size:11.5px;color:var(--mut)}
+.tchip{background:var(--amber-soft);border:1px solid var(--line);border-radius:8px;padding:4px 9px;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
+.tmore{font-size:12px;color:var(--ink-dim);align-self:center}
+.ntime{margin-top:8px;font-size:11.5px;color:var(--ink-dim)}
 .mgrid{display:grid;grid-template-columns:1fr;gap:9px}
 @media(min-width:520px){.mgrid{grid-template-columns:1fr 1fr}}
-.mcard{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:inherit}
+.mcard{display:flex;justify-content:space-between;align-items:center;background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
 .mcard:hover{border-color:var(--amber);transform:translateY(-1px)}
-.mname{font-size:14.5px;font-weight:800}.mbn{font-size:11px;color:var(--mut);margin-left:4px}
-.mmeta{font-size:12px;color:var(--mut);margin-top:2px}
-.note{background:var(--chipbg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--mut);margin:18px 0}
-.morebtn{display:block;width:100%;margin-top:12px;border:1.5px dashed var(--amber);background:transparent;color:var(--amber2);border-radius:12px;padding:11px;font-size:14px;font-weight:800;cursor:pointer}
-body.dark .morebtn{color:var(--amber)}
-details.faq{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:8px}
+.mname{font-size:14.5px;font-weight:800}.mbn{font-size:11px;color:var(--ink-dim);margin-left:4px}
+.mmeta{font-size:12px;color:var(--ink-dim);margin-top:2px}
+.note{background:var(--amber-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ink-dim);margin:18px 0}
+.morebtn{display:block;width:100%;margin-top:12px;border:1.5px dashed var(--amber);background:transparent;color:var(--amber-ink);border-radius:12px;padding:11px;font-size:14px;font-weight:800;cursor:pointer}
+[data-theme="dark"] .morebtn{color:var(--amber)}
+details.faq{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:8px}
 details.faq summary{font-weight:700;font-size:14px;cursor:pointer}
-details.faq p{margin-top:8px;font-size:13.5px;color:var(--mut)}
+details.faq p{margin-top:8px;font-size:13.5px;color:var(--ink-dim)}
 .tg-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 @media(max-width:480px){.tg-grid{grid-template-columns:1fr}}
-.tg-card{background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:13px}
+.tg-card{background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:13px}
 .tg-ico{font-size:22px}
 .tg-name{font-weight:800;font-size:14.5px;margin-top:4px}
-.tg-bn{font-size:11.5px;color:var(--mut);font-weight:600;margin-left:4px}
-.tg-desc{font-size:12.5px;color:var(--mut);margin-top:4px}
+.tg-bn{font-size:11.5px;color:var(--ink-dim);font-weight:600;margin-left:4px}
+.tg-desc{font-size:12.5px;color:var(--ink-dim);margin-top:4px}
 .tg-rows{margin-top:9px;display:grid;gap:6px}
-.tg-row{font-size:12.5px;color:var(--mut);background:var(--chipbg);border:1px solid var(--line);border-radius:10px;padding:7px 10px;line-height:1.45}
+.tg-row{font-size:12.5px;color:var(--ink-dim);background:var(--amber-soft);border:1px solid var(--line);border-radius:10px;padding:7px 10px;line-height:1.45}
 .tg-row b{color:var(--ink)}
-.tg-row a{color:var(--amber2);font-weight:700;text-decoration:none;border-bottom:1px dashed var(--amber2)}
-body.dark .tg-row a{color:var(--amber)}
-.tg-note{background:var(--chipbg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--mut);margin-top:10px}
-footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--mut);text-align:center}
-footer a{color:var(--mut);margin:0 6px}"""
+.tg-row a{color:var(--amber-ink);font-weight:700;text-decoration:none;border-bottom:1px dashed var(--amber-ink)}
+[data-theme="dark"] .tg-row a{color:var(--amber)}
+.tg-note{background:var(--amber-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ink-dim);margin-top:10px}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--ink-dim);text-align:center}
+footer a{color:var(--ink-dim);margin:0 6px}
+.label-bn{display:none}
+body.lang-bn .label-en{display:none}
+body.lang-bn .label-bn{display:inline}
+.only-bn{display:none}
+body.lang-bn .only-en{display:none}
+body.lang-bn .only-bn{display:block}"""
 
 JS = """var mstep=8;
+var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+var PH={en:"\\uD83D\\uDD0E Search destination — e.g. Purulia, Kolkata\\u2026",bn:"\\uD83D\\uDD0E \\u0997\\u09A8\\u09CD\\u09A4\\u09AC\\u09CD\\u09AF \\u0996\\u09C1\\u0981\\u099C\\u09C1\\u09A8 \\u2014 \\u09AF\\u09C7\\u09AE\\u09A8 \\u09AA\\u09C1\\u09B0\\u09C1\\u09B2\\u09BF\\u09AF\\u09BC\\u09BE, \\u0995\\u09B2\\u0995\\u09BE\\u09A4\\u09BE\\u2026"};
+function bnd(s){return String(s).replace(/[0-9]/g,function(d){return "\\u09E7\\u09E8\\u09E9\\u09EA\\u09EB\\u09EC\\u09ED\\u09EE\\u09EF\\u09E6"[d];});}
+function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
 function mcards(){return Array.prototype.slice.call(document.querySelectorAll('#minis .mcard'));}
 function mrefresh(){
   var cs=mcards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
   var b=document.getElementById('mmore');
-  if(!b){return;}
-  if(shown>=cs.length){b.style.display='none';}else{b.style.display='';b.textContent='See more ('+(cs.length-shown)+' destinations remaining)';}
-  document.getElementById('mcnt').textContent=shown+' of '+cs.length;
+  if(b){if(shown>=cs.length){b.style.display='none';}else{b.style.display='';b.textContent=isBn()?'\\u0986\\u09B0\\u0993 \\u09A6\\u09C7\\u0996\\u09C1\\u09A8 ('+bnd(cs.length-shown)+'\\u099F\\u09BF \\u0997\\u09A8\\u09CD\\u09A4\\u09AC\\u09CD\\u09AF \\u09AC\\u09BE\\u0995\\u09BF)':'See more ('+(cs.length-shown)+' destinations remaining)';}}
+  var c=document.getElementById('mcnt');
+  if(c){c.textContent=isBn()?bnd(shown)+' / '+bnd(cs.length):shown+' of '+cs.length;}
 }
 function showMoreDest(){
   var cs=mcards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
@@ -420,9 +467,59 @@ function showMoreDest(){
   cs.forEach(function(c,i){c.style.display=i<nxt?'':'none';});
   mrefresh();
 }
-mcs=mcards();mcs.forEach(function(c,i){c.style.display=i<mstep?'':'none';});
-mrefresh();
-function fil(){var q=document.getElementById('q').value.toLowerCase().trim();document.querySelectorAll('#cards .dcard,#minis .mcard').forEach(function(c){c.style.display=!q||c.textContent.toLowerCase().indexOf(q)>-1?'':'none';});}"""
+mcs=mcards();mcs.forEach(function(c,i){c.style.display=i<mstep?'':'none';});mrefresh();
+function fil(){
+  var q=document.getElementById('q').value.toLowerCase().trim();var cs=mcards();
+  var dc=document.querySelectorAll('#cards .dcard');
+  if(!q){cs.forEach(function(c,i){c.style.display=i<mstep?'':'none';});dc.forEach(function(c){c.style.display='';});mrefresh();return;}
+  cs.forEach(function(c){c.style.display=c.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+  dc.forEach(function(c){c.style.display=c.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+  var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
+  document.getElementById('mcnt').textContent=isBn()?bnd(shown)+' / '+bnd(cs.length):shown+' of '+cs.length;
+  var b=document.getElementById('mmore');b.style.display=shown>=cs.length?'none':'';
+}
+function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(btn)btn.innerHTML=theme==='dark'?SUN:MOON;}
+function toggleTheme(){
+  var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var next=cur==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  localStorage.setItem('bj-theme',next);
+  updateThemeIcon(next);
+}
+function setLang(l){
+  document.body.className=l==='bn'?'lang-bn':'';
+  localStorage.setItem('bj-lang',l);
+  document.getElementById('langEN').classList.toggle('active',l==='en');
+  document.getElementById('langBN').classList.toggle('active',l==='bn');
+  var q=document.getElementById('q');if(q){q.placeholder=l==='bn'?PH.bn:PH.en;}
+  mrefresh();
+}
+(function(){
+  var t=localStorage.getItem('bj-theme');
+  if(t)document.documentElement.setAttribute('data-theme',t);
+  updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+  var l=localStorage.getItem('bj-lang');
+  if(l&&l!=='en'){setLang(l);}else{var q=document.getElementById('q');if(q)q.placeholder=PH.en;}
+})();"""
+
+FONTS = """<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;0,900;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">"""
+
+HEADER = """<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/></svg>
+      Bus<span>Jatri</span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      <div class="lang-group">
+        <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="langBN" onclick="setLang('bn')">বাংলা</button>
+      </div>
+    </div>
+  </div>
+</header>"""
 
 
 def _head(title, description, canonical):
@@ -440,10 +537,11 @@ def _head(title, description, canonical):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
+{fonts}
 {schema}
 <style>{css}</style></head>""".format(
         title=g.esc(title), desc=g.esc(description), canon=g.esc(canonical),
-        ogimg=g.BASE + "/og-image.png", schema="{schema}", css=CSS)
+        ogimg=g.BASE + "/og-image.png", fonts=FONTS, schema="{schema}", css=CSS)
 
 
 def _popular_card(grp):
@@ -485,7 +583,9 @@ def _guide_section(slug, disp):
     cards = []
     for c in guide["cards"]:
         if c.get("stay"):
-            stay_row = '🏨 <a href="{u}" target="_blank" rel="nofollow">Stay options on Maps</a>'.format(u=_maps(c["stay"]))
+            stay_row = '🏨 <a href="{u}" target="_blank" rel="nofollow">{t}</a>'.format(
+                u=_maps(c["stay"]),
+                t=L("Stay options on Maps", "ম্যাপে থাকার জায়গা"))
         else:
             stay_row = "🏨 " + c["stay_extra"].replace("{LINK}", '<a href="{u}" target="_blank" rel="nofollow">{t}</a>'.format(u=_maps(c["stay_link"]), t=c["stay_text"]))
         cards.append("""<div class="tg-card">
@@ -494,18 +594,26 @@ def _guide_section(slug, disp):
   <div class="tg-desc">{desc}</div>
   <div class="tg-rows">
     <div class="tg-row">{bus}</div>
-    <div class="tg-row">🗺️ <a href="{maps}" target="_blank" rel="nofollow">Open in Google Maps</a></div>
-    <div class="tg-row">⭐ Why go: {why}</div>
-    <div class="tg-row">🕐 Best time: {when}</div>
+    <div class="tg-row">🗺️ <a href="{maps}" target="_blank" rel="nofollow">{open_txt}</a></div>
+    <div class="tg-row">⭐ {why_txt}: {why}</div>
+    <div class="tg-row">🕐 {best_txt}: {when}</div>
     <div class="tg-row">{stay}</div>
   </div>
 </div>""".format(ico=c["icon"], name=g.esc(c["name"]), bn=g.esc(c["bn"]),
                  desc=g.esc(c["desc"]), bus=c["bus"],
-                 maps=_maps(c["maps"]), why=g.esc(c["why"]), when=g.esc(c["when"]),
+                 maps=_maps(c["maps"]),
+                 open_txt=L("Open in Google Maps", "গুগল ম্যাপে খুলুন"),
+                 why_txt=L("Why go", "কেন যাবেন"),
+                 best_txt=L("Best time", "সেরা সময়"),
+                 why=g.esc(c["why"]), when=g.esc(c["when"]),
                  stay=stay_row))
-    return """<div class="sec"><h3>Travel Guide <span class="bn">ভ্রমণ গাইড</span></h3><span style="font-size:12px;color:var(--mut)">{intro}</span></div>
+    intro_en, intro_bn = guide["intro"]
+    return """<div class="sec"><h3>{tg} <span class="cnt">{intro}</span></h3></div>
 <div class="tg-grid">{cards}</div>
-<div class="tg-note">{note}</div>""".format(intro=g.esc(guide["intro"]), cards="".join(cards), note=guide["note"])
+<div class="tg-note">{note}</div>""".format(
+        tg=L("Travel Guide", "ভ্রমণ গাইড"),
+        intro=L(g.esc(intro_en), g.esc(intro_bn)),
+        cards="".join(cards), note=guide["note"])
 
 
 def generate_stand_page_v2(stand):
@@ -528,14 +636,14 @@ def generate_stand_page_v2(stand):
     description = description[:300]
     canonical = "{}/bus-time-table/{}".format(g.BASE, filename)
 
-    # ---- hero chips ----
+    # ---- hero chips (bilingual) ----
     if count == 0:
-        chips = '<span class="schip">🚌 No buses listed yet</span>'
+        chips = '<span class="schip">🚌 ' + L("No buses listed yet", "এখনও কোনো বাস তালিকাভুক্ত নেই") + "</span>"
     else:
-        chips = ('<span class="schip">🚌 {} buses listed</span>'.format(count)
-                 + '<span class="schip">📍 {} destinations</span>'.format(len(dest_groups))
-                 + ('<span class="schip hot">⏰ First {}</span>'.format(g.esc(g.format_time(first))) if first is not None else "")
-                 + ('<span class="schip hot">⏰ Last {}</span>'.format(g.esc(g.format_time(last))) if last is not None else ""))
+        chips = ('<span class="schip">🚌 ' + L("{} buses listed".format(count), "{}টি বাস তালিকাভুক্ত".format(bn_num(count))) + "</span>"
+                 + '<span class="schip">📍 ' + L("{} destinations".format(len(dest_groups)), "{}টি গন্তব্য".format(bn_num(len(dest_groups)))) + "</span>"
+                 + ('<span class="schip hot">⏰ ' + L("First", "প্রথম") + " {}</span>".format(g.esc(g.format_time(first))) if first is not None else "")
+                 + ('<span class="schip hot">⏰ ' + L("Last", "শেষ") + " {}</span>".format(g.esc(g.format_time(last))) if last is not None else ""))
 
     # ---- popular routes (top 12) + all destinations (rest, A-Z) ----
     popular = dest_groups[:12]
@@ -543,46 +651,50 @@ def generate_stand_page_v2(stand):
     cards_html = "".join(_popular_card(grp) for grp in popular)
     minis_html = "".join(_mini_card(grp) for grp in rest)
     if rest:
-        all_section = """<div class="sec"><h3>All Destinations <span class="bn">সব গন্তব্য</span></h3><span style="font-size:12px;color:var(--mut)" id="mcnt"></span></div>
+        all_section = """<div class="sec"><h3>{h}</h3><span class="cnt" id="mcnt"></span></div>
+<div class="dsearch"><input id="q" type="text" oninput="fil()" aria-label="Search destinations"></div>
 <div class="mgrid" id="minis">{minis}</div>
-<button class="morebtn" id="mmore" onclick="showMoreDest()"></button>""".format(minis=minis_html)
-        popular_section = """<div class="sec"><h3>Popular Routes <span class="bn">জনপ্রিয় রুট</span></h3></div>
-<div class="dgrid" id="cards">{cards}</div>""".format(cards=cards_html)
+<button class="morebtn" id="mmore" onclick="showMoreDest()"></button>""".format(
+            h=L("All Destinations", "সব গন্তব্য"), minis=minis_html)
+        popular_section = """<div class="sec"><h3>{h}</h3></div>
+<div class="dgrid" id="cards">{cards}</div>""".format(h=L("Popular Routes", "জনপ্রিয় রুট"), cards=cards_html)
     else:
-        popular_section = """<div class="sec"><h3>All Destinations <span class="bn">সব গন্তব্য</span></h3></div>
-<div class="dgrid" id="cards">{cards}</div>""".format(cards=cards_html)
+        popular_section = """<div class="sec"><h3>{h}</h3></div>
+<div class="dgrid" id="cards">{cards}</div>
+<div class="dsearch"><input id="q" type="text" oninput="fil()" aria-label="Search destinations"></div>""".format(
+            h=L("All Destinations", "সব গন্তব্য"), cards=cards_html)
         all_section = '<div class="mgrid" id="minis"></div>'
 
-    note = ('📍 Only buses <b>starting from {}</b> are shown here. For buses that pass through, '
-            'see the route pages. More services may exist — ask at the stand.'.format(g.esc(disp)))
+    note = L("Only buses <b>starting from {}</b> are shown here. For buses that pass through, see the route pages. More services may exist — ask at the stand.".format(g.esc(disp)),
+             "এখানে শুধু <b>{}</b> থেকে ছাড়া বাস দেখানো হয়েছে। মাঝপথের বাসের জন্য রুট পেজ দেখুন। আরও বাস থাকতে পারে — স্ট্যান্ডে জেনে নিন।".format(g.esc(v2.bnplace(stand))))
 
-    # ---- FAQ ----
+    # ---- FAQ (language buttons switch EN/BN blocks) ----
     en, bn = faq_pairs_stand(stand, buses, dest_groups)
-    faq_html = "".join('<details class="faq"><summary>{}</summary><p>{}</p></details>'.format(g.esc(q), g.esc(a)) for q, a in en)
-    faq_html += "".join('<details class="faq"><summary class="bn">📌 {}</summary><p>{}</p></details>'.format(q, a) for q, a in bn)
-    faq_section = '<div class="sec"><h3>FAQ <span class="bn">প্রশ্নোত্তর</span></h3></div>' + faq_html
+    faq_html = "".join('<details class="faq only-en"><summary>{}</summary><p>{}</p></details>'.format(g.esc(q), g.esc(a)) for q, a in en)
+    faq_html += "".join('<details class="faq only-bn"><summary>📌 {}</summary><p>{}</p></details>'.format(q, a) for q, a in bn)
+    faq_section = '<div class="sec"><h3>' + L("FAQ", "প্রশ্নোত্তর") + '</h3></div>' + faq_html
 
     guide_section = _guide_section(g.slug(stand), disp)
 
-    body = """<div class="wrap">
-<header><a class="logo" href="../index.html">Bus<em>Jatri</em></a>
-<div class="pills"><span class="pill" onclick="document.body.classList.toggle('dark')">🌙 Dark</span></div></header>
-<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <b>{disp}</b></div>
+    body = """{header}
+<div class="wrap">
+<div class="crumbs"><a href="../index.html">{home}</a> › <a href="./">{btt}</a> › <b>{disp}</b></div>
 <div class="hero">
   <h1>{disp}</h1>
   <div class="hbn">{bn} — ছাড়ার সময়সূচি</div>
   <div class="chips">{chips}</div>
 </div>
-<div class="search"><input id="q" type="text" placeholder="🔎 Destination khojo — jaise 'Purulia', 'Kolkata'…" oninput="fil()"></div>
 {popular}
 {allsec}
-<div class="note">{note}</div>
+<div class="note">📍 {note}</div>
 {guide}
 {faq}
 <footer>{disp} · {n} listed buses · {d} destinations (alias-merged) · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>{js}</script>
-</body></html>""".format(disp=g.esc(disp), bn=g.esc(v2.bnplace(stand)), chips=chips,
+</body></html>""".format(header=HEADER,
+                         home=L("Home", "হোম"), btt=L("Bus Timetable", "বাস টাইম টেবিল"),
+                         disp=g.esc(disp), bn=g.esc(v2.bnplace(stand)), chips=chips,
                          popular=popular_section, allsec=all_section, note=note,
                          guide=guide_section, faq=faq_section,
                          n=count, d=len(dest_groups), js=JS)
