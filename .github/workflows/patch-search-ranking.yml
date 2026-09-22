@@ -1,0 +1,68 @@
+name: Search fix - autocomplete exact match first
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch autocomplete ranking and bump JS cache version
+        run: |
+          python3 - <<'PYEOF'
+          p = "js/stop-search-all.js"
+          src = open(p, encoding="utf-8").read()
+          old = (
+              "    var res = t1.concat(t2);\n"
+              "    if (res.length < AC_LIMIT) res = res.concat(t3);\n"
+              "    return res.slice(0, AC_LIMIT);")
+          new = (
+              "    var rank = function (a, b) {\n"
+              "      var la = a.toLowerCase(), lb = b.toLowerCase();\n"
+              "      if (la === t && lb !== t) return -1;\n"
+              "      if (lb === t && la !== t) return 1;\n"
+              "      if (a.length !== b.length) return a.length - b.length;\n"
+              "      return la < lb ? -1 : (la > lb ? 1 : 0);\n"
+              "    };\n"
+              "    var res = t1.sort(rank).concat(t2.sort(rank));\n"
+              "    if (res.length < AC_LIMIT) res = res.concat(t3);\n"
+              "    return res.slice(0, AC_LIMIT);")
+          c = src.count(old)
+          if c != 1:
+              raise SystemExit("PATCH TARGET NOT FOUND (count=%d) - aborting" % c)
+          src = src.replace(old, new)
+          open(p, "w", encoding="utf-8").write(src)
+          print("stop-search-all.js patched OK")
+
+          p = "index.html"
+          src = open(p, encoding="utf-8").read()
+          oldv = "stop-search-all.js?v=bj20260918b"
+          newv = "stop-search-all.js?v=bj20260922a"
+          c = src.count(oldv)
+          if c == 1:
+              src = src.replace(oldv, newv)
+              open(p, "w", encoding="utf-8").write(src)
+              print("index.html cache version bumped")
+          else:
+              print("WARNING: index.html ref count = %d (expected 1) - not bumped" % c)
+          PYEOF
+
+      - name: Syntax check JS
+        run: node --check js/stop-search-all.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add js/stop-search-all.js index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Search fix: autocomplete ranks exact match first (Belda vs Beldanga) + cache bump"
+            git push
+          fi
