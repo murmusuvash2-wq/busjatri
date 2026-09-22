@@ -1,0 +1,40 @@
+name: SEO v2 route pages
+
+on:
+  workflow_dispatch:
+    inputs:
+      routes:
+        description: 'Comma list of Origin::Destination (empty = all route pages)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate v2 route pages
+        env:
+          ROUTES: ${{ github.event.inputs.routes }}
+        run: |
+          if [ -n "$ROUTES" ]; then
+            python3 scripts/gen_route_v2.py --routes "$ROUTES"
+          else
+            python3 scripts/gen_route_v2.py --all
+          fi
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bus-time-table/*.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "SEO v2: regenerate route pages (gen_route_v2)"
+            git push
+          fi
