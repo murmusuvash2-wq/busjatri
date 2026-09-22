@@ -11,6 +11,8 @@ Layers on top of gen_seo_pages.py (loads only its safe helpers + data):
      "only 1 bus runs" (more services may exist in reality)
   5. Pre-computed alternative-route section (1-change) below the bus list
   6. Unified 7-link footer
+  7. Through-services: buses that pass both places (homepage search
+     parity — Digha→Bardhaman shows 6 buses, not just the 1 exact match)
 
 Usage:
   python3 scripts/gen_route_v2.py --routes "Durgapur::Esplanade,Digha::Kolkata"
@@ -246,6 +248,191 @@ class AltIndex:
                 per_hub[key] = opt
         opts = sorted(per_hub.values(), key=lambda o: o["total"])
         return opts[:max_options]
+
+
+# ------------------------------------------------------------
+# place matching — port of app.js placeMatches (fuzzy + alias groups)
+# ------------------------------------------------------------
+
+import re as _re
+
+_PLACE_ALIAS_GROUPS = [
+    ['contai', 'kanthi'],
+    ['berhampore', 'baharampur'],
+    ['bardhaman', 'burdwan'],
+    ['kolkata', 'calcutta', 'esplanade', 'howrah', 'santragachi', 'garia', 'tollygunge', 'kudghat', 'karunamoyee'],
+    ['bolpur', 'santiniketan'],
+    ['tarakeswar', 'tarakeshwar'],
+    ['malda', 'english bazar', 'malda town'],
+    ['cooch behar', 'koch bihar'],
+    ['krishnanagar', 'krishnagar'],
+]
+_PLACE_ALIAS = {}
+for _grp in _PLACE_ALIAS_GROUPS:
+    for _n in _grp:
+        _PLACE_ALIAS[_n] = _grp
+
+
+def _pm_core(v, q):
+    if not v or not q:
+        return False
+    if q in v:
+        return True
+    vc = _re.sub(r'[^a-z0-9]', '', v)
+    qc = _re.sub(r'[^a-z0-9]', '', q)
+    if vc.endswith('ac'):
+        vc = vc[:-2]
+    if qc.endswith('ac'):
+        qc = qc[:-2]
+    if qc and (vc == qc or qc in vc):
+        return True
+    vs = _re.sub(r'[^bcdfghjklmnpqrstvwxyz]', '', v)
+    qs = _re.sub(r'[^bcdfghjklmnpqrstvwxyz]', '', q)
+    if len(qs) >= 4 and (vs == qs or qs in vs):
+        return True
+    return False
+
+
+def _pm_alias_variants(name):
+    k = str(name or '').lower().strip()
+    grp = _PLACE_ALIAS.get(k)
+    return [k] + list(grp) if grp else [k]
+
+_PM_CACHE = {}
+
+
+def place_matches(value, query):
+    """Faithful port of app.js placeMatches (kept fast by a memo cache —
+    stop names repeat heavily across buses)."""
+    key = (str(value or '').lower().strip(), str(query or '').lower().strip())
+    hit = _PM_CACHE.get(key)
+    if hit is not None:
+        return hit
+    v, q = key
+    res = False
+    if v and q:
+        if _pm_core(v, q):
+            res = True
+        else:
+            for aq in _pm_alias_variants(q):
+                if _pm_core(v, aq):
+                    res = True
+                    break
+            if not res:
+                for av in _pm_alias_variants(v):
+                    if _pm_core(av, q):
+                        res = True
+                        break
+    _PM_CACHE[key] = res
+    return res
+
+
+def _pm_core_strict(v, q):
+    """Like _pm_core but the skeleton tier only accepts a shared PREFIX
+    (same word, spelling variant). Search-style 'contains' skeletons let
+    Santipur match Aantpur — wrong for a static route page."""
+    if not v or not q:
+        return False
+    if q in v:
+        return True
+    vc = _re.sub(r'[^a-z0-9]', '', v)
+    qc = _re.sub(r'[^a-z0-9]', '', q)
+    if vc.endswith('ac'):
+        vc = vc[:-2]
+    if qc.endswith('ac'):
+        qc = qc[:-2]
+    if qc and (vc == qc or qc in vc):
+        return True
+    vs = _re.sub(r'[^bcdfghjklmnpqrstvwxyz]', '', v)
+    qs = _re.sub(r'[^bcdfghjklmnpqrstvwxyz]', '', q)
+    if len(qs) >= 4 and (vs == qs or vs.startswith(qs)):
+        return True
+    return False
+
+
+_PMS_CACHE = {}
+
+
+def place_matches_strict(value, query):
+    """place_matches with the strict skeleton tier (route-page through
+    services). Substring, compact and alias tiers stay identical to the
+    homepage search."""
+    key = (str(value or '').lower().strip(), str(query or '').lower().strip())
+    hit = _PMS_CACHE.get(key)
+    if hit is not None:
+        return hit
+    v, q = key
+    res = False
+    if v and q:
+        if _pm_core_strict(v, q):
+            res = True
+        else:
+            for aq in _pm_alias_variants(q):
+                if _pm_core_strict(v, aq):
+                    res = True
+                    break
+            if not res:
+                for av in _pm_alias_variants(v):
+                    if _pm_core_strict(av, q):
+                        res = True
+                        break
+    _PMS_CACHE[key] = res
+    return res
+
+
+def _pos_in(bus, query):
+    """Port of bjPosIn: 0=origin field, 1..n=stoppages, n+2=destination field.
+    Uses the strict matcher so unrelated look-alike names (Santipur vs
+    Aantpur) do not leak onto route pages."""
+    if place_matches_strict(bus.get("origin"), query):
+        return 0
+    stops = bus.get("stoppages") or []
+    for idx, s in enumerate(stops):
+        if place_matches_strict(s.get("name"), query):
+            return idx + 1
+    if place_matches_strict(bus.get("destination"), query):
+        return len(stops) + 2
+    return -1
+
+
+def _bj_stop_min(bus, pos, direction):
+    """Port of bjStopMin from stop-search-all.js."""
+    stops = bus.get("stoppages") or []
+    if pos == 0:
+        if direction == "up":
+            return g.parse_time(bus.get("departure_time"))
+        return _from_stop(stops[-1] if stops else None, "down")
+    if 1 <= pos <= len(stops):
+        return _from_stop(stops[pos - 1], direction)
+    if direction == "down":
+        return _from_stop(stops[-1] if stops else None, "down")
+    return _from_stop(stops[0], "up") if stops else g.parse_time(bus.get("arrival_time"))
+
+
+def through_services(origin, destination, direct_buses, alt_index=None):
+    """Parity with the homepage search (stop-search-all.js v3):
+    every bus serving both places in EITHER direction, with the time it
+    passes the boarding point (⇗ outward / ⇙ return). Only real stop times
+    are used — nothing invented."""
+    direct_ids = {b.get("id") for b in direct_buses}
+    out = []
+    for bus in g.BUSES:
+        if bus.get("id") in direct_ids:
+            continue
+        fi = _pos_in(bus, origin)
+        if fi < 0:
+            continue
+        ti = _pos_in(bus, destination)
+        if ti < 0 or fi == ti:
+            continue
+        direction = "up" if fi < ti else "down"
+        dep = _bj_stop_min(bus, fi, direction)
+        arr = _bj_stop_min(bus, ti, direction)
+        if dep is None and direction == "up":
+            dep = g.parse_time(bus.get("departure_time"))
+        out.append((dep if dep is not None else 9999, bus, dep, arr))
+    out.sort(key=lambda x: x[0])
+    return out
 
 
 def alt_route_section(origin, destination, alt_index):
@@ -579,7 +766,7 @@ def shell_v2(title, description, canonical, body, schema=""):
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Sans+Mono:wght@500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/seo.css?v=rt20260920">
 <link rel="stylesheet" href="../css/seo-v2.css?v={CSS_V2}">
 {schema}
@@ -600,13 +787,22 @@ def shell_v2(title, description, canonical, body, schema=""):
 # bilingual bus card (label spans only — layout untouched)
 # ------------------------------------------------------------
 
-def bus_card_v2(bus):
+def bus_card_v2(bus, dep_min=None, arr_min=None, via=None):
     name = g.clean_text(bus.get("bus_name")) or "Bus service"
-    dep = g.format_time(g.parse_time(bus.get("departure_time")))
-    arr = g.format_time(g.parse_time(bus.get("arrival_time")))
+    if dep_min is not None:
+        dep = g.format_time(dep_min)
+        arr = g.format_time(arr_min)
+        duration = None
+        if arr_min is not None:
+            duration = arr_min - dep_min
+            if duration < 0:
+                duration += 1440
+    else:
+        dep = g.format_time(g.parse_time(bus.get("departure_time")))
+        arr = g.format_time(g.parse_time(bus.get("arrival_time")))
+        duration = g.calculate_duration(bus)
     operator = g.operator_name(bus)
     stops = g.total_stops(bus)
-    duration = g.calculate_duration(bus)
     dur_text = g.fmt_duration(duration) if duration else "—"
     fare = g.clean_text(bus.get("fare")) or "—"
     bid = bus.get("id") or ""
@@ -620,6 +816,8 @@ def bus_card_v2(bus):
     op_line = g.esc(name)
     if operator:
         op_line += f' · {g.esc(operator)}'
+    if via:
+        op_line += f' <span style="color:var(--amber-ink,#6b4610);font-weight:600">· {g.esc(via)}</span>'
     clock = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
     if dep == "—":
         dep_html = f'{clock}<span class="no-time">{L("Time N/A", "সময় নেই")}</span>'
@@ -651,12 +849,21 @@ def bus_card_v2(bus):
 def generate_route_page_v2(origin, destination, buses, alt_index):
     filename = f"{g.slug(origin)}-to-{g.slug(destination)}.html"
     route_bn = g.bn_route(origin, destination)
-    stats = g.route_stats(buses)
+    # through buses (pass both places as stops) — homepage search parity
+    through = through_services(origin, destination, buses, alt_index)
+    faq_buses = list(buses)
+    for _sk, bus, d, a in through:
+        vb = dict(bus)
+        if d is not None:
+            vb["departure_time"] = g.format_time(d)
+        vb["arrival_time"] = g.format_time(a) if a is not None else ""
+        faq_buses.append(vb)
+    stats = g.route_stats(faq_buses)
     first = g.format_time(stats["first"])
     last = g.format_time(stats["last"])
     duration = stats["duration"]
     operators = stats["operators"]
-    count = len(buses)
+    count = len(faq_buses)
     dur_text = g.fmt_duration(duration) if duration else "—"
 
     title = f"{origin} to {destination} Bus Time Table | {g.SITE_NAME}"
@@ -692,10 +899,16 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
   <div class="stat-chips">{chips}</div>
 </div>"""
 
-    sorted_buses = sorted(buses, key=lambda b: g.parse_time(b.get("departure_time")) or 9999)
+    entries = []
+    for b in buses:
+        entries.append((g.parse_time(b.get("departure_time")) or 9999, bus_card_v2(b)))
+    for _sk, bus, d, a in through:
+        via = f"{g.clean_text(bus.get('origin'))} → {g.clean_text(bus.get('destination'))}"
+        entries.append((d if d is not None else 9999, bus_card_v2(bus, dep_min=d, arr_min=a, via=via)))
+    entries.sort(key=lambda e: e[0])
     timetable = f"""<section class="seo-section">
   <h3 class="section-title">{L("Today's Departures", "আজকের ছাড়ার সময়")}</h3>
-  {''.join(bus_card_v2(b) for b in sorted_buses)}
+  {''.join(card for _k, card in entries)}
 </section>"""
 
     # ---- alt-route section (below bus list) ----
@@ -713,7 +926,7 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
 </section>"""
 
     # ---- FAQ 5 EN + 5 BN (search-intent) ----
-    en, bn, _facts = faq_pairs(origin, destination, buses)
+    en, bn, _facts = faq_pairs(origin, destination, faq_buses)
     faq_section = f"""<section class="seo-section faq-v2">
   <h3 class="section-title">FAQ · সাধারণ প্রশ্ন</h3>
   {faq_html_v2(en, bn)}
