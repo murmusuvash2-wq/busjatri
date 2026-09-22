@@ -791,12 +791,17 @@ def bus_card_v2(bus, dep_min=None, arr_min=None, via=None):
     name = g.clean_text(bus.get("bus_name")) or "Bus service"
     if dep_min is not None:
         dep = g.format_time(dep_min)
-        arr = g.format_time(arr_min)
         duration = None
         if arr_min is not None:
             duration = arr_min - dep_min
             if duration < 0:
                 duration += 1440
+            if duration > 720:
+                # down-direction stop times can pair up nonsense journeys;
+                # keep the departure + route, drop the arrival/duration
+                duration = None
+                arr_min = None
+        arr = g.format_time(arr_min)
     else:
         dep = g.format_time(g.parse_time(bus.get("departure_time")))
         arr = g.format_time(g.parse_time(bus.get("arrival_time")))
@@ -854,6 +859,8 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
     faq_buses = list(buses)
     for _sk, bus, d, a in through:
         vb = dict(bus)
+        if d is not None and a is not None and ((a - d) % 1440) > 720:
+            a = None
         if d is not None:
             vb["departure_time"] = g.format_time(d)
         vb["arrival_time"] = g.format_time(a) if a is not None else ""
