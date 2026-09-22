@@ -2,8 +2,10 @@
 """
 BTT index generator v2 — bus-time-table/index.html, "all bus timetables" hub.
 
-Demo-approved design (2026-09-22, v4):
-  1. Own page design — simple top bar (logo + dark mode), NOT the homepage
+Demo-approved design (2026-09-23, homepage parity):
+  1. SAME look as the homepage: sticky header (logo + theme + EN/বাংলা
+     language buttons), fadeUp animation, dark mode via data-theme +
+     localStorage (bj-theme / bj-lang, shared with homepage)
   2. Hero: "All Bus Timetables" + Bengali + chips (stands / routes / buses)
   3. Search box filtering stand cards
   4. BIG stand cards: name + Bengali + "N buses listed · M destinations"
@@ -27,52 +29,81 @@ import gen_route_v2 as v2
 from gen_stand_v2 import stand_buses, destination_groups, discover_stands, display_name
 
 g = v2.g
+L = v2.L
+bn_num = v2.bn_num
 
 POPULAR = ["Kolkata", "Digha", "Durgapur", "Siliguri", "Asansol", "Bankura", "Burdwan", "Purulia"]
 
-CSS = """:root{--amber:#b8791f;--amber2:#8a5a12;--bg:#fffcf4;--ink:#211c16;--mut:#7a6a4f;--line:#e8dfc8;--card:#fffdf8;--chipbg:#faf1dd}
+CSS = """:root{--bg:#f5efe1;--surface:#fffcf4;--surface-2:#efe6d3;--ink:#211c16;--ink-dim:#6f6653;--line:rgba(33,28,22,.13);--line-strong:rgba(33,28,22,.24);--amber:#b8791f;--amber-ink:#6b4610;--amber-soft:rgba(184,121,31,.14);--shadow:0 10px 34px -12px rgba(33,28,22,.28);--shadow-sm:0 2px 12px rgba(33,28,22,.1);--radius-lg:20px;--radius:14px;--font-display:'Fraunces',Georgia,serif;--font-body:'IBM Plex Sans','IBM Plex Sans Bengali',system-ui,sans-serif}
+[data-theme="dark"]{--bg:#15121d;--surface:#201c2b;--surface-2:#29243570;--ink:#f1ead8;--ink-dim:#a89b87;--line:rgba(241,234,216,.1);--line-strong:rgba(241,234,216,.2);--amber:#eda94a;--amber-ink:#f6cd8f;--amber-soft:rgba(237,169,74,.16);--shadow:0 14px 44px -14px rgba(0,0,0,.5);--shadow-sm:0 2px 12px rgba(0,0,0,.3)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55}
-body.dark{--bg:#17130c;--ink:#f3e8d2;--mut:#b8a480;--line:#3a3222;--card:#221c11;--chipbg:#33290f}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);line-height:1.55}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:100;backdrop-filter:blur(14px) saturate(1.1);background:color-mix(in srgb,var(--surface) 88%,transparent)}
+.header::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:6px;background-image:radial-gradient(circle at 10px 0,var(--bg) 5px,transparent 5.5px);background-size:20px 6px;background-repeat:repeat-x}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;gap:10px;position:relative;z-index:1;max-width:788px;margin:0 auto}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-size:1.32rem;font-weight:700;color:var(--ink);cursor:pointer;letter-spacing:-.2px;text-decoration:none}
+.logo .icon{width:1.35rem;height:1.35rem;color:var(--amber);stroke-width:1.6}
+.logo span{color:var(--amber-ink)}
+.header-actions{display:flex;align-items:center;gap:8px}
+.icon-btn{width:38px;height:38px;display:inline-flex;align-items:center;justify-content:center;background:var(--surface-2);border:1px solid var(--line);border-radius:50%;cursor:pointer;color:var(--ink);font-size:15px;transition:border-color .2s,transform .3s}
+.icon-btn:hover{border-color:var(--amber)}
+.icon-btn:active{transform:scale(.92)}
+.icon-btn svg{width:17px;height:17px;transition:transform .4s cubic-bezier(.34,1.56,.64,1),opacity .2s}
+.lang-group{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px;background:var(--surface-2)}
+.lang-btn{background:transparent;border:none;border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink-dim);transition:.2s;font-family:var(--font-body)}
+.lang-btn.active{background:var(--amber);color:#fff9ee}
+[data-theme="dark"] .lang-btn.active{color:#241706}
 .wrap{max-width:760px;margin:0 auto;padding:14px 14px 60px}
-header{display:flex;justify-content:space-between;align-items:center;padding:14px 2px}
-.logo{font-size:22px;font-weight:900;text-decoration:none;color:inherit}.logo em{color:var(--amber);font-style:normal}
-.pills{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:700}
-.pill{border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer}
-.crumbs{font-size:12px;color:var(--mut);margin:6px 0 14px}.crumbs a{color:var(--mut)}
-.hero{background:linear-gradient(135deg,var(--amber) 0%,var(--amber2) 100%);border-radius:18px;padding:26px 20px;color:#fff;margin-bottom:14px}
-.hero h1{font-size:30px;letter-spacing:-.5px;line-height:1.15}
+.crumbs{font-size:12px;color:var(--ink-dim);margin:14px 0 14px}.crumbs a{color:var(--ink-dim)}
+.hero{background:linear-gradient(135deg,#b8791f 0%,#8a5a12 100%);border-radius:var(--radius-lg);padding:26px 20px;color:#fff;margin-bottom:14px;animation:fadeUp .5s .05s ease both}
+.hero h1{font-size:30px;letter-spacing:-.5px;line-height:1.15;font-family:var(--font-display)}
 .hero .hbn{font-size:15px;opacity:.92;margin-top:4px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
 .schip{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:6px 13px;font-size:12.5px;font-weight:700}
-.search{display:flex;gap:8px;margin:0 0 18px}
-.search input{flex:1;border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:12px;padding:12px 14px;font-size:15px;font-weight:600;outline:none}
+.dsearch{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin:0 0 12px;animation:fadeUp .6s .15s ease both}
+.dsearch input{width:100%;border:none;background:transparent;color:var(--ink);border-radius:var(--radius);padding:13px 16px;font-size:15px;font-weight:600;outline:none;font-family:var(--font-body)}
 .sec{margin:22px 0 10px;display:flex;align-items:baseline;justify-content:space-between}
-.sec h3{font-size:17px}.sec .bn{font-size:12px;color:var(--mut);margin-left:8px}
-.sgrid{display:grid;grid-template-columns:1fr;gap:10px}
+.sec h3{font-size:17px;font-family:var(--font-display)}
+.sec .cnt{font-size:12px;color:var(--ink-dim)}
+.sgrid{display:grid;grid-template-columns:1fr;gap:10px;animation:fadeUp .5s .2s ease both}
 @media(min-width:560px){.sgrid{grid-template-columns:1fr 1fr}}
-.scard{display:block;background:var(--card);border:1.5px solid var(--line);border-radius:14px;padding:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
+.scard{display:block;background:var(--surface);border:1.5px solid var(--line);border-radius:var(--radius);padding:14px;text-decoration:none;color:inherit;transition:transform .15s,border-color .15s}
 .scard:hover{transform:translateY(-2px);border-color:var(--amber)}
-.sname{font-size:16.5px;font-weight:800}.sbn{font-size:12.5px;color:var(--mut);font-weight:600;margin-left:6px}
-.smeta{font-size:12px;color:var(--amber2);font-weight:700;margin-top:4px}
-body.dark .smeta{color:var(--amber)}
-.stime{font-size:12px;color:var(--mut);margin-top:4px}
-.morebtn{display:block;width:100%;margin-top:12px;border:1.5px dashed var(--amber);background:transparent;color:var(--amber2);border-radius:12px;padding:11px;font-size:14px;font-weight:800;cursor:pointer}
-body.dark .morebtn{color:var(--amber)}
-details.faq{background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:8px}
+.sname{font-size:16.5px;font-weight:800}.sbn{font-size:12.5px;color:var(--ink-dim);font-weight:600;margin-left:6px}
+.smeta{font-size:12px;color:var(--amber-ink);font-weight:700;margin-top:4px}
+[data-theme="dark"] .smeta{color:var(--amber)}
+.stime{font-size:12px;color:var(--ink-dim);margin-top:4px}
+.morebtn{display:block;width:100%;margin-top:12px;border:1.5px dashed var(--amber);background:transparent;color:var(--amber-ink);border-radius:12px;padding:11px;font-size:14px;font-weight:800;cursor:pointer}
+[data-theme="dark"] .morebtn{color:var(--amber)}
+details.faq{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:8px}
 details.faq summary{font-weight:700;font-size:14px;cursor:pointer}
-details.faq p{margin-top:8px;font-size:13.5px;color:var(--mut)}
-.note{background:var(--chipbg);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--mut);margin:18px 0}
-footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--mut);text-align:center}
-footer a{color:var(--mut);margin:0 6px}"""
+details.faq p{margin-top:8px;font-size:13.5px;color:var(--ink-dim)}
+.note{background:var(--amber-soft);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:13px;color:var(--ink-dim);margin:18px 0}
+footer{margin-top:30px;border-top:1px solid var(--line);padding-top:14px;font-size:12px;color:var(--ink-dim);text-align:center}
+footer a{color:var(--ink-dim);margin:0 6px}
+.label-bn{display:none}
+body.lang-bn .label-en{display:none}
+body.lang-bn .label-bn{display:inline}
+.only-bn{display:none}
+body.lang-bn .only-en{display:none}
+body.lang-bn .only-bn{display:block}"""
+
+
 
 JS = """var mstep=8;
+var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
+var PH={en:"\\uD83D\\uDD0E Search bus stand — e.g. Bankura, Digha\\u2026",bn:"\\uD83D\\uDD0E \\u09AC\\u09BE\\u09B8 \\u09B8\\u09CD\\u099F\\u09CD\\u09AF\\u09BE\\u09A8\\u09CD\\u09A1 \\u0996\\u09C1\\u0981\\u099C\\u09C1\\u09A8 \\u2014 \\u09AF\\u09C7\\u09AE\\u09A8 \\u09AC\\u09BE\\u0981\\u0995\\u09C1\\u09A1\\u09BC\\u09BE, \\u09A6\\u09C0\\u0998\\u09BE\\u2026"};
+function bnd(s){return String(s).replace(/[0-9]/g,function(d){return "\\u09E7\\u09E8\\u09E9\\u09EA\\u09EB\\u09EC\\u09ED\\u09EE\\u09EF\\u09E6"[d];});}
+function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
 function scards(){return Array.prototype.slice.call(document.querySelectorAll('#stands .scard'));}
 function srefresh(){
   var cs=scards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
   var b=document.getElementById('smore');
-  if(shown>=cs.length){b.style.display='none';}else{b.style.display='';b.textContent='See more ('+(cs.length-shown)+' stands remaining)';}
-  document.getElementById('scnt').textContent=shown+' of '+cs.length;
+  if(b){if(shown>=cs.length){b.style.display='none';}else{b.style.display='';b.textContent=isBn()?'\\u0986\\u09B0\\u0993 \\u09A6\\u09C7\\u0996\\u09C1\\u09A8 ('+bnd(cs.length-shown)+'\\u099F\\u09BF \\u09B8\\u09CD\\u099F\\u09CD\\u09AF\\u09BE\\u09A8\\u09CD\\u09A1 \\u09AC\\u09BE\\u0995\\u09BF)':'See more ('+(cs.length-shown)+' stands remaining)';}}
+  var c=document.getElementById('scnt');
+  if(c){c.textContent=isBn()?bnd(shown)+' / '+bnd(cs.length):shown+' of '+cs.length;}
 }
 function showMore(){
   var cs=scards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
@@ -80,9 +111,39 @@ function showMore(){
   cs.forEach(function(c,i){c.style.display=i<nxt?'':'none';});
   srefresh();
 }
-sc=scards();sc.forEach(function(c,i){c.style.display=i<mstep?'':'none';});
-srefresh();
-function fil(){var q=document.getElementById('q').value.toLowerCase().trim();scards().forEach(function(c){c.style.display=!q||c.textContent.toLowerCase().indexOf(q)>-1?'':'none';});if(!q){srefresh();}else{var cs=scards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;document.getElementById('scnt').textContent=shown+' of '+cs.length;var b=document.getElementById('smore');b.style.display=shown>=cs.length?'none':'';}}"""
+sc=scards();sc.forEach(function(c,i){c.style.display=i<mstep?'':'none';});srefresh();
+function fil(){
+  var q=document.getElementById('q').value.toLowerCase().trim();
+  scards().forEach(function(c){c.style.display=!q||c.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+  var cs=scards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
+  document.getElementById('scnt').textContent=isBn()?bnd(shown)+' / '+bnd(cs.length):shown+' of '+cs.length;
+  var b=document.getElementById('smore');if(b){b.style.display=shown>=cs.length?'none':'';}
+}
+function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(btn)btn.innerHTML=theme==='dark'?SUN:MOON;}
+function toggleTheme(){
+  var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  var next=cur==='dark'?'light':'dark';
+  document.documentElement.setAttribute('data-theme',next);
+  localStorage.setItem('bj-theme',next);
+  updateThemeIcon(next);
+}
+function setLang(l){
+  document.body.className=l==='bn'?'lang-bn':'';
+  localStorage.setItem('bj-lang',l);
+  document.getElementById('langEN').classList.toggle('active',l==='en');
+  document.getElementById('langBN').classList.toggle('active',l==='bn');
+  var q=document.getElementById('q');if(q){q.placeholder=l==='bn'?PH.bn:PH.en;}
+  srefresh();
+}
+(function(){
+  var t=localStorage.getItem('bj-theme');
+  if(t)document.documentElement.setAttribute('data-theme',t);
+  updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
+  var l=localStorage.getItem('bj-lang');
+  if(l&&l!=='en'){setLang(l);}else{var q=document.getElementById('q');if(q)q.placeholder=PH.en;}
+})();"""
+
+
 
 
 def stand_stats():
@@ -100,9 +161,9 @@ def _card(name, fname, n, dests, first, last):
     bn = v2.bnplace(name)
     bn_span = ' <span class="sbn">{}</span>'.format(g.esc(bn)) if bn and bn != name else ""
     if first is not None and last is not None:
-        time_row = "⏰ First {} – Last {}".format(g.esc(g.format_time(first)), g.esc(g.format_time(last)))
+        time_row = "⏰ " + L("First", "প্রথম") + " " + g.esc(g.format_time(first)) + " – " + L("Last", "শেষ") + " " + g.esc(g.format_time(last))
     else:
-        time_row = "⏰ Timings on page"
+        time_row = "⏰ " + L("Timings on page", "সময়সূচি পেজে")
     return """<a class="scard" href="{href}">
   <div class="sname">{name}{bn}</div>
   <div class="smeta"><b>{n}</b> buses listed · {d} destinations</div>
@@ -131,9 +192,9 @@ def generate_btt_page():
                    "operators and stoppages.".format(n_routes, n_stands))[:300]
     canonical = "{}/bus-time-table/".format(g.BASE)
 
-    chips = ('<span class="schip">🚏 {} bus stands</span>'.format(n_stands)
-             + '<span class="schip">🛣 {:,} routes</span>'.format(n_routes)
-             + '<span class="schip">🚌 {:,} buses</span>'.format(n_buses))
+    chips = ('<span class="schip">🚏 ' + L("{} bus stands".format(n_stands), "{}টি বাস স্ট্যান্ড".format(bn_num(n_stands))) + "</span>"
+             + '<span class="schip">🛣 ' + L("{:,} routes".format(n_routes), "{}টি রুট".format(bn_num(n_routes))) + "</span>"
+             + '<span class="schip">🚌 ' + L("{:,} buses".format(n_buses), "{}টি বাস".format(bn_num(n_buses))) + "</span>")
 
     # ---- FAQ (5 EN + 5 BN) ----
     # top-3 from the popular stands only — alias groups (Kolkata/Esplanade/Garia
@@ -164,32 +225,50 @@ def generate_btt_page():
         ("এই সময়সূচি কি নিশ্চিত?",
          "না — সময়সূচি প্রায়ই বদলায়। ভ্রমণের আগে অপারেটর বা ডিপোতে জেনে নিন, বিশেষ করে ভোরের ও দূরের রুটে।"),
     ]
-    faq_html = "".join('<details class="faq"><summary>{}</summary><p>{}</p></details>'.format(g.esc(q), g.esc(a)) for q, a in en)
-    faq_html += "".join('<details class="faq"><summary class="bn">📌 {}</summary><p>{}</p></details>'.format(q, a) for q, a in bn)
+    faq_html = "".join('<details class="faq only-en"><summary>{}</summary><p>{}</p></details>'.format(g.esc(q), g.esc(a)) for q, a in en)
+    faq_html += "".join('<details class="faq only-bn"><summary>📌 {}</summary><p>{}</p></details>'.format(q, a) for q, a in bn)
 
-    note = ("📍 Every stand page shows buses <b>starting</b> from that stand. For buses that pass "
-            "through a place, open the route page. More services may exist — ask at the stand.")
+    note = L("Every stand page shows buses <b>starting</b> from that stand. For buses that pass through a place, open the route page. More services may exist — ask at the stand.",
+             "প্রতিটি স্ট্যান্ড পেজে শুধু সেই স্ট্যান্ড থেকে <b>ছাড়া</b> বাস দেখানো হয়। মাঝপথের বাসের জন্য রুট পেজ খুলুন। আরও বাস থাকতে পারে — স্ট্যান্ডে জেনে নিন।")
 
-    body = """<div class="wrap">
-<header><a class="logo" href="../index.html">Bus<em>Jatri</em></a>
-<div class="pills"><span class="pill" onclick="document.body.classList.toggle('dark')">🌙 Dark</span></div></header>
-<div class="crumbs"><a href="../index.html">Home</a> › <b>All Bus Timetables</b></div>
+    header_html = """<header class="header">
+  <div class="header-inner">
+    <a class="logo" href="../index.html">
+      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/></svg>
+      Bus<span>Jatri</span>
+    </a>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      <div class="lang-group">
+        <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" id="langBN" onclick="setLang('bn')">বাংলা</button>
+      </div>
+    </div>
+  </div>
+</header>"""
+    body = """{header}
+<div class="wrap">
+<div class="crumbs"><a href="../index.html">{home}</a> › <b>{btt}</b></div>
 <div class="hero">
-  <h1>All Bus Timetables</h1>
-  <div class="hbn">সব বাসের সময়সূচী — বাস স্ট্যান্ড অনুযায়ী</div>
+  <h1>{h1}</h1>
+  <div class="hbn">সব বাসের সময়সূচি — বাস স্ট্যান্ড অনুযায়ী</div>
   <div class="chips">{chips}</div>
 </div>
-<div class="search"><input id="q" type="text" placeholder="🔎 Bus stand khojo — 'Bankura', 'Digha'…" oninput="fil()"></div>
-<div class="sec"><h3>Bus Stands <span class="bn">বাস স্ট্যান্ড</span></h3><span style="font-size:12px;color:var(--mut)" id="scnt"></span></div>
+<div class="sec"><h3>{stands_h}</h3><span class="cnt" id="scnt"></span></div>
+<div class="dsearch"><input id="q" type="text" oninput="fil()" aria-label="Search bus stands"></div>
 <div class="sgrid" id="stands">{cards}</div>
 <button class="morebtn" id="smore" onclick="showMore()"></button>
-<div class="note">{note}</div>
-<div class="sec"><h3>FAQ <span class="bn">প্রশ্নোত্তর</span></h3></div>
+<div class="note">📍 {note}</div>
+<div class="sec"><h3>{faq_h}</h3></div>
 {faq}
 <footer>{n} bus stands · {r:,} routes · {b:,} buses · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>{js}</script>
-</body></html>""".format(chips=chips, cards=cards, note=note, faq=faq_html,
+</body></html>""".format(header=header_html,
+                         home=L("Home", "হোম"), btt=L("All Bus Timetables", "সব বাসের সময়সূচি"),
+                         h1=L("All Bus Timetables", "সব বাসের সময়সূচি"),
+                         stands_h=L("Bus Stands", "বাস স্ট্যান্ড"), faq_h=L("FAQ", "প্রশ্নোত্তর"),
+                         chips=chips, cards=cards, note=note, faq=faq_html,
                          n=n_stands, r=n_routes, b=n_buses, js=JS)
 
     head = """<!DOCTYPE html>
@@ -206,6 +285,7 @@ def generate_btt_page():
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;0,900;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
 {schema}
 <style>{css}</style></head>""".format(
         title=g.esc(title), desc=g.esc(description), canon=g.esc(canonical),
