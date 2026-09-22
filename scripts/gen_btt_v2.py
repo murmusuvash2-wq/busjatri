@@ -251,7 +251,7 @@ def generate_btt_page():
 <div class="crumbs"><a href="../index.html">{home}</a> › <b>{btt}</b></div>
 <div class="hero">
   <h1>{h1}</h1>
-  <div class="hbn">সব বাসের সময়সূচি — বাস স্ট্যান্ড অনুযায়ী</div>
+  <div class="hbn">সব বাসের সময়সূচী — বাস স্ট্যান্ড অনুযায়ী</div>
   <div class="chips">{chips}</div>
 </div>
 <div class="sec"><h3>{stands_h}</h3><span class="cnt" id="scnt"></span></div>
@@ -265,8 +265,8 @@ def generate_btt_page():
 </div>
 <script>{js}</script>
 </body></html>""".format(header=header_html,
-                         home=L("Home", "হোম"), btt=L("All Bus Timetables", "সব বাসের সময়সূচি"),
-                         h1=L("All Bus Timetables", "সব বাসের সময়সূচি"),
+                         home=L("Home", "হোম"), btt=L("All Bus Timetables", "সব বাসের সময়সূচী"),
+                         h1=L("All Bus Timetables", "সব বাসের সময়সূচী"),
                          stands_h=L("Bus Stands", "বাস স্ট্যান্ড"), faq_h=L("FAQ", "প্রশ্নোত্তর"),
                          chips=chips, cards=cards, note=note, faq=faq_html,
                          n=n_stands, r=n_routes, b=n_buses, js=JS)
