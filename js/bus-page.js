@@ -130,6 +130,27 @@ async function renderBus(el, id) {
   window.BJ_SHARE = { bus: b.bus_name, reg: b.reg_no || '', org: pn(b.origin), dest: pn(b.destination),
     dep: b.departure_time || '', stops: stops.map(function (s) { return { name: pn(s.name), up: s.up_time || '', down: s.down_time || '' }; }) };
   window.BJ_COPY_TEXT = buildBusCopyText(b, stops);
+  /* approx travel time (kitna time lagega) — only when both dep & arr are known */
+  var travelItem = (function () {
+    function t2m(t) {
+      if (!t) return null;
+      var m = /^(\d{1,2}):(\d{2})\s*(AM|PM)?/i.exec(String(t).trim());
+      if (!m) return null;
+      var h = +m[1], mi = +m[2], s = (m[3] || '').toUpperCase();
+      if (mi > 59) return null;
+      if (s === 'PM' && h < 12) h += 12;
+      if (s === 'AM' && h === 12) h = 0;
+      if (h > 23) return null;
+      return h * 60 + mi;
+    }
+    var d1 = t2m(b.departure_time), d2 = t2m(b.arrival_time);
+    if (d1 == null || d2 == null) return '';
+    var dur = d2 < d1 ? d2 + 1440 - d1 : d2 - d1;
+    if (dur < 10 || dur > 900) return '';
+    var h = Math.floor(dur / 60), m2 = dur % 60;
+    var txt = (h ? h + 'h ' : '') + (h ? String(m2).padStart(2, '0') : m2) + 'm';
+    return '<div class="info-item"><div class="lbl"><span class="label-en">Travel time</span></div><div class="val">\u2248 ' + txt + '</div></div>';
+  })();
   el.innerHTML =
     '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
       '<div class="back-btn" onclick="history.length>1?history.back():location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class="label-en">Back</span></div>' +
@@ -142,6 +163,7 @@ async function renderBus(el, id) {
         '<div class="info-grid">' +
           (b.departure_time ? '<div class="info-item"><div class="lbl">Departure</div><div class="val">' + esc(b.departure_time) + '</div></div>' : '') +
           (b.arrival_time ? '<div class="info-item"><div class="lbl">Arrival</div><div class="val">' + esc(b.arrival_time) + '</div></div>' : '') +
+          travelItem +
           '<div class="info-item"><div class="lbl">Stops</div><div class="val">' + (stops.length || b.total_stoppage_pages || 0) + '</div></div>' +
           (b.fare ? '<div class="info-item"><div class="lbl">Fare</div><div class="val">' + esc(b.fare) + '</div></div>' : '') +
           (b.operator ? '<div class="info-item"><div class="lbl">Operator</div><div class="val">' + esc(b.operator) + '</div></div>' : '') +
