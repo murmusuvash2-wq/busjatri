@@ -1,0 +1,91 @@
+name: Data fix - SBSTC placeholder times to Time N/A
+
+on:
+  workflow_dispatch:
+    inputs:
+      routes:
+        description: "Affected Origin::Destination pairs, comma-separated"
+        required: true
+      stands:
+        description: "Stand pages to regenerate (empty = all)"
+        required: false
+        default: "Kolkata,Digha,Khatra"
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Apply Time N/A fix to data files
+        run: |
+          python3 - <<'PYEOF'
+          import json, os
+
+          def is_sbstc_placeholder(b):
+              return (b.get("departure_time") == "1:05 AM"
+                      and "SBSTC" in (b.get("operator") or b.get("bus_type") or ""))
+
+          p = "data/busjatri_data.json"
+          d = json.load(open(p, encoding="utf-8"))
+          n = 0
+          for b in d["buses"]:
+              if is_sbstc_placeholder(b):
+                  b["departure_time"] = ""
+                  n += 1
+          json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+          print("busjatri_data.json fixed:", n)
+
+          p = "data/app-index.json"
+          d = json.load(open(p, encoding="utf-8"))
+          n = 0
+          for b in d["buses"]:
+              if is_sbstc_placeholder(b):
+                  b["departure_time"] = ""
+                  n += 1
+          json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+          print("app-index.json fixed:", n)
+
+          fixed = 0
+          bdir = "data/bus-details"
+          for fn in os.listdir(bdir):
+              if not fn.endswith(".json"):
+                  continue
+              fp = os.path.join(bdir, fn)
+              b = json.load(open(fp, encoding="utf-8"))
+              if is_sbstc_placeholder(b):
+                  b["departure_time"] = ""
+                  json.dump(b, open(fp, "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+                  fixed += 1
+          print("bus-details fixed:", fixed)
+          PYEOF
+
+      - name: Regenerate affected route pages
+        run: python3 scripts/gen_route_v2.py --routes "${{ github.event.inputs.routes }}"
+
+      - name: Regenerate stand pages
+        run: |
+          if [ -n "${{ github.event.inputs.stands }}" ]; then
+            python3 scripts/gen_stand_v2.py --stands "${{ github.event.inputs.stands }}"
+          else
+            python3 scripts/gen_stand_v2.py --all
+          fi
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/busjatri_data.json data/app-index.json data/bus-details bus-time-table
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Data fix: SBSTC govt-import placeholder 1:05 AM -> Time N/A + regen affected pages"
+            git push
+          fi
