@@ -1,0 +1,26 @@
+name: One-shot fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix font URL and commit
+        run: |
+          sed -i 's/IBM+Plex+Sans+Mono:wght@500/IBM+Plex+Mono:wght@500/' scripts/gen_route_v2.py
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_route_v2.py
+          if git diff --cached --quiet; then
+            echo "nothing to fix"
+          else
+            git commit -m "fix: correct Google Fonts URL in gen_route_v2 (IBM Plex Mono)"
+            git push
+          fi
