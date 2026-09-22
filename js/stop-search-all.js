@@ -123,7 +123,14 @@
       else if (ln.indexOf(t) !== -1) t2.push(n);
       else if (t.length >= 4 && placeMatches(n, t)) t3.push(n);
     }
-    var res = t1.concat(t2);
+    var rank = function (a, b) {
+      var la = a.toLowerCase(), lb = b.toLowerCase();
+      if (la === t && lb !== t) return -1;
+      if (lb === t && la !== t) return 1;
+      if (a.length !== b.length) return a.length - b.length;
+      return la < lb ? -1 : (la > lb ? 1 : 0);
+    };
+    var res = t1.sort(rank).concat(t2.sort(rank));
     if (res.length < AC_LIMIT) res = res.concat(t3);
     return res.slice(0, AC_LIMIT);
   }
