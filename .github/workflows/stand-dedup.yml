@@ -1,0 +1,28 @@
+name: Stand dedup (remove duplicate alias-group stand pages)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  dedup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run stand dedup (delete 6 duplicate pages, redirects, BTT, sitemap)
+        run: python3 scripts/patch_stands_dedup2.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A scripts/patch_stands_dedup2.py bus-time-table sitemap.xml _redirects
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Stand dedup: remove 6 duplicate alias-group stand pages (burdwan/midnapur/tarkeshwar/esplanade/karunamoyee/santragachi), 301 redirects"
+            git push
+          fi
