@@ -1,0 +1,28 @@
+name: Kolkata umbrella stands (Esplanade / Karunamoyee / Santragachi)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  umbrella:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Kolkata umbrella patcher
+        run: python3 scripts/patch_kolkata_umbrella.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A scripts/patch_kolkata_umbrella.py scripts/gen_stand_v2.py scripts/gen_btt_v2.py bus-time-table/buses-from-kolkata.html bus-time-table/buses-from-karunamoyee.html bus-time-table/buses-from-santragachi.html bus-time-table/index.html sitemap.xml _redirects
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Kolkata umbrella stands: Kolkata (Esplanade) 354 buses, Kolkata (Karunamoyee) 80, Kolkata (Santragachi) 13; BTT 67 cards"
+            git push
+          fi
