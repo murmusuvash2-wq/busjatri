@@ -176,12 +176,20 @@ def faq_pairs_stand(stand, buses, dest_groups):
         return en, bn
 
     en = []
-    en.append(("What is the first bus from {}?".format(disp),
-               "The first listed departure from {} is at {} — {}, to {}. Buses often leave once seats fill up, so arrive a little early.".format(
-                   disp, g.format_time(first), g.clean_text(first_bus.get("bus_name")) or "a bus service", dest_of(first_bus))))
-    en.append(("What is the last bus from {}?".format(disp),
-               "The last listed departure is {} — {}, to {}. More services may exist, so ask at the stand.".format(
-                   g.format_time(last), g.clean_text(last_bus.get("bus_name")) or "a bus service", dest_of(last_bus))))
+    if first is not None and first_bus is not None:
+        en.append(("What is the first bus from {}?".format(disp),
+                   "The first listed departure from {} is at {} — {}, to {}. Buses often leave once seats fill up, so arrive a little early.".format(
+                       disp, g.format_time(first), g.clean_text(first_bus.get("bus_name")) or "a bus service", dest_of(first_bus))))
+    else:
+        en.append(("What time do buses start from {}?".format(disp),
+                   "Departure times are not listed for buses from {} yet — the services are on this page without times. Ask at the stand for the current schedule.".format(disp)))
+    if last is not None and last_bus is not None:
+        en.append(("What is the last bus from {}?".format(disp),
+                   "The last listed departure is {} — {}, to {}. More services may exist, so ask at the stand.".format(
+                       g.format_time(last), g.clean_text(last_bus.get("bus_name")) or "a bus service", dest_of(last_bus))))
+    else:
+        en.append(("Till when do buses run from {}?".format(disp),
+                   "The last departure time is not listed yet — ask at the stand for the evening schedule. More services may exist.".format(disp)))
     en.append(("How many buses start from {} daily?".format(disp),
                "{} buses are listed starting from {}, serving {} destinations. More services may exist — ask at the stand.".format(
                    count, disp, len(dest_groups))))
@@ -201,12 +209,20 @@ def faq_pairs_stand(stand, buses, dest_groups):
                    "Operator details are not listed for every service. Ask at the stand for the latest SBSTC/NBSTC/WBTC and private bus information."))
 
     bn = []
-    bn.append(("{} থেকে প্রথম বাস কখন ছাড়ে?".format(p_bn),
-               "তালিকা অনুযায়ী প্রথম বাস ছাড়ে {} — {}, {} যায়। সিটের জন্য একটু আগে গিয়ে অপেক্ষা করাই ভালো।".format(
-                   v2.bn_time(first), g.clean_text(first_bus.get("bus_name")) or "একটি বাস", v2.bnplace(dest_of(first_bus)))))
-    bn.append(("{} থেকে দিনের শেষ বাস কতক্ষণে?".format(p_bn),
-               "তালিকায় শেষ বাস {} — {}, {} যায়। এর পরেও আরও বাস থাকতে পারে, স্ট্যান্ডে জেনে নিন।".format(
-                   v2.bn_time(last), g.clean_text(last_bus.get("bus_name")) or "একটি বাস", v2.bnplace(dest_of(last_bus)))))
+    if first is not None and first_bus is not None:
+        bn.append(("{} থেকে প্রথম বাস কখন ছাড়ে?".format(p_bn),
+                   "তালিকা অনুযায়ী প্রথম বাস ছাড়ে {} — {}, {} যায়। সিটের জন্য একটু আগে গিয়ে অপেক্ষা করাই ভালো।".format(
+                       v2.bn_time(first), g.clean_text(first_bus.get("bus_name")) or "একটি বাস", v2.bnplace(dest_of(first_bus)))))
+    else:
+        bn.append(("{} থেকে বাস কখন ছাড়ে?".format(p_bn),
+                   "এখনও সময় তালিকাভুক্ত নেই — বর্তমান সময়সূচি স্ট্যান্ডে জেনে নিন।"))
+    if last is not None and last_bus is not None:
+        bn.append(("{} থেকে দিনের শেষ বাস কতক্ষণে?".format(p_bn),
+                   "তালিকায় শেষ বাস {} — {}, {} যায়। এর পরেও আরও বাস থাকতে পারে, স্ট্যান্ডে জেনে নিন।".format(
+                       v2.bn_time(last), g.clean_text(last_bus.get("bus_name")) or "একটি বাস", v2.bnplace(dest_of(last_bus)))))
+    else:
+        bn.append(("{} থেকে সন্ধে পর্যন্ত বাস চলে?".format(p_bn),
+                   "শেষ বাসের সময় এখনও তালিকাভুক্ত নয় — সন্ধের সময়সূচি স্ট্যান্ডে জেনে নিন।"))
     bn.append(("{} থেকে দিনে কতটি বাস ছাড়ে?".format(p_bn),
                "তালিকায় {}টি বাস, {}টি গন্তব্যে। আরও বাস থাকতে পারে, স্ট্যান্ডে জেনে নিন।".format(
                    bn_num(count), bn_num(len(dest_groups)))))
