@@ -1,0 +1,36 @@
+name: Route map fix 2 (sequence matching)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  patch-and-regen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply route-map patch 2 (sequence must match the route)
+        run: python3 scripts/patch_routemap2.py
+
+      - name: Syntax check
+        run: |
+          python3 -c "import py_compile; py_compile.compile('scripts/gen_seo_pages.py', doraise=True)"
+          python3 -c "import py_compile; py_compile.compile('scripts/gen_route_v2.py', doraise=True)"
+
+      - name: Regenerate all route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_seo_pages.py scripts/gen_route_v2.py scripts/patch_routemap2.py bus-time-table/*.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Route map 2: pick stop sequence matching origin->destination, hide map when none matches"
+            git push
+          fi
