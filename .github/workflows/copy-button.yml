@@ -1,0 +1,36 @@
+name: Copy button text v2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  copy-button:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch
+        run: python3 scripts/patch_copy_button.py
+
+      - name: Validate
+        run: |
+          node --check js/bus-page.js
+          grep -q "Arrival: ' + b.arrival_time" js/bus-page.js
+          grep -q 'Departure: ' js/bus-page.js
+          grep -q 'Stoppages:' js/bus-page.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add js/bus-page.js scripts/patch_copy_button.py
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Copy button: well-organised text with departure + arrival + numbered stoppages"
+            git push
+          fi
