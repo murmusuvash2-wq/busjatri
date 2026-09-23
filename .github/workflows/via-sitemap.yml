@@ -1,0 +1,27 @@
+name: Via sitemap
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  via-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate sitemap-via.xml + robots sync
+        run: python3 scripts/patch_via_sitemap.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_via_sitemap.py sitemap-via.xml robots.txt .github/workflows/via-stop-pages.yml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Via sitemap: sitemap-via.xml (2,605 stop pages) + robots.txt sync + regen hook"
+            git push
+          fi
