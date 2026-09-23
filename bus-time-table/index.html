@@ -80,7 +80,7 @@ body.lang-bn .only-bn{display:block}
 /* ---- clean i18n ---- */
 body:not(.lang-bn) .hbn{display:none}
 body:not(.lang-bn) .sbn{display:none}
-body.lang-bn .sname{display:none}
+body.lang-bn .sen{display:none}body.lang-bn .sbn{font-size:16.5px;font-weight:800;color:inherit;margin-left:0}body.lang-bn .keep-en .sen{display:inline}
 body.lang-bn .keep-en .sname{display:inline}
 /* ---- search box ---- */
 .rt-search{background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;padding:8px 10px 8px;box-shadow:var(--shadow-sm);margin:10px 0 2px;animation:fadeUp .5s .15s ease both}
@@ -230,6 +230,16 @@ rtPH();
 document.addEventListener('DOMContentLoaded',function(){
   Array.prototype.forEach.call(document.querySelectorAll('.scard'),function(card){
     if(!card.querySelector('.sbn')){card.classList.add('keep-en');}
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.scard .sname'),function(el){
+    Array.prototype.slice.call(el.childNodes).forEach(function(n){
+      if(n.nodeType===3 && n.textContent.trim()){
+        var sp=document.createElement('span');
+        sp.className='sen';
+        sp.textContent=n.textContent;
+        el.replaceChild(sp,n);
+      }
+    });
   });
 });
 })();
