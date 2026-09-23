@@ -1,0 +1,34 @@
+name: BTT Bengali name fix
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  btt-bn-fix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch BTT page (Bengali stand names)
+        run: python3 scripts/patch_btt_bn_name.py
+
+      - name: Validate
+        run: |
+          grep -q 'body.lang-bn .sen{display:none}' bus-time-table/index.html
+          grep -q "sp.className='sen'" bus-time-table/index.html
+          grep -q 'body.lang-bn .sbn{font-size:16.5px' bus-time-table/index.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_btt_bn_name.py bus-time-table/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "BTT fix: stand names vanish in Bangla mode - hide only English text (span.sen), Bengali name becomes card title"
+            git push
+          fi
