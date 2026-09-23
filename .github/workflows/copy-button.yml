@@ -13,12 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Apply patch
-        run: python3 scripts/patch_copy_button.py
+      - name: Apply patches
+        run: |
+          python3 scripts/patch_copy_button.py
+          python3 scripts/patch_copy_stops.py
 
       - name: Bump bus-page.js cache version in index.html
         run: |
-          sed -i 's|js/bus-page.js?v=bj[0-9a-z]*|js/bus-page.js?v=bj20260923a|' index.html
+          sed -i 's|js/bus-page.js?v=bj[0-9a-z]*|js/bus-page.js?v=bj20260923b|' index.html
           grep -o 'js/bus-page.js?v=[0-9a-z]*' index.html
 
       - name: Validate
@@ -26,17 +28,17 @@ jobs:
           node --check js/bus-page.js
           grep -q "Arrival: ' + b.arrival_time" js/bus-page.js
           grep -q 'Departure: ' js/bus-page.js
-          grep -q 'Stoppages:' js/bus-page.js
-          grep -q 'js/bus-page.js?v=bj20260923a' index.html
+          grep -q 'outbound / return):' js/bus-page.js
+          grep -q 'js/bus-page.js?v=bj20260923b' index.html
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add js/bus-page.js scripts/patch_copy_button.py index.html
+          git add js/bus-page.js scripts/patch_copy_button.py scripts/patch_copy_stops.py index.html
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Copy button: well-organised text with departure + arrival + numbered stoppages; cache version bump"
+            git commit -m "Copy text: stoppages with return times (outbound / return); cache version bump"
             git push
           fi
