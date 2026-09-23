@@ -1,0 +1,31 @@
+name: Stand cleanup (Garia + Bardhaman stands)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run stand cleanup (new design for 3 old pages, dedupe, redirects)
+        run: python3 scripts/patch_stands_cleanup.py
+
+      - name: Syntax check
+        run: python3 -c "import py_compile; py_compile.compile('scripts/gen_stand_v2.py', doraise=True)"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A scripts/gen_stand_v2.py scripts/patch_stands_cleanup.py bus-time-table sitemap.xml _redirects
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Stand cleanup: new design for Garia/Alisha/Nawabhat Bus Stand pages, remove duplicate stand pages, 301 redirects"
+            git push
+          fi
