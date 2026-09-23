@@ -572,14 +572,22 @@ def route_stops_html(buses):
     from collections import Counter as _C
     sc = _C(tuple(s) for s in sequences)
     sequence, frequency = sc.most_common(1)[0]
-    sequence = list(sequence[:10])
+    sequence = list(sequence)
     if len(sequence) < 2:
         return ""
+    # Show origin + destination always: first 8 stops, gap marker, last 2 stops
+    if len(sequence) > 10:
+        shown = sequence[:8] + [None] + sequence[-2:]
+    else:
+        shown = list(sequence)
     dots = ""
-    for i, stop in enumerate(sequence):
-        end_cls = " end" if i in (0, len(sequence)-1) else ""
+    for i, stop in enumerate(shown):
+        if stop is None:
+            dots += '<div class="rm-gap" aria-hidden="true">⋯</div>'
+            continue
+        end_cls = " end" if i in (0, len(shown)-1) else ""
         dots += f'<div class="rm-stop{end_cls}"><div class="rm-dot"></div><div class="rm-name">{esc(stop)}</div></div>'
-    more = '<div class="rm-more">▸ full timetable below</div>' if len(sequence) == 10 else ""
+    more = '<div class="rm-more">▸ full timetable below</div>' if len(sequence) > 10 else ""
     return f"""<section class="seo-section">
   <h3 class="section-title">Route Map</h3>
   <div class="routemap">

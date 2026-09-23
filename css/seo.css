@@ -268,6 +268,7 @@ body.lang-bn .badge{text-transform:none;letter-spacing:0}
 .rm-stops{position:absolute;inset:0;display:flex;justify-content:space-between}
 .rm-stop{display:flex;flex-direction:column;align-items:center;width:58px}
 .rm-dot{width:11px;height:11px;border-radius:50%;background:var(--surface);border:2.5px solid var(--amber);margin-top:9px;z-index:1}
+.rm-gap{width:58px;display:flex;justify-content:center;margin-top:7px;color:var(--ink-dim);font-size:13px;font-weight:700;letter-spacing:1px}
 .rm-stop.end .rm-dot{background:var(--maroon);border-color:var(--maroon);width:13px;height:13px}
 .rm-name{font-size:10.5px;font-weight:600;margin-top:6px;text-align:center;line-height:1.25}
 /* ---- chips ---- */
