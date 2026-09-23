@@ -921,9 +921,10 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
     # ---- alt-route section (below bus list) ----
     alt_section = alt_route_section(origin, destination, alt_index)
 
-    route_section = g.route_stops_html(buses)
+    map_buses = list(buses) + [tb for _sk, tb, _d, _a in through]
+    route_section = g.route_stops_html(map_buses, origin, destination)
 
-    major_stops = g.stoppage_summary(buses)
+    major_stops = g.stoppage_summary(map_buses)
     major_section = ""
     if major_stops:
         chips2 = "".join(f'<span class="via-chip">{g.esc(s)}</span>' for s in major_stops)

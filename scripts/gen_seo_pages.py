@@ -561,7 +561,7 @@ def stoppage_summary(buses):
 # ROUTE VISUAL
 # ------------------------------------------------------------
 
-def route_stops_html(buses):
+def route_stops_html(buses, origin=None, destination=None):
     sequences = []
     for bus in buses:
         stops = bus_stops(bus)
@@ -571,8 +571,42 @@ def route_stops_html(buses):
         return ""
     from collections import Counter as _C
     sc = _C(tuple(s) for s in sequences)
-    sequence, frequency = sc.most_common(1)[0]
-    sequence = list(sequence)
+
+    def _hit(stop, place):
+        if not place:
+            return False
+        a, b = slug(stop), slug(place)
+        return a == b or b in a
+
+    def _best(seq):
+        # Prefer a sequence that can be trimmed to origin -> destination
+        oi = di = None
+        if origin:
+            for i, st in enumerate(seq):
+                if _hit(st, origin):
+                    oi = i
+                    break
+        if destination:
+            for i in range(len(seq) - 1, -1, -1):
+                if _hit(seq[i], destination):
+                    di = i
+                    break
+        if oi is not None and di is not None and di > oi:
+            return 3, list(seq[oi:di + 1])
+        if (not origin or _hit(seq[0], origin)) and (not destination or _hit(seq[-1], destination)):
+            return 2, list(seq)
+        return 0, None
+
+    best = None  # (score, count, seq)
+    for seq, count in sc.most_common():
+        score, cand = _best(seq)
+        if score == 0:
+            continue
+        if best is None or score > best[0] or (score == best[0] and count > best[1]):
+            best = (score, count, cand)
+    if best is None:
+        return ""
+    sequence = best[2]
     if len(sequence) < 2:
         return ""
     # Show origin + destination always: first 8 stops, gap marker, last 2 stops
@@ -717,7 +751,7 @@ def generate_route_page(origin, destination, buses):
   {''.join(bus_card(b) for b in sorted_buses)}
 </section>"""
 
-    route_section = route_stops_html(buses)
+    route_section = route_stops_html(buses, origin, destination)
 
     major_section = ""
     if major_stops:
