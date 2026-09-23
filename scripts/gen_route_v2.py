@@ -919,9 +919,16 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
     alt_section = alt_route_section(origin, destination, alt_index)
 
     map_buses = list(buses) + [tb for _sk, tb, _d, _a in through]
-    route_section = g.route_stops_html(map_buses, origin, destination)
 
-    major_stops = g.stoppage_summary(map_buses)
+    # all stoppage names across the route's buses - common stops first, then rarer ones
+    from collections import Counter as _Counter
+    _cnt, _first = _Counter(), {}
+    for _i, _sq in enumerate(sq for sq in (g.bus_stops(b) for b in map_buses) if sq):
+        for _pos, _st in enumerate(_sq):
+            _cnt[_st] += 1
+            if _st not in _first:
+                _first[_st] = (_i, _pos)
+    major_stops = sorted(_cnt.keys(), key=lambda st: (-_cnt[st], _first[st]))
     major_section = ""
     if major_stops:
         chips2 = "".join(f'<span class="via-chip">{g.esc(s)}</span>' for s in major_stops)
@@ -957,7 +964,7 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
   <a class="rel-chip" href="{rev_file}">↩ {g.esc(destination)} → {g.esc(origin)} ({L("return", "ফেরার বাস")})</a>
 </section>"""
 
-    body = hero + timetable + alt_section + route_section + major_section + faq_section + reverse_section + related_section
+    body = hero + timetable + alt_section + major_section + faq_section + reverse_section + related_section
 
     schema = (
         g.faq_schema(en + bn) + "\n"
