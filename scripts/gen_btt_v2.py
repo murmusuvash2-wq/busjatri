@@ -26,7 +26,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import gen_route_v2 as v2
-from gen_stand_v2 import stand_buses, destination_groups, discover_stands, display_name
+from gen_stand_v2 import stand_buses, destination_groups, discover_stands, display_name, card_name
 
 g = v2.g
 L = v2.L
@@ -168,7 +168,7 @@ def _card(name, fname, n, dests, first, last):
   <div class="sname">{name}{bn}</div>
   <div class="smeta"><b>{n}</b> buses listed · {d} destinations</div>
   <div class="stime">{t}</div>
-</a>""".format(href=g.esc(fname), name=g.esc(name), bn=bn_span, n=n, d=dests, t=time_row)
+</a>""".format(href=g.esc(fname), name=g.esc(card_name(name)), bn=bn_span, n=n, d=dests, t=time_row)
 
 
 def generate_btt_page():

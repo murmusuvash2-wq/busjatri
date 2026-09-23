@@ -44,6 +44,15 @@ bn_num = v2.bn_num
 def stand_buses(stand):
     """Buses whose ORIGIN matches the stand (strict matcher + aliases,
     same as the homepage 'from' side). Stop-passing buses are not here."""
+    key = g.slug(stand)
+    if key in UMBRELLA:
+        names = set(n.strip().lower() for n in UMBRELLA[key][1])
+        out = []
+        for b in g.BUSES:
+            o = (g.clean_text(b.get("origin")) or "").strip().lower()
+            if o in names:
+                out.append(b)
+        return out
     return [b for b in g.BUSES if v2.place_matches_strict(b.get("origin"), stand)]
 
 
@@ -73,8 +82,26 @@ def discover_stands():
     return out
 
 
+# Kolkata-area stands shown as umbrella entries Kolkata (<stand>).
+# filename-base -> (display name, exact origin names whose buses belong)
+UMBRELLA = {
+    "kolkata": ("Kolkata (Esplanade)", ("kolkata", "esplanade")),
+    "karunamoyee": ("Kolkata (Karunamoyee)", ("karunamoyee",)),
+    "santragachi": ("Kolkata (Santragachi)", ("santragachi",)),
+}
+
+def card_name(stand):
+    """Card/label name for a stand (umbrella display for Kolkata area)."""
+    key = g.slug(stand)
+    if key in UMBRELLA:
+        return UMBRELLA[key][0]
+    return stand
+
 def display_name(stand):
     """"Bankura" -> "Bankura Bus Stand"; "Howrah Station" unchanged."""
+    key = g.slug(stand)
+    if key in UMBRELLA:
+        return UMBRELLA[key][0]
     if re.search(r"\b(stand|station|depot|terminus)$", stand.strip(), re.I):
         return stand.strip()
     return stand.strip() + " Bus Stand"
@@ -98,11 +125,18 @@ def destination_groups(stand, buses):
         d = g.clean_text(b.get("destination")) or "?"
         resolved = None
         origin = None
+        bo = (g.clean_text(b.get("origin")) or "").lower()
         for o, t in routes:
-            if v2.place_matches_strict(t, d) or v2.place_matches_strict(d, t):
+            if o.strip().lower() == bo and (v2.place_matches_strict(t, d) or v2.place_matches_strict(d, t)):
                 resolved = t
                 origin = o
                 break
+        if resolved is None:
+            for o, t in routes:
+                if v2.place_matches_strict(t, d) or v2.place_matches_strict(d, t):
+                    resolved = t
+                    origin = o
+                    break
         if resolved is not None:
             key = "file::" + g.slug(origin) + "-to-" + g.slug(resolved) + ".html"
             display = resolved
