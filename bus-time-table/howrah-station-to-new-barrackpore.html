@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/seo.css?v=rt20260920">
+<link rel="stylesheet" href="../css/seo.css?v=rt20260924">
 <link rel="stylesheet" href="../css/seo-v2.css?v=seov2b">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the bus timing from Howrah Station to New Barrackpore?", "acceptedAnswer": {"@type": "Answer", "text": "Individual departure times are not listed for this route yet. The stops shown above give the route path — confirm current timings at the stand or with the operator before travelling."}}, {"@type": "Question", "name": "Which operators run buses from Howrah Station to New Barrackpore?", "acceptedAnswer": {"@type": "Answer", "text": "Services listed on this route include Mini Bus — roughly 2 private services."}}, {"@type": "Question", "name": "How much does the Howrah Station to New Barrackpore bus ticket cost?", "acceptedAnswer": {"@type": "Answer", "text": "Fares are not listed for this route yet. Bus fares in West Bengal depend on distance and bus type (AC costs more) — confirm the exact amount with the conductor or operator."}}, {"@type": "Question", "name": "What route do buses take from Howrah Station to New Barrackpore?", "acceptedAnswer": {"@type": "Answer", "text": "The main stops on the way are shown above. Ask the conductor for your exact drop point before boarding — most buses stop on request at major stands."}}, {"@type": "Question", "name": "Is there an AC bus from Howrah Station to New Barrackpore?", "acceptedAnswer": {"@type": "Answer", "text": "No AC bus is listed on this route at the moment — regular seater buses run here. Check at the stand for any newer AC service. AC coaches are more common on long-distance routes."}}, {"@type": "Question", "name": "Howrah Station থেকে New Barrackpore বাস কখন কখন ছাড়ে?", "acceptedAnswer": {"@type": "Answer", "text": "এই রুটের আলাদা আলাদা ছাড়ার সময় এখনো তালিকাভুক্ত হয়নি। উপরের রুট স্টপগুলো দেখে পথটা বুঝে নিন এবং যাত্রার আগে স্ট্যান্ডে বা অপারেটরের কাছে সময় জেনে নিন।"}}, {"@type": "Question", "name": "Howrah Station থেকে New Barrackpore বাসের সময়সূচি কেমন?", "acceptedAnswer": {"@type": "Answer", "text": "উপরের সময়সূচিতে এই রুটের তালিকাভুক্ত বাসগুলোর ছাড়ার সময় দেওয়া আছে, দিনের প্রথম বাস নির্দিষ্ট সময়ে-এ ছাড়ে। ভিড় বা ঋতু বুঝে সময় একটু আগে-পরে হতে পারে, তাই যাত্রার আগে একবার যাচাই করে নিন।"}}, {"@type": "Question", "name": "Howrah Station থেকে New Barrackpore বাসের রুট কোথা দিয়ে যায়?", "acceptedAnswer": {"@type": "Answer", "text": "তালিকাভুক্ত বাসগুলোর পথের মূল স্টপ: Howrah Station, Barabazar, BBD Bag, Central, MG Road, Girish Park। নামতে চাইলে কন্ডাক্টরকে আগেই বলে রাখুন, যাতে স্টপে গাড়ি দাঁড়ায়।"}}, {"@type": "Question", "name": "Howrah Station থেকে New Barrackpore বাসের ভাড়া কত?", "acceptedAnswer": {"@type": "Answer", "text": "এই রুটের ভাড়া এখনো তালিকাভুক্ত হয়নি। দূরত্ব আর বাসের ধরন বুঝে ভাড়া হয় (AC বাসে বেশি) — সঠিক টাকা কন্ডাক্টরের কাছে জেনে নিন।"}}, {"@type": "Question", "name": "Howrah Station থেকে New Barrackpore AC বাস আছে কি?", "acceptedAnswer": {"@type": "Answer", "text": "আপাতত তালিকায় কোনো AC বাস নেই — সাধারণ সিটার বাসই চলে। স্ট্যান্ডে জেনে নিলে নতুন কোনো AC সার্ভিসের খবর পাওয়া যাবে। লম্বা দূরত্বের রুটে AC বাস বেশি দেখা যায়।"}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://busjatri.in/"}, {"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "https://busjatri.in/bus-time-table/"}, {"@type": "ListItem", "position": 3, "name": "Howrah Station to New Barrackpore", "item": "https://busjatri.in/bus-time-table/howrah-station-to-new-barrackpore.html"}]}</script>
@@ -94,5 +94,49 @@
 </footer>
 <script defer src="../js/seo-page.js?v=seopagea"></script>
 <script defer src="../js/route-slider.js"></script>
-</body>
+<script>
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.bus-row'));
+  var KEEP=10,STEP=20,btn=null;
+  function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
+  function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+  function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
+  function label(){
+    var m=leftCount();
+    if(m<1){return;}
+    var n=Math.min(STEP,m);
+    btn.textContent=isBn()?('আরও '+bn(n)+'টি বাস দেখুন ('+bn(m)+'টি বাকি)'):('See '+n+' more buses ('+m+' left)');
+  }
+  if(rows.length>14){
+    for(var i=KEEP;i<rows.length;i++){rows[i].classList.add('cut');}
+    btn=document.createElement('button');
+    btn.type='button';
+    btn.className='see-more-btn';
+    btn.addEventListener('click',function(){
+      var shown=0;
+      for(var j=0;j<rows.length&&shown<STEP;j++){
+        if(rows[j].classList.contains('cut')){rows[j].classList.remove('cut');shown++;}
+      }
+      if(leftCount()<1){if(btn.parentNode){btn.parentNode.removeChild(btn);}}
+      else{label();}
+    });
+    label();
+    rows[rows.length-1].parentNode.appendChild(btn);
+    if(window.MutationObserver){
+      new MutationObserver(function(){if(btn){label();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+    }
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(!t||!t.closest){return;}
+    if(t.closest('a')){return;}
+    var row=t.closest('.bus-row');
+    if(!row){return;}
+    var sel=window.getSelection?window.getSelection():null;
+    if(sel&&String(sel)){return;}
+    var a=row.querySelector('a.bd-link');
+    if(a&&a.getAttribute('href')){window.location.href=a.getAttribute('href');}
+  });
+})();
+</script></body>
 </html>

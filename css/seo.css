@@ -371,3 +371,19 @@ body.lang-bn .badge{text-transform:none;letter-spacing:0}
 .only-bn{display:none}
 body.lang-bn .only-en{display:none}
 body.lang-bn .only-bn{display:block}
+/* ==== design batch 2026-09-24 ==== */
+.bus-row{padding:8px 11px;gap:8px;margin-bottom:6px;border-radius:12px}
+.bus-row .dep{min-width:62px;font-size:15px}
+.bus-row .op{font-size:13.5px}
+.bus-row .mrow{gap:6px;font-size:11px;margin-top:2px}
+.via-chip,.rel-chip{padding:5px 12px;min-height:31px;font-size:12.5px}
+.seo-section{margin-top:15px}
+.seo-hero{padding:8px 0 10px}
+details{margin-top:6px}
+.bus-row{cursor:pointer;-webkit-tap-highlight-color:rgba(184,121,31,.18)}
+.bus-row:active{transform:scale(.985)}
+.bd-link{display:none}
+.bus-row.cut{display:none}
+.see-more-btn{display:block;width:100%;margin:10px 0 18px;padding:12px;border-radius:12px;border:1.5px dashed var(--border-strong);background:var(--surface);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+.see-more-btn:active{transform:scale(.99)}
+

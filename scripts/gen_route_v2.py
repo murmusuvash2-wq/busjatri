@@ -764,7 +764,7 @@ def shell_v2(title, description, canonical, body, schema=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/seo.css?v=rt20260920">
+<link rel="stylesheet" href="../css/seo.css?v=rt20260924">
 <link rel="stylesheet" href="../css/seo-v2.css?v={CSS_V2}">
 {schema}
 </head>
@@ -981,6 +981,53 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
 # CLI
 # ------------------------------------------------------------
 
+INLINE_JS = """<script>
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.bus-row'));
+  var KEEP=10,STEP=20,btn=null;
+  function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
+  function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+  function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
+  function label(){
+    var m=leftCount();
+    if(m<1){return;}
+    var n=Math.min(STEP,m);
+    btn.textContent=isBn()?('আরও '+bn(n)+'টি বাস দেখুন ('+bn(m)+'টি বাকি)'):('See '+n+' more buses ('+m+' left)');
+  }
+  if(rows.length>14){
+    for(var i=KEEP;i<rows.length;i++){rows[i].classList.add('cut');}
+    btn=document.createElement('button');
+    btn.type='button';
+    btn.className='see-more-btn';
+    btn.addEventListener('click',function(){
+      var shown=0;
+      for(var j=0;j<rows.length&&shown<STEP;j++){
+        if(rows[j].classList.contains('cut')){rows[j].classList.remove('cut');shown++;}
+      }
+      if(leftCount()<1){if(btn.parentNode){btn.parentNode.removeChild(btn);}}
+      else{label();}
+    });
+    label();
+    rows[rows.length-1].parentNode.appendChild(btn);
+    if(window.MutationObserver){
+      new MutationObserver(function(){if(btn){label();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+    }
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(!t||!t.closest){return;}
+    if(t.closest('a')){return;}
+    var row=t.closest('.bus-row');
+    if(!row){return;}
+    var sel=window.getSelection?window.getSelection():null;
+    if(sel&&String(sel)){return;}
+    var a=row.querySelector('a.bd-link');
+    if(a&&a.getAttribute('href')){window.location.href=a.getAttribute('href');}
+  });
+})();
+</script>"""
+
+
 def main():
     import argparse
     ap = argparse.ArgumentParser()
@@ -1026,7 +1073,7 @@ def main():
         print(f"{filename}: {len(buses)} buses, {status}")
         if not args.dry:
             with open(os.path.join(g.OUT, filename), "w", encoding="utf-8") as fh:
-                fh.write(page)
+                fh.write(page.replace('</body>', INLINE_JS + '</body>', 1))
 
     print(f"\ndone: {len(pairs)} pages, {n_alt} with alternative-route section")
 

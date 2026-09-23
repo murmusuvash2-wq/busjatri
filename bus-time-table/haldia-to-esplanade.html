@@ -19,7 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/seo.css?v=rt20260920">
+<link rel="stylesheet" href="../css/seo.css?v=rt20260924">
 <link rel="stylesheet" href="../css/seo-v2.css?v=seov2b">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the first bus from Haldia to Esplanade?", "acceptedAnswer": {"@type": "Answer", "text": "The first bus listed leaves Haldia at <b>4:00 AM</b> — Krishna Supa-Baruipur (Super Fast) (Krishna). Arrive a little early, as buses often depart once seats fill up."}}, {"@type": "Question", "name": "What is the last bus from Haldia to Esplanade?", "acceptedAnswer": {"@type": "Answer", "text": "The last departure listed is at <b>6:45 PM</b> — SBSTC Kolkata-Haldia (SBSTC). No later direct bus is listed on BusJatri for the same day, so plan accordingly."}}, {"@type": "Question", "name": "Which operators run buses from Haldia to Esplanade?", "acceptedAnswer": {"@type": "Answer", "text": "Services listed on this route include Krishna, Private, SBSTC, WBTC — roughly 45 government services and 3 private services. AC coaches are also listed on this route."}}, {"@type": "Question", "name": "How many buses run from Haldia to Esplanade?", "acceptedAnswer": {"@type": "Answer", "text": "<b>48 buses are listed</b> for this route on BusJatri, spread from 4:00 AM to 6:45 PM — 12 in the morning and 36 later in the day. More services may exist beyond what is listed."}}, {"@type": "Question", "name": "How much does the Haldia to Esplanade bus ticket cost?", "acceptedAnswer": {"@type": "Answer", "text": "Listed fares for this route: <b>Rs. 115, Rs. 85</b>. Bus fares in West Bengal depend on distance and bus type (AC costs more) — confirm the exact amount with the conductor or operator."}}, {"@type": "Question", "name": "হলদিয়া থেকে এসপ্ল্যানেড প্রথম বাস কখন ছাড়ে?", "acceptedAnswer": {"@type": "Answer", "text": "তালিকা অনুযায়ী প্রথম বাস ছাড়ে <b>ভোর ৪:০০</b> — Krishna Supa-Baruipur (Super Fast) (Krishna)। সিটের জন্য একটু আগে গিয়ে অপেক্ষা করাই ভালো।"}}, {"@type": "Question", "name": "হলদিয়া থেকে এসপ্ল্যানেড দিনের শেষ বাস কতক্ষণে?", "acceptedAnswer": {"@type": "Answer", "text": "তালিকায় দিনের শেষ বাস ছাড়ে <b>সন্ধে ৬:৪৫</b> — SBSTC Kolkata-Haldia (SBSTC)। এর পরে ওই দিনের জন্য আর কোনো সরাসরি বাস তালিকাভুক্ত নেই, তাই ফেরার পরিকল্পনা সেই অনুযায়ী করুন।"}}, {"@type": "Question", "name": "হলদিয়া থেকে এসপ্ল্যানেড রাতের বা ভোরের বাস আছে কি?", "acceptedAnswer": {"@type": "Answer", "text": "হ্যাঁ — তালিকায় ২টি বাস রাতে বা ভোরে ছাড়ে (ভোর ৪:০০ ও ভোর ৪:৩০)। রাতের যাত্রায় আগে থেকে সিট নিশ্চিত করে নিন।"}}, {"@type": "Question", "name": "হলদিয়া থেকে এসপ্ল্যানেড বাসের রুট কোথা দিয়ে যায়?", "acceptedAnswer": {"@type": "Answer", "text": "তালিকাভুক্ত বাসগুলোর পথের মূল স্টপ: হলদিয়া, কলকাতা, Bagnan, Ranihati, Dhulagarh, Nandakumar। নামতে চাইলে কন্ডাক্টরকে আগেই বলে রাখুন, যাতে স্টপে গাড়ি দাঁড়ায়।"}}, {"@type": "Question", "name": "হলদিয়া থেকে এসপ্ল্যানেড বাসের ভাড়া কত?", "acceptedAnswer": {"@type": "Answer", "text": "তালিকাভুক্ত ভাড়া: <b>Rs. 115, Rs. 85</b>। দূরত্ব আর বাসের ধরন বুঝে ভাড়া হয় (AC বাসে বেশি) — সঠিক টাকা কন্ডাক্টরের কাছে জেনে নিন।"}}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://busjatri.in/"}, {"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "https://busjatri.in/bus-time-table/"}, {"@type": "ListItem", "position": 3, "name": "Haldia to Esplanade", "item": "https://busjatri.in/bus-time-table/haldia-to-esplanade.html"}]}</script>
@@ -416,5 +416,49 @@
 </footer>
 <script defer src="../js/seo-page.js?v=seopagea"></script>
 <script defer src="../js/route-slider.js"></script>
-</body>
+<script>
+(function(){
+  var rows=[].slice.call(document.querySelectorAll('.bus-row'));
+  var KEEP=10,STEP=20,btn=null;
+  function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
+  function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+  function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
+  function label(){
+    var m=leftCount();
+    if(m<1){return;}
+    var n=Math.min(STEP,m);
+    btn.textContent=isBn()?('আরও '+bn(n)+'টি বাস দেখুন ('+bn(m)+'টি বাকি)'):('See '+n+' more buses ('+m+' left)');
+  }
+  if(rows.length>14){
+    for(var i=KEEP;i<rows.length;i++){rows[i].classList.add('cut');}
+    btn=document.createElement('button');
+    btn.type='button';
+    btn.className='see-more-btn';
+    btn.addEventListener('click',function(){
+      var shown=0;
+      for(var j=0;j<rows.length&&shown<STEP;j++){
+        if(rows[j].classList.contains('cut')){rows[j].classList.remove('cut');shown++;}
+      }
+      if(leftCount()<1){if(btn.parentNode){btn.parentNode.removeChild(btn);}}
+      else{label();}
+    });
+    label();
+    rows[rows.length-1].parentNode.appendChild(btn);
+    if(window.MutationObserver){
+      new MutationObserver(function(){if(btn){label();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+    }
+  }
+  document.addEventListener('click',function(e){
+    var t=e.target;
+    if(!t||!t.closest){return;}
+    if(t.closest('a')){return;}
+    var row=t.closest('.bus-row');
+    if(!row){return;}
+    var sel=window.getSelection?window.getSelection():null;
+    if(sel&&String(sel)){return;}
+    var a=row.querySelector('a.bd-link');
+    if(a&&a.getAttribute('href')){window.location.href=a.getAttribute('href');}
+  });
+})();
+</script></body>
 </html>
