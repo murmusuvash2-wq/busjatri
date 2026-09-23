@@ -1,0 +1,49 @@
+name: Audit fixes part 2
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  audit-fixes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patches
+        run: python3 scripts/patch_audit_fixes.py
+
+      - name: Validate sources
+        run: python3 -m py_compile scripts/patch_audit_fixes.py scripts/gen_operator_pages.py scripts/gen_blog.py
+
+      - name: Regenerate operator and blog pages
+        run: |
+          python3 scripts/gen_operator_pages.py
+          python3 scripts/gen_blog.py --write
+
+      - name: Validate output
+        run: |
+          test -f 404.html
+          grep -q 'langEN' bus-time-table/nbstc-buses.html
+          test $(grep -c '<details' bus-time-table/nbstc-buses.html) -ge 10
+          grep -q 'FAQPage' bus-time-table/sbstc-buses.html
+          grep -q '<details' blog/purulia-to-manbazar-bus-timetable.html
+          grep -q 'Disallow: /admin.html' robots.txt
+          grep -q 'noindex' admin.html
+          grep -q 'canonical' contribute.html
+          python3 -c "import xml.etree.ElementTree as ET; ET.parse('sitemap.xml')"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add robots.txt admin.html contribute.html css/seo.css scripts/gen_operator_pages.py scripts/gen_blog.py scripts/patch_audit_fixes.py 404.html bus-time-table blog sitemap.xml index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Audit fixes: 404 page, admin robots-block + noindex, operator pages FAQ 5EN+5BN with lang toggle, blog posts FAQ (4), contribute canonical, seo.css language rules"
+            git push
+          fi
