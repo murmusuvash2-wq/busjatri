@@ -1,0 +1,7 @@
+# Alias route URLs -> canonical file families (301, only when file missing)
+/bus-time-table/burdwan-to-* /bus-time-table/bardhaman-to-:splat 301!
+/bus-time-table/bardhaman-to-* /bus-time-table/burdwan-to-:splat 301!
+/bus-time-table/midnapur-to-* /bus-time-table/medinipur-to-:splat 301!
+/bus-time-table/medinipur-to-* /bus-time-table/midnapur-to-:splat 301!
+/bus-time-table/tarkeshwar-to-* /bus-time-table/tarakeshwar-to-:splat 301!
+/bus-time-table/tarakeshwar-to-* /bus-time-table/tarkeshwar-to-:splat 301!
