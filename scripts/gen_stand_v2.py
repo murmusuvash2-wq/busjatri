@@ -63,6 +63,12 @@ def discover_stands():
         if name.lower().startswith("buses from "):
             name = name[len("buses from "):]
         name = re.sub(r"\s+bus stand$", "", name, flags=re.I)
+        # If the stripped name maps to a DIFFERENT file, trust the filename:
+        # e.g. buses-from-garia-bus-stand.html is the "Garia Bus Stand" page,
+        # not the alias-merged "Garia" (Kolkata group) page.
+        base = fname[len("buses-from-"):-len(".html")]
+        if g.slug(name) != base:
+            name = base.replace("-", " ").title()
         out.append((name, fname))
     return out
 

@@ -297,3 +297,10 @@
 /bus-time-table/tarakeshwar-to-mecheda.html /bus-time-table/tarkeshwar-to-mecheda.html 301
 /bus-time-table/tarkeshwar-to-haldia /bus-time-table/tarakeshwar-to-haldia.html 301
 /bus-time-table/tarkeshwar-to-haldia.html /bus-time-table/tarakeshwar-to-haldia.html 301
+# deleted duplicate stand pages -> canonical
+/bus-time-table/buses-from-garia /bus-time-table/buses-from-garia-bus-stand.html 301
+/bus-time-table/buses-from-garia.html /bus-time-table/buses-from-garia-bus-stand.html 301
+/bus-time-table/buses-from-barddhaman-alisha /bus-time-table/buses-from-barddhaman-alisha-bus-stand.html 301
+/bus-time-table/buses-from-barddhaman-alisha.html /bus-time-table/buses-from-barddhaman-alisha-bus-stand.html 301
+/bus-time-table/buses-from-barddhaman-nawabhat /bus-time-table/buses-from-barddhaman-nawabhat-bus-stand.html 301
+/bus-time-table/buses-from-barddhaman-nawabhat.html /bus-time-table/buses-from-barddhaman-nawabhat-bus-stand.html 301
