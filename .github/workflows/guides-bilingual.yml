@@ -1,0 +1,42 @@
+name: Travel guides bilingual
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bilingual:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply bilingual patch
+        run: python3 scripts/patch_guides_bilingual.py
+
+      - name: Regenerate guided stand pages
+        run: python3 scripts/gen_stand_v2.py --stands "Bankura,Kolkata,Digha,Purulia"
+
+      - name: Validate
+        run: |
+          python3 -c "import ast; ast.parse(open('scripts/gen_stand_v2.py').read())"
+          grep -q 'GUIDES_BN' scripts/gen_stand_v2.py
+          grep -q 'label-bn' bus-time-table/buses-from-bankura.html
+          grep -q 'label-bn' bus-time-table/buses-from-digha.html
+          grep -q 'label-bn' bus-time-table/buses-from-purulia.html
+          grep -q 'label-bn' bus-time-table/buses-from-kolkata.html
+          grep -q 'note_bn' scripts/gen_stand_v2.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_stand_v2.py scripts/patch_guides_bilingual.py bus-time-table/buses-from-bankura.html bus-time-table/buses-from-kolkata.html bus-time-table/buses-from-digha.html bus-time-table/buses-from-purulia.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Travel guides: full Bengali support (EN/BN render + bn content for Bankura, Kolkata, Digha, Purulia)"
+            git push
+          fi
