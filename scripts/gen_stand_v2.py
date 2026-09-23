@@ -86,19 +86,21 @@ def destination_groups(stand, buses):
     links to the real route page. times = sorted unique departure times
     (minutes), na = buses in the group without a time.
     """
-    routes = [t for (o, t) in g.route_meta if v2.place_matches_strict(o, stand)]
+    routes = [(o, t) for (o, t) in g.route_meta if v2.place_matches_strict(o, stand)]
     groups = {}
     for b in buses:
         d = g.clean_text(b.get("destination")) or "?"
         resolved = None
-        for t in routes:
+        origin = None
+        for o, t in routes:
             if v2.place_matches_strict(t, d) or v2.place_matches_strict(d, t):
                 resolved = t
+                origin = o
                 break
         if resolved is not None:
-            key = "file::" + g.slug(stand) + "-to-" + g.slug(resolved) + ".html"
+            key = "file::" + g.slug(origin) + "-to-" + g.slug(resolved) + ".html"
             display = resolved
-            link = "{}-to-{}.html".format(g.slug(stand), g.slug(resolved))
+            link = "{}-to-{}.html".format(g.slug(origin), g.slug(resolved))
         else:
             key = "name::" + d.lower()
             display = d
