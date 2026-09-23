@@ -25,13 +25,19 @@ This script:
   6. adds 301 redirects for the 3 deleted URLs to _redirects.
 
 Idempotent: safe to run multiple times.
+
+Note: this file deliberately avoids backslashes and quote-escaping so it
+survives byte-exact re-typing (built via chr() constants where needed).
 """
 import os
-import re
 import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+NL = chr(10)   # newline
+BS = chr(92)   # backslash
+Q = chr(34)    # double quote
 
 DUPES = [
     "bus-time-table/buses-from-garia.html",
@@ -50,20 +56,26 @@ REDIRECTS = [
 
 # ---- 1. patch discover_stands ----
 GEN = os.path.join(ROOT, "scripts/gen_stand_v2.py")
-OLD = ('        name = re.sub(r"\\s+bus stand$", "", name, flags=re.I)\n'
-       "        out.append((name, fname))\n")
-NEW = ('        name = re.sub(r"\\s+bus stand$", "", name, flags=re.I)\n'
-       "        # If the stripped name maps to a DIFFERENT file, trust the filename:\n"
-       "        # e.g. buses-from-garia-bus-stand.html is the \"Garia Bus Stand\" page,\n"
-       "        # not the alias-merged \"Garia\" (Kolkata group) page.\n"
-       "        base = fname[len("buses-from-"):-len(".html")]\n"
-       "        if g.slug(name) != base:\n"
-       "            name = base.replace("-", " ").title()\n"
-       "        out.append((name, fname))\n")
+
+LINE_SUB = (
+    "        name = re.sub(r" + Q + BS + "s+bus stand$" + Q + ", "
+    + Q + Q + ", name, flags=re.I)" + NL
+)
+LINE_APPEND = "        out.append((name, fname))" + NL
+OLD = LINE_SUB + LINE_APPEND
+INSERT = (
+    "        # If the stripped name maps to a DIFFERENT file, trust the filename:" + NL
+    + "        # e.g. buses-from-garia-bus-stand.html is the " + Q + "Garia Bus Stand" + Q + " page," + NL
+    + "        # not the alias-merged " + Q + "Garia" + Q + " (Kolkata group) page." + NL
+    + "        base = fname[len(" + Q + "buses-from-" + Q + "):-len(" + Q + ".html" + Q + ")]" + NL
+    + "        if g.slug(name) != base:" + NL
+    + "            name = base.replace(" + Q + "-" + Q + ", " + Q + " " + Q + ").title()" + NL
+)
+NEW = LINE_SUB + INSERT + LINE_APPEND
 
 with open(GEN, encoding="utf-8") as fh:
     src = fh.read()
-if NEW in src:
+if INSERT in src:
     print("gen_stand_v2.py: already patched")
 elif OLD not in src:
     raise SystemExit("ABORT: discover_stands block not found in gen_stand_v2.py")
@@ -95,17 +107,23 @@ for stand in STANDS:
 subprocess.run([sys.executable, os.path.join(ROOT, "scripts/gen_btt_v2.py")],
                cwd=ROOT, check=True)
 
-# ---- 5. remove deleted URL from sitemap.xml ----
+# ---- 5. remove deleted URL from sitemap.xml (plain string surgery) ----
 SM = os.path.join(ROOT, "sitemap.xml")
 with open(SM, encoding="utf-8") as fh:
     sm = fh.read()
-sm2 = re.sub(r"<url>\s*<loc>[^<]*buses-from-garia\.html</loc>.*?</url>\s*", "", sm, flags=re.S)
-if sm2 != sm:
-    with open(SM, "w", encoding="utf-8") as fh:
-        fh.write(sm2)
-    print("sitemap.xml: removed buses-from-garia.html")
-else:
+marker = "buses-from-garia.html</loc>"
+i = sm.find(marker)
+if i == -1:
     print("sitemap.xml: no change")
+else:
+    start = sm.rfind("<url>", 0, i)
+    end = sm.find("</url>", i)
+    end = end + len("</url>") if end != -1 else len(sm)
+    while end < len(sm) and sm[end] in chr(13) + NL:
+        end += 1
+    with open(SM, "w", encoding="utf-8") as fh:
+        fh.write(sm[:start] + sm[end:])
+    print("sitemap.xml: removed buses-from-garia.html")
 
 # ---- 6. redirects ----
 RD = os.path.join(ROOT, "_redirects")
@@ -113,9 +131,9 @@ with open(RD, encoding="utf-8") as fh:
     rd = fh.read()
 add = [r for r in REDIRECTS if r not in rd]
 if add:
-    if not rd.endswith("\n"):
-        rd += "\n"
-    rd += "# deleted duplicate stand pages -> canonical\n" + "\n".join(add) + "\n"
+    if not rd.endswith(NL):
+        rd += NL
+    rd += "# deleted duplicate stand pages -> canonical" + NL + NL.join(add) + NL
     with open(RD, "w", encoding="utf-8") as fh:
         fh.write(rd)
     print("_redirects: added", len(add), "rules")
