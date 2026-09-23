@@ -51,7 +51,7 @@ for _need in ("BUSES", "route_meta", "slug", "esc", "parse_time", "route_stats")
 # ------------------------------------------------------------
 # version tags (bump on every change)
 # ------------------------------------------------------------
-CSS_V2 = "seov2a"
+CSS_V2 = "seov2b"
 JS_V2 = "seopagea"
 
 # ------------------------------------------------------------
@@ -460,13 +460,13 @@ def alt_route_section(origin, destination, alt_index):
   <div class="alt-change">
     <span style="font-weight:800;line-height:1">⇅</span>
     <span style="flex:1;min-width:0">{L('Change buses at ' + g.esc(o['hub']), 'বাস বদলান: ' + g.esc(o['hub']))}</span>
-    <span class="alt-wait">{bn_num(o['wait'])} {L('min wait', 'মিনিট অপেক্ষা')}</span>
+    <span class="alt-wait">{L(str(o['wait']), bn_num(o['wait']))} {L('min wait', 'মিনিট অপেক্ষা')}</span>
   </div>
   <div class="alt-leg">
     <div><div class="al-name">{l2}</div><div class="al-route">{g.esc(o['hub'])} <span class="rarr">→</span> {g.esc(destination)} · {L(f"arrives {g.esc(destination)} {g.format_time(o['arrive'] % 1440)}", f"{g.esc(bnplace(destination))} পৌঁছায় {bn_time(o['arrive'])}")}</div></div>
     <span class="al-time">{g.format_time(o['board2'] % 1440)}</span>
   </div>
-  <div class="alt-total">{L('Total: ', 'মোট যাত্রা: ')}<b>{g.format_time(o['dep1'] % 1440)} → {g.format_time(o['arrive'] % 1440)} · {bn_dur(o['total'])} ({g.fmt_duration(o['total'])})</b></div>
+  <div class="alt-total">{L('Total: ', 'মোট যাত্রা: ')}<b>{g.format_time(o['dep1'] % 1440)} → {g.format_time(o['arrive'] % 1440)} · {L(g.fmt_duration(o['total']), bn_dur(o['total']) + ' (' + g.fmt_duration(o['total']) + ')')}</b></div>
 </div>""")
 
     return f"""<section class="seo-section alt-route">
@@ -691,15 +691,12 @@ def faq_pairs(origin, destination, buses):
 
 
 def faq_html_v2(en, bn):
-    def det(q, a, i):
-        return f'<details{" open" if i == 0 else ""}><summary>{q}</summary><div class="fa-body">{a}</div></details>'
+    def det(q, a, cls, i):
+        return f'<details class="{cls}"{" open" if i == 0 else ""}><summary>{q}</summary><div class="fa-body">{a}</div></details>'
 
-    parts = ['<p class="faq-lang-tag">English</p>']
-    parts += [det(q, a, i) for i, (q, a) in enumerate(en)]
-    parts.append('<p class="faq-lang-tag">বাংলা</p>')
-    parts += [det(q, a, 5) for (q, a) in bn]
+    parts = [det(q, a, "faq only-en", i) for i, (q, a) in enumerate(en)]
+    parts += [det(q, a, "faq only-bn", i) for i, (q, a) in enumerate(bn)]
     return "".join(parts)
-
 
 # ------------------------------------------------------------
 # v2 shell / header / footer
@@ -898,7 +895,7 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
             + (f'<span class="schip">⏰ {L("Last", "শেষ")} {g.esc(last)}</span>' if stats["last"] is not None else "")
             + (f'<span class="schip">⏱ ~{g.esc(dur_text)}</span>' if stats["duration"] is not None else "")
         )
-    bn_sub = f'<p class="bn-sub">{g.esc(route_bn)} বাসের সময়সূচী</p>' if route_bn else ""
+    bn_sub = f'<p class="bn-sub"><span class="label-en">{g.esc(origin)} → {g.esc(destination)} — bus timings & stoppages</span><span class="label-bn">{g.esc(route_bn)} বাসের সময়সূচী</span></p>' if route_bn else ""
     hero = f"""<div class="crumbs"><a href="../index.html">{L("Home", "হোম")}</a> › <a href="./">{L("Bus Timetable", "বাস টাইম টেবিল")}</a> › <span>{g.esc(origin)} → {g.esc(destination)}</span></div>
 <div class="seo-hero">
   <h1>{g.esc(origin)} <span class="arr">→</span> {g.esc(destination)}</h1>
@@ -936,7 +933,7 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
     # ---- FAQ 5 EN + 5 BN (search-intent) ----
     en, bn, _facts = faq_pairs(origin, destination, faq_buses)
     faq_section = f"""<section class="seo-section faq-v2">
-  <h3 class="section-title">FAQ · সাধারণ প্রশ্ন</h3>
+  <h3 class="section-title">{L("FAQs", "সাধারণ প্রশ্ন")}</h3>
   {faq_html_v2(en, bn)}
 </section>"""
 
