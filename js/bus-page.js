@@ -59,12 +59,24 @@ function buildBusCopyText(b, stops) {
   if (b.arrival_time) det.push(FLAG + ' Arrival: ' + b.arrival_time);
   if (b.contact_number && b.contact_number !== 'Not Available !') det.push(PHONE + ' Contact: ' + b.contact_number);
   if (det.length) { L.push(''); L.push(det.join(NL)); }
-  var timed = stops.filter(function (s) { return s.up_time; }).map(function (s) { return pn(s.name) + ' ' + DASH + ' ' + s.up_time; });
-  if (!timed.length) timed = stops.filter(function (s) { return s.down_time; }).map(function (s) { return pn(s.name) + ' ' + DASH + ' ' + s.down_time; });
-  if (timed.length) {
+  var hasUp = stops.some(function (s) { return s.up_time; });
+  var hasDown = stops.some(function (s) { return s.down_time; });
+  if (hasUp || hasDown) {
     L.push('');
-    L.push(STOP + ' Stoppages:');
-    timed.forEach(function (t, i) { L.push((i + 1) + '. ' + t); });
+    L.push(STOP + (hasUp && hasDown ? ' Stoppages (outbound / return):' : ' Stoppages:'));
+    var n = 0;
+    stops.forEach(function (s) {
+      var up = s.up_time || '', down = s.down_time || '';
+      var line = '';
+      if (hasUp && hasDown) {
+        if (up || down) line = pn(s.name) + ' ' + DASH + ' ' + (up || '-') + ' / ' + (down || '-');
+      } else if (up) {
+        line = pn(s.name) + ' ' + DASH + ' ' + up;
+      } else if (down) {
+        line = pn(s.name) + ' ' + DASH + ' ' + down;
+      }
+      if (line) { n = n + 1; L.push(n + '. ' + line); }
+    });
   }
   L.push('');
   L.push(DASH + ' BusJatri.in ' + BUS);
