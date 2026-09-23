@@ -49,6 +49,8 @@ def is_volvo_ac(b):
     t = btype(b)
     return 'AC' in t and 'NON' not in t.upper()
 
+OPS_INFO = {'sbstc-buses': ('government (South Bengal State Transport Corporation)', 'সরকারি — দক্ষিণবঙ্গ রাজ্য পরিবহণ সংস্থা'), 'nbstc-buses': ('government (North Bengal State Transport Corporation)', 'সরকারি — উত্তরবঙ্গ রাজ্য পরিবহণ সংস্থা'), 'wbtc-buses': ('government (West Bengal Transport Corporation)', 'সরকারি — পশ্চিমবঙ্গ পরিবহণ নিগম'), 'shyamoli-paribahan-buses': ('a private operator', 'একটি বেসরকারি পরিবহন সংস্থা'), 'volvo-ac-buses': ('AC coach services — both government and private operators run Volvo AC buses', 'এসি কোচ পরিষেবা — সরকারি ও বেসরকারি দুই ধরনের অপারেটরই ভলভো এসি বাস চালায়')}
+
 OPERATORS = [
     dict(stem='sbstc-buses', name='SBSTC Buses', title='SBSTC Bus Time Table',
          h1='SBSTC Buses', bn='দক্ষিণবঙ্গ রাজ্য পরিবহণ সংস্থার বাস',
@@ -94,6 +96,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="stylesheet" href="../css/seo.css?v=opt20260920">
 <link rel="stylesheet" href="../css/extras.css">
 <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{{"@type": "ListItem", "position": 1, "name": "Home", "item": "{BASE}/"}}, {{"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "{BASE}/bus-time-table/"}}, {{"@type": "ListItem", "position": 3, "name": "{h1}", "item": "{BASE}/bus-time-table/{stem}.html"}}]}}</script>
+{faq_schema}
 </head>
 <body>
 <header class="header">
@@ -105,8 +108,12 @@ HEAD = '''<!DOCTYPE html>
       Bus<span>Jatri</span>
     </a>
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
-      <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
-      <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
+      <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Home</span><span class="label-bn">হোম</span></a>
+      <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Routes</span><span class="label-bn">রুট</span></a>
+      <span class="lang-group" style="display:flex;gap:4px;margin-left:4px">
+        <button class="lang-btn" id="langEN" onclick="setLang('en')" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
+        <button class="lang-btn" id="langBN" onclick="setLang('bn')" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
+      </span>
     </nav>
   </div>
 </header>
@@ -114,7 +121,7 @@ HEAD = '''<!DOCTYPE html>
 <div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>{h1}</span></div>
 <div class="op-hero">
 <h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">{h1}</h1>
-<div class="bn-line" style="color:var(--ink-dim);margin-top:6px">{bn}</div>
+<div class="bn-line only-bn" style="color:var(--ink-dim);margin-top:6px">{bn}</div>
 <p class="intro" style="color:var(--ink-dim);line-height:1.7;max-width:700px;margin:8px 0 0">{intro}</p>
 </div>
 '''
@@ -140,6 +147,7 @@ FOOT = '''<footer class="footer">
   </div>
 </footer>
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
+<script>(function(){function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');var a=document.getElementById('langEN'),b=document.getElementById('langBN');if(a)a.style.background=l==='en'?'var(--amber-soft,#f6e7c6)':'transparent';if(b)b.style.background=l==='bn'?'var(--amber-soft,#f6e7c6)':'transparent';try{localStorage.setItem('seo-lang',l);}catch(e){}}window.setLang=setLang;var sv=null;try{sv=localStorage.getItem('seo-lang');}catch(e){}setLang(sv||'en');})();</script>
 </body>
 </html>
 '''
@@ -190,9 +198,58 @@ def build_page(op, stems):
     chiprow = f'''<h2 class="op-h2" style="margin-top:26px">All Destinations</h2>
 <div class="chip-row" aria-label="All destinations">{''.join(chips)}</div>'''
 
+    op_info = OPS_INFO.get(op["stem"], ("bus services", "বাস পরিষেবা"))
+    top_fr, top_to, top_n = "", "", 0
+    if top:
+        (top_fr, top_to), top_n = top[0]
+    dest_names = [d for d, _ in dests.most_common(8) if d]
+    nb = op["bn"]
+    DET_STYLE = ' style="border:1px solid var(--line,rgba(33,28,22,.15));border-radius:10px;padding:10px 14px;margin:8px 0;background:var(--surface,#fffcf4)"'
+    SUM_STYLE = '<summary style="cursor:pointer;font-weight:600;font-size:.95rem">'
+    ANS_STYLE = '<p style="margin:8px 0 0;font-size:.9rem;line-height:1.7;color:var(--ink-dim,#665)">'
+    faq_en = [
+        ("How many " + op["name"] + " bus services are listed?",
+         str(len(buses)) + " " + op["name"] + " services are listed on BusJatri, covering " + str(len(routes)) + " routes."),
+        ("Which is the busiest " + op["name"] + " route?",
+         (esc(top_fr) + " to " + esc(top_to) + ", with " + str(top_n) + " listed buses." if top_n else "Open the route list below for currently listed services.")),
+        ("Where do " + op["name"] + " buses go?",
+         ("Popular destinations include " + ", ".join(esc(d) for d in dest_names) + "." if dest_names else "See the destinations listed below.")),
+        ("Are " + op["name"] + " buses government or private?",
+         op["name"] + " buses are " + op_info[0] + "."),
+        ("How do I check departure times for a " + op["name"] + " bus?",
+         "Open any route page from the lists above for the full timetable. Times can change — confirm at the bus stand counter before travel."),
+    ]
+    faq_bn = [
+        (op["name"] + " বাস কতটি তালিকাভুক্ত?",
+         "BusJatri-তে " + str(len(buses)) + "টি " + op["name"] + " বাস তালিকাভুক্ত, " + str(len(routes)) + "টি রুট জুড়ে।"),
+        (op["name"] + "-এর সবচেয়ে ব্যস্ত রুট কোনটি?",
+         (esc(top_fr) + " থেকে " + esc(top_to) + " — " + str(top_n) + "টি বাস।" if top_n else "নিচের রুট তালিকা দেখুন।")),
+        (op["name"] + " বাস কোথায় যায়?",
+         ("জনপ্রিয় গন্তব্য: " + ", ".join(esc(d) for d in dest_names) + "।" if dest_names else "নিচের গন্তব্যের তালিকা দেখুন।")),
+        (op["name"] + " কি সরকারি না বেসরকারি?",
+         nb + " — " + op_info[1] + "।"),
+        (op["name"] + " বাসের সময় কোথায় দেখব?",
+         "উপরের যেকোনো রুট পেজ খুললে সম্পূর্ণ সময়সূচি পাবেন। সময় বদলাতে পারে — যাত্রার আগে কাউন্টারে নিশ্চিত করে নিন।"),
+    ]
+    faq_items = "".join(
+        ('<details' + (' open' if i == 0 else '') + DET_STYLE + SUM_STYLE + q + "</summary>"
+         + ANS_STYLE + a + "</p></details>")
+        for i, (q, a) in enumerate(faq_en))
+    faq_items += "".join(
+        ('<details class="only-bn"' + (' open' if i == 0 else '') + DET_STYLE + SUM_STYLE + q + "</summary>"
+         + ANS_STYLE + a + "</p></details>")
+        for i, (q, a) in enumerate(faq_bn))
+    faq_section = '<h2 class="op-h2" style="margin-top:26px">FAQ</h2>' + faq_items
+    import json as _j
+    faq_schema = ('<script type="application/ld+json">' + _j.dumps(
+        {"@context": "https://schema.org", "@type": "FAQPage",
+         "mainEntity": [{"@type": "Question", "name": q,
+                         "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_en + faq_bn]},
+        ensure_ascii=False) + "</script>")
+
     body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'],
-                       BASE=BASE, h1=esc(op['h1']), bn=op['bn'], intro=esc(op['intro']))
-    body += stats + popular + chiprow + '\n</main>\n' + FOOT
+                       BASE=BASE, h1=esc(op['h1']), bn=op['bn'], intro=esc(op['intro']), faq_schema=faq_schema)
+    body += stats + popular + chiprow + faq_section + '\n</main>\n' + FOOT
     return body
 
 def update_sitemap(stems):

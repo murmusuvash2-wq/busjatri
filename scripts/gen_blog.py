@@ -55,6 +55,7 @@ FOOTER = """<footer class="footer">
   </div>
 </footer>"""
 
+BLOG_FAQ_DONE = True
 ARTICLES = [
     {
         "slug": "kolkata-to-digha-bus-guide",
@@ -67,6 +68,7 @@ ARTICLES = [
             ("../bus-time-table/digha-to-kolkata.html", "দীঘা → কলকাতা (ফেরার বাস)"),
             ("../via/digha.html", "দীঘা স্টপ — সব বাসের টাইম"),
         ],
+        "faq": [('What time do morning buses leave Kolkata for Digha?', 'SBSTC buses leave around 6:30, 7:00 and 7:30 AM from the Esplanade area; private AC coaches such as Jackson leave around 8:00 AM.'), ('How long does the Kolkata to Digha bus journey take?', 'About four to four and a half hours, depending on Bombay Road traffic.'), ('Are there AC buses from Kolkata to Digha?', 'Yes — private AC coaches run on this route alongside SBSTC government buses.'), ('Do I need to book tickets in advance?', 'Advance booking is not required; reach the counter about 30 minutes early on Fridays, Saturdays and holiday seasons.'), ('When do return buses leave Digha?', 'Return buses start very early in the morning; confirm the last bus time at the Digha stand counter before evening.'), ('কলকাতা থেকে দীঘার সকালের বাস কটায় ছাড়ে?', 'এসপ্ল্যানেড এলাকা থেকে SBSTC বাস প্রায় ৬:৩০, ৭:০০ ও ৭:৩০-এ ছাড়ে; বেসরকারি এসি কোচ (যেমন Jackson) ৮টার দিকে ছাড়ে।'), ('কলকাতা থেকে দীঘা যেতে কত সময় লাগে?', 'বোম্বে রোডের ট্রাফিকের ওপর নির্ভর করে প্রায় চার থেকে সাড়ে চার ঘণ্টা।'), ('কলকাতা থেকে দীঘায় কি এসি বাস আছে?', 'হ্যাঁ — SBSTC সরকারি বাসের পাশাপাশি বেসরকারি এসি কোচও চলে।'), ('আগে থেকে টিকিট বুক করতে হবে কি?', 'তেমন দরকার নেই; শুক্র-শনিবার ও ছুটির মৌসুমে কাউন্টারে আধ ঘণ্টা আগে পৌঁছান।'), ('দীঘা থেকে ফেরার বাস কখন?', 'ফেরার বাস খুব সকালেই ছাড়ে; বিকেলের আগেই কাউন্টার থেকে শেষ বাসের সময় নিশ্চিত করে নিন।')],
         "body": """<p>দীঘায় সমুদ্রের ধারে একটা উইকেন্ড কাটানো আমাদের বাঙালিদের কাছে প্রায় একটা রুটিন হয়ে দাঁড়িয়েছে। আর ভালো খবর হলো, সেখানে যাওয়ার জন্য দু'সপ্তাহ আগে থেকে ট্রেনের টিকিট বুক করার কোনো দরকার নেই। সকাল থেকেই কলকাতা থেকে বাস ছাড়তে থাকে, আর সময়মতো পৌঁছালে দুপুরের খাবারের আগেই আপনি সমুদ্রের জলে পা ডুবিয়ে দিতে পারবেন।</p>
 <h2>দীঘার বাসগুলো কেমন?</h2>
 <p>বেশিরভাগ যাত্রী এসবিএসটিসি (SBSTC) সরকারি বাসের ওপর নির্ভর করেন যেগুলো এসপ্ল্যানেড এলাকা থেকে ছাড়ে। সকালে প্রায় ৬:৩০, ৭:০০ এবং ৭:৩০-এর বাস পাওয়া যায়, আর এর ভাড়াও বেশ সাধ্যের মধ্যে। আপনি যদি একটু বেশি আরাম চান, তবে এই রুটে প্রাইভেট এসি বাসও চলে। উদাহরণস্বরূপ, জ্যাকসন (Jackson) সকাল ৮টার দিকে এসি কোচ নিয়ে কলকাতা থেকে ছাড়ে। বোম্বে রোডের ট্রাফিকের ওপর নির্ভর করে বেশিরভাগ বাস প্রায় চার থেকে সাড়ে চার ঘণ্টার মধ্যে দীঘায় পৌঁছায়।</p>
@@ -90,6 +92,7 @@ ARTICLES = [
             ("../bus-time-table/purulia-to-manbazar.html", "পুরুলিয়া → মানবাজার"),
             ("../bus-time-table/barabazar-to-purulia.html", "বড়বাজার → পুরুলিয়া"),
         ],
+        "faq": [('When do morning buses leave Jhargram for Manbazar and Khatra?', 'Around 4:50 AM (Badsha) and 5:00 AM (Monami Travels); an AC bus leaves around 5:30 AM.'), ('Are there direct buses from Kolkata to the Jangalmahal area?', 'Yes — Mahamaya Super Fast style buses leave Kolkata around 4:30 AM for Khatra, Ranibandh and Manbazar.'), ('Why is Khatra a useful junction?', 'Buses towards Bankura, Purulia, Medinipur and Bardhaman pass through Khatra — change there if you miss a direct village bus.'), ('How is bus travel in the monsoon?', 'Forest roads can be slow in the rains; keep extra time and confirm schedules locally.'), ('Where can I check timings for Jangalmahal routes?', 'BusJatri route pages and the Khatra stop page list every bus with its arrival time at each stop.'), ('ঝাড়গ্রাম থেকে মানবাজার/খাতড়ার সকালের বাস কখন?', 'প্রায় ৪:৫০-এ বাদশা, ৫:০০-এ মনামী ট্রাভেলস; সাড়ে ৫টার দিকে একটি এসি বাসও ছাড়ে।'), ('কলকাতা থেকে জঙ্গলমহলে সরাসরি বাস আছে কি?', 'হ্যাঁ — মহামায়া সুপার ফাস্ট ধরনের বাস ভোর ৪:৩০-এর দিকে কলকাতা থেকে ছাড়ে।'), ('খাতড়া জংশন কেন গুরুত্বপূর্ণ?', 'বাঁকুড়া, পুরুলিয়া, মেদিনীপুর ও বর্ধমানের বাস খাতড়া দিয়েই যায় — সরাসরি বাস মিস হলে খাতড়ায় বাস বদলান।'), ('বর্ষাকালে যাত্রা কেমন?', 'জঙ্গলের রাস্তা ধীরগতির হতে পারে; বাড়তি সময় হাতে রাখুন, স্থানীয়ভাবে সময় জেনে নিন।'), ('এই রুটগুলোর সময়সূচি কোথায় দেখব?', 'BusJatri-র রুট পেজ ও খাতড়া স্টপ পেজে প্রতিটি বাসের সময় দেওয়া আছে।')],
         "body": """<p>শালবন, লাল মাটির রাস্তা আর ছোট ছোট শহর নিয়ে জঙ্গলমহল এলাকাটি আমাদের রাজ্যের এক সুন্দর অংশ, যার কথা বেশিরভাগ ট্রাভেল গাইডে খুব একটা বলা থাকে না। কিন্তু সেখানে বসবাসকারী মানুষদের জন্য এবং এই শান্ত কোণটি ভালোবাসেন এমন পর্যটকদের জন্য বাসই হলো জীবনরেখা। এই অঞ্চলে বাস ভ্রমণ আসলে কেমন, তার একটা চিত্র নিচে দেওয়া হলো।</p>
 <h2>ঝাড়গ্রাম থেকে সকালের বাস</h2>
 <p>আপনি যদি ঝাড়গ্রাম থেকে মানবাজার এবং খাতড়ার দিকে যান, তবে সকালের সময়টা আপনার জন্য সবচেয়ে ভালো। সকাল ৪:৫০-এর দিকে বাদশা বাস ছাড়ে, এরপর সকাল ৫:০০ টার দিকে মনামী ট্রাভেলস। সকাল সাড়ে ৫-টার দিকে একটি এসি বাসের সুবিধাও আছে, যা গ্রীষ্মের গরমে বেশ স্বস্তিদায়ক। এই রুটটি জঙ্গল এবং সারেঙ্গা-র মতো ছোট স্টেশনগুলোর মধ্যে দিয়ে যায়, আর জানলা দিয়ে আসা সকালের বাতাস শহরের মানুষ টাকার বিনিময়েও পেতে চায়।</p>
@@ -113,6 +116,7 @@ ARTICLES = [
             ("../via/", "সব স্টপ পেজ A–Z"),
             ("../index.html", "হোমপেজে সার্চ করুন"),
         ],
+        "faq": [('How do I search for a bus route on BusJatri?', 'Type your start or destination in the homepage search box — suggestions appear in Bengali and English, and tapping a route shows every bus with times, operator and bus type.'), ('What is a stop page?', 'Every stop has its own page: a departure board of every bus passing that stop from early morning to late night. Over 2,600 stop pages are live.'), ('Can I search in Bengali?', 'Yes — search and suggestions work in both Bengali and English.'), ('Does BusJatri need an account or payment?', 'No — it is free, login-free, and light enough to work on slow connections.'), ('What if I find a wrong time or a missing bus?', 'Tell us on our Facebook page or by email — most corrections come from passengers, drivers and bus stand staff.'), ('BusJatri-তে বাসের রুট কীভাবে খুঁজব?', 'হোমপেজের সার্চ বক্সে যাত্রা শুরু বা গন্তব্যের নাম লিখুন — বাংলা ও ইংরেজি দুই ভাষাতেই সাজেশন আসবে, রুটে ট্যাপ করলেই সময় সহ সব বাসের তালিকা।'), ('স্টপ পেজ কী?', 'প্রতিটি স্টপের নিজস্ব পেজ — ভোর থেকে গভীর রাত পর্যন্ত ওই স্টপ দিয়ে যাওয়া সব বাসের ডিপারচার বোর্ড। এখনই ২,৬০০-র বেশি স্টপ পেজ চালু।'), ('বাংলায় সার্চ করা যায়?', 'হ্যাঁ — বাংলা ও ইংরেজি দুই ভাষাতেই সার্চ ও সাজেশন কাজ করে।'), ('অ্যাকাউন্ট বা টাকা লাগে কি?', 'না — সাইট সম্পূর্ণ বিনামূল্যে, লগইন ছাড়াই, আর ধীর ইন্টারনেটেও ভালো চলে।'), ('ভুল সময় বা বাদ পড়া বাস দেখলে?', 'ফেসবুক পেজ বা ইমেলে জানান — বেশিরভাগ সংশোধন যাত্রী, চালক ও স্ট্যান্ডের কর্মীদের কাছ থেকেই আসে।')],
         "body": """<p>প্রতিদিন পশ্চিমবঙ্গের শত শত মানুষ তাদের ফোনে বাসের সময় খোঁজেন, সাধারণত তাড়া থাকে, আর সাধারণত ছোট ডেটা প্যাক থাকে। BusJatri ঠিক এই মুহূর্তগুলোর জন্যই তৈরি করা হয়েছে। সাইটটি কীভাবে ব্যবহার করবেন তার একটি সহজ গাইড নিচে দেওয়া হলো, ঠিক যেভাবে একজন বন্ধু আপনাকে বুঝিয়ে বলবেন।</p>
 <h2>রুট খোঁজা</h2>
 <p>হোমপেজে আপনি একটি সার্চ বক্স পাবেন। আপনার শুরুর জায়গা বা গন্তব্যের নাম টাইপ করুন। টাইপ করার সাথে সাথে নিচে বাংলা এবং ইংরেজি উভয় ভাষাতেই সাজেশন আসবে। আপনার জায়গাটি বেছে নিন, এবং আপনি এর সাথে সম্পর্কিত সব রুট দেখতে পাবেন। যেকোনো রুটে ট্যাপ করলেই আপনি বাস ছাড়ার সময়, পৌঁছানোর সময়, অপারেটরের নাম এবং বাসের ধরন (সরকারি, বেসরকারি বা এসি) সহ বাসের পুরো তালিকা পেয়ে যাবেন।</p>
@@ -136,6 +140,7 @@ ARTICLES = [
             ("../via/manbazar.html", "মানবাজার স্টপ — সব বাসের টাইম"),
             ("../via/purulia.html", "পুরুলিয়া স্টপ — সব বাসের টাইম"),
         ],
+        "faq": [('What is the first bus from Manbazar to Purulia?', 'The Rajput service starts around 5:40 AM, followed by Sourav around 6:40 AM.'), ('Which buses run between 8 and 9 AM?', 'Bhabhalakshmi (~8:20 AM), Sri Shyam (~8:25 AM) and Maa Basanti (~8:50 AM).'), ('Are there buses later in the day?', 'Yes — Maa Chhinnamasta around 11:10 AM, Rajput at 12:15 PM and Monalisha at 1:50 PM.'), ('When does the first bus leave Purulia for Manbazar?', 'The Suman bus leaves Purulia around 7:00 AM; returning Manbazar-Purulia buses also pick up passengers in the evening.'), ('Are market days crowded?', 'Yes — Mondays and other haat days fill up early with little luggage space; plan accordingly.'), ('মানবাজার থেকে পুরুলিয়ার প্রথম বাস কটায়?', 'রাজপুত সার্ভিস প্রায় ৫:৪০-এ, এরপর সৌরভ প্রায় ৬:৪০-এ ছাড়ে।'), ('সকাল ৮টা থেকে ৯টার মধ্যে কোন কোন বাস?', 'ভাগ্যলক্ষ্মী (প্রায় ৮:২০), শ্রী শ্যাম (প্রায় ৮:২৫) এবং মা বাসন্তী (প্রায় ৮:৫০)।'), ('দুপুরের দিকে কি বাস আছে?', 'হ্যাঁ — মা ছিন্নমস্তা প্রায় ১১:১০-এ, রাজপুত ১২:১৫-এ এবং মনালিষা ১:৫০-এ।'), ('পুরুলিয়া থেকে মানবাজারের প্রথম বাস কটায়?', 'সুমন বাস সকাল ৭টার দিকে ছাড়ে; ফেরার পথে সন্ধ্যায়ও বাস পাওয়া যায়।'), ('বাজারের দিনে ভিড় বেশি হয়?', 'হ্যাঁ — সোমবার ও অন্য হাটের দিনে বাস তাড়াতাড়ি ভরে যায়, মালপত্রের জায়গা কম থাকে।')],
         "body": """<p>পুরুলিয়া থেকে মানবাজার রুটটি মানবাজার মহকুমা এলাকার অন্যতম ব্যস্ত রুট। প্রতিদিন ছাত্র, অফিসযাত্রী, ব্যবসায়ী এবং গ্রামের মানুষ এই রুটে যাতায়াত করেন, আর বাজারের দিনগুলোতে প্রথম বাস থেকেই বাসগুলো কানায় কানায় পূর্ণ থাকে। স্থানীয় যাত্রীরা এই রুটের বাসগুলোর সময়সূচি যেভাবে জানেন, তার একটি সম্পূর্ণ চিত্র নিচে দেওয়া হলো।</p>
 <h2>মানবাজার থেকে পুরুলিয়াগামী সকালের বাস</h2>
 <p>প্রথম বাসটি মানবাজার থেকে খুব ভোরে ছেড়ে যায়। রাজপুত সার্ভিসটি সকাল ৫:৪০ নাগাদ শুরু হয়, এরপর সৌরভ বাসটি ছাড়ে প্রায় ৬:৪০-এ। এরপর ভাগ্যলক্ষ্মী এবং শ্রী শ্যাম বাস দুটি ছাড়ে যথাক্রমে ৮:২০ এবং ৮:২৫ নাগাদ, আর মা বাসন্তী ছাড়ে প্রায় ৮:৫০-এ। তাই সকাল ৫:৪০ থেকে ৯টার মধ্যে মোটামুটি প্রতি আধ ঘণ্টা থেকে এক ঘণ্টা অন্তর বাস পাওয়া যায়, যা সকালের কাজের জন্য পুরুলিয়া শহরে পৌঁছাতে খুব সুবিধাজনক। দিনের পরের দিকে, মা ছিন্নমস্তা বাসটি সকাল ১১:১০ নাগাদ চলে, আর দুপুরের পর ১২:১৫-এর রাজপুত সার্ভিস এবং ১:৫০-এর মনালিষা বাসটি পাওয়া যায়।</p>
@@ -155,6 +160,15 @@ def article_page(a):
     related = "".join(
         f'<a class="rel-chip" href="{href}">{_h.escape(label)}</a>' for href, label in a["related"]
     )
+    faq_html = ""
+    faq_schema = ""
+    if a.get("faq"):
+        import json as _j
+        items = "".join(
+            "<details" + (" open" if i == 0 else "") + ' style="border:1px solid var(--line,rgba(33,28,22,.15));border-radius:10px;padding:10px 14px;margin:8px 0;background:var(--surface,#fffcf4)">' + '<summary style="cursor:pointer;font-weight:600;font-size:.95rem">' + q + "</summary>" + '<p style="margin:8px 0 0;font-size:.9rem;line-height:1.7;color:var(--ink-dim,#665)">' + ans + "</p></details>"
+            for i, (q, ans) in enumerate(a["faq"]))
+        faq_html = ('<section class="seo-section" style="margin-top:26px"><h3 class="section-title">FAQ</h3>' + items + "</section>")
+        faq_schema = ('<script type="application/ld+json">' + _j.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": an}} for q, an in a["faq"]]}, ensure_ascii=False) + "</script>")
     return f"""<!DOCTYPE html>
 <html lang="bn">
 <head>
@@ -172,7 +186,7 @@ def article_page(a):
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="../css/seo.css">
 <link rel="stylesheet" href="../css/extras.css">
-{GA4}<style>.article-body p{{line-height:1.85;font-size:1rem;color:var(--ink,#222);margin:0 0 16px}}.article-body h2{{font-size:1.18rem;margin:28px 0 12px;color:var(--ink,#222)}}.article-meta{{font-size:.82rem;color:var(--ink-dim,#665);margin:6px 0 18px}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}</style>
+{faq_schema}{GA4}<style>.article-body p{{line-height:1.85;font-size:1rem;color:var(--ink,#222);margin:0 0 16px}}.article-body h2{{font-size:1.18rem;margin:28px 0 12px;color:var(--ink,#222)}}.article-meta{{font-size:.82rem;color:var(--ink-dim,#665);margin:6px 0 18px}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}</style>
 </head>
 <body>
 {HEADER}
@@ -185,6 +199,7 @@ def article_page(a):
 {a["body"]}
 </div>
 </article>
+{faq_html}
 <section class="seo-section" style="margin-top:26px">
   <h3 class="section-title">Related Pages</h3>
   <div class="chip-row">{related}</div>
