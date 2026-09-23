@@ -1,0 +1,45 @@
+name: Route FAQ language fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  route-faq-lang:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch generator + existing pages
+        run: python3 scripts/patch_route_faq_lang.py
+
+      - name: Validate sources
+        run: |
+          python3 -m py_compile scripts/gen_route_v2.py scripts/patch_route_faq_lang.py
+          grep -q 'faq only-en' scripts/gen_route_v2.py
+          grep -q 'only-bn' css/seo-v2.css
+
+      - name: Regenerate route_meta pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Validate pages
+        run: |
+          test $(grep -l 'faq-lang-tag' bus-time-table/*.html | wc -l) -eq 0
+          grep -q 'faq only-en' bus-time-table/kolkata-to-digha.html
+          grep -q 'faq only-bn' bus-time-table/adra-to-khatra.html
+          grep -q 'buses-from-bardhaman.html' blog/burdwan-to-karunamoyee.html
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_route_v2.py scripts/patch_route_faq_lang.py css/seo-v2.css blog/burdwan-to-karunamoyee.html bus-time-table
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Route pages: FAQ 5 EN + 5 BN now language-toggled (EN = zero Bengali); alt-route numbers bilingual; hero sub bilingual; blog stand link fix"
+            git push
+          fi
