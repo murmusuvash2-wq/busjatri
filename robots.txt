@@ -4,3 +4,4 @@ Disallow: /admin.html
 
 Sitemap: https://busjatri.in/sitemap.xml
 Sitemap: https://busjatri.in/sitemap-extra.xml
+Sitemap: https://busjatri.in/sitemap-via.xml
