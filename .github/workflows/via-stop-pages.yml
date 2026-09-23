@@ -1,0 +1,28 @@
+name: Via stop pages v2 redesign
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  via-stop-v2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate via stop pages (new design)
+        run: python3 scripts/gen_via_stop_v2.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_via_stop_v2.py via
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Via stop pages v2: site-style redesign, day groups, Bengali FAQ 5+5, clean EN/BN i18n (2,605 pages + A-Z index)"
+            git push
+          fi
