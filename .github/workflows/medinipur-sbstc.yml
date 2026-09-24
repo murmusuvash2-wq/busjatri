@@ -1,0 +1,67 @@
+name: Medinipur SBSTC flyer fixes + via
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  medinipur-sbstc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (2 time fixes + 30 new buses + via stoppages + BTT counts)
+        run: python3 scripts/patch_medinipur_sbstc.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q 'sbstc-fb-kolkata-jhargram-315pm' data/busjatri_data.json
+          grep -q '5:10 AM' bus-time-table/midnapur-to-kolkata.html
+          grep -q '11:30 AM' bus-time-table/midnapur-to-kolkata.html
+          grep -q '6:50 AM' bus-time-table/midnapur-to-karunamoyee.html
+          grep -q 'Dunlop' bus-time-table/midnapur-to-karunamoyee.html
+          grep -q '4:40 PM' bus-time-table/midnapur-to-karunamoyee.html
+          test -f bus-time-table/kolkata-to-jhargram.html
+          grep -q 'Kolaghat' bus-time-table/kolkata-to-jhargram.html
+          grep -q '9:25 AM' bus-time-table/kolkata-to-jhargram.html
+          test -f bus-time-table/medinipur-to-barasat.html
+          grep -q 'Madhyamgram' bus-time-table/medinipur-to-barasat.html
+          grep -q '4:55 AM' bus-time-table/habra-to-midnapore.html
+          test -f bus-time-table/barasat-to-medinipur.html
+          test -f via/dunlop.html
+          test -f via/madhyamgram.html
+          grep -q '76 buses listed' bus-time-table/buses-from-medinipur.html
+          grep -q '368 buses listed' bus-time-table/buses-from-kolkata.html
+          grep -q '41 buses listed' bus-time-table/buses-from-habra.html
+          grep -q '78 buses listed' bus-time-table/buses-from-barasat.html
+          grep -q 'kolkata-to-jhargram' sitemap.xml
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data scripts/patch_medinipur_sbstc.py bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Medinipur depot: fix 5:10/6:50 AM, add 30 SBSTC/WBTC buses (Kolkata-Jhargram route, Garia, Barasat, Habra), via Dunlop/Kolaghat/Madhyamgram"
+            git push
+          fi
