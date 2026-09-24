@@ -1,0 +1,66 @@
+name: Haldia SBSTC flyer fixes + via
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  haldia-sbstc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (2 updates + 30 new buses + via stoppages + BTT counts + sitemap)
+        run: python3 scripts/patch_haldia_sbstc.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q 'sbstc-fb-kolkata-haldia-430pm' data/busjatri_data.json
+          grep -q '9:10 AM' bus-time-table/haldia-to-kolkata.html
+          grep -q '4:30 PM' bus-time-table/haldia-to-kolkata.html
+          grep -q '8:45 AM' bus-time-table/haldia-to-karunamoyee.html
+          grep -q '7:15 AM' bus-time-table/haldia-to-karunamoyee.html
+          grep -q '5:00 AM' bus-time-table/haldia-to-chittaranjan.html
+          grep -q '6:00 AM' bus-time-table/haldia-to-dhamakhali.html
+          grep -q '9:30 AM' bus-time-table/haldia-township-to-asansol.html
+          grep -q '12:40 PM' bus-time-table/haldia-township-to-asansol.html
+          grep -q '10:25 AM' bus-time-table/haldia-to-tarapith.html
+          grep -q '10:50 AM' bus-time-table/haldia-to-kuli.html
+          grep -q '11:30 AM' bus-time-table/haldia-to-barakar.html
+          grep -q '2:30 PM' bus-time-table/haldia-to-falta.html
+          grep -q '4:00 PM' bus-time-table/haldia-to-diamond-harbour.html
+          grep -q '6:30 AM' bus-time-table/kolkata-to-haldia.html
+          grep -q '4:30 PM' bus-time-table/kolkata-to-haldia.html
+          grep -q '58 buses listed' bus-time-table/buses-from-haldia.html
+          grep -q '383 buses listed' bus-time-table/buses-from-kolkata.html
+          grep -q 'haldia-to-tarapith' sitemap.xml
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data scripts/patch_haldia_sbstc.py bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Haldia depot: 8:45 AM -> Karunamoyee + 2:30 PM -> Falta (via Dharmatala), add 30 SBSTC buses (Tarapith, Kuli, Asansol, Barakar, Chittaranjan, Dhamakhali, Diamond Harbour routes)"
+            git push
+          fi
