@@ -1,0 +1,68 @@
+name: Perf: see-more on via pages + lazy homepage data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  perf:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply see-more patch to via generator
+        run: python3 scripts/patch_via_seemore.py
+
+      - name: Apply homepage lazy-data patch (app.js + build + index.html)
+        run: python3 scripts/patch_home_perf.py
+
+      - name: Rebuild client data (incl. new home-index.json)
+        run: python3 scripts/build_client_data.py
+
+      - name: Regenerate via stop pages (with See More)
+        run: python3 scripts/gen_via_stop_v2.py
+
+      - name: Patch via sitemap (idempotent)
+        run: python3 scripts/patch_via_sitemap.py
+
+      - name: Validate
+        run: |
+          node --check js/app.js
+          python3 - <<'PYEOF'
+          import json, glob, os
+          home = json.load(open('data/home-index.json'))
+          assert 'sn' in home and 'top' in home and 'meta' in home, list(home)
+          assert len(home['top']) == 10 and len(home['sn']) > 2000
+          assert os.path.getsize('data/home-index.json') < 200000
+          big = open('via/esplanade.html', encoding='utf-8').read()
+          assert 'seemoreBtn' in big and 'vboard' in big and 'KEEP=10' in big
+          assert ';;}' not in big
+          n_btn = 0
+          for p in glob.glob('via/*.html'):
+              with open(p, encoding='utf-8', errors='ignore') as fh:
+                  if 'seemoreBtn' in fh.read():
+                      n_btn += 1
+          print('via pages with see-more button:', n_btn)
+          assert n_btn > 500
+          idx = open('index.html', encoding='utf-8').read()
+          assert 'js/app.js?v=perf20260924a' in idx
+          assert idx.count('defer src="js/') == 8, idx.count('defer src="js/')
+          app = open('js/app.js', encoding='utf-8').read()
+          assert 'data/home-index.json' in app and 'ensureFullData' in app
+          print('validation OK')
+          PYEOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data via js/app.js index.html scripts sitemap-via.xml sitemap.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Perf: See More on via stop pages + homepage loads 40KB home-index first, full 1.9MB index deferred/on-demand"
+            git push
+          fi
