@@ -1,0 +1,67 @@
+name: Bankura SBSTC flyer fixes + new routes
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  bankura-sbstc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (4 fixes + 19 new buses + BTT counts + sitemap)
+        run: python3 scripts/patch_bankura_sbstc.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q 'sbstc-fb-bankura-siliguri-500pm' data/busjatri_data.json
+          grep -q '5:00 AM' bus-time-table/bankura-to-kolkata.html
+          grep -q '4:50 AM' bus-time-table/bankura-to-kolkata.html
+          grep -q 'Arambag' bus-time-table/bankura-to-kolkata.html
+          grep -q '6:25 AM' bus-time-table/bankura-to-chittaranjan.html
+          grep -q '5:15 AM' bus-time-table/bankura-to-karunamoyee.html
+          grep -q '10:15 AM' bus-time-table/bankura-to-karunamoyee.html
+          grep -q 'NH 1' bus-time-table/bankura-to-karunamoyee.html
+          grep -q 'NH 2' bus-time-table/bankura-to-karunamoyee.html
+          grep -q 'NH 3' bus-time-table/bankura-to-karunamoyee.html
+          test -f bus-time-table/bankura-to-malda.html
+          test -f bus-time-table/bankura-to-ramganj.html
+          test -f bus-time-table/bankura-to-kabilepur.html
+          test -f bus-time-table/bankura-to-lalgola.html
+          test -f bus-time-table/bankura-to-durgapur.html
+          test -f bus-time-table/bankura-to-durgapur-city-centre.html
+          grep -q 'Mejia' bus-time-table/bankura-to-durgapur-city-centre.html
+          grep -q '5:00 PM' bus-time-table/bankura-to-siliguri.html
+          grep -q '118 buses listed' bus-time-table/buses-from-bankura.html
+          grep -q 'bankura-to-lalgola' sitemap.xml
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data scripts/patch_bankura_sbstc.py bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bankura depot: fix 6:25/12:00 AM-PM, add 19 SBSTC buses (Ramganj, Kabilepur, Malda, Lalgola, Durgapur, City Centre, Siliguri routes)"
+            git push
+          fi
