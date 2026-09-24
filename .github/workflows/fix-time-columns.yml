@@ -1,0 +1,82 @@
+name: Time-column fix (105 buses)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-time-columns:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (move/clear misplaced up/down times)
+        run: python3 scripts/fix_time_columns.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          python3 - <<'PYEOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          assert len(d['buses']) == 4099, len(d['buses'])
+          def tmin(s):
+              if not s or ':' not in str(s): return None
+              try:
+                  hh, rest = str(s).strip().split(':', 1)
+                  ru = rest.upper(); ap = 'AM' if 'AM' in ru else ('PM' if 'PM' in ru else '')
+                  h = int(hh); mm = int(ru.replace('AM','').replace('PM','').strip())
+              except Exception: return None
+              if ap:
+                  if h < 1 or h > 12: return None
+                  h = h % 12
+                  if ap == 'PM': h += 12
+              else:
+                  if h > 23: return None
+              return h * 60 + mm
+          n_up = 0
+          for b in d['buses']:
+              prev = None
+              for s in (b.get('stoppages') or []):
+                  t = tmin(s.get('up_time'))
+                  if t is not None:
+                      if prev is not None and t < prev and (prev - t) <= 360: n_up += 1
+                      prev = t
+          assert n_up <= 8, n_up
+          byid = {b['id']: b for b in d['buses']}
+          k = byid['bussathi-pally-duth-546']['stoppages'][-1]
+          assert k['name'] == 'Karunamoyee' and k['up_time'] == '' and k['down_time'] == '3:45 PM', k
+          g = byid['bussathi-ankur-0']['stoppages'][-1]
+          assert g['up_time'] == '', g
+          print('data validation OK, up-backslide flags:', n_up)
+          PYEOF
+          test $(grep -c "," data-time-fix-report.csv) -gt 250
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data scripts/fix_time_columns.py data-time-fix-report.csv bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Time-column fix: 105 buses had return-departure times sitting in the outbound column; moved/cleared per guarded rules (report in data-time-fix-report.csv)"
+            git push
+          fi
