@@ -1,0 +1,41 @@
+name: Stop search partial-data fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-stop-search:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch stop search (partial FULL_BUSES bug) + cache busters
+        run: python3 scripts/fix_stop_search_partial.py
+
+      - name: Validate
+        run: |
+          node --check js/stop-search-all.js
+          node --check js/ux-fixes.js
+          grep -F -q 'var all = (FULL_BUSES && Object.keys(FULL_BUSES).length >= Object.keys(BUSES).length) ? Object.values(FULL_BUSES) : Object.values(BUSES);' js/stop-search-all.js
+          grep -F -q 'var all = (FULL_BUSES && Object.keys(FULL_BUSES).length >= Object.keys(BUSES).length) ? Object.values(FULL_BUSES) : Object.values(BUSES);' js/ux-fixes.js
+          if grep -F -q 'Object.values(FULL_BUSES || BUSES)' js/stop-search-all.js; then echo "old buggy line still in stop-search-all.js"; exit 1; fi
+          if grep -F -q 'Object.values(FULL_BUSES || BUSES)' js/ux-fixes.js; then echo "old buggy line still in ux-fixes.js"; exit 1; fi
+          grep -q 'stop-search-all.js?v=bj20260924a' index.html
+          grep -q 'ux-fixes.js?v=rpt20260924a' index.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add js/stop-search-all.js js/ux-fixes.js index.html scripts/fix_stop_search_partial.py
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Fix stop search: search all buses, not just previously-viewed ones (partial FULL_BUSES bug) - stop searches now list every service incl. untimed ones"
+            git push
+          fi
