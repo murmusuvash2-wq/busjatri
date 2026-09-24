@@ -208,7 +208,7 @@
       var stop = (params.get('stop') || '').toLowerCase().trim();
       var routeMode = !!(from && to);
 
-      var all = Object.values(FULL_BUSES || BUSES);
+      var all = (FULL_BUSES && Object.keys(FULL_BUSES).length >= Object.keys(BUSES).length) ? Object.values(FULL_BUSES) : Object.values(BUSES);
       var rows = [];
 
       if (routeMode) {
