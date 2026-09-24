@@ -1,0 +1,305 @@
+bus_id,bus,route,stop_no,stop,up_time change,down_time change
+wbbus-in-maa-tulsi-1387,MAA TULSI WB67B0888,Bankura -> Silda,8,Ranibandh,up: 10:05 AM -> 10:05 AM,down: 2:55 PM -> -
+bussathi-aani-4,AANI WB37D6281,Chittaranjan -> Kandi,16,Kuli,up: 12:45 PM -> -,down: - -> 12:45 PM
+bussathi-aani-4,AANI WB37D6281,Chittaranjan -> Kandi,17,Kandi,up: 11:15 AM -> -,down: 12:30 PM -> 12:30 PM
+bussathi-ankur-0,ANKUR WB29A4745,Binpur -> Ghatal,9,Khirpai,up: 1:30 PM -> -,down: - -> 1:30 PM
+bussathi-ankur-0,ANKUR WB29A4745,Binpur -> Ghatal,12,Ghatal,up: 11:05 AM -> -,down: 12:40 PM -> 12:40 PM
+bussathi-anupam-48,ANUPAM WB41J9765,Kharagpur -> Bishnupur,4,Godapiasal,up: 3:20 PM -> -,down: - -> 3:20 PM
+bussathi-anupam-48,ANUPAM WB41J9765,Kharagpur -> Bishnupur,5,Salboni,up: 2:55 PM -> -,down: - -> 2:55 PM
+bussathi-arman-60,ARMAN WB33D4137,Purulia -> Digha,16,Belda,up: 9:55 AM -> -,down: - -> 9:55 AM
+bussathi-ayesha-62,AYESHA WB67B5662,Bankura -> Jhargram,11,Silda,up: 3:20 PM -> -,down: - -> 3:20 PM
+bussathi-ayesha-62,AYESHA WB67B5662,Bankura -> Jhargram,14,Jhargram,up: 12:40 PM -> -,down: 2:05 PM -> 2:05 PM
+bussathi-azad-hind-70,AZAD HIND WB675445,Durgapur (Station) -> Kashipur,5,Bankura,up: 11:40 AM -> -,down: 5:10 PM -> 5:10 PM
+bussathi-azam-76,AZAM WB37C4174,Jangipur -> Asansol,10,Durgapur (Muchipara),up: 2:30 PM -> -,down: - -> 2:30 PM
+bussathi-azam-76,AZAM WB37C4174,Jangipur -> Asansol,11,Durgapur (City Center),up: 11:00 AM -> -,down: 2:20 PM -> 2:20 PM
+bussathi-azam-76,AZAM WB37C4174,Jangipur -> Asansol,13,Raniganj,up: 11:25 AM -> -,down: 1:55 PM -> 1:55 PM
+bussathi-azam-76,AZAM WB37C4174,Jangipur -> Asansol,14,Asansol,up: 11:50 AM -> -,down: 1:20 PM -> 1:20 PM
+bussathi-atithi-84,ATITHI WB672909,Medinipur -> Bankura,15,Dhaldanga,up: 11:15 AM -> -,down: - -> 11:15 AM
+bussathi-atithi-84,ATITHI WB672909,Medinipur -> Bankura,16,Bankura,up: 10:15 AM -> -,down: 10:50 AM -> 10:50 AM
+bussathi-avijan-90,AVIJAN WB33C0266,Tarkeshwar -> Medinipur,13,Keshpur,up: 11:05 AM -> -,down: - -> 11:05 AM
+bussathi-avijan-90,AVIJAN WB33C0266,Tarkeshwar -> Medinipur,14,Medinipur,up: 8:45 AM -> -,down: 10:20 AM -> 10:20 AM
+bussathi-badsha-106,BADSHA WB490036,Jhargram -> Manbazar,13,Pairachali,up: 10:20 AM -> -,down: - -> 10:20 AM
+bussathi-badsha-106,BADSHA WB490036,Jhargram -> Manbazar,14,Manbazar,up: 9:00 AM -> -,down: 10:00 AM -> 10:00 AM
+bussathi-balaji-107,BALAJI WB29B5612,Egra -> Howrah,13,Dhulagarh,up: 12:55 PM -> -,down: - -> 12:55 PM
+bussathi-balaji-107,BALAJI WB29B5612,Egra -> Howrah,16,Howrah,up: 9:45 AM -> -,down: 11:55 AM -> 11:55 AM
+bussathi-banalata-111,BANALATA WB67A5056,Durgapur (Station) -> Bandwan,11,Hatirampur,up: 5:00 PM -> -,down: - -> 5:00 PM
+bussathi-banalata-111,BANALATA WB67A5056,Durgapur (Station) -> Bandwan,12,Khatra,up: 11:00 AM -> -,down: 4:40 PM -> 4:40 PM
+bussathi-banalata-111,BANALATA WB67A5056,Durgapur (Station) -> Bandwan,13,Ranibandh,up: 11:40 AM -> -,down: 3:40 PM -> 3:40 PM
+bussathi-banalata-111,BANALATA WB67A5056,Durgapur (Station) -> Bandwan,17,Bandwan,up: 12:40 PM -> -,down: 2:35 PM -> 2:35 PM
+bussathi-baneswar-116,BANESWAR WB33F3150,Kantore -> Kantakhali,14,Jamna,up: 3:00 PM -> -,down: - -> 3:00 PM
+bussathi-baneswar-116,BANESWAR WB33F3150,Kantore -> Kantakhali,16,Sabang,up: 2:25 PM -> -,down: - -> 2:25 PM
+bussathi-baneswar-116,BANESWAR WB33F3150,Kantore -> Kantakhali,17,Kantakhali,up: 1:50 PM -> -,down: - -> 1:50 PM
+bussathi-banki-bihari-0,BANKI BIHARI WB31A6632,Dantan -> Howrah,20,Howrah,up: 8:00 AM -> 8:00 AM,down: 3:10 PM -> -
+bussathi-bhagyalaxmi-125,BHAGYALAXMI WB55A4911,Balarampur -> Bankura,9,Jorda,up: 1:00 PM -> -,down: - -> 1:00 PM
+bussathi-bhagyalaxmi-125,BHAGYALAXMI WB55A4911,Balarampur -> Bankura,10,Bangla,up: 9:40 AM -> -,down: 12:40 PM -> 12:40 PM
+bussathi-bhagyalaxmi-125,BHAGYALAXMI WB55A4911,Balarampur -> Bankura,13,Puabagan,up: 9:55 AM -> -,down: 12:15 PM -> 12:15 PM
+bussathi-bhagyalaxmi-125,BHAGYALAXMI WB55A4911,Balarampur -> Bankura,15,Bankura,up: 10:10 AM -> -,down: 11:30 AM -> 11:30 AM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,3,Godapiasal,up: 3:45 PM -> -,down: - -> 3:45 PM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,4,Salboni,up: 3:10 PM -> -,down: - -> 3:10 PM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,5,Chandrakona Road,up: 10:50 AM -> -,down: 2:30 PM -> 2:30 PM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,6,Goaltore,up: 11:30 AM -> -,down: 2:10 PM -> 2:10 PM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,7,Pingboni,up: 11:35 AM -> -,down: 2:05 PM -> 2:05 PM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,8,Ramgarh,up: 11:50 AM -> -,down: 1:45 PM -> 1:45 PM
+bussathi-biswarup-148,BISWARUP WB33F2692,Medinipur -> Lalgarh,10,Lalgarh,up: 12:15 PM -> -,down: 1:20 PM -> 1:20 PM
+bussathi-charubala-164,CHARUBALA WB67A4294,Belut -> Silda,12,Simlapal,up: 1:10 PM -> -,down: - -> 1:10 PM
+bussathi-charubala-164,CHARUBALA WB67A4294,Belut -> Silda,14,Raipur,up: 9:50 AM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-charubala-164,CHARUBALA WB67A4294,Belut -> Silda,16,Fulkusma,up: 10:25 AM -> -,down: 11:55 AM -> 11:55 AM
+bussathi-charubala-164,CHARUBALA WB67A4294,Belut -> Silda,17,Silda,up: 10:50 AM -> -,down: 11:25 AM -> 11:25 AM
+bussathi-dakshayani-169,DAKSHAYANI WB33F2768,Medinipur -> Digha,8,Digha,up: 10:40 AM -> -,down: - -> 10:40 AM
+bussathi-debi-laxmi-187,DEBI LAXMI WB41H7078,Kutni -> Bardhaman,15,Durgapur (Muchipara),up: 12:05 PM -> -,down: - -> 12:05 PM
+bussathi-debi-laxmi-187,DEBI LAXMI WB41H7078,Kutni -> Bardhaman,16,Panagarh,up: 8:10 AM -> -,down: 11:45 AM -> 11:45 AM
+bussathi-debi-laxmi-187,DEBI LAXMI WB41H7078,Kutni -> Bardhaman,19,Bardhaman,up: 9:20 AM -> -,down: 10:40 AM -> 10:40 AM
+bussathi-debraj-188,DEBRAJ WB67C1759,Amlasuli -> Bankura,4,Taldangra,up: 2:50 PM -> -,down: 6:20 PM -> 6:20 PM
+bussathi-gurunanak-245,GURUNANAK WB37E6817,Bankura -> Siliguri,15,Islampur,up: 8:00 PM -> -,down: - -> 8:00 PM
+bussathi-gurunanak-245,GURUNANAK WB37E6817,Bankura -> Siliguri,16,Siliguri,up: 6:30 PM -> -,down: 6:50 PM -> 6:50 PM
+bussathi-hilltop-super-0,HILLTOP SUPER WB55B6775,Purulia -> Baghmundi,3,Aharara,up: 4:05 PM -> -,down: - -> 4:05 PM
+bussathi-hilltop-super-0,HILLTOP SUPER WB55B6775,Purulia -> Baghmundi,4,Sirkabad,up: 12:05 PM -> -,down: 3:55 PM -> 3:55 PM
+bussathi-hilltop-super-0,HILLTOP SUPER WB55B6775,Purulia -> Baghmundi,5,Ajodhya Hills,up: 3:15 PM -> -,down: - -> 3:15 PM
+bussathi-hilltop-super-0,HILLTOP SUPER WB55B6775,Purulia -> Baghmundi,6,Baghmundi,up: 1:40 PM -> -,down: 2:00 PM -> 2:00 PM
+bussathi-hitlar-250,HITLAR WB316982,Digha -> Medinipur,6,Belda,up: 3:10 PM -> -,down: - -> 3:10 PM
+bussathi-hitlar-250,HITLAR WB316982,Digha -> Medinipur,7,Kharagpur,up: 2:20 PM -> -,down: - -> 2:20 PM
+bussathi-hitlar-250,HITLAR WB316982,Digha -> Medinipur,8,Medinipur,up: 11:25 AM -> -,down: 1:35 PM -> 1:35 PM
+bussathi-iswarchandra-0,ISWARCHANDRA WB33H8471,Kharagpur -> Durgapur (City Center),18,Durgapur (Station),up: 12:20 PM -> -,down: 2:45 PM -> 2:45 PM
+bussathi-jackson-0,JACKSON WB29H4299,Kolkata (Esplanade) -> Digha,13,Henria,up: 3:20 PM -> -,down: - -> 3:20 PM
+bussathi-jackson-0,JACKSON WB29H4299,Kolkata (Esplanade) -> Digha,14,Contai,up: 11:30 AM -> -,down: 2:50 PM -> 2:50 PM
+bussathi-jackson-0,JACKSON WB29H4299,Kolkata (Esplanade) -> Digha,16,Digha,up: 12:30 PM -> -,down: 1:50 PM -> 1:50 PM
+bussathi-jagannath-travels-0,JAGANNATH TRAVELS WB50AA6970,Khetua -> Kolkata,22,Dakshineswar,up: 5:30 PM -> -,down: - -> 5:30 PM
+bussathi-jagannath-travels-0,JAGANNATH TRAVELS WB50AA6970,Khetua -> Kolkata,23,Dunlop,up: 1:00 PM -> -,down: 5:25 PM -> 5:25 PM
+bussathi-jagannath-travels-0,JAGANNATH TRAVELS WB50AA6970,Khetua -> Kolkata,24,Shyambazar,up: 1:20 PM -> -,down: 4:55 PM -> 4:55 PM
+bussathi-jagannath-travels-0,JAGANNATH TRAVELS WB50AA6970,Khetua -> Kolkata,25,Kolkata,up: 1:30 PM -> -,down: 4:45 PM -> 4:45 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),13,Guptamoni,up: 5:30 PM -> -,down: - -> 5:30 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),15,Debra,up: 4:30 PM -> -,down: - -> 4:30 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),17,Kolaghat,up: 3:45 PM -> -,down: - -> 3:45 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),18,Bagnan,up: 3:30 PM -> -,down: - -> 3:30 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),20,Dhulagarh,up: 3:00 PM -> -,down: - -> 3:00 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),21,Kona Express More,up: 2:40 PM -> -,down: - -> 2:40 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),22,Santragachi,up: 2:35 PM -> -,down: - -> 2:35 PM
+bussathi-jai-maa-durga-264,JAI MAA DURGA WB55B1765,Manbazar -> Kolkata (Esplanade),23,Kolkata (Esplanade),up: 10:40 AM -> -,down: 2:00 PM -> 2:00 PM
+bussathi-jinia-275,JINIA WB39B7718,Durgapur (City Center) -> Digha,18,Belda,up: 10:40 AM -> -,down: - -> 10:40 AM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,16,Khirpai,up: 3:45 PM -> -,down: - -> 3:45 PM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,18,Chandrakona Town,up: 9:45 AM -> -,down: 3:15 PM -> 3:15 PM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,19,Chandrakona Road,up: 10:20 AM -> -,down: 2:45 PM -> 2:45 PM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,21,Garhbeta,up: 10:40 AM -> -,down: 2:15 PM -> 2:15 PM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,22,Dhadika,up: 10:50 AM -> -,down: 2:05 PM -> 2:05 PM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,23,Bankadaha,up: 11:00 AM -> -,down: 1:55 PM -> 1:55 PM
+bussathi-joy-baba-lokenath-0,JOY BABA LOKENATH WB49N2226,Gadiara -> Bishnupur,24,Bishnupur,up: 11:30 AM -> -,down: 1:30 PM -> 1:30 PM
+bussathi-joy-gopal-291,JOY GOPAL WB33A4569,Bankura -> Jhargram,10,Fulkusma,up: 9:30 AM -> -,down: 3:05 PM -> 3:05 PM
+bussathi-joy-maa-tara-296,JOY MAA TARA WB41B8613,Jamtoria -> Bankura,10,Puabagan,up: 12:35 PM -> -,down: - -> 12:35 PM
+bussathi-joy-maa-tara-296,JOY MAA TARA WB41B8613,Jamtoria -> Bankura,11,Bankura,up: 10:30 AM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-jugalsmriti-304,JUGALSMRITI WB531988,Bolpur -> Krishnanagar,8,Jamalpur,up: 11:30 AM -> -,down: - -> 11:30 AM
+bussathi-jugalsmriti-304,JUGALSMRITI WB531988,Bolpur -> Krishnanagar,9,Parulia,up: 11:00 AM -> -,down: - -> 11:00 AM
+bussathi-jugalsmriti-304,JUGALSMRITI WB531988,Bolpur -> Krishnanagar,10,Hematpur,up: 10:50 AM -> -,down: - -> 10:50 AM
+bussathi-jugalsmriti-304,JUGALSMRITI WB531988,Bolpur -> Krishnanagar,11,Nabadwip,up: 8:55 AM -> -,down: 10:40 AM -> 10:40 AM
+bussathi-jugalsmriti-304,JUGALSMRITI WB531988,Bolpur -> Krishnanagar,12,Krishnanagar,up: 9:30 AM -> -,down: 9:50 AM -> 9:50 AM
+bussathi-kaberi-307,KABERI WB33D4039,Anandapur -> Kamalgazi,16,Ruby,up: 4:10 PM -> -,down: - -> 4:10 PM
+bussathi-kaberi-307,KABERI WB33D4039,Anandapur -> Kamalgazi,17,Kamalgazi,up: 10:25 AM -> -,down: 3:30 PM -> 3:30 PM
+bussathi-kakatua-310,KAKATUA WB39B8008,Pandaveswar -> Purulia,7,Raghunathpur,up: 10:45 AM -> -,down: 3:30 PM -> 3:30 PM
+bussathi-kangshaboti-329,KANGSHABOTI MP66ZD3330,Ranibandh -> Kolkata (Esplanade),6,Bankura,up: 8:30 PM -> -,down: - -> 8:30 PM
+bussathi-krishna-0,KRISHNA WB336326,Molian -> Kashipur,6,Puabagan,up: 5:10 PM -> -,down: - -> 5:10 PM
+bussathi-krishna-0,KRISHNA WB336326,Molian -> Kashipur,11,Arrah,up: 1:25 PM -> -,down: - -> 1:25 PM
+bussathi-krishna-0,KRISHNA WB336326,Molian -> Kashipur,12,Rangamati,up: 11:00 AM -> -,down: 1:10 PM -> 1:10 PM
+bussathi-krishna-0,KRISHNA WB336326,Molian -> Kashipur,13,Talajuri,up: 11:15 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-krishna-0,KRISHNA WB336326,Molian -> Kashipur,15,Kashipur,up: 12:00 PM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-krishna-gopal-1,KRISHNA GOPAL WB496696,Fulkusma -> Tarkeshwar,12,Kamarpukur,up: 9:40 AM -> -,down: 2:40 PM -> 2:40 PM
+bussathi-krishna-gopal-1,KRISHNA GOPAL WB496696,Fulkusma -> Tarkeshwar,13,Goghat,up: 9:50 AM -> -,down: 2:30 PM -> 2:30 PM
+bussathi-krishna-gopal-335,KRISHNA GOPAL WB41J4584,Arambagh -> Asansol,9,Durgapur (Muchipara),up: 1:05 PM -> -,down: - -> 1:05 PM
+bussathi-krishna-gopal-335,KRISHNA GOPAL WB41J4584,Arambagh -> Asansol,10,Durgapur (City Center),up: 8:30 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-krishna-gopal-335,KRISHNA GOPAL WB41J4584,Arambagh -> Asansol,11,Andal,up: 8:50 AM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-krishna-gopal-335,KRISHNA GOPAL WB41J4584,Arambagh -> Asansol,13,Asansol,up: 9:30 AM -> -,down: 11:40 AM -> 11:40 AM
+bussathi-lal-parul-344,LAL PARUL WB67G9535,Bankura -> Medinipur,3,Onda,up: 7:00 AM -> -,down: 3:10 PM -> 3:10 PM
+bussathi-lal-parul-344,LAL PARUL WB67G9535,Bankura -> Medinipur,4,Ramsagar,up: 7:25 AM -> -,down: 2:45 PM -> 2:45 PM
+bussathi-laxmipriya-0,LAXMIPRIYA WB67A0036,Lakshmisagar -> Bankura,3,Bibarda,up: 7:30 AM -> 7:30 AM,down: 11:45 AM -> -
+bussathi-laxmipriya-0,LAXMIPRIYA WB67A0036,Lakshmisagar -> Bankura,6,Dhaldanga,up: 8:20 AM -> -,down: 10:40 AM -> 10:40 AM
+bussathi-laxmipriya-0,LAXMIPRIYA WB67A0036,Lakshmisagar -> Bankura,7,Bankura,up: 8:50 AM -> -,down: 10:10 AM -> 10:10 AM
+bussathi-laxmipriya-1,LAXMIPRIYA WB33A9065,Lakshmisagar -> Bankura,3,Bibarda,up: 6:55 AM -> 6:55 AM,down: 9:55 AM -> -
+bussathi-maa-bagala-360,MAA BAGALA WB33A5329,Contai -> Fulkusma,13,Fulkusma,up: 10:25 AM -> -,down: 1:10 PM -> 1:10 PM
+bussathi-maa-bargabhima-0,MAA BARGABHIMA WB67C1592,Bankura -> Barakar,10,Saltora,up: 1:20 PM -> -,down: - -> 1:20 PM
+bussathi-maa-bargabhima-0,MAA BARGABHIMA WB67C1592,Bankura -> Barakar,11,Tiluri,up: 8:20 AM -> -,down: 1:10 PM -> 1:10 PM
+bussathi-maa-bargabhima-0,MAA BARGABHIMA WB67C1592,Bankura -> Barakar,12,Madhukunda,up: 8:45 AM -> -,down: 12:45 PM -> 12:45 PM
+bussathi-maa-bargabhima-0,MAA BARGABHIMA WB67C1592,Bankura -> Barakar,13,Sarbori More,up: 9:05 AM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-maa-bargabhima-0,MAA BARGABHIMA WB67C1592,Bankura -> Barakar,14,Chirkunda,up: 9:50 AM -> -,down: 11:40 AM -> 11:40 AM
+bussathi-maa-bargabhima-0,MAA BARGABHIMA WB67C1592,Bankura -> Barakar,15,Barakar,up: 10:10 AM -> -,down: 11:20 AM -> 11:20 AM
+bussathi-maa-durga-382,MAA DURGA WB67A1120,Manbazar -> Bankura,11,Dhaldanga,up: 3:55 PM -> -,down: - -> 3:55 PM
+bussathi-maa-durga-382,MAA DURGA WB67A1120,Manbazar -> Bankura,12,Bankura,up: 1:30 PM -> -,down: 3:15 PM -> 3:15 PM
+bussathi-maa-laxmi-405,MAA LAXMI WB29H2171,Solpatta -> Barasat,22,Madhyamgram,up: 11:05 AM -> -,down: - -> 11:05 AM
+bussathi-maa-laxmi-405,MAA LAXMI WB29H2171,Solpatta -> Barasat,23,Barasat,up: 8:50 AM -> -,down: 10:55 AM -> 10:55 AM
+bussathi-maa-manasa-408,MAA MANASA WB33C6926,Fulkusma -> Bankura,4,P More,up: 6:40 AM -> -,down: 11:15 AM -> 11:15 AM
+bussathi-maa-nachinda-0,MAA NACHINDA WB29A5143,Haldia -> Bankura,28,Onda,up: 12:40 PM -> -,down: - -> 12:40 PM
+bussathi-maa-nachinda-0,MAA NACHINDA WB29A5143,Haldia -> Bankura,29,Dhaldanga,up: 10:40 AM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-maa-nachinda-0,MAA NACHINDA WB29A5143,Haldia -> Bankura,30,Bankura,up: 11:10 AM -> -,down: 11:45 AM -> 11:45 AM
+bussathi-maa-rakshakali-423,MAA RAKSHAKALI WB33C4915,Jhargram -> Bankura,13,Dhaldanga,up: 1:00 PM -> -,down: - -> 1:00 PM
+bussathi-maa-rakshakali-423,MAA RAKSHAKALI WB33C4915,Jhargram -> Bankura,14,Bankura,up: 10:10 AM -> -,down: 12:20 PM -> 12:20 PM
+bussathi-maa-talandamoyee-440,MAA TALANDAMOYEE WB29B8312,Trilochanpur -> Silda,18,Fulkusma,up: 2:45 PM -> -,down: - -> 2:45 PM
+bussathi-maa-talandamoyee-440,MAA TALANDAMOYEE WB29B8312,Trilochanpur -> Silda,19,Silda,up: 11:40 AM -> -,down: 2:20 PM -> 2:20 PM
+bussathi-maa-tulsi-444,MAA TULSI WB67A0328,Dhanara -> Durgapur (Station),10,Puabagan,up: 3:10 PM -> -,down: - -> 3:10 PM
+bussathi-maa-tulsi-444,MAA TULSI WB67A0328,Dhanara -> Durgapur (Station),11,Dhaldanga,up: 3:05 PM -> -,down: - -> 3:05 PM
+bussathi-maa-tulsi-444,MAA TULSI WB67A0328,Dhanara -> Durgapur (Station),12,Bankura,up: 9:15 AM -> -,down: 2:45 PM -> 2:45 PM
+bussathi-maa-tulsi-444,MAA TULSI WB67A0328,Dhanara -> Durgapur (Station),14,Beliatore,up: 10:05 AM -> -,down: 1:30 PM -> 1:30 PM
+bussathi-maa-tulsi-444,MAA TULSI WB67A0328,Dhanara -> Durgapur (Station),15,Barjora,up: 10:25 AM -> -,down: 1:10 PM -> 1:10 PM
+bussathi-maa-tulsi-444,MAA TULSI WB67A0328,Dhanara -> Durgapur (Station),16,Durgapur (Station),up: 10:45 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-maa-usha-447,MAA USHA WB495718,Digha -> Jhargram,6,Belda,up: 8:40 AM -> 8:40 AM,down: 6:20 PM -> -
+bussathi-madan-mohan-450,MADAN MOHAN WB29C5225,Haldia -> Hoomgarh,9,Debra,up: 8:25 AM -> -,down: 5:20 PM -> 5:20 PM
+bussathi-madanmohan-452,MADANMOHAN WB67B4671,Durgapur (Station) -> Bandwan,7,Puabagan,up: 1:10 PM -> -,down: - -> 1:10 PM
+bussathi-madanmohan-452,MADANMOHAN WB67B4671,Durgapur (Station) -> Bandwan,10,Bangla,up: 8:15 AM -> -,down: 12:55 PM -> 12:55 PM
+bussathi-madanmohan-452,MADANMOHAN WB67B4671,Durgapur (Station) -> Bandwan,11,Hatirampur,up: 8:45 AM -> -,down: 12:25 PM -> 12:25 PM
+bussathi-madanmohan-452,MADANMOHAN WB67B4671,Durgapur (Station) -> Bandwan,13,Manbazar,up: 9:20 AM -> -,down: 11:35 AM -> 11:35 AM
+bussathi-madanmohan-452,MADANMOHAN WB67B4671,Durgapur (Station) -> Bandwan,14,Bandwan,up: 10:20 AM -> -,down: 10:30 AM -> 10:30 AM
+bussathi-mafuzar-454,MAFUZAR WB37D6341,Mougram -> Asansol,14,Raniganj,up: 1:20 PM -> -,down: - -> 1:20 PM
+bussathi-mafuzar-454,MAFUZAR WB37D6341,Mougram -> Asansol,15,Asansol,up: 11:15 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-maharaja-0,MAHARAJA WB55B8111,Tatanagar -> Dhanbad,3,Barabazar,up: 8:10 PM -> -,down: - -> 8:10 PM
+bussathi-mallick-brothers-468,MALLICK BROTHERS WB11C3375,Tarkeshwar -> Bankura,11,Onda,up: 11:25 AM -> -,down: - -> 11:25 AM
+bussathi-mallick-brothers-468,MALLICK BROTHERS WB11C3375,Tarkeshwar -> Bankura,12,Dhaldanga,up: 11:10 AM -> -,down: - -> 11:10 AM
+bussathi-mallick-brothers-468,MALLICK BROTHERS WB11C3375,Tarkeshwar -> Bankura,13,Bankura,up: 9:50 AM -> -,down: 10:35 AM -> 10:35 AM
+bussathi-mamatamoye-474,MAMATAMOYE WB33C7786,Ghatal -> Raipur,10,Raipur,up: 12:20 PM -> -,down: - -> 12:20 PM
+bussathi-mamoni-475,MAMONI WB57Q9518,Kandi -> Digha,21,Contai,up: 10:30 AM -> -,down: - -> 10:30 AM
+bussathi-mamoni-475,MAMONI WB57Q9518,Kandi -> Digha,23,Digha,up: 9:30 AM -> -,down: - -> 9:30 AM
+bussathi-mdg-494,MDG WB17N4117,Bishnupur -> Kolkata (Esplanade),13,Dankuni,up: 1:25 PM -> -,down: - -> 1:25 PM
+bussathi-mdg-494,MDG WB17N4117,Bishnupur -> Kolkata (Esplanade),14,Salap,up: 1:15 PM -> -,down: - -> 1:15 PM
+bussathi-mdg-494,MDG WB17N4117,Bishnupur -> Kolkata (Esplanade),15,Kona Express More,up: 1:10 PM -> -,down: - -> 1:10 PM
+bussathi-mdg-494,MDG WB17N4117,Bishnupur -> Kolkata (Esplanade),16,Santragachi,up: 1:05 PM -> -,down: - -> 1:05 PM
+bussathi-mdg-494,MDG WB17N4117,Bishnupur -> Kolkata (Esplanade),17,Kolkata (Esplanade),up: 9:30 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-monikanchan-0,MONIKANCHAN WB29C4457,Solpatta -> Karunamoyee,15,Kona Express More,up: 12:10 PM -> -,down: - -> 12:10 PM
+bussathi-monikanchan-0,MONIKANCHAN WB29C4457,Solpatta -> Karunamoyee,17,Bally,up: 11:50 AM -> -,down: - -> 11:50 AM
+bussathi-monikanchan-0,MONIKANCHAN WB29C4457,Solpatta -> Karunamoyee,19,Dunlop,up: 8:40 AM -> -,down: 11:40 AM -> 11:40 AM
+bussathi-monikanchan-0,MONIKANCHAN WB29C4457,Solpatta -> Karunamoyee,20,Dum Dum Airport,up: 9:00 AM -> -,down: 11:25 AM -> 11:25 AM
+bussathi-monikanchan-0,MONIKANCHAN WB29C4457,Solpatta -> Karunamoyee,21,Karunamoyee,up: 9:45 AM -> -,down: 10:45 AM -> 10:45 AM
+bussathi-nandini-0,NANDINI WB471660,Panchthupi -> Asansol,10,Durgapur (Muchipara),up: 3:05 PM -> -,down: - -> 3:05 PM
+bussathi-nandini-0,NANDINI WB471660,Panchthupi -> Asansol,11,Durgapur (Station),up: 11:30 AM -> -,down: 2:50 PM -> 2:50 PM
+bussathi-nandini-0,NANDINI WB471660,Panchthupi -> Asansol,13,Raniganj,up: 2:20 PM -> -,down: - -> 2:20 PM
+bussathi-nandini-0,NANDINI WB471660,Panchthupi -> Asansol,14,Asansol,up: 12:35 PM -> -,down: 1:50 PM -> 1:50 PM
+bussathi-nasrin-nargis-521,NASRIN NARGIS WB532193,Bolpur -> Hematpur,8,Jamalpur,up: 1:20 PM -> -,down: - -> 1:20 PM
+bussathi-nasrin-nargis-521,NASRIN NARGIS WB532193,Bolpur -> Hematpur,9,Parulia,up: 1:10 PM -> -,down: - -> 1:10 PM
+bussathi-nasrin-nargis-521,NASRIN NARGIS WB532193,Bolpur -> Hematpur,10,Hematpur,up: 10:15 AM -> -,down: 12:55 PM -> 12:55 PM
+bussathi-nayak-524,NAYAK WB67B2398,Gogra -> Khatra,7,Taldangra,up: 2:45 PM -> -,down: - -> 2:45 PM
+bussathi-nayak-524,NAYAK WB67B2398,Gogra -> Khatra,8,Simlapal,up: 9:45 AM -> -,down: 2:20 PM -> 2:20 PM
+bussathi-nayak-524,NAYAK WB67B2398,Gogra -> Khatra,10,P More,up: 10:00 AM -> -,down: 1:50 PM -> 1:50 PM
+bussathi-nayak-524,NAYAK WB67B2398,Gogra -> Khatra,13,Khatra,up: 11:30 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-nayanmoni-525,NAYANMONI WB33F3297,Kharagpur -> Bardhaman,9,Ramjibanpur,up: 5:35 PM -> -,down: - -> 5:35 PM
+bussathi-nayanmoni-525,NAYANMONI WB33F3297,Kharagpur -> Bardhaman,10,Kamarpukur,up: 5:10 PM -> -,down: - -> 5:10 PM
+bussathi-nayanmoni-525,NAYANMONI WB33F3297,Kharagpur -> Bardhaman,12,Arambagh,up: 12:30 PM -> -,down: 4:35 PM -> 4:35 PM
+bussathi-nayanmoni-525,NAYANMONI WB33F3297,Kharagpur -> Bardhaman,13,Uchalan,up: 4:05 PM -> -,down: - -> 4:05 PM
+bussathi-nayanmoni-525,NAYANMONI WB33F3297,Kharagpur -> Bardhaman,15,Sehara Bazar,up: 3:50 PM -> -,down: - -> 3:50 PM
+bussathi-nayanmoni-525,NAYANMONI WB33F3297,Kharagpur -> Bardhaman,17,Bardhaman,up: 2:00 PM -> -,down: 3:15 PM -> 3:15 PM
+bussathi-neha-travels-527,NEHA TRAVELS WB33F3306,Kharagpur -> Bardhaman,13,Uchalan,up: 3:55 PM -> -,down: - -> 3:55 PM
+bussathi-neha-travels-527,NEHA TRAVELS WB33F3306,Kharagpur -> Bardhaman,15,Sehara Bazar,up: 3:25 PM -> -,down: - -> 3:25 PM
+bussathi-neha-travels-527,NEHA TRAVELS WB33F3306,Kharagpur -> Bardhaman,17,Bardhaman,up: 1:25 PM -> -,down: 2:45 PM -> 2:45 PM
+bussathi-nilachal-0,NILACHAL WB11C3680,Durgapur (Station) -> Purulia,7,Kamalpur,up: 12:20 PM -> -,down: - -> 12:20 PM
+bussathi-nilachal-0,NILACHAL WB11C3680,Durgapur (Station) -> Purulia,8,Bishpuria,up: 7:30 AM -> -,down: 12:00 PM -> 12:00 PM
+bussathi-nilachal-0,NILACHAL WB11C3680,Durgapur (Station) -> Purulia,10,Lalpur,up: 7:55 AM -> -,down: 11:40 AM -> 11:40 AM
+bussathi-nilachal-0,NILACHAL WB11C3680,Durgapur (Station) -> Purulia,11,Ladhurka,up: 8:10 AM -> -,down: 11:25 AM -> 11:25 AM
+bussathi-nilachal-0,NILACHAL WB11C3680,Durgapur (Station) -> Purulia,12,Purulia,up: 8:50 AM -> -,down: 10:50 AM -> 10:50 AM
+bussathi-nilkantha-538,NILKANTHA WB67A9652,Dumurtore -> Bankura,9,Dhaldanga,up: 12:15 PM -> -,down: - -> 12:15 PM
+bussathi-nilkantha-538,NILKANTHA WB67A9652,Dumurtore -> Bankura,10,Bankura,up: 8:50 AM -> -,down: 11:35 AM -> 11:35 AM
+bussathi-pally-duth-546,PALLY DUTH WB41K3344,Sonamukhi -> Karunamoyee,14,Karunamoyee,up: 3:45 PM -> -,down: - -> 3:45 PM
+bussathi-pratiksha-573,PRATIKSHA WB41H7004,Bardhaman -> Tatanagar,20,Poradih,up: 8:50 AM -> -,down: - -> 8:50 AM
+bussathi-priyajit-586,PRIYAJIT WB49N0795,Howrah -> Chandrakona Town,2,Santragachi,up: 7:10 AM -> -,down: 5:30 PM -> 5:30 PM
+bussathi-puspanjali-0,PUSPANJALI WB50AB1703,Chandrakona Town -> Karunamoyee,17,Kona Express More,up: 11:35 AM -> -,down: - -> 11:35 AM
+bussathi-puspanjali-0,PUSPANJALI WB50AB1703,Chandrakona Town -> Karunamoyee,20,Dakshineswar,up: 6:05 AM -> -,down: 11:05 AM -> 11:05 AM
+bussathi-puspanjali-0,PUSPANJALI WB50AB1703,Chandrakona Town -> Karunamoyee,21,Dunlop,up: 6:15 AM -> -,down: 11:00 AM -> 11:00 AM
+bussathi-puspanjali-0,PUSPANJALI WB50AB1703,Chandrakona Town -> Karunamoyee,22,Dum Dum Airport,up: 6:35 AM -> -,down: 10:35 AM -> 10:35 AM
+bussathi-puspanjali-0,PUSPANJALI WB50AB1703,Chandrakona Town -> Karunamoyee,23,Karunamoyee,up: 7:20 AM -> -,down: 9:50 AM -> 9:50 AM
+bussathi-radha-damodar-599,RADHA DAMODAR WB297565,Bardhaman -> Mecheda,9,Khirpai,up: 1:45 PM -> -,down: - -> 1:45 PM
+bussathi-radha-damodar-599,RADHA DAMODAR WB297565,Bardhaman -> Mecheda,12,Ghatal,up: 8:40 AM -> -,down: 1:20 PM -> 1:20 PM
+bussathi-radha-damodar-599,RADHA DAMODAR WB297565,Bardhaman -> Mecheda,18,Mechogram,up: 12:15 PM -> -,down: - -> 12:15 PM
+bussathi-radha-damodar-599,RADHA DAMODAR WB297565,Bardhaman -> Mecheda,19,Mecheda,up: 10:10 AM -> -,down: 11:50 AM -> 11:50 AM
+bussathi-radharani-604,RADHARANI WB11A1811,Parsola -> Bankura,6,Dhaldanga,up: 2:50 PM -> -,down: - -> 2:50 PM
+bussathi-radharani-604,RADHARANI WB11A1811,Parsola -> Bankura,7,Bankura,up: 11:00 AM -> -,down: 2:10 PM -> 2:10 PM
+bussathi-raja-613,RAJA WB41B9711,Chittaranjan -> Bankura,6,Durgapur (Station),up: 2:25 PM -> -,down: - -> 2:25 PM
+bussathi-raja-613,RAJA WB41B9711,Chittaranjan -> Bankura,8,Beliatore,up: 1:45 PM -> -,down: - -> 1:45 PM
+bussathi-raja-613,RAJA WB41B9711,Chittaranjan -> Bankura,10,Bankura,up: 9:25 AM -> -,down: 12:50 PM -> 12:50 PM
+bussathi-rajdhani-620,RAJDHANI WB17N3738,Bankura -> Kolkata (Esplanade),16,Dankuni,up: 3:25 PM -> -,down: - -> 3:25 PM
+bussathi-rajdhani-620,RAJDHANI WB17N3738,Bankura -> Kolkata (Esplanade),19,Dunlop,up: 3:05 PM -> -,down: - -> 3:05 PM
+bussathi-rajdhani-620,RAJDHANI WB17N3738,Bankura -> Kolkata (Esplanade),20,Shyambazar,up: 2:30 PM -> -,down: - -> 2:30 PM
+bussathi-rajdhani-620,RAJDHANI WB17N3738,Bankura -> Kolkata (Esplanade),21,Kolkata (Esplanade),up: 9:30 AM -> -,down: 2:20 PM -> 2:20 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,14,Khukur Daha,up: 4:15 PM -> -,down: - -> 4:15 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,15,Goura,up: 4:00 PM -> -,down: - -> 4:00 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,16,Sultannagar,up: 3:55 PM -> -,down: - -> 3:55 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,17,Daspur,up: 3:45 PM -> -,down: - -> 3:45 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,18,Ghatal,up: 10:55 AM -> -,down: 3:20 PM -> 3:20 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,19,Baroda Chowkan,up: 11:10 AM -> -,down: 3:10 PM -> 3:10 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,20,Radhanagar,up: 11:15 AM -> -,down: 3:05 PM -> 3:05 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,21,Khirpai,up: 11:40 AM -> -,down: 2:50 PM -> 2:50 PM
+bussathi-rajdhani-express-621,RAJDHANI EXPRESS WB49N2499,Karunamoyee -> Ramjibanpur,22,Ramjibanpur,up: 12:10 PM -> -,down: 2:20 PM -> 2:20 PM
+bussathi-rof-rof-646,ROF ROF WB33K5234,Bishnupur -> Haldia,18,Haldia,up: 12:25 PM -> -,down: 2:00 PM -> 2:00 PM
+bussathi-rubina-654,RUBINA WB511234,Mayapur -> Bardhaman,10,Bardhaman,up: 12:00 PM -> -,down: - -> 12:00 PM
+bussathi-rudrani-0,RUDRANI WB33D3454,Purulia -> Digha,17,Belda,up: 9:55 AM -> -,down: - -> 9:55 AM
+bussathi-saklin-674,SAKLIN WB15C3349,Tarkeshwar -> Ramgarh,11,Goaltore,up: 4:10 PM -> -,down: - -> 4:10 PM
+bussathi-saklin-674,SAKLIN WB15C3349,Tarkeshwar -> Ramgarh,12,Ramgarh,up: 1:35 PM -> -,down: 3:35 PM -> 3:35 PM
+bussathi-sany-687,SANY WB29B9748,Egra -> Karunamoyee,17,Santragachi,up: 2:15 PM -> -,down: - -> 2:15 PM
+bussathi-sany-687,SANY WB29B9748,Egra -> Karunamoyee,18,Kolkata (Esplanade),up: 1:50 PM -> -,down: - -> 1:50 PM
+bussathi-sany-687,SANY WB29B9748,Egra -> Karunamoyee,20,Karunamoyee,up: 9:30 AM -> -,down: 12:40 PM -> 12:40 PM
+bussathi-satellite-697,SATELLITE WB67B1577,Sarenga -> Asansol,15,Raniganj,up: 2:40 PM -> -,down: - -> 2:40 PM
+bussathi-satellite-697,SATELLITE WB67B1577,Sarenga -> Asansol,16,Asansol,up: 12:10 PM -> -,down: 2:05 PM -> 2:05 PM
+bussathi-shibam-716,SHIBAM WB67A6013,Bhutsahar -> Bankura,6,Bangla,up: 2:55 PM -> -,down: - -> 2:55 PM
+bussathi-shibam-716,SHIBAM WB67A6013,Bhutsahar -> Bankura,9,Puabagan,up: 11:25 AM -> -,down: 2:20 PM -> 2:20 PM
+bussathi-shibam-716,SHIBAM WB67A6013,Bhutsahar -> Bankura,10,Dhaldanga,up: 11:30 AM -> -,down: 2:15 PM -> 2:15 PM
+bussathi-shibam-716,SHIBAM WB67A6013,Bhutsahar -> Bankura,11,Bankura,up: 11:50 AM -> -,down: 1:55 PM -> 1:55 PM
+bussathi-shiv-shakti-2,SHIV SHAKTI WB496777,Baksi -> Kultikri,8,Ragra,up: 3:30 PM -> -,down: - -> 3:30 PM
+bussathi-shiv-shakti-2,SHIV SHAKTI WB496777,Baksi -> Kultikri,9,Rohini,up: 11:50 AM -> -,down: 3:25 PM -> 3:25 PM
+bussathi-shiv-shakti-2,SHIV SHAKTI WB496777,Baksi -> Kultikri,10,Kultikri,up: 12:15 PM -> -,down: 3:00 PM -> 3:00 PM
+bussathi-shradhanjali-727,SHRADHANJALI WB33F2197,Medinipur -> Khatra,10,Simlapal,up: 3:05 PM -> -,down: - -> 3:05 PM
+bussathi-shradhanjali-727,SHRADHANJALI WB33F2197,Medinipur -> Khatra,11,Taldangra,up: 9:30 AM -> -,down: 2:50 PM -> 2:50 PM
+bussathi-shradhanjali-727,SHRADHANJALI WB33F2197,Medinipur -> Khatra,12,Bibarda,up: 10:00 AM -> -,down: 2:30 PM -> 2:30 PM
+bussathi-shradhanjali-727,SHRADHANJALI WB33F2197,Medinipur -> Khatra,13,Harmasra,up: 10:10 AM -> -,down: 2:15 PM -> 2:15 PM
+bussathi-shradhanjali-727,SHRADHANJALI WB33F2197,Medinipur -> Khatra,15,Khatra,up: 11:15 AM -> -,down: 1:15 PM -> 1:15 PM
+bussathi-shyamali-740,SHYAMALI WB41B6525,Durgapur (Station) -> Suri,2,Durgapur (Muchipara),up: 4:30 PM -> -,down: - -> 4:30 PM
+bussathi-sonai-751,SONAI WB471781,Bolpur -> Benachity,6,Durgapur (City Center),up: 2:15 PM -> -,down: 4:45 PM -> 4:45 PM
+bussathi-sonai-751,SONAI WB471781,Bolpur -> Benachity,7,Benachity,up: 2:35 PM -> -,down: 4:25 PM -> 4:25 PM
+bussathi-sonar-tori-754,SONAR TORI WB41J7004,Krishnanagar -> Benachity,9,Panagarh,up: 1:45 PM -> -,down: - -> 1:45 PM
+bussathi-sonar-tori-754,SONAR TORI WB41J7004,Krishnanagar -> Benachity,10,Durgapur (Muchipara),up: 1:25 PM -> -,down: - -> 1:25 PM
+bussathi-sonar-tori-754,SONAR TORI WB41J7004,Krishnanagar -> Benachity,11,Durgapur (City Center),up: 12:05 PM -> -,down: 1:15 PM -> 1:15 PM
+bussathi-sonar-tori-754,SONAR TORI WB41J7004,Krishnanagar -> Benachity,12,Benachity,up: 12:20 PM -> -,down: 12:55 PM -> 12:55 PM
+bussathi-soumen-757,SOUMEN WB67D6869,Shyambazar -> Durgapur (City Center),11,Makurgram,up: 9:10 AM -> -,down: 3:05 PM -> 3:05 PM
+bussathi-souvik-0,SOUVIK WB31AC6435,Digha -> Jayrambati,7,Nandakumar,up: 5:00 PM -> -,down: - -> 5:00 PM
+bussathi-souvik-0,SOUVIK WB31AC6435,Digha -> Jayrambati,9,Mecheda,up: 4:15 PM -> -,down: - -> 4:15 PM
+bussathi-souvik-0,SOUVIK WB31AC6435,Digha -> Jayrambati,18,Jayrambati,up: 8:45 AM -> -,down: 1:15 PM -> 1:15 PM
+bussathi-sri-balaji-763,SRI BALAJI WB37E5964,Bankura -> Dhanbad,2,Makurgram,up: 5:00 PM -> -,down: - -> 5:00 PM
+bussathi-sri-bishnu-762,SRI BISHNU WB33C5130,Khatra -> Ghatal,3,Simlapal,up: 5:15 PM -> -,down: - -> 5:15 PM
+bussathi-sri-bishnu-762,SRI BISHNU WB33C5130,Khatra -> Ghatal,4,Bikrampur,up: 5:00 PM -> -,down: - -> 5:00 PM
+bussathi-sri-bishnu-762,SRI BISHNU WB33C5130,Khatra -> Ghatal,11,Chandrakona Road,up: 3:00 PM -> -,down: - -> 3:00 PM
+bussathi-sri-bishnu-762,SRI BISHNU WB33C5130,Khatra -> Ghatal,12,Chandrakona Town,up: 2:20 PM -> -,down: - -> 2:20 PM
+bussathi-sri-bishnu-762,SRI BISHNU WB33C5130,Khatra -> Ghatal,15,Ghatal,up: 10:20 AM -> -,down: 1:15 PM -> 1:15 PM
+bussathi-subarnarekha-775,SUBARNAREKHA WB55E3663,Asansol -> Tatanagar,3,Chirkunda,up: 6:00 AM -> 6:00 AM,down: 6:50 PM -> -
+bussathi-sulochona-784,SULOCHONA WB41A7481,Santaldih -> Bankura,6,Saltora,up: 9:00 AM -> -,down: 1:30 PM -> 1:30 PM
+bussathi-sweety-805,SWEETY WB39B6338,Durgapur (Station) -> Bandwan,11,Hatirampur,up: 3:00 PM -> -,down: - -> 3:00 PM
+bussathi-sweety-805,SWEETY WB39B6338,Durgapur (Station) -> Bandwan,12,Khatra,up: 9:20 AM -> -,down: 2:40 PM -> 2:40 PM
+bussathi-sweety-805,SWEETY WB39B6338,Durgapur (Station) -> Bandwan,13,Ranibandh,up: 9:50 AM -> -,down: 2:00 PM -> 2:00 PM
+bussathi-sweety-805,SWEETY WB39B6338,Durgapur (Station) -> Bandwan,15,Poradih,up: 10:30 AM -> -,down: 1:20 PM -> 1:20 PM
+bussathi-sweety-805,SWEETY WB39B6338,Durgapur (Station) -> Bandwan,17,Bandwan,up: 11:00 AM -> -,down: 12:45 PM -> 12:45 PM
+bussathi-tanveer-812,TANVEER WB41K2039,Kharagpur -> Bardhaman,9,Kamarpukur,up: 4:10 PM -> -,down: - -> 4:10 PM
+bussathi-tanveer-812,TANVEER WB41K2039,Kharagpur -> Bardhaman,11,Arambagh,up: 11:00 AM -> -,down: 3:40 PM -> 3:40 PM
+bussathi-tanveer-812,TANVEER WB41K2039,Kharagpur -> Bardhaman,15,Telipukur,up: 2:30 PM -> -,down: - -> 2:30 PM
+bussathi-tanveer-812,TANVEER WB41K2039,Kharagpur -> Bardhaman,16,Bardhaman,up: 12:20 PM -> -,down: 2:10 PM -> 2:10 PM
+bussathi-taraknath-821,TARAKNATH WB41H0035,Nabadwip -> Asansol,12,Durgapur (Muchipara),up: 11:25 AM -> -,down: - -> 11:25 AM
+bussathi-taraknath-821,TARAKNATH WB41H0035,Nabadwip -> Asansol,13,Durgapur (City Center),up: 8:20 AM -> -,down: 11:10 AM -> 11:10 AM
+bussathi-taraknath-821,TARAKNATH WB41H0035,Nabadwip -> Asansol,15,Asansol,up: 9:20 AM -> -,down: 10:00 AM -> 10:00 AM
+bussathi-trilochan-0,TRILOCHAN WB67C2339,Parsola -> Raniganj,6,Dhaldanga,up: 5:50 PM -> -,down: - -> 5:50 PM
+bussathi-tumpa-sona-841,TUMPA SONA WB55B7838,Purulia -> Digha,26,Digha,up: 4:35 AM -> 4:35 AM,down: 7:30 PM -> -
+bussathi-western-diamond-855,WESTERN DIAMOND WB33C4836,Medinipur -> Bankura,12,Taldangra,up: 12:20 PM -> -,down: - -> 12:20 PM
+bussathi-western-diamond-855,WESTERN DIAMOND WB33C4836,Medinipur -> Bankura,15,Bankura,up: 11:20 AM -> -,down: 11:55 AM -> 11:55 AM
+bussathi-yaman-860,YAMAN WB33H5378,Chandrakona Road -> Haldia,19,Durgachak,up: 10:30 AM -> -,down: - -> 10:30 AM
+bussathi-yaman-860,YAMAN WB33H5378,Chandrakona Road -> Haldia,20,Haldia,up: 9:45 AM -> -,down: 10:00 AM -> 10:00 AM
+express-line-kolkata-karunamoyee-bangalore-4021,Express Line Kolkata-Bangalore (Volvo AC Sleeper) WB 11K 6999,Kolkata (Karunamoyee) -> Bangalore,30,Chandpura,up: - -> 8:30 PM,down: 8:30 PM -> -
+express-line-kolkata-karunamoyee-bangalore-4021,Express Line Kolkata-Bangalore (Volvo AC Sleeper) WB 11K 6999,Kolkata (Karunamoyee) -> Bangalore,31,Bommasandra,up: - -> 8:45 PM,down: 8:45 PM -> -
+express-line-kolkata-karunamoyee-bangalore-4021,Express Line Kolkata-Bangalore (Volvo AC Sleeper) WB 11K 6999,Kolkata (Karunamoyee) -> Bangalore,32,Electronic City,up: - -> 9:10 PM,down: 9:10 PM -> -
+promila-bolpur-barakar-4023,Promila Bolpur-Barakar WB 53B 5780,Bolpur -> Barakar,6,Darjiling More,up: 7:47 AM -> 7:47 AM,down: 3:02 PM -> -
+gobinda-aishani-medinipur-contai-4014,GOBINDA AISHANI ,Medinipur -> Contai,4,Thakurchak,up: 10:15 AM -> 10:15 AM,down: 4:10 PM -> -
+gobinda-aishani-medinipur-contai-4014,GOBINDA AISHANI ,Medinipur -> Contai,5,Khakurda,up: 10:35 AM -> 10:35 AM,down: 4:25 PM -> -
+
+"--- LEFT FOR REVIEW (not changed, possible 2nd daily trips / ambiguous) ---"
+bussathi-aayan-2,AAYAN WB15B5564,Jamtora -> Manbazar,2,Kamalpur,up 6:00 AM < up 6:40 AM at previous stop; does not fit down neighbours
+bussathi-baba-biharinath-89,BABA BIHARINATH WB37B2307,Biharinath -> Ranibandh,3,Saltora,"down 5:20 PM > down 3:40 PM at previous stop (increasing run - possible 2nd trip, left as-is)"
+bussathi-debraj-188,DEBRAJ WB67C1759,Amlasuli -> Bankura,6,Dhaldanga,up 3:25 PM < up 6:40 PM at previous stop; does not fit down neighbours
+bussathi-dulhan-205,DULHAN WB41K1492,Bankura -> Nabadwip,3,Beliatore,"down 3:55 PM > down 2:10 PM at previous stop (increasing run - possible 2nd trip, left as-is)"
+bussathi-ishan-255,ISHAN WB675218,Kutni -> Bankura,8,Puabagan,"down 11:45 AM > down 11:05 AM at previous stop (increasing run - possible 2nd trip, left as-is)"
+bussathi-iswarchandra-0,ISWARCHANDRA WB33H8471,Kharagpur -> Durgapur (City Center),17,Barjora,last stop up 12:00 PM > arrival 11:00 AM but does not fit down neighbours
+bussathi-kakatua-310,KAKATUA WB39B8008,Pandaveswar -> Purulia,4,Pabra,"down 5:00 PM > down 3:15 PM at previous stop (increasing run - possible 2nd trip, left as-is)"
+bussathi-laxmipriya-0,LAXMIPRIYA WB67A0036,Lakshmisagar -> Bankura,4,Taldangra,last stop up 11:20 AM > arrival 8:50 AM but does not fit down neighbours
+bussathi-maa-bagala-360,MAA BAGALA WB33A5329,Contai -> Fulkusma,9,Jhargram,last stop up 11:45 AM > arrival 10:25 AM but does not fit down neighbours
+bussathi-maa-bagala-361,MAA BAGALA WB33A6969,Khatra -> Contai,5,Sarenga,"down 4:30 PM > down 3:45 PM at previous stop (increasing run - possible 2nd trip, left as-is)"
+bussathi-maa-manasa-408,MAA MANASA WB33C6926,Fulkusma -> Bankura,6,Simlapal,up 7:05 AM < up 11:30 AM at previous stop; does not fit down neighbours
+bussathi-rof-rof-646,ROF ROF WB33K5234,Bishnupur -> Haldia,17,Chaitanyapur,last stop up 12:35 PM > arrival 12:25 PM but does not fit down neighbours
+bussathi-sanghati-679,SANGHATI WB29E5301,Tarkeshwar -> Digha,10,Contai,up 10:00 AM < up 2:15 PM at previous stop; does not fit down neighbours
+bussathi-sonai-751,SONAI WB471781,Bolpur -> Benachity,5,Durgapur (Muchipara),last stop up 2:55 PM > arrival 2:35 PM but does not fit down neighbours
+bussathi-souvik-0,SOUVIK WB31AC6435,Digha -> Jayrambati,17,Kamarpukur,last stop up 11:00 AM > arrival 8:45 AM but does not fit down neighbours
+bussathi-sri-balaji-763,SRI BALAJI WB37E5964,Bankura -> Dhanbad,3,Beliatore,up 2:45 PM < up 6:10 PM at previous stop; does not fit down neighbours

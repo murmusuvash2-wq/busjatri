@@ -7683,7 +7683,32 @@
    "contact_number": "Not Available !",
    "depot_name": "Neradeul",
    "route": "Neradeul - Garhbeta",
-   "stoppages": [{"no": 1, "name": "Neradeul", "up_time": "7:40 AM", "down_time": ""}, {"no": 2, "name": "Chandrakona Town", "up_time": "", "down_time": ""}, {"no": 3, "name": "Raskundu", "up_time": "", "down_time": ""}, {"no": 4, "name": "Garhbeta", "up_time": "", "down_time": "6:00 PM"}],
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Neradeul",
+     "up_time": "7:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Chandrakona Town",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Raskundu",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Garhbeta",
+     "up_time": "",
+     "down_time": "6:00 PM"
+    }
+   ],
    "source": "wbbus.in",
    "total_stoppages": 4,
    "detail_url": "https://wbbus.in/bus/barnali-wb33a9797-neradeul-garhbeta-1070"
@@ -9444,7 +9469,38 @@
    "contact_number": "Not Available !",
    "depot_name": "Ajodhya Hills",
    "route": "Ajodhya Hills - Purulia",
-   "stoppages": [{"no": 1, "name": "Ajodhya Hills", "up_time": "7:40 AM", "down_time": "7:30 PM"}, {"no": 2, "name": "Sirkabad", "up_time": "8:20 AM", "down_time": "7:10 PM"}, {"no": 3, "name": "Aharara", "up_time": "8:30 AM", "down_time": ""}, {"no": 4, "name": "Damda", "up_time": "", "down_time": ""}, {"no": 5, "name": "Purulia", "up_time": "9:30 AM", "down_time": "6:10 PM"}],
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Ajodhya Hills",
+     "up_time": "7:40 AM",
+     "down_time": "7:30 PM"
+    },
+    {
+     "no": 2,
+     "name": "Sirkabad",
+     "up_time": "8:20 AM",
+     "down_time": "7:10 PM"
+    },
+    {
+     "no": 3,
+     "name": "Aharara",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Damda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Purulia",
+     "up_time": "9:30 AM",
+     "down_time": "6:10 PM"
+    }
+   ],
    "source": "wbbus.in",
    "total_stoppages": 5,
    "detail_url": "https://wbbus.in/bus/hilltop-super-wb55b6775-ajodhya-hills-purulia-730"
@@ -12446,7 +12502,7 @@
      "no": 8,
      "name": "Ranibandh",
      "up_time": "10:05 AM",
-     "down_time": "2:55 PM"
+     "down_time": ""
     },
     {
      "no": 9,
@@ -14686,13 +14742,13 @@
     {
      "no": 16,
      "name": "Kuli",
-     "up_time": "12:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:45 PM"
     },
     {
      "no": 17,
      "name": "Kandi",
-     "up_time": "11:15 AM",
+     "up_time": "",
      "down_time": "12:30 PM"
     }
    ],
@@ -18147,8 +18203,8 @@
     {
      "no": 9,
      "name": "Khirpai",
-     "up_time": "1:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:30 PM"
     },
     {
      "no": 10,
@@ -18165,7 +18221,7 @@
     {
      "no": 12,
      "name": "Ghatal",
-     "up_time": "11:05 AM",
+     "up_time": "",
      "down_time": "12:40 PM"
     }
    ],
@@ -18916,14 +18972,14 @@
     {
      "no": 4,
      "name": "Godapiasal",
-     "up_time": "3:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:20 PM"
     },
     {
      "no": 5,
      "name": "Salboni",
-     "up_time": "2:55 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:55 PM"
     },
     {
      "no": 6,
@@ -19988,8 +20044,8 @@
     {
      "no": 16,
      "name": "Belda",
-     "up_time": "9:55 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "9:55 AM"
     },
     {
      "no": 17,
@@ -20381,8 +20437,8 @@
     {
      "no": 11,
      "name": "Silda",
-     "up_time": "3:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:20 PM"
     },
     {
      "no": 12,
@@ -20399,7 +20455,7 @@
     {
      "no": 14,
      "name": "Jhargram",
-     "up_time": "12:40 PM",
+     "up_time": "",
      "down_time": "2:05 PM"
     }
    ],
@@ -21168,7 +21224,7 @@
     {
      "no": 5,
      "name": "Bankura",
-     "up_time": "11:40 AM",
+     "up_time": "",
      "down_time": "5:10 PM"
     },
     {
@@ -21599,13 +21655,13 @@
     {
      "no": 10,
      "name": "Durgapur (Muchipara)",
-     "up_time": "2:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:30 PM"
     },
     {
      "no": 11,
      "name": "Durgapur (City Center)",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "2:20 PM"
     },
     {
@@ -21617,13 +21673,13 @@
     {
      "no": 13,
      "name": "Raniganj",
-     "up_time": "11:25 AM",
+     "up_time": "",
      "down_time": "1:55 PM"
     },
     {
      "no": 14,
      "name": "Asansol",
-     "up_time": "11:50 AM",
+     "up_time": "",
      "down_time": "1:20 PM"
     }
    ],
@@ -22351,13 +22407,13 @@
     {
      "no": 15,
      "name": "Dhaldanga",
-     "up_time": "11:15 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:15 AM"
     },
     {
      "no": 16,
      "name": "Bankura",
-     "up_time": "10:15 AM",
+     "up_time": "",
      "down_time": "10:50 AM"
     }
    ],
@@ -22793,13 +22849,13 @@
     {
      "no": 13,
      "name": "Keshpur",
-     "up_time": "11:05 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:05 AM"
     },
     {
      "no": 14,
      "name": "Medinipur",
-     "up_time": "8:45 AM",
+     "up_time": "",
      "down_time": "10:20 AM"
     }
    ],
@@ -24616,13 +24672,13 @@
     {
      "no": 13,
      "name": "Pairachali",
-     "up_time": "10:20 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "10:20 AM"
     },
     {
      "no": 14,
      "name": "Manbazar",
-     "up_time": "9:00 AM",
+     "up_time": "",
      "down_time": "10:00 AM"
     }
    ],
@@ -24719,8 +24775,8 @@
     {
      "no": 13,
      "name": "Dhulagarh",
-     "up_time": "12:55 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:55 PM"
     },
     {
      "no": 14,
@@ -24737,7 +24793,7 @@
     {
      "no": 16,
      "name": "Howrah",
-     "up_time": "9:45 AM",
+     "up_time": "",
      "down_time": "11:55 AM"
     }
    ],
@@ -25040,19 +25096,19 @@
     {
      "no": 11,
      "name": "Hatirampur",
-     "up_time": "5:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:00 PM"
     },
     {
      "no": 12,
      "name": "Khatra",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "4:40 PM"
     },
     {
      "no": 13,
      "name": "Ranibandh",
-     "up_time": "11:40 AM",
+     "up_time": "",
      "down_time": "3:40 PM"
     },
     {
@@ -25076,7 +25132,7 @@
     {
      "no": 17,
      "name": "Bandwan",
-     "up_time": "12:40 PM",
+     "up_time": "",
      "down_time": "2:35 PM"
     }
    ],
@@ -25415,8 +25471,8 @@
     {
      "no": 14,
      "name": "Jamna",
-     "up_time": "3:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:00 PM"
     },
     {
      "no": 15,
@@ -25427,14 +25483,14 @@
     {
      "no": 16,
      "name": "Sabang",
-     "up_time": "2:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:25 PM"
     },
     {
      "no": 17,
      "name": "Kantakhali",
-     "up_time": "1:50 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:50 PM"
     }
    ],
    "source": "bussathi.in",
@@ -25676,7 +25732,7 @@
      "no": 20,
      "name": "Howrah",
      "up_time": "8:00 AM",
-     "down_time": "3:10 PM"
+     "down_time": ""
     }
    ],
    "source": "bussathi.in",
@@ -26300,13 +26356,13 @@
     {
      "no": 9,
      "name": "Jorda",
-     "up_time": "1:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:00 PM"
     },
     {
      "no": 10,
      "name": "Bangla",
-     "up_time": "9:40 AM",
+     "up_time": "",
      "down_time": "12:40 PM"
     },
     {
@@ -26324,7 +26380,7 @@
     {
      "no": 13,
      "name": "Puabagan",
-     "up_time": "9:55 AM",
+     "up_time": "",
      "down_time": "12:15 PM"
     },
     {
@@ -26336,7 +26392,7 @@
     {
      "no": 15,
      "name": "Bankura",
-     "up_time": "10:10 AM",
+     "up_time": "",
      "down_time": "11:30 AM"
     }
    ],
@@ -28252,37 +28308,37 @@
     {
      "no": 3,
      "name": "Godapiasal",
-     "up_time": "3:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:45 PM"
     },
     {
      "no": 4,
      "name": "Salboni",
-     "up_time": "3:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:10 PM"
     },
     {
      "no": 5,
      "name": "Chandrakona Road",
-     "up_time": "10:50 AM",
+     "up_time": "",
      "down_time": "2:30 PM"
     },
     {
      "no": 6,
      "name": "Goaltore",
-     "up_time": "11:30 AM",
+     "up_time": "",
      "down_time": "2:10 PM"
     },
     {
      "no": 7,
      "name": "Pingboni",
-     "up_time": "11:35 AM",
+     "up_time": "",
      "down_time": "2:05 PM"
     },
     {
      "no": 8,
      "name": "Ramgarh",
-     "up_time": "11:50 AM",
+     "up_time": "",
      "down_time": "1:45 PM"
     },
     {
@@ -28294,7 +28350,7 @@
     {
      "no": 10,
      "name": "Lalgarh",
-     "up_time": "12:15 PM",
+     "up_time": "",
      "down_time": "1:20 PM"
     }
    ],
@@ -30092,8 +30148,8 @@
     {
      "no": 12,
      "name": "Simlapal",
-     "up_time": "1:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:10 PM"
     },
     {
      "no": 13,
@@ -30104,7 +30160,7 @@
     {
      "no": 14,
      "name": "Raipur",
-     "up_time": "9:50 AM",
+     "up_time": "",
      "down_time": "12:20 PM"
     },
     {
@@ -30116,13 +30172,13 @@
     {
      "no": 16,
      "name": "Fulkusma",
-     "up_time": "10:25 AM",
+     "up_time": "",
      "down_time": "11:55 AM"
     },
     {
      "no": 17,
      "name": "Silda",
-     "up_time": "10:50 AM",
+     "up_time": "",
      "down_time": "11:25 AM"
     }
    ],
@@ -30878,8 +30934,8 @@
     {
      "no": 8,
      "name": "Digha",
-     "up_time": "10:40 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "10:40 AM"
     }
    ],
    "source": "bussathi.in",
@@ -32113,13 +32169,13 @@
     {
      "no": 15,
      "name": "Durgapur (Muchipara)",
-     "up_time": "12:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:05 PM"
     },
     {
      "no": 16,
      "name": "Panagarh",
-     "up_time": "8:10 AM",
+     "up_time": "",
      "down_time": "11:45 AM"
     },
     {
@@ -32137,7 +32193,7 @@
     {
      "no": 19,
      "name": "Bardhaman",
-     "up_time": "9:20 AM",
+     "up_time": "",
      "down_time": "10:40 AM"
     }
    ],
@@ -32598,7 +32654,7 @@
     {
      "no": 4,
      "name": "Taldangra",
-     "up_time": "2:50 PM",
+     "up_time": "",
      "down_time": "6:20 PM"
     },
     {
@@ -37353,13 +37409,13 @@
     {
      "no": 15,
      "name": "Islampur",
-     "up_time": "8:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "8:00 PM"
     },
     {
      "no": 16,
      "name": "Siliguri",
-     "up_time": "6:30 PM",
+     "up_time": "",
      "down_time": "6:50 PM"
     }
    ],
@@ -37724,25 +37780,25 @@
     {
      "no": 3,
      "name": "Aharara",
-     "up_time": "4:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:05 PM"
     },
     {
      "no": 4,
      "name": "Sirkabad",
-     "up_time": "12:05 PM",
+     "up_time": "",
      "down_time": "3:55 PM"
     },
     {
      "no": 5,
      "name": "Ajodhya Hills",
-     "up_time": "3:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:15 PM"
     },
     {
      "no": 6,
      "name": "Baghmundi",
-     "up_time": "1:40 PM",
+     "up_time": "",
      "down_time": "2:00 PM"
     }
    ],
@@ -37882,19 +37938,19 @@
     {
      "no": 6,
      "name": "Belda",
-     "up_time": "3:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:10 PM"
     },
     {
      "no": 7,
      "name": "Kharagpur",
-     "up_time": "2:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:20 PM"
     },
     {
      "no": 8,
      "name": "Medinipur",
-     "up_time": "11:25 AM",
+     "up_time": "",
      "down_time": "1:35 PM"
     }
    ],
@@ -39141,7 +39197,7 @@
     {
      "no": 18,
      "name": "Durgapur (Station)",
-     "up_time": "12:20 PM",
+     "up_time": "",
      "down_time": "2:45 PM"
     }
    ],
@@ -39238,13 +39294,13 @@
     {
      "no": 13,
      "name": "Henria",
-     "up_time": "3:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:20 PM"
     },
     {
      "no": 14,
      "name": "Contai",
-     "up_time": "11:30 AM",
+     "up_time": "",
      "down_time": "2:50 PM"
     },
     {
@@ -39256,7 +39312,7 @@
     {
      "no": 16,
      "name": "Digha",
-     "up_time": "12:30 PM",
+     "up_time": "",
      "down_time": "1:50 PM"
     }
    ],
@@ -39407,25 +39463,25 @@
     {
      "no": 22,
      "name": "Dakshineswar",
-     "up_time": "5:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:30 PM"
     },
     {
      "no": 23,
      "name": "Dunlop",
-     "up_time": "1:00 PM",
+     "up_time": "",
      "down_time": "5:25 PM"
     },
     {
      "no": 24,
      "name": "Shyambazar",
-     "up_time": "1:20 PM",
+     "up_time": "",
      "down_time": "4:55 PM"
     },
     {
      "no": 25,
      "name": "Kolkata",
-     "up_time": "1:30 PM",
+     "up_time": "",
      "down_time": "4:45 PM"
     }
    ],
@@ -39752,8 +39808,8 @@
     {
      "no": 13,
      "name": "Guptamoni",
-     "up_time": "5:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:30 PM"
     },
     {
      "no": 14,
@@ -39764,8 +39820,8 @@
     {
      "no": 15,
      "name": "Debra",
-     "up_time": "4:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:30 PM"
     },
     {
      "no": 16,
@@ -39776,14 +39832,14 @@
     {
      "no": 17,
      "name": "Kolaghat",
-     "up_time": "3:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:45 PM"
     },
     {
      "no": 18,
      "name": "Bagnan",
-     "up_time": "3:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:30 PM"
     },
     {
      "no": 19,
@@ -39794,25 +39850,25 @@
     {
      "no": 20,
      "name": "Dhulagarh",
-     "up_time": "3:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:00 PM"
     },
     {
      "no": 21,
      "name": "Kona Express More",
-     "up_time": "2:40 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:40 PM"
     },
     {
      "no": 22,
      "name": "Santragachi",
-     "up_time": "2:35 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:35 PM"
     },
     {
      "no": 23,
      "name": "Kolkata (Esplanade)",
-     "up_time": "10:40 AM",
+     "up_time": "",
      "down_time": "2:00 PM"
     }
    ],
@@ -40453,8 +40509,8 @@
     {
      "no": 18,
      "name": "Belda",
-     "up_time": "10:40 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "10:40 AM"
     },
     {
      "no": 19,
@@ -41725,8 +41781,8 @@
     {
      "no": 16,
      "name": "Khirpai",
-     "up_time": "3:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:45 PM"
     },
     {
      "no": 17,
@@ -41737,13 +41793,13 @@
     {
      "no": 18,
      "name": "Chandrakona Town",
-     "up_time": "9:45 AM",
+     "up_time": "",
      "down_time": "3:15 PM"
     },
     {
      "no": 19,
      "name": "Chandrakona Road",
-     "up_time": "10:20 AM",
+     "up_time": "",
      "down_time": "2:45 PM"
     },
     {
@@ -41755,25 +41811,25 @@
     {
      "no": 21,
      "name": "Garhbeta",
-     "up_time": "10:40 AM",
+     "up_time": "",
      "down_time": "2:15 PM"
     },
     {
      "no": 22,
      "name": "Dhadika",
-     "up_time": "10:50 AM",
+     "up_time": "",
      "down_time": "2:05 PM"
     },
     {
      "no": 23,
      "name": "Bankadaha",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "1:55 PM"
     },
     {
      "no": 24,
      "name": "Bishnupur",
-     "up_time": "11:30 AM",
+     "up_time": "",
      "down_time": "1:30 PM"
     }
    ],
@@ -42283,7 +42339,7 @@
     {
      "no": 10,
      "name": "Fulkusma",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "3:05 PM"
     },
     {
@@ -42980,13 +43036,13 @@
     {
      "no": 10,
      "name": "Puabagan",
-     "up_time": "12:35 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:35 PM"
     },
     {
      "no": 11,
      "name": "Bankura",
-     "up_time": "10:30 AM",
+     "up_time": "",
      "down_time": "12:20 PM"
     }
    ],
@@ -43720,31 +43776,31 @@
     {
      "no": 8,
      "name": "Jamalpur",
-     "up_time": "11:30 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:30 AM"
     },
     {
      "no": 9,
      "name": "Parulia",
-     "up_time": "11:00 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:00 AM"
     },
     {
      "no": 10,
      "name": "Hematpur",
-     "up_time": "10:50 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "10:50 AM"
     },
     {
      "no": 11,
      "name": "Nabadwip",
-     "up_time": "8:55 AM",
+     "up_time": "",
      "down_time": "10:40 AM"
     },
     {
      "no": 12,
      "name": "Krishnanagar",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "9:50 AM"
     }
    ],
@@ -43974,13 +44030,13 @@
     {
      "no": 16,
      "name": "Ruby",
-     "up_time": "4:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:10 PM"
     },
     {
      "no": 17,
      "name": "Kamalgazi",
-     "up_time": "10:25 AM",
+     "up_time": "",
      "down_time": "3:30 PM"
     }
    ],
@@ -44471,7 +44527,7 @@
     {
      "no": 7,
      "name": "Raghunathpur",
-     "up_time": "10:45 AM",
+     "up_time": "",
      "down_time": "3:30 PM"
     },
     {
@@ -45787,8 +45843,8 @@
     {
      "no": 6,
      "name": "Bankura",
-     "up_time": "8:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "8:30 PM"
     },
     {
      "no": 7,
@@ -46472,8 +46528,8 @@
     {
      "no": 6,
      "name": "Puabagan",
-     "up_time": "5:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:10 PM"
     },
     {
      "no": 7,
@@ -46502,19 +46558,19 @@
     {
      "no": 11,
      "name": "Arrah",
-     "up_time": "1:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:25 PM"
     },
     {
      "no": 12,
      "name": "Rangamati",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "1:10 PM"
     },
     {
      "no": 13,
      "name": "Talajuri",
-     "up_time": "11:15 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     },
     {
@@ -46526,7 +46582,7 @@
     {
      "no": 15,
      "name": "Kashipur",
-     "up_time": "12:00 PM",
+     "up_time": "",
      "down_time": "12:20 PM"
     }
    ],
@@ -46738,13 +46794,13 @@
     {
      "no": 12,
      "name": "Kamarpukur",
-     "up_time": "9:40 AM",
+     "up_time": "",
      "down_time": "2:40 PM"
     },
     {
      "no": 13,
      "name": "Goghat",
-     "up_time": "9:50 AM",
+     "up_time": "",
      "down_time": "2:30 PM"
     },
     {
@@ -46841,19 +46897,19 @@
     {
      "no": 9,
      "name": "Durgapur (Muchipara)",
-     "up_time": "1:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:05 PM"
     },
     {
      "no": 10,
      "name": "Durgapur (City Center)",
-     "up_time": "8:30 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     },
     {
      "no": 11,
      "name": "Andal",
-     "up_time": "8:50 AM",
+     "up_time": "",
      "down_time": "12:20 PM"
     },
     {
@@ -46865,7 +46921,7 @@
     {
      "no": 13,
      "name": "Asansol",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "11:40 AM"
     }
    ],
@@ -47278,13 +47334,13 @@
     {
      "no": 3,
      "name": "Onda",
-     "up_time": "7:00 AM",
+     "up_time": "",
      "down_time": "3:10 PM"
     },
     {
      "no": 4,
      "name": "Ramsagar",
-     "up_time": "7:25 AM",
+     "up_time": "",
      "down_time": "2:45 PM"
     },
     {
@@ -48467,7 +48523,7 @@
      "no": 3,
      "name": "Bibarda",
      "up_time": "7:30 AM",
-     "down_time": "11:45 AM"
+     "down_time": ""
     },
     {
      "no": 4,
@@ -48484,13 +48540,13 @@
     {
      "no": 6,
      "name": "Dhaldanga",
-     "up_time": "8:20 AM",
+     "up_time": "",
      "down_time": "10:40 AM"
     },
     {
      "no": 7,
      "name": "Bankura",
-     "up_time": "8:50 AM",
+     "up_time": "",
      "down_time": "10:10 AM"
     }
    ],
@@ -48528,7 +48584,7 @@
      "no": 3,
      "name": "Bibarda",
      "up_time": "6:55 AM",
-     "down_time": "9:55 AM"
+     "down_time": ""
     },
     {
      "no": 4,
@@ -49072,7 +49128,7 @@
     {
      "no": 13,
      "name": "Fulkusma",
-     "up_time": "10:25 AM",
+     "up_time": "",
      "down_time": "1:10 PM"
     }
    ],
@@ -49272,37 +49328,37 @@
     {
      "no": 10,
      "name": "Saltora",
-     "up_time": "1:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:20 PM"
     },
     {
      "no": 11,
      "name": "Tiluri",
-     "up_time": "8:20 AM",
+     "up_time": "",
      "down_time": "1:10 PM"
     },
     {
      "no": 12,
      "name": "Madhukunda",
-     "up_time": "8:45 AM",
+     "up_time": "",
      "down_time": "12:45 PM"
     },
     {
      "no": 13,
      "name": "Sarbori More",
-     "up_time": "9:05 AM",
+     "up_time": "",
      "down_time": "12:20 PM"
     },
     {
      "no": 14,
      "name": "Chirkunda",
-     "up_time": "9:50 AM",
+     "up_time": "",
      "down_time": "11:40 AM"
     },
     {
      "no": 15,
      "name": "Barakar",
-     "up_time": "10:10 AM",
+     "up_time": "",
      "down_time": "11:20 AM"
     }
    ],
@@ -51139,13 +51195,13 @@
     {
      "no": 11,
      "name": "Dhaldanga",
-     "up_time": "3:55 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:55 PM"
     },
     {
      "no": 12,
      "name": "Bankura",
-     "up_time": "1:30 PM",
+     "up_time": "",
      "down_time": "3:15 PM"
     }
    ],
@@ -52999,13 +53055,13 @@
     {
      "no": 22,
      "name": "Madhyamgram",
-     "up_time": "11:05 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:05 AM"
     },
     {
      "no": 23,
      "name": "Barasat",
-     "up_time": "8:50 AM",
+     "up_time": "",
      "down_time": "10:55 AM"
     }
    ],
@@ -53187,7 +53243,7 @@
     {
      "no": 4,
      "name": "P More",
-     "up_time": "6:40 AM",
+     "up_time": "",
      "down_time": "11:15 AM"
     },
     {
@@ -53756,19 +53812,19 @@
     {
      "no": 28,
      "name": "Onda",
-     "up_time": "12:40 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:40 PM"
     },
     {
      "no": 29,
      "name": "Dhaldanga",
-     "up_time": "10:40 AM",
+     "up_time": "",
      "down_time": "12:20 PM"
     },
     {
      "no": 30,
      "name": "Bankura",
-     "up_time": "11:10 AM",
+     "up_time": "",
      "down_time": "11:45 AM"
     }
    ],
@@ -54423,13 +54479,13 @@
     {
      "no": 13,
      "name": "Dhaldanga",
-     "up_time": "1:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:00 PM"
     },
     {
      "no": 14,
      "name": "Bankura",
-     "up_time": "10:10 AM",
+     "up_time": "",
      "down_time": "12:20 PM"
     }
    ],
@@ -56021,13 +56077,13 @@
     {
      "no": 18,
      "name": "Fulkusma",
-     "up_time": "2:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:45 PM"
     },
     {
      "no": 19,
      "name": "Silda",
-     "up_time": "11:40 AM",
+     "up_time": "",
      "down_time": "2:20 PM"
     }
    ],
@@ -56964,19 +57020,19 @@
     {
      "no": 10,
      "name": "Puabagan",
-     "up_time": "3:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:10 PM"
     },
     {
      "no": 11,
      "name": "Dhaldanga",
-     "up_time": "3:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:05 PM"
     },
     {
      "no": 12,
      "name": "Bankura",
-     "up_time": "9:15 AM",
+     "up_time": "",
      "down_time": "2:45 PM"
     },
     {
@@ -56988,19 +57044,19 @@
     {
      "no": 14,
      "name": "Beliatore",
-     "up_time": "10:05 AM",
+     "up_time": "",
      "down_time": "1:30 PM"
     },
     {
      "no": 15,
      "name": "Barjora",
-     "up_time": "10:25 AM",
+     "up_time": "",
      "down_time": "1:10 PM"
     },
     {
      "no": 16,
      "name": "Durgapur (Station)",
-     "up_time": "10:45 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     }
    ],
@@ -57135,7 +57191,7 @@
      "no": 6,
      "name": "Belda",
      "up_time": "8:40 AM",
-     "down_time": "6:20 PM"
+     "down_time": ""
     },
     {
      "no": 7,
@@ -57286,7 +57342,7 @@
     {
      "no": 9,
      "name": "Debra",
-     "up_time": "8:25 AM",
+     "up_time": "",
      "down_time": "5:20 PM"
     },
     {
@@ -57510,8 +57566,8 @@
     {
      "no": 7,
      "name": "Puabagan",
-     "up_time": "1:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:10 PM"
     },
     {
      "no": 8,
@@ -57528,13 +57584,13 @@
     {
      "no": 10,
      "name": "Bangla",
-     "up_time": "8:15 AM",
+     "up_time": "",
      "down_time": "12:55 PM"
     },
     {
      "no": 11,
      "name": "Hatirampur",
-     "up_time": "8:45 AM",
+     "up_time": "",
      "down_time": "12:25 PM"
     },
     {
@@ -57546,13 +57602,13 @@
     {
      "no": 13,
      "name": "Manbazar",
-     "up_time": "9:20 AM",
+     "up_time": "",
      "down_time": "11:35 AM"
     },
     {
      "no": 14,
      "name": "Bandwan",
-     "up_time": "10:20 AM",
+     "up_time": "",
      "down_time": "10:30 AM"
     }
    ],
@@ -57855,13 +57911,13 @@
     {
      "no": 14,
      "name": "Raniganj",
-     "up_time": "1:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:20 PM"
     },
     {
      "no": 15,
      "name": "Asansol",
-     "up_time": "11:15 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     }
    ],
@@ -58582,8 +58638,8 @@
     {
      "no": 3,
      "name": "Barabazar",
-     "up_time": "8:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "8:10 PM"
     },
     {
      "no": 4,
@@ -59236,19 +59292,19 @@
     {
      "no": 11,
      "name": "Onda",
-     "up_time": "11:25 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:25 AM"
     },
     {
      "no": 12,
      "name": "Dhaldanga",
-     "up_time": "11:10 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:10 AM"
     },
     {
      "no": 13,
      "name": "Bankura",
-     "up_time": "9:50 AM",
+     "up_time": "",
      "down_time": "10:35 AM"
     }
    ],
@@ -59757,8 +59813,8 @@
     {
      "no": 10,
      "name": "Raipur",
-     "up_time": "12:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:20 PM"
     }
    ],
    "source": "bussathi.in",
@@ -59902,8 +59958,8 @@
     {
      "no": 21,
      "name": "Contai",
-     "up_time": "10:30 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "10:30 AM"
     },
     {
      "no": 22,
@@ -59914,8 +59970,8 @@
     {
      "no": 23,
      "name": "Digha",
-     "up_time": "9:30 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "9:30 AM"
     }
    ],
    "source": "bussathi.in",
@@ -61564,31 +61620,31 @@
     {
      "no": 13,
      "name": "Dankuni",
-     "up_time": "1:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:25 PM"
     },
     {
      "no": 14,
      "name": "Salap",
-     "up_time": "1:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:15 PM"
     },
     {
      "no": 15,
      "name": "Kona Express More",
-     "up_time": "1:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:10 PM"
     },
     {
      "no": 16,
      "name": "Santragachi",
-     "up_time": "1:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:05 PM"
     },
     {
      "no": 17,
      "name": "Kolkata (Esplanade)",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     }
    ],
@@ -63143,8 +63199,8 @@
     {
      "no": 15,
      "name": "Kona Express More",
-     "up_time": "12:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:10 PM"
     },
     {
      "no": 16,
@@ -63155,8 +63211,8 @@
     {
      "no": 17,
      "name": "Bally",
-     "up_time": "11:50 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:50 AM"
     },
     {
      "no": 18,
@@ -63167,19 +63223,19 @@
     {
      "no": 19,
      "name": "Dunlop",
-     "up_time": "8:40 AM",
+     "up_time": "",
      "down_time": "11:40 AM"
     },
     {
      "no": 20,
      "name": "Dum Dum Airport",
-     "up_time": "9:00 AM",
+     "up_time": "",
      "down_time": "11:25 AM"
     },
     {
      "no": 21,
      "name": "Karunamoyee",
-     "up_time": "9:45 AM",
+     "up_time": "",
      "down_time": "10:45 AM"
     }
    ],
@@ -64502,13 +64558,13 @@
     {
      "no": 10,
      "name": "Durgapur (Muchipara)",
-     "up_time": "3:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:05 PM"
     },
     {
      "no": 11,
      "name": "Durgapur (Station)",
-     "up_time": "11:30 AM",
+     "up_time": "",
      "down_time": "2:50 PM"
     },
     {
@@ -64520,13 +64576,13 @@
     {
      "no": 13,
      "name": "Raniganj",
-     "up_time": "2:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:20 PM"
     },
     {
      "no": 14,
      "name": "Asansol",
-     "up_time": "12:35 PM",
+     "up_time": "",
      "down_time": "1:50 PM"
     }
    ],
@@ -64853,19 +64909,19 @@
     {
      "no": 8,
      "name": "Jamalpur",
-     "up_time": "1:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:20 PM"
     },
     {
      "no": 9,
      "name": "Parulia",
-     "up_time": "1:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:10 PM"
     },
     {
      "no": 10,
      "name": "Hematpur",
-     "up_time": "10:15 AM",
+     "up_time": "",
      "down_time": "12:55 PM"
     }
    ],
@@ -65138,13 +65194,13 @@
     {
      "no": 7,
      "name": "Taldangra",
-     "up_time": "2:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:45 PM"
     },
     {
      "no": 8,
      "name": "Simlapal",
-     "up_time": "9:45 AM",
+     "up_time": "",
      "down_time": "2:20 PM"
     },
     {
@@ -65156,7 +65212,7 @@
     {
      "no": 10,
      "name": "P More",
-     "up_time": "10:00 AM",
+     "up_time": "",
      "down_time": "1:50 PM"
     },
     {
@@ -65174,7 +65230,7 @@
     {
      "no": 13,
      "name": "Khatra",
-     "up_time": "11:30 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     }
    ],
@@ -65247,14 +65303,14 @@
     {
      "no": 9,
      "name": "Ramjibanpur",
-     "up_time": "5:35 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:35 PM"
     },
     {
      "no": 10,
      "name": "Kamarpukur",
-     "up_time": "5:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:10 PM"
     },
     {
      "no": 11,
@@ -65265,14 +65321,14 @@
     {
      "no": 12,
      "name": "Arambagh",
-     "up_time": "12:30 PM",
+     "up_time": "",
      "down_time": "4:35 PM"
     },
     {
      "no": 13,
      "name": "Uchalan",
-     "up_time": "4:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:05 PM"
     },
     {
      "no": 14,
@@ -65283,8 +65339,8 @@
     {
      "no": 15,
      "name": "Sehara Bazar",
-     "up_time": "3:50 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:50 PM"
     },
     {
      "no": 16,
@@ -65295,7 +65351,7 @@
     {
      "no": 17,
      "name": "Bardhaman",
-     "up_time": "2:00 PM",
+     "up_time": "",
      "down_time": "3:15 PM"
     }
    ],
@@ -65568,8 +65624,8 @@
     {
      "no": 13,
      "name": "Uchalan",
-     "up_time": "3:55 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:55 PM"
     },
     {
      "no": 14,
@@ -65580,8 +65636,8 @@
     {
      "no": 15,
      "name": "Sehara Bazar",
-     "up_time": "3:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:25 PM"
     },
     {
      "no": 16,
@@ -65592,7 +65648,7 @@
     {
      "no": 17,
      "name": "Bardhaman",
-     "up_time": "1:25 PM",
+     "up_time": "",
      "down_time": "2:45 PM"
     }
    ],
@@ -66065,13 +66121,13 @@
     {
      "no": 7,
      "name": "Kamalpur",
-     "up_time": "12:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:20 PM"
     },
     {
      "no": 8,
      "name": "Bishpuria",
-     "up_time": "7:30 AM",
+     "up_time": "",
      "down_time": "12:00 PM"
     },
     {
@@ -66083,19 +66139,19 @@
     {
      "no": 10,
      "name": "Lalpur",
-     "up_time": "7:55 AM",
+     "up_time": "",
      "down_time": "11:40 AM"
     },
     {
      "no": 11,
      "name": "Ladhurka",
-     "up_time": "8:10 AM",
+     "up_time": "",
      "down_time": "11:25 AM"
     },
     {
      "no": 12,
      "name": "Purulia",
-     "up_time": "8:50 AM",
+     "up_time": "",
      "down_time": "10:50 AM"
     }
    ],
@@ -66356,13 +66412,13 @@
     {
      "no": 9,
      "name": "Dhaldanga",
-     "up_time": "12:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:15 PM"
     },
     {
      "no": 10,
      "name": "Bankura",
-     "up_time": "8:50 AM",
+     "up_time": "",
      "down_time": "11:35 AM"
     }
    ],
@@ -67120,8 +67176,8 @@
     {
      "no": 14,
      "name": "Karunamoyee",
-     "up_time": "3:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:45 PM"
     }
    ],
    "source": "bussathi.in",
@@ -69670,8 +69726,8 @@
     {
      "no": 20,
      "name": "Poradih",
-     "up_time": "8:50 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "8:50 AM"
     },
     {
      "no": 21,
@@ -70331,7 +70387,7 @@
     {
      "no": 2,
      "name": "Santragachi",
-     "up_time": "7:10 AM",
+     "up_time": "",
      "down_time": "5:30 PM"
     },
     {
@@ -71324,8 +71380,8 @@
     {
      "no": 17,
      "name": "Kona Express More",
-     "up_time": "11:35 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:35 AM"
     },
     {
      "no": 18,
@@ -71342,25 +71398,25 @@
     {
      "no": 20,
      "name": "Dakshineswar",
-     "up_time": "6:05 AM",
+     "up_time": "",
      "down_time": "11:05 AM"
     },
     {
      "no": 21,
      "name": "Dunlop",
-     "up_time": "6:15 AM",
+     "up_time": "",
      "down_time": "11:00 AM"
     },
     {
      "no": 22,
      "name": "Dum Dum Airport",
-     "up_time": "6:35 AM",
+     "up_time": "",
      "down_time": "10:35 AM"
     },
     {
      "no": 23,
      "name": "Karunamoyee",
-     "up_time": "7:20 AM",
+     "up_time": "",
      "down_time": "9:50 AM"
     }
    ],
@@ -72275,8 +72331,8 @@
     {
      "no": 9,
      "name": "Khirpai",
-     "up_time": "1:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:45 PM"
     },
     {
      "no": 10,
@@ -72293,7 +72349,7 @@
     {
      "no": 12,
      "name": "Ghatal",
-     "up_time": "8:40 AM",
+     "up_time": "",
      "down_time": "1:20 PM"
     },
     {
@@ -72329,13 +72385,13 @@
     {
      "no": 18,
      "name": "Mechogram",
-     "up_time": "12:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:15 PM"
     },
     {
      "no": 19,
      "name": "Mecheda",
-     "up_time": "10:10 AM",
+     "up_time": "",
      "down_time": "11:50 AM"
     }
    ],
@@ -72911,13 +72967,13 @@
     {
      "no": 6,
      "name": "Dhaldanga",
-     "up_time": "2:50 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:50 PM"
     },
     {
      "no": 7,
      "name": "Bankura",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "2:10 PM"
     }
    ],
@@ -73705,8 +73761,8 @@
     {
      "no": 6,
      "name": "Durgapur (Station)",
-     "up_time": "2:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:25 PM"
     },
     {
      "no": 7,
@@ -73717,8 +73773,8 @@
     {
      "no": 8,
      "name": "Beliatore",
-     "up_time": "1:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:45 PM"
     },
     {
      "no": 9,
@@ -73729,7 +73785,7 @@
     {
      "no": 10,
      "name": "Bankura",
-     "up_time": "9:25 AM",
+     "up_time": "",
      "down_time": "12:50 PM"
     }
    ],
@@ -74383,8 +74439,8 @@
     {
      "no": 16,
      "name": "Dankuni",
-     "up_time": "3:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:25 PM"
     },
     {
      "no": 17,
@@ -74401,19 +74457,19 @@
     {
      "no": 19,
      "name": "Dunlop",
-     "up_time": "3:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:05 PM"
     },
     {
      "no": 20,
      "name": "Shyambazar",
-     "up_time": "2:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:30 PM"
     },
     {
      "no": 21,
      "name": "Kolkata (Esplanade)",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "2:20 PM"
     }
    ],
@@ -74740,55 +74796,55 @@
     {
      "no": 14,
      "name": "Khukur Daha",
-     "up_time": "4:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:15 PM"
     },
     {
      "no": 15,
      "name": "Goura",
-     "up_time": "4:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:00 PM"
     },
     {
      "no": 16,
      "name": "Sultannagar",
-     "up_time": "3:55 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:55 PM"
     },
     {
      "no": 17,
      "name": "Daspur",
-     "up_time": "3:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:45 PM"
     },
     {
      "no": 18,
      "name": "Ghatal",
-     "up_time": "10:55 AM",
+     "up_time": "",
      "down_time": "3:20 PM"
     },
     {
      "no": 19,
      "name": "Baroda Chowkan",
-     "up_time": "11:10 AM",
+     "up_time": "",
      "down_time": "3:10 PM"
     },
     {
      "no": 20,
      "name": "Radhanagar",
-     "up_time": "11:15 AM",
+     "up_time": "",
      "down_time": "3:05 PM"
     },
     {
      "no": 21,
      "name": "Khirpai",
-     "up_time": "11:40 AM",
+     "up_time": "",
      "down_time": "2:50 PM"
     },
     {
      "no": 22,
      "name": "Ramjibanpur",
-     "up_time": "12:10 PM",
+     "up_time": "",
      "down_time": "2:20 PM"
     }
    ],
@@ -77042,7 +77098,7 @@
     {
      "no": 18,
      "name": "Haldia",
-     "up_time": "12:25 PM",
+     "up_time": "",
      "down_time": "2:00 PM"
     }
    ],
@@ -77405,8 +77461,8 @@
     {
      "no": 10,
      "name": "Bardhaman",
-     "up_time": "12:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:00 PM"
     }
    ],
    "source": "bussathi.in",
@@ -77635,8 +77691,8 @@
     {
      "no": 17,
      "name": "Belda",
-     "up_time": "9:55 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "9:55 AM"
     },
     {
      "no": 18,
@@ -79453,13 +79509,13 @@
     {
      "no": 11,
      "name": "Goaltore",
-     "up_time": "4:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:10 PM"
     },
     {
      "no": 12,
      "name": "Ramgarh",
-     "up_time": "1:35 PM",
+     "up_time": "",
      "down_time": "3:35 PM"
     }
    ],
@@ -80837,14 +80893,14 @@
     {
      "no": 17,
      "name": "Santragachi",
-     "up_time": "2:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:15 PM"
     },
     {
      "no": 18,
      "name": "Kolkata (Esplanade)",
-     "up_time": "1:50 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:50 PM"
     },
     {
      "no": 19,
@@ -80855,7 +80911,7 @@
     {
      "no": 20,
      "name": "Karunamoyee",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "12:40 PM"
     }
    ],
@@ -81528,13 +81584,13 @@
     {
      "no": 15,
      "name": "Raniganj",
-     "up_time": "2:40 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:40 PM"
     },
     {
      "no": 16,
      "name": "Asansol",
-     "up_time": "12:10 PM",
+     "up_time": "",
      "down_time": "2:05 PM"
     }
    ],
@@ -83583,8 +83639,8 @@
     {
      "no": 6,
      "name": "Bangla",
-     "up_time": "2:55 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:55 PM"
     },
     {
      "no": 7,
@@ -83601,19 +83657,19 @@
     {
      "no": 9,
      "name": "Puabagan",
-     "up_time": "11:25 AM",
+     "up_time": "",
      "down_time": "2:20 PM"
     },
     {
      "no": 10,
      "name": "Dhaldanga",
-     "up_time": "11:30 AM",
+     "up_time": "",
      "down_time": "2:15 PM"
     },
     {
      "no": 11,
      "name": "Bankura",
-     "up_time": "11:50 AM",
+     "up_time": "",
      "down_time": "1:55 PM"
     }
    ],
@@ -84117,19 +84173,19 @@
     {
      "no": 8,
      "name": "Ragra",
-     "up_time": "3:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:30 PM"
     },
     {
      "no": 9,
      "name": "Rohini",
-     "up_time": "11:50 AM",
+     "up_time": "",
      "down_time": "3:25 PM"
     },
     {
      "no": 10,
      "name": "Kultikri",
-     "up_time": "12:15 PM",
+     "up_time": "",
      "down_time": "3:00 PM"
     }
    ],
@@ -84736,25 +84792,25 @@
     {
      "no": 10,
      "name": "Simlapal",
-     "up_time": "3:05 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:05 PM"
     },
     {
      "no": 11,
      "name": "Taldangra",
-     "up_time": "9:30 AM",
+     "up_time": "",
      "down_time": "2:50 PM"
     },
     {
      "no": 12,
      "name": "Bibarda",
-     "up_time": "10:00 AM",
+     "up_time": "",
      "down_time": "2:30 PM"
     },
     {
      "no": 13,
      "name": "Harmasra",
-     "up_time": "10:10 AM",
+     "up_time": "",
      "down_time": "2:15 PM"
     },
     {
@@ -84766,7 +84822,7 @@
     {
      "no": 15,
      "name": "Khatra",
-     "up_time": "11:15 AM",
+     "up_time": "",
      "down_time": "1:15 PM"
     }
    ],
@@ -85701,8 +85757,8 @@
     {
      "no": 2,
      "name": "Durgapur (Muchipara)",
-     "up_time": "4:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:30 PM"
     },
     {
      "no": 3,
@@ -86948,13 +87004,13 @@
     {
      "no": 6,
      "name": "Durgapur (City Center)",
-     "up_time": "2:15 PM",
+     "up_time": "",
      "down_time": "4:45 PM"
     },
     {
      "no": 7,
      "name": "Benachity",
-     "up_time": "2:35 PM",
+     "up_time": "",
      "down_time": "4:25 PM"
     }
    ],
@@ -87227,25 +87283,25 @@
     {
      "no": 9,
      "name": "Panagarh",
-     "up_time": "1:45 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:45 PM"
     },
     {
      "no": 10,
      "name": "Durgapur (Muchipara)",
-     "up_time": "1:25 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "1:25 PM"
     },
     {
      "no": 11,
      "name": "Durgapur (City Center)",
-     "up_time": "12:05 PM",
+     "up_time": "",
      "down_time": "1:15 PM"
     },
     {
      "no": 12,
      "name": "Benachity",
-     "up_time": "12:20 PM",
+     "up_time": "",
      "down_time": "12:55 PM"
     }
    ],
@@ -87536,7 +87592,7 @@
     {
      "no": 11,
      "name": "Makurgram",
-     "up_time": "9:10 AM",
+     "up_time": "",
      "down_time": "3:05 PM"
     },
     {
@@ -87852,8 +87908,8 @@
     {
      "no": 7,
      "name": "Nandakumar",
-     "up_time": "5:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:00 PM"
     },
     {
      "no": 8,
@@ -87864,8 +87920,8 @@
     {
      "no": 9,
      "name": "Mecheda",
-     "up_time": "4:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:15 PM"
     },
     {
      "no": 10,
@@ -87918,7 +87974,7 @@
     {
      "no": 18,
      "name": "Jayrambati",
-     "up_time": "8:45 AM",
+     "up_time": "",
      "down_time": "1:15 PM"
     }
    ],
@@ -88361,8 +88417,8 @@
     {
      "no": 2,
      "name": "Makurgram",
-     "up_time": "5:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:00 PM"
     },
     {
      "no": 3,
@@ -88464,14 +88520,14 @@
     {
      "no": 3,
      "name": "Simlapal",
-     "up_time": "5:15 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:15 PM"
     },
     {
      "no": 4,
      "name": "Bikrampur",
-     "up_time": "5:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:00 PM"
     },
     {
      "no": 5,
@@ -88512,14 +88568,14 @@
     {
      "no": 11,
      "name": "Chandrakona Road",
-     "up_time": "3:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:00 PM"
     },
     {
      "no": 12,
      "name": "Chandrakona Town",
-     "up_time": "2:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:20 PM"
     },
     {
      "no": 13,
@@ -88536,7 +88592,7 @@
     {
      "no": 15,
      "name": "Ghatal",
-     "up_time": "10:20 AM",
+     "up_time": "",
      "down_time": "1:15 PM"
     }
    ],
@@ -89664,7 +89720,7 @@
      "no": 3,
      "name": "Chirkunda",
      "up_time": "6:00 AM",
-     "down_time": "6:50 PM"
+     "down_time": ""
     },
     {
      "no": 4,
@@ -90869,7 +90925,7 @@
     {
      "no": 6,
      "name": "Saltora",
-     "up_time": "9:00 AM",
+     "up_time": "",
      "down_time": "1:30 PM"
     },
     {
@@ -92328,19 +92384,19 @@
     {
      "no": 11,
      "name": "Hatirampur",
-     "up_time": "3:00 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "3:00 PM"
     },
     {
      "no": 12,
      "name": "Khatra",
-     "up_time": "9:20 AM",
+     "up_time": "",
      "down_time": "2:40 PM"
     },
     {
      "no": 13,
      "name": "Ranibandh",
-     "up_time": "9:50 AM",
+     "up_time": "",
      "down_time": "2:00 PM"
     },
     {
@@ -92352,7 +92408,7 @@
     {
      "no": 15,
      "name": "Poradih",
-     "up_time": "10:30 AM",
+     "up_time": "",
      "down_time": "1:20 PM"
     },
     {
@@ -92364,7 +92420,7 @@
     {
      "no": 17,
      "name": "Bandwan",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "12:45 PM"
     }
    ],
@@ -93073,8 +93129,8 @@
     {
      "no": 9,
      "name": "Kamarpukur",
-     "up_time": "4:10 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "4:10 PM"
     },
     {
      "no": 10,
@@ -93085,7 +93141,7 @@
     {
      "no": 11,
      "name": "Arambagh",
-     "up_time": "11:00 AM",
+     "up_time": "",
      "down_time": "3:40 PM"
     },
     {
@@ -93109,13 +93165,13 @@
     {
      "no": 15,
      "name": "Telipukur",
-     "up_time": "2:30 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "2:30 PM"
     },
     {
      "no": 16,
      "name": "Bardhaman",
-     "up_time": "12:20 PM",
+     "up_time": "",
      "down_time": "2:10 PM"
     }
    ],
@@ -93926,13 +93982,13 @@
     {
      "no": 12,
      "name": "Durgapur (Muchipara)",
-     "up_time": "11:25 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "11:25 AM"
     },
     {
      "no": 13,
      "name": "Durgapur (City Center)",
-     "up_time": "8:20 AM",
+     "up_time": "",
      "down_time": "11:10 AM"
     },
     {
@@ -93944,7 +94000,7 @@
     {
      "no": 15,
      "name": "Asansol",
-     "up_time": "9:20 AM",
+     "up_time": "",
      "down_time": "10:00 AM"
     }
    ],
@@ -95310,8 +95366,8 @@
     {
      "no": 6,
      "name": "Dhaldanga",
-     "up_time": "5:50 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "5:50 PM"
     },
     {
      "no": 7,
@@ -95813,7 +95869,7 @@
      "no": 26,
      "name": "Digha",
      "up_time": "4:35 AM",
-     "down_time": "7:30 PM"
+     "down_time": ""
     }
    ],
    "source": "bussathi.in",
@@ -96928,8 +96984,8 @@
     {
      "no": 12,
      "name": "Taldangra",
-     "up_time": "12:20 PM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "12:20 PM"
     },
     {
      "no": 13,
@@ -96946,7 +97002,7 @@
     {
      "no": 15,
      "name": "Bankura",
-     "up_time": "11:20 AM",
+     "up_time": "",
      "down_time": "11:55 AM"
     }
    ],
@@ -97346,13 +97402,13 @@
     {
      "no": 19,
      "name": "Durgachak",
-     "up_time": "10:30 AM",
-     "down_time": ""
+     "up_time": "",
+     "down_time": "10:30 AM"
     },
     {
      "no": 20,
      "name": "Haldia",
-     "up_time": "9:45 AM",
+     "up_time": "",
      "down_time": "10:00 AM"
     }
    ],
@@ -402077,20 +402133,20 @@
     {
      "no": 30,
      "name": "Chandpura",
-     "up_time": "",
-     "down_time": "8:30 PM"
+     "up_time": "8:30 PM",
+     "down_time": ""
     },
     {
      "no": 31,
      "name": "Bommasandra",
-     "up_time": "",
-     "down_time": "8:45 PM"
+     "up_time": "8:45 PM",
+     "down_time": ""
     },
     {
      "no": 32,
      "name": "Electronic City",
-     "up_time": "",
-     "down_time": "9:10 PM"
+     "up_time": "9:10 PM",
+     "down_time": ""
     }
    ],
    "source": "facebook (community report)",
@@ -402448,7 +402504,7 @@
      "no": 6,
      "name": "Darjiling More",
      "up_time": "7:47 AM",
-     "down_time": "3:02 PM"
+     "down_time": ""
     },
     {
      "no": 7,
@@ -403156,13 +403212,13 @@
      "no": 4,
      "name": "Thakurchak",
      "up_time": "10:15 AM",
-     "down_time": "4:10 PM"
+     "down_time": ""
     },
     {
      "no": 5,
      "name": "Khakurda",
      "up_time": "10:35 AM",
-     "down_time": "4:25 PM"
+     "down_time": ""
     },
     {
      "no": 6,
