@@ -1,0 +1,55 @@
+name: Cooch Behar NBSTC flyer fixes + via
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cb-nbstc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (fixes + new bus + via stoppages)
+        run: python3 scripts/patch_coochbehar_nbstc.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q 'nbstc-fb-cb-siliguri-2pm' data/busjatri_data.json
+          grep -q '12:50 PM' bus-time-table/cooch-behar-to-siliguri.html
+          grep -q 'Falakata' bus-time-table/cooch-behar-to-siliguri.html
+          grep -q 'Mathabhanga' bus-time-table/cooch-behar-to-siliguri.html
+          grep -q '42 buses listed' bus-time-table/buses-from-cooch-behar.html
+          grep -q '6:15 AM' bus-time-table/cooch-behar-to-beldanga.html
+          test -f via/falakata.html
+          test -f via/mathabhanga.html
+          grep -q 'cooch-behar-to-siliguri' sitemap.xml
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data scripts/patch_coochbehar_nbstc.py bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Cooch Behar depot: fix 12:50 PM + Beldanga 6:15 AM, add 2:00 PM Siliguri bus, add Falakata/Mathabhanga via stoppages"
+            git push
+          fi
