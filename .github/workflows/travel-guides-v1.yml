@@ -1,0 +1,42 @@
+name: Travel guides batch 1
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add-guides:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply guide patch
+        run: python3 scripts/patch_travel_guides_v1.py
+
+      - name: Syntax check
+        run: python3 -c "import ast; ast.parse(open('scripts/gen_stand_v2.py').read())"
+
+      - name: Generate 6 stand pages
+        run: python3 scripts/gen_stand_v2.py --stands "Durgapur,Siliguri,Asansol,Howrah Station,Bardhaman,Barasat"
+
+      - name: Validate
+        run: |
+          ok=1
+          for f in durgapur siliguri asansol howrah-station bardhaman barasat; do
+            grep -q "tg-grid" bus-time-table/buses-from-$f.html || { echo "MISSING guide: $f"; ok=0; }
+          done
+          [ "$ok" = "1" ] || exit 1
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_stand_v2.py scripts/patch_travel_guides_v1.py bus-time-table/buses-from-durgapur.html bus-time-table/buses-from-siliguri.html bus-time-table/buses-from-asansol.html bus-time-table/buses-from-howrah-station.html bus-time-table/buses-from-bardhaman.html bus-time-table/buses-from-barasat.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Travel guides batch 1: Durgapur, Siliguri, Asansol, Howrah Station, Bardhaman, Barasat (EN+BN)"
+            git push
+          fi
