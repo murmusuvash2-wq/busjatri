@@ -1,0 +1,78 @@
+name: Khargram-Howrah revert (misread of Jhargram-Habra)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  khargram-revert:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Revert wrong flyer entries (6 buses)
+        run: python3 scripts/patch_khargram_revert_20260924.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          test ! -f bus-time-table/kolkata-to-khargram.html
+          if grep -q 'kolkata-to-khargram' sitemap.xml; then echo "ERROR khargram still in sitemap"; exit 1; fi
+          grep -q 'nbstc-fb-cb-siliguri-800pm' data/busjatri_data.json
+          grep -q 'sbstc-fb-kolkata-jhargram-925am' data/busjatri_data.json
+          grep -q 'sbstc-fb-midnapore-habra-200pm' data/busjatri_data.json
+          grep -q '8:00 PM' bus-time-table/cooch-behar-to-siliguri.html
+          grep -q '8:45 PM' bus-time-table/cooch-behar-to-siliguri.html
+          grep -q '1:30 PM' bus-time-table/cooch-behar-to-kolkata.html
+          grep -q '8:25 AM' bus-time-table/haldia-to-karunamoyee.html
+          grep -q '9:25 AM' bus-time-table/kolkata-to-jhargram.html
+          python3 - <<'PYEOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          buses = d['buses']
+          assert len(buses) == 4102, len(buses)
+          ids = {b['id'] for b in buses}
+          for bad in ['sbstc-fb-kolkata-khargram-730am','sbstc-fb-kolkata-khargram-825am',
+                      'sbstc-fb-kolkata-khargram-925am','sbstc-fb-kolkata-khargram-245pm',
+                      'sbstc-fb-kolkata-khargram-315pm','sbstc-fb-medinipur-howrah-200pm']:
+              assert bad not in ids, bad
+          for b in buses:
+              assert 'Khargram' not in str(b.get('origin','')) + str(b.get('destination','')), b['id']
+          for good in ['nbstc-fb-cb-siliguri-800pm','nbstc-fb-cb-siliguri-815pm','nbstc-fb-cb-siliguri-845pm',
+                          'sbstc-fb-kolkata-jhargram-925am','sbstc-fb-midnapore-habra-200pm']:
+              assert good in ids, good
+          b = [x for x in buses if x['id']=='nbstc-in-nbstc-cooch-behar-ko-949'][0]
+          assert b['departure_time'] == '1:30 PM'
+          b = [x for x in buses if x['id']=='sbstc-haldia-kolkata-5'][0]
+          assert b['departure_time'] == '8:25 AM'
+          print('data validation OK')
+          PYEOF
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data scripts/patch_khargram_revert_20260924.py bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Revert 6 wrong flyer entries - Khargram was misread Jhargram, Howrah was misread Habra (duplicates removed, route page and sitemap entry deleted)"
+            git push
+          fi
