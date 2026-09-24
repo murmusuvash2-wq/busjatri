@@ -1,0 +1,46 @@
+name: mapbtn-and-waypoints-fix-20260925
+on:
+  workflow_dispatch:
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run patcher
+        run: python3 scripts/patch_mapbtn_waypoints_20260925.py
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'wa-row .map-btn{margin:0}' css/ux-fixes.css
+          if grep -q 'slice(0, 8)' js/app.js js/bus-page.js; then echo 'FAIL: old waypoint sampling still present'; exit 1; fi
+          grep -q "join('%7C')" js/app.js
+          grep -q "join('%7C')" js/bus-page.js
+          grep -q "join('%7C')" js/ux-fixes.js
+          if grep -q 'MAXW = 9' js/ux-fixes.js; then echo 'FAIL: MAXW still 9'; exit 1; fi
+          if grep -q "join('|')" js/ux-fixes.js; then echo 'FAIL: raw pipe join still present'; exit 1; fi
+          grep -q 'ux20260925a' index.html
+          grep -q 'perf20260925a' index.html
+          grep -q 'bj20260925a' index.html
+          grep -q 'rpt20260925a' index.html
+          node --check js/app.js
+          node --check js/bus-page.js
+          node --check js/ux-fixes.js
+          echo 'ALL VALIDATIONS PASSED'
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Fix map button alignment (margin 0) and Google Maps route line (3 waypoints, %7C encoded) - mobile safe"
+            git push
+          fi
