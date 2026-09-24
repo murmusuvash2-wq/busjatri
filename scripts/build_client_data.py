@@ -72,6 +72,17 @@ index = {
     "stops": stops,
 }
 (ROOT / "data" / "app-index.json").write_text(json.dumps(index, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+from collections import Counter as _Counter
+_pair = _Counter()
+for _bus in source["buses"]:
+    _o = tidy(_bus.get("origin"))
+    _d = tidy(_bus.get("destination"))
+    if _o and _d and _o != _d:
+        _pair[(_o, _d)] += 1
+_home = {"meta": index["meta"], "sn": sn,
+         "top": [{"from": _o, "to": _d, "n": _c} for (_o, _d), _c in _pair.most_common(10)]}
+(ROOT / "data" / "home-index.json").write_text(json.dumps(_home, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 lite = dict(index)
 lite["buses"] = [{k: v for k, v in b.items() if k not in ("sx", "ux", "dx")} for b in search_buses]
 (ROOT / "data" / "app-index-lite.json").write_text(json.dumps(lite, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
@@ -83,7 +94,7 @@ if details_dir.exists():
 details_dir.mkdir(parents=True)
 for bus in source["buses"]:
     (details_dir / (bus["id"] + ".json")).write_text(json.dumps(bus, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-print("Built app-index.json, app-index-lite.json and per-bus details")
+print("Built app-index.json, home-index.json, app-index-lite.json and per-bus details")
 print("Lite index bytes:", (ROOT / "data" / "app-index-lite.json").stat().st_size)
 print("Full index bytes:", (ROOT / "data" / "app-index.json").stat().st_size)
 print("Per-bus detail files:", len(list(details_dir.glob("*.json"))))

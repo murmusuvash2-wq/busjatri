@@ -86,6 +86,10 @@ body.lang-bn .only-en{display:none}
 body.lang-bn .only-bn{display:block}
 body:not(.lang-bn) .hbn{display:none}
 .day-group{margin:20px 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--ink-dim);border-bottom:1px solid var(--line-strong);padding-bottom:4px}
+.seemore-btn{display:block;width:100%;box-sizing:border-box;margin:14px 0 6px;padding:13px 16px;font:600 15px/1.2 inherit;background:var(--surface);border:1.5px solid var(--line-strong);border-radius:14px;color:var(--ink);cursor:pointer}
+.seemore-btn:hover{border-color:var(--amber-ink)}
+.bus-row.cut{display:none!important}
+.day-group.cut{display:none!important}
 </style></head>
 <body>
 <header class="header">
@@ -114,7 +118,7 @@ body:not(.lang-bn) .hbn{display:none}
     <span class="schip">🛣 2 <span class="label-en">routes</span><span class="label-bn">টি রুট</span></span>
   </div>
 </div>
-<div class="day-group"><span class="label-en">OTHER TIMES</span><span class="label-bn">সময় নেই</span></div><a class="bus-row" href="../bus-time-table/basirhat-to-hakimpur.html"><div class="dep">—<small>→ Hakimpur</small></div><div class="bmid"><div class="op">DN-13 · WBTC</div><div class="subrow"><span>Basirhat → Hakimpur</span><span>27 <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div></div><span class="badge badge-gov">WBTC</span></a><a class="bus-row" href="../bus-time-table/hakimpur-to-basirhat.html"><div class="dep">—<small>→ Basirhat</small></div><div class="bmid"><div class="op">DN-13 · WBTC</div><div class="subrow"><span>Hakimpur → Basirhat</span><span>27 <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div></div><span class="badge badge-gov">WBTC</span></a>
+<div class="vboard"><div class="day-group"><span class="label-en">OTHER TIMES</span><span class="label-bn">সময় নেই</span></div><a class="bus-row" href="../bus-time-table/basirhat-to-hakimpur.html"><div class="dep">—<small>→ Hakimpur</small></div><div class="bmid"><div class="op">DN-13 · WBTC</div><div class="subrow"><span>Basirhat → Hakimpur</span><span>27 <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div></div><span class="badge badge-gov">WBTC</span></a><a class="bus-row" href="../bus-time-table/hakimpur-to-basirhat.html"><div class="dep">—<small>→ Basirhat</small></div><div class="bmid"><div class="op">DN-13 · WBTC</div><div class="subrow"><span>Hakimpur → Basirhat</span><span>27 <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div></div><span class="badge badge-gov">WBTC</span></a></div>
 <div class="sec"><h3><span class="label-en">Routes through Sadarpur</span><span class="label-bn">Sadarpur হয়ে যাওয়া রুট</span></h3></div>
 <div class="chip-row"><a class="rel-chip" href="../bus-time-table/basirhat-to-hakimpur.html">Basirhat → Hakimpur</a><a class="rel-chip" href="../bus-time-table/hakimpur-to-basirhat.html">Hakimpur → Basirhat</a></div>
 <div class="note">📍 <span class="label-en"><b>Stop page = every bus that halts at Sadarpur.</b> Times shown are at this stop, in both directions. Times can change — verify with the operator.</span><span class="label-bn"><b>স্টপ পেজ = এই স্টপে থামা সব বাস।</b> সময়গুলি এই স্টপে, দুই দিকেরই। সময় বদলাতে পারে।</span></div>
@@ -128,4 +132,44 @@ function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(b
 function toggleTheme(){var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('bj-theme',next);updateThemeIcon(next);}
 function setLang(l){document.body.className=l==='bn'?'lang-bn':'';localStorage.setItem('bj-lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langBN').classList.toggle('active',l==='bn');}
 (function(){var t=localStorage.getItem('bj-theme');if(t)document.documentElement.setAttribute('data-theme',t);updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));var l=localStorage.getItem('bj-lang');if(l&&l!=='en'){setLang(l);}})();</script>
-</body></html>
+<script>
+(function(){
+  var board=document.getElementById('vboard');
+  if(!board){return;}
+  var els=[].slice.call(board.children);
+  var rows=[];
+  for(var i=0;i<els.length;i++){if(els[i].classList.contains('bus-row')){rows.push(els[i]);}}
+  if(rows.length<=14){return;}
+  var KEEP=10,STEP=20,btn=null;
+  function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
+  function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+  function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
+  function label(){
+    var m=leftCount();
+    if(m<1){return;}
+    var n=Math.min(STEP,m);
+    if(btn){btn.textContent=isBn()?('আরও '+bn(n)+'টি বাস দেখুন ('+bn(m)+'টি বাকি)'):('See '+n+' more buses ('+m+' left)');}
+  }
+  var shown=0;
+  for(var i=0;i<els.length;i++){
+    var e=els[i];
+    if(e.classList.contains('bus-row')){shown++;if(shown>KEEP){e.classList.add('cut');}}
+    else{if(shown>=KEEP){e.classList.add('cut');}}
+  }
+  btn=document.getElementById('seemoreBtn');
+  if(!btn){return;}
+  btn.addEventListener('click',function(){
+    var revealed=0;
+    for(var j=0;j<els.length&&revealed<STEP;j++){
+      var e=els[j];
+      if(e.classList.contains('cut')){e.classList.remove('cut');if(e.classList.contains('bus-row')){revealed++;}}
+    }
+    if(leftCount()<1){if(btn.parentNode){btn.parentNode.removeChild(btn);}}
+    else{label();}
+  });
+  label();
+  if(window.MutationObserver){
+    new MutationObserver(function(){if(btn){label();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+  }
+})();
+</script></body></html>

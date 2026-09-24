@@ -1,6 +1,6 @@
 /* BusJatri — app logic. Hash-based router over a single local JSON dataset. */
 
-let DATA = null, BUSES = {}, ROUTES = {}, STOPS = {}, FULL_BUSES = null, LANG = 'en';
+let DATA = null, BUSES = {}, ROUTES = {}, STOPS = {}, FULL_BUSES = null, LANG = 'en', SN = [], TOP_ROUTES = null, FULL_PROMISE = null;
 
 const ICONS = {
   bus: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg>',
@@ -97,16 +97,30 @@ function renderInitialSkeleton() {
 async function loadData() {
   renderInitialSkeleton();
   try {
-    const res = await fetch('data/app-index.json');
+    const res = await fetch('data/home-index.json');
     if (!res.ok) throw new Error('HTTP ' + res.status);
-    DATA = await res.json();
-    BUSES = {};
-    DATA.buses.forEach(b => BUSES[b.id] = b);
-    ROUTES = DATA.routes || {};
-    STOPS = DATA.stops || {};
+    const home = await res.json();
+    DATA = { meta: home.meta || {} };
+    SN = home.sn || [];
+    TOP_ROUTES = home.top || [];
+    BUSES = {}; ROUTES = {}; STOPS = {};
     window.addEventListener('hashchange', render);
     render();
+    var kick = function () {
+      ensureFullData().then(function () { renderBoard(); }).catch(function () {});
+    };
+    if (window.requestIdleCallback) {
+      requestIdleCallback(function () { kick(); }, { timeout: 2500 });
+    } else {
+      setTimeout(kick, 2000);
+    }
   } catch (e) {
+    try {
+      await ensureFullData();
+      window.addEventListener('hashchange', render);
+      render();
+      return;
+    } catch (e2) {}
     document.getElementById('app').innerHTML = `
     <div class="container"><div class="error-panel">
       ${icon('alert')}
@@ -114,6 +128,24 @@ async function loadData() {
       <button class="retry-btn" onclick="loadData()">Try again</button>
     </div></div>`;
   }
+}
+
+function ensureFullData() {
+  if (DATA && DATA.buses) return Promise.resolve();
+  if (!FULL_PROMISE) {
+    FULL_PROMISE = fetch('data/app-index.json').then(function (res) {
+      if (!res.ok) { FULL_PROMISE = null; throw new Error('HTTP ' + res.status); }
+      return res.json();
+    }).then(function (full) {
+      DATA = full;
+      BUSES = {};
+      DATA.buses.forEach(b => BUSES[b.id] = b);
+      ROUTES = DATA.routes || {};
+      STOPS = DATA.stops || {};
+      if (DATA.sn && DATA.sn.length) SN = DATA.sn;
+    });
+  }
+  return FULL_PROMISE;
 }
 
 function setLang(l) {
@@ -307,6 +339,7 @@ function freshnessNote() {
 async function render() {
   const hash = location.hash.slice(1) || '/';
   const app = document.getElementById('app');
+  if (hash !== '/' && hash !== '') { try { await ensureFullData(); } catch (e) {} }
   if (hash === '/' || hash === '') renderHome(app);
   else if (hash.startsWith('/search')) renderSearch(app);
   else if (hash.startsWith('/route/')) renderRoute(app, decodeURIComponent(hash.slice(7)));
@@ -413,6 +446,8 @@ function renderBoard() {
         `<span class="ldst">→ ${esc(pn(n.b.destination))}</span>` +
         `${right}</div>`;
     }).join('');
+  } else if (!(DATA && DATA.buses)) {
+    rows = `<div class="lv-row"><span class="lnm">Loading departures...</span></div>`;
   } else {
     rows = `<div class="lv-row"><span class="lnm">${LANG==='bn'?'সময়ের তথ্য নেই':'No timed departures listed'}</span></div>`;
   }
@@ -437,6 +472,7 @@ function renderBoard() {
 
 /* ===================== Popular Routes ===================== */
 function computePopularRoutes() {
+  if (TOP_ROUTES && TOP_ROUTES.length) return TOP_ROUTES;
   const pair = {};
   for (const id in BUSES) {
     const b = BUSES[id];
@@ -496,7 +532,7 @@ function renderHome(el) {
           <button class="search-btn" onclick="doSearch()">${icon('search')} <span class="label-en">Search buses</span><span class="label-bn">খুঁজুন</span></button>
           <a class="browse-btn" href="bus-time-table/"><span class="label-en">Browse all timetables</span><span class="label-bn">সব টাইমটেবিল দেখুন</span> →</a>
         </div>
-        <datalist id="stopList">${[...new Set([...Object.keys(STOPS), ...Object.values(BUSES).flatMap(b => [b.origin, b.destination]).filter(Boolean)])].map(n => `<option value="${esc(n)}">`).join('')}</datalist>
+        <datalist id="stopList">${[...new Set([...(SN && SN.length ? SN : Object.keys(STOPS)), ...Object.values(BUSES).flatMap(b => [b.origin, b.destination]).filter(Boolean)])].map(n => `<option value="${esc(n)}">`).join('')}</datalist>
       </div>
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
       <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></p>

@@ -124,6 +124,10 @@ PAGE_TMPL = """<!DOCTYPE html>
 @@SCHEMA@@
 <style>@@CSS@@
 .day-group{margin:20px 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--ink-dim);border-bottom:1px solid var(--line-strong);padding-bottom:4px}
+.seemore-btn{display:block;width:100%;box-sizing:border-box;margin:14px 0 6px;padding:13px 16px;font:600 15px/1.2 inherit;background:var(--surface);border:1.5px solid var(--line-strong);border-radius:14px;color:var(--ink);cursor:pointer}
+.seemore-btn:hover{border-color:var(--amber-ink)}
+.bus-row.cut{display:none!important}
+.day-group.cut{display:none!important}
 </style></head>
 <body>
 <header class="header">
@@ -203,6 +207,11 @@ def stop_page(stop, e, route_pages, fname):
     if len(rows) > len(shown):
         board += ('<div class="note">Showing first ' + str(len(shown)) + " of " + str(len(rows)) +
                   ' departures.</div>')
+    if len(shown) > 14:
+        board = ('<div class="vboard" id="vboard">' + board + '</div>' +
+                 '<button type="button" class="seemore-btn" id="seemoreBtn"></button>')
+    else:
+        board = '<div class="vboard">' + board + '</div>' 
 
     routes = Counter()
     for r in e["rows"]:
@@ -317,6 +326,49 @@ INDEX_TMPL = """<!DOCTYPE html>
 </body></html>"""
 
 
+SEE_MORE_JS = """<script>
+(function(){
+  var board=document.getElementById('vboard');
+  if(!board){return;}
+  var els=[].slice.call(board.children);
+  var rows=[];
+  for(var i=0;i<els.length;i++){if(els[i].classList.contains('bus-row')){rows.push(els[i]);}}
+  if(rows.length<=14){return;}
+  var KEEP=10,STEP=20,btn=null;
+  function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
+  function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+  function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
+  function label(){
+    var m=leftCount();
+    if(m<1){return;}
+    var n=Math.min(STEP,m);
+    if(btn){btn.textContent=isBn()?('আরও '+bn(n)+'টি বাস দেখুন ('+bn(m)+'টি বাকি)'):('See '+n+' more buses ('+m+' left)');}
+  }
+  var shown=0;
+  for(var i=0;i<els.length;i++){
+    var e=els[i];
+    if(e.classList.contains('bus-row')){shown++;if(shown>KEEP){e.classList.add('cut');}}
+    else{if(shown>=KEEP){e.classList.add('cut');}}
+  }
+  btn=document.getElementById('seemoreBtn');
+  if(!btn){return;}
+  btn.addEventListener('click',function(){
+    var revealed=0;
+    for(var j=0;j<els.length&&revealed<STEP;j++){
+      var e=els[j];
+      if(e.classList.contains('cut')){e.classList.remove('cut');if(e.classList.contains('bus-row')){revealed++;}}
+    }
+    if(leftCount()<1){if(btn.parentNode){btn.parentNode.removeChild(btn);}}
+    else{label();}
+  });
+  label();
+  if(window.MutationObserver){
+    new MutationObserver(function(){if(btn){label();}}).observe(document.body,{attributes:true,attributeFilter:['class']});
+  }
+})();
+</script>"""
+
+
 def main():
     import argparse
     ap = argparse.ArgumentParser()
@@ -352,7 +404,7 @@ def main():
         page = stop_page(stop, e, route_pages, f)
         if not args.dry:
             with open(os.path.join(VIA_DIR, f), "w", encoding="utf-8") as fh:
-                fh.write(page)
+                fh.write(page.replace("</body>", SEE_MORE_JS + "</body>", 1))
         done += 1
         if done <= 3 or args.dry:
             print(f + ": " + str(len({id(r[3]) for r in e["rows"]})) + " buses, " + str(len(page) // 1024) + "KB")
