@@ -1,0 +1,55 @@
+name: PALLY DUTH origin fix (Sonamukhi, not Mejia)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-pally-duth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (origin Mejia -> Sonamukhi) + sitemap
+        run: python3 scripts/fix_pally_duth_origin.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          test -f bus-time-table/sonamukhi-to-karunamoyee.html
+          grep -q 'PALLY DUTH' bus-time-table/sonamukhi-to-karunamoyee.html
+          grep -q '5:30 AM' bus-time-table/sonamukhi-to-karunamoyee.html
+          grep -q 'sonamukhi-to-karunamoyee' sitemap.xml
+          if grep -q 'PALLY DUTH' via/mejia.html; then echo "PALLY DUTH still on via/mejia"; exit 1; fi
+          if [ -f via/sonamukhi.html ]; then grep -q 'PALLY DUTH' via/sonamukhi.html || { echo "PALLY DUTH missing from via/sonamukhi"; exit 1; }; fi
+          grep -q 'bussathi-pally-duth-546' data/app-index.json
+          python3 -c "import json; d=json.load(open('data/busjatri_data.json')); b=[x for x in d['buses'] if x.get('reg_no')=='WB41K3344'][0]; assert b['origin']=='Sonamukhi', b['origin']; print('origin ok:', b['origin'])"
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A data scripts/fix_pally_duth_origin.py bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "PALLY DUTH (WB 41K 3344): fix origin Mejia -> Sonamukhi (bus runs Sonamukhi-Bardhaman-Karunamoyee, never via Mejia); new sonamukhi-to-karunamoyee route page"
+            git push
+          fi
