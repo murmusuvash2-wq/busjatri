@@ -1,0 +1,49 @@
+name: Search fix - Howrah alias group
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-howrah-alias:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch js/app.js + gen_route_v2.py alias groups
+        run: python3 scripts/fix_howrah_alias.py
+
+      - name: Regenerate route pages (through-services change)
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q "'esplanade', 'santragachi'" js/app.js
+          grep -q "'esplanade', 'santragachi'" scripts/gen_route_v2.py
+          if grep -q "'esplanade', 'howrah', 'santragachi'" js/app.js; then echo "howrah still in js group"; exit 1; fi
+          if grep -q "'esplanade', 'howrah', 'santragachi'" scripts/gen_route_v2.py; then echo "howrah still in py group"; exit 1; fi
+          grep -q '127 buses listed' bus-time-table/kolkata-to-digha.html
+          if grep -q 'santosh-bus-service-digha-howrah' bus-time-table/kolkata-to-digha.html; then echo "howrah bus still on kolkata page"; exit 1; fi
+          grep -q '127 buses' bus-time-table/kolkata-to-digha.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add js/app.js scripts/gen_route_v2.py scripts/fix_howrah_alias.py bus-time-table data
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Search fix: remove Howrah from Kolkata alias group - Howrah searches no longer match Karunamoyee/Kolkata buses; regenerate route pages"
+            git push
+          fi
