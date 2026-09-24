@@ -3,6 +3,7 @@
 #    FIX: Midnapur->Kolkata 5:50 AM -> 5:10 AM (zoom-verified)
 # 2) NEW: 30 buses (times from flyer, via stoppages added)
 # 3) BTT index card counts: Medinipur +10, Kolkata +14, Habra +4, Barasat +2
+# 4) Add 3 new route pages to sitemap.xml
 # Backslash-free source; string ops only for BTT index.
 
 import json
@@ -107,6 +108,13 @@ BTT_CARDS = [
     ('Barasat', 2),
 ]
 
+# new route pages this patcher creates (must be added to sitemap.xml)
+SITEMAP_NEW = [
+    'kolkata-to-jhargram',
+    'medinipur-to-barasat',
+    'barasat-to-medinipur',
+]
+
 
 def patch_data():
     with open(DATA, encoding='utf-8') as fh:
@@ -172,9 +180,33 @@ def patch_btt():
         fh.write(s)
 
 
+def patch_sitemap():
+    with open('sitemap.xml', encoding='utf-8') as fh:
+        s = fh.read()
+    today = '2026-09-24'
+    added = 0
+    for slugname in SITEMAP_NEW:
+        loc = 'https://busjatri.in/bus-time-table/' + slugname + '.html'
+        if loc in s:
+            continue
+        entry = ('<url><loc>' + loc + '</loc><lastmod>' + today +
+                 '</lastmod><priority>0.7</priority></url>')
+        k = s.find('</urlset>')
+        if k < 0:
+            print('sitemap: urlset close not found')
+            continue
+        s = s[:k] + entry + s[k:]
+        added += 1
+    if added:
+        with open('sitemap.xml', 'w', encoding='utf-8') as fh:
+            fh.write(s)
+    print('sitemap urls added:', added)
+
+
 def main():
     added = patch_data()
     patch_btt()
+    patch_sitemap()
     print('done. new buses:', added)
 
 
