@@ -1,0 +1,39 @@
+name: Home preload fix (home-index instead of app-index)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  preload-fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Switch preload to home-index.json
+        run: python3 scripts/patch_home_preload_fix.py
+
+      - name: Validate
+        run: |
+          grep -q 'rel="preload" as="fetch" href="data/home-index.json"' index.html
+          if grep -q 'app-index.json' index.html; then echo "ERROR app-index still referenced in index.html"; exit 1; fi
+          grep -q "fetch('data/home-index.json')" js/app.js
+          grep -q 'js/app.js?v=perf20260924a' index.html
+          grep -q 'js/ux-fixes.js?v=rpt20260924a' index.html
+          test -f data/home-index.json
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_home_preload_fix.py index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Homepage preload now home-index.json (40KB) instead of app-index.json (1.9MB) - completes the lazy-load perf fix"
+            git push
+          fi
