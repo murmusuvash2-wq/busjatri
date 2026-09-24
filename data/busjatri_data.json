@@ -114480,7 +114480,7 @@
    "bus_type": "Government - SBSTC",
    "origin": "Midnapur",
    "destination": "Kolkata",
-   "departure_time": "5:50 AM",
+   "departure_time": "5:10 AM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "Midnapur",
@@ -114864,27 +114864,45 @@
    "bus_type": "Government - SBSTC",
    "origin": "Midnapur",
    "destination": "Karunamoyee",
-   "departure_time": "6:30 AM",
+   "departure_time": "6:50 AM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "Midnapur",
-   "route": "Midnapur - Karunamoyee",
+   "route": "Midnapur - Dunlop - Karunamoyee",
    "stoppages": [
     {
      "no": 1,
      "name": "Midnapur",
-     "up_time": "",
+     "up_time": "6:50 AM",
      "down_time": ""
     },
     {
      "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Airport Gate 2",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
      "name": "Karunamoyee",
      "up_time": "",
      "down_time": ""
     }
    ],
    "source": "SBSTC (govt)",
-   "total_stoppages": 2,
+   "total_stoppages": 5,
    "fare": "Rs. 95",
    "detail_url": "https://transport.wb.gov.in/wp-content/uploads/2016/09/RouteTimeTableFareSBSTC.pdf"
   },
@@ -406216,6 +406234,1248 @@
    ],
    "source": "NBSTC Cooch Behar Depot timetable (Facebook)",
    "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapur-kolkata-530am",
+   "bus_name": "SBSTC Midnapur-Kolkata",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Kolkata",
+   "departure_time": "5:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapur - Kolaghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapur-kolkata-730am-ac",
+   "bus_name": "SBSTC Midnapur-Kolkata (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Kolkata",
+   "departure_time": "7:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapur - Kolaghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapur-kolkata-800am-ac",
+   "bus_name": "SBSTC Midnapur-Kolkata (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Kolkata",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapur - Kolaghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapur-kolkata-1130am",
+   "bus_name": "SBSTC Midnapur-Kolkata",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Kolkata",
+   "departure_time": "11:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapur - Kolaghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "11:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapur-karunamoyee-305pm",
+   "bus_name": "SBSTC Midnapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Karunamoyee",
+   "departure_time": "3:05 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapur - Kolaghat - Esplanade - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "3:05 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapur-karunamoyee-440pm",
+   "bus_name": "SBSTC Midnapur-Karunamoyee",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Karunamoyee",
+   "departure_time": "4:40 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapur - Kolaghat - Esplanade - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapore-garia-1220pm",
+   "bus_name": "SBSTC Midnapore-Garia",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapore",
+   "destination": "Garia",
+   "departure_time": "12:20 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapore - Kolaghat - Esplanade - Garia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapore",
+     "up_time": "12:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Garia",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapore-garia-330pm",
+   "bus_name": "SBSTC Midnapore-Garia",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapore",
+   "destination": "Garia",
+   "departure_time": "3:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapore - Kolaghat - Esplanade - Garia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapore",
+     "up_time": "3:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Garia",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-midnapore-habra-200pm",
+   "bus_name": "SBSTC Midnapore-Habra",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapore",
+   "destination": "Habra",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Midnapore - Airport Gate 2 - Barasat - Habra",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapore",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport Gate 2",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Habra",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 5,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-medinipur-barasat-400pm",
+   "bus_name": "SBSTC Medinipur-Barasat",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Medinipur",
+   "destination": "Barasat",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Medinipur - Dunlop - Madhyamgram - Barasat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Medinipur",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Madhyamgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 5,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-600am",
+   "bus_name": "SBSTC Kolkata-Midnapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-700am",
+   "bus_name": "SBSTC Kolkata-Midnapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "7:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-845am",
+   "bus_name": "SBSTC Kolkata-Midnapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "8:45 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "8:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-130pm-ac",
+   "bus_name": "SBSTC Kolkata-Midnapur (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "1:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "1:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-200pm",
+   "bus_name": "SBSTC Kolkata-Midnapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-350pm",
+   "bus_name": "SBSTC Kolkata-Midnapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "3:50 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "3:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-400pm",
+   "bus_name": "SBSTC Kolkata-Midnapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-midnapur-430pm-ac",
+   "bus_name": "SBSTC Kolkata-Midnapur (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Midnapur",
+   "departure_time": "4:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "4:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-jhargram-630am",
+   "bus_name": "SBSTC Kolkata-Jhargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Jhargram",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-jhargram-730am",
+   "bus_name": "SBSTC Kolkata-Jhargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Jhargram",
+   "departure_time": "7:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-jhargram-825am",
+   "bus_name": "SBSTC Kolkata-Jhargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Jhargram",
+   "departure_time": "8:25 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "8:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-jhargram-925am",
+   "bus_name": "SBSTC Kolkata-Jhargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Jhargram",
+   "departure_time": "9:25 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "9:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-jhargram-245pm",
+   "bus_name": "SBSTC Kolkata-Jhargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Jhargram",
+   "departure_time": "2:45 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "2:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-jhargram-315pm",
+   "bus_name": "SBSTC Kolkata-Jhargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Jhargram",
+   "departure_time": "3:15 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Kolaghat - Medinipur - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "wbtc-fb-habra-midnapore-455am",
+   "bus_name": "WBTC Habra-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - WBTC",
+   "origin": "Habra",
+   "destination": "Midnapore",
+   "departure_time": "4:55 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Habra - Dunlop - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "4:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "WBTC Medinipur route timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "wbtc-fb-habra-midnapore-525am",
+   "bus_name": "WBTC Habra-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - WBTC",
+   "origin": "Habra",
+   "destination": "Midnapore",
+   "departure_time": "5:25 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Habra - Dunlop - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "WBTC Medinipur route timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "wbtc-fb-habra-midnapore-555am",
+   "bus_name": "WBTC Habra-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - WBTC",
+   "origin": "Habra",
+   "destination": "Midnapore",
+   "departure_time": "5:55 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Habra - Dunlop - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "WBTC Medinipur route timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "wbtc-fb-habra-midnapore-620am",
+   "bus_name": "WBTC Habra-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - WBTC",
+   "origin": "Habra",
+   "destination": "Midnapore",
+   "departure_time": "6:20 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Habra - Barasat - Airport Gate 2 - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport Gate 2",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "WBTC Medinipur route timetable (Facebook)",
+   "total_stoppages": 5,
+   "detail_url": ""
+  },
+  {
+   "id": "wbtc-fb-barasat-medinipur-830am",
+   "bus_name": "WBTC Barasat-Medinipur",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - WBTC",
+   "origin": "Barasat",
+   "destination": "Medinipur",
+   "departure_time": "8:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Barasat - Dunlop - Airport Gate 2 - Medinipur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport Gate 2",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "WBTC Medinipur route timetable (Facebook)",
+   "total_stoppages": 5,
+   "detail_url": ""
+  },
+  {
+   "id": "wbtc-fb-barasat-medinipur-345pm",
+   "bus_name": "WBTC Barasat-Medinipur",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - WBTC",
+   "origin": "Barasat",
+   "destination": "Medinipur",
+   "departure_time": "3:45 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Barasat - Dunlop - Medinipur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "3:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Medinipur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "WBTC Medinipur route timetable (Facebook)",
+   "total_stoppages": 4,
    "detail_url": ""
   }
  ],
