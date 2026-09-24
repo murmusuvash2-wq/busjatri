@@ -98585,7 +98585,7 @@
    "bus_type": "",
    "origin": "Bankura",
    "destination": "Chittaranjan",
-   "departure_time": "6:20 AM",
+   "departure_time": "6:25 AM",
    "arrival_time": "10:30 AM",
    "contact_number": "Not Available !",
    "depot_name": "",
@@ -105884,13 +105884,13 @@
   },
   {
    "id": "sbstc-bankura-karunamoyee-2",
-   "bus_name": "SBSTC Bankura-Karunamoyee",
+   "bus_name": "SBSTC Bankura-Karunamoyee (NH 1)",
    "reg_no": "",
    "operator": "SBSTC",
    "bus_type": "Government - SBSTC",
    "origin": "Bankura",
    "destination": "Karunamoyee",
-   "departure_time": "12:10 PM",
+   "departure_time": "12:00 PM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "Bankura",
@@ -105916,7 +105916,7 @@
   },
   {
    "id": "sbstc-bankura-karunamoyee-3",
-   "bus_name": "SBSTC Bankura-Karunamoyee",
+   "bus_name": "SBSTC Bankura-Karunamoyee (NH 2)",
    "reg_no": "",
    "operator": "SBSTC",
    "bus_type": "Government - SBSTC",
@@ -105948,7 +105948,7 @@
   },
   {
    "id": "sbstc-bankura-karunamoyee-4",
-   "bus_name": "SBSTC Bankura-Karunamoyee",
+   "bus_name": "SBSTC Bankura-Karunamoyee (NH 3)",
    "reg_no": "",
    "operator": "SBSTC",
    "bus_type": "Government - SBSTC",
@@ -408796,6 +408796,613 @@
    ],
    "source": "SBSTC Haldia depot timetable (Facebook)",
    "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-kolkata-500am",
+   "bus_name": "SBSTC Bankura-Kolkata",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Kolkata",
+   "departure_time": "5:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "5:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-kolkata-450am-arambag",
+   "bus_name": "SBSTC Bankura-Kolkata (via Arambag)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Kolkata",
+   "departure_time": "4:50 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Arambag - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "4:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Arambag",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-karunamoyee-515am-ac",
+   "bus_name": "SBSTC Bankura-Karunamoyee (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Karunamoyee",
+   "departure_time": "5:15 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "5:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-karunamoyee-1015am",
+   "bus_name": "SBSTC Bankura-Karunamoyee",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Karunamoyee",
+   "departure_time": "10:15 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "10:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-karunamoyee-320pm-ac",
+   "bus_name": "SBSTC Bankura-Karunamoyee (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Karunamoyee",
+   "departure_time": "3:20 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Karunamoyee",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "3:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-malda-515am",
+   "bus_name": "SBSTC Bankura-Malda",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Malda",
+   "departure_time": "5:15 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "5:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-ramganj-615am",
+   "bus_name": "SBSTC Bankura-Ramganj",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Ramganj",
+   "departure_time": "6:15 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Ramganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "6:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Ramganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-kabilepur-830am",
+   "bus_name": "SBSTC Bankura-Kabilepur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Kabilepur",
+   "departure_time": "8:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Kabilepur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "8:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kabilepur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-lalgola-900am",
+   "bus_name": "SBSTC Bankura-Lalgola",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Lalgola",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Lalgola",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Lalgola",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-siliguri-500pm",
+   "bus_name": "SBSTC Bankura-Siliguri",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Siliguri",
+   "departure_time": "5:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "5:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-durgapur-640am",
+   "bus_name": "SBSTC Bankura-Durgapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur",
+   "departure_time": "6:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "6:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-durgapur-715am",
+   "bus_name": "SBSTC Bankura-Durgapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur",
+   "departure_time": "7:15 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "7:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-durgapur-740am-ac",
+   "bus_name": "SBSTC Bankura-Durgapur (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur",
+   "departure_time": "7:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "7:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-durgapur-315pm",
+   "bus_name": "SBSTC Bankura-Durgapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur",
+   "departure_time": "3:15 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-durgapur-400pm-ac",
+   "bus_name": "SBSTC Bankura-Durgapur (AC)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-durgapur-430pm",
+   "bus_name": "SBSTC Bankura-Durgapur",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur",
+   "departure_time": "4:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "4:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-city-centre-600am",
+   "bus_name": "SBSTC Bankura-City Centre",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur City Centre",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur City Centre",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur City Centre",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-city-centre-815am-via-mejia",
+   "bus_name": "SBSTC Bankura-City Centre (via Mejia)",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur City Centre",
+   "departure_time": "8:15 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Mejia - Asansol - City Centre",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "8:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mejia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Durgapur City Centre",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 4,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-bankura-city-centre-130pm",
+   "bus_name": "SBSTC Bankura-City Centre",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Bankura",
+   "destination": "Durgapur City Centre",
+   "departure_time": "1:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Bankura",
+   "route": "Bankura - Durgapur City Centre",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "1:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Durgapur City Centre",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Bankura depot timetable (Facebook)",
+   "total_stoppages": 2,
    "detail_url": ""
   }
  ],
