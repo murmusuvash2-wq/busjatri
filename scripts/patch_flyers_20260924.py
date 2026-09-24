@@ -148,4 +148,31 @@ if changes:
         print(' -', c)
     print('total buses:', len(buses))
 else:
-    print('no changes needed (already applied)')
+    print('no data changes needed (already applied)')
+
+# --- 6) sitemap.xml: add new route page URLs (idempotent) ---
+SITEMAP_PATH = os.path.join(ROOT, 'sitemap.xml')
+SITEMAP_NEW = ['kolkata-to-khargram']
+try:
+    with open(SITEMAP_PATH, encoding='utf-8') as fh:
+        sm = fh.read()
+    today = '2026-09-24'
+    added_sm = 0
+    for slugname in SITEMAP_NEW:
+        loc = 'https://busjatri.in/bus-time-table/' + slugname + '.html'
+        if loc in sm:
+            continue
+        entry = ('<url><loc>' + loc + '</loc><lastmod>' + today +
+                 '</lastmod><priority>0.7</priority></url>')
+        k = sm.find('</urlset>')
+        if k < 0:
+            print('sitemap: urlset close not found')
+            continue
+        sm = sm[:k] + entry + sm[k:]
+        added_sm += 1
+    if added_sm:
+        with open(SITEMAP_PATH, 'w', encoding='utf-8') as fh:
+            fh.write(sm)
+    print('sitemap urls added:', added_sm)
+except FileNotFoundError:
+    print('sitemap.xml not found - skipping sitemap patch')
