@@ -16,6 +16,14 @@
 <link rel="stylesheet" href="../css/extras.css">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://busjatri.in/"}, {"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "https://busjatri.in/bus-time-table/"}, {"@type": "ListItem", "position": 3, "name": "Volvo AC Buses", "item": "https://busjatri.in/bus-time-table/volvo-ac-buses.html"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How many Volvo AC Buses bus services are listed?", "acceptedAnswer": {"@type": "Answer", "text": "477 Volvo AC Buses services are listed on BusJatri, covering 319 routes."}}, {"@type": "Question", "name": "Which is the busiest Volvo AC Buses route?", "acceptedAnswer": {"@type": "Answer", "text": "Durgapur to Esplanade, with 24 listed buses."}}, {"@type": "Question", "name": "Where do Volvo AC Buses buses go?", "acceptedAnswer": {"@type": "Answer", "text": "Popular destinations include Kolkata, Digha, Esplanade, Karunamoyee, Howrah Station, Siliguri, Delhi, Aurangabad Bihar."}}, {"@type": "Question", "name": "Are Volvo AC Buses buses government or private?", "acceptedAnswer": {"@type": "Answer", "text": "Volvo AC Buses buses are AC coach services — both government and private operators run Volvo AC buses."}}, {"@type": "Question", "name": "How do I check departure times for a Volvo AC Buses bus?", "acceptedAnswer": {"@type": "Answer", "text": "Open any route page from the lists above for the full timetable. Times can change — confirm at the bus stand counter before travel."}}, {"@type": "Question", "name": "Volvo AC Buses বাস কতটি তালিকাভুক্ত?", "acceptedAnswer": {"@type": "Answer", "text": "BusJatri-তে 477টি Volvo AC Buses বাস তালিকাভুক্ত, 319টি রুট জুড়ে।"}}, {"@type": "Question", "name": "Volvo AC Buses-এর সবচেয়ে ব্যস্ত রুট কোনটি?", "acceptedAnswer": {"@type": "Answer", "text": "Durgapur থেকে Esplanade — 24টি বাস।"}}, {"@type": "Question", "name": "Volvo AC Buses বাস কোথায় যায়?", "acceptedAnswer": {"@type": "Answer", "text": "জনপ্রিয় গন্তব্য: Kolkata, Digha, Esplanade, Karunamoyee, Howrah Station, Siliguri, Delhi, Aurangabad Bihar।"}}, {"@type": "Question", "name": "Volvo AC Buses কি সরকারি না বেসরকারি?", "acceptedAnswer": {"@type": "Answer", "text": "এসি ভলভো বাস — এসি কোচ পরিষেবা — সরকারি ও বেসরকারি দুই ধরনের অপারেটরই ভলভো এসি বাস চালায়।"}}, {"@type": "Question", "name": "Volvo AC Buses বাসের সময় কোথায় দেখব?", "acceptedAnswer": {"@type": "Answer", "text": "উপরের যেকোনো রুট পেজ খুললে সম্পূর্ণ সময়সূচি পাবেন। সময় বদলাতে পারে — যাত্রার আগে কাউন্টারে নিশ্চিত করে নিন।"}}]}</script>
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4E3D1YX9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L4E3D1YX9X');
+</script>
 </head>
 <body>
 <header class="header">
@@ -33,7 +41,8 @@
         <button class="lang-btn" id="langEN" onclick="setLang('en')" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
         <button class="lang-btn" id="langBN" onclick="setLang('bn')" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
       </span>
-    </nav>
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◐</button>
+</nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
@@ -128,5 +137,6 @@
 </footer>
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
 <script>(function(){function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');var a=document.getElementById('langEN'),b=document.getElementById('langBN');if(a)a.style.background=l==='en'?'var(--amber-soft,#f6e7c6)':'transparent';if(b)b.style.background=l==='bn'?'var(--amber-soft,#f6e7c6)':'transparent';try{localStorage.setItem('seo-lang',l);}catch(e){}}window.setLang=setLang;var sv=null;try{sv=localStorage.getItem('seo-lang');}catch(e){}setLang(sv||'en');})();</script>
+<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
 </body>
 </html>
