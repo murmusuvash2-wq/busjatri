@@ -169,10 +169,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "5:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -187,10 +206,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -205,10 +243,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -223,10 +280,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "6:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -241,10 +317,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "6:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -259,10 +354,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -277,10 +391,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -295,10 +428,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Mathabhanga - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mathabhanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -313,10 +465,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -331,10 +502,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Mathabhanga - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mathabhanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -349,10 +539,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "10:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -367,10 +576,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "10:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -385,10 +613,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "10:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -403,10 +650,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "11:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -421,10 +687,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "11:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -439,10 +724,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "11:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -457,10 +761,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "12:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -475,10 +798,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "12:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -493,10 +835,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "12:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -507,14 +868,33 @@
    "bus_type": "Government",
    "origin": "Cooch Behar",
    "destination": "Siliguri",
-   "departure_time": "1:00 PM",
+   "departure_time": "12:50 PM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -529,10 +909,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -547,10 +946,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "2:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -565,10 +983,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "3:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -583,10 +1020,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Mathabhanga - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mathabhanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -601,10 +1057,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "3:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -619,10 +1094,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -637,10 +1131,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "4:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -655,10 +1168,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "5:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -673,10 +1205,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Siliguri",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -687,14 +1238,33 @@
    "bus_type": "Government",
    "origin": "Cooch Behar",
    "destination": "Beldanga",
-   "departure_time": "5:15 AM",
+   "departure_time": "6:15 AM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Beldanga",
-   "stoppages": [],
+   "route": "Cooch Behar - Mathabhanga - Beldanga",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "6:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Mathabhanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Beldanga",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -709,10 +1279,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Balurghat",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Balurghat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Balurghat",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -727,10 +1316,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Krishnagar",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Krishnagar",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Krishnagar",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -745,10 +1353,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Gazal",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Gazal",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "7:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Gazal",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -763,10 +1390,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Buniadpur",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Buniadpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Buniadpur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -781,10 +1427,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Kolkata",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "9:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -799,10 +1464,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Kolkata",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "1:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -817,10 +1501,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Haldibari",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Haldibari",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "4:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Haldibari",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -835,10 +1538,29 @@
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Cooch Behar - Berhampur",
-   "stoppages": [],
+   "route": "Cooch Behar - Falakata - Berhampur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "7:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Berhampur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
    "source": "nbstc.in",
-   "total_stoppages": 0,
+   "total_stoppages": 3,
    "detail_url": "https://nbstc.in/bus-routes.php"
   },
   {
@@ -405457,6 +406179,43 @@
    "source": "facebook (community report)",
    "time_source": "facebook (community report)",
    "total_stoppages": 21,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-fb-cb-siliguri-2pm",
+   "bus_name": "NBSTC Cooch Behar-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Cooch Behar",
+   "destination": "Siliguri",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Cooch Behar Depot timetable (Facebook)",
+   "total_stoppages": 3,
    "detail_url": ""
   }
  ],
