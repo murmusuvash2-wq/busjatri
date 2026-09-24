@@ -1460,7 +1460,7 @@
    "bus_type": "Government",
    "origin": "Cooch Behar",
    "destination": "Kolkata",
-   "departure_time": "1:30 AM",
+   "departure_time": "1:30 PM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
@@ -1469,7 +1469,7 @@
     {
      "no": 1,
      "name": "Cooch Behar",
-     "up_time": "1:30 AM",
+     "up_time": "1:30 PM",
      "down_time": ""
     },
     {
@@ -113321,7 +113321,7 @@
    "bus_type": "Government - SBSTC",
    "origin": "Haldia",
    "destination": "Karunamoyee",
-   "departure_time": "8:45 AM",
+   "departure_time": "8:25 AM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "Haldia",
@@ -113330,7 +113330,7 @@
     {
      "no": 1,
      "name": "Haldia",
-     "up_time": "8:45 AM",
+     "up_time": "8:25 AM",
      "down_time": ""
     },
     {
@@ -406974,6 +406974,345 @@
    ],
    "source": "SBSTC Bankura depot timetable (Facebook)",
    "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-fb-cb-siliguri-800pm",
+   "bus_name": "NBSTC Cooch Behar-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Cooch Behar",
+   "destination": "Siliguri",
+   "departure_time": "8:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Cooch Behar depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": "https://nbstc.in/bus-routes.php"
+  },
+  {
+   "id": "nbstc-fb-cb-siliguri-815pm",
+   "bus_name": "NBSTC Cooch Behar-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Cooch Behar",
+   "destination": "Siliguri",
+   "departure_time": "8:15 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Cooch Behar depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": "https://nbstc.in/bus-routes.php"
+  },
+  {
+   "id": "nbstc-fb-cb-siliguri-845pm",
+   "bus_name": "NBSTC Cooch Behar-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Cooch Behar",
+   "destination": "Siliguri",
+   "departure_time": "8:45 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Cooch Behar - Falakata - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Cooch Behar",
+     "up_time": "8:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Falakata",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Cooch Behar depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": "https://nbstc.in/bus-routes.php"
+  },
+  {
+   "id": "sbstc-fb-kolkata-khargram-730am",
+   "bus_name": "SBSTC Kolkata-Khargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Khargram",
+   "departure_time": "7:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Midnapur - Khargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Khargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-khargram-825am",
+   "bus_name": "SBSTC Kolkata-Khargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Khargram",
+   "departure_time": "8:25 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Midnapur - Khargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "8:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Khargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-khargram-925am",
+   "bus_name": "SBSTC Kolkata-Khargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Khargram",
+   "departure_time": "9:25 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Midnapur - Khargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "9:25 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Khargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-khargram-245pm",
+   "bus_name": "SBSTC Kolkata-Khargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Khargram",
+   "departure_time": "2:45 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Midnapur - Khargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "2:45 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Khargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-kolkata-khargram-315pm",
+   "bus_name": "SBSTC Kolkata-Khargram",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Kolkata",
+   "destination": "Khargram",
+   "departure_time": "3:15 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Kolkata - Midnapur - Khargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kolkata",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Khargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "sbstc-fb-medinipur-howrah-200pm",
+   "bus_name": "SBSTC Medinipur-Howrah",
+   "reg_no": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Medinipur",
+   "destination": "Howrah",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Midnapur",
+   "route": "Medinipur - Bimanbandar Gate 2 - Barasat - Howrah",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Medinipur",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Bimanbandar Gate 2",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Howrah",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Medinipur depot timetable (user-verified photo)",
+   "total_stoppages": 4,
    "detail_url": ""
   }
  ],
