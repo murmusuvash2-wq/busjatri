@@ -1,4 +1,4 @@
-name: Perf: see-more on via pages + lazy homepage data
+name: "Perf: see-more on via pages + lazy homepage data"
 
 on:
   workflow_dispatch:
