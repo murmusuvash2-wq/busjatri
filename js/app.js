@@ -780,7 +780,14 @@ async function renderBus(el, id) {
   if (stopNames.length >= 2) {
     const origin = encodeURIComponent(stopNames[0] + ', West Bengal');
     const dest = encodeURIComponent(stopNames[stopNames.length - 1] + ', West Bengal');
-    const waypoints = stopNames.slice(1, -1).slice(0, 8).map(n => encodeURIComponent(n + ', West Bengal')).join('|');
+    const inters = stopNames.slice(1, -1);
+    const wsel = [];
+    const WN = Math.min(3, inters.length);
+    for (let i = 0; i < WN; i++) {
+      const n = inters[Math.round(i * (inters.length - 1) / Math.max(1, WN - 1))];
+      if (wsel.indexOf(n) === -1) wsel.push(n);
+    }
+    const waypoints = wsel.map(n => encodeURIComponent(n + ', West Bengal')).join('%7C');
     mapUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}` + (waypoints ? `&waypoints=${waypoints}` : '') + '&travelmode=driving';
   } else if (b.origin && b.destination) {
     mapUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.origin + ', West Bengal')}&destination=${encodeURIComponent(b.destination + ', West Bengal')}&travelmode=driving`;

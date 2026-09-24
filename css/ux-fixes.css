@@ -110,3 +110,8 @@
 .wa-row .map-btn,.wa-row .wa-btn,.wa-row .fb-btn,.wa-row .report-btn{white-space:nowrap;overflow:hidden;font-size:12px;gap:6px;height:48px;min-width:0;padding:12px 4px;align-items:center}
 .wa-row .map-btn svg,.wa-row .wa-btn svg,.wa-row .fb-btn svg,.wa-row .report-btn svg{flex:0 0 auto}
 .wa-row .map-btn .label-en,.wa-row .map-btn .label-bn,.wa-row .wa-btn .label-en,.wa-row .wa-btn .label-bn,.wa-row .fb-btn .label-en,.wa-row .fb-btn .label-bn,.wa-row .report-btn .label-en,.wa-row .report-btn .label-bn{overflow:hidden;text-overflow:ellipsis}
+
+/* 2026-09-25: map button must align with WhatsApp/Facebook/Report.
+   Old .map-btn rule in style.css has margin 4px 0 18px which pushed
+   the share-row map button down. Grid row items need margin 0. */
+.wa-row .map-btn{margin:0}

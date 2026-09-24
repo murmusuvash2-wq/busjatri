@@ -661,7 +661,7 @@
     push(b.destination);
     if (seq.length < 3) return;
     var inter = seq.slice(1, -1);
-    var MAXW = 9;
+    var MAXW = 3;
     var wp = [];
     if (inter.length <= MAXW) {
       wp = inter;
@@ -674,7 +674,7 @@
     var url = 'https://www.google.com/maps/dir/?api=1&origin=' +
       encodeURIComponent(seq[0] + ', West Bengal') +
       '&destination=' + encodeURIComponent(seq[seq.length - 1] + ', West Bengal') +
-      (wp.length ? '&waypoints=' + wp.map(function (n2) { return encodeURIComponent(n2 + ', West Bengal'); }).join('|') : '') +
+      (wp.length ? '&waypoints=' + wp.map(function (n2) { return encodeURIComponent(n2 + ', West Bengal'); }).join('%7C') : '') +
       '&travelmode=driving';
     links.forEach(function (a) {
       a.href = url;
