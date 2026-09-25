@@ -1,0 +1,42 @@
+name: map-hubs-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Apply hub-waypoint patch
+        run: python3 scripts/patch_map_hubs_20260925.py
+
+      - name: Syntax check
+        run: node --check js/ux-fixes.js
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'MAP_HUBS' js/ux-fixes.js
+          grep -q 'mapHubFreq' js/ux-fixes.js
+          if grep -q 'Math.round(i \* (inter.length - 1) / (MAXW - 1))' js/ux-fixes.js; then echo 'FAIL: old evenly-spread selection still present'; exit 1; fi
+          grep -q 'ux20260925b' index.html
+          grep -q 'Sonamukhi\|sonamukhi' js/ux-fixes.js
+          grep -q 'bankura' js/ux-fixes.js
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Hub-only map waypoints: curated big-town anchors so the blue line follows the bus route"
+            git push
+          fi
