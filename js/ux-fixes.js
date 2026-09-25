@@ -647,6 +647,64 @@
       btn.style.whiteSpace = 'nowrap';
     });
   }
+  /* Curated map waypoint hubs - big/well-known places that geocode
+     reliably with ", West Bengal" appended. Village names that Google
+     resolves to the wrong district are deliberately absent. */
+  var MAP_HUBS = {
+    esplanade: 1, kolkata: 1, 'howrah station': 1, howrah: 1, santragachi: 1,
+    'bbd bag': 1, sealdah: 1, babughat: 1, ultadanga: 1, 'rabindra sadan': 1,
+    'science city': 1, rashbehari: 1, 'park street': 1, maidan: 1, moulali: 1,
+    shyambazar: 1, 'chandni chowk': 1, 'college street': 1, kalighat: 1,
+    garia: 1, gariahat: 1, 'park circus': 1, karunamoyee: 1, dakshineswar: 1,
+    bally: 1, barasat: 1, basirhat: 1, habra: 1, madhyamgram: 1, dunlop: 1,
+    baguiati: 1, newtown: 1, 'diamond harbour': 1, kakdwip: 1, namkhana: 1,
+    canning: 1, baruipur: 1, sonarpur: 1, bagnan: 1, uluberia: 1, amta: 1,
+    digha: 1, 'new digha': 1, contai: 1, egra: 1, ramnagar: 1, tamluk: 1,
+    haldia: 1, mecheda: 1, kolaghat: 1, nandakumar: 1, kharagpur: 1,
+    medinipur: 1, midnapur: 1, jhargram: 1, ghatal: 1, belda: 1, daspur: 1,
+    'chandrakona town': 1, 'chandrakona road': 1, khirpai: 1, arambagh: 1,
+    champadanga: 1, tarakeswar: 1, tarkeshwar: 1, singur: 1, durgapur: 1,
+    asansol: 1, raniganj: 1, andal: 1, panagarh: 1, benachity: 1, barakar: 1,
+    kulti: 1, chittaranjan: 1, burnpur: 1, budbud: 1, galsi: 1,
+    shaktigarh: 1, kalna: 1, guskara: 1, katwa: 1, 'katwa station': 1,
+    memari: 1, bardhaman: 1, barddhaman: 1, 'barddhaman station': 1,
+    burdwan: 1, bankura: 1, sonamukhi: 1, beliatore: 1, bishnupur: 1,
+    onda: 1, chhatna: 1, indpur: 1, khatra: 1, ranibandh: 1, sarenga: 1,
+    taldangra: 1, simlapal: 1, barjora: 1, mejia: 1, saltora: 1,
+    garhbeta: 1, goaltore: 1, kamarpukur: 1, purulia: 1, manbazar: 1,
+    raghunathpur: 1, adra: 1, jhalda: 1, bolpur: 1, santiniketan: 1,
+    suri: 1, sainthia: 1, rampurhat: 1, nalhati: 1, ahmadpur: 1,
+    berhampore: 1, baharampur: 1, beldanga: 1, kandi: 1, jangipur: 1,
+    dhulian: 1, krishnanagar: 1, ranaghat: 1, kalyani: 1, nabadwip: 1,
+    santipur: 1, mayapur: 1, chakdaha: 1, siliguri: 1, malda: 1,
+    raiganj: 1, balurghat: 1, 'cooch behar': 1, alipurduar: 1,
+    mathabhanga: 1, falakata: 1, jalpaiguri: 1, agra: 1, prayagraj: 1,
+    varanasi: 1, patna: 1, gaya: 1, dhanbad: 1, bokaro: 1, ranchi: 1,
+    jamshedpur: 1, deoghar: 1, dumka: 1, balasore: 1, baleswar: 1,
+    baripada: 1, cuttack: 1, bhubaneswar: 1, puri: 1
+  };
+  var MAP_HUB_FREQ = null;
+  function mapHubFreq(name) {
+    if (!MAP_HUB_FREQ) {
+      MAP_HUB_FREQ = {};
+      var src = (typeof FULL_BUSES !== 'undefined' && FULL_BUSES && Object.keys(FULL_BUSES).length) ? FULL_BUSES : BUSES;
+      Object.keys(src).forEach(function (k) {
+        var b = src[k];
+        if (!b) return;
+        var seen = {};
+        (b.stoppages || []).forEach(function (s) {
+          var n = (s && s.name) ? String(s.name).toLowerCase() : '';
+          if (n && !seen[n]) { seen[n] = 1; MAP_HUB_FREQ[n] = (MAP_HUB_FREQ[n] || 0) + 1; }
+        });
+        [b.origin, b.destination].forEach(function (o) {
+          var n = o ? String(o).toLowerCase() : '';
+          if (n && !seen[n]) { seen[n] = 1; MAP_HUB_FREQ[n] = (MAP_HUB_FREQ[n] || 0) + 1; }
+        });
+      });
+    }
+    return MAP_HUB_FREQ[String(name).toLowerCase()] || 0;
+  }
+
   function fixMapLink() {
     if (location.hash.indexOf('#/bus/') !== 0) return;
     var links = document.querySelectorAll('.wa-row a.map-btn[href*="google.com/maps/dir"]');
@@ -661,15 +719,29 @@
     push(b.destination);
     if (seq.length < 3) return;
     var inter = seq.slice(1, -1);
-    var MAXW = 3;
     var wp = [];
-    if (inter.length <= MAXW) {
+    if (inter.length <= 3) {
       wp = inter;
     } else {
-      for (var i = 0; i < MAXW; i++) {
-        var k = Math.round(i * (inter.length - 1) / (MAXW - 1));
-        if (wp.indexOf(inter[k]) === -1) wp.push(inter[k]);
-      }
+      /* 2026-09-25 hub-only waypoints: evenly-spread village names
+         geocode to wrong places and sent the blue line far off the bus
+         route (Bardhaman-Manbazar drew a 678 km loop). Only curated
+         big-town names are used now; segments without a known town
+         add no waypoint, and origin+destination alone still gives a
+         sane direct route. */
+      var t3 = Math.floor(inter.length / 3);
+      var segs = [[0, t3], [t3, t3 * 2], [t3 * 2, inter.length]];
+      segs.forEach(function (sg) {
+        var best = null, bf = -1;
+        for (var i = sg[0]; i < sg[1]; i++) {
+          var nm = inter[i];
+          if (!MAP_HUBS[nm.toLowerCase()]) continue;
+          if (nm === seq[0] || nm === seq[seq.length - 1]) continue;
+          var f = mapHubFreq(nm);
+          if (f > bf) { bf = f; best = nm; }
+        }
+        if (best && wp.indexOf(best) === -1) wp.push(best);
+      });
     }
     var url = 'https://www.google.com/maps/dir/?api=1&origin=' +
       encodeURIComponent(seq[0] + ', West Bengal') +
