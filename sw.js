@@ -25,6 +25,25 @@ self.addEventListener('fetch', function (e) {
   var url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
+  /* 2026-09-25: admin time corrections must be visible on the next
+     reload - network-first for the tiny overrides file, cache (or an
+     empty object) only when offline. */
+  if (url.pathname === '/data/time-overrides.json') {
+    e.respondWith(
+      fetch(req).then(function (res) {
+        if (res && res.ok) {
+          var cl = res.clone();
+          caches.open(DATA_CACHE).then(function (c) { c.put(req, cl); });
+        }
+        return res;
+      }).catch(function () {
+        return caches.match(req).then(function (hit) {
+          return hit || new Response('{}', { status: 200, headers: { 'Content-Type': 'application/json' } });
+        });
+      })
+    );
+    return;
+  }
   var isData = url.pathname.indexOf('/data/') === 0;
   var isStatic = url.pathname.indexOf('/js/') === 0 || url.pathname.indexOf('/css/') === 0;
 

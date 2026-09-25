@@ -283,7 +283,11 @@ function placeMatchesCore(value, query) {
      words like 'pur' cannot match every place. */
   const skel = s => s.replace(/[^bcdfghjklmnpqrstvwxyz]/g, '');
   const vs = skel(v), qs = skel(q);
-  if (qs.length >= 4 && (vs === qs || vs.includes(qs))) return true;
+  /* 2026-09-25: containment only for near-equal skeletons. Loose
+     containment matched e.g. Santragachi (sntrgch) for the query
+     "santuri" (sntr), and via the kolkata alias group that pulled
+     1585 buses into a small village's stop search. */
+  if (qs.length >= 4 && (vs === qs || (vs.includes(qs) && vs.length - qs.length <= 2))) return true;
   return false;
 }
 
