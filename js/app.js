@@ -571,7 +571,17 @@ function renderHome(el) {
       <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></p>
   </div>
   </div>
-  <div class="section">
+    <section data-keep="1" style="max-width:720px;margin:0 auto 8px;padding:0 18px 18px">
+    <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin-bottom:10px">Popular Operators</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <a href="bus-time-table/sbstc-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">SBSTC</a>
+      <a href="bus-time-table/nbstc-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">NBSTC</a>
+      <a href="bus-time-table/wbtc-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">WBTC</a>
+      <a href="bus-time-table/shyamoli-paribahan-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Shyamoli Paribahan</a>
+      <a href="bus-time-table/volvo-ac-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
+    </div>
+  </section>
+<div class="section">
     <div class="container">
       <div class="section-title">${icon('pin')} <span class="label-en">Popular Destinations</span><span class="label-bn">জনপ্রিয় স্থান</span></div>
       <div class="place-cards">${placeCards}</div>
@@ -608,8 +618,12 @@ function renderHome(el) {
       if (s1 && s2 && s1.innerHTML !== s2.innerHTML) s1.innerHTML = s2.innerHTML;
       freshHero.remove();
     }
+    /* keep the static Popular Operators section (data-keep) when re-rendering home */
+    var keepOps = el.querySelector('[data-keep="1"]');
+    var freshOps = tmp.querySelector('[data-keep="1"]');
+    if (keepOps && freshOps) freshOps.remove();
     var sib = keepHero.nextElementSibling;
-    while (sib) { var nx2 = sib.nextElementSibling; sib.remove(); sib = nx2; }
+    while (sib) { var nx2 = sib.nextElementSibling; if (sib.getAttribute && sib.getAttribute('data-keep') === '1') break; sib.remove(); sib = nx2; }
     while (tmp.firstChild) el.appendChild(tmp.firstChild);
   } else {
     el.innerHTML = homeHTML;
