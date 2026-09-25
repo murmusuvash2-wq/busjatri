@@ -125,6 +125,10 @@ async function loadData() {
       if (DATA && DATA.buses) return;
       kick();
     }, { passive: true });
+    document.addEventListener('focusin', function () {
+      if (DATA && DATA.buses) return;
+      kick();
+    }, { passive: true, capture: true });
   } catch (e) {
     try {
       await ensureFullData();
@@ -354,7 +358,21 @@ function freshnessNote() {
 async function render() {
   const hash = location.hash.slice(1) || '/';
   const app = document.getElementById('app');
-  if (hash !== '/' && hash !== '') { try { await ensureFullData(); } catch (e) {} }
+  /* 2026-09-25: bus pages only need their own ~1.5 KB bus-details file -
+     never make them wait for the full 1.9 MB index. Other data pages
+     (search/stop/route/place) do need it; show a spinner while it
+     downloads instead of a frozen screen. */
+  if (hash !== '/' && hash !== '' && !hash.startsWith('/bus/')) {
+    if (!(DATA && DATA.buses)) {
+      app.innerHTML = '<div class="container" style="padding:48px 16px;text-align:center">' +
+        '<style>@keyframes bjspin{to{transform:rotate(360deg)}}.bj-ldr{display:inline-block;width:34px;height:34px;border:3px solid #e8ddc8;border-top-color:#b8791f;border-radius:50%;animation:bjspin .9s linear infinite;margin-bottom:14px}</style>' +
+        '<div class="bj-ldr"></div>' +
+        '<div style="font-size:15px">Loading all bus timings…</div>' +
+        '<div class="label-bn" style="font-size:13px;color:var(--ink-dim);margin-top:4px">সব বাস টাইম টেবিল লোড হচ্ছে…</div>' +
+        '</div>';
+    }
+    try { await ensureFullData(); } catch (e) {}
+  }
   if (hash === '/' || hash === '') renderHome(app);
   else if (hash.startsWith('/search')) renderSearch(app);
   else if (hash.startsWith('/route/')) renderRoute(app, decodeURIComponent(hash.slice(7)));
