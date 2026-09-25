@@ -581,12 +581,6 @@ function renderHome(el) {
       <a href="bus-time-table/volvo-ac-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
     </div>
   </section>
-<div class="section">
-    <div class="container">
-      <div class="section-title">${icon('pin')} <span class="label-en">Popular Destinations</span><span class="label-bn">জনপ্রিয় স্থান</span></div>
-      <div class="place-cards">${placeCards}</div>
-    </div>
-  </div>
   <div class="section">
     <div class="container">
       <div class="section-title">${icon('clock')} <span class="label-en">Live Departures</span><span class="label-bn">লাইভ ছাড়ার তালিকা</span></div>
@@ -597,6 +591,12 @@ function renderHome(el) {
     <div class="container">
       <div class="section-title">${icon('map')} <span class="label-en">Popular Routes</span><span class="label-bn">জনপ্রিয় রুট</span></div>
       <div class="route-chips">${routeChips}</div>
+    </div>
+  </div>
+<div class="section">
+    <div class="container">
+      <div class="section-title">${icon('pin')} <span class="label-en">Popular Destinations</span><span class="label-bn">জনপ্রিয় স্থান</span></div>
+      <div class="place-cards">${placeCards}</div>
     </div>
   </div>`;
   /* 2026-09-25: keep the already-painted static hero (from index.html)
