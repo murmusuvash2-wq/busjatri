@@ -50,19 +50,22 @@ def is_volvo_ac(b):
     return 'AC' in t and 'NON' not in t.upper()
 
 OPS_INFO = {'sbstc-buses': ('government (South Bengal State Transport Corporation)', 'সরকারি — দক্ষিণবঙ্গ রাজ্য পরিবহণ সংস্থা'), 'nbstc-buses': ('government (North Bengal State Transport Corporation)', 'সরকারি — উত্তরবঙ্গ রাজ্য পরিবহণ সংস্থা'), 'wbtc-buses': ('government (West Bengal Transport Corporation)', 'সরকারি — পশ্চিমবঙ্গ পরিবহণ নিগম'), 'shyamoli-paribahan-buses': ('a private operator', 'একটি বেসরকারি পরিবহন সংস্থা'), 'volvo-ac-buses': ('AC coach services — both government and private operators run Volvo AC buses', 'এসি কোচ পরিষেবা — সরকারি ও বেসরকারি দুই ধরনের অপারেটরই ভলভো এসি বাস চালায়')}
+OFFICIAL = {'sbstc-buses': ('https://sbstconline.co.in/reservation-home', 'Book tickets on SBSTC official site', 'এসবিএসটিসি অফিসিয়াল সাইটে টিকিট বুক করুন', 'sbstconline.co.in'), 'nbstc-buses': ('https://nbstc.in/online-booking.php', 'Book tickets on NBSTC official site', 'এনবিএসটিসি অফিসিয়াল সাইটে টিকিট বুক করুন', 'nbstc.in'), 'wbtc-buses': ('https://www.wbtconline.in/', 'Book tickets on WBTC official site', 'ডব্লিউবিটিসি অফিসিয়াল সাইটে টিকিট বুক করুন', 'wbtconline.in'), 'shyamoli-paribahan-buses': ('https://www.shyamolibus.com/', 'Book tickets on Shyamoli official site', 'শ্যামলী অফিসিয়াল সাইটে টিকিট বুক করুন', 'shyamolibus.com'), 'volvo-ac-buses': ('https://www.redbus.in/', 'Check AC bus fares on redBus', 'রেডবাসে এসি বাসের ভাড়া দেখুন', None)}
+BN_SHORT = {'sbstc-buses': 'এসবিএসটিসি', 'nbstc-buses': 'এনবিএসটিসি', 'wbtc-buses': 'ডব্লিউবিটিসি', 'shyamoli-paribahan-buses': 'শ্যামলী', 'volvo-ac-buses': 'এসি ভলভো'}
+
 
 OPERATORS = [
-    dict(stem='sbstc-buses', name='SBSTC Buses', title='SBSTC Bus Time Table',
+    dict(stem='sbstc-buses', name='SBSTC', title='SBSTC Bus Time Table',
          h1='SBSTC Buses', bn='দক্ষিণবঙ্গ রাজ্য পরিবহণ সংস্থার বাস',
          desc='Complete SBSTC bus time table: routes, departure times and destinations across West Bengal.',
          intro='Explore listed SBSTC (South Bengal State Transport Corporation) bus services with routes, departure times and destinations.',
          pred=is_sbstc, tag='Government'),
-    dict(stem='nbstc-buses', name='NBSTC Buses', title='NBSTC Bus Time Table',
+    dict(stem='nbstc-buses', name='NBSTC', title='NBSTC Bus Time Table',
          h1='NBSTC Buses', bn='উত্তরবঙ্গ রাজ্য পরিবহণ সংস্থার বাস',
          desc='Complete NBSTC bus time table: routes, departure times and destinations across West Bengal.',
          intro='Explore listed NBSTC (North Bengal State Transport Corporation) bus services with routes, departure times and destinations.',
          pred=is_nbstc, tag='Government'),
-    dict(stem='wbtc-buses', name='WBTC Buses', title='WBTC Bus Time Table',
+    dict(stem='wbtc-buses', name='WBTC', title='WBTC Bus Time Table',
          h1='WBTC Buses', bn='পশ্চিমবঙ্গ পরিবহণ নিগমের বাস',
          desc='Complete WBTC (CSTC) bus time table: routes, departure times and destinations across Kolkata and West Bengal.',
          intro='Explore listed WBTC / CSTC (Calcutta State Transport Corporation) bus services with routes, departure times and destinations.',
@@ -72,7 +75,7 @@ OPERATORS = [
          desc='Shyamoli Paribahan (Green Line) AC Volvo bus time table: routes, departure times and destinations.',
          intro='Explore listed Shyamoli Paribahan AC Volvo bus services with routes, departure times and destinations.',
          pred=is_shyamoli, tag='Private'),
-    dict(stem='volvo-ac-buses', name='Volvo AC Buses', title='Volvo AC Bus Time Table',
+    dict(stem='volvo-ac-buses', name='Volvo AC', title='Volvo AC Bus Time Table',
          h1='Volvo AC Buses', bn='এসি ভলভো বাস',
          desc='All Volvo AC bus time tables in West Bengal: routes, departure times and destinations.',
          intro='Explore every listed AC / Volvo bus service in West Bengal with routes, departure times and destinations.',
@@ -124,7 +127,6 @@ HEAD = '''<!DOCTYPE html>
 <div class="op-hero">
 <h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">{h1}</h1>
 <div class="bn-line only-bn" style="color:var(--ink-dim);margin-top:6px">{bn}</div>
-<p class="intro" style="color:var(--ink-dim);line-height:1.7;max-width:700px;margin:8px 0 0">{intro}</p>
 </div>
 '''
 
@@ -187,10 +189,6 @@ def build_page(op, stems):
         else:
             chips.append(f'<span class="via-chip" style="--i:{min(i, 15)}">{esc(label)}</span>')
 
-    stats = f'''<section class="op-stats">
-  <div class="op-stat"><div class="lbl">🚌 Listed services</div><div class="val">{len(buses)}</div></div>
-  <div class="op-stat"><div class="lbl">🗺 Routes covered</div><div class="val">{len(routes)}</div></div>
-</section>'''
 
     popular = f'''<h2 class="op-h2">Popular {esc(op['name'])} Routes</h2>
 <div class="op-grid">
@@ -201,14 +199,92 @@ def build_page(op, stems):
 <div class="chip-row" aria-label="All destinations">{''.join(chips)}</div>'''
 
     op_info = OPS_INFO.get(op["stem"], ("bus services", "বাস পরিষেবা"))
+    op_token = op['stem'].replace('-buses', '')
+    clean_name = op['name'].replace(' Buses', '')
+    cta_btn = ('<a class="op-cta" href="../index.html#/search?op=' + op_token + '">' +
+               '<span class="label-en">Open all ' + esc(op['name']) + ' buses in search</span>' +
+               '<span class="label-bn">সার্চে সব বাস দেখুন</span></a>')
+    cta_main = ('<a class="op-cta-big" href="../index.html#/search?op=' + op_token + '">' +
+                '<span class="label-en">🚌 View all ' + esc(clean_name) + ' buses — live</span>' +
+                '<span class="label-bn">🚌 লাইভ সব বাস দেখুন</span></a>')
+    FAQ_CSS = ('<style>'
+               '.op-faq{border:1.5px solid var(--line,rgba(33,28,22,.15));border-radius:13px;'
+               'background:var(--surface,#fffcf4);margin-bottom:9px;overflow:hidden}'
+               '.op-faq[open]{border-color:var(--amber,#b8791f)}'
+               '.op-faq summary{list-style:none;cursor:pointer;padding:13px 16px;font-weight:600;'
+               'font-size:14.5px;line-height:1.45;display:flex;gap:10px;align-items:baseline}'
+               '.op-faq summary::-webkit-details-marker{display:none}'
+               '.op-faq summary::before{content:"+";color:var(--amber,#b8791f);font-weight:800;'
+               'font-size:16px;flex:none}'
+               '.op-faq[open] summary::before{content:"–"}'
+               '.op-faq .fa-body{padding:0 16px 14px 36px;font-size:13.5px;line-height:1.7;color:var(--ink-dim,#665)}'
+               '.op-cta{display:inline-flex;gap:8px;align-items:center;background:var(--amber,#b8791f);'
+               'color:#fffcf4;text-decoration:none;font-weight:800;border-radius:999px;padding:10px 18px;'
+               'font-size:13.5px;margin-top:10px}'
+               '.op-cta-big{display:flex;gap:9px;align-items:center;justify-content:center;'
+               'background:var(--amber,#b8791f);color:#fffcf4;text-decoration:none;font-weight:800;'
+               'border-radius:13px;padding:14px 18px;font-size:15px;margin:16px 0 4px;'
+               'box-shadow:0 2px 10px rgba(184,121,31,.35)}'
+               '</style>')
     top_fr, top_to, top_n = "", "", 0
     if top:
         (top_fr, top_to), top_n = top[0]
     dest_names = [d for d, _ in dests.most_common(8) if d]
     nb = op["bn"]
-    DET_STYLE = ' style="border:1px solid var(--line,rgba(33,28,22,.15));border-radius:10px;padding:10px 14px;margin:8px 0;background:var(--surface,#fffcf4)"'
-    SUM_STYLE = '<summary style="cursor:pointer;font-weight:600;font-size:.95rem">'
-    ANS_STYLE = '<p style="margin:8px 0 0;font-size:.9rem;line-height:1.7;color:var(--ink-dim,#665)">'
+    # --- compact stats + search card + depo board (2026-09-25) ---
+    stats = ("<section class='op-stats' style='background:var(--surface,#fffcf4);border:1.5px solid var(--line,rgba(33,28,22,.15));" +
+             "border-radius:13px;padding:14px 18px;display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:wrap'>" +
+             "<span style='font-size:14px;font-weight:700'>🚌 " + str(len(buses)) + " <span class='label-en'>buses listed</span><span class='label-bn'>টি বাস তালিকাভুক্ত</span></span>" +
+             "<span style='color:var(--line,rgba(33,28,22,.15));font-weight:800'>|</span>" +
+             "<span style='font-size:14px;font-weight:700'>🛣 " + str(len(routes)) + " <span class='label-en'>routes covered</span><span class='label-bn'>টি রুট</span></span>" +
+             "</section>")
+    off = OFFICIAL.get(op['stem'])
+    bn_short = BN_SHORT.get(op['stem'], op['name'])
+    ph_fr = esc(top_fr) if top_fr else 'Burdwan'
+    ph_to = esc(top_to) if top_to else 'Kolkata'
+    off_link = ''
+    if off:
+        off_link = ("<div class='alt'><a href='" + off[0] + "' target='_blank' rel='noopener'>🎫 <span class='label-en'>" + off[1] + "</span><span class='label-bn'>" + off[2] + "</span> ↗</a></div>")
+    search_card = (
+        "<section class='bj-op-search'>" +
+        "<div class='lb'><span class='label-en'>Search " + esc(op['name']) + " buses</span><span class='label-bn'>" + bn_short + " বাস খুঁজুন</span></div>" +
+        "<div class='row'>" +
+        "<input id='bjFrom' type='text' placeholder='e.g. " + ph_fr + "' autocomplete='off'>" +
+        "<button class='swap' onclick='bjSwap()' title='Swap' type='button'>⇆</button>" +
+        "<input id='bjTo' type='text' placeholder='e.g. " + ph_to + "' autocomplete='off'>" +
+        "</div>" +
+        "<div class='row' style='margin-top:8px'>" +
+        "<input id='bjDate' type='date' style='flex:1.2'>" +
+        "<button class='go' style='margin-top:0;width:auto;flex:1.4' onclick='bjSearchGo()' type='button'>🚊 <span class='label-en'>Search</span><span class='label-bn'>সার্চ করুন</span></button>" +
+        "</div>" +
+        off_link +
+        "</section>" +
+        "<style>" +
+        ".bj-op-search{background:var(--surface,#fffcf4);border:1.5px solid var(--line,rgba(33,28,22,.15));border-radius:14px;padding:16px;margin:20px 0 14px;box-shadow:0 2px 12px rgba(33,28,22,.06)}" +
+        ".bj-op-search .lb{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--amber-ink,#6b4610);text-transform:uppercase;margin-bottom:10px}" +
+        ".bj-op-search .row{display:flex;gap:8px;align-items:stretch}" +
+        ".bj-op-search input{flex:1;min-width:0;padding:12px;border-radius:10px;border:1.5px solid var(--line,#ccc);background:var(--bg,#fff);font:inherit;font-size:15px}" +
+        ".bj-op-search input:focus{outline:none;border-color:var(--amber,#b8791f)}" +
+        ".bj-op-search .swap{flex:none;width:40px;border-radius:10px;border:1.5px solid var(--line,#ccc);background:var(--surface,#fffcf4);font-size:16px;cursor:pointer;color:var(--amber,#b8791f)}" +
+        ".bj-op-search .go{display:block;width:100%;margin-top:10px;background:var(--amber,#b8791f);color:#fffcf4;border:none;border-radius:11px;padding:13px;font:inherit;font-size:15px;font-weight:800;cursor:pointer}" +
+        ".bj-op-search .alt{text-align:center;font-size:12.5px;color:var(--ink-dim,#665);margin-top:10px}" +
+        ".bj-op-search .alt a{color:var(--amber,#b8791f);font-weight:700;text-decoration:none}" +
+        "</style>")
+    lv_rows = []
+    for b in buses:
+        lv_rows.append([b.get('id', '') or '', b.get('bus_name', '') or '', b.get('origin', '') or '', b.get('destination', '') or '', b.get('departure_time', '') or ''])
+    board = ("<section id='bjLive' style='margin-top:16px'></section>" +
+        "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
+        "<script src='../js/op-board.js?v=opb20260925' defer></script>")
+    booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
+    booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
+    if off and off[3]:
+        booking_a = ("Book on the official " + clean_name + " site <a href='" + off[0] + "' target='_blank' rel='noopener'>" + off[3] + "</a>, or compare fares and seats on <a href='https://www.redbus.in/' target='_blank' rel='nofollow noopener'>redBus</a>.")
+        booking_a_bn = ("অফিসিয়াল সাইট <a href='" + off[0] + "' target='_blank' rel='noopener'>" + off[3] + "</a>-তে বুক করুন, অথবা <a href='https://www.redbus.in/' target='_blank' rel='nofollow noopener'>রেডবাস</a>-এ ভাড়া ও সিট দেখুন।")
+    else:
+        booking_a = "Compare fares and book AC bus tickets on <a href='https://www.redbus.in/' target='_blank' rel='nofollow noopener'>redBus</a>."
+        booking_a_bn = "ভাড়া দেখে <a href='https://www.redbus.in/' target='_blank' rel='nofollow noopener'>রেডবাস</a>-এ এসি বাসের টিকিট বুক করুন।"
+
     faq_en = [
         ("How many " + op["name"] + " bus services are listed?",
          str(len(buses)) + " " + op["name"] + " services are listed on BusJatri, covering " + str(len(routes)) + " routes."),
@@ -220,6 +296,9 @@ def build_page(op, stems):
          op["name"] + " buses are " + op_info[0] + "."),
         ("How do I check departure times for a " + op["name"] + " bus?",
          "Open any route page from the lists above for the full timetable. Times can change — confirm at the bus stand counter before travel."),
+        ("How do I see all " + op["name"].replace(" Buses", "") + " buses in one place?",
+         "Tap the button below — BusJatri search opens with every listed " + op["name"] + " service, sorted by next departure." + cta_btn),
+        (booking_q, booking_a),
     ]
     faq_bn = [
         (op["name"] + " বাস কতটি তালিকাভুক্ত?",
@@ -232,16 +311,18 @@ def build_page(op, stems):
          nb + " — " + op_info[1] + "।"),
         (op["name"] + " বাসের সময় কোথায় দেখব?",
          "উপরের যেকোনো রুট পেজ খুললে সম্পূর্ণ সময়সূচি পাবেন। সময় বদলাতে পারে — যাত্রার আগে কাউন্টারে নিশ্চিত করে নিন।"),
+        (op["name"].replace(" Buses", "") + " বাসগুলো একসঙ্গে দেখব কীভাবে?",
+         "নিচের বাটনে ট্যাপ করুন — BusJatri সার্চ খুলবে, তালিকাভুক্ত সব " + op["name"] + " বাস পরবর্তী ছাড়ার সময় অনুযায়ী সাজানো থাকবে।" + cta_btn),
+        (booking_q_bn, booking_a_bn),
     ]
     faq_items = "".join(
-        ('<details' + (' open' if i == 0 else '') + DET_STYLE + SUM_STYLE + q + "</summary>"
-         + ANS_STYLE + a + "</p></details>")
+        ('<details class="op-faq' + (' open' if i == 0 else '') + '"><summary>' + q + '</summary><div class="fa-body">' + a + '</div></details>')
         for i, (q, a) in enumerate(faq_en))
     faq_items += "".join(
-        ('<details class="only-bn"' + (' open' if i == 0 else '') + DET_STYLE + SUM_STYLE + q + "</summary>"
-         + ANS_STYLE + a + "</p></details>")
+        ('<details class="op-faq only-bn' + (' open' if i == 0 else '') + '"><summary>' + q + '</summary><div class="fa-body">' + a + '</div></details>')
         for i, (q, a) in enumerate(faq_bn))
-    faq_section = '<h2 class="op-h2" style="margin-top:26px">FAQ</h2>' + faq_items
+    faq_section = ('<h2 class="op-h2" style="margin-top:26px"><span class="label-en">FAQs</span>'
+                   '<span class="label-bn">সাধারণ প্রশ্ন</span></h2>' + FAQ_CSS + faq_items)
     import json as _j
     faq_schema = ('<script type="application/ld+json">' + _j.dumps(
         {"@context": "https://schema.org", "@type": "FAQPage",
@@ -251,7 +332,7 @@ def build_page(op, stems):
 
     body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'],
                        BASE=BASE, h1=esc(op['h1']), bn=op['bn'], intro=esc(op['intro']), faq_schema=faq_schema)
-    body += stats + popular + chiprow + faq_section + '\n</main>\n' + FOOT
+    body += stats + search_card + board + popular + chiprow + faq_section + chr(10) + '</main>' + chr(10) + FOOT
     return body
 
 def update_sitemap(stems):

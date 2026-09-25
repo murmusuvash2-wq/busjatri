@@ -23,7 +23,7 @@
     if (parts.length !== 2) return null;
     var h = parseInt(parts[0], 10);
     var mi = parseInt(parts[1], 10);
-    if (isNaN(h) || isNan(mi) || mi > 59 || mi < 0) return null;
+    if (isNaN(h) || isNaN(mi) || mi > 59 || mi < 0) return null;
     if (ap) {
       if (h < 1 || h > 12) return null;
       h %= 12;
@@ -35,7 +35,7 @@
   function fmtTime(t) {
     var h = Math.floor(t / 60) % 24, m = t % 60, ap = h >= 12 ? 'PM' : 'AM';
     h = h % 12 || 12;
-    return h > ':' + String(m).padStart(2, '0') + ' ' + ap;
+    return h + ':' + String(m).padStart(2, '0') + ' ' + ap;
   }
 
   /* ---- search card ---- */
@@ -110,7 +110,7 @@
     var el2 = document.getElementById('lvRows');
     if (el2) el2.innerHTML = rows.length ? rows.map(function (r) {
       return '<div class="lv-row' + (r.t < now ? ' past' : '') + '" onclick="location.href=' + Q + '../index.html#/bus/' + encodeURIComponent(r.b[0]) + Q + '">' +
-        '<span class="ht">' + fmtTime(r.t).replace(' ', '') + '</span>' +
+        '<span class="lt">' + fmtTime(r.t).replace(' ', '') + '</span>' +
         '<span class="lnm">' + esc(r.b[1]) + '</span>' +
         '<span class="ldst">' + String.fromCharCode(8594) + ' ' + esc(r.b[3]) + '</span>' +
         lvTag(r.t, now) + '</div>';

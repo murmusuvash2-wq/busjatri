@@ -206,6 +206,7 @@
       var from = (params.get('from') || '').toLowerCase().trim();
       var to = (params.get('to') || '').toLowerCase().trim();
       var stop = (params.get('stop') || '').toLowerCase().trim();
+      var opq = (params.get('op') || '').toLowerCase().trim();
       var routeMode = !!(from && to);
 
       var all = (FULL_BUSES && Object.keys(FULL_BUSES).length >= Object.keys(BUSES).length) ? Object.values(FULL_BUSES) : Object.values(BUSES);
@@ -272,6 +273,17 @@
         }
       }
 
+      if (opq) {
+        rows = rows.filter(function (r) {
+          var bb = r.b || {};
+          if (opq === 'volvo-ac' || opq === 'ac') {
+            var bt = (bb.bus_type || '').toUpperCase();
+            return bt.indexOf('AC') > -1 && bt.indexOf('NON') === -1;
+          }
+          var hay = ((bb.operator || '') + ' ' + (bb.bus_name || '') + ' ' + (bb.bus_type || '') + ' ' + (bb.source || '')).toLowerCase();
+          return hay.indexOf(opq) > -1;
+        });
+      }
       var now = minutesNow();
       var rel = function (t) { return t == null ? Infinity : (t < now ? t + 1440 : t) - now; };
       rows.sort(function (x, y) { return rel(x.depMin) - rel(y.depMin); });
@@ -285,7 +297,7 @@
         }).join('') + '</div></div>';
 
       var titleTxt = routeMode ? canonName(from) + ' → ' + canonName(to)
-        : (stop ? canonName(stop) : (from || to || ''));
+        : (stop ? canonName(stop) : (from || to || (opq ? opq.toUpperCase() : '')));
       var viaHtml = '';
       if (routeMode) {
         var viaCount = {};
@@ -307,11 +319,26 @@
         }
       }
       var timeHtml = window.__bjTimeQuery ? '<p style="text-align:center;font-size:12.5px;color:var(--amber);font-weight:600;margin:2px 0 10px">Buses departing around ' + esc(window.__bjTimeQuery) + ' (±90 min)</p>' : '';
+      window.bjOpChipClear = function () {
+        var h = location.hash.split('?');
+        var p = new URLSearchParams(h[1] || '');
+        p.delete('op');
+        location.hash = h[0] + (p.toString() ? '?' + p.toString() : '');
+      };
+      function rbSlug(s) { return String(s || '').toLowerCase().replace(new RegExp('[^a-z0-9]+', 'g'), '-').replace(new RegExp('^-+|-+$', 'g'), ''); }
+      var redbUrl = (from && to) ? ('https://www.redbus.in/bus-tickets/' + rbSlug(from) + '-to-' + rbSlug(to)) : '';
+      var redbHtml = (redbUrl && rows.length) ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><a href="' + redbUrl + '" target="_blank" rel="nofollow noopener" style="color:var(--amber,#b8791f);font-weight:700;text-decoration:none">' + String.fromCharCode(127915) + ' <span class="label-en">Check fares & book on redBus</span><span class="label-bn">রেডবাসে ভাড়া দেখুন</span> ' + String.fromCharCode(8599) + '</a></p>') : '';
+      function bookChip(fr, td) {
+        return '<a href="https://www.redbus.in/bus-tickets/' + rbSlug(fr) + '-to-' + rbSlug(td) + '" target="_blank" rel="nofollow noopener" onclick="event.stopPropagation()" title="Check fares & seats on redBus" style="position:absolute;right:14px;bottom:12px;background:var(--amber,#b8791f);color:#fffcf4;border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:5px">' + String.fromCharCode(127915) + ' <span class="label-en">Book</span><span class="label-bn">বুক করুন</span></a>';
+      }
+      var opHtml = opq ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><span onclick="bjOpChipClear()" ' +
+        'style="display:inline-flex;align-items:center;gap:8px;background:var(--amber-soft,#f6e7c6);border:1.5px solid var(--amber,#b8791f);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer">' +
+        icon('bus') + ' ' + esc(opq.toUpperCase()) + ' <span style="font-weight:800;color:var(--ink-dim,#665)">' + String.fromCharCode(10005) + '</span></span></p>') : '';
       el.innerHTML =
         '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
         '<div class="back-btn" onclick="location.hash=' + String.fromCharCode(39) + '#/' + String.fromCharCode(39) + '">' + icon('chevronLeft') + ' <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>' +
         '<h2 class="page-title" style="text-align:center;margin-bottom:2px">' + esc(titleTxt) + ' <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(' + rows.length + ')</span></h2>' +
-        viaHtml + timeHtml +
+        viaHtml + timeHtml + opHtml + redbHtml +
         (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0">' + window.__bjStopCount + ' <span class="label-en">buses · </span><span class="label-bn">বাস · </span>' + window.__bjDepCount + ' <span class="label-en">with timings</span><span class="label-bn">সময় সহ</span></p>' : '') +
         (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:2px 0 10px"><span class="label-en">timed departures first · rest listed below</span><span class="label-bn">সময় সহ বাস আগে · বাকি নিচে</span></p>' : '') +
         (near.length ? '<p class="near-label">' + icon('clock') + ' <span class="label-en">' + near.length + ' buses around current time</span><span class="label-bn">' + near.length + ' বাস বর্তমান সময়ের কাছাকাছি</span></p>' : '') +
@@ -324,7 +351,7 @@
           var ro = isRet ? b.destination : b.origin;
           var rd = isRet ? b.origin : b.destination;
           var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (r.depMin < now ? ' · <span class="label-en">tomorrow</span><span class="label-bn">আগামীকাল</span>' : '') + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:.55"><span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
-          return '<div class="result-item ' + (isNear ? 'near' : '') + '" style="--i:' + i + '" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
+          return '<div class="result-item ' + (isNear ? 'near' : '') + '" style="--i:' + i + ';position:relative" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
             '<div class="ri-main">' +
             (isNear ? '<div class="near-label">' + icon('clock') + ' <span class="label-en">Coming up</span><span class="label-bn">আসছে</span></div>' : '') +
             '<div class="name">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + revBadge + '</div>' +
@@ -332,7 +359,7 @@
             '<div class="meta"><span>' + icon('stops') + ' ' + (b.total_stoppages || (b.stoppages || []).length) + ' stops</span>' +
             (b.operator ? '<span>' + esc(b.operator) + '</span>' : '') +
             (b.fare ? '<span>' + esc(b.fare) + '</span>' : '') + '</div>' +
-            '</div>' + tPill + '</div>';
+            '</div>' + tPill + bookChip(ro, rd) + '</div>';
         }).join('') : emptyState) +
         '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:18px 0 0;border-top:1px solid var(--line,rgba(33,28,22,.13));padding-top:10px"><span class="label-en">Data last refreshed: </span><span class="label-bn">শেষ হালনাগাদ: </span><strong>' + esc((DATA.meta || {}).last_updated || '—') + '</strong> · <span class="label-en">Schedules may change. Verify with the operator before travel.</span><span class="label-bn">সময়সূচি বদলাতে পারে। যাত্রার আগে যাচাই করে নিন।</span></p>' +
         '</div>';

@@ -28,8 +28,8 @@ FILT = '''
           var bb = r.b || {};
           if (opq === 'volvo-ac' || opq === 'ac') {
             var bt = (bb.bus_type || '').toUpperCase();
-            return bt.indexOf('AC') > -1 && bt.indexOf('NON') == -1;
-         }
+            return bt.indexOf('AC') > -1 && bt.indexOf('NON') === -1;
+          }
           var hay = ((bb.operator || '') + ' ' + (bb.bus_name || '') + ' ' + (bb.bus_type || '') + ' ' + (bb.source || '')).toLowerCase();
           return hay.indexOf(opq) > -1;
         });
@@ -52,7 +52,7 @@ def main():
 
     def idx(pred, start=0):
         for i in range(start, len(lines)):
-            if pred(lines[i]:
+            if pred(lines[i]):
                 return i
         return None
 
