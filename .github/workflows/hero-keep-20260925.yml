@@ -1,0 +1,43 @@
+name: hero-keep-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Apply hero-keep patch
+        run: python3 scripts/patch_hero_keep_20260925.py
+
+      - name: Syntax check
+        run: node --check js/app.js
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'keep the already-painted static hero' js/app.js
+          grep -q 'var homeHTML' js/app.js
+          grep -q 's1.innerHTML !== s2.innerHTML' js/app.js
+          grep -q 'perf20260925c' index.html
+          grep -q 'class="geo-hint"' index.html
+          grep -q 'rel="preload" as="font"' index.html
+          test "$(grep -c 'detectLocation();' js/app.js)" = "1"
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Perf: keep static hero in renderHome (no LCP re-paint), close hero div, font preloads"
+            git push
+          fi
