@@ -133,7 +133,7 @@ body.lang-bn .keep-en .sname{display:inline}
 
 
 
-JS = """var mstep=8;
+JS = """var mstep=24;
 var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
 var PH={en:"\\uD83D\\uDD0E Search bus stand — e.g. Bankura, Digha\\u2026",bn:"\\uD83D\\uDD0E \\u09AC\\u09BE\\u09B8 \\u09B8\\u09CD\\u099F\\u09CD\\u09AF\\u09BE\\u09A8\\u09CD\\u09A1 \\u0996\\u09C1\\u0981\\u099C\\u09C1\\u09A8 \\u2014 \\u09AF\\u09C7\\u09AE\\u09A8 \\u09AC\\u09BE\\u0981\\u0995\\u09C1\\u09A1\\u09BC\\u09BE, \\u09A6\\u09C0\\u0998\\u09BE\\u2026"};

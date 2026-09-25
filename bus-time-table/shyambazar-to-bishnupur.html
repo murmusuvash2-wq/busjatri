@@ -261,7 +261,7 @@
 <script>
 (function(){
   var rows=[].slice.call(document.querySelectorAll('.bus-row'));
-  var KEEP=10,STEP=20,btn=null;
+  var KEEP=15,STEP=50,btn=null;
   function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
   function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
   function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
@@ -271,7 +271,7 @@
     var n=Math.min(STEP,m);
     btn.textContent=isBn()?('আরও '+bn(n)+'টি বাস দেখুন ('+bn(m)+'টি বাকি)'):('See '+n+' more buses ('+m+' left)');
   }
-  if(rows.length>14){
+  if(rows.length>19){
     for(var i=KEEP;i<rows.length;i++){rows[i].classList.add('cut');}
     btn=document.createElement('button');
     btn.type='button';

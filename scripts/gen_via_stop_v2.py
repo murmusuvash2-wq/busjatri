@@ -334,7 +334,7 @@ SEE_MORE_JS = """<script>
   var rows=[];
   for(var i=0;i<els.length;i++){if(els[i].classList.contains('bus-row')){rows.push(els[i]);}}
   if(rows.length<=14){return;}
-  var KEEP=10,STEP=20,btn=null;
+  var KEEP=15,STEP=50,btn=null;
   function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
   function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
   function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
