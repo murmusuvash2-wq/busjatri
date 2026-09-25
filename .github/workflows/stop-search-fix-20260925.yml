@@ -1,0 +1,42 @@
+name: stop-search-fix-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Apply stop-search + SW override patch
+        run: python3 scripts/patch_stop_search_20260925.py
+
+      - name: Syntax check
+        run: |
+          node --check js/app.js
+          node --check sw.js
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'containment only for near-equal skeletons' js/app.js
+          grep -q 'vs.length - qs.length <= 2' js/app.js
+          grep -q 'perf20260925d' index.html
+          grep -q 'admin time corrections must be visible' sw.js
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Fix stoppage search skeleton over-matching (Santuri 1585->9 buses); SW network-first for time-overrides.json"
+            git push
+          fi
