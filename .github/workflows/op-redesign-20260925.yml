@@ -10,6 +10,24 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Assemble files from gzip parts
+        run: |
+          set -e
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib
+          man = json.load(open('parts/manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode(open(pathlib.Path('parts') / p).read()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).write_bytes(raw)
+              print('assembled ' + out_path + ' (' + str(len(raw)) + ' bytes)')
+          PYEOF
+          node --check js/op-board.js
+          node --check js/stop-search-all.js
+          python3 -c "import ast; ast.parse(open('scripts/gen_operator_pages.py').read())"
+          rm -rf parts
+
       - name: Regenerate operator pages
         run: python3 scripts/gen_operator_pages.py
 
@@ -25,8 +43,6 @@ jobs:
             grep -q 'Depo Departure Time' "$p"
             ! grep -q 'Buses buses' "$p"
           done
-          node --check js/op-board.js
-          node --check js/stop-search-all.js
           grep -q 'stop-search-all.js?v=bj20260925b' index.html
           grep -q 'bookChip' js/stop-search-all.js
           echo "validation passed"
@@ -39,6 +55,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "no changes to commit"
           else
-            git commit -m "operator pages: regenerate with search card + depo board + booking links"
+            git commit -m "operator pages: search card + depo board + booking links (assembled)"
             git push
           fi
