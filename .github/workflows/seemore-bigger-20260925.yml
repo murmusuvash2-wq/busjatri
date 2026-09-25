@@ -1,0 +1,74 @@
+name: seemore-bigger-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  seemore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Apply see-more batch patch to generators
+        run: python3 scripts/patch_seemore_bigger_20260925.py
+
+      - name: Regenerate route pages (all)
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages (all)
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via stop pages
+        run: python3 scripts/gen_via_stop_v2.py
+
+      - name: Regenerate BTT index
+        run: python3 scripts/gen_btt_v2.py
+
+      - name: Patch via sitemap (idempotent)
+        run: python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'KEEP=15,STEP=50' via/esplanade.html
+          grep -q 'KEEP=15,STEP=50' bus-time-table/esplanade-to-digha.html
+          grep -q 'rows.length>19' bus-time-table/esplanade-to-digha.html
+          if grep -q 'KEEP=10,STEP=20' via/esplanade.html bus-time-table/esplanade-to-digha.html; then echo 'FAIL: old see-more batch still present'; exit 1; fi
+          grep -q 'var mstep=24' bus-time-table/buses-from-kolkata.html
+          grep -q 'var mstep=24' bus-time-table/index.html
+          if grep -q 'var mstep=8;' bus-time-table/buses-from-kolkata.html bus-time-table/index.html; then echo 'FAIL: old mstep still present'; exit 1; fi
+          VIA_NEW=$(grep -l 'KEEP=15,STEP=50' via/*.html | wc -l)
+          echo "via pages with new batch: $VIA_NEW"
+          if [ "$VIA_NEW" -lt 500 ]; then echo 'FAIL: too few via pages patched'; exit 1; fi
+          RT_NEW=$(grep -l 'KEEP=15,STEP=50' bus-time-table/*.html | wc -l)
+          echo "route pages with new batch: $RT_NEW"
+          if [ "$RT_NEW" -lt 500 ]; then echo 'FAIL: too few route pages patched'; exit 1; fi
+          python3 - <<'PYEOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n == 4102, 'bus count changed: %d' % n
+          print('bus count OK:', n)
+          PYEOF
+          VIA_URLS=$(grep -c '<loc>' sitemap-via.xml || true)
+          echo "sitemap-via urls: $VIA_URLS"
+          if [ "$VIA_URLS" -ne 2605 ]; then echo 'FAIL: sitemap-via url count changed'; exit 1; fi
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Bigger See More batches: via/route 15+50, stand/BTT 24 cards (regen all)"
+            git push
+          fi
