@@ -47,7 +47,7 @@ jobs:
             grep -q 'bjLive' "$p"
             grep -q 'op-faq' "$p"
             grep -q 'op-board.js' "$p"
-            grep -q 'Depo Departure Time' "$p"
+            grep -q 'bjOpCfg' "$p"
             ! grep -q 'Buses buses' "$p"
           done
           grep -q 'stop-search-all.js?v=bj20260925b' index.html
