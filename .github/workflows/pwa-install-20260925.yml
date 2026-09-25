@@ -1,0 +1,54 @@
+name: pwa-install-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Install Pillow
+        run: pip install pillow
+
+      - name: Generate PWA icons
+        run: python3 scripts/make_pwa_icons.py
+
+      - name: Apply PWA install patch
+        run: python3 scripts/patch_pwa_install_20260925.py
+
+      - name: Syntax check
+        run: |
+          node --check js/pwa-install.js
+          python3 -c "import json; m = json.load(open('manifest.json')); assert m['display'] == 'standalone' and len(m['icons']) == 4"
+
+      - name: Validate
+        run: |
+          set -e
+          test -s icons/icon-192.png
+          test -s icons/icon-512.png
+          test -s icons/icon-maskable-192.png
+          test -s icons/icon-maskable-512.png
+          test -s apple-touch-icon.png
+          grep -q 'rel="manifest"' index.html
+          grep -q 'apple-touch-icon' index.html
+          grep -q 'pwa-install.js?v=pwa20260925a' index.html
+          grep -q 'beforeinstallprompt' js/pwa-install.js
+          grep -q 'label-bn' js/pwa-install.js
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "PWA install: manifest, generated icons, install banner (EN/BN) with 7-day dismiss"
+            git push
+          fi
