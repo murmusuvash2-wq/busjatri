@@ -1,0 +1,37 @@
+<!-- Static hero template: paints immediately after CSS (no JS wait).
+     app.js renderHome replaces it with identical markup once data loads.
+     Placeholders __BUS__ __TICKET__ __PIN__ __COMPASS__ __STOPS__ __SEARCH__
+     are swapped with real SVG icons; BUS_N/ROUTES_N/STOPS_N with counts. -->
+  <div id="app">
+    <div class="hero">
+      <div class="hero-route-line">__BUS__</div>
+      <div class="container hero-inner">
+        <span class="eyebrow">__TICKET__ West Bengal &middot; Route Data</span>
+        <h1>Bus<span class="accent">Jatri</span></h1>
+        <p class="tagline en">West Bengal's largest bus timetable</p>
+        <p class="tagline bn">পশ্চিমবঙ্গের সবচেয়ে বড় বাস টাইম টেবিল</p>
+        <div class="search-box">
+          <div class="search-row">
+            <div class="search-field">
+              <label>__PIN__ <span class="label-en">From</span><span class="label-bn">কোথা থেকে</span></label>
+              <input id="fromInput" placeholder="e.g. Bankura" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+            </div>
+            <button class="swap-btn" onclick="if(window.swapFromTo)swapFromTo()" title="Swap From & To" aria-label="Swap origin and destination">__COMPASS__</button>
+            <div class="search-field">
+              <label>__COMPASS__ <span class="label-en">To</span><span class="label-bn">কোথায়</span></label>
+              <input id="toInput" placeholder="e.g. Digha" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+            </div>
+            <div class="search-field">
+              <label>__STOPS__ <span class="label-en">Stoppage</span><span class="label-bn">স্টপেজ</span> <span class="via-hint">(optional)</span></label>
+              <input id="stopInput" placeholder="e.g. Kolaghat" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+            </div>
+          </div>
+          <div class="search-actions">
+            <button class="search-btn" onclick="if(window.doSearch)doSearch()">__SEARCH__ <span class="label-en">Search buses</span><span class="label-bn">খুঁজুন</span></button>
+            <a class="browse-btn" href="bus-time-table/"><span class="label-en">Browse all timetables</span><span class="label-bn">সব টাইমটেবিল দেখুন</span> &rarr;</a>
+          </div>
+        </div>
+        <p class="stats-inline">__BUS__ BUS_N+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ROUTES_N+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; STOPS_N+ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></p>
+      </div>
+    </div>
+  </div>

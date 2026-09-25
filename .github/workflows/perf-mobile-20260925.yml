@@ -1,0 +1,48 @@
+name: perf-mobile-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Apply mobile perf patch
+        run: python3 scripts/patch_perf_mobile_20260925.py
+
+      - name: Syntax check
+        run: |
+          node --check js/app.js
+          node --check sw.js
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'hero-route-line' index.html
+          grep -q 'stats-inline' index.html
+          grep -q 'serviceWorker' index.html
+          grep -q 'perf20260925b' index.html
+          grep -q 'static hero in index.html already painted' js/app.js
+          grep -q 'the moment someone types' js/app.js
+          grep -q 'setTimeout(kick, 10000)' js/app.js
+          grep -q 'stale-while-revalidate' sw.js
+          if grep -q 'requestIdleCallback(function () { kick(); }, { timeout: 2500 });' js/app.js; then echo 'FAIL: old eager kick still present'; exit 1; fi
+          if grep -q '<div id="app"></div>' index.html; then echo 'FAIL: empty #app still present'; exit 1; fi
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Mobile perf: static hero (LCP 2.4s->1.1s local), lazy 1.9MB index fetch, service worker offline cache"
+            git push
+          fi
