@@ -514,7 +514,7 @@ function renderHome(el) {
   const routeChips = computePopularRoutes().map(p =>
     `<span class="route-chip" onclick="location.hash='#/search?from=${encodeURIComponent(p.from)}&to=${encodeURIComponent(p.to)}'">${esc(pn(p.from))} <span class="rarr">→</span> ${esc(pn(p.to))}<span class="rcnt">${p.n}</span></span>`).join('');
 
-  el.innerHTML = `
+  var homeHTML = `
   <div class="hero">
     <div class="hero-route-line">${icon('bus')}</div>
     <div class="container hero-inner">
@@ -548,6 +548,7 @@ function renderHome(el) {
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
       <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></p>
   </div>
+  </div>
   <div class="section">
     <div class="container">
       <div class="section-title">${icon('pin')} <span class="label-en">Popular Destinations</span><span class="label-bn">জনপ্রিয় স্থান</span></div>
@@ -566,6 +567,31 @@ function renderHome(el) {
       <div class="route-chips">${routeChips}</div>
     </div>
   </div>`;
+  /* 2026-09-25: keep the already-painted static hero (from index.html)
+     instead of re-rendering it - the identical re-paint after data
+     arrives was becoming the LCP element in PSI. Nothing is injected:
+     the static markup already contains the geo hint (initially empty)
+     and the stats numbers, which are only rewritten if they actually
+     changed (a needless innerHTML write re-paints the element and
+     resets LCP). The native datalist stays off - ux-fixes.js uses a
+     custom autocomplete dropdown. */
+  var keepHero = document.querySelector('#app > .hero');
+  if (keepHero) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = homeHTML;
+    var freshHero = tmp.querySelector('.hero');
+    if (freshHero) {
+      var s1 = keepHero.querySelector('.stats-inline');
+      var s2 = freshHero.querySelector('.stats-inline');
+      if (s1 && s2 && s1.innerHTML !== s2.innerHTML) s1.innerHTML = s2.innerHTML;
+      freshHero.remove();
+    }
+    var sib = keepHero.nextElementSibling;
+    while (sib) { var nx2 = sib.nextElementSibling; sib.remove(); sib = nx2; }
+    while (tmp.firstChild) el.appendChild(tmp.firstChild);
+  } else {
+    el.innerHTML = homeHTML;
+  }
   renderBoard();
   detectLocation();
 }

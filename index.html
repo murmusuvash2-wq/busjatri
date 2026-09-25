@@ -24,6 +24,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'><path d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10M4 16h16M6 1 h12'/></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/fraunces/v38/6NUu8FyLNQOQZAnv9bYEvDiIdE9Ea92uemAk_WBq8U_9v0c2Wa0K7iN7hzFUPJH58nib14c7qv8oRcTn.woff2" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/ibmplexsans/v23/zYXzKVElMYYaJe8bpLHnCwDKr932-G7dytD-Dmu1syxeKYbSB4Zh.woff2" />
   <link rel="preload" as="fetch" href="data/home-index.json" />
   <link rel="preconnect" href="https://www.googletagmanager.com" />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;0,700;0,900;1,500&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Sans+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
@@ -95,6 +97,7 @@
             <div class="search-field">
               <label><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <span class="label-en">From</span><span class="label-bn">কোথা থেকে</span></label>
               <input id="fromInput" placeholder="e.g. Bankura" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+<div class="geo-hint"><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <span class="label-en">Detected:</span> <span class="geo-city"></span></div>
             </div>
             <button class="swap-btn" onclick="if(window.swapFromTo)swapFromTo()" title="Swap From & To" aria-label="Swap origin and destination"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-1.8 5.2-5.2 1.8 1.8-5.2z"/></svg></button>
             <div class="search-field">
@@ -151,7 +154,7 @@
   </footer>
 
   <script defer src="js/time-overrides.js?v=ovr20260919a"></script>
-  <script defer src="js/app.js?v=perf20260925b"></script>
+  <script defer src="js/app.js?v=perf20260925c"></script>
   <script defer src="js/extras.js?v=rpt20260920d"></script>
   <script defer src="js/bus-page.js?v=bj20260925a"></script>
   <script defer src="js/lang-persist.js?v=communitytime20260915"></script>
