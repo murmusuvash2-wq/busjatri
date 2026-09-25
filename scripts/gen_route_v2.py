@@ -327,13 +327,32 @@ def place_matches(value, query):
     return res
 
 
+def _pm_word(v, q):
+    """Whole-word (token) containment: the query must appear in the value
+    as one or more complete words - never glued inside another word.
+    So "agra" matches "Agra" / "Agra Cantt" but NOT "Debagram" / "Magra" /
+    "Sagrai" / "Banbagram" / "Prayagraj"."""
+    vt = [t for t in _re.split('[^a-z0-9]+', v) if t]
+    qt = [t for t in _re.split('[^a-z0-9]+', q) if t]
+    if not vt or not qt:
+        return False
+    n = len(qt)
+    for i in range(len(vt) - n + 1):
+        if vt[i:i + n] == qt:
+            return True
+    return False
+
 def _pm_core_strict(v, q):
-    """Like _pm_core but the skeleton tier only accepts a shared PREFIX
-    (same word, spelling variant). Search-style 'contains' skeletons let
-    Santipur match Aantpur — wrong for a static route page."""
+    """Strict matcher for STATIC route/stand pages (2026-09-25): substring
+    tier accepts whole words only (Agra no longer matches Debagram or Magra),
+    compact tier is exact equality, and the skeleton tier only accepts a
+    shared PREFIX (Santipur vs Aantpur). The homepage search keeps the
+    looser place_matches() - this strict path is for page generation."""
     if not v or not q:
         return False
-    if q in v:
+    if v == q:
+        return True
+    if _pm_word(v, q):
         return True
     vc = _re.sub(r'[^a-z0-9]', '', v)
     qc = _re.sub(r'[^a-z0-9]', '', q)
@@ -341,7 +360,7 @@ def _pm_core_strict(v, q):
         vc = vc[:-2]
     if qc.endswith('ac'):
         qc = qc[:-2]
-    if qc and (vc == qc or qc in vc):
+    if qc and vc == qc:
         return True
     vs = _re.sub(r'[^bcdfghjklmnpqrstvwxyz]', '', v)
     qs = _re.sub(r'[^bcdfghjklmnpqrstvwxyz]', '', q)
