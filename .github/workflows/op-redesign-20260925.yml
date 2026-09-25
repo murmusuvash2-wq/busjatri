@@ -15,10 +15,17 @@ jobs:
           set -e
           python3 - <<'PYEOF'
           import base64, gzip, hashlib, json, pathlib
-          man = json.load(open('parts/manifest.json'))
+          pdir = pathlib.Path('parts')
+          fixes = json.load(open(pdir / 'fixes.json')) if (pdir / 'fixes.json').exists() else {}
+          def chunk(name):
+              s = open(pdir / name).read()
+              for pos, ch in fixes.get(name, []):
+                  s = s[:pos] + ch + s[pos + 1:]
+              return s
+          man = json.load(open(pdir / 'manifest.json'))
           for out_path, rec in man.items():
-              data = b''.join(base64.b64decode(open(pathlib.Path('parts') / p).read()) for p in rec['parts'])
-              raw = gzip.decompress(data)
+              data = ''.join(chunk(p) for p in rec['parts'])
+              raw = gzip.decompress(base64.b64decode(data))
               assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
               pathlib.Path(out_path).write_bytes(raw)
               print('assembled ' + out_path + ' (' + str(len(raw)) + ' bytes)')
