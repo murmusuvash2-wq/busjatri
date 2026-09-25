@@ -969,7 +969,7 @@ FONTS = """<link rel="preconnect" href="https://fonts.googleapis.com"><link rel=
 HEADER = """<header class="header">
   <div class="header-inner">
     <a class="logo" href="../index.html">
-      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/></svg>
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
       Bus<span>Jatri</span>
     </a>
     <div class="header-actions">
@@ -997,7 +997,9 @@ def _head(title, description, canonical):
 <meta property="og:image" content="{ogimg}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 {fonts}
 {schema}
 <style>{css}</style></head>""".format(

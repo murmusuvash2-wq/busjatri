@@ -26,9 +26,9 @@ GA4 = (
 HEADER = """<header class="header">
   <div class="container header-inner">
     <a href="../index.html" class="logo" style="text-decoration:none;color:inherit">
-      <svg class="icon" viewBox="0 0 24 24" style="width:1.35rem;height:1.35rem;color:var(--amber)" aria-hidden="true">
-        <path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/>
-      </svg>
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+
+
       Bus<span>Jatri</span>
     </a>
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
@@ -183,7 +183,9 @@ def article_page(a):
 <meta property="og:url" content="{BASE}/blog/{a["slug"]}.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="../css/seo.css">
 <link rel="stylesheet" href="../css/extras.css">
 {faq_schema}{GA4}<style>.article-body p{{line-height:1.85;font-size:1rem;color:var(--ink,#222);margin:0 0 16px}}.article-body h2{{font-size:1.18rem;margin:28px 0 12px;color:var(--ink,#222)}}.article-meta{{font-size:.82rem;color:var(--ink-dim,#665);margin:6px 0 18px}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}</style>
@@ -251,7 +253,9 @@ def index_page():
 <meta property="og:description" content="West Bengal bus travel guides: route timetables, operators and travel tips from BusJatri.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#b8791f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="../css/seo.css">
 <link rel="stylesheet" href="../css/extras.css">
 {GA4}<style>.bus-row{{display:block;margin-bottom:14px}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}</style>

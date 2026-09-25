@@ -45,9 +45,9 @@ TRUST = (
 HEADER = """<header class="header">
   <div class="container header-inner">
     <a href="../index.html" class="logo" style="text-decoration:none;color:inherit">
-      <svg class="icon" viewBox="0 0 24 24" style="width:1.35rem;height:1.35rem;color:var(--amber)" aria-hidden="true">
-        <path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/>
-      </svg>
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+
+
       Bus<span>Jatri</span>
     </a>
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
@@ -226,7 +226,9 @@ def main():
 <meta property="og:image" content="{BASE}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2'%3E%3Cpath d='M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10'/%3E%3Cpath d='M4 16h16'/%3E%3C/svg%3E">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="../css/seo.css">
 <link rel="stylesheet" href="../css/extras.css">
 {GA4}<style>.bj-faq{{margin:26px 0 6px}}.bj-faq h2{{font-size:1.12rem;margin:0 0 10px}}.bj-faq details{{border:1px solid var(--line,#e5dcc7);border-radius:12px;padding:10px 14px;margin:8px 0;background:var(--surface,#fffcf4)}}.bj-faq summary{{cursor:pointer;font-weight:600;font-size:.92rem}}.bj-faq p{{margin:8px 0 0;font-size:.88rem;color:var(--ink-dim,#665)}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}</style>
