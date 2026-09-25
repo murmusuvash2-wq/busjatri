@@ -77,7 +77,39 @@
     </div>
   </header>
 
-  <div id="app"></div>
+<div id="app">
+    <div class="hero">
+      <div class="hero-route-line"><svg class="icon" viewBox="0 0 24 24"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg></div>
+      <div class="container hero-inner">
+        <span class="eyebrow"><svg class="icon" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> West Bengal &middot; Route Data</span>
+        <h1>Bus<span class="accent">Jatri</span></h1>
+        <p class="tagline en">West Bengal's largest bus timetable</p>
+        <p class="tagline bn">পশ্চিমবঙ্গের সবচেয়ে বড় বাস টাইম টেবিল</p>
+        <div class="search-box">
+          <div class="search-row">
+            <div class="search-field">
+              <label><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <span class="label-en">From</span><span class="label-bn">কোথা থেকে</span></label>
+              <input id="fromInput" placeholder="e.g. Bankura" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+            </div>
+            <button class="swap-btn" onclick="if(window.swapFromTo)swapFromTo()" title="Swap From & To" aria-label="Swap origin and destination"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-1.8 5.2-5.2 1.8 1.8-5.2z"/></svg></button>
+            <div class="search-field">
+              <label><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-1.8 5.2-5.2 1.8 1.8-5.2z"/></svg> <span class="label-en">To</span><span class="label-bn">কোথায়</span></label>
+              <input id="toInput" placeholder="e.g. Digha" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+            </div>
+            <div class="search-field">
+              <label><svg class="icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><path d="M6 8v8"/><path d="M6 12h9a3 3 0 0 0 3-3V7"/></svg> <span class="label-en">Stoppage</span><span class="label-bn">স্টপেজ</span> <span class="via-hint">(optional)</span></label>
+              <input id="stopInput" placeholder="e.g. Kolaghat" onkeydown="if(event.key==='Enter'&&window.doSearch)doSearch()">
+            </div>
+          </div>
+          <div class="search-actions">
+            <button class="search-btn" onclick="if(window.doSearch)doSearch()"><svg class="icon" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/></svg> <span class="label-en">Search buses</span><span class="label-bn">খুঁজুন</span></button>
+            <a class="browse-btn" href="bus-time-table/"><span class="label-en">Browse all timetables</span><span class="label-bn">সব টাইমটেবিল দেখুন</span> &rarr;</a>
+          </div>
+        </div>
+        <p class="stats-inline"><svg class="icon" viewBox="0 0 24 24"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg> 4,102+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; 2,526+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; 2,740+ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></p>
+      </div>
+    </div>
+  </div>
 
   <section style="max-width:720px;margin:0 auto 8px;padding:0 18px 18px">
     <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin-bottom:10px">Popular Operators</div>
@@ -114,12 +146,19 @@
   </footer>
 
   <script defer src="js/time-overrides.js?v=ovr20260919a"></script>
-  <script defer src="js/app.js?v=perf20260925a"></script>
+  <script defer src="js/app.js?v=perf20260925b"></script>
   <script defer src="js/extras.js?v=rpt20260920d"></script>
   <script defer src="js/bus-page.js?v=bj20260925a"></script>
   <script defer src="js/lang-persist.js?v=communitytime20260915"></script>
   <script defer src="js/ux-fixes.js?v=rpt20260925a"></script>
   <script defer src="js/stop-search-all.js?v=bj20260924a"></script>
   <script defer src="js/alt-route.js?v=alt20260922a"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').catch(function () {});
+      });
+    }
+  </script>
 </body>
 </html>

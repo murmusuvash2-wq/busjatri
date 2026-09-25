@@ -80,6 +80,7 @@ const POPULAR_PLACES = [
 function icon(name) { return ICONS[name] || ''; }
 
 function renderInitialSkeleton() {
+  if (document.querySelector('#app .hero')) return; /* 2026-09-25: static hero in index.html already painted */
   document.getElementById('app').innerHTML = `
   <div class="hero">
     <div class="hero-inner skel-hero">
@@ -106,14 +107,24 @@ async function loadData() {
     BUSES = {}; ROUTES = {}; STOPS = {};
     window.addEventListener('hashchange', render);
     render();
+    /* 2026-09-25: app-index.json (1.9 MB) used to start downloading
+       ~2.5 s after load and hogged mobile bandwidth for 10+ s, which
+       wrecked Time-to-Interactive and the PSI mobile score. Now the
+       full index loads only when needed: 10 s after load (still fills
+       the live board for engaged users), or the moment someone types
+       in a search field. Route changes already load it on demand. */
+    var kicked = false;
     var kick = function () {
+      if (kicked) return;
+      if (document.visibilityState === 'hidden') { setTimeout(kick, 5000); return; }
+      kicked = true;
       ensureFullData().then(function () { renderBoard(); }).catch(function () {});
     };
-    if (window.requestIdleCallback) {
-      requestIdleCallback(function () { kick(); }, { timeout: 2500 });
-    } else {
-      setTimeout(kick, 2000);
-    }
+    setTimeout(kick, 10000);
+    document.addEventListener('input', function () {
+      if (DATA && DATA.buses) return;
+      kick();
+    }, { passive: true });
   } catch (e) {
     try {
       await ensureFullData();
