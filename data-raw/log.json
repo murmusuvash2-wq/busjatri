@@ -96,5 +96,19 @@
   "rows": 12,
   "sha256": "077ccfbb7d473567",
   "changed": true
+ },
+ {
+  "ts": "2026-09-25T23:59:32+00:00",
+  "source": "bihar/bsrtc",
+  "rows": 323,
+  "sha256": "7058d27056960b0d",
+  "changed": true
+ },
+ {
+  "ts": "2026-09-25T23:59:32+00:00",
+  "source": "jharkhand/jantabus",
+  "rows": 12,
+  "sha256": "abaa2ca3b35498a3",
+  "changed": true
  }
 ]
