@@ -1,0 +1,86 @@
+name: agra-matching-fix-20260925
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Capture pre-regen counts
+        run: |
+          echo "ROUTE_PAGES_BEFORE=$(ls bus-time-table/*-to-*.html | wc -l)" >> $GITHUB_ENV
+          echo "SITEMAP_BEFORE=$(grep -c '<loc>' sitemap.xml || true)" >> $GITHUB_ENV
+
+      - name: Apply strict word-boundary matching patch
+        run: python3 scripts/patch_agra_matching_20260925.py
+
+      - name: Regenerate route pages (all)
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages (all)
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via stop pages
+        run: python3 scripts/gen_via_stop_v2.py
+
+      - name: Regenerate BTT index
+        run: python3 scripts/gen_btt_v2.py
+
+      - name: Patch via sitemap (idempotent)
+        run: python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          set -e
+          AGRA_ROWS=$(grep -c 'class="bus-row"' bus-time-table/burdwan-to-agra.html || true)
+          echo "burdwan-to-agra bus rows: $AGRA_ROWS"
+          if [ "$AGRA_ROWS" -ne 1 ]; then echo 'FAIL: burdwan-to-agra should have exactly 1 bus'; exit 1; fi
+          grep -q '1 bus listed, departing at 7:20 PM' bus-time-table/burdwan-to-agra.html
+          KD=$(grep -c 'class="bus-row"' bus-time-table/kolkata-to-digha.html || true)
+          echo "kolkata-to-digha bus rows: $KD"
+          if [ "$KD" -lt 100 ]; then echo 'FAIL: kolkata-to-digha lost buses'; exit 1; fi
+          ED=$(grep -c 'class="bus-row"' bus-time-table/esplanade-to-digha.html || true)
+          echo "esplanade-to-digha bus rows: $ED"
+          if [ "$ED" -lt 50 ]; then echo 'FAIL: esplanade-to-digha lost buses'; exit 1; fi
+          DA=$(grep -c 'class="bus-row"' bus-time-table/durgapur-to-asansol.html || true)
+          echo "durgapur-to-asansol bus rows: $DA"
+          if [ "$DA" -lt 100 ]; then echo 'FAIL: durgapur-to-asansol lost buses'; exit 1; fi
+          grep -q 'KEEP=15,STEP=50' bus-time-table/esplanade-to-digha.html
+          python3 - <<'PYEOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n == 4102, 'bus count changed: %d' % n
+          print('bus count OK:', n)
+          PYEOF
+          VIA_URLS=$(grep -c '<loc>' sitemap-via.xml || true)
+          echo "sitemap-via urls: $VIA_URLS"
+          if [ "$VIA_URLS" -ne 2605 ]; then echo 'FAIL: sitemap-via url count changed'; exit 1; fi
+          SITEMAP_AFTER=$(grep -c '<loc>' sitemap.xml || true)
+          echo "sitemap urls: before=$SITEMAP_BEFORE after=$SITEMAP_AFTER"
+          if [ "$SITEMAP_AFTER" -ne "$SITEMAP_BEFORE" ]; then echo 'FAIL: sitemap.xml url count changed'; exit 1; fi
+          ROUTE_PAGES_AFTER=$(ls bus-time-table/*-to-*.html | wc -l)
+          echo "route pages: before=$ROUTE_PAGES_BEFORE after=$ROUTE_PAGES_AFTER"
+          if [ "$ROUTE_PAGES_AFTER" -ne "$ROUTE_PAGES_BEFORE" ]; then echo 'FAIL: route page count changed'; exit 1; fi
+          echo 'ALL VALIDATIONS PASSED'
+
+      - name: Commit if changed
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Strict whole-word place matching on route/stand pages (fix Burdwan-Agra pollution)"
+            git push
+          fi
