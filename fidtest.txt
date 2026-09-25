@@ -1,0 +1,10 @@
+A= '" onclick="location.href=' + Q + '../index.html#/bus/' + Q
+B="string='op-stats' style='x'>" +
+C='''triple
+D=</section>'''
+E=emoji 🚌 🛣 ⇆ 🎫 ↗ ✓
+F=bengali এসবিএসটিসি বুক করুন
+G=amp & < >
+H='"' "'" ' "
+I=;position:relative" onclick="
+END
