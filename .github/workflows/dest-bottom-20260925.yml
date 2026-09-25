@@ -1,0 +1,35 @@
+name: Home destinations bottom 20260925
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run patcher
+        run: python3 scripts/patch_dest_bottom_20260925.py
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'js/app.js?v=brand20260925g' index.html
+          grep -q 'data-keep' js/app.js
+          python3 -c "text = open('js/app.js').read(); r = text.find('Popular Routes</span>'); d = text.find('Popular Destinations</span>'); assert r > 0 and d > 0 and d > r, 'destinations not below routes'"
+          echo "validation passed"
+
+      - name: Commit and push
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "home: Popular Destinations moved below Popular Routes (bottom of page)"
+            git push
+          fi
