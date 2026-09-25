@@ -1,0 +1,40 @@
+name: Home popular operators up 20260925
+
+on:
+  workflow_dispatch:
+
+jobs:
+  ops:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run patcher
+        run: python3 scripts/patch_home_ops_20260925.py
+
+      - name: Validate
+        run: |
+          set -e
+          grep -q 'js/app.js?v=brand20260925f' index.html
+          grep -q '<section data-keep="1" style="max-width:720px' index.html
+          OPS_LINE=$(grep -n 'data-keep="1"' index.html | head -1 | cut -d: -f1)
+          CLOSE_LINE=$(grep -n '<!-- AdSense slots' index.html | head -1 | cut -d: -f1)
+          if [ "$OPS_LINE" -ge "$CLOSE_LINE" ]; then echo "operators section not inside #app"; exit 1; fi
+          grep -c 'data-keep' js/app.js | grep -qE '^[3-9]$' || { echo "app.js data-keep logic missing"; exit 1; }
+          grep -q 'keepOps && freshOps' js/app.js
+          python3 -c "text = open('js/app.js').read(); i = text.find('total_stops || 0'); d = text.find('<div class=\"section\">', i); o = text.find('data-keep=\"1\"', i); assert d > 0 and o > 0 and o < d, 'operators not before destinations'; print('homeHTML order OK')"
+          echo "validation passed"
+
+      - name: Commit and push
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "home: Popular Operators section up top, Destinations below (hero-keep aware)"
+            git push
+          fi
