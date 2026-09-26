@@ -1,0 +1,26 @@
+name: Stand pages chhare fix 20260926
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply Bengali grammar fix chhara to chhare
+        run: python3 -c "import base64; exec(base64.b64decode('IyAtKi0gY29kaW5nOiB1dGYtOCAtKi0KaW1wb3J0IHJlLCBwYXRobGliLCBhc3QKClBBVCA9ICfgpo/gppbgpr7gpqjgp4cg4Ka24KeB4Kan4KeBIDxiPiguKj8pPC9iPiDgpqXgp4fgppXgp4cg4Kab4Ka+4Kah4Ka84Ka+IOCmrOCmvuCmuCDgpqbgp4fgppbgpr7gpqjgp4sg4Ka54Kav4Ka84KeH4Kab4KeH4KWkJwpSRVAgPSAn4KaP4KaW4Ka+4Kao4KeHIOCmtuCngeCmp+CngSDgprjgp4fgpocg4Kas4Ka+4Ka44KaX4KeB4Kay4KeLIOCmpuCnh+CmluCmvuCmqOCniyDgprngpq/gprzgp4fgppvgp4cg4Kav4KeH4KaX4KeB4Kay4KeLIDxiPlxcMTwvYj4g4Kal4KeH4KaV4KeHIOCmm+CmvuCmoeCmvOCnh+ClpCcKR1BBVCA9ICfgpo/gppbgpr7gpqjgp4cg4Ka24KeB4Kan4KeBIDxiPnt9PC9iPiDgpqXgp4fgppXgp4cg4Kab4Ka+4Kah4Ka84Ka+IOCmrOCmvuCmuCDgpqbgp4fgppbgpr7gpqjgp4sg4Ka54Kav4Ka84KeH4Kab4KeH4KWkJwpHUkVQID0gJ+Cmj+CmluCmvuCmqOCnhyDgprbgp4Hgpqfgp4Eg4Ka44KeH4KaHIOCmrOCmvuCmuOCml+CngeCmsuCniyDgpqbgp4fgppbgpr7gpqjgp4sg4Ka54Kav4Ka84KeH4Kab4KeHIOCmr+Cnh+Cml+CngeCmsuCniyA8Yj57fTwvYj4g4Kal4KeH4KaV4KeHIOCmmuCmvuCmoeCmvOCnh+ClpCcKQlBBVCA9ICfgprbgp4Hgpqfgp4Eg4Ka44KeH4KaHIOCmuOCnjeCmn+CnjeCmr+CmvuCmqOCnjeCmoSDgpqXgp4fgppXgp4cgPGI+4Kab4Ka+4Kah4Ka84Ka+PC9iPiDgpqzgpr7gprgg4Kam4KeH4KaW4Ka+4Kao4KeLIOCmueCmr+CmvOClpCcKQlJFUCA9ICfgprbgp4Hgpqfgp4Eg4Ka44KeH4KaHIOCmrOCmvuCmuCDgpqbgp4fgppbgpr7gpqjgp4sg4Ka54Kav4Ka8IOCmr+Cnh+Cml+CngeCmsuCniyDgprjgp4fgpocg4Ka44KeN4Kaf4KeN4Kav4Ka+4Kao4KeN4KahIOCmpeCnh+CmleCnhyDgppvgpr7gpqHgprzgp4fgpaQnCgpuX2h0bWwgPSAwCmZvciBmIGluIHNvcnRlZChwYXRobGliLlBhdGgoJ2J1cy10aW1lLXRhYmxlJykuZ2xvYignKi5odG1sJykpOgogICAgcyA9IGYucmVhZF90ZXh0KGVuY29kaW5nPSd1dGYtOCcpCiAgICBzMiwgbiA9IHJlLnN1Ym4oUEFULCBSRVAsIHMpCiAgICBpZiBuOgogICAgICAgIGYud3JpdGVfdGV4dChzMiwgZW5jb2Rpbmc9J3V0Zi04JykKICAgICAgICBuX2h0bWwgKz0gbiBhbmQgMQpwcmludCgncGF0Y2hlZCBodG1sIGZpbGVzOicsIG5faHRtbCkKCmcgPSBwYXRobGliLlBhdGgoJ3NjcmlwdHMvZ2VuX3N0YW5kX3YyLnB5JykKcyA9IGcucmVhZF90ZXh0KGVuY29kaW5nPSd1dGYtOCcpCmFzc2VydCBHUEFUIGluIHMsICdnZW5fc3RhbmRfdjIgcGF0dGVybiBtaXNzaW5nJwpzMiA9IHMucmVwbGFjZShHUEFULCBHUkVQKQphc3QucGFyc2UoczIpCmcud3JpdGVfdGV4dChzMiwgZW5jb2Rpbmc9J3V0Zi04JykKcHJpbnQoJ2dlbl9zdGFuZF92Mi5weSBwYXRjaGVkJykKCmIgPSBwYXRobGliLlBhdGgoJ3NjcmlwdHMvZ2VuX2J0dF92Mi5weScpCnMgPSBiLnJlYWRfdGV4dChlbmNvZGluZz0ndXRmLTgnKQppZiBCUEFUIGluIHM6CiAgICBzMiwgbiA9IHMyICdzIFw='))"
+
+      - name: Commit and push
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "stand pages: Bengali grammar fix - chhara to chhare (72 pages + generators)"
+            git push
+          fi
