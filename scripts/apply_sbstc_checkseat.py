@@ -63,7 +63,8 @@ print('C: buster bumped (%d)' % n_c)
 
 # --- D) op-board.js: Check Seat CTA below search results ---
 # Bengali label derived from the existing OFFICIAL dict text.
-m = re.search(r"'sbstc-buses': \('https://sbstconline\.co\.in/reservation-home', '[^']*', '([^']+)'"), g)
+_D_PAT = r"'sbstc-buses': \('https://sbstconline\.co\.in/reservation-home', '[^']*', '([^']*)'"
+m = re.search(_D_PAT, g)
 assert m, 'D: OFFICIAL bn label not found'
 bn_old = m.group(1)
 bn_new = bn_old.replace('\u099f\u09bf\u0995\u09bf\u099f \u09ac\u09c1\u0995 \u0995\u09b0\u09c1\u09a8', '\u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8')
