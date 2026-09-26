@@ -9,17 +9,22 @@
    "gp.5.b64",
    "gp.6.b64",
    "gp.7.b64",
-   "gp.8.b64",
-   "gp.9.b64",
+   "gp.8a.b64",
+   "gp.8b.b64",
+   "gp.9a.b64",
+   "gp.9b.b64",
    "gp.10.b64"
   ],
   "md5": "f7e5e5026a06ae467bd51563fd45317c"
  },
  "js/op-board.js": {
   "parts": [
-   "ob.1.b64",
-   "ob.2.b64",
-   "ob.3.b64",
+   "ob.1a.b64",
+   "ob.1b.b64",
+   "ob.2a.b64",
+   "ob.2b.b64",
+   "ob.3a.b64",
+   "ob.3b.b64",
    "ob.4.b64"
   ],
   "md5": "16fa47e3708a657ccd92d95b44e80fe7"
