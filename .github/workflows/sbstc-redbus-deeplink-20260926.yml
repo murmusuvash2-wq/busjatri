@@ -1,0 +1,31 @@
+name: SBSTC Check Seat redBus deeplink
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sbstc-redbus-deeplink:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch (Check Seat chip -> redBus deeplink with from/to/date prefill)
+        run: python3 scripts/apply_sbstc_redbus_deeplink.py
+
+      - name: Validate
+        run: |
+          grep -q 'RB_CITY' js/stop-search-all.js
+          grep -q 'redbus.in/bus-tickets/' js/stop-search-all.js
+          ! grep -q 'sbstconline' js/stop-search-all.js
+          grep -q 'bj20260926b' index.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts js index.html
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "Check Seat: SBSTC chips link to redBus deeplink (from/to/date prefilled)"; git push; fi
