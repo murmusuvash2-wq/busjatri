@@ -327,12 +327,34 @@
       };
       function rbSlug(s) { return String(s || '').toLowerCase().replace(new RegExp('[^a-z0-9]+', 'g'), '-').replace(new RegExp('^-+|-+$', 'g'), ''); }
       var redbHtml = '';
-      function bookChip(b) {
+      var RB_CITY = {
+        'Kolkata': ['Kolkata', 'kolkata'], 'Kolkata A.C': ['Kolkata', 'kolkata'], 'Kolkata (Esplanade)': ['Kolkata', 'kolkata'],
+        'Garia': ['Kolkata', 'kolkata'], 'Garia A.C': ['Kolkata', 'kolkata'], 'Belghoria': ['Kolkata', 'kolkata'],
+        'Thakurpukur': ['Kolkata', 'kolkata'], 'Baruipur': ['Kolkata', 'kolkata'], 'Baruipur A.C': ['Kolkata', 'kolkata'], 'Dumdum': ['Kolkata', 'kolkata'],
+        'Digha': ['Digha', 'digha'], 'New Digha': ['Digha', 'digha'],
+        'Burdwan': ['Burdwan', 'burdwan'], 'Bardhaman': ['Burdwan', 'burdwan'],
+        'Karunamoyee': ['Haldia', 'haldia'], 'Haldia': ['Haldia', 'haldia'], 'Haldia Township': ['Haldia', 'haldia'], 'Haldia Via-Kolkata': ['Haldia', 'haldia'],
+        'Asansol': ['Asansol', 'asansol'], 'Asansol A.C.': ['Asansol', 'asansol'],
+        'Durgapur': ['Durgapur', 'durgapur'], 'Durgapur (City Center)': ['Durgapur', 'durgapur'], 'Durgapur City Centre': ['Durgapur', 'durgapur'], 'Durgapur (Station)': ['Durgapur', 'durgapur'],
+        'Midnapur': ['Midnapore', 'midnapore'], 'Midnapore': ['Midnapore', 'midnapore'], 'Medinipur': ['Midnapore', 'midnapore'],
+        'Bankura': ['Bankura', 'bankura'], 'Purulia': ['Purulia', 'purulia'], 'Arambag': ['Arambagh', 'arambagh'],
+        'Suri': ['Suri', 'suri'], 'Jhargram': ['Jhargram', 'jhargram'],
+        'Barasat': ['Barasat', 'barasat'], 'Barasat A.C': ['Barasat', 'barasat'], 'Habra': ['Habra', 'habra'], 'Naihati': ['Naihati', 'naihati'],
+        'Malda': ['Malda', 'malda'], 'Tatanagar': ['Jamshedpur', 'jamshedpur']
+      };
+      function bookChip(b, ro, rd, tmr) {
         if (!b) return '';
         var _op = String(b.operator || '').toUpperCase();
         var _bt = String(b.bus_type || '').toUpperCase();
         if (_op !== 'SBSTC' && _bt.indexOf('SBSTC') === -1 && String(b.bus_name || '').toUpperCase().indexOf('SBSTC') !== 0) return '';
-        return '<a href="https://sbstconline.co.in/reservation-home" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Check seat availability on the SBSTC official site" style="position:absolute;right:14px;bottom:12px;background:var(--amber,#b8791f);color:#fffcf4;border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:5px">' + String.fromCharCode(127915) + ' <span class="label-en">Check Seat</span><span class="label-bn">' + '\u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8' + '</span></a>';
+        var F = RB_CITY[ro], T = RB_CITY[rd];
+        if (!F || !T) return '';
+        var d = new Date();
+        if (tmr) d.setDate(d.getDate() + 1);
+        var MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var onw = d.getDate() + '-' + MN[d.getMonth()] + '-' + d.getFullYear();
+        var u = 'https://www.redbus.in/bus-tickets/' + F[1] + '-to-' + T[1] + '?fromCityName=' + encodeURIComponent(F[0]) + '&toCityName=' + encodeURIComponent(T[0]) + '&onward=' + onw + '&srcCountry=IND&destCountry=IND';
+        return '<a href="' + u + '" target="_blank" rel="noopener nofollow" onclick="event.stopPropagation()" title="Check seat availability on redBus" style="position:absolute;right:14px;bottom:12px;background:var(--amber,#b8791f);color:#fffcf4;border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:5px">' + String.fromCharCode(127915) + ' <span class="label-en">Check Seat</span><span class="label-bn">' + '\u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8' + '</span></a>';
       }
       var opHtml = opq ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><span onclick="bjOpChipClear()" ' +
         'style="display:inline-flex;align-items:center;gap:8px;background:var(--amber-soft,#f6e7c6);border:1.5px solid var(--amber,#b8791f);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer">' +
@@ -362,7 +384,7 @@
             '<div class="meta"><span>' + icon('stops') + ' ' + (b.total_stoppages || (b.stoppages || []).length) + ' stops</span>' +
             (b.operator ? '<span>' + esc(b.operator) + '</span>' : '') +
             (b.fare ? '<span>' + esc(b.fare) + '</span>' : '') + '</div>' +
-            '</div>' + tPill + bookChip(b) + '</div>';
+            '</div>' + tPill + bookChip(b, ro, rd, r.depMin != null && r.depMin < now) + '</div>';
         }).join('') : emptyState) +
         '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:18px 0 0;border-top:1px solid var(--line,rgba(33,28,22,.13));padding-top:10px"><span class="label-en">Data last refreshed: </span><span class="label-bn">শেষ হালনাগাদ: </span><strong>' + esc((DATA.meta || {}).last_updated || '—') + '</strong> · <span class="label-en">Schedules may change. Verify with the operator before travel.</span><span class="label-bn">সময়সূচি বদলাতে পারে। যাত্রার আগে যাচাই করে নিন।</span></p>' +
         '</div>';
