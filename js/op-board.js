@@ -161,8 +161,6 @@
       new MutationObserver(function () {
         updPh();
         renderRows();
-        var rs = document.getElementById('bjOpResults');
-        if (rs && rs.getAttribute('data-q') === '1') window.bjSearchGo();
       }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
     var bjDateI = document.getElementById('bjDate');
@@ -172,71 +170,9 @@
       DAY = bjDateI ? bjDateI.value : '';
       TOD = (bjHourS && bjHourS.value !== 'any') ? parseInt(bjHourS.value, 10) : 'any';
       renderRows();
-      var rs = document.getElementById('bjOpResults');
-      if (rs && rs.getAttribute('data-q') === '1') window.bjSearchGo();
     }
     if (bjDateI) bjDateI.addEventListener('change', syncFilters);
     if (bjHourS) bjHourS.addEventListener('change', syncFilters);
-    window.bjSearchGo = function () {
-      var f = fromI ? fromI.value.trim() : '';
-      var t = toI ? toI.value.trim() : '';
-      var isBn = document.body.classList.contains('lang-bn');
-      if (!f && !t) { alert(isBn ? '\u09b6\u09c1\u09b0\u09c1 \u09ac\u09be \u0997\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09aa\u09c2\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8' : 'Fill From or To'); return; }
-      var fl = (RSTOPS[f] || f).toLowerCase();
-      var tl = (RSTOPS[t] || t).toLowerCase();
-      var hits = OP_DATA.filter(function (b) {
-        var o = String(b[2] || '').toLowerCase(), d = String(b[3] || '').toLowerCase();
-        var of = !fl || o.indexOf(fl) > -1 || bnName(b[2]).indexOf(f) > -1;
-        var dt = !tl || d.indexOf(tl) > -1 || bnName(b[3]).indexOf(t) > -1;
-        return of && dt && parseTime(b[4]) != null && todOK(parseTime(b[4]));
-      });
-      hits.sort(function (x, y) {
-        var a = parseTime(x[4]), c = parseTime(y[4]);
-        return dateIsToday() ? ((a < minutesNow() - 30 ? a + 1440 : a) - minutesNow()) - ((c < minutesNow() - 30 ? c + 1440 : c) - minutesNow()) : a - c;
-      });
-      var el = document.getElementById('bjOpResults');
-      if (!el) return;
-      el.setAttribute('data-q', '1');
-      var H = '<div class="op-res-card"><div class="op-res-h">';
-      if (hits.length) {
-        H += isBn ? '\u098f\u0987 \u09b0\u09c1\u099f\u09c7 ' + hits.length + '\u099f\u09bf SBSTC \u09ac\u09be\u09b8' : hits.length + ' SBSTC buses on this route';
-        H += '</div>' + hits.slice(0, 24).map(function (r) {
-          return '<div class="op-res-row" onclick="location.href=\'../index.html#/bus/' + encodeURIComponent(r[0]) + '\'">' +
-            '<span class="t">' + fmtTime(parseTime(r[4])).replace(' ', '') + '</span>' +
-            '<span class="nm">' + esc(bnName(r[1])) + '</span>' +
-            '<span class="dst">' + String.fromCharCode(8594) + ' ' + esc(bnName(r[3])) + '</span></div>';
-        }).join('');
-        if (hits.length > 24) H += '<div class="op-res-alt" style="text-align:center;color:var(--ink-dim,#665)">' + (isBn ? '\u0986\u09b0\u0993 ' + (hits.length - 24) + '\u099f\u09bf \u09ac\u09be\u09b8 \u09b8\u09be\u09b0\u09cd\u099a\u09c7' : '+' + (hits.length - 24) + ' more in search') + '</div>';
-      } else {
-        var lk = '../index.html#/search?from=' + encodeURIComponent(f) + '&to=' + encodeURIComponent(t);
-        H += (isBn ? '\u098f\u0987 \u09b0\u09c1\u099f\u09c7 SBSTC \u09ac\u09be\u09b8 \u09aa\u09be\u0993\u09df\u09be \u09af\u09be\u09df\u09a8\u09bf\u0964' : 'No SBSTC bus found for this route.') + '</div>' +
-          '<div class="op-res-alt" id="bjOpAlt">' + (isBn ? '\u0985\u09a8\u09cd\u09af \u09ac\u09bf\u0995\u09b2\u09cd\u09aa \u0996\u09c1\u0981\u099b\u099b\u09bf...' : 'Looking for other options...') + '</div>';
-        H += '<div class="op-res-alt"><a href="' + lk + '" style="color:var(--amber,#b8791f);font-weight:800;text-decoration:none">' + (isBn ? '\u09b8\u09be\u09b0\u09cd\u099a\u09c7 \u09a6\u09c7\u0996\u09c1\u09a8' : 'Open in search') + ' \u2197</a></div>';
-        (function () {
-          var fx = document.getElementById('bjOpAlt');
-          fetch('../data/app-index.json').then(function (r) { return r.json(); }).then(function (dx) {
-            var buses = (dx && dx.buses) || [], tot = 0, pvt = 0, ac = 0;
-            buses.forEach(function (b2) {
-              var o = (b2.origin || '').toLowerCase(), d = (b2.destination || '').toLowerCase();
-              if (fl && o.indexOf(fl) === -1) return;
-              if (tl && d.indexOf(tl) === -1) return;
-              tot++;
-              var bt = String(b2.bus_type || '');
-              if (/private/i.test(bt)) pvt++;
-              if (/AC/.test(bt) && !/NON/i.test(bt.toUpperCase())) ac++;
-            });
-            if (fx) fx.innerHTML = tot
-              ? (isBn ? '\u0985\u09a8\u09cd\u09af \u09ac\u09bf\u0995\u09b2\u09cd\u09aa: \u098f\u0987 \u09b0\u09c1\u099f\u09c7 ' + tot + '\u099f\u09bf \u09ac\u09be\u09b8 \u0986\u099b\u09c7 \u2014 \u09ac\u09c7\u09b8\u09b0\u0995\u09be\u09b0\u09c0: ' + pvt + ', \u098f\u09b8\u09bf: ' + ac : 'Other options: ' + tot + ' buses on this route \u2014 private: ' + pvt + ', AC: ' + ac)
-              : (isBn ? '\u098f\u0987 \u09b0\u09c1\u099f\u09c7 \u0995\u09cb\u09a8\u09cb \u09ac\u09be\u09b8\u09c7\u09b0 \u09a4\u09a5\u09cd\u09af \u09a8\u09c7\u0987\u0964' : 'No bus data found for this route yet.');
-          }).catch(function () { if (fx) fx.innerHTML = ''; });
-        })();
-      }
-      H += '</div>';
-      if (window.BJ_SEAT_URL) {
-        H += '<a class="op-cta-big" style="margin:14px 0 2px" href="' + window.BJ_SEAT_URL + '" target="_blank" rel="noopener">' + '\ud83c\udfab <span class="label-en">Check Seat on SBSTC official site</span><span class="label-bn">' + '\u098f\u09b8\u09ac\u09bf\u098f\u09b8\u099f\u09bf\u09b8\u09bf \u0985\u09ab\u09bf\u09b8\u09bf\u09af\u09bc\u09be\u09b2 \u09b8\u09be\u0987\u099f\u09c7 \u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8' + '</span> \u2197</a>';
-      }
-      el.innerHTML = H;
-    };
   }
 
   renderRows();
