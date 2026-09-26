@@ -1,0 +1,89 @@
+name: Add GOLDEN Mecheda-Tarakeswar 20260926
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append GOLDEN (FB community report) to community_buses.json
+        run: python3 scripts/apply_golden_mecheda_tarakeswar.py
+
+      - name: Merge into site data + dedup
+        run: |
+          python3 scripts/add_community_buses.py --write
+          python3 scripts/dedup_buses.py --write
+
+      - name: Validate data
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          buses = d['buses']
+          assert len(buses) == 4358, 'expected 4358 buses, got %d' % len(buses)
+          g = [b for b in buses if b.get('reg_no') == 'WB 29H 2439']
+          assert len(g) == 1, 'GOLDEN missing'
+          g = g[0]
+          assert g['origin'] == 'Mecheda Station' and g['destination'] == 'Tarakeswar'
+          assert len(g['stoppages']) == 24, 'expected 24 stops, got %d' % len(g['stoppages'])
+          assert g['stoppages'][0]['up_time'] == '6:50 AM'
+          assert g['stoppages'][-1]['down_time'] == '12:05 PM'
+          print('OK: 4358 buses, GOLDEN merged with 24 stops')
+          EOF
+
+      - name: Generate route page
+        run: python3 scripts/gen_route_v2.py --routes "Mecheda Station::Tarakeswar"
+
+      - name: Add new page to sitemap.xml
+        run: |
+          python3 - <<'EOF'
+          import bisect
+          p = 'sitemap.xml'
+          s = open(p, encoding='utf-8').read()
+          newloc = 'https://busjatri.in/bus-time-table/mecheda-station-to-tarakeswar.html'
+          assert newloc not in s, 'sitemap: URL already present'
+          entry = '<url><loc>' + newloc + '</loc><lastmod>2026-09-26</lastmod><priority>0.7</priority></url>'
+          lines = s.rstrip('\n').split('\n')
+          head = lines[:2]
+          body = [l for l in lines if l.startswith('<url>')]
+          tail = [l for l in lines[2:] if not l.startswith('<url>')]
+          idx = bisect.bisect_left(body, entry)
+          body.insert(idx, entry)
+          open(p, 'w', encoding='utf-8').write('\n'.join(head + body + tail) + '\n')
+          print('sitemap: inserted', newloc)
+          EOF
+
+      - name: Rebuild client data (app-index, bus-details)
+        run: python3 scripts/build_client_data.py
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate pages
+        run: |
+          P=bus-time-table/mecheda-station-to-tarakeswar.html
+          grep -q 'Golden Mecheda-Tarakeswar' $P
+          grep -q '6:50 AM' $P
+          grep -q 'G-L4E3D1YX9X' $P
+          grep -q 'mecheda-station-to-tarakeswar.html' sitemap.xml
+          grep -q 'Golden' data/app-index.json
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data bus-time-table sitemap.xml
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Add GOLDEN private bus: Mecheda Station <-> Tarakeswar (FB community report)"
+            git push
+          fi
