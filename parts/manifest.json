@@ -1,1 +1,0 @@
-{"data/wbbus_new.json": {"parts": ["wn.1.b64", "wn.2.b64", "wn.3.b64", "wn.4.b64", "wn.5.b64", "wn.6.b64", "wn.7.b64", "wn.8.b64"], "md5": "0cc1dc5b5f6414785d2cde9e46d2ac57"}, "scripts/add_wbbus_buses.py": {"parts": ["sw.1.b64", "sw.2.b64"], "md5": "7e847eca3588b783a1665149de866ca5"}}
