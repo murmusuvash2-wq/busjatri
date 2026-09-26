@@ -1,0 +1,67 @@
+name: Add wbbus.in buses 20260926
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble parts
+        run: |
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib
+          pdir = pathlib.Path('parts')
+          man = json.load(open(pdir / 'manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+              pathlib.Path(out_path).write_bytes(raw)
+              print('assembled', out_path, len(raw), 'bytes')
+          PYEOF
+
+      - name: Add wbbus buses and dedup
+        run: |
+          python3 scripts/add_wbbus_buses.py --write
+          python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n >= 4280, 'bus count too low: %d (expected ~4308)' % n
+          wbb = [b for b in d['buses'] if b.get('source') == 'wbbus.in']
+          print('OK: %d buses, %d total wbbus-sourced' % (n, len(wbb)))
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Cleanup and commit
+        run: |
+          rm -rf parts data/wbbus_new.json
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "add 289 buses scraped from wbbus.in (289 new routes with times)"
+            git push
+          fi
