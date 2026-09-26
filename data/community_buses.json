@@ -4027,6 +4027,142 @@
      "down": "8:00 PM"
     }
    ]
+  },
+  {
+   "operator": "Golden",
+   "bus_name": "Golden Mecheda-Tarakeswar",
+   "bus_type": "Private",
+   "reg_no": "WB 29H 2439",
+   "origin": "Mecheda Station",
+   "destination": "Tarakeswar",
+   "departure_time": "6:50 AM",
+   "arrival_time": "",
+   "route": "Mecheda Station - Tarakeswar (via Ghatal, Kamarpukur, Arambagh)",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "9735509964 / 8116834556",
+   "stops": [
+    {
+     "name": "Mecheda Station",
+     "up": "6:50 AM",
+     "down": "4:25 PM"
+    },
+    {
+     "name": "Haldia More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Deulia Bazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siddha Bazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mechogram",
+     "up": "7:15 AM",
+     "down": "4:00 PM"
+    },
+    {
+     "name": "Khukurdah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gaura",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Daspur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ghatal",
+     "up": "8:15 AM",
+     "down": "3:05 PM"
+    },
+    {
+     "name": "Borda Chaukan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mangrul",
+     "up": "9:10 AM",
+     "down": "2:05 PM"
+    },
+    {
+     "name": "Tatarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hajipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kamarpukur",
+     "up": "9:35 AM",
+     "down": "1:35 PM"
+    },
+    {
+     "name": "Goghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kalipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Arambagh",
+     "up": "10:05 AM",
+     "down": "1:10 PM"
+    },
+    {
+     "name": "Mayapur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kable",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chapadanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Muktarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramnarayanpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tarakeswar",
+     "up": "",
+     "down": "12:05 PM"
+    }
+   ]
   }
  ],
  "enrich": [
