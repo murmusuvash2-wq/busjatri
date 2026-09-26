@@ -232,6 +232,9 @@
         })();
       }
       H += '</div>';
+      if (window.BJ_SEAT_URL) {
+        H += '<a class="op-cta-big" style="margin:14px 0 2px" href="' + window.BJ_SEAT_URL + '" target="_blank" rel="noopener">' + '\ud83c\udfab <span class="label-en">Check Seat on SBSTC official site</span><span class="label-bn">' + '\u098f\u09b8\u09ac\u09bf\u098f\u09b8\u099f\u09bf\u09b8\u09bf \u0985\u09ab\u09bf\u09b8\u09bf\u09af\u09bc\u09be\u09b2 \u09b8\u09be\u0987\u099f\u09c7 \u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8' + '</span> \u2197</a>';
+      }
       el.innerHTML = H;
     };
   }

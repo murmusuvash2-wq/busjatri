@@ -260,8 +260,6 @@ def build_page(op, stems):
     ph_fr = esc(top_fr) if top_fr else 'Burdwan'
     ph_to = esc(top_to) if top_to else 'Kolkata'
     off_link = ''
-    if off:
-        off_link = ("<div class='alt'><a href='" + off[0] + "' target='_blank' rel='noopener'>🎫 <span class='label-en'>" + off[1] + "</span><span class='label-bn'>" + off[2] + "</span> ↗</a></div>")
     search_card = (
         "<section class='bj-op-search'>" +
         "<div class='lb'><span class='label-en'>Search " + esc(op['name']) + " buses</span><span class='label-bn'>" + bn_short + " বাস খুঁজুন</span></div>" +
@@ -292,7 +290,7 @@ def build_page(op, stems):
         lv_rows.append([b.get('id', '') or '', b.get('bus_name', '') or '', b.get('origin', '') or '', b.get('destination', '') or '', b.get('departure_time', '') or ''])
     board = ("<section id='bjLive' style='margin-top:16px'></section>" +
         "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-        "<script src='../js/op-board.js?v=opd20260926' defer></script>")
+        "<script src='../js/op-board.js?v=opse20260926' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:
@@ -512,6 +510,9 @@ def apply_sbstc_toggle(body, op):
     b = b.replace('>Book tickets on SBSTC official site</span>',
                   '>Check Seat & Book on SBSTC official site</span>', 1)
     b = b.replace(' \u099f\u09bf\u0995\u09bf\u099f \u09ac\u09c1\u0995 \u0995\u09b0\u09c1\u09a8</span>', ' \u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c7 \u09ac\u09c1\u0995 \u0995\u09b0\u09c1\u09a8</span>', 1)
+
+    # ---- Check Seat: inject seat URL for below-results CTA ----
+    b = b.replace("<script src='../js/op-board.js?v=", "<script>window.BJ_SEAT_URL='https://sbstconline.co.in/reservation-home';</script><script src='../js/op-board.js?v=", 1)
 
     # ---- search card v2: day chips + time chips + on-page results ----
     ph_m = re.search(r"placeholder=['\"]e\.g\. ([^'\"]+)['\"]", b)
