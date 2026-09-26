@@ -1,0 +1,43 @@
+name: About methodology section 20260926
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble and deploy about.html
+        run: |
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib, io
+          pdir = pathlib.Path('parts')
+          man = json.load(open(pdir / 'manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).write_bytes(raw)
+              h = raw.decode('utf-8')
+              for marker in ['methodology', 'Data & Methodology', 'id="credits"', 'G-L4E3D1YX9X']:
+                  assert marker in h, 'missing: ' + marker
+              print('assembled + validated', out_path, len(raw), 'bytes')
+          PYEOF
+
+      - name: Commit and cleanup
+        run: |
+          rm -rf parts
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add about.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "About page: Data & Methodology section (sources, verification, E-E-A-T)"
+            git push
+          fi
