@@ -1,0 +1,56 @@
+name: Blog index redesign deploy 20260926
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble blog index from parts
+        run: |
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib
+          pdir = pathlib.Path('parts')
+          man = json.load(open(pdir / 'manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).write_bytes(raw)
+              print('assembled ' + out_path + ' (' + str(len(raw)) + ' bytes)')
+          PYEOF
+
+      - name: Validate page
+        run: |
+          python3 - <<'PYEOF'
+          import json, re, pathlib
+          h = pathlib.Path('blog/index.html').read_text(encoding='utf-8')
+          n = h.count('class="bg-card"')
+          assert n == 12, 'expected 12 cards, got ' + str(n)
+          assert h.count('data-f="guide"') == 9 and h.count('data-f="story"') == 3, 'wrong guide/story split'
+          assert 'og:image' in h and 'twitter:card' in h, 'missing og/twitter tags'
+          t = re.search(r'<title>(.*?)</title>', h).group(1)
+          assert 'Guides' in t and chr(0x09ac) in t, 'bad title: ' + t
+          for key in ['__CARDS__', '__CSS__', '__TAILJS__', '__CRUMBS__']:
+              assert key not in h, 'template leftover ' + key
+          for m in re.findall(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+              json.loads(m)
+          print('blog index validation OK: 12 cards, meta OK, JSON-LD parses')
+          PYEOF
+
+      - name: Cleanup and commit
+        run: |
+          rm -rf parts
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "blog index redesign: guides + stories cards with filters, EN/BN"
+            git push
+          fi
