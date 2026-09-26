@@ -1,0 +1,55 @@
+name: Balurghat NBSTC board adds
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  balurghat-nbstc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch data (36 new buses + sitemap)
+        run: python3 scripts/patch_balurghat_nbstc.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate stand pages
+        run: python3 scripts/gen_stand_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Regenerate BTT index
+        run: python3 scripts/gen_btt_v2.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q 'nbstc-blg-kolkata-300am' data/busjatri_data.json
+          grep -q '3:00 AM' bus-time-table/balurghat-to-kolkata.html
+          grep -q '4:40 AM' bus-time-table/balurghat-to-kolkata.html
+          grep -q '5:10 AM' bus-time-table/balurghat-to-malda.html
+          grep -q '5:20 AM' bus-time-table/balurghat-to-cooch-behar.html
+          grep -q '6:00 AM' bus-time-table/balurghat-to-ranaghat.html
+          test -f bus-time-table/balurghat-to-siliguri.html
+          test -f bus-time-table/balurghat-to-raiganj.html
+          test -f bus-time-table/balurghat-to-farakka.html
+          test -f bus-time-table/balurghat-to-jalpaiguri.html
+          grep -q 'balurghat-to-malda' sitemap.xml
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data bus-time-table via sitemap.xml sitemap-via.xml robots.txt scripts
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "Balurghat NBSTC terminus board: 36 new departures + 8 route pages"; git push; fi
