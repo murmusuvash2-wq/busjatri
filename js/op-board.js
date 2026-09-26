@@ -85,7 +85,7 @@
     '<a href="../index.html#/search?op=' + encodeURIComponent(OP_TOKEN) + '" style="color:var(--amber,#b8791f);font-weight:800;text-decoration:none;font-size:13.5px">' +
     '<span class="label-en">View all ' + OP_COUNT + ' ' + esc(OP_NAME) + ' buses</span><span class="label-bn">সব ' + OP_COUNT + ' ' + esc(OP_NAME_BN) + ' বাস দেখুন</span> ↗</a></div></div>';
   function lvTag(t, now) {
-    if (t < now) return '<span class="lgone">' + String.fromCharCode(10003) + ' <span class="label-en">departed</span><span class="label-bn">চলে গেছে</span></span>';
+    if (t < now) return '';
     var r = t - now;
     if (r <= 1) return '<span class="ltag">now</span>';
     if (r <= 180) return '<span class="ltag">' + (r < 60 ? r + 'm' : Math.floor(r / 60) + 'h ' + (r % 60) + 'm') + '</span>';
@@ -105,11 +105,11 @@
     if (inp) inp.placeholder = document.body.classList.contains('lang-bn') ? 'স্টপ বা গন্তব্য লিখুন' : 'Search origin / stop';
     var rows = OP_DATA.filter(function (b) { return originOf(b) && parseTime(b[4]) != null; })
       .map(function (b) { return { b: b, t: parseTime(b[4]) }; })
-      .sort(function (x, y) { return ((x.t < now ? x.t + 1440 : x.t) - now) - ((y.t < now ? y.t + 1440 : y.t) - now); })
+      .sort(function (x, y) { return ((x.t < now - 30 ? x.t + 1440 : x.t) - now) - ((y.t < now - 30 ? y.t + 1440 : y.t) - now); })
       .slice(0, 9);
     var el2 = document.getElementById('lvRows');
     if (el2) el2.innerHTML = rows.length ? rows.map(function (r) {
-      return '<div class="lv-row' + (r.t < now ? ' past' : '') + '" onclick="location.href=' + Q + '../index.html#/bus/' + encodeURIComponent(r.b[0]) + Q + '">' +
+      return '<div class="lv-row" onclick="location.href=' + Q + '../index.html#/bus/' + encodeURIComponent(r.b[0]) + Q + '">' +
         '<span class="lt">' + fmtTime(r.t).replace(' ', '') + '</span>' +
         '<span class="lnm">' + esc(r.b[1]) + '</span>' +
         '<span class="ldst">' + String.fromCharCode(8594) + ' ' + esc(r.b[3]) + '</span>' +

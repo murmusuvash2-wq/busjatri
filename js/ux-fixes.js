@@ -473,13 +473,13 @@
         if (slug(sts[k].name) !== slugKey) continue;
         var tu = bjFromStop(sts[k], 'up');
         var td = bjFromStop(sts[k], 'down');
-        if (tu != null) { var d = tu - now; if (d < 0) d += 1440; out.push({ b: b, t: tu, diff: d, dir: 'up' }); }
-        if (td != null) { var d2 = td - now; if (d2 < 0) d2 += 1440; out.push({ b: b, t: td, diff: d2, dir: 'down' }); }
+        if (tu != null) { var d = tu - now; if (d < -30) d += 1440; out.push({ b: b, t: tu, diff: d, dir: 'up' }); }
+        if (td != null) { var d2 = td - now; if (d2 < -30) d2 += 1440; out.push({ b: b, t: td, diff: d2, dir: 'down' }); }
         break;
       }
       if (slug(b.origin) === slugKey) {
         var tu2 = parseTime(b.departure_time);
-        if (tu2 != null) { var d3 = tu2 - now; if (d3 < 0) d3 += 1440; out.push({ b: b, t: tu2, diff: d3, dir: 'up' }); }
+        if (tu2 != null) { var d3 = tu2 - now; if (d3 < -30) d3 += 1440; out.push({ b: b, t: tu2, diff: d3, dir: 'up' }); }
       }
     });
     out.sort(function (x, y) { return x.diff - y.diff; });
@@ -518,8 +518,7 @@
           } else if (i > idx && !allPast) {
             right = '<span class="lgone">+' + countdownText(n.diff) + '</span>';
           } else {
-            cls = 'past';
-            right = '<span class="lgone">✓ ' + (LANG === 'bn' ? 'চলে গেছে' : 'departed') + '</span>';
+            right = '';
           }
           var head = n.dir === 'down' ? n.b.origin : n.b.destination;
           var ret = n.dir === 'down' ? ' <span style="color:var(--maroon);font-weight:700">⇙</span>' : '';

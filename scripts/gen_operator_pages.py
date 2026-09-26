@@ -275,7 +275,7 @@ def build_page(op, stems):
         lv_rows.append([b.get('id', '') or '', b.get('bus_name', '') or '', b.get('origin', '') or '', b.get('destination', '') or '', b.get('departure_time', '') or ''])
     board = ("<section id='bjLive' style='margin-top:16px'></section>" +
         "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-        "<script src='../js/op-board.js?v=opb20260925' defer></script>")
+        "<script src='../js/op-board.js?v=opb20260926' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:
