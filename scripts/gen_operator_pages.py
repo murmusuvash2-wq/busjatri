@@ -55,29 +55,39 @@ BN_SHORT = {'sbstc-buses': 'এসবিএসটিসি', 'nbstc-buses': 'এ
 
 
 OPERATORS = [
-    dict(stem='sbstc-buses', name='SBSTC', title='SBSTC Bus Time Table',
+    dict(stem='sbstc-buses', name='SBSTC', title='SBSTC Bus Time Table (সময়সূচি) — Routes & Timings',
          h1='SBSTC Buses', bn='দক্ষিণবঙ্গ রাজ্য পরিবহণ সংস্থার বাস',
-         desc='Complete SBSTC bus time table: routes, departure times and destinations across West Bengal.',
+         desc='SBSTC bus time table: routes, departure times & destinations across West Bengal. এসবিএসটিসি বাসের সময়সূচি, রুট ও ছাড়ার সময় — কলকাতা, দীঘা, দুর্গাপুর সহ সব রুট।',
+         ogt='SBSTC বাসের সময়সূচি — Bus Time Table | BusJatri',
+         ogd='এসবিএসটিসি (SBSTC) বাসের সময়সূচি — রুট, ছাড়ার সময় ও গন্তব্য। কলকাতা–দীঘা, দুর্গাপুর, বর্ধমান সহ সব রুট BusJatri-তে।',
          intro='Explore listed SBSTC (South Bengal State Transport Corporation) bus services with routes, departure times and destinations.',
          pred=is_sbstc, tag='Government'),
-    dict(stem='nbstc-buses', name='NBSTC', title='NBSTC Bus Time Table',
+    dict(stem='nbstc-buses', name='NBSTC', title='NBSTC Bus Time Table (সময়সূচি) — Routes & Timings',
          h1='NBSTC Buses', bn='উত্তরবঙ্গ রাজ্য পরিবহণ সংস্থার বাস',
-         desc='Complete NBSTC bus time table: routes, departure times and destinations across West Bengal.',
+         desc='NBSTC bus time table: routes, departure times & destinations across North Bengal. এনবিএসটিসি বাসের সময়সূচি, রুট ও ছাড়ার সময় — শিলিগড়ি, কোচবিহার, মালদা সহ সব রুট।',
+         ogt='NBSTC বাসের সময়সূচি — Bus Time Table | BusJatri',
+         ogd='এনবিএসটিসি (NBSTC) বাসের সময়সূচি — রুট, ছাড়ার সময় ও গন্তব্য। শিলিগড়ি, কোচবিহার, মালদা সহ সব রুট BusJatri-তে।',
          intro='Explore listed NBSTC (North Bengal State Transport Corporation) bus services with routes, departure times and destinations.',
          pred=is_nbstc, tag='Government'),
-    dict(stem='wbtc-buses', name='WBTC', title='WBTC Bus Time Table',
+    dict(stem='wbtc-buses', name='WBTC', title='WBTC Bus Time Table (সময়সূচি) — Routes & Timings',
          h1='WBTC Buses', bn='পশ্চিমবঙ্গ পরিবহণ নিগমের বাস',
-         desc='Complete WBTC (CSTC) bus time table: routes, departure times and destinations across Kolkata and West Bengal.',
+         desc='WBTC (CSTC) bus time table: routes, departure times & destinations across Kolkata and West Bengal. ডব্লিউবিটিসি বাসের সময়সূচি ও রুট — কলকাতা সহ সব রুট।',
+         ogt='WBTC বাসের সময়সূচি — Bus Time Table | BusJatri',
+         ogd='ডব্লিউবিটিসি (WBTC) বাসের সময়সূচি — রুট, ছাড়ার সময় ও গন্তব্য। কলকাতা ও পশ্চিমবঙ্গের সব রুট BusJatri-তে।',
          intro='Explore listed WBTC / CSTC (Calcutta State Transport Corporation) bus services with routes, departure times and destinations.',
          pred=is_wbtc, tag='Government'),
-    dict(stem='shyamoli-paribahan-buses', name='Shyamoli Paribahan', title='Shyamoli Paribahan Bus Time Table',
+    dict(stem='shyamoli-paribahan-buses', name='Shyamoli Paribahan', title='Shyamoli Paribahan Bus Time Table (সময়সূচি)',
          h1='Shyamoli Paribahan Buses', bn='শ্যামলী পরিবহনের বাস',
-         desc='Shyamoli Paribahan (Green Line) AC Volvo bus time table: routes, departure times and destinations.',
+         desc='Shyamoli Paribahan AC Volvo bus time table: routes, departure times & destinations. শ্যামলী পরিবহনের এসি ভল্ভো বাসের সময়সূচি ও রুট — কলকাতা সহ সব রুট।',
+         ogt='শ্যামলী পরিবহনের বাসের সময়সূচি | BusJatri',
+         ogd='শ্যামলী পরিবহনের এসি ভল্ভো বাসের সময়সূচি — রুট, ছাড়ার সময় ও গন্তব্য। সব রুট BusJatri-তে।',
          intro='Explore listed Shyamoli Paribahan AC Volvo bus services with routes, departure times and destinations.',
          pred=is_shyamoli, tag='Private'),
-    dict(stem='volvo-ac-buses', name='Volvo AC', title='Volvo AC Bus Time Table',
+    dict(stem='volvo-ac-buses', name='Volvo AC', title='Volvo AC Bus Time Table (সময়সূচি) — Routes & Timings',
          h1='Volvo AC Buses', bn='এসি ভলভো বাস',
-         desc='All Volvo AC bus time tables in West Bengal: routes, departure times and destinations.',
+         desc='Volvo AC bus time table: routes, departure times & destinations across West Bengal. এসি ভল্ভো বাসের সময়সূচি — রুট ও ছাড়ার সময় এক জায়গায়।',
+         ogt='ভল্ভো এসি বাসের সময়সূচি — Bus Time Table | BusJatri',
+         ogd='এসি ভল্ভো বাসের সময়সূচি — রুট, ছাড়ার সময় ও গন্তব্য। পশ্চিমবঙ্গের সব রুট BusJatri-তে।',
          intro='Explore every listed AC / Volvo bus service in West Bengal with routes, departure times and destinations.',
          pred=is_volvo_ac, tag='AC'),
 ]
@@ -90,10 +100,17 @@ HEAD = '''<!DOCTYPE html>
 <title>{title} | BusJatri</title>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{BASE}/bus-time-table/{stem}.html">
-<meta property="og:title" content="{title} | BusJatri">
-<meta property="og:description" content="{desc}">
+<meta property="og:title" content="{ogt}">
+<meta property="og:description" content="{ogd}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{BASE}/bus-time-table/{stem}.html">
+<meta property="og:image" content="{BASE}/og-image.png">
+<meta property="og:locale" content="en_IN">
+<meta property="og:locale:alternate" content="bn_IN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{ogt}">
+<meta name="twitter:description" content="{ogd}">
+<meta name="twitter:image" content="{BASE}/og-image.png">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
@@ -330,7 +347,7 @@ def build_page(op, stems):
                          "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faq_en + faq_bn]},
         ensure_ascii=False) + "</script>")
 
-    body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'],
+    body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'], ogt=esc(op['ogt']), ogd=esc(op['ogd']),
                        BASE=BASE, h1=esc(op['h1']), bn=op['bn'], intro=esc(op['intro']), faq_schema=faq_schema)
     body += stats + search_card + board + popular + chiprow + faq_section + chr(10) + '</main>' + chr(10) + FOOT
     return body
