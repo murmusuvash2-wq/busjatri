@@ -1,0 +1,39 @@
+name: P1 SEO top route pages
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  p1-route-seo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch (titles, intro paragraphs, SBSTC chip, to-destination links)
+        run: python3 scripts/apply_p1_route_seo.py
+
+      - name: Regenerate top 18 GSC route pages
+        run: python3 scripts/gen_route_v2.py --routes "Asansol::Kolkata,Cooch Behar::Siliguri,Kolkata::Digha,Kolkata::Durgapur,Kolkata::Purulia,Burdwan::Durgapur,Midnapore::Kolkata,Karunamoyee::Burdwan,Karunamoyee::Durgapur,Karunamoyee::Asansol,Karunamoyee::Bankura,Asansol::Esplanade,Esplanade::Digha,Bankura::Arambagh,Durgapur::Kolkata,Burdwan::Kolkata,Kolkata::Asansol,Kolkata::Haldia"
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate
+        run: |
+          grep -q 'P1 SEO' scripts/gen_route_v2.py
+          grep -q 'seo-intro' bus-time-table/asansol-to-kolkata.html
+          grep -q 'buses, first' bus-time-table/asansol-to-kolkata.html
+          grep -q 'More Buses to' bus-time-table/asansol-to-kolkata.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/asansol-to-kolkata.html
+          test "$(grep -l 'seo-intro' bus-time-table/*.html | wc -l)" -ge 18
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts bus-time-table
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "P1 SEO: titles, unique intros, SBSTC chip, to-destination links on top 18 routes"; git push; fi
