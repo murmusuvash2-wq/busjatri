@@ -326,10 +326,13 @@
         location.hash = h[0] + (p.toString() ? '?' + p.toString() : '');
       };
       function rbSlug(s) { return String(s || '').toLowerCase().replace(new RegExp('[^a-z0-9]+', 'g'), '-').replace(new RegExp('^-+|-+$', 'g'), ''); }
-      var redbUrl = (from && to) ? ('https://www.redbus.in/bus-tickets/' + rbSlug(from) + '-to-' + rbSlug(to)) : '';
-      var redbHtml = (redbUrl && rows.length) ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><a href="' + redbUrl + '" target="_blank" rel="nofollow noopener" style="color:var(--amber,#b8791f);font-weight:700;text-decoration:none">' + String.fromCharCode(127915) + ' <span class="label-en">Check fares & book on redBus</span><span class="label-bn">রেডবাসে ভাড়া দেখুন</span> ' + String.fromCharCode(8599) + '</a></p>') : '';
-      function bookChip(fr, td) {
-        return '<a href="https://www.redbus.in/bus-tickets/' + rbSlug(fr) + '-to-' + rbSlug(td) + '" target="_blank" rel="nofollow noopener" onclick="event.stopPropagation()" title="Check fares & seats on redBus" style="position:absolute;right:14px;bottom:12px;background:var(--amber,#b8791f);color:#fffcf4;border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:5px">' + String.fromCharCode(127915) + ' <span class="label-en">Book</span><span class="label-bn">বুক করুন</span></a>';
+      var redbHtml = '';
+      function bookChip(b) {
+        if (!b) return '';
+        var _op = String(b.operator || '').toUpperCase();
+        var _bt = String(b.bus_type || '').toUpperCase();
+        if (_op !== 'SBSTC' && _bt.indexOf('SBSTC') === -1 && String(b.bus_name || '').toUpperCase().indexOf('SBSTC') !== 0) return '';
+        return '<a href="https://sbstconline.co.in/reservation-home" target="_blank" rel="noopener" onclick="event.stopPropagation()" title="Check seat availability on the SBSTC official site" style="position:absolute;right:14px;bottom:12px;background:var(--amber,#b8791f);color:#fffcf4;border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:5px">' + String.fromCharCode(127915) + ' <span class="label-en">Check Seat</span><span class="label-bn">' + '\u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8' + '</span></a>';
       }
       var opHtml = opq ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><span onclick="bjOpChipClear()" ' +
         'style="display:inline-flex;align-items:center;gap:8px;background:var(--amber-soft,#f6e7c6);border:1.5px solid var(--amber,#b8791f);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer">' +
@@ -359,7 +362,7 @@
             '<div class="meta"><span>' + icon('stops') + ' ' + (b.total_stoppages || (b.stoppages || []).length) + ' stops</span>' +
             (b.operator ? '<span>' + esc(b.operator) + '</span>' : '') +
             (b.fare ? '<span>' + esc(b.fare) + '</span>' : '') + '</div>' +
-            '</div>' + tPill + bookChip(ro, rd) + '</div>';
+            '</div>' + tPill + bookChip(b) + '</div>';
         }).join('') : emptyState) +
         '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:18px 0 0;border-top:1px solid var(--line,rgba(33,28,22,.13));padding-top:10px"><span class="label-en">Data last refreshed: </span><span class="label-bn">শেষ হালনাগাদ: </span><strong>' + esc((DATA.meta || {}).last_updated || '—') + '</strong> · <span class="label-en">Schedules may change. Verify with the operator before travel.</span><span class="label-bn">সময়সূচি বদলাতে পারে। যাত্রার আগে যাচাই করে নিন।</span></p>' +
         '</div>';
