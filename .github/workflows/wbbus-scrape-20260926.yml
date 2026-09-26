@@ -1,0 +1,137 @@
+name: Scrape wbbus.in 20260926
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Scrape allbus pages
+        run: |
+          mkdir -p /tmp/wb
+          for p in $(seq 1 90); do
+            code=$(curl -s --compressed --max-time 30 -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/126.0 Safari/537.36" -w "%{http_code}" -o /tmp/wb/page_$p.html "https://wbbus.in/allbus?page=$p")
+            echo "page $p -> $code ($(wc -c < /tmp/wb/page_$p.html) bytes)"
+            if [ "$code" != "200" ]; then rm -f /tmp/wb/page_$p.html; break; fi
+            if ! grep -q 'Reg No' /tmp/wb/page_$p.html; then echo "page $p has no bus cards, stopping"; rm -f /tmp/wb/page_$p.html; break; fi
+            sleep 0.4
+          done
+
+      - name: Parse pages
+        run: |
+          python3 - <<'PYEOF'
+          import glob, json, re, html as H, datetime, os
+          from collections import Counter
+
+          def strip_tags(s):
+              s = re.sub(r'<script.*?</script>', ' ', s, flags=re.S|re.I)
+              s = re.sub(r'<style.*?</style>', ' ', s, flags=re.S|re.I)
+              s = re.sub(r'<[^>]+>', '\n', s)
+              s = H.unescape(s)
+              s = re.sub(r'[ \t]+', ' ', s)
+              lines = [l.strip() for l in s.split('\n')]
+              return [l for l in lines if l]
+
+          TIMEM = re.compile(r'\d{1,2}:\d{2}\s*[AP]M', re.I)
+          PLH = '_ _ : _ _'
+          REG_RE = re.compile(r'^(WB[0-9A-Z]{4,10}|\d{3,10})$')
+
+          def clean_dest(s):
+              s = s.strip(' |,-\u2013')
+              toks = s.split()
+              while toks and toks[-1] in ('View', 'Details', 'Detail', 'More', 'Route', 'Read'):
+                  toks = toks[:-1]
+              return ' '.join(toks)
+
+          all_buses = []
+          files = sorted(glob.glob('/tmp/wb/page_*.html'), key=lambda f: int(re.search(r'(\d+)', f).group(1)))
+          for f in files:
+              raw = open(f, encoding='utf-8', errors='replace').read()
+              cards = re.split(r'class="card[ "]', raw)[1:]
+              page_no = int(re.search(r'(\d+)', f).group(1))
+              for c in cards:
+                  mhref = re.search(r'<a[^>]*href="/bus/(\d+)"[^>]*>(.*?)</a>', c, flags=re.S)
+                  if mhref:
+                      bus_id = mhref.group(1)
+                      name = re.sub(r'<[^>]+>', '', mhref.group(2)).strip()
+                  else:
+                      mh4 = re.search(r'<h4[^>]*>(.*?)</h4>', c, flags=re.S)
+                      bus_id = ''
+                      name = re.sub(r'<[^>]+>', '', mh4.group(1)).strip() if mh4 else ''
+                  txt = strip_tags(c)
+                  idx = [k for k, l in enumerate(txt) if l.startswith('Reg No')]
+                  if not idx or not name:
+                      continue
+                  i = idx[0]
+                  rest_same = txt[i][len('Reg No'):].strip(' :').strip()
+                  route = (rest_same + ' ' + ' '.join(txt[i+1:])).strip()
+                  reg = ''
+                  m = re.match(r'^(WB[0-9A-Z]{4,10}|\d{3,10})\s+(.*)$', route)
+                  if m and REG_RE.match(m.group(1)):
+                      reg = m.group(1)
+                      route = m.group(2).strip()
+                  spans = [(mm.start(), mm.end()) for mm in TIMEM.finditer(route)]
+                  if not spans:
+                      continue
+                  s1, e1 = spans[0]
+                  if s1 == 0:
+                      continue
+                  origin = route[:s1].strip()
+                  dep = route[s1:e1].upper()
+                  rest2 = route[e1:]
+                  slots = [(mm.start(), mm.end(), mm.group(0)) for mm in TIMEM.finditer(rest2)]
+                  ph = rest2.find(PLH)
+                  cands = [(s, e, t) for s, e, t in slots]
+                  if ph != -1 and (not cands or ph < cands[0][0]):
+                      cands.append((ph, ph + len(PLH), PLH))
+                      cands.sort()
+                  if cands:
+                      s2, e2, t2 = cands[0]
+                      dest = clean_dest(rest2[:s2])
+                      arr = '' if t2 == PLH else t2.upper()
+                  else:
+                      dest = clean_dest(rest2)
+                      arr = ''
+                  if not origin or not dest:
+                      continue
+                  all_buses.append({
+                      'bus_name': name, 'reg_no': reg, 'bus_id': bus_id,
+                      'origin': origin, 'destination': dest,
+                      'departure_time': dep, 'arrival_time': arr,
+                      'page': page_no,
+                  })
+
+          n_files = len(files)
+          total = len(all_buses)
+          with_reg = sum(1 for b in all_buses if b['reg_no'])
+          with_dep = sum(1 for b in all_buses if b['departure_time'])
+          with_arr = sum(1 for b in all_buses if b['arrival_time'])
+          print(f'pages parsed: {n_files}, entries: {total}, with reg: {with_reg}, with dep time: {with_dep}, with arr: {with_arr}')
+          pc = Counter(b['page'] for b in all_buses)
+          gaps = [p for p in range(1, n_files+1) if pc.get(p, 0) == 0]
+          print('empty pages:', gaps)
+          assert n_files >= 60, f'too few pages: {n_files}'
+          assert total >= 1100, f'too few entries: {total}'
+          os.makedirs('data-raw', exist_ok=True)
+          json.dump({'meta': {'scraped_at_utc': datetime.datetime.utcnow().isoformat(), 'source': 'wbbus.in/allbus', 'pages': n_files, 'entries': total}, 'buses': all_buses}, open('data-raw/wbbus_all.json', 'w'), ensure_ascii=False, indent=1)
+          print('written data-raw/wbbus_all.json bytes:', os.path.getsize('data-raw/wbbus_all.json'))
+          PYEOF
+
+      - name: Commit scraped data
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add data-raw/wbbus_all.json
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "scrape wbbus.in allbus list (76 pages)"
+            git push
+          fi
