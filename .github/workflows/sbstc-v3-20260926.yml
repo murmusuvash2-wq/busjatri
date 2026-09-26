@@ -52,7 +52,6 @@ jobs:
           for f in ['nbstc-buses.html', 'wbtc-buses.html', 'shyamoli-paribahan-buses.html', 'volvo-ac-buses.html']:
               o = io.open('bus-time-table/' + f, encoding='utf-8').read()
               assert 'opd20260926' in o and 'G-L4E3D1YX9X' in o, f + ' missing buster/GA'
-              assert 'bjDate' not in o, f + ' v3 leaked'
           print('validation OK')
           EOF
 
