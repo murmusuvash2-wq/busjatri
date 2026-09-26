@@ -40,7 +40,7 @@ jobs:
           h = pathlib.Path('blog/index.html').read_text(encoding='utf-8')
           n = h.count('class="bg-card"')
           assert n == 12, 'expected 12 cards, got ' + str(n)
-          assert h.count('data-f="guide"') == 9 and h.count('data-f="story"') == 3, 'wrong guide/story split'
+          assert h.count('<article class="bg-card" data-f="guide"') == 9 and h.count('<article class="bg-card" data-f="story"') == 3, 'wrong guide/story split'
           assert 'og:image' in h and 'twitter:card' in h, 'missing og/twitter tags'
           t = re.search(r'<title>(.*?)</title>', h).group(1)
           assert 'Guides' in t and chr(0x09ac) in t, 'bad title: ' + t
