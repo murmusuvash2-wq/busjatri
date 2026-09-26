@@ -16,7 +16,7 @@ jobs:
         run: python3 scripts/apply_p1_route_seo.py
 
       - name: Regenerate top 18 GSC route pages
-        run: python3 scripts/gen_route_v2.py --routes "Asansol::Kolkata,Cooch Behar::Siliguri,Kolkata::Digha,Kolkata::Durgapur,Kolkata::Purulia,Burdwan::Durgapur,Midnapore::Kolkata,Karunamoyee::Burdwan,Karunamoyee::Durgapur,Karunamoyee::Asansol,Karunamoyee::Bankura,Asansol::Esplanade,Esplanade::Digha,Bankura::Arambagh,Durgapur::Kolkata,Burdwan::Kolkata,Kolkata::Asansol,Kolkata::Haldia"
+        run: python3 scripts/gen_route_v2.py --routes "Asansol::Kolkata,Cooch Behar::Siliguri,Kolkata::Digha,Kolkata::Durgapur,Kolkata::Purulia,Burdwan::Durgapur,Midnapur::Kolkata,Karunamoyee::Burdwan,Karunamoyee::Durgapur,Karunamoyee::Asansol,Karunamoyee::Bankura,Asansol::Esplanade,Esplanade::Digha,Bankura::Arambagh,Durgapur::Kolkata,Burdwan::Kolkata,Kolkata::Asansol,Kolkata::Haldia"
 
       - name: Re-add GA4
         run: python3 scripts/add_ga4.py
