@@ -16,8 +16,17 @@ jobs:
           import base64, gzip, hashlib, json, pathlib
           pdir = pathlib.Path('parts')
           man = json.load(open(pdir / 'manifest.json'))
+          fixes = {}
+          fpath = pdir / 'fixes.json'
+          if fpath.exists():
+              fixes = json.load(open(fpath))
           for out_path, rec in man.items():
-              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              data = b''
+              for p in rec['parts']:
+                  chunk = (pdir / p).read_text().strip()
+                  for pos, ch in fixes.get(p, []):
+                      chunk = chunk[:pos] + ch + chunk[pos+1:]
+                  data += base64.b64decode(chunk)
               raw = gzip.decompress(data)
               assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
               pathlib.Path(out_path).write_bytes(raw)
