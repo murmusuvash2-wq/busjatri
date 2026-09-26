@@ -1,0 +1,70 @@
+name: SBSTC v3 calendar + hour picker 20260926
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble parts
+        run: |
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib
+          pdir = pathlib.Path('parts')
+          man = json.load(open(pdir / 'manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+              pathlib.Path(out_path).write_bytes(raw)
+              print('assembled', out_path, len(raw), 'bytes')
+          PYEOF
+
+      - name: Apply v3 patch (calendar date + hour picker)
+        run: python3 scripts/apply_v3_datetime.py
+
+      - name: Regenerate operator pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: python3 scripts/gen_operator_pages.py
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import io
+          h = io.open('bus-time-table/sbstc-buses.html', encoding='utf-8').read()
+          for marker in ["id='bjDate'", "id='bjHour'", '>Any time</option>', '>12 AM</option>',
+                         '>11 PM</option>', 'opd20260926', 'G-L4E3D1YX9X',
+                         'window.bjStops', 'seo-page.js?v=spg20260926', 'hero-badge']:
+              assert marker in h, 'missing: ' + marker
+          assert 'bjDayChips' not in h and 'bjTodChips' not in h, 'old chips still present'
+          assert h.count('<option') == 25, 'hour option count'
+          for f in ['nbstc-buses.html', 'wbtc-buses.html', 'shyamoli-paribahan-buses.html', 'volvo-ac-buses.html']:
+              o = io.open('bus-time-table/' + f, encoding='utf-8').read()
+              assert 'opd20260926' in o and 'G-L4E3D1YX9X' in o, f + ' missing buster/GA'
+              assert "bjDate" not in o, f + ' v3 leaked'
+          print('validation OK')
+          EOF
+
+      - name: Cleanup and commit
+        run: |
+          rm -rf parts
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "SBSTC v3: calendar date input + hour-only AM/PM time picker (user request)"
+            git push
+          fi
