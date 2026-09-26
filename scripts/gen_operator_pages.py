@@ -292,7 +292,7 @@ def build_page(op, stems):
         lv_rows.append([b.get('id', '') or '', b.get('bus_name', '') or '', b.get('origin', '') or '', b.get('destination', '') or '', b.get('departure_time', '') or ''])
     board = ("<section id='bjLive' style='margin-top:16px'></section>" +
         "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-        "<script src='../js/op-board.js?v=opb20260926' defer></script>")
+        "<script src='../js/op-board.js?v=opc20260926' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:
@@ -350,7 +350,203 @@ def build_page(op, stems):
     body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'], ogt=esc(op['ogt']), ogd=esc(op['ogd']),
                        BASE=BASE, h1=esc(op['h1']), bn=op['bn'], intro=esc(op['intro']), faq_schema=faq_schema)
     body += stats + search_card + board + popular + chiprow + faq_section + chr(10) + '</main>' + chr(10) + FOOT
-    return body
+    return apply_sbstc_toggle(body, op)
+
+
+
+SBSTC_STOPS = {'Kolkata': 'কলকাতা', 'Digha': 'দীঘা', 'Burdwan': 'বর্ধমান', 'Bardhaman': 'বর্ধমান', 'Karunamoyee': 'করুণাময়ী', 'Durgapur': 'দুর্গাপুর', 'Haldia': 'হলদিয়া', 'Asansol': 'আসানসোল', 'Midnapur': 'মেদিনীপুর', 'Midnapore': 'মেদিনীপুর', 'Medinipur': 'মেদিনীপুর', 'Bankura': 'বাঁকুড়া', 'Purulia': 'পুরুলিয়া', 'Garia': 'গড়িয়া', 'Arambag': 'আরামবাগ', 'Arambagh': 'আরামবাগ', 'Suri': 'সিউড়ি', 'Habra': 'হাবড়া', 'Barasat': 'বারাসাত', 'Dhamakhali': 'ধামাখালি', 'Jhargram': 'ঝাড়গ্রাম', 'Kandra': 'কান্দ্রা', 'Nagar': 'নগর', 'Nandigram': 'নন্দীগ্রাম', 'Garhbhowanipur': 'গড়ভবানীপুর', 'Gopiganj': 'গোপীগঞ্জ', 'Belghoria': 'বেলঘরিয়া', 'Falta': 'ফলতা', 'Thakurpukur': 'ঠাকুরপুকুর', 'Haldia Via-Kolkata': 'হলদিয়া (কলকাতা হয়ে)', 'Indus Via-Kolkata': 'ইন্দাস (কলকাতা হয়ে)', 'Durgapur (City Center)': 'দুর্গাপুর (সিটি সেন্টার)', 'Durgapur City Centre': 'দুর্গাপুর সিটি সেন্টার', 'Durgapur (Station)': 'দুর্গাপুর (স্টেশন)', 'Manbazar': 'মানবাজার', 'Nabadwip': 'নবদ্বীপ', 'Kalna': 'কালনা', 'Lalgola': 'লালগোলা', 'Diamond Harbour': 'ডায়মন্ড হারবার', 'Bishnupur': 'বিষ্ণুপুর', 'Khatra': 'খাতড়া', 'Jamuria': 'জামুরিয়া', 'Sonachura': 'সোনাচুড়া', 'Belpahari': 'বেলপাহাড়ি', 'Baruipur': 'বারুইপুর', 'Dumdum': 'ডামডাম', 'Goyespur': 'গয়েশপুর', 'Kakdwip': 'কাকদ্বীপ', 'Salar': 'সালার', 'Kirnahar': 'কির্নাহার', 'Naihati': 'নৈহাটি', 'Namkhana': 'নামখানা', 'Mohar': 'মোহর', 'Haldia Township': 'হলদিয়া টাউনশিপ', 'Malda': 'মালদা', 'Kolkata (Esplanade)': 'কলকাতা (এসপ্ল্যানেড)', 'Egra': 'এগরা', 'Balrampur': 'বলরামপুর', 'Chittaranjan': 'চিত্তরঞ্জন', 'Tarapith': 'তারাপীঠ', 'Kuli': 'কুলি', 'Barakar': 'বরাকর', 'Ramganj': 'রামগঞ্জ', 'Kabilepur': 'কবিলেপুর', 'Siliguri': 'শিলিগুড়ি', 'Gopiballabpur': 'গোপীবল্লভপুর', 'Bolpur': 'বোলপুর', 'Kharagpur': 'খড়্গপুর', 'Baghmundi': 'বাঘমুণ্ডি', 'Ajodhya Hills': 'অযোধ্যা পাহাড়', 'Bandwan': 'বান্দোয়ান', 'Kolkata A.C': 'কলকাতা এসি', 'Garia A.C': 'গড়িয়া এসি', 'Barasat A.C': 'বারাসাত এসি', 'Asansol A.C.': 'আসানসোল এসি', 'Baruipur A.C': 'বারুইপুর এসি', 'Diamond': 'ডায়মন্ড হারবার'}
+SBSTC_STOPS_JSON = '{"Kolkata": "কলকাতা", "Digha": "দীঘা", "Burdwan": "বর্ধমান", "Bardhaman": "বর্ধমান", "Karunamoyee": "করুণাময়ী", "Durgapur": "দুর্গাপুর", "Haldia": "হলদিয়া", "Asansol": "আসানসোল", "Midnapur": "মেদিনীপুর", "Midnapore": "মেদিনীপুর", "Medinipur": "মেদিনীপুর", "Bankura": "বাঁকুড়া", "Purulia": "পুরুলিয়া", "Garia": "গড়িয়া", "Arambag": "আরামবাগ", "Arambagh": "আরামবাগ", "Suri": "সিউড়ি", "Habra": "হাবড়া", "Barasat": "বারাসাত", "Dhamakhali": "ধামাখালি", "Jhargram": "ঝাড়গ্রাম", "Kandra": "কান্দ্রা", "Nagar": "নগর", "Nandigram": "নন্দীগ্রাম", "Garhbhowanipur": "গড়ভবানীপুর", "Gopiganj": "গোপীগঞ্জ", "Belghoria": "বেলঘরিয়া", "Falta": "ফলতা", "Thakurpukur": "ঠাকুরপুকুর", "Haldia Via-Kolkata": "হলদিয়া (কলকাতা হয়ে)", "Indus Via-Kolkata": "ইন্দাস (কলকাতা হয়ে)", "Durgapur (City Center)": "দুর্গাপুর (সিটি সেন্টার)", "Durgapur City Centre": "দুর্গাপুর সিটি সেন্টার", "Durgapur (Station)": "দুর্গাপুর (স্টেশন)", "Manbazar": "মানবাজার", "Nabadwip": "নবদ্বীপ", "Kalna": "কালনা", "Lalgola": "লালগোলা", "Diamond Harbour": "ডায়মন্ড হারবার", "Bishnupur": "বিষ্ণুপুর", "Khatra": "খাতড়া", "Jamuria": "জামুরিয়া", "Sonachura": "সোনাচুড়া", "Belpahari": "বেলপাহাড়ি", "Baruipur": "বারুইপুর", "Dumdum": "ডামডাম", "Goyespur": "গয়েশপুর", "Kakdwip": "কাকদ্বীপ", "Salar": "সালার", "Kirnahar": "কির্নাহার", "Naihati": "নৈহাটি", "Namkhana": "নামখানা", "Mohar": "মোহর", "Haldia Township": "হলদিয়া টাউনশিপ", "Malda": "মালদা", "Kolkata (Esplanade)": "কলকাতা (এসপ্ল্যানেড)", "Egra": "এগরা", "Balrampur": "বলরামপুর", "Chittaranjan": "চিত্তরঞ্জন", "Tarapith": "তারাপীঠ", "Kuli": "কুলি", "Barakar": "বরাকর", "Ramganj": "রামগঞ্জ", "Kabilepur": "কবিলেপুর", "Siliguri": "শিলিগুড়ি", "Gopiballabpur": "গোপীবল্লভপুর", "Bolpur": "বোলপুর", "Kharagpur": "খড়্গপুর", "Baghmundi": "বাঘমুণ্ডি", "Ajodhya Hills": "অযোধ্যা পাহাড়", "Bandwan": "বান্দোয়ান", "Kolkata A.C": "কলকাতা এসি", "Garia A.C": "গড়িয়া এসি", "Barasat A.C": "বারাসাত এসি", "Asansol A.C.": "আসানসোল এসি", "Baruipur A.C": "বারুইপুর এসি", "Diamond": "ডায়মন্ড হারবার"}'
+
+
+def sbstc_bn_name(s):
+    """Longest-match English -> Bengali stop-name mapping."""
+    r = str(s)
+    for k in sorted(SBSTC_STOPS, key=len, reverse=True):
+        if k in r:
+            r = r.replace(k, SBSTC_STOPS[k])
+    return r
+
+
+def _sbstc_bn_walk(html):
+    """Apply stop-name mapping to text nodes only (leave tags/attrs alone)."""
+    out = []
+    for part in re.split(r'(<[^>]+>)', html):
+        out.append(part if part.startswith('<') else sbstc_bn_name(part))
+    return ''.join(out)
+
+
+SBSTC_TOGGLE_CSS = ('<style id="bjLangToggle">.label-bn{display:none!important}'
+                    'body.lang-bn .label-en{display:none!important}'
+                    'body.lang-bn .label-bn{display:inline!important}'
+                    '.only-bn{display:none!important}'
+                    'body.lang-bn .only-bn{display:block!important}'
+                    'body.lang-bn .only-en{display:none!important}'
+                    '.lang-btn.on{background:var(--amber-soft,#f6e7c6)!important}'
+                    '.hero-badge{display:inline-flex;align-items:center;background:linear-gradient(135deg,#c98a2b,#a13b2e);'
+                    'color:#fffcf4;font-weight:800;letter-spacing:.08em;border-radius:14px;'
+                    'padding:6px 18px;font-size:.72em;box-shadow:0 3px 14px rgba(184,121,31,.4);text-transform:uppercase}'
+                    '.schip{border:1.5px solid var(--line,rgba(33,28,22,.15));background:var(--surface,#fffcf4);'
+                    'border-radius:999px;padding:6px 13px;font:inherit;font-size:12.5px;font-weight:600;'
+                    'cursor:pointer;margin:2px}'
+                    '.schip.on{background:var(--amber,#b8791f);color:#fffcf4;border-color:var(--amber,#b8791f)}'
+                    '.bj-chip-row{display:flex;flex-wrap:wrap;gap:2px;margin-top:8px}'
+                    '.op-res-card{background:var(--surface,#fffcf4);border:1.5px solid var(--line,rgba(33,28,22,.15));'
+                    'border-radius:14px;padding:14px 16px;margin:14px 0}'
+                    '.op-res-h{font-size:13px;font-weight:800;color:var(--amber-ink,#6b4610);margin-bottom:8px}'
+                    '.op-res-row{display:flex;gap:10px;align-items:baseline;padding:8px 4px;border-top:1px dashed var(--line,rgba(33,28,22,.12));cursor:pointer}'
+                    '.op-res-row:hover{background:var(--amber-soft,rgba(184,121,31,.12))}'
+                    '.op-res-row .t{font-family:var(--font-mono,monospace);font-weight:700;font-size:13px;color:var(--amber,#b8791f);flex:none}'
+                    '.op-res-row .nm{font-weight:600;font-size:13.5px}'
+                    '.op-res-row .dst{color:var(--ink-dim,#665);font-size:12.5px}'
+                    '.op-res-alt{margin-top:9px;font-size:13px}'
+                    '</style>')
+
+
+def apply_sbstc_toggle(body, op):
+    """SBSTC only: full EN/BN toggle + v2 search/dark/names features."""
+    if op['stem'] != 'sbstc-buses':
+        return body
+    b = body
+
+    # ---- toggle CSS + color-scheme ----
+    b = b.replace('<link rel="stylesheet" href="../css/extras.css">',
+                  '<link rel="stylesheet" href="../css/extras.css">' + SBSTC_TOGGLE_CSS, 1)
+    assert 'bjLangToggle' in b
+
+    # ---- site-standard controls: theme button + seo-page.js ----
+    b = b.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">',
+                  '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
+                  '<meta name="color-scheme" content="light dark">', 1)
+    moon = ('<button id="themeBtn" class="lang-btn" aria-label="Theme" style="background:transparent;'
+            'border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;'
+            'font-weight:700;font-size:12px;font-family:inherit;display:inline-flex;align-items:center">'
+            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
+            'stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">'
+            '<path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>')
+    b = b.replace('<span class="lang-group"', moon + '\n        <span class="lang-group"', 1)
+    b = b.replace("id=\"langEN\" onclick=\"setLang('en')\"", 'id="langEn"', 1)
+    b = b.replace("id=\"langBN\" onclick=\"setLang('bn')\"", 'id="langBn"', 1)
+    # swap the inline setLang IIFE for the site-standard controls script
+    b = re.sub(r'<script>\(function\(\)\{function setLang[\s\S]*?\}\)\(\);</script>',
+               '<script src="../js/seo-page.js?v=spg20260926" defer></script>', b, count=1)
+    assert 'seo-page.js' in b and 'function setLang' not in b
+
+    # ---- hero: badge + bilingual ----
+    old_h1 = '<h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">SBSTC Buses</h1>'
+    new_h1 = ('<h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0;'
+              'display:flex;align-items:center;gap:12px;flex-wrap:wrap">'
+              '<span class="hero-badge">SBSTC</span>'
+              '<span class="label-en">Buses</span><span class="label-bn">\u09ac\u09be\u09b8</span></h1>'
+              '<div class="only-en" style="color:var(--ink-dim);margin-top:8px;font-size:14.5px">'
+              'South Bengal State Transport Corporation \u2014 routes, time tables & schedules</div>')
+    assert old_h1 in b, 'h1 not found'
+    b = b.replace(old_h1, new_h1, 1)
+    # Bengali subtitle: map is not needed (already Bengali); wrap for safety
+    b = b.replace('<div class="bn-line only-bn" style="color:var(--ink-dim);margin-top:6px">',
+                  '<div class="bn-line only-bn" style="color:var(--ink-dim);margin-top:8px;font-size:14.5px">', 1)
+
+    # ---- crumbs ----
+    b = b.replace('<a href="./">Bus Timetable</a>',
+                  '<a href="./"><span class="label-en">Bus Timetable</span>'
+                  '<span class="label-bn">\u09ac\u09be\u09b8 \u09b8\u09ae\u09df\u09b8\u09c2\u099a\u09bf</span></a>', 1)
+    b = b.replace('<span>SBSTC Buses</span>',
+                  '<span><span class="label-en">SBSTC Buses</span>'
+                  '<span class="label-bn">SBSTC \u09ac\u09be\u09b8</span></span>', 1)
+
+    # ---- section headings ----
+    b = b.replace('<h2 class="op-h2">Popular SBSTC Routes</h2>',
+                  '<h2 class="op-h2"><span class="label-en">Popular SBSTC Routes</span>'
+                  '<span class="label-bn">\u099c\u09a8\u09aa\u09cd\u09b0\u09bf\u09df SBSTC \u09b0\u09c1\u099f</span></h2>', 1)
+    b = b.replace('<h2 class="op-h2" style="margin-top:26px">All Destinations</h2>',
+                  '<h2 class="op-h2" style="margin-top:26px"><span class="label-en">All Destinations</span>'
+                  '<span class="label-bn">\u09b8\u09ac \u0997\u09a8\u09cd\u09a4\u09ac\u09cd\u09af</span></h2>', 1)
+
+    # ---- route cards: bilingual stop names ----
+    def rt_sub(m):
+        fr, to = m.group(1), m.group(2)
+        return ('<span class="rt"><span class="label-en">' + fr + ' <span class="arr">→</span> ' + to + '</span>'
+                '<span class="label-bn">' + sbstc_bn_name(fr) + ' <span class="arr">→</span> ' + sbstc_bn_name(to) + '</span></span>')
+    b = re.sub(r'<span class="rt">([^<]+) <span class="arr">→</span> ([^<]+)</span>', rt_sub, b)
+    # ---- destination chips: bilingual ----
+    def chip_sub(m):
+        return (m.group(1) + '<span class="label-en">' + m.group(2) + '</span>'
+                '<span class="label-bn">' + sbstc_bn_name(m.group(2)) + '</span>' + m.group(3))
+    b = re.sub(r'((?:<a|<span) class="via-chip"[^>]*>)([^<]+)(</(?:a|span)>)', chip_sub, b)
+    # ---- route row labels ----
+    b = b.replace(' buses</span>', ' <span class="label-en">buses</span>'
+                  '<span class="label-bn">\u099f\u09bf \u09ac\u09be\u09b8</span></span>')
+    b = b.replace('<span class="go">View Schedule \u203a</span>',
+                  '<span class="go"><span class="label-en">View Schedule \u203a</span>'
+                  '<span class="label-bn">\u09b8\u09ae\u09df\u09b8\u09c2\u099a\u09bf \u09a6\u09c7\u0996\u09c1\u09a8 \u203a</span></span>')
+
+    # ---- FAQ: hide EN blocks in BN mode; map stop names inside BN blocks ----
+    b = b.replace('<details class="op-faq open">', '<details class="op-faq only-en open>')
+    b = b.replace('<details class="op-faq">', '<details class="op-faq only-en">')
+    def _faq_walk(m):
+        return _sbstc_bn_walk(m.group(1)) + m.group(2)
+    b = re.sub(r'(<details class="op-faq only-bn[\s\S]*?)(</main>)', _faq_walk, b, count=1)
+
+    # ---- footer ----
+    for en, bn in [('../about.html">About Us', '../about.html"><span class="label-en">About Us</span><span class="label-bn">\u0986\u09ae\u09be\u09a6\u09c7\u09b0 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995\u09c7</span>'),
+                   ('../contact.html">Contact Us', '../contact.html"><span class="label-en">Contact Us</span><span class="label-bn">\u09af\u09cb\u0997\u09be\u09af\u09cb\u0997</span>'),
+                   ('../privacy-policy.html">Privacy Policy', '../privacy-policy.html"><span class="label-en">Privacy Policy</span><span class="label-bn">\u0997\u09cb\u09aa\u09a8\u09c0\u09df\u09a4\u09be \u09a8\u09c0\u09a4\u09bf</span>'),
+                   ('../about.html#credits">Credits', '../about.html#credits"><span class="label-en">Credits</span><span class="label-bn">\u0995\u09c3\u09a4\u099c\u09cd\u099e\u09a4\u09be</span>'),
+                   ('./">All Bus Timetables', './"><span class="label-en">All Bus Timetables</span><span class="label-bn">\u09b8\u09ac \u09ac\u09be\u09b8 \u09b8\u09ae\u09df\u09b8\u09c2\u099a\u09bf</span>')]:
+        b = b.replace('<a href="' + en + '</a>', '<a href="' + bn + '</a>', 1)
+    b = b.replace('<strong>BusJatri</strong> \u2014 West Bengal Bus Timetable',
+                  '<strong>BusJatri</strong> \u2014 <span class="label-en">West Bengal Bus Timetable</span>'
+                  '<span class="label-bn">\u09aa\u09b6\u09cd\u099a\u09bf\u09ae\u09ac\u0999\u09cd\u0997\u09c7\u09b0 \u09ac\u09be\u09b8 \u09b8\u09ae\u09df\u09b8\u09c2\u099a\u09bf</span>', 1)
+    b = b.replace('Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a>',
+                  '<span class="label-en">Contact:</span>'
+                  '<span class="label-bn">\u09af\u09cb\u0997\u09be\u09af\u09cb\u0997:</span> <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a>', 1)
+    b = b.replace('    Not affiliated with any transport corporation',
+                  '    <span class="label-en">Not affiliated with any transport corporation</span>'
+                  '<span class="label-bn">\u0995\u09cb\u09a8\u09cb \u09aa\u09b0\u09bf\u09ac\u09b9\u09a3 \u09b8\u0982\u09b8\u09cd\u09a5\u09be\u09b0 \u09b8\u0999\u09cd\u0997\u09c7 \u0986\u09ae\u09be\u09a6\u09c7\u09b0 \u09b8\u09ae\u09cd\u09aa\u09b0\u09cd\u0995 \u09a8\u09c7\u0987</span>', 1)
+
+    # ---- Check Seat CTA (was Book tickets) ----
+    b = b.replace('>Book tickets on SBSTC official site</span>',
+                  '>Check Seat & Book on SBSTC official site</span>', 1)
+    b = b.replace(' \u099f\u09bf\u0995\u09bf\u099f \u09ac\u09c1\u0995 \u0995\u09b0\u09c1\u09a8</span>', ' \u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c7 \u09ac\u09c1\u0995 \u0995\u09b0\u09c1\u09a8</span>', 1)
+
+    # ---- search card v2: day chips + time chips + on-page results ----
+    ph_m = re.search(r"placeholder=['\"]e\.g\. ([^'\"]+)['\"]", b)
+    ph_fr = ph_m.group(1) if ph_m else 'Burdwan'
+    ph_m2 = re.search(r"placeholder=['\"]e\.g\. ([^'\"]+)['\"]", b[ph_m.end():]) if ph_m else None
+    ph_to = ph_m2.group(1) if ph_m2 else 'Kolkata'
+    off_link_v2 = ''
+    off_m = re.search(r"<div class='alt'>[\s\S]*?</div>", b)
+    if off_m:
+        off_link_v2 = _sbstc_bn_walk(off_m.group(0))
+    search_v2 = ('<section class="bj-op-search">'
+                 '<div class="lb"><span class="label-en">Search SBSTC buses</span>'
+                 '<span class="label-bn">\u098f\u09b8\u09ac\u09bf\u098f\u09b8\u099f\u09bf\u09b8\u09bf \u09ac\u09be\u09b8 \u0996\u09c1\u0981\u099c\u09c1\u09a8</span></div>'
+                 '<div class="row">'
+                 '<input id="bjFrom" type="text" placeholder="e.g. ' + ph_fr + '" autocomplete="off" style="color:var(--ink,#211c16)">'
+                 '<button class="swap" onclick="bjSwap()" title="Swap" type="button">\u21c6</button>'
+                 '<input id="bjTo" type="text" placeholder="e.g. ' + ph_to + '" autocomplete="off" style="color:var(--ink,#211c16)">'
+                 '</div>'
+                 '<div class="bj-chip-row" id="bjDayChips">'
+                 '<button class="schip on" data-v="today" type="button"><span class="label-en">Today</span><span class="label-bn">\u0986\u099c</span></button>'
+                 '<button class="schip" data-v="tomorrow" type="button"><span class="label-en">Tomorrow</span><span class="label-bn">\u0986\u0997\u09be\u09ae\u09c0\u0995\u09be\u09b2</span></button>'
+                 '</div>'
+                 '<div class="bj-chip-row" id="bjTodChips">'
+                 '<button class="schip on" data-v="any" type="button"><span class="label-en">Any time</span><span class="label-bn">\u09af\u09c7\u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09df</span></button>'
+                 '<button class="schip" data-v="m" type="button"><span class="label-en">Morning</span><span class="label-bn">\u09b8\u0995\u09be\u09b2</span></button>'
+                 '<button class="schip" data-v="d" type="button"><span class="label-en">Day</span><span class="label-bn">\u09a6\u09c1\u09aa\u09c1\u09b0</span></button>'
+                 '<button class="schip" data-v="e" type="button"><span class="label-en">Evening\u2013Night</span><span class="label-bn">\u09b8\u09a8\u09cd\u09a7\u09cd\u09df\u09be\u2013\u09b0\u09be\u09a4</span></button>'
+                 '</div>'
+                 '<button class="go" style="margin-top:10px;width:100%" onclick="bjSearchGo()" type="button">'
+                 '\U0001F68A <span class="label-en">Search</span><span class="label-bn">\u09b8\u09be\u09b0\u09cd\u099a \u0995\u09b0\u09c1\u09a8</span></button>'
+                 + off_link_v2 +
+                 '</section>'
+                 '<div id="bjOpResults"></div>')
+    b = re.sub(r"<section class=['\"]bj-op-search['\"][\s\S]*?</section>", lambda m: search_v2, b, count=1)
+
+    # ---- embed stop mapping for op-board.js ----
+    b = b.replace('<script>window.bjOpCfg',
+                  '<script>window.bjStops = ' + SBSTC_STOPS_JSON + ';</scr' + 'ipt>\n<script>window.bjOpCfg', 1)
+    return b
+
 
 def update_sitemap(stems):
     p = ROOT / 'sitemap.xml'
