@@ -76,7 +76,7 @@
   var STKEYS = STOPS ? Object.keys(STOPS).sort(function (a, b) { return b.length - a.length; }) : [];
   var RSTOPS = {};
   if (STOPS) for (var sk in STOPS) { RSTOPS[STOPS[sk]] = sk; }
-  var TOD = 'any', DAY = 'today';
+  var TOD = 'any', DAY = '';
   function bnName(s) {
     if (!STOPS || !document.body.classList.contains('lang-bn')) return String(s == null ? '' : s);
     var r = String(s);
@@ -85,11 +85,15 @@
     }
     return r;
   }
+  function bjTodayStr() {
+    function p(n) { return (n < 10 ? '0' : '') + n; }
+    var d = new Date();
+    return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+  }
+  function dateIsToday() { return !DAY || DAY === bjTodayStr(); }
   function todOK(t) {
     if (TOD === 'any') return true;
-    if (TOD === 'm') return t >= 240 && t < 720;
-    if (TOD === 'd') return t >= 720 && t < 1020;
-    return t >= 1020 || t < 240;
+    return Math.floor(t / 60) === TOD;
   }
   window.bjLvSet = function (n) { lvOrigin = n; lvQ = ''; var inp = document.getElementById('bjLvSearch'); if (inp) inp.value = ''; renderRows(); };
   window.bjLvSearchDo = function (v) { lvQ = String(v || '').trim().toLowerCase(); renderRows(); };
@@ -125,7 +129,7 @@
     if (inp) inp.placeholder = document.body.classList.contains('lang-bn') ? 'স্টপ বা গন্তব্য লিখুন' : 'Search origin / stop';
     var rows = OP_DATA.filter(function (b) { return originOf(b) && parseTime(b[4]) != null && todOK(parseTime(b[4])); })
       .map(function (b) { return { b: b, t: parseTime(b[4]) }; })
-      .sort(DAY === 'tomorrow'
+      .sort(!dateIsToday()
       ? function (x, y) { return x.t - y.t; }
       : function (x, y) { return ((x.t < now - 30 ? x.t + 1440 : x.t) - now) - ((y.t < now - 30 ? y.t + 1440 : y.t) - now); })
       .slice(0, 9);
@@ -147,6 +151,8 @@
   if (STOPS) {
     function updPh() {
       var isBn = document.body.classList.contains('lang-bn');
+      var hs0 = document.getElementById('bjHour');
+      if (hs0 && hs0.options.length) hs0.options[0].text = isBn ? '\u09af\u09c7\u0995\u09cb\u09a8\u09cb \u09b8\u09ae\u09df' : 'Any time';
       if (fromI) fromI.placeholder = isBn ? '\u09af\u09c7\u09ae\u09a8: ' + bnName('Burdwan') : 'e.g. Burdwan';
       if (toI) toI.placeholder = isBn ? '\u09af\u09c7\u09ae\u09a8: ' + bnName('Kolkata') : 'e.g. Kolkata';
     }
@@ -159,23 +165,18 @@
         if (rs && rs.getAttribute('data-q') === '1') window.bjSearchGo();
       }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
     }
-    ['bjDayChips', 'bjTodChips'].forEach(function (gid) {
-      var el = document.getElementById(gid);
-      if (!el) return;
-      el.addEventListener('click', function (e) {
-        var b = e.target;
-        while (b && b !== el && !(b.className && b.className.indexOf('schip') > -1)) b = b.parentNode;
-        if (!b || b === el || !b.getAttribute('data-v')) return;
-        var prev = el.querySelector('.schip.on');
-        if (prev) prev.className = 'schip';
-        b.className = 'schip on';
-        if (gid === 'bjDayChips') DAY = b.getAttribute('data-v');
-        else TOD = b.getAttribute('data-v');
-        renderRows();
-        var rs = document.getElementById('bjOpResults');
-        if (rs && rs.getAttribute('data-q') === '1') window.bjSearchGo();
-      });
-    });
+    var bjDateI = document.getElementById('bjDate');
+    var bjHourS = document.getElementById('bjHour');
+    if (bjDateI && !bjDateI.value) bjDateI.value = bjTodayStr();
+    function syncFilters() {
+      DAY = bjDateI ? bjDateI.value : '';
+      TOD = (bjHourS && bjHourS.value !== 'any') ? parseInt(bjHourS.value, 10) : 'any';
+      renderRows();
+      var rs = document.getElementById('bjOpResults');
+      if (rs && rs.getAttribute('data-q') === '1') window.bjSearchGo();
+    }
+    if (bjDateI) bjDateI.addEventListener('change', syncFilters);
+    if (bjHourS) bjHourS.addEventListener('change', syncFilters);
     window.bjSearchGo = function () {
       var f = fromI ? fromI.value.trim() : '';
       var t = toI ? toI.value.trim() : '';
@@ -191,7 +192,7 @@
       });
       hits.sort(function (x, y) {
         var a = parseTime(x[4]), c = parseTime(y[4]);
-        return DAY === 'tomorrow' ? a - c : ((a < minutesNow() - 30 ? a + 1440 : a) - minutesNow()) - ((c < minutesNow() - 30 ? c + 1440 : c) - minutesNow());
+        return dateIsToday() ? ((a < minutesNow() - 30 ? a + 1440 : a) - minutesNow()) - ((c < minutesNow() - 30 ? c + 1440 : c) - minutesNow()) : a - c;
       });
       var el = document.getElementById('bjOpResults');
       if (!el) return;
