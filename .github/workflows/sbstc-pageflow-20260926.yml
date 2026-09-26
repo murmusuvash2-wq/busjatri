@@ -1,0 +1,40 @@
+name: SBSTC page search opens main search
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sbstc-pageflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch (SBSTC page search redirects to main search page)
+        run: python3 scripts/apply_sbstc_pageflow.py
+
+      - name: Regenerate operator pages
+        run: python3 scripts/gen_operator_pages.py
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate
+        run: |
+          ! grep -q 'bjOpResults' js/op-board.js
+          ! grep -q 'BJ_SEAT_URL' js/op-board.js
+          ! grep -q 'BJ_SEAT_URL' bus-time-table/sbstc-buses.html
+          ! grep -q 'bjOpResults' bus-time-table/sbstc-buses.html
+          grep -q 'opsf20260926' bus-time-table/sbstc-buses.html
+          grep -q 'bjHour' bus-time-table/sbstc-buses.html
+          test "$(grep -c 'window.bjSearchGo = function' js/op-board.js)" = "1"
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts js bus-time-table sitemap.xml
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "SBSTC page: search opens main search page (no on-page results)"; git push; fi
