@@ -1,0 +1,31 @@
+name: SBSTC-only Check Seat in search
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sbstc-search-seat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch (remove redBus links, SBSTC-only Check Seat chip)
+        run: python3 scripts/apply_sbstc_search_seat.py
+
+      - name: Validate
+        run: |
+          grep -q 'sbstconline.co.in/reservation-home' js/stop-search-all.js
+          grep -q 'Check Seat' js/stop-search-all.js
+          grep -q 'bj20260926a' index.html
+          ! grep -q 'redbus.in' js/stop-search-all.js
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts js/stop-search-all.js index.html
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "Search results: remove redBus links; Check Seat chip only on SBSTC buses"; git push; fi
