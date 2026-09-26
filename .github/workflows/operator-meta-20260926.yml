@@ -1,0 +1,57 @@
+name: Operator meta bilingual 20260926
+on:
+  workflow_dispatch:
+
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble patch script from parts
+        run: |
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib
+          pdir = pathlib.Path('parts')
+          man = json.load(open(pdir / 'manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).write_bytes(raw)
+              print('assembled ' + out_path + ' (' + str(len(raw)) + ' bytes)')
+          PYEOF
+
+      - name: Patch generator and regenerate pages
+        run: |
+          python3 scripts/patch_meta_20260926.py
+          python3 scripts/gen_operator_pages.py
+
+      - name: Validate meta
+        run: |
+          python3 - <<'PYEOF'
+          import re, pathlib
+          pages = ['sbstc-buses', 'nbstc-buses', 'wbtc-buses', 'shyamoli-paribahan-buses', 'volvo-ac-buses']
+          for s in pages:
+              h = pathlib.Path('bus-time-table/' + s + '.html').read_text(encoding='utf-8')
+              assert 'og:image' in h and 'twitter:card' in h, s + ' missing og/twitter'
+              t = re.search(r'<title>(.*?)</title>', h).group(1)
+              assert chr(0x09b8) in t, s + ' title missing Bengali'
+              assert 'Bus Time Table' in t, s + ' title missing English'
+          print('meta validation OK for all 5 pages')
+          PYEOF
+
+      - name: Cleanup and commit
+        run: |
+          rm -rf parts
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "operator pages: bilingual meta EN+BN titles/descriptions + og/twitter cards"
+            git push
+          fi
