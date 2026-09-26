@@ -1,0 +1,43 @@
+name: SBSTC Check Seat CTA fix
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sbstc-checkseat:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Apply patch (remove static book links, add below-results Check Seat)
+        run: python3 scripts/apply_sbstc_checkseat.py
+
+      - name: Regenerate operator pages
+        run: python3 scripts/gen_operator_pages.py
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate
+        run: |
+          grep -q "window.BJ_SEAT_URL='https://sbstconline.co.in/reservation-home'" bus-time-table/sbstc-buses.html
+          grep -q 'Check Seat on SBSTC official site' js/op-board.js
+          grep -q 'opse20260926' bus-time-table/sbstc-buses.html
+          ! grep -q "class='alt'" bus-time-table/sbstc-buses.html
+          ! grep -q "class='alt'" bus-time-table/nbstc-buses.html
+          ! grep -q "class='alt'" bus-time-table/wbtc-buses.html
+          ! grep -q "class='alt'" bus-time-table/shyamoli-paribahan-buses.html
+          ! grep -q 'Book tickets on' bus-time-table/nbstc-buses.html
+          ! grep -q 'Book tickets on' bus-time-table/wbtc-buses.html
+          ! grep -q 'Book tickets on' bus-time-table/shyamoli-paribahan-buses.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts js bus-time-table sitemap.xml
+          if git diff --cached --quiet; then echo "no changes"; else git commit -m "SBSTC only: Check Seat CTA below search results; remove static book links"; git push; fi
