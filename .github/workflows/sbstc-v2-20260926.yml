@@ -1,0 +1,68 @@
+name: SBSTC page v2 20260926
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Assemble parts
+        run: |
+          python3 - <<'PYEOF'
+          import base64, gzip, hashlib, json, pathlib
+          pdir = pathlib.Path('parts')
+          man = json.load(open(pdir / 'manifest.json'))
+          for out_path, rec in man.items():
+              data = b''.join(base64.b64decode((pdir / p).read_text()) for p in rec['parts'])
+              raw = gzip.decompress(data)
+              assert hashlib.md5(raw).hexdigest() == rec['md5'], out_path + ' md5 mismatch'
+              pathlib.Path(out_path).parent.mkdir(parents=True, exist_ok=True)
+              pathlib.Path(out_path).write_bytes(raw)
+              print('assembled', out_path, len(raw), 'bytes')
+          PYEOF
+
+      - name: Regenerate operator pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: python3 scripts/gen_operator_pages.py
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import io
+          h = io.open('bus-time-table/sbstc-buses.html', encoding='utf-8').read()
+          for marker in ['bjLangToggle', 'window.bjStops', 'seo-page.js?v=spg20260926',
+                         'op-board.js?v=opc20260926', 'themeBtn', 'bjDayChips', 'bjTodChips',
+                         'Check Seat & Book on SBSTC official site',
+                         'G-L4E3D1YX9X', 'hero-badge', 'id="bjOpResults"', 'আগামীকাল']:
+              assert marker in h, 'missing: ' + marker
+          j = io.open('js/op-board.js', encoding='utf-8').read()
+          assert 'bnName(r.b[1])' in j and 'window.bjStops' in j
+          for f in ['nbstc-buses.html', 'wbtc-buses.html', 'shyamoli-paribahan-buses.html', 'volvo-ac-buses.html']:
+              o = io.open('bus-time-table/' + f, encoding='utf-8').read()
+              assert 'opc20260926' in o and 'G-L4E3D1YX9X' in o, f + ' missing buster/GA'
+              assert 'bjLangToggle' not in o and 'only-en' not in o, f + ' toggle leaked'
+          print('validation OK')
+          EOF
+
+      - name: Cleanup and commit
+        run: |
+          rm -rf parts
+          git config user.name "busjatri-bot"
+          git config user.email "action@busjatri.in"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "SBSTC page v2: EN/BN full toggle, Bengali stop names, dark mode, on-page search with time filters, Check Seat CTA"
+            git push
+          fi

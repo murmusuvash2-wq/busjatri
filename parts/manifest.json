@@ -1,0 +1,26 @@
+{
+ "scripts/gen_operator_pages.py": {
+  "parts": [
+   "gp.1.b64",
+   "gp.2.b64",
+   "gp.3.b64",
+   "gp.4.b64",
+   "gp.5.b64",
+   "gp.6.b64",
+   "gp.7.b64",
+   "gp.8.b64",
+   "gp.9.b64",
+   "gp.10.b64"
+  ],
+  "md5": "f7e5e5026a06ae467bd51563fd45317c"
+ },
+ "js/op-board.js": {
+  "parts": [
+   "ob.1.b64",
+   "ob.2.b64",
+   "ob.3.b64",
+   "ob.4.b64"
+  ],
+  "md5": "16fa47e3708a657ccd92d95b44e80fe7"
+ }
+}
