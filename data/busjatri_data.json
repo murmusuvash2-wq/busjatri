@@ -413471,6 +413471,1128 @@
    "time_source": "wbbus.in",
    "total_stoppages": 2,
    "detail_url": "https://wbbus.in/bus/sankat-mochan-wb29c3063-mecheda-durgapur-station-82"
+  },
+  {
+   "id": "nbstc-blg-kolkata-300am",
+   "bus_name": "NBSTC Balurghat-Kolkata",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Kolkata",
+   "departure_time": "3:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "3:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-kolkata-400am",
+   "bus_name": "NBSTC Balurghat-Kolkata",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Kolkata",
+   "departure_time": "4:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "4:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-kolkata-440am",
+   "bus_name": "NBSTC Balurghat-Kolkata",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Kolkata",
+   "departure_time": "4:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "4:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-kolkata-volvo-600am",
+   "bus_name": "NBSTC Balurghat-Kolkata Volvo AC (via Digha)",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government - AC",
+   "origin": "Balurghat",
+   "destination": "Kolkata",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Digha - Kolkata",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 3,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-siliguri-500am",
+   "bus_name": "NBSTC Balurghat-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Siliguri",
+   "departure_time": "5:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "5:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-siliguri-800am",
+   "bus_name": "NBSTC Balurghat-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Siliguri",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-siliguri-850am",
+   "bus_name": "NBSTC Balurghat-Siliguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Siliguri",
+   "departure_time": "8:50 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "8:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-510am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "5:10 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "5:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-800am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-840am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "8:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "8:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-900am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-1000am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "10:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "10:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-1010am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "10:10 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "10:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-1040am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "10:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "10:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-1100am",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "11:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "11:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-1210pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "12:10 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "12:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-130pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "1:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "1:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-320pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "3:20 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "3:20 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-340pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "3:40 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "3:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-400pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-410pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "4:10 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "4:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-malda-440pm",
+   "bus_name": "NBSTC Balurghat-Malda",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Malda",
+   "departure_time": "4:40 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "4:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-coochbehar-520am",
+   "bus_name": "NBSTC Balurghat-Cooch Behar",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Cooch Behar",
+   "departure_time": "5:20 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Cooch Behar",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "5:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Cooch Behar",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-raiganj-810am",
+   "bus_name": "NBSTC Balurghat-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Raiganj",
+   "departure_time": "8:10 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "8:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-raiganj-930am",
+   "bus_name": "NBSTC Balurghat-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Raiganj",
+   "departure_time": "9:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-raiganj-1030am",
+   "bus_name": "NBSTC Balurghat-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Raiganj",
+   "departure_time": "10:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "10:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-raiganj-1110am",
+   "bus_name": "NBSTC Balurghat-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Raiganj",
+   "departure_time": "11:10 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "11:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-raiganj-1200pm",
+   "bus_name": "NBSTC Balurghat-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Raiganj",
+   "departure_time": "12:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "12:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-raiganj-140pm",
+   "bus_name": "NBSTC Balurghat-Raiganj",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Raiganj",
+   "departure_time": "1:40 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Raiganj",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "1:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-ranaghat-600am",
+   "bus_name": "NBSTC Balurghat-Ranaghat",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Ranaghat",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Ranaghat",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Ranaghat",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-farakka-1240pm",
+   "bus_name": "NBSTC Balurghat-Farakka",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Farakka",
+   "departure_time": "12:40 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Farakka",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "12:40 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-farakka-1250pm",
+   "bus_name": "NBSTC Balurghat-Farakka",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Farakka",
+   "departure_time": "12:50 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Farakka",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "12:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-farakka-100pm",
+   "bus_name": "NBSTC Balurghat-Farakka",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Farakka",
+   "departure_time": "1:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Farakka",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "1:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-farakka-150pm",
+   "bus_name": "NBSTC Balurghat-Farakka",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Farakka",
+   "departure_time": "1:50 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Farakka",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "1:50 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-farakka-200pm",
+   "bus_name": "NBSTC Balurghat-Farakka",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Farakka",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Farakka",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
+  },
+  {
+   "id": "nbstc-blg-jalpaiguri-900am",
+   "bus_name": "NBSTC Balurghat-Jalpaiguri",
+   "reg_no": "",
+   "operator": "NBSTC",
+   "bus_type": "Government",
+   "origin": "Balurghat",
+   "destination": "Jalpaiguri",
+   "departure_time": "9:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "Balurghat",
+   "route": "Balurghat - Jalpaiguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Balurghat",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Jalpaiguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "NBSTC Balurghat terminus timetable (user-verified photo)",
+   "total_stoppages": 2,
+   "detail_url": ""
   }
  ],
  "routes": {
