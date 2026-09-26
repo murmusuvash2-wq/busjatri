@@ -1131,7 +1131,7 @@ def generate_stand_page_v2(stand):
         all_section = '<div class="mgrid" id="minis"></div>'
 
     note = L("Only buses <b>starting from {}</b> are shown here. For buses that pass through, see the route pages. More services may exist — ask at the stand.".format(g.esc(disp)),
-             "এখানে শুধু <b>{}</b> থেকে ছাড়া বাস দেখানো হয়েছে। মাঝপথের বাসের জন্য রুট পেজ দেখুন। আরও বাস থাকতে পারে — স্ট্যান্ডে জেনে নিন।".format(g.esc(v2.bnplace(stand))))
+             "এখানে শুধু সেই বাসগুলো দেখানো হয়েছে যেগুলো <b>{}</b> থেকে ছাড়ে। মাঝপথের বাসের জন্য রুট পেজ দেখুন। আরও বাস থাকতে পারে — স্ট্যান্ডে জেনে নিন।".format(g.esc(v2.bnplace(stand))))
 
     # ---- FAQ (language buttons switch EN/BN blocks) ----
     en, bn = faq_pairs_stand(stand, buses, dest_groups)

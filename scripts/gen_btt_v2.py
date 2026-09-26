@@ -449,7 +449,7 @@ def generate_btt_page():
     faq_html += "".join('<details class="faq only-bn"><summary>📌 {}</summary><p>{}</p></details>'.format(q, a) for q, a in bn)
 
     note = L("Every stand page shows buses <b>starting</b> from that stand. For buses that pass through a place, open the route page. More services may exist — ask at the stand.",
-             "প্রতিটি স্ট্যান্ড পেজে শুধু সেই স্ট্যান্ড থেকে <b>ছাড়া</b> বাস দেখানো হয়। মাঝপথের বাসের জন্য রুট পেজ খুলুন। আরও বাস থাকতে পারে — স্ট্যান্ডে জেনে নিন।")
+             "প্রতিটি স্ট্যান্ড পেজে শুধু সেই বাস দেখানো হয় যেগুলো সেই স্ট্যান্ড থেকে ছাড়ে। মাঝপথের বাসের জন্য রুট পেজ খুলুন। আরও বাস থাকতে পারে — স্ট্যান্ডে জেনে নিন।")
 
     header_html = """<header class="header">
   <div class="header-inner">
