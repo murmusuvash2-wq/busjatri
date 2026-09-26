@@ -1,0 +1,306 @@
+name: Stand guides batch 1 20260926
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  guides:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write and run guide patch (Bishnupur, Jhargram, Bolpur)
+        run: |
+          python3 - <<'B1EOF'
+          import ast, io, subprocess, sys
+
+          def esc(s):
+              out = ['"']
+              for ch in s:
+                  o = ord(ch)
+                  if ch == '"': out.append('\\"')
+                  elif ch == '\\': out.append('\\\\')
+                  elif o < 128: out.append(ch)
+                  elif o <= 0xFFFF: out.append('\\u%04x' % o)
+                  else: out.append('\\U%08x' % o)
+              out.append('"')
+              return ''.join(out)
+
+          STANDS = [
+           {
+            "slug": "bishnupur",
+            "intro": ("Around Bishnupur", "বিষ্ণুপুরের আশপাশ"),
+            "note_en": "🚉 <b>Rail:</b> Bishnupur station (Howrah–Bankura line) · 🛣️ <b>Road:</b> ~132 km from Kolkata — via Arambagh SH or NH-14 via Bankura.",
+            "note_bn": "🚉 <b>রেল:</b> বিষ্ণুপুর স্টেশন (হাওড়া–বাঁকুড়া লাইন) · 🛣️ <b>রাস্তা:</b> কলকাতা থেকে ~132 কিমি — আরামবাগ হয়ে বা বাঁকুড়া হয়ে।",
+            "cards": [
+             {"icon":"🛕","name":"Rasmancha","bn":"রাসমঞ্চ",
+              "desc_en":"Bishnupur's oldest brick temple (1600 AD, built by Hambir Malla Dev) — a one-of-its-kind pyramidal pavilion with three circumambulatory galleries. ASI combined ticket ₹25.",
+              "bus_en":"🚌 In town — walk or cycle-rickshaw from the stand",
+              "maps":"Rasmancha+Bishnupur",
+              "why_en":"unique pyramidal architecture, terracotta lotus arches, ASI monument",
+              "when_en":"6 AM–6 PM; early morning or late-afternoon light",
+              "desc_bn":"বিষ্ণুপুরের প্রাচীনতম ইটের মন্দির (১৬০০ খ্রি., রাজা হাম্বীর মল্ল দেব) — বাংলার একমাত্র পিরামিড-ছাউনির মণ্ডপ, তিনটি প্রদক্ষিণ-গ্যালারি। এএসআই কম্বাইন্ড টিকিট ₹২৫।",
+              "bus_bn":"🚌 শহরের মধ্যেই — স্ট্যান্ড থেকে হেঁটে বা সাইকেল-রিকশা",
+              "why_bn":"অনন্য পিরামিড স্থাপত্য, পোড়ামাটির পদ্ম-কারুকাজ, এএসআই-সংরক্ষিত স্মৃতিস্তম্ভ",
+              "when_bn":"সকাল ৬টা–সন্ধ্যা ৬টা; ভোরের বা বিকেলের আলোয় সবচেয়ে সুন্দর",
+              "stay":"hotels+in+Bishnupur"},
+             {"icon":"🛕","name":"Jor-Bangla & Shyam Rai Temples","bn":"জোরবাংলা ও শ্যামরাই মন্দির",
+              "desc_en":"Two masterpieces a short walk apart — Jor-Bangla (1655) with its double thatched-hut roof, and the pancha-ratna Shyam Rai with the famous Raschakra panel.",
+              "bus_en":"🚌 Walkable from Rasmancha — the old temple cluster is compact, cover on foot",
+              "maps":"Jor+Bangla+temple+Bishnupur",
+              "why_en":"finest terracotta panels — Mahabharata & Ramayana scenes on the walls",
+              "when_en":"October–March, mid-morning",
+              "desc_bn":"কাছাকাছি দুই মাস্টারপিস — দো-চালা ছাদের জোরবাংলা (১৬৫৫), আর পঞ্চরত্ন শ্যামরাইয়ের বিখ্যাত রাসচক্র প্যানেল।",
+              "bus_bn":"🚌 রাসমঞ্চ থেকে হেঁটেই যাওয়া যায় — পুরোনো মন্দির-চৌহদ্দি পায়ে ঘোরাই ভালো",
+              "why_bn":"সেরা পোড়ামাটির প্যানেল — দেয়ালে মহাভারত ও রামায়ণের দৃশ্য",
+              "when_bn":"অক্টোবর–মার্চ, সকাল দশটা নাগাদ",
+              "stay":"hotels+in+Bishnupur"},
+             {"icon":"🛕","name":"Madan Mohan Temple","bn":"মদনমোহন মন্দির",
+              "desc_en":"Ek-ratna temple of 1694 and still an active place of worship — the family deity of the Malla kings.",
+              "bus_en":"🚌 In town — cycle-rickshaw from the stand",
+              "maps":"Madan+Mohan+temple+Bishnupur",
+              "why_en":"living temple, late-Malla architecture, Bishnupur Mela (Dec 23–27) happens around it",
+              "when_en":"darshan morning & evening; December for the Mela",
+              "desc_bn":"১৬৯৪ সালের একরত্ন মন্দির, আজও সচল — মল্ল রাজাদের কুলদেবতার মন্দির।",
+              "bus_bn":"🚌 শহরের মধ্যেই — স্ট্যান্ড থেকে সাইকেল-রিকশা",
+              "why_bn":"জীবন্ত মন্দির, মল্ল-আমলের শেষ স্থাপত্য, ডিসেম্বরে বিষ্ণুপুর মেলা এখানেই বসে",
+              "when_bn":"সকাল-সন্ধ্যায় দর্শন; ডিসেম্বরে মেলার সময়",
+              "stay":"hotels+in+Bishnupur"},
+             {"icon":"🏺","name":"Panchmura","bn":"পাঁচমুড়া",
+              "desc_en":"The terracotta craft village, home of the famous Bankura horse — watch artisans shape the clay at the wheel.",
+              "bus_en":"🚌 <b>DEY TRAVELS</b> (Bankura route) 6:35 AM & 1:10 PM — get off at Panchmura (30 km, ~45 min); shared trekkers also run",
+              "maps":"Panchmura+terracotta+village",
+              "why_en":"Bankura-horse workshops, terracotta souvenirs straight from artisans",
+              "when_en":"weekday mornings — workshops running",
+              "desc_bn":"পোড়ামাটির কারিগরি গ্রাম — বিখ্যাত বাঁকুড়ার ঘোড়া যেখানে গড়ে ওঠে।",
+              "bus_bn":"🚌 <b>DEY TRAVELS</b> (বাঁকুড়া রুট) 6:35 AM ও 1:10 PM — পাঁচমুড়ায় নামুন (30 কিমি, ~45 মিনিট); শেয়ারড ট্রেকারও চলে",
+              "why_bn":"চাকে ঘোড়া গড়তে দেখুন, কারিগরের হাত থেকেই স্যুভেনির",
+              "when_bn":"কর্মদিবসের সকালে — কাজ চলতে থাকে",
+              "stay":"hotels+in+Bishnupur"},
+            ],
+           },
+           {
+            "slug": "jhargram",
+            "intro": ("Around Jhargram", "ঝাড়গ্রামের আশপাশ"),
+            "note_en": "🚉 <b>Rail:</b> Jhargram station (Howrah–Mumbai main line) · 🛣️ <b>Road:</b> NH-6 Mumbai Highway, ~178 km from Kolkata.",
+            "note_bn": "🚉 <b>রেল:</b> ঝাড়গ্রাম স্টেশন (হাওড়া–মুম্বাই প্রধান লাইন) · 🛣️ <b>রাস্তা:</b> এনএইচ-৬, কলকাতা থেকে ~178 কিমি।",
+            "cards": [
+             {"icon":"🏰","name":"Jhargram Raj Palace","bn":"ঝাড়গ্রাম রাজবাড়ি",
+              "desc_en":"Indo-Saracenic palace (1922–31) of the Malla Dev royal family, set in lawns and gardens — about 10 ground-floor rooms run as a heritage homestay.",
+              "bus_en":"🚌 In town — short walk or toto from the stand",
+              "maps":"Jhargram+Raj+Palace",
+              "why_en":"400-year royal history, palace gardens, Bengali-film shooting location",
+              "when_en":"October–March; book ahead for the heritage stay",
+              "desc_bn":"মল্লদেব রাজপরিবারের ইন্দো-সারাসেনিক প্রাসাদ (১৯২২–৩১), লন-বাগান ঘেরা — নিচতলার প্রায় ১০টি ঘরে হেরিটেজ স্টে।",
+              "bus_bn":"🚌 শহরের মধ্যেই — স্ট্যান্ড থেকে টোটো",
+              "why_bn":"৪০০ বছরের রাজকীয় ইতিহাস, প্রাসাদ-বাগান, বাংলা ছবির শুটিং লোকেশন",
+              "when_bn":"অক্টোবর–মার্চ; হেরিটেজ থাকার জন্য আগে বুক করুন",
+              "stay_extra_en":"Heritage rooms inside the palace — {LINK}",
+              "stay_link_en":"Jhargram+Raj+Palace+heritage+stay",
+              "stay_text_en":"stay in the Rajbari",
+              "stay_extra_bn":"রাজবাড়ির ভেতরেই হেরিটেজ ঘর — {LINK}",
+              "stay_text_bn":"রাজবাড়িতেই থাকুন"},
+             {"icon":"🦌","name":"Junglemahal Zoological Park","bn":"জঙ্গলমহল চিড়িয়াখানা",
+              "desc_en":"A deer park since 1980 inside a natural sal-forest patch — spotted deer, peacocks, crocodiles and monkeys. Lovely with kids.",
+              "bus_en":"🚌 ~3 km from the stand — toto/auto",
+              "maps":"Junglemahal+Zoological+Park+Jhargram",
+              "why_en":"lateritic-zone wildlife, shaded forest walk",
+              "when_en":"morning hours, October–March",
+              "desc_bn":"১৯৮০ সাল থেকে হরিণ-পার্ক, প্রাকৃতিক শালবনের মধ্যে — চিতল, ময়ূর, কুমির, বানর। বাচ্চাদের সঙ্গে দারুণ।",
+              "bus_bn":"🚌 স্ট্যান্ড থেকে ~3 কিমি — টোটো/অটো",
+              "why_bn":"ল্যাটেরাইট অঞ্চলের বন্যপ্রাণী, ছায়াময় বনের হাঁটা",
+              "when_bn":"সকালের ঘণ্টাগুলো, অক্টোবর–মার্চ",
+              "stay":"hotels+in+Jhargram"},
+             {"icon":"🛕","name":"Chilkigarh & Kanakdurga Temple","bn":"চিলকিগড় ও কনকদুর্গা মন্দির",
+              "desc_en":"A 500-year-old Kanakdurga temple deep in the forest on the Dulung river, with the old Chilkigarh Rajbari across the water.",
+              "bus_en":"🚌 12–14 km — toto or car from Jhargram via the Jamboni forest road",
+              "maps":"Kanak+Durga+Temple+Chilkigarh",
+              "why_en":"forest trail to the temple, riverside, herbal forest (bio-heritage site)",
+              "when_en":"morning (temple open for puja); monsoon greenery is beautiful",
+              "desc_bn":"দুলঙ নদীর ধারে গভীর জঙ্গলে ৫০০ বছরের পুরোনো কনকদুর্গা মন্দির, নদীর ওপারে পুরোনো চিলকিগড় রাজবাড়ি।",
+              "bus_bn":"🚌 ১২–১৪ কিমি — ঝাড়গ্রাম থেকে টোটো বা গাড়ি, জামবনি জঙ্গলের রাস্তা ধরে",
+              "why_bn":"মন্দিরে যাওয়ার বন-পথ, নদীর ধার, ভেষজ বন (বায়ো-হেরিটেজ সাইট)",
+              "when_bn":"সকালে (পুজোর সময়); বর্ষায় সবুজ অপূর্ব",
+              "stay":"hotels+in+Jhargram"},
+            ],
+           },
+           {
+            "slug": "bolpur",
+            "intro": ("Around Bolpur–Shantiniketan", "বোলপুর–শান্তিনিকেতনের আশপাশ"),
+            "note_en": "🚉 <b>Rail:</b> Bolpur Shantiniketan station (Howrah line) · 🛣️ <b>Road:</b> ~160 km from Kolkata via Burdwan.",
+            "note_bn": "🚉 <b>রেল:</b> বোলপুর শান্তিনিকেতন স্টেশন (হাওড়া লাইন) · 🛣️ <b>রাস্তা:</b> বর্ধমান হয়ে কলকাতা থেকে ~160 কিমি।",
+            "cards": [
+             {"icon":"🏛️","name":"Visva-Bharati & Uttarayan","bn":"বিশ্বভারতী ও উত্তরায়ণ",
+              "desc_en":"Tagore's university (UNESCO World Heritage, 2023) — the Uttarayan complex with the poet's five homes, Rabindra Bhavana museum and Chhatimtala. Uttarayan entry ₹40.",
+              "bus_en":"🚌 ~2 km from the stand — toto or cycle-rickshaw",
+              "maps":"Uttarayan+complex+Shantiniketan",
+              "why_en":"open-air classes under trees, Kanch Mandir of Belgian glass, Tagore memorabilia",
+              "when_en":"October–March mornings; Poush Mela (late Dec) & Basanta Utsav are special",
+              "desc_bn":"রবীন্দ্রনাথের বিশ্ববিদ্যালয় (ইউনেস্কো ওয়ার্ল্ড হেরিটেজ, ২০২৩) — কবির পাঁচটি বাড়ির উত্তরায়ণ চৌহদ্দি, রবীন্দ্র ভবন জাদুঘর আর ছটিমতলা। উত্তরায়ণ প্রবেশ ₹৪০।",
+              "bus_bn":"🚌 স্ট্যান্ড থেকে ~2 কিমি — টোটো/সাইকেল-রিকশা",
+              "why_bn":"গাছতলায় খোলা ক্লাস, বেলজিয়ান কাচের কাঞ্চমন্দির, কবির স্মৃতিসামগ্রী",
+              "when_bn":"অক্টোবর–মার্চ সকালে; পৌষমেলা (ডিসেম্বর শেষ) ও বসন্ত উৎসব বিশেষ",
+              "stay":"hotels+in+Bolpur+Shantiniketan"},
+             {"icon":"🎶","name":"Sonajhuri Haat","bn":"শনিঝুড়ির হাট",
+              "desc_en":"The Saturday-only haat in the khoai forest — Baul singers, Santhal dancers, handicrafts and street food under the sonajhuri trees.",
+              "bus_en":"🚌 ~5 km — toto/rickshaw from the stand; Saturday afternoon",
+              "maps":"Sonajhuri+haat+Bolpur",
+              "why_en":"baul music, kantha & batik shopping, khoai red-soil landscape",
+              "when_en":"Saturdays 1–6 PM; 2–4 PM is when most stalls are open",
+              "desc_bn":"শুধু শনিবার বসে খোয়াই বনের হাট — বাউল শিল্পী, সাঁওতাল নাচ, হস্তশিল্প আর খাবার।",
+              "bus_bn":"🚌 ~5 কিমি — টোটো/রিকশা; শনিবার দুপুরে",
+              "why_bn":"বাউল গান, কাঁথা-বাটিক কেনাকাটা, খোয়াইয়ের লাল মাটির দৃশ্য",
+              "when_bn":"শনিবার ১–৬টা; ২–৪টায় দোকান সবচেয়ে ভরা থাকে",
+              "stay":"hotels+in+Bolpur+Shantiniketan"},
+             {"icon":"🦌","name":"Ballavpur Wildlife Sanctuary","bn":"বল্লভপুর হরিণ অভয়ারণ্য",
+              "desc_en":"Spotted-deer sanctuary beside the Sonajhuri forest — a quiet walk, salt-pit sightings and migratory birds in winter.",
+              "bus_en":"🚌 Next to Sonajhuri — cover both in one toto trip",
+              "maps":"Ballavpur+Wildlife+Sanctuary+Bolpur",
+              "why_en":"deer herds, birdwatching, morning calm",
+              "when_en":"10 AM–5 PM; early morning is best",
+              "desc_bn":"শনিঝুড়ি বনের পাশে চিতল হরিণের অভয়ারণ্য — শান্ত হাঁটা, লবণ-কুণ্ডে হরিণের পাল, শীতে পরিযায়ী পাখি।",
+              "bus_bn":"🚌 শনিঝুড়ির পাশেই — এক টোটোতে দুটোই ঘুরে নিন",
+              "why_bn":"হরিণের পাল, পাখি দেখা, ভোরের নিস্তব্ধতা",
+              "when_bn":"সকাল ১০টা–৫টা; ভোরে যেতেই ভালো",
+              "stay":"hotels+in+Bolpur+Shantiniketan"},
+            ],
+           },
+          ]
+
+          def en_block(st):
+              lines = []
+              lines.append("    %s: {" % esc(st["slug"]))
+              lines.append("        \"intro\": (%s, %s)," % (esc(st["intro"][0]), esc(st["intro"][1])))
+              lines.append("        \"note\": %s," % esc(st["note_en"]))
+              lines.append("        \"cards\": [")
+              for c in st["cards"]:
+                  parts = ["\"icon\": %s" % esc(c["icon"]), "\"name\": %s" % esc(c["name"]), "\"bn\": %s" % esc(c["bn"])]
+                  lines.append("            {%s," % ", ".join(parts))
+                  lines.append("             \"desc\": %s," % esc(c["desc_en"]))
+                  lines.append("             \"bus\": %s," % esc(c["bus_en"]))
+                  lines.append("             \"maps\": %s," % esc(c["maps"]))
+                  lines.append("             \"why\": %s," % esc(c["why_en"]))
+                  lines.append("             \"when\": %s," % esc(c["when_en"]))
+                  if "stay" in c:
+                      lines.append("             \"stay\": %s}," % esc(c["stay"]))
+                  else:
+                      lines.append("             \"stay\": None, \"stay_extra\": %s, \"stay_link\": %s, \"stay_text\": %s}," % (
+                          esc(c["stay_extra_en"]), esc(c["stay_link_en"]), esc(c["stay_text_en"])))
+              lines.append("        ],")
+              lines.append("    },")
+              return "\n".join(lines)
+
+          def bn_block(st):
+              lines = []
+              lines.append("    %s: {" % esc(st["slug"]))
+              lines.append("        \"note\": %s," % esc(st["note_bn"]))
+              lines.append("        \"cards\": [")
+              for c in st["cards"]:
+                  parts = ["\"desc_bn\": %s" % esc(c["desc_bn"]), "\"bus_bn\": %s" % esc(c["bus_bn"]),
+                           "\"why_bn\": %s" % esc(c["why_bn"]), "\"when_bn\": %s" % esc(c["when_bn"])]
+                  if "stay_extra_bn" in c:
+                      parts.append("\"stay_extra_bn\": %s" % esc(c["stay_extra_bn"]))
+                      parts.append("\"stay_text_bn\": %s" % esc(c["stay_text_bn"]))
+                  lines.append("            {%s}," % ", ".join(parts))
+              lines.append("        ],")
+              lines.append("    },")
+              return "\n".join(lines)
+
+          EN = "\n".join(en_block(s) for s in STANDS)
+          BN = "\n".join(bn_block(s) for s in STANDS)
+
+          SCRIPT = '''
+          #!/usr/bin/env python3
+          """Add travel guides for Bishnupur, Jhargram and Bolpur stand pages.
+
+          Batch 1 of stand-page travel guides (Murmu-approved 2026-09-26). Adds
+          three entries to GUIDES and three matching entries to GUIDES_BN in
+          scripts/gen_stand_v2.py. Facts verified against WB Tourism and the
+          Bankura/Jhargram district administration sites; bus lines are from
+          the BusJatri dataset. Idempotent: re-running does nothing if the
+          slug 'jhargram' is already present in GUIDES.
+          """
+          import io
+
+          PATH = "scripts/gen_stand_v2.py"
+
+          EN_BLOCK = r"""@@EN@@"""
+
+          BN_BLOCK = r"""@@BN@@"""
+
+          A1 = "\\n}\\n\\n\\n\\nGUIDES_BN = {"
+          A2 = "\\n}\\n\\n\\ndef _merge_guide_bn():"
+
+
+          def main():
+              with io.open(PATH, encoding="utf-8") as f:
+                  src = f.read()
+              if '"jhargram": {' in src:
+                  print("already patched - nothing to do")
+                  return
+              assert src.count(A1) == 1, "GUIDES end anchor not found"
+              assert src.count(A2) == 1, "GUIDES_BN end anchor not found"
+              src = src.replace(A1, "\\n" + EN_BLOCK.rstrip() + "\\n}\\n\\n\\n\\nGUIDES_BN = {")
+              src = src.replace(A2, "\\n" + BN_BLOCK.rstrip() + "\\n}\\n\\n\\ndef _merge_guide_bn():")
+              with io.open(PATH, "w", encoding="utf-8") as f:
+                  f.write(src)
+              print("patched gen_stand_v2.py: +bishnupur, +jhargram, +bolpur guides")
+
+
+          if __name__ == "__main__":
+              main()
+          '''.replace("@@EN@@", EN).replace("@@BN@@", BN)
+          # the SCRIPT template above is indented for the heredoc; dedent it now
+          import textwrap
+          SCRIPT = textwrap.dedent(SCRIPT)
+          ast.parse(SCRIPT)
+          assert all(ord(ch) < 128 for ch in SCRIPT), "patch script must be pure ascii"
+
+          with io.open("scripts/apply_stand_guides_batch1.py", "w", encoding="utf-8") as f:
+              f.write(SCRIPT)
+          print("wrote scripts/apply_stand_guides_batch1.py:", len(SCRIPT), "bytes")
+          r = subprocess.run([sys.executable, "scripts/apply_stand_guides_batch1.py"])
+          sys.exit(r.returncode)
+          B1EOF
+
+      - name: Validate generator
+        run: |
+          python3 -c "import ast; ast.parse(open('scripts/gen_stand_v2.py', encoding='utf-8').read())"
+          grep -q '"jhargram": {' scripts/gen_stand_v2.py
+          grep -q '"bolpur": {' scripts/gen_stand_v2.py
+          echo "generator OK"
+
+      - name: Regenerate 3 stand pages
+        run: python3 scripts/gen_stand_v2.py --stands "Bishnupur,Jhargram,Bolpur"
+
+      - name: Re-add GA4
+        run: python3 scripts/add_ga4.py
+
+      - name: Validate pages
+        run: |
+          test "$(grep -c '<div class="tg-card">' bus-time-table/buses-from-bishnupur.html)" -ge 4
+          test "$(grep -c '<div class="tg-card">' bus-time-table/buses-from-jhargram.html)" -ge 3
+          test "$(grep -c '<div class="tg-card">' bus-time-table/buses-from-bolpur.html)" -ge 3
+          grep -q 'G-L4E3D1YX9X' bus-time-table/buses-from-bishnupur.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/buses-from-jhargram.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/buses-from-bolpur.html
+          grep -q 'DEY TRAVELS' bus-time-table/buses-from-bishnupur.html
+          grep -q 'ভ্রমণ গাইড' bus-time-table/buses-from-jhargram.html
+          grep -q 'ভ্রমণ গাইড' bus-time-table/buses-from-bolpur.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts bus-time-table
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Stand guides batch 1: travel guides for Bishnupur, Jhargram, Bolpur (EN+BN)"
+            git push
+          fi
