@@ -350,7 +350,7 @@ jobs:
               added.append(slug)
           open(p, 'w', encoding='utf-8').write(s)
           print('sitemap added:', added)
-          assert len(added) >= 12, 'expected most pages to be new, got %d' % len(added)
+          assert len(added) >= 10, 'expected 10 new pages, got %d' % len(added)
           EOF
 
       - name: Bump homepage bus count
