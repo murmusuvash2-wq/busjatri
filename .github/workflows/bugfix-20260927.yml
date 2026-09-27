@@ -1,0 +1,92 @@
+name: Fix popular routes chips + op search filter 20260927
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fixboth:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch ux-fixes.js (chips), app.js (op param), index.html (version bump)
+        run: |
+          python3 - <<'FIXEOF'
+          import io
+
+          def patch(path, pairs):
+              with io.open(path, encoding="utf-8") as f:
+                  src = f.read()
+              for old, new in pairs:
+                  n = src.count(old)
+                  assert n == 1, "%s: found %d occurrences of %r" % (path, n, old[:60])
+                  src = src.replace(old, new)
+              with io.open(path, "w", encoding="utf-8") as f:
+                  f.write(src)
+              print("patched", path)
+
+          # Bug 1: ux-fixes.js V2 computePopularRoutes ignored TOP_ROUTES
+          # (ready-made 10 routes from home-index.json), so chips rendered
+          # empty because BUSES is not loaded at renderHome time.
+          patch("js/ux-fixes.js", [(
+              "computePopularRoutes = function () {\n      var pair = {};",
+              "computePopularRoutes = function () {\n      if (typeof TOP_ROUTES !== 'undefined' && TOP_ROUTES && TOP_ROUTES.length) return TOP_ROUTES;\n      var pair = {};"
+          )])
+
+          # Bug 2: app.js renderSearch never handled the op= parameter used by
+          # operator page CTAs (#/search?op=sbstc showed all 4358 buses).
+          patch("js/app.js", [
+              (
+               "  const stop = (params.get('stop') || '').toLowerCase().trim();",
+               "  const stop = (params.get('stop') || '').toLowerCase().trim();\n  const op = (params.get('op') || '').toLowerCase().trim();\n  const opq = op ? op.replace(/-/g, ' ') : '';"
+              ),
+              (
+               "  let results = Object.values(BUSES);\n\n  if (from && to) {",
+               "  let results = Object.values(BUSES);\n  if (opq) {\n    var opm = opq === 'volvo ac' ? 'volvo' : opq;\n    results = results.filter(b =>\n      (b.bus_name || '').toLowerCase().includes(opm) ||\n      (b.bus_type || '').toLowerCase().includes(opm) ||\n      (b.id || '').toLowerCase().includes(op));\n  }\n\n  if (from && to) {"
+              ),
+              (
+               "    <p style=\"font-size:12px;color:var(--ink-dim);margin:2px 0 4px\">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>",
+               "    ${opq ? `<p style=\"font-size:13.5px;font-weight:600;color:var(--amber);margin:14px 0 4px\">${esc(opq.toUpperCase())} buses (operator filter)</p>` : ''}\n    <p style=\"font-size:12px;color:var(--ink-dim);margin:2px 0 4px\">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>"
+              ),
+          ])
+
+          # Version bumps so the service worker (cache-first for /js/) picks
+          # up the new files - without this users keep the cached old JS.
+          patch("index.html", [
+              ("js/app.js?v=brand20260925g", "js/app.js?v=brand20260927a"),
+              ("js/ux-fixes.js?v=rpt20260926b", "js/ux-fixes.js?v=rpt20260927a"),
+          ])
+          print("ALL PATCHES APPLIED")
+          FIXEOF
+
+      - name: Validate
+        run: |
+          node --check js/app.js
+          node --check js/ux-fixes.js
+          grep -q "TOP_ROUTES && TOP_ROUTES.length" js/ux-fixes.js
+          grep -q "params.get('op')" js/app.js
+          grep -q "brand20260927a" index.html
+          grep -q "rpt20260927a" index.html
+          ! grep -q "brand20260925g" index.html
+          ! grep -q "rpt20260926b" index.html
+          grep -q "route-chips" js/app.js
+          python3 -c "from html.parser import HTMLParser
+          HTMLParser().feed(open('index.html', encoding='utf-8').read())
+          print('html parse ok')"
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add js/app.js js/ux-fixes.js index.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Fix: popular routes chips never rendered (restore TOP_ROUTES fast path); add op= operator filter to search (SBSTC/WBTC/NBSTC/Shyamoli/Volvo CTAs)"
+            git push
+          fi
