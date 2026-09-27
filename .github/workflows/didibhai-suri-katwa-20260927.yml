@@ -1,0 +1,232 @@
+name: Add Didibhai Bus Service Suri-Katwa 20260927
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write apply script
+        run: |
+          cat > scripts/apply_didibhai_suri_katwa.py <<'APPLYEOF'
+          #!/usr/bin/env python3
+          """Add Didibhai Bus Service (Suri <-> Katwa), from a Facebook group
+          report received 2026-09-27 announcing the route's inauguration.
+
+          Route: Suri -> Kirnahar -> Katwa via Purundur, Ahmedpur, Chouhatta, Labhpur,
+          Laghata, Akupurchati, Kirnahar, Daskalgram, Futishanko, Kandra, Komorpur,
+          Nirol, Pachundi, Ketugram.
+
+          The post gives one morning service Suri -> Katwa (6:10 AM to 9:40 AM) and
+          one afternoon return Katwa -> Suri (3:10 PM to 6:30 PM), both added as
+          separate searchable listings. Reg no WB 53 B 8677. The post notes this is
+          the first bus of the morning from Suri and the last direct bus back from
+          Katwa. Stops without times in the report carry no times.
+
+          Only appends to data/community_buses.json; the merge into site data is
+          done by scripts/add_community_buses.py --write (run separately).
+          Idempotent: re-running does nothing if the entries are already present.
+          """
+          import json
+
+          SRC = "data/community_buses.json"
+          REG = "WB53B8677"
+
+          # (name, up=Suri->Katwa, down=Katwa->Suri)
+          STOPS_SD = [
+              ("Suri", "6:10 AM", "6:30 PM"),
+              ("Purundur", "", ""),
+              ("Ahmedpur", "7:10 AM", "5:30 PM"),
+              ("Chouhatta", "", ""),
+              ("Labhpur", "7:45 AM", "5:05 PM"),
+              ("Laghata", "", ""),
+              ("Akupurchati", "", ""),
+              ("Kirnahar", "8:25 AM", "4:35 PM"),
+              ("Daskalgram", "", ""),
+              ("Futishanko", "8:45 AM", "4:05 PM"),
+              ("Kandra", "", ""),
+              ("Komorpur", "", ""),
+              ("Nirol", "", ""),
+              ("Pachundi", "9:15 AM", "3:40 PM"),
+              ("Ketugram", "", ""),
+              ("Katwa", "9:40 AM", "3:10 PM"),
+          ]
+
+          OUTBOUND = {
+              "operator": "Didibhai",
+              "bus_name": "Didibhai Suri-Katwa",
+              "bus_type": "Private",
+              "reg_no": REG,
+              "origin": "Suri",
+              "destination": "Katwa",
+              "departure_time": "6:10 AM",
+              "arrival_time": "9:40 AM",
+              "route": "Suri - Katwa (via Labhpur, Kirnahar)",
+              "source": "facebook (community report)",
+              "detail_url": "",
+              "contact_number": "",
+              "stops": [{"name": n, "up": u, "down": d} for n, u, d in STOPS_SD],
+          }
+
+          RETURN = {
+              "operator": "Didibhai",
+              "bus_name": "Didibhai Suri-Katwa",
+              "bus_type": "Private",
+              "reg_no": REG,
+              "origin": "Katwa",
+              "destination": "Suri",
+              "departure_time": "3:10 PM",
+              "arrival_time": "6:30 PM",
+              "route": "Katwa - Suri (via Kirnahar, Labhpur)",
+              "source": "facebook (community report)",
+              "detail_url": "",
+              "contact_number": "",
+              "stops": [{"name": n, "up": d, "down": u} for n, u, d in reversed(STOPS_SD)],
+          }
+
+
+          def main():
+              with open(SRC, encoding="utf-8") as f:
+                  report = json.load(f)
+              changed = False
+              for key, entry in (("Suri->Katwa", OUTBOUND), ("Katwa->Suri", RETURN)):
+                  have = any(
+                      (e.get("origin") == entry["origin"]
+                       and e.get("destination") == entry["destination"]
+                       and e.get("bus_name") == entry["bus_name"]
+                       and e.get("operator") == entry["operator"])
+                      for e in report.get("add", [])
+                  )
+                  if not have:
+                      report.setdefault("add", []).append(entry)
+                      changed = True
+                      print("appended:", key)
+                  else:
+                      print("already present:", key)
+              if changed:
+                  with open(SRC, "w", encoding="utf-8") as f:
+                      json.dump(report, f, ensure_ascii=False, indent=1)
+                  print("written.")
+              else:
+                  print("nothing to do.")
+
+
+          if __name__ == "__main__":
+              main()
+
+          APPLYEOF
+
+      - name: Append community report (Suri-Katwa both directions)
+        run: python3 scripts/apply_didibhai_suri_katwa.py
+
+      - name: Merge into site data + dedup
+        run: |
+          python3 scripts/add_community_buses.py --write
+          python3 scripts/dedup_buses.py --write
+
+      - name: Validate data
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          buses = d['buses']
+          assert len(buses) == 4361, 'expected 4361 buses, got %d' % len(buses)
+          dd = [b for b in buses if (b.get('operator') or '') == 'Didibhai']
+          assert len(dd) == 2, 'Didibhai entries: %d' % len(dd)
+          for b in dd:
+              assert b['reg_no'] == 'WB53B8677'
+          ob = [b for b in dd if b['origin'] == 'Suri'][0]
+          rt = [b for b in dd if b['origin'] == 'Katwa'][0]
+          assert ob['departure_time'] == '6:10 AM' and ob['arrival_time'] == '9:40 AM'
+          assert rt['departure_time'] == '3:10 PM' and rt['arrival_time'] == '6:30 PM'
+          sts = {s['name']: s for s in ob['stoppages']}
+          assert sts['Kirnahar']['up_time'] == '8:25 AM'
+          assert sts['Pachundi']['up_time'] == '9:15 AM'
+          assert sts['Katwa']['up_time'] == '9:40 AM'
+          assert len(ob['stoppages']) == 16
+          sts2 = {s['name']: s for s in rt['stoppages']}
+          assert sts2['Suri']['up_time'] == '6:30 PM'
+          assert sts2['Ahmedpur']['up_time'] == '5:30 PM'
+          print('OK: 4361 buses, Didibhai Suri-Katwa both directions')
+          EOF
+
+      - name: Regenerate both route pages
+        run: python3 scripts/gen_route_v2.py --routes "Suri::Katwa,Katwa::Suri"
+
+      - name: Rebuild client data + GA4
+        run: |
+          python3 scripts/build_client_data.py
+          python3 scripts/add_ga4.py
+
+      - name: Add katwa-to-suri to sitemap
+        run: |
+          python3 - <<'EOF'
+          import bisect
+          p = 'sitemap.xml'
+          s = open(p, encoding='utf-8').read()
+          newloc = 'https://busjatri.in/bus-time-table/katwa-to-suri.html'
+          assert newloc not in s, 'sitemap: URL already present'
+          assert 'https://busjatri.in/bus-time-table/suri-to-katwa.html' in s, 'suri-to-katwa missing'
+          entry = '<url><loc>' + newloc + '</loc><lastmod>2026-09-27</lastmod><priority>0.7</priority></url>'
+          lines = s.rstrip('\n').split('\n')
+          head = lines[:2]
+          body = [l for l in lines if l.startswith('<url>')]
+          tail = [l for l in lines[2:] if not l.startswith('<url>')]
+          idx = bisect.bisect_left(body, entry)
+          body.insert(idx, entry)
+          open(p, 'w', encoding='utf-8').write('\n'.join(head + body + tail) + '\n')
+          print('sitemap: inserted', newloc)
+          EOF
+
+      - name: Bump homepage bus count
+        run: |
+          python3 - <<'EOF'
+          p = 'index.html'
+          s = open(p, encoding='utf-8').read()
+          n = s.count('4,359+')
+          assert n == 1, 'expected 1 occurrence of 4,359+, got %d' % n
+          s = s.replace('4,359+', '4,361+')
+          open(p, 'w', encoding='utf-8').write(s)
+          print('homepage stat: 4,359+ -> 4,361+')
+          EOF
+
+      - name: Validate pages and indexes
+        run: |
+          grep -q 'Didibhai' bus-time-table/suri-to-katwa.html
+          grep -q '6:10 AM' bus-time-table/suri-to-katwa.html
+          grep -q 'Didibhai' bus-time-table/katwa-to-suri.html
+          grep -q '3:10 PM' bus-time-table/katwa-to-suri.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/suri-to-katwa.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/katwa-to-suri.html
+          grep -q 'busjatri.in/bus-time-table/katwa-to-suri.html' sitemap.xml
+          grep -q 'busjatri.in/bus-time-table/suri-to-katwa.html' sitemap.xml
+          python3 - <<'EOF'
+          import json
+          ai = json.load(open('data/app-index.json'))
+          assert len(ai['buses']) == 4361
+          dd = [b for b in ai['buses'] if 'Didibhai' in (b.get('bus_name') or '')]
+          assert len(dd) == 2
+          hi = json.load(open('data/home-index.json'))
+          assert hi['meta']['total_buses'] == 4361
+          print('indexes OK: 4361 buses, Didibhai in app-index')
+          EOF
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data bus-time-table/suri-to-katwa.html bus-time-table/katwa-to-suri.html scripts/apply_didibhai_suri_katwa.py sitemap.xml index.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Add Didibhai Bus Service Suri-Katwa, new route (FB community report)"
+            git push
+          fi
