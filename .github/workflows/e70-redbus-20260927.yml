@@ -1,0 +1,166 @@
+name: Fill WBTC E-70 Habra Depot-Jhargram times from redBus 20260927
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write apply script
+        run: |
+          cat > scripts/apply_e70_redbus.py <<'APPLYEOF'
+          #!/usr/bin/env python3
+          """Fill missing departure times on the two WBTC E-70 entries (Habra Depot
+          <-> Jhargram) from redBus (Sep 2026).
+
+          Sources (redBus, accessed 27 Sep 2026):
+          - Live search Habra->Jhargram 29-Sep-2026: card "WBTC (CTC) Habra - Barasat -
+            Midnapur - Jhargram - 181" departs 04:20, arrives 09:25 (5h 5m), Non AC
+            Seater (2+3), fare Rs 172.
+          - Live search Jhargram->Kolkata 02-Oct-2026: card "WBTC (CTC) ... Jhargram -
+            181" departs 14:40, arrives 18:45 (4h 5m) at Kolkata, fare Rs 145.
+          - Live search Kolkata->Jhargram 02-Oct-2026: the same 181 shown boarding in
+            Kolkata at 05:40 -> 09:25 - one physical service, 04:20 from Habra Depot
+            and a Kolkata pickup later.
+
+          Mapping note (disclosed): our source kolkata-travel-router calls this route
+          E-70; redBus calls it 181. Corridor and timings match exactly, so E-70 =
+          route 181 is the working identification (site owner approved).
+
+          Decisions (disclosed):
+          - Forward entry gets departure 4:20 AM and arrival 9:25 AM (both directly
+            from the live card).
+          - Return entry gets departure 2:40 PM only. The redBus arrival 18:45 is at
+            KOLKATA, not at the Habra Depot terminus, so arrival stays empty.
+          - Through-service cards on other route pages will show the bus's start time
+            (existing site behaviour - same as every other through service, e.g.
+            Bandwan->Kolkata on the Jhargram->Kolkata page).
+
+          No new buses are added: total stays 4420. No SBSTC page, homepage count or
+          sitemap changes. Idempotent. ASCII-only source.
+          """
+          import json
+          import sys
+          from pathlib import Path
+
+          ROOT = Path(__file__).resolve().parents[1]
+          DATA = ROOT / "data" / "busjatri_data.json"
+
+          TIME_SOURCE = "redbus.in (WBTC CTC route 181, Sep 2026)"
+
+          UPDATES = {
+              "ktr-government-e-70": {
+                  "departure_time": "4:20 AM",
+                  "arrival_time": "9:25 AM",
+                  "fare": "Rs. 172",
+              },
+              "ktr-government-e-70-1": {
+                  "departure_time": "2:40 PM",
+                  "arrival_time": "",
+                  "fare": "Rs. 145",
+              },
+          }
+
+
+          def main():
+              write = "--write" in sys.argv
+              data = json.loads(DATA.read_text(encoding="utf-8"))
+              buses = data["buses"]
+              by_id = {b["id"]: b for b in buses}
+
+              for bid, fields in UPDATES.items():
+                  b = by_id[bid]
+                  assert b["operator"] == "WBTC", b["operator"]
+                  for k, v in fields.items():
+                      if b.get(k) == "" or b.get(k) is None:
+                          b[k] = v
+                          print(("WRITE: " if write else "DRY: ") + bid + " " + k + " -> " + repr(v))
+                      else:
+                          assert b[k] == v, (bid, k, b[k], v)
+
+              for bid in UPDATES:
+                  b = by_id[bid]
+                  if "time_source" not in b or b.get("time_source") != TIME_SOURCE:
+                      b["time_source"] = TIME_SOURCE
+
+              assert len(buses) == 4420, len(buses)
+              assert data["meta"]["total_buses"] == 4420
+
+              if write:
+                  DATA.write_text(json.dumps(data, ensure_ascii=False, indent=1),
+                                  encoding="utf-8")
+              print("total buses:", len(buses))
+
+
+          if __name__ == "__main__":
+              main()
+          APPLYEOF
+
+      - name: Apply E-70 times
+        run: python3 scripts/apply_e70_redbus.py --write
+
+      - name: Dedup safety pass
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate data
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          buses = d['buses']
+          assert len(buses) == 4420, 'expected 4420 buses, got %d' % len(buses)
+          by_id = {b['id']: b for b in buses}
+          assert by_id['ktr-government-e-70']['departure_time'] == '4:20 AM'
+          assert by_id['ktr-government-e-70']['arrival_time'] == '9:25 AM'
+          assert by_id['ktr-government-e-70']['fare'] == 'Rs. 172'
+          assert by_id['ktr-government-e-70-1']['departure_time'] == '2:40 PM'
+          assert by_id['ktr-government-e-70-1']['fare'] == 'Rs. 145'
+          assert d['meta']['total_buses'] == 4420
+          print('OK: 4420 buses, E-70 timed 4:20 AM / 2:40 PM')
+          EOF
+
+      - name: Regenerate 11 route pages
+        run: python3 scripts/gen_route_v2.py --routes "Habra Depot::Jhargram,Jhargram::Habra Depot,Habra Depot::Midnapore Town,Midnapore Town::Habra Depot,Habra::Midnapore,Midnapore::Habra,Barasat::Medinipur,Medinipur::Barasat,Jhargram::Medinipur,Medinipur::Jhargram,Panskura::Jhargram"
+
+      - name: Rebuild client data + GA4
+        run: |
+          python3 scripts/build_client_data.py
+          python3 scripts/add_ga4.py
+
+      - name: Validate pages and indexes
+        run: |
+          grep -q '4:20 AM' bus-time-table/habra-depot-to-jhargram.html
+          grep -q '9:25 AM' bus-time-table/habra-depot-to-jhargram.html
+          grep -q 'Rs. 172' bus-time-table/habra-depot-to-jhargram.html
+          grep -q '2:40 PM' bus-time-table/jhargram-to-habra-depot.html
+          grep -q 'Rs. 145' bus-time-table/jhargram-to-habra-depot.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/habra-depot-to-jhargram.html
+          grep -q 'G-L4E3D1YX9X' bus-time-table/jhargram-to-habra-depot.html
+          python3 - <<'EOF'
+          import json
+          ai = json.load(open('data/app-index.json'))
+          assert len(ai['buses']) == 4420, len(ai['buses'])
+          hi = json.load(open('data/home-index.json'))
+          assert hi['meta']['total_buses'] == 4420, hi['meta']['total_buses']
+          print('indexes OK: 4420 buses')
+          EOF
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data bus-time-table scripts/apply_e70_redbus.py
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Fill WBTC E-70 Habra Depot-Jhargram times from redBus (4:20 AM / 2:40 PM, route 181)"
+            git push
+          fi
