@@ -1005,6 +1005,7 @@
   if (typeof computePopularRoutes === 'function' && !window.__bjPopRoutesV2) {
     window.__bjPopRoutesV2 = true;
     computePopularRoutes = function () {
+      if (typeof TOP_ROUTES !== 'undefined' && TOP_ROUTES && TOP_ROUTES.length) return TOP_ROUTES;
       var pair = {};
       Object.values(BUSES).forEach(function (b) {
         var o = (b.origin || '').trim(), d = (b.destination || '').trim();

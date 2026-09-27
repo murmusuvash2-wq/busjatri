@@ -638,9 +638,18 @@ async function renderSearch(el) {
   const from = (params.get('from') || '').toLowerCase().trim();
   const to = (params.get('to') || '').toLowerCase().trim();
   const stop = (params.get('stop') || '').toLowerCase().trim();
+  const op = (params.get('op') || '').toLowerCase().trim();
+  const opq = op ? op.replace(/-/g, ' ') : '';
   /* compact index (app-index.json) already carries stop names + times:
      search no longer downloads the 5MB detail file */
   let results = Object.values(BUSES);
+  if (opq) {
+    var opm = opq === 'volvo ac' ? 'volvo' : opq;
+    results = results.filter(b =>
+      (b.bus_name || '').toLowerCase().includes(opm) ||
+      (b.bus_type || '').toLowerCase().includes(opm) ||
+      (b.id || '').toLowerCase().includes(op));
+  }
 
   if (from && to) {
     const posIn = (b, q) => {
@@ -720,6 +729,7 @@ async function renderSearch(el) {
     ${freshnessNote()}
     <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <h2 class="page-title"><span class="label-en">Search Results</span><span class="label-bn">সার্চ ফলাফল</span> <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(${results.length})</span></h2>
+    ${opq ? `<p style="font-size:13.5px;font-weight:600;color:var(--amber);margin:14px 0 4px">${esc(opq.toUpperCase())} buses (operator filter)</p>` : ''}
     <p style="font-size:12px;color:var(--ink-dim);margin:2px 0 4px">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>
     ${window.__bjTimeQuery ? `<p style="color:var(--amber);font-size:13.5px;font-weight:600;margin-bottom:18px">${icon('clock')} Buses departing around ${esc(window.__bjTimeQuery)} (±90 min)</p>` : from || to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${esc(from || '…')} → ${esc(to || '…')}${stop ? ` <span class="badge badge-ac">stop ${esc(stop)}</span>` : ''}</p>` : ''}
     ${stop && !from && !to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${LANG==='bn'?'এই স্টপেজে থামে: ':'Buses halting at '}${esc(stop)}</p>` : ''}
