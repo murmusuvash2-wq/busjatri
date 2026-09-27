@@ -4284,6 +4284,198 @@
      "down": "6:05 AM"
     }
    ]
+  },
+  {
+   "operator": "Didibhai",
+   "bus_name": "Didibhai Suri-Katwa",
+   "bus_type": "Private",
+   "reg_no": "WB53B8677",
+   "origin": "Suri",
+   "destination": "Katwa",
+   "departure_time": "6:10 AM",
+   "arrival_time": "9:40 AM",
+   "route": "Suri - Katwa (via Labhpur, Kirnahar)",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Suri",
+     "up": "6:10 AM",
+     "down": "6:30 PM"
+    },
+    {
+     "name": "Purundur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ahmedpur",
+     "up": "7:10 AM",
+     "down": "5:30 PM"
+    },
+    {
+     "name": "Chouhatta",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Labhpur",
+     "up": "7:45 AM",
+     "down": "5:05 PM"
+    },
+    {
+     "name": "Laghata",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Akupurchati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kirnahar",
+     "up": "8:25 AM",
+     "down": "4:35 PM"
+    },
+    {
+     "name": "Daskalgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Futishanko",
+     "up": "8:45 AM",
+     "down": "4:05 PM"
+    },
+    {
+     "name": "Kandra",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Komorpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nirol",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pachundi",
+     "up": "9:15 AM",
+     "down": "3:40 PM"
+    },
+    {
+     "name": "Ketugram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Katwa",
+     "up": "9:40 AM",
+     "down": "3:10 PM"
+    }
+   ]
+  },
+  {
+   "operator": "Didibhai",
+   "bus_name": "Didibhai Suri-Katwa",
+   "bus_type": "Private",
+   "reg_no": "WB53B8677",
+   "origin": "Katwa",
+   "destination": "Suri",
+   "departure_time": "3:10 PM",
+   "arrival_time": "6:30 PM",
+   "route": "Katwa - Suri (via Kirnahar, Labhpur)",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Katwa",
+     "up": "3:10 PM",
+     "down": "9:40 AM"
+    },
+    {
+     "name": "Ketugram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pachundi",
+     "up": "3:40 PM",
+     "down": "9:15 AM"
+    },
+    {
+     "name": "Nirol",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Komorpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kandra",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Futishanko",
+     "up": "4:05 PM",
+     "down": "8:45 AM"
+    },
+    {
+     "name": "Daskalgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kirnahar",
+     "up": "4:35 PM",
+     "down": "8:25 AM"
+    },
+    {
+     "name": "Akupurchati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Laghata",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Labhpur",
+     "up": "5:05 PM",
+     "down": "7:45 AM"
+    },
+    {
+     "name": "Chouhatta",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ahmedpur",
+     "up": "5:30 PM",
+     "down": "7:10 AM"
+    },
+    {
+     "name": "Purundur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Suri",
+     "up": "6:30 PM",
+     "down": "6:10 AM"
+    }
+   ]
   }
  ],
  "enrich": [
