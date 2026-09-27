@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://busjatri.in/about.html</loc><lastmod>2026-09-18</lastmod><priority>0.5</priority></url>
-<url><loc>https://busjatri.in/contact.html</loc><lastmod>2026-09-18</lastmod><priority>0.5</priority></url>
-<url><loc>https://busjatri.in/privacy-policy.html</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-barasat.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-manbazar.html</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/about</loc><lastmod>2026-09-18</lastmod><priority>0.5</priority></url>
+<url><loc>https://busjatri.in/contact</loc><lastmod>2026-09-18</lastmod><priority>0.5</priority></url>
+<url><loc>https://busjatri.in/privacy-policy</loc><lastmod>2026-09-18</lastmod><priority>0.3</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-barasat</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-manbazar</loc><lastmod>2026-09-18</lastmod><priority>0.6</priority></url>
 </urlset>
