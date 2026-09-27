@@ -1,0 +1,50 @@
+name: Stats fix homepage 20260927
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  statsfix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update hero bus count 4,102 to 4,358
+        run: |
+          python3 - <<'FIXEOF'
+          import io
+          PATH = "index.html"
+          with io.open(PATH, encoding="utf-8") as f:
+              src = f.read()
+          n = src.count("4,102")
+          assert n == 1, "expected exactly one '4,102' in index.html, found %d" % n
+          src = src.replace("4,102", "4,358")
+          assert "4,358" in src and "4,102" not in src
+          with io.open(PATH, "w", encoding="utf-8") as f:
+              f.write(src)
+          print("index.html: hero bus count updated 4,102 -> 4,358 (matches app-index.json meta)")
+          FIXEOF
+
+      - name: Validate
+        run: |
+          grep -q '4,358+' index.html
+          ! grep -q '4,102' index.html
+          grep -q '2,526+' index.html
+          grep -q '2,740+' index.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Homepage: update hero bus count to 4,358 (match live dataset)"
+            git push
+          fi
