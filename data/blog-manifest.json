@@ -3,72 +3,77 @@
   "slug": "durgapur-to-karunamoyee",
   "title": "পেয়ারার ব্যাগ নিয়ে মেয়ের অফিসে",
   "date": "2026-09-19",
-  "excerpt": "দুর্গাপুর থেকে করুণাময়ী — সকাল ৬:২০-র শ্যামলী বাসে মেয়ের প্রথম অফিস দেখতে এক বাবার যাত্রা।"
+  "excerpt": "দুর্গাপুর থেকে করুণাময়ী — সকাল ৬:২০-র শ্যামলী বাসে মেয়ের প্রথম অফিস দেখতে এক বাবার যাত্রা।",
+  "type": "story"
  },
  {
   "slug": "cooch-behar-to-siliguri",
   "title": "ছুটি ফুরোল, ফেরার পথ",
   "date": "2026-09-19",
-  "excerpt": "কোচবিহার থেকে শিলিগুড়ি — মায়ের আচার আর বাবার খাম নিয়ে হোস্টেল ফেরার গল্প।"
+  "excerpt": "কোচবিহার থেকে শিলিগুড়ি — মায়ের আচার আর বাবার খাম নিয়ে হোস্টেল ফেরার গল্প।",
+  "type": "story"
  },
  {
   "slug": "burdwan-to-kolkata",
   "title": "সন্দেশের বাক্স নিয়ে শহরে",
   "date": "2026-09-20",
-  "excerpt": "বর্ধমান থেকে কলকাতা — ভোর ৪:৫০-র বাসে সন্দেশের বাক্স নিয়ে শ্যামবাজারের পথে।"
+  "excerpt": "বর্ধমান থেকে কলকাতা — ভোর ৪:৫০-র বাসে সন্দেশের বাক্স নিয়ে শ্যামবাজারের পথে।",
+  "type": "story"
  },
  {
   "slug": "durgapur-to-esplanade",
   "title": "Durgapur to Esplanade Bus Time Table (25 Buses) — Timings, Route & Travel Guide",
   "date": "2026-09-21",
-  "excerpt": "Durgapur to Esplanade bus guide: 25 buses daily from 2:00 AM to 6:30 PM, route stops, operators and travel tips (English + বাংলা)."
- },
- {
-  "slug": "kolkata-to-digha-bus-guide",
-  "title": "আমার দীঘা যাত্রার পথ",
-  "date": "2026-09-21",
-  "excerpt": "শহরের ক্লান্তি নিয়ে হঠাৎ দীঘা রওনা — সকাল ৭টার এসবিএসটিসি বাসে, বাবার স্মৃতি হাতে।"
+  "excerpt": "Durgapur to Esplanade bus guide: 25 buses daily from 2:00 AM to 6:30 PM, route stops, operators and travel tips (English + বাংলা).",
+  "type": "guide"
  },
  {
   "slug": "burdwan-to-karunamoyee",
   "title": "Burdwan to Karunamoyee Bus Time Table (21 Buses) — Timings, Route & Travel Guide",
   "date": "2026-09-22",
-  "excerpt": "Burdwan to Karunamoyee bus guide: 21 buses daily from 1:05 AM to 6:30 PM, route stops, operators and travel tips (English + বাংলা)."
+  "excerpt": "Burdwan to Karunamoyee bus guide: 21 buses daily from 1:05 AM to 6:30 PM, route stops, operators and travel tips (English + বাংলা).",
+  "type": "guide"
  },
  {
   "slug": "kolkata-to-durgapur",
   "title": "Kolkata to Durgapur Bus Time Table (21 Buses) — Timings, Route & Travel Guide",
   "date": "2026-09-23",
-  "excerpt": "Kolkata to Durgapur bus guide: 21 buses daily from 7:15 AM to 6:30 PM, route stops, operators and travel tips (English + বাংলা)."
+  "excerpt": "Kolkata to Durgapur bus guide: 21 buses daily from 7:15 AM to 6:30 PM, route stops, operators and travel tips (English + বাংলা).",
+  "type": "guide"
  },
  {
   "slug": "kolkata-to-haldia",
   "title": "Kolkata to Haldia Bus Time Table (28 Buses) — Timings, Route & Travel Guide",
   "date": "2026-09-24",
-  "excerpt": "Kolkata to Haldia bus guide: 28 buses daily from 5:30 AM to 6:45 PM, route stops, operators and travel tips (English + বাংলা)."
+  "excerpt": "Kolkata to Haldia bus guide: 28 buses daily from 5:30 AM to 6:45 PM, route stops, operators and travel tips (English + বাংলা).",
+  "type": "guide"
  },
  {
   "slug": "kolkata-to-asansol",
   "title": "Kolkata to Asansol Bus Time Table (20 Buses) — Timings, Route & Travel Guide",
   "date": "2026-09-25",
-  "excerpt": "Kolkata to Asansol bus guide: 20 buses daily from 5:30 AM to 5:00 PM, route stops, operators and travel tips (English + বাংলা)."
+  "excerpt": "Kolkata to Asansol bus guide: 20 buses daily from 5:30 AM to 5:00 PM, route stops, operators and travel tips (English + বাংলা).",
+  "type": "guide"
  },
  {
   "slug": "nabadwip-to-asansol",
   "title": "Nabadwip to Asansol Bus Time Table (15 Buses) — Timings, Route & Travel Guide",
   "date": "2026-09-26",
-  "excerpt": "Nabadwip to Asansol bus guide: 15 buses daily from 4:00 AM to 7:20 AM, route stops, operators and travel tips (English + বাংলা)."
+  "excerpt": "Nabadwip to Asansol bus guide: 15 buses daily from 4:00 AM to 7:20 AM, route stops, operators and travel tips (English + বাংলা).",
+  "type": "guide"
  },
  {
   "slug": "bankura-to-kolkata",
   "title": "প্রথম ইন্টারভিউ",
   "date": "2026-09-27",
-  "excerpt": "বাঁকুড়া থেকে কলকাতা — ভোর ৪:৫০-র এসবিএসটিসি বাসে জীবনের প্রথম ইন্টারভিউয়ের গল্প।"
+  "excerpt": "বাঁকুড়া থেকে কলকাতা — ভোর ৪:৫০-র এসবিএসটিসি বাসে জীবনের প্রথম ইন্টারভিউয়ের গল্প।",
+  "type": "story"
  },
  {
   "slug": "kolkata-to-mandarmani-bus-guide",
   "title": "Kolkata to Mandarmani Bus Guide — Timings, Route and Weekend Tips",
   "date": "2026-09-28",
-  "excerpt": "Kolkata to Mandarmani by bus: direct AC coach at 6:00 AM, return buses till 5:35 PM, weekend plan and beach tips (English + বাংলা)."
+  "excerpt": "Kolkata to Mandarmani by bus: direct AC coach at 6:00 AM, return buses till 5:35 PM, weekend plan and beach tips (English + বাংলা).",
+  "type": "guide"
  }
 ]

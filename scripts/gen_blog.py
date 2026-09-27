@@ -229,28 +229,38 @@ def manifest_articles():
 
 
 def index_page():
-    import html as _h
     all_posts = manifest_articles() + ARTICLES
-    all_posts.sort(key=lambda a: a["date"], reverse=True)
-    cards = ""
     for a in all_posts:
-        cards += f"""<a class="bus-row" href="{a["slug"]}.html" style="display:block">
+        a.setdefault("type", "guide")
+    guides = sorted(
+        (a for a in all_posts if a["type"] == "guide"),
+        key=lambda a: a["date"], reverse=True)
+    stories = sorted(
+        (a for a in all_posts if a["type"] == "story"),
+        key=lambda a: a["date"], reverse=True)
+
+    def _cards(items):
+        out = ""
+        for a in items:
+            out += f"""<a class="bus-row" href="{a["slug"]}.html" style="display:block">
   <div class="bmid">
     <div class="op" style="font-size:1rem">{a["title"]}</div>
     <div class="mrow" style="margin-top:6px"><span>{a["date"]}</span></div>
     <p style="margin:8px 0 0;font-size:.9rem;color:var(--ink-dim,#665);line-height:1.6">{a["excerpt"]}</p>
   </div>
 </a>"""
+        return out
+
     return f"""<!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Bus Travel Guides | BusJatri</title>
-<meta name="description" content="West Bengal bus travel guides: route timetables, first and last bus timings, operators and travel tips from BusJatri.">
+<title>Blog — Bus Travel Guides & Stories | BusJatri</title>
+<meta name="description" content="West Bengal bus travel guides and bus-journey stories: route timetables, first and last bus timings, operators and travel tips from BusJatri.">
 <link rel="canonical" href="{BASE}/blog/">
-<meta property="og:title" content="Blog — Bus Travel Guides | BusJatri">
-<meta property="og:description" content="West Bengal bus travel guides: route timetables, operators and travel tips from BusJatri.">
+<meta property="og:title" content="Blog — Bus Travel Guides & Stories | BusJatri">
+<meta property="og:description" content="West Bengal bus travel guides and bus-journey stories: route timetables, operators and travel tips from BusJatri.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -258,23 +268,27 @@ def index_page():
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <link rel="stylesheet" href="../css/seo.css">
 <link rel="stylesheet" href="../css/extras.css">
-{GA4}<style>.bus-row{{display:block;margin-bottom:14px}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}</style>
+{GA4}<style>.bus-row{{display:block;margin-bottom:14px}}a.bus-row,a.bus-row:visited{{color:inherit;text-decoration:none}}.sec-sub{{color:var(--ink-dim,#665);font-size:.92rem;font-weight:400}}</style>
 </head>
 <body>
 {HEADER}
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:720px">
 <div class="crumbs"><a href="../index.html">Home</a> › <span>Blog</span></div>
 <div class="seo-hero">
-  <h1>Blog <span class="arr">—</span> Bus Travel Guides</h1>
-  <p class="bn-sub">West Bengal bus routes, timetables and travel tips</p>
+  <h1>Blog <span class="arr">—</span> Guides & Stories</h1>
+  <p class="bn-sub">West Bengal bus timetables, travel guides and bus-journey stories</p>
 </div>
-{cards}
+<h2 id="guides" style="font-size:1.18rem;margin:26px 0 4px">Travel Guides <span class="sec-sub">· বাস টাইম ও ভ্রমণ গাইড</span></h2>
+<p class="bn-sub" style="margin:0 0 14px">Route time tables, operators and practical travel tips</p>
+{_cards(guides)}
+<h2 id="stories" style="font-size:1.18rem;margin:34px 0 4px">গল্প <span class="sec-sub">· Bus Journey Stories</span></h2>
+<p class="bn-sub" style="margin:0 0 14px">বাসযাত্রার গল্প — সময়সূচির সাথে</p>
+{_cards(stories)}
 </main>
 {FOOTER}
 </body>
 </html>
 """
-
 
 def main():
     dry = "--write" not in sys.argv
