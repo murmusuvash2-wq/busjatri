@@ -1,0 +1,46 @@
+name: Publish blog posts 20260927 (index + sitemap regen)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify committed posts present
+        run: |
+          test -f blog/bankura-to-kolkata.html
+          test -f blog/kolkata-to-mandarmani-bus-guide.html
+          grep -q 'G-L4E3D1YX9X' blog/bankura-to-kolkata.html
+          grep -q 'G-L4E3D1YX9X' blog/kolkata-to-mandarmani-bus-guide.html
+          python3 -c "import json; m=json.load(open('data/blog-manifest.json')); assert m[-2]['slug']=='bankura-to-kolkata' and m[-1]['slug']=='kolkata-to-mandarmani-bus-guide'; print('manifest OK:', len(m), 'entries')"
+
+      - name: Regenerate blog index + sitemap
+        run: python3 scripts/gen_blog.py --write
+
+      - name: Validate index and sitemap
+        run: |
+          grep -q 'href="bankura-to-kolkata.html"' blog/index.html
+          grep -q 'href="kolkata-to-mandarmani-bus-guide.html"' blog/index.html
+          grep -q 'blog/bankura-to-kolkata.html' sitemap.xml
+          grep -q 'blog/kolkata-to-mandarmani-bus-guide.html' sitemap.xml
+          grep -q 'href="blog/"' index.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add blog sitemap.xml index.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Blog index + sitemap: add Bankura story and Mandarmani guide"
+            git push
+          fi
