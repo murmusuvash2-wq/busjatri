@@ -4163,6 +4163,127 @@
      "down": "12:05 PM"
     }
    ]
+  },
+  {
+   "operator": "Madan Mohan",
+   "bus_name": "MADANMOHAN",
+   "bus_type": "Private - NON AC",
+   "reg_no": "WB67B4671",
+   "origin": "Bandwan",
+   "destination": "Durgapur (Station)",
+   "departure_time": "10:30 AM",
+   "arrival_time": "3:05 PM",
+   "route": "Bandwan - Durgapur (Station) (via Manbazar, Hatirampur, Bangla, Bankura, Beliatore, Barjora)",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "contact_number": "",
+   "stops": [
+    {
+     "name": "Bandwan",
+     "up": "10:30 AM",
+     "down": "10:20 AM"
+    },
+    {
+     "name": "Ankhro",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Boro",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kumari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khariduar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Manbazar",
+     "up": "11:35 AM",
+     "down": "9:20 AM"
+    },
+    {
+     "name": "Pairachali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gadapathar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ledakendi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gobindpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bheduashol",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up": "12:25 PM",
+     "down": "8:45 AM"
+    },
+    {
+     "name": "Bangla",
+     "up": "12:55 PM",
+     "down": "8:15 AM"
+    },
+    {
+     "name": "Puabagan",
+     "up": "1:10 PM",
+     "down": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up": "",
+     "down": "7:55 AM"
+    },
+    {
+     "name": "Bankura",
+     "up": "1:45 PM",
+     "down": "7:30 AM"
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Makurgram",
+     "up": "",
+     "down": "7:00 AM"
+    },
+    {
+     "name": "Beliatore",
+     "up": "2:25 PM",
+     "down": "6:45 AM"
+    },
+    {
+     "name": "Barjora",
+     "up": "2:45 PM",
+     "down": "6:25 AM"
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up": "3:05 PM",
+     "down": "6:05 AM"
+    }
+   ]
   }
  ],
  "enrich": [
@@ -4612,6 +4733,152 @@
      "name": "Bishnupur",
      "up_time": "12:40 PM",
      "down_time": "3:20 PM"
+    }
+   ]
+  },
+  {
+   "target_id": "bussathi-madanmohan-452",
+   "arrival_time": "10:20 AM",
+   "route": "Durgapur (Station) - Bandwan (via Barjora, Beliatore, Bankura, Bangla, Hatirampur, Manbazar)",
+   "time_source": "facebook (community report)",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur (Station)",
+     "up_time": "6:05 AM",
+     "down_time": "3:05 PM"
+    },
+    {
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "6:25 AM",
+     "down_time": "2:45 PM"
+    },
+    {
+     "no": 3,
+     "name": "Beliatore",
+     "up_time": "6:45 AM",
+     "down_time": "2:25 PM"
+    },
+    {
+     "no": 4,
+     "name": "Makurgram",
+     "up_time": "7:00 AM",
+     "down_time": "2:10 PM"
+    },
+    {
+     "no": 5,
+     "name": "Bankura Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bankura",
+     "up_time": "7:30 AM",
+     "down_time": "1:45 PM"
+    },
+    {
+     "no": 7,
+     "name": "Dhaldanga",
+     "up_time": "7:55 AM",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": "1:10 PM"
+    },
+    {
+     "no": 9,
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Bangla",
+     "up_time": "8:15 AM",
+     "down_time": "12:55 PM"
+    },
+    {
+     "no": 12,
+     "name": "Bheduashol",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Gobindpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Hatirampur",
+     "up_time": "8:45 AM",
+     "down_time": "12:25 PM"
+    },
+    {
+     "no": 15,
+     "name": "Ledakendi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Gadapathar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Pairachali",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Manbazar",
+     "up_time": "9:20 AM",
+     "down_time": "11:35 AM"
+    },
+    {
+     "no": 19,
+     "name": "Khariduar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Kumari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Boro",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Ankhro",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Bandwan",
+     "up_time": "10:20 AM",
+     "down_time": "10:30 AM"
     }
    ]
   }
