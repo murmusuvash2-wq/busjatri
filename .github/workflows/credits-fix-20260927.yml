@@ -1,0 +1,68 @@
+name: Footer credits link removal 20260927
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  creditsfix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Remove duplicate Credits footer link (same page as About Us)
+        run: |
+          python3 - <<'FIXEOF'
+          import io
+
+          FILES = ["index.html", "about.html", "contact.html", "privacy-policy.html"]
+          ANCHOR = '<a href="about.html#credits">Credits</a>'
+
+          for path in FILES:
+              with io.open(path, encoding="utf-8") as f:
+                  src = f.read()
+              n = src.count(ANCHOR)
+              if n == 0:
+                  print("%s: no credits link (skip)" % path)
+                  continue
+              assert n == 1, "%s: expected 1 anchor, found %d" % (path, n)
+              new = src.replace(ANCHOR + "\n", "")
+              if new == src:
+                  new = src.replace(ANCHOR, "")
+              assert ANCHOR not in new
+              assert 'href="about.html"' in new or path == "index.html", path + ": About link missing?"
+              with io.open(path, "w", encoding="utf-8") as f:
+                  f.write(new)
+              print("%s: credits link removed" % path)
+          print("done")
+          FIXEOF
+
+      - name: Validate
+        run: |
+          ! grep -q 'about.html#credits' index.html
+          ! grep -q 'about.html#credits' about.html
+          ! grep -q 'about.html#credits' contact.html
+          ! grep -q 'about.html#credits' privacy-policy.html
+          grep -q '>About Us<' index.html
+          grep -q '>About Us<' about.html
+          grep -q 'id="credits"' about.html
+          python3 -c "from html.parser import HTMLParser
+          for p in ['index.html','about.html','contact.html','privacy-policy.html']:
+              HTMLParser().feed(open(p, encoding='utf-8').read())
+          print('html parse ok')"
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html about.html contact.html privacy-policy.html
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Footer: remove duplicate Credits link (About Us covers it)"
+            git push
+          fi
