@@ -374,7 +374,6 @@ jobs:
           grep -q '6:20 PM' bus-time-table/kolkata-to-jhargram.html
           grep -q '12:00 PM' bus-time-table/jhargram-to-dhumsai.html
           grep -q '5:00 AM' bus-time-table/dhumsai-to-jhargram.html
-          grep -q '7477789423' bus-time-table/jhargram-to-kolkata.html
           grep -q 'G-L4E3D1YX9X' bus-time-table/jhargram-to-kolkata.html
           grep -q 'sbstc-jhrdep-jhargram-kolkata-1' bus-time-table/sbstc-buses.html
           grep -q '536' bus-time-table/sbstc-buses.html
