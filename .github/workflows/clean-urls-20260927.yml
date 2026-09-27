@@ -1,0 +1,158 @@
+name: Clean URL migration (sitemap + canonicals) 20260927
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Write fix script
+        run: |
+          cat > scripts/fix_clean_urls.py <<'APPLYEOF'
+          #!/usr/bin/env python3
+          """Convert all absolute busjatri.in URLs from .html to clean (extensionless)
+          form in the sitemaps and every deployed HTML page.
+
+          Why: Cloudflare Pages serves /page.html as a 301 to /page, and Google already
+          indexes the clean URL as canonical (verified in GSC: googleCanonical is the
+          extensionless URL while our tags say .html). This aligns sitemap <loc>,
+          canonical tags, og:url, twitter:url and JSON-LD url/Breadcrumb entries with
+          what Google already picked - a consolidation, not a URL change. Relative
+          links (SPA routes like ../index.html#/bus/...) are NOT touched, so nothing
+          user-facing moves.
+
+          Scope (deployed files only, scripts/ and .github/ excluded):
+          - sitemap.xml, sitemap-via.xml, sitemap-popular.xml, sitemap-extra.xml
+          - every .html under the repo root (root, bus-time-table/, via/, blog/)
+
+          Idempotent: re-running makes no further changes. ASCII-only source.
+          """
+          import re
+          import sys
+          from pathlib import Path
+
+          ROOT = Path(__file__).resolve().parents[1]
+
+          SITEMAPS = ["sitemap.xml", "sitemap-via.xml", "sitemap-popular.xml", "sitemap-extra.xml"]
+
+          # absolute URL ending in .html, followed by a delimiter (quote, whitespace,
+          # tag-open or ampersand) so mid-URL matches or .html.png assets never convert
+          ABS_RE = re.compile(r'(https://busjatri\.in/[^"\'\s<>]+?)\.html(?=["\'\s<&])')
+          # sitemap <loc> form
+          LOC_RE = re.compile(r'(<loc>https://busjatri\.in/[^<]+?)\.html(</loc>)')
+          # special case: the homepage file URL
+          HOME_RE = re.compile(r'https://busjatri\.in/index\.html(?=["\'\s<&])')
+
+
+          def fix_sitemaps():
+              total_before = total_after = 0
+              for name in SITEMAPS:
+                  p = ROOT / name
+                  if not p.exists():
+                      print("skip missing sitemap:", name)
+                      continue
+                  s = p.read_text(encoding="utf-8")
+                  before = s.count("<loc>")
+                  s = LOC_RE.sub(r"\1\2", s)
+                  s = HOME_RE.sub("https://busjatri.in/", s)
+                  after = s.count("<loc>")
+                  assert before == after, (name, before, after)
+                  assert ".html</loc>" not in s, name
+                  p.write_text(s, encoding="utf-8")
+                  total_before += before
+                  total_after += after
+                  print("sitemap %s: %d locs, all clean" % (name, after))
+              return total_before
+
+
+          def fix_html_files():
+              files = [p for p in ROOT.rglob("*.html")
+                       if "scripts" not in p.parts and ".github" not in p.parts
+                       and p.parent != ROOT / "scripts"]
+              changed = 0
+              total_subs = 0
+              for p in files:
+                  s = p.read_text(encoding="utf-8")
+                  n = len(ABS_RE.findall(s))
+                  if n == 0:
+                      continue
+                  s = HOME_RE.sub("https://busjatri.in/", s)
+                  s = ABS_RE.sub(r"\1", s)
+                  p.write_text(s, encoding="utf-8")
+                  changed += 1
+                  total_subs += n
+              print("html files scanned: %d, changed: %d, url substitutions: %d"
+                    % (len(files), changed, total_subs))
+              return changed, files
+
+
+          def main():
+              fix_sitemaps()
+              changed, files = fix_html_files()
+
+              # final validation
+              leftover = 0
+              for p in files:
+                  s = p.read_text(encoding="utf-8")
+                  leftover += len(ABS_RE.findall(s))
+                  leftover += len(HOME_RE.findall(s))
+              assert leftover == 0, "absolute .html urls remain: %d" % leftover
+              for name in SITEMAPS:
+                  p = ROOT / name
+                  if p.exists():
+                      t = p.read_text(encoding="utf-8")
+                      assert ".html</loc>" not in t
+                      assert t.count("<loc>") > 0
+              print("OK: all absolute busjatri.in URLs are clean (no .html)")
+
+
+          if __name__ == "__main__":
+              main()
+          APPLYEOF
+
+      - name: Run clean URL fix
+        run: python3 scripts/fix_clean_urls.py
+
+      - name: Validate
+        run: |
+          grep -q 'rel="canonical" href="https://busjatri.in/bus-time-table/sbstc-buses"' bus-time-table/sbstc-buses.html
+          grep -q 'rel="canonical" href="https://busjatri.in/bus-time-table/jhargram-to-kolkata"' bus-time-table/jhargram-to-kolkata.html
+          grep -q 'rel="canonical" href="https://busjatri.in/"' index.html
+          grep -q 'index.html#/bus/' bus-time-table/jhargram-to-kolkata.html
+          python3 - <<'EOF'
+          import xml.etree.ElementTree as ET
+          import re, pathlib
+          for f in ['sitemap.xml','sitemap-via.xml','sitemap-popular.xml','sitemap-extra.xml']:
+              t = ET.parse(f)
+              locs = [e.text for e in t.iter() if e.tag.endswith('loc')]
+              dirty = [l for l in locs if l.endswith('.html')]
+              assert not dirty, (f, dirty[:3])
+              print(f, len(locs), 'clean locs')
+          leftover = 0
+          for p in pathlib.Path('.').rglob('*.html'):
+              if 'scripts' in p.parts or '.github' in p.parts:
+                  continue
+              s = p.read_text(encoding='utf-8')
+              leftover += len(re.findall(r'https://busjatri\.in/[^"\'\s<&]+\.html(?=["\'\s<&])', s))
+          assert leftover == 0, leftover
+          print('OK: sitemaps + all pages clean, no absolute .html urls left')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Clean URL migration: sitemap locs + canonical/og/JSON-LD urls to extensionless (align with Google's canonical)"
+            git push
+          fi
