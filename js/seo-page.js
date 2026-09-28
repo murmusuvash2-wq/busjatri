@@ -46,6 +46,7 @@
   }
 
   function addBackBtn() {
+    if (document.body.getAttribute('data-noback') === '1') return;
     var host = document.querySelector('.header-inner');
     if (!host || document.getElementById('bjBackBtn')) return;
     var b = document.createElement('button');
