@@ -125,10 +125,12 @@
           if (brd2 == null || arr2 == null) continue;
           var b2n = brd2; while (b2n < arr1 + 5) b2n += 1440;
           var wait = b2n - arr1;
-          if (wait < 5 || wait > 240) continue;
-          var a2n = arr2; while (a2n <= b2n) a2n += 1440;
-          var start = depFrom1; if (start < now - 15) { start += 1440; arr1 += 1440; b2n += 1440; a2n += 1440; }
-          if (a2n - start > 36 * 60) continue;
+      /* 2026-09-28 sanity: a >90 min changeover or >8 h door-to-door is a
+         worse plan than waiting for the next direct bus — don't offer it. */
+      if (wait < 5 || wait > 90) continue;
+      var a2n = arr2; while (a2n <= b2n) a2n += 1440;
+      var start = depFrom1; if (start < now - 15) { start += 1440; arr1 += 1440; b2n += 1440; a2n += 1440; }
+      if (a2n - start > 8 * 60) continue;
           var okey = slug(hub) + '|' + b1.id + '|' + b2.id;
           var opt = { b1: b1, b2: b2, hub: hub, depFrom: start, arrHub: arr1, boardHub: b2n, arriveTo: a2n, wait: wait, arrivalRel: a2n - now };
           if (!best[okey] || opt.arrivalRel < best[okey].arrivalRel) best[okey] = opt;
@@ -151,22 +153,22 @@
   function optCard(o, n) {
     var b1 = o.b1, b2 = o.b2;
     function leg(b, fromLbl, toLbl, depMin, pillNote) {
-      return '<div class="result-item" style="--i:0;margin:0" onclick="location.hash=\'#/bus/' + encodeURIComponent(b.id) + '\'">' +
+      return '<div class="result-item rc" style="--i:0;margin:0" onclick="location.hash=\'#/bus/' + encodeURIComponent(b.id) + '\'">' +
         '<div class="ri-main">' +
-        '<div class="name">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + '</div>' +
-        '<div class="route">' + esc(pn(fromLbl)) + ' <span class="rarr">→</span> ' + esc(pn(toLbl)) + '</div>' +
+        '<div class="name">' + esc(b.bus_name) + ' ' + busTypeBadge(b.bus_type) + '</div>' +
+        '<div class="route">' + esc(pn(dispName(fromLbl, b.operator))) + ' <span class="rarr">→</span> ' + esc(pn(dispName(toLbl, b.operator))) + '</div>' +
         '<div style="font-size:12px;color:var(--amber);font-weight:600;margin-top:2px"><span class="label-en">' + pillNote.en + '</span><span class="label-bn">' + pillNote.bn + '</span></div>' +
         '</div>' +
         '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(depMin) + '</span></div>';
     }
     return '<div style="margin:0 0 14px;border:1.5px solid var(--line,rgba(33,28,22,.13));border-radius:14px;padding:12px;background:var(--surface,#fffcf4)">' +
       '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:12px;color:var(--ink-dim,#665)">' +
-      '<span style="background:rgba(46,125,50,.09);color:#2e7d32;border-radius:99px;padding:2px 10px;font-weight:700;white-space:nowrap"><span class="label-en">Route ' + n + ' · via </span><span class="label-bn">রুট ' + bnNum(n) + ' · </span>' + esc(pn(o.hub)) + '</span>' +
+      '<span style="background:rgba(46,125,50,.09);color:#2e7d32;border-radius:99px;padding:2px 10px;font-weight:700;white-space:nowrap"><span class="label-en">Route ' + n + ' · via </span><span class="label-bn">রুট ' + bnNum(n) + ' · </span>' + esc(pn(dispName(o.hub, o.b1.operator))) + '</span>' +
       '<span class="label-en">1 change</span><span class="label-bn">১ বার বাস বদল</span></div>' +
-      leg(b1, o.fromLbl, o.hub, o.depFrom, { en: 'arrives ' + esc(pn(o.hub)) + ' ' + fmtTime(o.arrHub % 1440), bn: esc(pn(o.hub)) + ' পৌঁছায় ' + bnTime(o.arrHub) }) +
+      leg(b1, o.fromLbl, o.hub, o.depFrom, { en: 'arrives ' + esc(pn(dispName(o.hub, o.b1.operator))) + ' ' + fmtTime(o.arrHub % 1440), bn: esc(pn(dispName(o.hub, o.b1.operator))) + ' পৌঁছায় ' + bnTime(o.arrHub) }) +
       '<div style="display:flex;align-items:center;gap:10px;margin:8px 0;padding:8px 12px;border-radius:10px;background:rgba(46,125,50,.08)">' +
       '<span style="color:#2e7d32;font-weight:800;line-height:1">⇅</span>' +
-      '<span style="flex:1;min-width:0;font-size:12.5px;color:#2e7d32;font-weight:600"><span class="label-en">Change at </span><span class="label-bn">বাস বদলান: </span>' + esc(pn(o.hub)) + '</span>' +
+      '<span style="flex:1;min-width:0;font-size:12.5px;color:#2e7d32;font-weight:600"><span class="label-en">Change at </span><span class="label-bn">বাস বদলান: </span>' + esc(pn(dispName(o.hub, o.b2.operator))) + '</span>' +
       '<span style="font-size:11px;color:#2e7d32;border:1px solid rgba(46,125,50,.35);border-radius:99px;padding:1px 8px;white-space:nowrap">' + bnNum(o.wait) + ' <span class="label-en">min wait</span><span class="label-bn">মিনিট অপেক্ষা</span></span></div>' +
       leg(b2, o.hub, o.toLbl, o.boardHub % 1440, { en: 'arrives ' + esc(pn(o.toLbl)) + ' ' + fmtTime(o.arriveTo % 1440), bn: esc(pn(o.toLbl)) + ' পৌঁছায় ' + bnTime(o.arriveTo) }) +
       '<div style="font-size:11.5px;color:var(--ink-dim,#665);margin-top:8px;text-align:right"><span class="label-en">Total: </span><span class="label-bn">মোট যাত্রা: </span><b>' + fmtTime(o.depFrom % 1440) + ' → ' + fmtTime(o.arriveTo % 1440) + ' · ' + durTxtBn(o.arriveTo - o.depFrom) + ' (' + durTxt(o.arriveTo - o.depFrom) + ')</b></div>' +
@@ -204,7 +206,7 @@
     if (!container) return;
 
     var now = minutesNow();
-    var direct = [], minRel = Infinity;
+    var direct = [], minRel = Infinity, nextB = null, nextDep = null;
     var buses = Object.values(BUSES);
     for (var i = 0; i < buses.length; i++) {
       var b = buses[i];
@@ -216,7 +218,7 @@
       if (fi < 0 || ti < 0 || fi === ti) continue;
       direct.push(b);
       var dm = fi < ti ? stopAt(b, fi, 'up') : stopAt(b, fi, 'down');
-      if (dm != null) { if (dm < now) dm += 1440; if (dm - now < minRel) minRel = dm - now; }
+      if (dm != null) { if (dm < now) dm += 1440; if (dm - now < minRel) { minRel = dm - now; nextB = b; nextDep = dm; } }
     }
 
     var mode = null;
@@ -225,12 +227,20 @@
     if (!mode) return;
 
     var opts = findAlt(from, to, now);
-    if (!opts.length) return;
-
     var fromLbl = from.charAt(0).toUpperCase() + from.slice(1);
     var toLbl = to.charAt(0).toUpperCase() + to.slice(1);
     var gapHrs = Math.round(minRel / 60);
-    var html = sectionHtml(opts, mode, gapHrs, fromLbl, toLbl);
+    var html = null;
+    if (opts.length) {
+      html = sectionHtml(opts, mode, gapHrs, fromLbl, toLbl);
+    } else if (mode === 'B' && nextB && nextDep != null) {
+      /* 2026-09-28: every 1-change option failed sanity (wait >90 min or
+         total >8 h) — show the next direct bus instead of junk detours */
+      html = '<div id="bj-alt-route" style="margin:26px 0 4px;border-top:1.5px dashed var(--line,rgba(33,28,22,.13));padding-top:18px">' +
+        '<h3 style="font-size:15px;font-weight:800;margin:0 0 4px;color:var(--ink)"><span class="label-en">No quicker 1-change route</span><span class="label-bn">এত ভালো বদলে-যাওয়া পথ নেই</span></h3>' +
+        '<p style="font-size:12.5px;color:var(--ink-dim,#665);margin:0;line-height:1.6"><span class="label-en">Every option with a change needs a long wait or a big detour. Next direct bus: <b>' + esc(nextB.bus_name) + '</b> at <b>' + fmtTime(nextDep % 1440) + '</b> — best to wait.</span><span class="label-bn">বাস বদলে গেলে দীর্ঘ অপেক্ষা বা বড় পথ লাগবে। পরের সরাসরি বাস: <b>' + esc(pn(nextB.bus_name)) + '</b>, <b>' + bnTime(nextDep) + '</b>-এ — অপেক্ষা করাই ভালো।</span></p></div>';
+    }
+    if (!html) return;
 
     var footer = container.querySelector('p[style*="border-top"]') || container.lastElementChild;
     if (footer && footer !== container.firstElementChild) footer.insertAdjacentHTML('beforebegin', html);

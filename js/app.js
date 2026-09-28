@@ -49,6 +49,10 @@ const BN_PLACES = {
   'Jaynagar': 'জয়নগর', 'Bagnan': 'বাগনান', 'Amtala': 'আমতলা', 'Behala': 'বেহালা',
   'Nabadwip Dham': 'নবদ্বীপ ধাম', 'Sainthia Town': 'সাঁইথিয়া টাউন', 'Panagarh': 'পানাগড়়',
   'Durgapur (Station)': 'দুর্গাপুর (স্টেশন)', 'Bishnupur (Bankura)': 'বিষ্ণুপুর (বাঁকুড়া)',
+  'Durgapur (City Center)': 'দুর্গাপুর (সিটি সেন্টার)', 'Durgapur (Bus Stand)': 'দুর্গাপুর (বাস স্ট্যান্ড)', 'Durgapur (Expressway)': 'দুর্গাপুর (এক্সপ্রেসওয়ে)',
+  'Bankura (Bypass)': 'বাঁকুড়া (বাইপাস)', 'Bankura (Bus Stand)': 'বাঁকুড়া (বাস স্ট্যান্ড)', 'Bankura (Station)': 'বাঁকুড়া (স্টেশন)',
+  'Bankura (Pump More)': 'বাঁকুড়া (পাম্প মোড়)', 'Bankura (More)': 'বাঁকুড়া (মোড়)', 'Bankura (Satighat Bridge)': 'বাঁকুড়া (সতীঘাট ব্রিজ)',
+  'Kolkata (Karunamoyee)': 'কলকাতা (করুণাময়ী)', 'Kolkata (Esplanade)': 'কলকাতা (এসপ্ল্যানেড)', 'Kolkata (Dharmatala)': 'কলকাতা (ধর্মতলা)', 'Kolkata (Babughat)': 'কলকাতা (বাবুঘাট)',
 };
 function pn(s) {
   return (LANG === 'bn' && BN_PLACES[s]) ? BN_PLACES[s] : s;
@@ -272,10 +276,20 @@ function quickSearch(name) {
   location.hash = '#/search?' + q.toString();
 }
 
+/* 2026-09-28: same-name-different-place traps. 'Durgapur Bridge' is a
+   Kolkata (Behala) landmark on Diamond Harbour Road and 'Dakshin Durgapur'
+   is a South 24 Parganas village near Joynagar — neither is Durgapur city
+   (Bardhaman district), so both are blocked from matching 'durgapur'. */
+const PLACE_TRAPS = {
+  'durgapurbridge': ['durgapur'],
+  'dakshindurgapur': ['durgapur']
+};
 function placeMatchesCore(value, query) {
   const v = String(value || '').toLowerCase().trim();
   const q = String(query || '').toLowerCase().trim();
   if (!v || !q) return false;
+  const _tc = s => s.replace(/[^a-z0-9]/g, '');
+  if (PLACE_TRAPS[_tc(v)] && PLACE_TRAPS[_tc(v)].indexOf(_tc(q)) > -1) return false;
   if (v.includes(q)) return true;
   const compact = s => s.replace(/[^a-z0-9]/g, '');
   const vc = compact(v).replace(/ac$/, '');
@@ -303,7 +317,9 @@ const PLACE_ALIAS_GROUPS = [
   ['contai', 'kanthi'],
   ['berhampore', 'baharampur'],
   ['bardhaman', 'burdwan'],
-  ['kolkata', 'calcutta', 'esplanade', 'santragachi', 'garia', 'tollygunge', 'kudghat', 'karunamoyee'],
+  /* 2026-09-28: +babughat/dharmatala — normal users type 'kolkata', SBSTC/private
+     intercity termini must be found. Howrah stays a separate city (user decision). */
+  ['kolkata', 'calcutta', 'esplanade', 'santragachi', 'garia', 'tollygunge', 'kudghat', 'karunamoyee', 'babughat', 'dharmatala', 'dharmatola'],
   ['bolpur', 'santiniketan'],
   ['tarakeswar', 'tarakeshwar'],
   ['malda', 'english bazar', 'malda town'],
@@ -312,6 +328,39 @@ const PLACE_ALIAS_GROUPS = [
 ];
 const PLACE_ALIAS = {};
 PLACE_ALIAS_GROUPS.forEach(function (g) { g.forEach(function (n) { PLACE_ALIAS[n] = g; }); });
+/* 2026-09-28: display-only canonical names — multi-stand towns read as one
+   family: 'Durgapur Station' -> 'Durgapur (Station)', 'Bankura Bypass' ->
+   'Bankura (Bypass)', intercity termini get their city: 'Karunamoyee' ->
+   'Kolkata (Karunamoyee)'. Data files stay untouched (3,363 SEO pages safe);
+   WBTC/Mini Bus city buses keep their raw locality names. */
+const DISPLAY_NAME = {
+  'durgapur station': 'Durgapur (Station)',
+  'durgapur st.': 'Durgapur (Station)',
+  'durgapur st': 'Durgapur (Station)',
+  'durgapur city center': 'Durgapur (City Center)',
+  'durgapur city centre': 'Durgapur (City Center)',
+  'durgapur bus stand': 'Durgapur (Bus Stand)',
+  'durgapur expressway': 'Durgapur (Expressway)',
+  'bankura bypass': 'Bankura (Bypass)',
+  'bankura bus stand': 'Bankura (Bus Stand)',
+  'bankura station': 'Bankura (Station)',
+  'bankura pump more': 'Bankura (Pump More)',
+  'bankura pump': 'Bankura (Pump)',
+  'bankura more': 'Bankura (More)',
+  'bankura satighat bridge': 'Bankura (Satighat Bridge)',
+  'karunamoyee': 'Kolkata (Karunamoyee)',
+  'saltlake karunamoyee': 'Kolkata (Karunamoyee)',
+  'esplanade': 'Kolkata (Esplanade)',
+  'dharmatala': 'Kolkata (Dharmatala)',
+  'dharmatola': 'Kolkata (Dharmatala)',
+  'babughat': 'Kolkata (Babughat)'
+};
+function dispName(name, operator) {
+  const d = DISPLAY_NAME[String(name || '').toLowerCase().trim()];
+  if (!d) return name;
+  if (/WBTC|Mini Bus/i.test(String(operator || ''))) return name;
+  return d;
+}
 function aliasVariants(name) {
   const k = String(name || '').toLowerCase().trim();
   const g = PLACE_ALIAS[k];

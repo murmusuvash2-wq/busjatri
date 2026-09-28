@@ -359,6 +359,57 @@
       var opHtml = opq ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><span onclick="bjOpChipClear()" ' +
         'style="display:inline-flex;align-items:center;gap:8px;background:var(--amber-soft,#f6e7c6);border:1.5px solid var(--amber,#b8791f);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer">' +
         icon('bus') + ' ' + esc(opq.toUpperCase()) + ' <span style="font-weight:800;color:var(--ink-dim,#665)">' + String.fromCharCode(10005) + '</span></span></p>') : '';
+      /* 2026-09-28: compact rows + See More (10 at a time) + origin-first
+           grouping, so the content below the list stays reachable. */
+      var RC_BATCH = 10;
+      function bnD(n) { return String(n).replace(/[0-9]/g, function (d) { return '০১২৩৪৫৬৭৮৯'[+d]; }); }
+      function rowCard(r, i) {
+          var b = r.b;
+          var isNear = r.depMin != null && rel(r.depMin) <= 180;
+          var isRet = (routeMode || (stop && !from && !to)) && !r.fwd;
+          var revBadge = isRet ? '<span class="rc-ret"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
+          var ro = isRet ? b.destination : b.origin;
+          var rd = isRet ? b.origin : b.destination;
+          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (r.depMin < now ? ' · <span class="label-en">tomorrow</span><span class="label-bn">আগামীকাল</span>' : '') + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:.55"><span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
+          return '<div class="result-item rc' + (isNear ? ' near' : '') + '" style="--i:' + (i % RC_BATCH) + ';position:relative" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
+            '<div class="ri-main">' +
+            '<div class="name">' + esc(b.bus_name) + ' ' + busTypeBadge(b.bus_type) + revBadge + '</div>' +
+            '<div class="route">' + esc(pn(dispName(ro, b.operator))) + ' <span class="rarr">→</span> ' + esc(pn(dispName(rd, b.operator))) + (b.operator ? ' · ' + esc(b.operator) : '') + '</div>' +
+            '</div>' + tPill + bookChip(b, ro, rd, r.depMin != null && r.depMin < now) + '</div>';
+      }
+      var cards = [];
+      if (routeMode) {
+          var fromCity = canonName(from);
+          var oRows = [], pRows = [];
+          rows.forEach(function (r) { (bjPosIn(r.b, from) === 0 ? oRows : pRows).push(r); });
+          if (oRows.length) {
+            cards.push('<div class="rc-glabel"><span class="label-en">Starting from ' + esc(fromCity) + '</span><span class="label-bn">' + esc(pn(fromCity)) + ' থেকে ছাড়ে</span></div>');
+            oRows.forEach(function (r, i) { cards.push(rowCard(r, i)); });
+          }
+          if (pRows.length) {
+            cards.push('<div class="rc-glabel"><span class="label-en">Passing through ' + esc(fromCity) + '</span><span class="label-bn">' + esc(pn(fromCity)) + ' হয়ে যায়</span></div>');
+            pRows.forEach(function (r, i) { cards.push(rowCard(r, i)); });
+          }
+      } else {
+          rows.forEach(function (r, i) { cards.push(rowCard(r, i)); });
+      }
+      var shownCount = Math.min(cards.length, RC_BATCH);
+      var listHtml = cards.slice(0, shownCount).join('');
+      if (cards.length > shownCount) {
+          window.__bjCards = cards;
+          window.__bjShown = shownCount;
+          window.bjSeeMore = function () {
+            var w = document.getElementById('bj-see-more-wrap');
+            if (!w || !window.__bjCards) return;
+            w.insertAdjacentHTML('beforebegin', window.__bjCards.slice(window.__bjShown, window.__bjShown + RC_BATCH).join(''));
+            window.__bjShown += RC_BATCH;
+            var left = window.__bjCards.length - window.__bjShown;
+            if (left <= 0) { w.parentNode.removeChild(w); return; }
+            var btn = document.getElementById('bj-see-more');
+            if (btn) btn.innerHTML = '<span class="label-en">See 10 more · ' + left + ' left</span><span class="label-bn">আরও ১০টি · ' + bnD(left) + ' বাকি</span>';
+          };
+          listHtml += '<div id="bj-see-more-wrap" style="text-align:center;margin:4px 0 12px"><button class="see-more-btn" id="bj-see-more" onclick="bjSeeMore()"><span class="label-en">See 10 more · ' + (cards.length - shownCount) + ' left</span><span class="label-bn">আরও ১০টি · ' + bnD(cards.length - shownCount) + ' বাকি</span></button></div>';
+      }
       el.innerHTML =
         '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
         '<div class="back-btn" onclick="location.hash=' + String.fromCharCode(39) + '#/' + String.fromCharCode(39) + '">' + icon('chevronLeft') + ' <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>' +
@@ -368,24 +419,7 @@
         (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:2px 0 10px"><span class="label-en">timed departures first · rest listed below</span><span class="label-bn">সময় সহ বাস আগে · বাকি নিচে</span></p>' : '') +
         (near.length ? '<p class="near-label">' + icon('clock') + ' <span class="label-en">' + near.length + ' buses around current time</span><span class="label-bn">' + near.length + ' বাস বর্তমান সময়ের কাছাকাছি</span></p>' : '') +
         (routeMode || (stop && !from && !to) ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px"><b style="color:var(--amber)">⇗</b> <span class="label-en">outward · </span><span class="label-bn">যাত্রা · </span><b style="color:var(--maroon)">⇙</b> <span class="label-en">return service</span><span class="label-bn">ফেরার বাস</span></p>' : '') +
-        (rows.length ? rows.map(function (r, i) {
-          var b = r.b;
-          var isNear = r.depMin != null && rel(r.depMin) <= 180;
-          var isRet = (routeMode || (stop && !from && !to)) && !r.fwd;
-          var revBadge = isRet ? '<span style="font-size:10px;font-weight:700;color:var(--maroon);border:1px solid var(--maroon);border-radius:6px;padding:2px 7px;margin-left:6px;white-space:nowrap"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
-          var ro = isRet ? b.destination : b.origin;
-          var rd = isRet ? b.origin : b.destination;
-          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (r.depMin < now ? ' · <span class="label-en">tomorrow</span><span class="label-bn">আগামীকাল</span>' : '') + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:.55"><span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
-          return '<div class="result-item ' + (isNear ? 'near' : '') + '" style="--i:' + i + ';position:relative" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
-            '<div class="ri-main">' +
-            (isNear ? '<div class="near-label">' + icon('clock') + ' <span class="label-en">Coming up</span><span class="label-bn">আসছে</span></div>' : '') +
-            '<div class="name">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + revBadge + '</div>' +
-            '<div class="route">' + esc(pn(ro)) + ' <span class="rarr">→</span> ' + esc(pn(rd)) + '</div>' +
-            '<div class="meta"><span>' + icon('stops') + ' ' + (b.total_stoppages || (b.stoppages || []).length) + ' stops</span>' +
-            (b.operator ? '<span>' + esc(b.operator) + '</span>' : '') +
-            (b.fare ? '<span>' + esc(b.fare) + '</span>' : '') + '</div>' +
-            '</div>' + tPill + bookChip(b, ro, rd, r.depMin != null && r.depMin < now) + '</div>';
-        }).join('') : emptyState) +
+        (cards.length ? listHtml : emptyState) +
         '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:18px 0 0;border-top:1px solid var(--line,rgba(33,28,22,.13));padding-top:10px"><span class="label-en">Data last refreshed: </span><span class="label-bn">শেষ হালনাগাদ: </span><strong>' + esc((DATA.meta || {}).last_updated || '—') + '</strong> · <span class="label-en">Schedules may change. Verify with the operator before travel.</span><span class="label-bn">সময়সূচি বদলাতে পারে। যাত্রার আগে যাচাই করে নিন।</span></p>' +
         '</div>';
     };
