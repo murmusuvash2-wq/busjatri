@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kolkata City Bus Timetable (WBTC) — Search Routes, Times & Stops | BusJatri</title>
+<meta name="description" content="Kolkata city bus timetable — search 73 WBTC/CTC routes by from-to or stop. Which bus goes from Howrah Station to Airport? S-9A, AC-39 timings, first & last bus.">
+<meta name="theme-color" content="#b8791f">
+<link rel="canonical" href="https://busjatri.in/kolkata-city-bus-timetable">
+<meta property="og:title" content="Kolkata City Bus Timetable (WBTC) — Search Routes, Times & Stops | BusJatri">
+<meta property="og:description" content="Kolkata city bus timetable — search 73 WBTC/CTC routes by from-to or stop. Which bus goes from Howrah Station to Airport? S-9A, AC-39 timings, first & last bus.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://busjatri.in/kolkata-city-bus-timetable">
+<meta property="og:image" content="https://busjatri.in/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700;9..144,800&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>/* BusJatri SEO Pages v5 — matches home design system */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+
+:root{
+  --bg:#f5efe1;--bg-alt:#ece2cb;--surface:#fffcf4;--surface-2:#efe6d3;
+  --ink:#211c16;--ink-dim:#6f6653;
+  --line:rgba(33,28,22,.13);--line-strong:rgba(33,28,22,.24);
+  --amber:#b8791f;--amber-ink:#6b4610;--amber-soft:rgba(184,121,31,.14);
+  --maroon:#a13b2e;--maroon-soft:rgba(161,59,46,.13);
+  --green:#3f6b42;--green-soft:rgba(63,107,66,.13);
+  --govt:#35608a;--govt-soft:rgba(53,96,138,.12);
+  --shadow:0 10px 34px -12px rgba(33,28,22,.28);--shadow-sm:0 2px 12px rgba(33,28,22,.1);
+  --radius-lg:20px;--radius:14px;--radius-sm:9px;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'IBM Plex Sans','IBM Plex Sans Bengali',system-ui,sans-serif;
+  --font-mono:'IBM Plex Mono',ui-monospace,monospace;
+  --panel:var(--surface-2);--border:var(--line);--border-strong:var(--line-strong);
+}
+body.dark{
+  --bg:#15121d;--bg-alt:#1c1826;--surface:#201c2b;--surface-2:#2a2537;
+  --ink:#f1ead8;--ink-dim:#9b8e75;
+  --line:rgba(241,234,216,.13);--line-strong:rgba(241,234,216,.24);
+  --amber:#d8963e;--amber-ink:#e8b45e;--amber-soft:rgba(216,150,62,.14);
+  --maroon:#e0634a;--maroon-soft:rgba(224,99,74,.13);
+  --green:#7cb87f;--green-soft:rgba(124,184,127,.13);
+  --govt:#7a9fc4;--govt-soft:rgba(122,159,196,.12);
+  --shadow:0 10px 34px -12px rgba(0,0,0,.5);--shadow-sm:0 2px 12px rgba(0,0,0,.3);
+  --panel:var(--surface-2);--border:var(--line);--border-strong:var(--line-strong);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:var(--font-body);background:var(--bg);color:var(--ink);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:var(--amber-ink);text-decoration:none}
+.container{max-width:720px;margin:0 auto;padding:0 18px}
+
+/* bengali */
+body.lang-bn .label-bn{display:inline!important}
+body.lang-bn .label-en{display:none!important}
+.label-bn{display:none;font-weight:600}
+body.lang-bn .uppercase-text,body.lang-bn .lv-clock-label,body.lang-bn .eyebrow,body.lang-bn .meta-lb{text-transform:none;letter-spacing:0}
+
+/* header */
+.top-bar{display:flex;justify-content:space-between;align-items:center;padding:14px 0;position:sticky;top:0;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(14px);z-index:100;border-bottom:1px solid var(--line)}
+.top-inner{display:flex;justify-content:space-between;align-items:center;width:100%;padding:0 18px;max-width:720px;margin:0 auto}
+.brand{font-family:var(--font-display);font-size:1.4rem;font-weight:700;cursor:pointer;text-decoration:none;color:var(--ink)}
+.brand .accent{color:var(--amber)}
+.top-actions{display:flex;gap:8px;align-items:center}
+.top-btn{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;color:var(--ink-dim);display:flex;align-items:center;gap:5px;min-height:40px}
+.top-btn:hover{border-color:var(--amber);color:var(--amber)}
+
+/* breadcrumb */
+.breadcrumb{display:flex;gap:6px;align-items:center;font-size:11px;color:var(--ink-dim);font-family:var(--font-mono);margin:14px 0 0;flex-wrap:wrap}
+.breadcrumb a{color:var(--ink-dim)}
+.breadcrumb a:hover{color:var(--amber)}
+.breadcrumb .sep{opacity:.5}
+
+/* hero */
+.hero{position:relative;padding:22px 0 10px}
+.hero-route-line{position:absolute;top:22px;left:0;width:100%;height:3px;border-top:3px dashed var(--line-strong);opacity:.5}
+.hero-route-line::before,.hero-route-line::after{content:"";position:absolute;top:-5.5px;width:10px;height:10px;border-radius:50%;background:var(--bg);border:2.5px solid var(--line-strong);box-sizing:border-box}
+.hero-route-line::before{left:22%}
+.hero-route-line::after{left:76%}
+.hero-route-line .icon{position:absolute;top:-17px;left:0;color:var(--amber);opacity:.75;width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;animation:driftBus 15s ease-in-out infinite}
+.eyebrow{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent);padding:4px 11px;border-radius:999px;margin-bottom:14px;animation:fadeUp .5s ease both}
+.eyebrow svg{width:13px;height:13px}
+.hero h1{font-family:var(--font-display);font-size:clamp(1.45rem,5vw,2rem);font-weight:700;line-height:1.2;margin:0 0 6px;letter-spacing:-.01em;animation:fadeUp .6s .05s ease both}
+.hero h1 .arrow{color:var(--amber);font-family:var(--font-mono);margin:0 4px;font-weight:400}
+.hero h1 .accent{color:var(--amber)}
+.tagline{font-size:14px;color:var(--ink-dim);margin-bottom:14px;animation:fadeUp .6s .1s ease both}
+.stat-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px;animation:fadeUp .6s .12s ease both}
+.stat-chip{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:12px;font-weight:600;color:var(--ink-dim)}
+.stat-chip strong{color:var(--ink);font-family:var(--font-mono)}
+
+/* search box */
+.search-box{background:var(--surface);border:1px solid var(--line-strong);border-radius:var(--radius);box-shadow:var(--shadow-sm);padding:14px 16px;margin:10px 0 16px;animation:fadeUp .6s .15s ease both}
+.search-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}
+.search-field{flex:1;min-width:130px}
+.search-field label{display:flex;align-items:center;gap:4px;font-family:var(--font-mono);font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-dim);margin-bottom:5px}
+.search-field label svg{width:11px;height:11px}
+.search-field input{width:100%;border:none;border-bottom:2px solid var(--line-strong);background:transparent;padding:6px 2px;font-size:16px;font-weight:700;font-family:var(--font-body);color:var(--ink);outline:none;transition:border-color .2s}
+.search-field input:focus{border-bottom-color:var(--amber)}
+.search-field input::placeholder{font-weight:400;color:var(--ink-dim);font-size:14px;opacity:.55}
+.search-actions{display:flex;padding:10px 2px 0}
+.search-btn{flex:1;background:var(--amber);color:#fff9ee;border:none;border-radius:var(--radius-sm);padding:12px 22px;font-family:var(--font-body);font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:5px;min-height:44px;transition:filter .2s}
+.search-btn:hover{filter:brightness(1.1)}
+.swap-btn{align-self:center;flex:none;width:36px;height:36px;border-radius:50%;border:1px solid var(--line-strong);background:var(--surface-2);color:var(--ink-dim);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:transform .2s,border-color .2s,color .2s;margin-top:14px}
+.swap-btn:hover{border-color:var(--amber);color:var(--amber);transform:rotate(180deg)}
+.via-hint{font-weight:400;color:var(--ink-dim);text-transform:none;letter-spacing:0;font-family:var(--font-body)}
+@media(max-width:639px){.swap-btn{display:none}}
+
+/* live departures */
+.lv-wrap{margin:0 0 8px;animation:fadeUp .6s .2s ease both}
+.lv-clock-wrap{display:flex;align-items:center;justify-content:space-between;background:var(--surface);border:1px solid var(--line);border-radius:16px 16px 0 0;padding:12px 16px 10px;font-family:var(--font-mono)}
+.lv-clock-label{color:var(--ink-dim);font-size:10px;letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:7px}
+.lv-clock-label .ldot{width:8px;height:8px;border-radius:50%;background:#e0634a;animation:lvPulse 1.2s infinite}
+.lv-clock-big{font-size:26px;font-weight:700;color:var(--amber);letter-spacing:.06em;line-height:1;margin-top:4px}
+.lv-clock-big small{font-size:10px;color:var(--ink-dim);letter-spacing:.14em;margin-left:6px;vertical-align:middle;font-weight:600}
+.lv-geo{color:var(--ink-dim);font-size:10px;text-align:right;line-height:1.45;max-width:150px}
+.lv-geo b{color:var(--ink);font-weight:600;display:block;font-size:11.5px}
+.lv-board{background:var(--surface);border:1px solid var(--line);border-top:1px dashed var(--line-strong);border-radius:0 0 16px 16px;padding:12px;font-family:var(--font-mono)}
+.lv-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+.lv-tab{background:var(--surface-2);border:1px solid var(--line);color:var(--ink-dim);font-family:var(--font-mono);font-size:11px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;letter-spacing:.03em;min-height:34px;transition:all .15s}
+.lv-tab.on{background:var(--amber);color:#fff9ee;border-color:var(--amber);font-weight:700}
+.lv-row{display:flex;align-items:center;gap:10px;padding:8px 6px;border-bottom:1px solid var(--line);animation:lvIn .5s ease both;cursor:pointer}
+.lv-row:last-child{border-bottom:none}
+.lv-row .lt{font-size:14px;font-weight:700;color:var(--amber);min-width:50px}
+.lv-row .lnm{flex:1;min-width:0;font-size:12px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;letter-spacing:.03em;color:var(--ink)}
+.lv-row .ldst{font-size:10px;color:var(--ink-dim);min-width:70px;text-align:right;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lv-row .ltag{font-size:10px;font-weight:700;color:#fff9ee;background:var(--amber);border-radius:6px;padding:3px 8px;flex-shrink:0}
+.lv-row .lgone{font-size:9.5px;color:var(--ink-dim);flex-shrink:0}
+.lv-row.past{opacity:.35}
+.lv-row.next{background:var(--amber-soft);border-radius:10px;border-bottom-color:transparent}
+#lvRows.still .lv-row{animation:none}
+
+/* sections */
+.section{padding:14px 0 22px}
+.section-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;display:flex;align-items:center;gap:8px;margin-bottom:14px;animation:fadeUp .5s ease both}
+.section-title svg{width:20px;height:20px;color:var(--amber)}
+
+/* bus accordion */
+.bus-list{display:flex;flex-direction:column;gap:10px}
+.bus-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .2s;animation:fadeUp .4s ease both;animation-delay:calc(var(--i,0)*30ms)}
+.bus-card:hover{border-color:var(--amber)}
+.bus-head{display:flex;align-items:center;gap:12px;padding:11px 14px;cursor:pointer;user-select:none}
+.bus-head .bus-info{flex:1;min-width:0}
+.bus-head .name{font-size:15px;font-weight:700;display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.bus-head .route{font-size:12px;color:var(--ink-dim);margin-top:2px}
+.bus-head .dep-time{font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--amber-ink);background:var(--amber-soft);padding:5px 12px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.bus-head .no-time{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);border:1px dashed var(--line-strong);padding:5px 10px;border-radius:7px;white-space:nowrap;flex-shrink:0}
+.bus-head .chev{color:var(--ink-dim);transition:transform .25s;flex-shrink:0}
+.bus-card.open .chev{transform:rotate(180deg)}
+.bus-card.open{border-color:var(--amber)}
+.badge{font-size:10px;font-weight:700;padding:2.5px 8px;border-radius:5px;letter-spacing:.03em;text-transform:uppercase;font-family:var(--font-mono)}
+.badge-govt{background:var(--govt-soft);color:var(--govt)}
+.badge-priv,.badge-private{background:var(--maroon-soft);color:var(--maroon)}
+.badge-ac{background:var(--green-soft);color:var(--green)}
+.badge-nonac{background:var(--amber-soft);color:var(--amber-ink)}
+body.lang-bn .badge{text-transform:none;letter-spacing:0}
+.bus-body{max-height:0;overflow:hidden;transition:max-height .35s ease}
+.bus-card.open .bus-body{max-height:1200px}
+.bus-body-inner{padding:0 14px 14px;border-top:1px dashed var(--line-strong)}
+.bus-meta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;padding:12px 0}
+.meta-item{background:var(--surface-2);border-radius:var(--radius-sm);padding:8px 10px}
+.meta-lb,.meta-item .lb{font-family:var(--font-mono);font-size:9px;font-weight:600;text-transform:uppercase;color:var(--ink-dim);letter-spacing:.04em;margin-bottom:2px}
+.meta-item .vl{font-size:13px;font-weight:700}
+.mini-timeline{margin:6px 0 4px;padding-left:6px}
+.mini-stop{display:flex;align-items:center;gap:10px;padding:4px 0;font-size:12.5px;color:var(--ink-dim);position:relative}
+.mini-stop .dot{width:7px;height:7px;border-radius:50%;background:var(--surface);border:2px solid var(--amber);flex-shrink:0;position:relative;z-index:1}
+.mini-stop:first-child .dot{background:var(--amber);border-color:var(--amber)}
+.mini-stop:last-child .dot{background:var(--maroon);border-color:var(--maroon)}
+.mini-stop::before{content:"";position:absolute;left:10px;top:0;bottom:0;border-left:1.5px dashed var(--line-strong)}
+.mini-stop:first-child::before{top:50%}
+.mini-stop:last-child::before{bottom:50%}
+.mini-stop .st-name{font-weight:600;color:var(--ink)}
+.mini-stop .st-time{font-family:var(--font-mono);font-size:11px;margin-left:auto;color:var(--amber-ink)}
+
+/* show-all */
+.show-all-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--surface);border:1px dashed var(--line-strong);border-radius:var(--radius-sm);padding:12px;font-family:var(--font-body);font-size:13px;font-weight:700;color:var(--ink-dim);cursor:pointer;margin-top:10px;transition:all .2s;min-height:44px}
+.show-all-btn:hover{color:var(--amber);border-color:var(--amber);background:var(--amber-soft)}
+.bus-card.hidden-bus{display:none}
+.bus-card.hidden-bus.show{display:block}
+
+/* route timeline */
+.route-timeline{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+.rt-stops{max-height:280px;overflow:hidden;position:relative;transition:max-height .35s ease}
+.rt-stops.expanded{max-height:2000px}
+.rt-stops:not(.expanded)::after{content:"";position:absolute;bottom:0;left:0;right:0;height:60px;background:linear-gradient(transparent,var(--surface));pointer-events:none}
+.rt-stop{display:flex;align-items:center;gap:12px;padding:6px 0;font-size:13.5px;font-weight:600;position:relative}
+.rt-stop .dot{width:10px;height:10px;border-radius:50%;background:var(--surface);border:2.5px solid var(--amber);flex-shrink:0;z-index:1}
+.rt-stop.origin .dot{background:var(--amber);width:14px;height:14px}
+.rt-stop.dest .dot{background:var(--maroon);border-color:var(--maroon);width:14px;height:14px}
+.rt-stop::before{content:"";position:absolute;left:12.5px;top:0;bottom:0;border-left:2px dashed rgba(184,121,31,.25)}
+.rt-stop:first-child::before{top:50%}
+.rt-stop:last-child::before{bottom:50%}
+.rt-stop .st-badge{font-size:9px;font-family:var(--font-mono);font-weight:700;color:var(--ink-dim);background:var(--surface-2);padding:2px 8px;border-radius:999px;margin-left:8px}
+
+/* via chips */
+.chip-row,.via-chips{display:flex;flex-wrap:wrap;gap:8px}
+.via-chip,.rel-chip{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;color:var(--ink);cursor:pointer;text-decoration:none;transition:all .15s;min-height:40px;display:inline-flex;align-items:center;animation:fadeUp .4s ease both;animation-delay:calc(var(--i,0)*35ms)}
+.via-chip:hover,.rel-chip:hover{border-color:var(--amber);background:var(--amber-soft);color:var(--amber)}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px}
+.faq-item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;animation:fadeUp .4s ease both;animation-delay:calc(var(--i,0)*30ms)}
+.faq-q{padding:14px 16px;font-size:14px;font-weight:700;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;user-select:none;min-height:44px}
+.faq-q .chev{color:var(--ink-dim);transition:transform .25s;flex-shrink:0}
+.faq-item.open .chev{transform:rotate(180deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-item.open .faq-a{max-height:300px}
+.faq-a p{padding:0 16px 14px;font-size:13px;color:var(--ink-dim);line-height:1.65}
+.faq-a a{color:var(--amber);font-weight:600}
+
+/* ad zones (hidden) */
+.ad-zone{margin:20px 0;min-height:0;overflow:hidden;display:none}
+.ad-zone.active{display:block;min-height:90px}
+
+/* footer */
+.seo-footer{margin-top:40px;padding:20px 0 30px;border-top:1px solid var(--line);text-align:center;font-size:12px;color:var(--ink-dim)}
+.footer-links{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.footer-links a{font-size:12.5px;font-weight:600;color:var(--ink-dim);text-decoration:none;padding:5px 12px;border-radius:999px;background:var(--surface-2);transition:all .2s}
+.footer-links a:hover{color:var(--amber);background:var(--amber-soft)}
+
+/* animations */
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes driftBus{0%{left:-7%;transform:translateY(0)}6%{transform:translateY(-2px)}12%{transform:translateY(0)}18%{left:20%;transform:translateY(-1px)}24%{left:20%;transform:translateY(0)}30%{transform:translateY(-2px)}36%{transform:translateY(0)}55%{left:74%;transform:translateY(-1px)}61%{left:74%;transform:translateY(0)}67%{transform:translateY(-2px)}73%{transform:translateY(0)}100%{left:107%;transform:translateY(0)}}
+@keyframes lvIn{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@keyframes lvPulse{50%{opacity:.25}}
+@media(prefers-reduced-motion:reduce){.hero-route-line .icon,.eyebrow,.hero h1,.tagline,.stat-chips,.search-box,.lv-wrap,.bus-card,.section-title,.faq-item,.via-chip,.rel-chip{animation:none!important}}
+
+/* responsive */
+@media(max-width:480px){
+  .search-row{flex-direction:column}
+  .search-btn{width:100%}
+  .stat-chip{padding:5px 10px;font-size:11px}
+  .lv-clock-big{font-size:22px}
+}
+/* ===== User time update ===== */
+.no-time{font-size:11px;color:var(--ink-dim);font-weight:700;text-transform:uppercase;letter-spacing:.03em}
+.update-time-btn{background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 50%,transparent);border-radius:999px;padding:5px 11px;font-size:11px;font-weight:700;color:var(--amber-ink);cursor:pointer;font-family:var(--font-mono);min-height:32px;display:inline-flex;align-items:center;gap:3px;transition:all .15s;white-space:nowrap}
+.update-time-btn:hover{background:var(--amber);color:#fff;border-color:var(--amber)}
+.user-updated{color:var(--green)!important}
+.user-badge{font-size:10px;color:var(--green);font-weight:700;background:var(--green-soft);padding:2px 8px;border-radius:999px;margin-left:4px;display:inline-flex;align-items:center;gap:3px;font-family:var(--font-mono);white-space:nowrap}
+.user-badge svg{flex-shrink:0}
+.time-update-form{display:flex;gap:6px;align-items:center;margin-top:6px;padding:8px 10px;background:var(--surface-2);border-radius:9px;border:1px solid var(--line)}
+.time-update-form input[type="time"]{padding:8px 10px;border:1px solid var(--line-strong);border-radius:6px;background:var(--surface);color:var(--ink);font-family:var(--font-mono);font-size:14px;font-weight:700;min-height:44px;flex:1;max-width:140px}
+.tu-save{background:var(--green);color:#fff;border:none;border-radius:6px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer;min-height:44px;font-family:var(--font-body)}
+.tu-save:hover{opacity:.85}
+.tu-cancel{background:none;border:none;color:var(--ink-dim);font-size:13px;cursor:pointer;min-height:44px;padding:8px}
+@media(prefers-reduced-motion:reduce){.update-time-btn,.user-badge{transition:none}}
+/* ===== End user time update ===== */
+
+/* ================================================
+   Route-page compat layer — restores styling for the
+   departure-board route pages (bus-row, routemap, schip,
+   crumbs, seo-hero, header, footer, logo, …).
+   Appended so both page generations stay styled.
+   ================================================ */
+/* BusJatri SEO Pages — "Departure Board" compact design
+   Matches main site: amber/maroon, ticket-stub, horizontal route map */
+/* ---- header ---- */
+.header{background:color-mix(in srgb,var(--surface) 88%,transparent);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100;backdrop-filter:blur(14px) saturate(1.1)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:13px 0}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--font-display);font-size:1.3rem;font-weight:700;letter-spacing:-.2px}
+.logo span{color:var(--amber-ink)}
+/* ---- breadcrumb ---- */
+.crumbs{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);text-transform:uppercase;letter-spacing:.06em;display:flex;gap:6px;flex-wrap:wrap;padding:14px 0 0}
+.crumbs a{color:var(--amber-ink)}
+/* ---- hero ---- */
+.seo-hero{padding:10px 0 14px}
+.seo-hero h1{font-family:var(--font-display);font-size:clamp(1.45rem,5vw,1.95rem);font-weight:700;letter-spacing:-.5px}
+.seo-hero .arr{color:var(--amber)}
+.bn-sub{font-size:13.5px;color:var(--ink-dim);margin-top:2px}
+.schip{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--border-strong);border-radius:999px;padding:6px 13px;font-family:var(--font-mono);font-size:12px;font-weight:600}
+.schip.hot{background:var(--amber-soft);border-color:color-mix(in srgb,var(--amber) 40%,transparent);color:var(--amber-ink)}
+/* ---- sections ---- */
+.seo-section{margin-top:22px}
+/* ---- compact bus rows ---- */
+.bus-row{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-bottom:8px}
+.bus-row .dep{font-family:var(--font-mono);font-weight:700;font-size:15.5px;min-width:76px}
+.bus-row .dep small{display:block;font-size:10.5px;color:var(--ink-dim);font-weight:500}
+.bus-row .bmid{flex:1;min-width:0}
+.bus-row .op{font-weight:600;font-size:13.5px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bus-row .mrow{display:flex;gap:10px;font-size:11px;color:var(--ink-dim);font-family:var(--font-mono);margin-top:2px}
+/* ---- badges ---- */
+/* ---- horizontal route map ---- */
+.routemap{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:18px 14px 10px;overflow:hidden}
+.rm-track{position:relative;height:56px;margin:4px 6px 0}
+.rm-line{position:absolute;top:14px;left:14px;right:14px;border-top:2.5px dashed var(--border-strong)}
+.rm-stops{position:absolute;inset:0;display:flex;justify-content:space-between}
+.rm-stop{display:flex;flex-direction:column;align-items:center;width:58px}
+.rm-dot{width:11px;height:11px;border-radius:50%;background:var(--surface);border:2.5px solid var(--amber);margin-top:9px;z-index:1}
+.rm-gap{width:58px;display:flex;justify-content:center;margin-top:7px;color:var(--ink-dim);font-size:13px;font-weight:700;letter-spacing:1px}
+.rm-stop.end .rm-dot{background:var(--maroon);border-color:var(--maroon);width:13px;height:13px}
+.rm-name{font-size:10.5px;font-weight:600;margin-top:6px;text-align:center;line-height:1.25}
+/* ---- chips ---- */
+/* ---- FAQ ---- */
+.fa-body{padding:0 15px 13px;font-size:13px;color:var(--ink-dim);line-height:1.65}
+/* ---- footer ---- */
+.footer{text-align:center;padding:26px 16px 40px;color:var(--ink-dim);font-size:12.5px;border-top:1px dashed var(--border-strong);margin-top:28px}
+.footer a{color:var(--amber-ink)}
+/* ---- responsive ---- */
+@media(max-width:560px){
+  .bus-row{padding:11px 12px;gap:9px}
+  .bus-row .dep{min-width:64px;font-size:14px}
+  .rm-stop{width:48px}
+  .rm-name{font-size:8.5px}
+}
+/* ================================================
+   Route-map v2 — staggered labels fix (compat fix 2)
+   With 10 stops the long names overlap on one line;
+   alternate labels above/below the track so they
+   never collide, anchor first/last labels inward so
+   they are not clipped by the card edge.
+   ================================================ */
+.rm-track{height:64px;margin-top:10px}
+.rm-stop{position:relative}
+.rm-name{position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap;top:26px}
+.rm-stop:nth-child(even) .rm-name{top:-15px}
+.rm-stop:first-child .rm-name{left:0;transform:none;text-align:left}
+.rm-stop:last-child .rm-name{left:auto;right:0;transform:none;text-align:right}
+.rm-more{font-size:10px;color:var(--ink-dim);font-family:var(--font-mono);text-align:center;padding-top:2px}
+@media(max-width:560px){
+  .rm-name{font-size:8px}
+  .rm-stop:nth-child(even) .rm-name{top:-14px}
+}
+
+/* ---- horizontal sliders: route map + chip rows (UX audit 2026-09-19) ---- */
+.seo-section{position:relative}
+.routemap{position:relative;overflow-x:auto;overflow-y:hidden;padding-bottom:4px}
+.rm-track{min-width:100%;width:max-content;box-sizing:border-box}
+.rm-stop{width:auto;min-width:58px;padding:0 5px;box-sizing:border-box}
+.chip-row.hscroll{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x proximity;padding:2px 0 6px}
+.chip-row.hscroll>*{flex:0 0 auto;scroll-snap-align:start}
+.hscroll-arr{position:absolute;top:44%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;display:none;align-items:center;justify-content:center;font-size:15px;line-height:1;padding:0;z-index:6;box-shadow:0 2px 8px rgba(33,28,22,.18)}
+.hscroll-arr:hover{border-color:var(--amber)}
+.hscroll-arr.hsa-prev{left:2px}
+.hscroll-arr.hsa-next{right:2px}
+@media(max-width:640px){.rm-stop{min-width:46px;padding:0 3px}.hscroll-arr{width:28px;height:28px;font-size:13px}}
+
+/* ===== route page redesign (2026-09-20) ===== */
+.seo-hero{padding:16px 18px;background:linear-gradient(135deg,color-mix(in srgb,var(--amber) 12%,var(--surface)),var(--surface) 60%);border:1px solid color-mix(in srgb,var(--amber) 30%,transparent);border-radius:18px;margin:4px 0 18px}
+.seo-hero h1{font-size:clamp(1.55rem,5.5vw,2.05rem)}
+.schip{box-shadow:0 1px 2px rgba(28,25,23,.05)}
+.bus-row{gap:14px;border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;margin-bottom:12px;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.bus-row:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(28,25,23,.10);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+.bus-row .dep{display:flex;gap:7px;align-items:flex-start;font-size:17px;min-width:90px;color:var(--amber-ink);flex-shrink:0}
+.bus-row .dep>svg{width:15px;height:15px;color:var(--amber);margin-top:3px;flex-shrink:0}
+.bus-row .depcol{display:flex;flex-direction:column;line-height:1.15}
+.bus-row .dep small{display:block;font-size:10.5px;color:var(--ink-dim);font-weight:500;margin-top:1px}
+.bus-row .op{font-size:14px}
+.bus-row .mrow{display:flex;flex-wrap:wrap;gap:8px;font-size:11.5px;margin-top:4px;align-items:center}
+.bus-row .mrow .fare{color:var(--green);font-weight:700}
+.bus-row .bright{display:flex;flex-direction:column;align-items:flex-end;gap:7px;flex-shrink:0}
+.bd-link{font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--amber-ink);background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 35%,transparent);padding:4px 10px;border-radius:8px;text-decoration:none;white-space:nowrap}
+.bd-link:hover{background:color-mix(in srgb,var(--amber) 18%,var(--surface))}
+.routemap{box-shadow:0 1px 3px rgba(28,25,23,.05)}
+.rm-line{border:none;background:linear-gradient(90deg,var(--amber),var(--maroon));height:3.5px;border-radius:999px}
+.rm-dot{width:13px;height:13px;border:3px solid var(--amber);box-shadow:0 0 0 4px color-mix(in srgb,var(--amber) 14%,transparent)}
+.rm-stop.end .rm-dot{border-color:var(--maroon);box-shadow:0 0 0 4px color-mix(in srgb,var(--maroon) 14%,transparent)}
+@media(max-width:640px){
+ .bus-row{padding:12px 13px;gap:10px}
+ .bus-row .dep{min-width:74px;font-size:15.5px}
+ .bus-row .bright{gap:5px}
+ .bd-link{padding:3px 8px;font-size:10.5px}
+}
+/* ===== end route page redesign ===== */
+
+/* ===== operator page redesign (2026-09-20) ===== */
+.op-hero{padding:16px 18px;background:linear-gradient(135deg,color-mix(in srgb,var(--amber) 12%,var(--surface)),var(--surface) 60%);border:1px solid color-mix(in srgb,var(--amber) 30%,transparent);border-radius:18px;margin:4px 0 18px}
+.op-hero h1{font-family:var(--font-display)}
+.op-stats{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.op-stat{flex:1 1 170px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;box-shadow:0 1px 3px rgba(28,25,23,.06)}
+.op-stat .lbl{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px}
+.op-stat .val{font-size:1.7rem;font-weight:700;color:var(--amber-ink)}
+.op-h2{font-size:1.25rem;margin:0 0 12px;font-family:var(--font-display)}
+.op-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:0 0 6px}
+.op-card{display:flex;flex-direction:column;gap:9px;background:var(--surface);border:1px solid var(--border-strong);border-radius:16px;padding:14px 16px;text-decoration:none;box-shadow:0 1px 3px rgba(28,25,23,.06);transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease}
+.op-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(28,25,23,.10);border-color:color-mix(in srgb,var(--amber) 45%,transparent)}
+.op-card .rt{font-weight:700;font-size:14.5px;line-height:1.35;color:inherit}
+.op-card .rt .arr{color:var(--amber)}
+.op-card .meta{font-size:12px;color:var(--ink-dim);display:flex;align-items:center;gap:6px}
+.op-card .go{font-size:11px;font-weight:700;letter-spacing:.02em;color:var(--amber-ink);background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 35%,transparent);padding:4px 10px;border-radius:8px;align-self:flex-start;white-space:nowrap}
+.op-card:hover .go{background:color-mix(in srgb,var(--amber) 18%,var(--surface))}
+@media(max-width:640px){
+ .op-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+ .op-card{padding:12px 13px}
+ .op-stat{padding:12px 13px}
+}
+/* ===== end operator page redesign ===== */
+
+/* language toggle for only-en/only-bn blocks (2026-09-23) */
+.only-bn{display:none}
+body.lang-bn .only-en{display:none}
+body.lang-bn .only-bn{display:block}
+/* ==== design batch 2026-09-24 ==== */
+.bus-row{padding:8px 11px;gap:8px;margin-bottom:6px;border-radius:12px}
+.bus-row .dep{min-width:62px;font-size:15px}
+.bus-row .op{font-size:13.5px}
+.bus-row .mrow{gap:6px;font-size:11px;margin-top:2px}
+.via-chip,.rel-chip{padding:5px 12px;min-height:31px;font-size:12.5px}
+.seo-section{margin-top:15px}
+.seo-hero{padding:8px 0 10px}
+details{margin-top:6px}
+.bus-row{cursor:pointer;-webkit-tap-highlight-color:rgba(184,121,31,.18)}
+.bus-row:active{transform:scale(.985)}
+.bd-link{display:none}
+.bus-row.cut{display:none}
+.see-more-btn{display:block;width:100%;margin:10px 0 18px;padding:12px;border-radius:12px;border:1.5px dashed var(--border-strong);background:var(--surface);color:var(--ink);font-weight:700;font-size:14px;cursor:pointer;font-family:inherit}
+.see-more-btn:active{transform:scale(.99)}
+
+</style>
+<style>/* ============================================================
+   BusJatri SEO pages v2 — demo-approved design layer
+   (unified header + dark mode + FAQ cards + alt-route section)
+   Loaded AFTER seo.css: overrides palette only, adds new blocks.
+   ============================================================ */
+
+:root {
+  --bg: #fbf7ee;
+  --bg-alt: #f3ecdc;
+  --surface: #fffcf4;
+  --surface-2: #f6efe0;
+  --ink: #211c16;
+  --ink-dim: #6f6653;
+  --line: rgba(33, 28, 22, .12);
+  --line-strong: rgba(33, 28, 22, .24);
+  --amber: #b8791f;
+  --amber-ink: #6b4610;
+  --amber-soft: rgba(184, 121, 31, .13);
+  --shadow: 0 10px 34px -12px rgba(33, 28, 22, .22);
+  --shadow-sm: 0 2px 12px rgba(33, 28, 22, .08);
+}
+
+body.dark {
+  --bg: #161310;
+  --bg-alt: #1c1815;
+  --surface: #211c16;
+  --surface-2: #2a241c;
+  --ink: #f0e9dc;
+  --ink-dim: #a89d88;
+  --line: rgba(240, 233, 220, .13);
+  --line-strong: rgba(240, 233, 220, .26);
+  --amber: #d9a93c;
+  --amber-ink: #e8bd66;
+  --amber-soft: rgba(217, 169, 60, .14);
+  --shadow: 0 10px 34px -12px rgba(0, 0, 0, .6);
+  --shadow-sm: 0 2px 12px rgba(0, 0, 0, .4);
+}
+
+/* ---------- unified header (demo) ---------- */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 54px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.22rem;
+  letter-spacing: -.4px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--ink);
+}
+
+.logo span { color: var(--amber); }
+
+.hdr-ctrl { display: flex; align-items: center; gap: 8px; }
+
+.lang-switch {
+  display: flex;
+  border: 1.5px solid var(--line-strong);
+  border-radius: 99px;
+  padding: 2px;
+  gap: 2px;
+}
+
+.lang-switch .pill {
+  border: none;
+  background: transparent;
+  color: var(--ink-dim);
+  font: 600 11.5px/1 var(--font-body);
+  padding: 6px 10px;
+  border-radius: 99px;
+  cursor: pointer;
+  min-width: 34px;
+  text-align: center;
+}
+
+.lang-switch .pill.on {
+  background: var(--amber);
+  color: #fff;
+}
+
+.theme-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--line-strong);
+  background: var(--surface);
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.theme-btn svg { width: 17px; height: 17px; }
+
+/* ---------- FAQ cards (demo) ---------- */
+
+.faq-v2 details {
+  border: 1.5px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface);
+  margin-bottom: 9px;
+  overflow: hidden;
+}
+
+.faq-v2 details[open] { border-color: var(--amber); }
+
+.faq-v2 summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 13px 16px;
+  font-weight: 600;
+  font-size: 14.5px;
+  line-height: 1.45;
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.faq-v2 summary::-webkit-details-marker { display: none; }
+
+.faq-v2 summary::before {
+  content: "+";
+  color: var(--amber);
+  font-weight: 800;
+  font-size: 16px;
+  flex: none;
+}
+
+.faq-v2 details[open] summary::before { content: "–"; }
+
+.faq-v2 .fa-body {
+  padding: 0 16px 14px 36px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--ink-dim);
+}
+
+.faq-v2 .fa-body b, .faq-v2 .fa-body strong { color: var(--ink); }
+
+.faq-lang-tag {
+  font: 700 9.5px/1 var(--font-mono);
+  letter-spacing: 1.2px;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin: 14px 2px 8px;
+}
+
+/* ---------- alt-route section (static, pre-computed) ---------- */
+
+.alt-route {
+  border-top: 1.5px dashed var(--line-strong);
+  margin-top: 22px;
+  padding-top: 16px;
+}
+
+.alt-route h3 {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.alt-route .alt-note {
+  font-size: 12.5px;
+  color: var(--ink-dim);
+  margin: 0 0 14px;
+  line-height: 1.55;
+}
+
+.alt-card {
+  border: 1.5px solid var(--line);
+  border-radius: 14px;
+  padding: 12px;
+  background: var(--surface);
+  margin-bottom: 13px;
+}
+
+.alt-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  color: var(--ink-dim);
+  flex-wrap: wrap;
+}
+
+.alt-badge {
+  background: rgba(46, 125, 50, .1);
+  color: #2e7d32;
+  border-radius: 99px;
+  padding: 2px 10px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+body.dark .alt-badge { color: #8fca92; background: rgba(143, 202, 146, .13); }
+
+.alt-leg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 11px;
+  background: var(--surface-2);
+}
+
+.alt-leg .al-name { font-weight: 600; font-size: 13.5px; line-height: 1.35; }
+
+.alt-leg .al-route { font-size: 12px; color: var(--ink-dim); margin-top: 2px; }
+
+.alt-leg .al-time {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--amber-ink);
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.alt-change {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 7px 12px;
+  border-radius: 10px;
+  background: rgba(46, 125, 50, .08);
+  color: #2e7d32;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+body.dark .alt-change { color: #8fca92; background: rgba(143, 202, 146, .1); }
+
+.alt-wait {
+  font-size: 11px;
+  border: 1px solid rgba(46, 125, 50, .35);
+  border-radius: 99px;
+  padding: 1px 8px;
+  white-space: nowrap;
+}
+
+.alt-total {
+  font-size: 11.5px;
+  color: var(--ink-dim);
+  margin-top: 8px;
+  text-align: right;
+}
+
+.alt-total b { color: var(--ink); }
+
+/* ---------- misc polish ---------- */
+
+.stat-chips .schip { background: var(--surface-2); }
+
+.crumbs { font-size: 12px; color: var(--ink-dim); margin-bottom: 10px; }
+
+.crumbs a { color: var(--amber-ink); text-decoration: none; font-weight: 600; }
+
+.footer-links a { color: var(--ink-dim); }
+
+.faq-v2 { margin-bottom: 6px; }
+
+/* FAQ language toggle (2026-09-23) */
+.only-bn{display:none}
+body.lang-bn .only-en{display:none}
+body.lang-bn .only-bn{display:block}
+</style>
+<style>
+/* ===== per-direction page + hub ===== */
+.dep-head{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px;margin-top:14px}
+.dh-title{font-family:var(--font-display);font-size:16px;font-weight:800}
+.dh-sub{font-family:var(--font-mono);font-size:10.5px;color:var(--amber-ink);margin-top:4px}
+.next-pill{display:none;align-items:center;gap:5px;margin-top:9px;background:var(--green-soft);color:var(--green);border-radius:999px;padding:4px 12px;font-family:var(--font-mono);font-size:11.5px;font-weight:700;width:fit-content}
+.tc-grid{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.tc{font-family:var(--font-mono);font-size:12.5px;font-weight:700;background:var(--surface-2);border:1px solid var(--line);border-radius:9px;padding:7px 10px;white-space:nowrap;color:var(--ink);cursor:pointer;transition:all .12s}
+.tc small{font-size:8px;color:var(--ink-dim);margin-left:1px}
+.tc:hover{border-color:var(--amber)}
+.tc.next{background:var(--amber);border-color:var(--amber);color:#fff9ee}
+.tc.next small{color:rgba(255,249,238,.8)}
+.tc.sel{border-color:var(--govt);background:var(--govt-soft);color:var(--govt)}
+.tc-g{flex-basis:100%;font-family:var(--font-mono);font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-dim);margin:10px 0 0;padding-top:9px;border-top:1px dashed var(--line-strong)}
+.tc-grid .tc-g:first-child{margin-top:0;padding-top:0;border-top:none}
+.copy-btn{display:inline-flex;align-items:center;gap:5px;background:var(--amber-soft);border:1px solid color-mix(in srgb,var(--amber) 40%,transparent);border-radius:999px;padding:8px 14px;font-size:12.5px;font-weight:700;color:var(--amber-ink);cursor:pointer;min-height:38px;font-family:var(--font-body);margin-top:14px}
+.copy-btn:hover{background:var(--amber);color:#fff9ee}
+/* trip dropdown */
+.trip-sel{margin-top:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:14px 16px}
+.ts-label{font-size:12.5px;font-weight:700;color:var(--ink-dim)}
+.trip-select{width:100%;margin-top:8px;font-family:var(--font-mono);font-size:14px;font-weight:700;color:var(--ink);background:var(--surface-2);border:1.5px solid var(--amber);border-radius:10px;padding:11px 12px;min-height:46px;cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23b8791f' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;background-size:15px}
+.trip-select:focus{outline:2px solid color-mix(in srgb,var(--amber) 40%,transparent)}
+/* journey */
+.journey{background:var(--surface);border:1px solid var(--govt);border-radius:var(--radius);padding:16px;margin-top:12px;animation:fadeUp .3s ease both}
+.j-title{font-family:var(--font-display);font-size:14.5px;font-weight:800;color:var(--govt)}
+.j-route{font-size:11.5px;color:var(--ink-dim);margin-top:2px}
+.j-stops{margin-top:12px}
+.j-stop{display:flex;align-items:center;gap:11px;padding:5px 0;font-size:13px;position:relative}
+.j-stop .dot{width:10px;height:10px;border-radius:50%;background:var(--surface);border:2.5px solid var(--amber);flex-shrink:0;z-index:1}
+.j-stop.first .dot,.j-stop.last .dot{width:13px;height:13px}
+.j-stop.last .dot{border-color:var(--maroon);background:var(--maroon)}
+.j-stop::before{content:"";position:absolute;left:5.5px;top:0;bottom:0;border-left:2px dashed rgba(184,121,31,.3)}
+.j-stop:first-child::before{top:50%}
+.j-stop:last-child::before{bottom:50%}
+.j-stop .s-name{font-weight:600}
+.j-stop.mid .s-name{color:var(--ink-dim)}
+.j-stop .s-time{font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--amber-ink);margin-left:auto}
+.j-stop.mid .s-time{color:var(--ink-dim)}
+.j-stop .approx{font-family:var(--font-mono);font-size:9px;color:var(--ink-dim)}
+.j-note{font-size:10.5px;color:var(--ink-dim);margin-top:12px;padding-top:10px;border-top:1px dashed var(--line-strong);line-height:1.6}
+/* metro */
+.metro-grid{display:flex;flex-direction:column;gap:10px}
+.metro-chip{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px}
+.metro-chip .m-ic{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.m-ic.blue{background:var(--govt-soft);color:var(--govt)}
+.m-name{font-size:14px;font-weight:700}
+.m-line{font-family:var(--font-mono);font-size:10px;font-weight:700;letter-spacing:.04em;padding:3px 10px;border-radius:999px;color:#fff;white-space:nowrap;flex-shrink:0;margin-left:auto}
+.ln-blue{background:#2563eb}
+.tt-note{font-size:11px;color:var(--ink-dim);margin-top:12px;line-height:1.6}
+/* ===== hub search ===== */
+.hub-search{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;margin-top:16px}
+.hs-label{font-family:var(--font-display);font-size:15px;font-weight:800}
+.hs-row{position:relative;margin-top:10px}
+.hs-input{width:100%;font-family:var(--font-body);font-size:15px;color:var(--ink);background:var(--surface-2);border:1.5px solid var(--amber);border-radius:12px;padding:13px 42px 13px 14px;min-height:48px}
+.hs-input:focus{outline:2px solid color-mix(in srgb,var(--amber) 40%,transparent)}
+.hs-ic{position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--amber)}
+.hs-hint{font-size:11px;color:var(--ink-dim);margin-top:8px}
+.hs-count{font-size:12px;color:var(--amber-ink);font-weight:700;margin:14px 0 6px}
+
+
+.bnum{font-family:var(--font-mono);font-size:15px;font-weight:700;color:var(--amber-ink);white-space:nowrap;display:flex;align-items:center;gap:5px;min-width:64px}
+.bnum .badge{font-size:8.5px;padding:2px 6px;border-radius:6px;line-height:1}
+.bmid{display:flex;flex-direction:column;gap:3px;min-width:0}
+.broute{font-size:12.5px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bmeta{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);white-space:nowrap}
+.bright{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:700;color:var(--amber-ink);white-space:nowrap}
+.bus-row:not(.ok) .bright{color:var(--ink-dim);font-weight:500;font-size:10.5px}
+.loc-wrap{margin:12px 0 4px}
+.loc-title{font-family:var(--font-mono);font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:8px}
+.loc-chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:thin}
+.loc-chip{flex-shrink:0;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:999px;padding:8px 13px;font-size:12px;font-weight:600;color:var(--ink);cursor:pointer;min-height:34px;display:inline-flex;align-items:center;gap:6px;font-family:var(--font-body)}
+.loc-chip b{color:var(--amber-ink);font-family:var(--font-mono);font-size:11px}
+.loc-chip:hover{border-color:var(--amber);background:var(--amber-soft)}
+.hub-count{font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--amber-ink);margin-top:10px;min-height:14px}
+.hub-count b{color:var(--maroon)}
+.bus-row.disabled,.bus-row:not(.ok){opacity:.55;cursor:default}
+.bus-row:not(.ok):hover{border-color:var(--line-strong);background:var(--surface)}
+.hub-sec{margin-top:18px}
+.hub-sec .sec-count{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);font-weight:700}
+.seo-static{font-size:12px;color:var(--ink-dim);margin-top:10px;line-height:1.6}
+
+/* route/no tabs */
+.sf-tabs{display:flex;gap:6px;margin-bottom:12px}
+.sf-tab{flex:1;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:10px;padding:9px 6px;font-size:12.5px;font-weight:700;color:var(--ink-dim);cursor:pointer;min-height:36px;font-family:var(--font-body)}
+.sf-tab.on{background:var(--amber-soft);border-color:var(--amber);color:var(--amber-ink)}
+/* v5: from-to + search button */
+.sf-field{position:relative;margin-bottom:9px}
+.sf-field label{display:block;font-family:var(--font-mono);font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);margin-bottom:5px}
+.sf-field input{width:100%;box-sizing:border-box;background:var(--surface-2);border:1px solid var(--line-strong);border-radius:12px;padding:13px 14px 13px 40px;font-size:14px;font-weight:600;color:var(--ink);outline:none;font-family:var(--font-body)}
+.sf-field input:focus{border-color:var(--amber);background:var(--surface)}
+.sf-ic{position:absolute;left:12px;bottom:13px;color:var(--amber-ink);display:flex}
+.sf-swap{position:absolute;right:10px;bottom:8px;width:32px;height:32px;border-radius:9px;border:1px solid var(--line-strong);background:var(--surface);cursor:pointer;color:var(--amber-ink);display:inline-flex;align-items:center;justify-content:center;z-index:2}
+.sf-swap:hover{border-color:var(--amber);background:var(--amber-soft)}
+.search-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;background:var(--amber);color:#fff9ee;border:none;border-radius:12px;padding:14px;font-size:14.5px;font-weight:700;cursor:pointer;min-height:48px;font-family:var(--font-body);margin-top:4px}
+.search-btn:hover{filter:brightness(1.05)}
+#results{display:none;margin-top:14px}
+.res-count{font-family:var(--font-mono);font-size:11px;font-weight:700;color:var(--amber-ink);margin-bottom:8px}
+.res-row{display:flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:7px;text-decoration:none;color:var(--ink)}
+.res-row .rn{font-family:var(--font-mono);font-size:13.5px;font-weight:700;color:var(--amber-ink);min-width:56px}
+.res-row .rr{flex:1;min-width:0;font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.res-row .go{font-size:10.5px;font-weight:700;color:var(--amber-ink);white-space:nowrap}
+.res-row.dis{opacity:.55}
+.res-row.dis .go{color:var(--ink-dim);font-weight:500}
+.res-row:hover{border-color:var(--amber)}
+.no-res{font-size:12px;color:var(--ink-dim);padding:8px 2px}
+.pl-chip{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--surface);border:1px solid var(--line-strong);border-radius:12px;padding:11px 13px;cursor:pointer;min-height:44px;font-family:var(--font-body);text-align:left}
+.pl-chip:hover{border-color:var(--amber);background:var(--amber-soft)}
+.pl-chip .pl-n{font-size:13px;font-weight:700;color:var(--ink)}
+.pl-chip .pl-c{font-family:var(--font-mono);font-size:10.5px;font-weight:700;color:var(--amber-ink)}
+.pl-grid{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:600px){.pl-grid{grid-template-columns:1fr 1fr}}
+.bus-row{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:12px 14px;margin-bottom:8px;text-decoration:none;color:var(--ink)}
+.bus-row:not(.ok){opacity:.55}
+.bnum{font-family:var(--font-mono);font-size:15px;font-weight:700;color:var(--amber-ink);white-space:nowrap;display:flex;align-items:center;gap:5px;min-width:64px}
+.bmid{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1}
+.broute{font-size:12.5px;font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bmeta{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);white-space:nowrap}
+.bright{display:flex;align-items:center;gap:3px;font-size:11px;font-weight:700;color:var(--amber-ink);white-space:nowrap}
+.bus-row:not(.ok) .bright{color:var(--ink-dim);font-weight:500;font-size:10.5px}
+details.full-list{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:13px 15px;margin-top:14px}
+details.full-list summary{cursor:pointer;font-weight:700;font-size:13.5px;color:var(--ink)}
+details.full-list .bus-row{margin-top:8px}
+.seo-text{font-size:12.5px;line-height:1.75;color:var(--ink-dim)}
+.seo-text b{color:var(--ink)}
+@media(min-width:600px){#popGrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}#popGrid .bus-row{margin-bottom:0}}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo" aria-label="BusJatri home">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+      Bus<span>Jatri</span>
+    </a>
+    <div class="hdr-ctrl">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" id="langEn" class="pill pill-en on">EN</button>
+        <button type="button" id="langBn" class="pill pill-bn">বাংলা</button>
+      </div>
+      <button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    </div>
+  </div>
+</header>
+<main class="container seo-main">
+  <div class="crumbs"><a href="index.html"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> / <span>Kolkata City Bus Timetable</span></div>
+  <div class="seo-hero">
+    <h1>Kolkata City <span class="arr">Bus</span> Timetable</h1>
+    <div class="stat-chips">
+      <span class="schip">🚌 73 <span class="label-en">routes</span><span class="label-bn">রুট</span></span>
+      <span class="schip hot">🕐 4,127 <span class="label-en">trips daily</span><span class="label-bn">ট্রিপ প্রতিদিন</span></span>
+      <span class="schip">🏛 <span class="label-en">Official timings</span><span class="label-bn">অফিসিয়াল সময়সূচি</span></span>
+    </div>
+  </div>
+
+  <div class="hub-search">
+    <div class="sf-tabs">
+      <button type="button" class="sf-tab on" id="tabFT" onclick="switchMode('ft')"><span class="label-en">From → To</span><span class="label-bn">কোথা থেকে → কোথায়</span></button>
+      <button type="button" class="sf-tab" id="tabRT" onclick="switchMode('rt')"><span class="label-en">Route No.</span><span class="label-bn">রুট নম্বর</span></button>
+    </div>
+    <div id="ftPane">
+    <div class="sf-field">
+      <label for="fromQ"><span class="label-en">From</span><span class="label-bn">কোথা থেকে</span></label>
+      <span class="sf-ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="10" r="3.2"/><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/></svg></span>
+      <input id="fromQ" type="text" autocomplete="off" placeholder="Howrah, Dunlop, S9A…" onkeydown="if(event.key==='Enter')searchBus()">
+      <button type="button" class="sf-swap" onclick="swapFT()" aria-label="Swap"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3l4 4-4 4"/><path d="M21 7H7"/><path d="M7 21l-4-4 4-4"/><path d="M3 17h14"/></svg></button>
+    </div>
+    <div class="sf-field">
+      <label for="toQ"><span class="label-en">To</span><span class="label-bn">কোথায়</span></label>
+      <span class="sf-ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="10" r="3.2"/><path d="M12 21s-7-5.6-7-11a7 7 0 0 1 14 0c0 5.4-7 11-7 11z"/></svg></span>
+      <input id="toQ" type="text" autocomplete="off" placeholder="Airport, Ballygunge…" onkeydown="if(event.key==='Enter')searchBus()">
+    </div>
+    </div>
+    <div id="rtPane" style="display:none">
+      <div class="sf-field">
+        <label for="routeQ"><span class="label-en">Route number</span><span class="label-bn">রুট নম্বর</span></label>
+        <span class="sf-ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span>
+        <input id="routeQ" type="text" autocomplete="off" placeholder="S9A, AC-39, 31…" onkeydown="if(event.key==='Enter')searchBus()">
+      </div>
+    </div>
+    <button type="button" class="search-btn" onclick="searchBus()"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg><span class="label-en">Search Buses</span><span class="label-bn">বাস খুঁজুন</span></button>
+    <div id="results"><div class="res-count" id="resCount"></div><div id="resList"></div></div>
+  </div>
+
+  <section class="seo-section">
+    <h3 class="section-title"><span class="label-en">Popular Routes</span><span class="label-bn">জনপ্রিয় রুট</span></h3>
+    <div id="popGrid"><a class="bus-row ok" href="bus-time-table/s-9a-dunlop-to-ballygunge.html" data-a="s-9a dunlop ballygunge stn dunlop tobin rd sinthi more chiriamore shyambazar grey st vivekananda rd m.g. road colutala st c.r. ave bbd bag esplanade park street hazra rashbehari ave deshapriya park gariahat ballygunge stn ডানলপ বালিগঞ্জ স্টেশন ডানলপ টবিন রোড সিন্থি মোড় চিরিয়ামোড় শ্যামবাজার গ্রে স্ট্রিট বিবেকানন্দ রোড এম জি রোড কলুটোলা স্ট্রিট সি আর অ্যাভিনিউ বিবিডি বাগ এসপ্ল্যানেড পার্ক স্ট্রিট হাজরা রাসবিহারী অ্যাভিনিউ দেশপ্রিয় পার্ক ঘড়িয়াহাট বালিগঞ্জ স্টেশন" data-b="dunlop ballygunge stn dunlop tobin rd sinthi more chiriamore shyambazar grey st vivekananda rd m.g. road colutala st c.r. ave bbd bag esplanade park street hazra rashbehari ave deshapriya park gariahat ballygunge stn ডানলপ বালিগঞ্জ স্টেশন ডানলপ টবিন রোড সিন্থি মোড় চিরিয়ামোড় শ্যামবাজার গ্রে স্ট্রিট বিবেকানন্দ রোড এম জি রোড কলুটোলা স্ট্রিট সি আর অ্যাভিনিউ বিবিডি বাগ এসপ্ল্যানেড পার্ক স্ট্রিট হাজরা রাসবিহারী অ্যাভিনিউ দেশপ্রিয় পার্ক ঘড়িয়াহাট বালিগঞ্জ স্টেশন"><div class="bnum">S-9A</div><div class="bmid"><div class="broute">Dunlop &nbsp;⟷&nbsp; Ballygunge Stn</div><div class="bmeta">119 buses/day</div></div><div class="bright"><span class="label-en">View</span><span class="label-bn">দেখুন</span></div></a>
+<a class="bus-row ok" href="bus-time-table/ac-39-howrah-to-airport.html" data-a="ac-39 airport gate-1 howrah stn এয়ারপোর্ট গেট হাওড়া স্টেশন" data-b="airport gate-1 howrah stn এয়ারপোর্ট গেট হাওড়া স্টেশন"><div class="bnum">AC-39<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Airport Gate-1 &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">64 buses/day</div></div><div class="bright"><span class="label-en">View</span><span class="label-bn">দেখুন</span></div></a>
+<a class="bus-row" href="#" data-a="s-31 jadavpur behala chowrastha যাদবপুর বেহালা চৌরাস্তা" data-b="jadavpur behala chowrastha যাদবপুর বেহালা চৌরাস্তা"><div class="bnum">S-31</div><div class="bmid"><div class="broute">Jadavpur &nbsp;⟷&nbsp; Behala Chowrastha</div><div class="bmeta">173 buses/day</div></div><div class="bright"><span class="label-en">Soon</span><span class="label-bn">শীঘ্রই</span></div></a>
+<a class="bus-row" href="#" data-a="s-12 howrah stn new town হাওড়া স্টেশন নিউ টাউন" data-b="howrah stn new town হাওড়া স্টেশন নিউ টাউন"><div class="bnum">S-12</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; New Town</div><div class="bmeta">145 buses/day</div></div><div class="bright"><span class="label-en">Soon</span><span class="label-bn">শীঘ্রই</span></div></a>
+<a class="bus-row" href="#" data-a="s-3b behala 14 no stand kakurgachi 3a/1 বেহালা স্ট্যান্ড কাকুরগাছি" data-b="behala 14 no stand kakurgachi 3a/1 বেহালা স্ট্যান্ড কাকুরগাছি"><div class="bnum">S-3B</div><div class="bmid"><div class="broute">Behala 14 No Stand &nbsp;⟷&nbsp; Kakurgachi 3A/1</div><div class="bmeta">142 buses/day</div></div><div class="bright"><span class="label-en">Soon</span><span class="label-bn">শীঘ্রই</span></div></a>
+<a class="bus-row" href="#" data-a="s-7 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন" data-b="garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"><div class="bnum">S-7</div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">121 buses/day</div></div><div class="bright"><span class="label-en">Soon</span><span class="label-bn">শীঘ্রই</span></div></a>
+<a class="bus-row" href="#" data-a="s-9 jadavpur karunamayee যাদবপুর করুণাময়ী" data-b="jadavpur karunamayee যাদবপুর করুণাময়ী"><div class="bnum">S-9</div><div class="bmid"><div class="broute">Jadavpur &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">121 buses/day</div></div><div class="bright"><span class="label-en">Soon</span><span class="label-bn">শীঘ্রই</span></div></a>
+<a class="bus-row" href="#" data-a="s-10a ballygunge howrah stn বালিগঞ্জ হাওড়া স্টেশন" data-b="ballygunge howrah stn বালিগঞ্জ হাওড়া স্টেশন"><div class="bnum">S-10A</div><div class="bmid"><div class="broute">Ballygunge &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">120 buses/day</div></div><div class="bright"><span class="label-en">Soon</span><span class="label-bn">শীঘ্রই</span></div></a></div>
+  </section>
+
+  <section class="seo-section">
+    <h3 class="section-title"><span class="label-en">Which bus goes where?</span><span class="label-bn">কোন বাস কোথায় যায়?</span></h3>
+    <div class="pl-grid">
+      <span class="label-en"><button class="pl-chip" onclick="q('Howrah Stn')"><span class="pl-n">📍 Howrah Station</span><span class="pl-c">26 routes</span></button><button class="pl-chip" onclick="q('Garia')"><span class="pl-n">📍 Garia</span><span class="pl-c">11 routes</span></button><button class="pl-chip" onclick="q('Karunamayee')"><span class="pl-n">📍 Karunamoyee (New Town)</span><span class="pl-c">10 routes</span></button><button class="pl-chip" onclick="q('airport')"><span class="pl-n">📍 Dum Dum Airport</span><span class="pl-c">6 routes</span></button><button class="pl-chip" onclick="q('Jadavpur')"><span class="pl-n">📍 Jadavpur</span><span class="pl-c">8 routes</span></button><button class="pl-chip" onclick="q('Ecospace')"><span class="pl-n">📍 Ecospace / New Town</span><span class="pl-c">5 routes</span></button></span>
+      <span class="label-bn"><button class="pl-chip" onclick="q('হাওড়া')"><span class="pl-n">📍 হাওড়া স্টেশন</span><span class="pl-c">২৬ রুট</span></button><button class="pl-chip" onclick="q('গড়িয়া')"><span class="pl-n">📍 গড়িয়া</span><span class="pl-c">১১ রুট</span></button><button class="pl-chip" onclick="q('করুণাময়ী')"><span class="pl-n">📍 করুণাময়ী (নিউ টাউন)</span><span class="pl-c">১০ রুট</span></button><button class="pl-chip" onclick="q('এয়ারপোর্ট')"><span class="pl-n">📍 দমদম এয়ারপোর্ট</span><span class="pl-c">৬ রুট</span></button><button class="pl-chip" onclick="q('যাদবপুর')"><span class="pl-n">📍 যাদবপুর</span><span class="pl-c">৮ রুট</span></button><button class="pl-chip" onclick="q('ইকোস্পেস')"><span class="pl-n">📍 ইকোস্পেস / নিউ টাউন</span><span class="pl-c">৫ রুট</span></button></span>
+    </div>
+  </section>
+
+  <section class="seo-section">
+    <h3 class="section-title"><span class="label-en">About Kolkata City Buses</span><span class="label-bn">কলকাতা সিটি বাস সম্পর্কে</span></h3>
+    <p class="seo-text"><span class="label-en">WBTC runs Kolkata's city buses — 73 routes with 4,127 trips every day, from 4:20 AM to late night. <b>From Howrah Station</b> you can take S-12 to New Town, S-7 or S-5 to Garia, S-10A to Ballygunge. For the <b>Airport</b>, AC-39 runs direct from Howrah. <b>S-31</b> connects Jadavpur with Behala Chowrastha. All timings on BusJatri come from the official West Bengal Transport Dept route schedules — first bus, last bus and stop-wise times for every route.</span><span class="label-bn">ডাব্লুবিটিসি কলকাতার সিটি বাস চালায় — ৭৩ টি রুটে প্রতিদিন ৪,১২৭ টি ট্রিপ, ভোর ৪:২০ থেকে রাত পর্যন্ত। <b>হাওড়া স্টেশন থেকে</b> S-12 নিউ টাউন, S-7 বা S-5 গড়িয়া, S-10A বালিগঞ্জ। <b>এয়ারপোর্টের জন্য</b> AC-39 হাওড়া থেকে সরাসরি চলে। <b>S-31</b> যাদবপুরকে বেহালা চৌরাস্তার সঙ্গে যুক্ত করে। বাসযাত্রী-র সব সময়সূচি পশ্চিমবঙ্গ পরিবহণ দফতরের অফিসিয়াল রুট শিডিউল থেকে।</span></p>
+  </section>
+
+  <details class="full-list"><summary><span class="label-en">All 73 routes (A–Z)</span><span class="label-bn">সব ৭৩ টি রুট (ক–তে)</span></summary>
+<a class="bus-row" href="#" data-a="11a dudum stn howrah stn দমদম স্টেশন হাওড়া স্টেশন" data-b="dudum stn howrah stn দমদম স্টেশন হাওড়া স্টেশন"><div class="bnum">11A</div><div class="bmid"><div class="broute">Dudum Stn &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">32 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="14 behala 14 no stand bengal chemical বেহালা স্ট্যান্ড " data-b="behala 14 no stand bengal chemical বেহালা স্ট্যান্ড "><div class="bnum">14</div><div class="bmid"><div class="broute">Behala 14 No Stand &nbsp;⟷&nbsp; Bengal Chemical</div><div class="bmeta">30 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="14a hmg college karunamayee  করুণাময়ী" data-b="hmg college karunamayee  করুণাময়ী"><div class="bnum">14A</div><div class="bmid"><div class="broute">HMG College &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">16 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="15 howrah stn ultadanga হাওড়া স্টেশন উল্টোডাঙ্গা" data-b="howrah stn ultadanga হাওড়া স্টেশন উল্টোডাঙ্গা"><div class="bnum">15</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Ultadanga</div><div class="bmeta">40 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="33 chetla paikpara-33  পাইকপাড়া" data-b="chetla paikpara-33  পাইকপাড়া"><div class="bnum">33</div><div class="bmid"><div class="broute">Chetla &nbsp;⟷&nbsp; Paikpara-33</div><div class="bmeta">36 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="7a howrah stn sarsuna হাওড়া স্টেশন " data-b="howrah stn sarsuna হাওড়া স্টেশন "><div class="bnum">7A</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Sarsuna</div><div class="bmeta">72 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="7c howrah stn sastir more হাওড়া স্টেশন " data-b="howrah stn sastir more হাওড়া স্টেশন "><div class="bnum">7C</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Sastir More</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="7e bagpota howrah stn  হাওড়া স্টেশন" data-b="bagpota howrah stn  হাওড়া স্টেশন"><div class="bnum">7E</div><div class="bmid"><div class="broute">Bagpota &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-1 howrah stn jadavpur হাওড়া স্টেশন যাদবপুর" data-b="howrah stn jadavpur হাওড়া স্টেশন যাদবপুর"><div class="bnum">AC-1<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Jadavpur</div><div class="bmeta">40 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-10 howrah stn madhyamgram হাওড়া স্টেশন মধ্যমগ্রাম" data-b="howrah stn madhyamgram হাওড়া স্টেশন মধ্যমগ্রাম"><div class="bnum">AC-10<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Madhyamgram</div><div class="bmeta">56 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-12 howrah stn sapurji হাওড়া স্টেশন সাপুরজি" data-b="howrah stn sapurji হাওড়া স্টেশন সাপুরজি"><div class="bnum">AC-12<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Sapurji</div><div class="bmeta">36 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-12d howrah stn joka হাওড়া স্টেশন জোকা" data-b="howrah stn joka হাওড়া স্টেশন জোকা"><div class="bnum">AC-12D<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Joka</div><div class="bmeta">56 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-14 baruipur karunamayee বারুইপুর করুণাময়ী" data-b="baruipur karunamayee বারুইপুর করুণাময়ী"><div class="bnum">AC-14<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Baruipur &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-15 bantala it park howrah stn বানতলা পার্ক হাওড়া স্টেশন" data-b="bantala it park howrah stn বানতলা পার্ক হাওড়া স্টেশন"><div class="bnum">AC-15<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Bantala IT Park &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">22 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-20 barrackpur court santragachi ব্যারাকপুর কোর্ট সাঁতরাগাছি" data-b="barrackpur court santragachi ব্যারাকপুর কোর্ট সাঁতরাগাছি"><div class="bnum">AC-20<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Barrackpur Court &nbsp;⟷&nbsp; Santragachi</div><div class="bmeta">52 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-24 patuli howrah stn পাতুলি হাওড়া স্টেশন" data-b="patuli howrah stn পাতুলি হাওড়া স্টেশন"><div class="bnum">AC-24<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Patuli &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-3 kolkata stn unitech কলকাতা স্টেশন ইউনিটেক" data-b="kolkata stn unitech কলকাতা স্টেশন ইউনিটেক"><div class="bnum">AC-3<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Kolkata Stn &nbsp;⟷&nbsp; Unitech</div><div class="bmeta">20 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-37a garia depot airport gate no-3 গড়িয়া ডিপো এয়ারপোর্ট গেট" data-b="garia depot airport gate no-3 গড়িয়া ডিপো এয়ারপোর্ট গেট"><div class="bnum">AC-37A<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Airport Gate No-3</div><div class="bmeta">68 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-37b airport gate-1 garia depot এয়ারপোর্ট গেট গড়িয়া ডিপো" data-b="airport gate-1 garia depot এয়ারপোর্ট গেট গড়িয়া ডিপো"><div class="bnum">AC-37B<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Airport Gate-1 &nbsp;⟷&nbsp; Garia Depot</div><div class="bmeta">72 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row ok" href="bus-time-table/ac-39-howrah-to-airport.html" data-a="ac-39 airport gate-1 howrah stn এয়ারপোর্ট গেট হাওড়া স্টেশন" data-b="airport gate-1 howrah stn এয়ারপোর্ট গেট হাওড়া স্টেশন"><div class="bnum">AC-39<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Airport Gate-1 &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">64 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">View timetable</span><span class="label-bn">টাইম টেবিল দেখুন</span></div></a>
+<a class="bus-row" href="#" data-a="ac-4 parnasree howrah stn  হাওড়া স্টেশন" data-b="parnasree howrah stn  হাওড়া স্টেশন"><div class="bnum">AC-4<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Parnasree &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">100 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-41 santragachi ecospace সাঁতরাগাছি ইকোস্পেস" data-b="santragachi ecospace সাঁতরাগাছি ইকোস্পেস"><div class="bnum">AC-41<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Santragachi &nbsp;⟷&nbsp; Ecospace</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-42 behala 3a stand santragachi বেহালা স্ট্যান্ড সাঁতরাগাছি" data-b="behala 3a stand santragachi বেহালা স্ট্যান্ড সাঁতরাগাছি"><div class="bnum">AC-42<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Behala 3A Stand &nbsp;⟷&nbsp; Santragachi</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-43 airport gate no-3 golf green এয়ারপোর্ট গেট গল্ফ গ্রীন" data-b="airport gate no-3 golf green এয়ারপোর্ট গেট গল্ফ গ্রীন"><div class="bnum">AC-43<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Airport Gate No-3 &nbsp;⟷&nbsp; Golf Green</div><div class="bmeta">36 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-45 kolkata stn sakuntala park কলকাতা স্টেশন শাকুন্তলা পার্ক" data-b="kolkata stn sakuntala park কলকাতা স্টেশন শাকুন্তলা পার্ক"><div class="bnum">AC-45<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Kolkata Stn &nbsp;⟷&nbsp; Sakuntala Park</div><div class="bmeta">30 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-47 kudghat unitech কুড়ঘাট ইউনিটেক" data-b="kudghat unitech কুড়ঘাট ইউনিটেক"><div class="bnum">AC-47<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Kudghat &nbsp;⟷&nbsp; Unitech</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-48 kudghat bantala it park কুড়ঘাট বানতলা পার্ক" data-b="kudghat bantala it park কুড়ঘাট বানতলা পার্ক"><div class="bnum">AC-48<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Kudghat &nbsp;⟷&nbsp; Bantala IT Park</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-4a parnasree sapurji  সাপুরজি" data-b="parnasree sapurji  সাপুরজি"><div class="bnum">AC-4A<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Parnasree &nbsp;⟷&nbsp; Sapurji</div><div class="bmeta">30 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-5 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন" data-b="garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"><div class="bnum">AC-5<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">72 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-50 belur garia-6  গড়িয়া" data-b="belur garia-6  গড়িয়া"><div class="bnum">AC-50<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Belur &nbsp;⟷&nbsp; Garia-6</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-6 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন" data-b="garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"><div class="bnum">AC-6<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">96 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-9 jadavpur karunamayee যাদবপুর করুণাময়ী" data-b="jadavpur karunamayee যাদবপুর করুণাময়ী"><div class="bnum">AC-9<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Jadavpur &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="ac-9a dakshineswar golf green দক্ষিণেশ্বর গল্ফ গ্রীন" data-b="dakshineswar golf green দক্ষিণেশ্বর গল্ফ গ্রীন"><div class="bnum">AC-9A<span class="badge badge-govt">AC</span></div><div class="bmid"><div class="broute">Dakshineswar &nbsp;⟷&nbsp; Golf Green</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-10 airport gate no-3 nabanna এয়ারপোর্ট গেট নবান্না" data-b="airport gate no-3 nabanna এয়ারপোর্ট গেট নবান্না"><div class="bnum">S-10</div><div class="bmid"><div class="broute">Airport Gate No-3 &nbsp;⟷&nbsp; Nabanna</div><div class="bmeta">32 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-10a ballygunge howrah stn বালিগঞ্জ হাওড়া স্টেশন" data-b="ballygunge howrah stn বালিগঞ্জ হাওড়া স্টেশন"><div class="bnum">S-10A</div><div class="bmid"><div class="broute">Ballygunge &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">120 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-11 esplanade nd depot gate এসপ্ল্যানেড ডিপো গেট" data-b="esplanade nd depot gate এসপ্ল্যানেড ডিপো গেট"><div class="bnum">S-11</div><div class="bmid"><div class="broute">Esplanade &nbsp;⟷&nbsp; ND Depot Gate</div><div class="bmeta">64 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-12 howrah stn new town হাওড়া স্টেশন নিউ টাউন" data-b="howrah stn new town হাওড়া স্টেশন নিউ টাউন"><div class="bnum">S-12</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; New Town</div><div class="bmeta">145 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-12c dum dum 7 tanks nayabad bus stand  নয়াবাদ স্ট্যান্ড" data-b="dum dum 7 tanks nayabad bus stand  নয়াবাদ স্ট্যান্ড"><div class="bnum">S-12C</div><div class="bmid"><div class="broute">Dum Dum 7 Tanks &nbsp;⟷&nbsp; Nayabad Bus Stand</div><div class="bmeta">40 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-12d behala 3a stand howrah stn বেহালা স্ট্যান্ড হাওড়া স্টেশন" data-b="behala 3a stand howrah stn বেহালা স্ট্যান্ড হাওড়া স্টেশন"><div class="bnum">S-12D</div><div class="bmid"><div class="broute">Behala 3A Stand &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">84 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-12e ecospace howrah stn ইকোস্পেস হাওড়া স্টেশন" data-b="ecospace howrah stn ইকোস্পেস হাওড়া স্টেশন"><div class="bnum">S-12E</div><div class="bmid"><div class="broute">Ecospace &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-13 amtala ultadanga  উল্টোডাঙ্গা" data-b="amtala ultadanga  উল্টোডাঙ্গা"><div class="bnum">S-13</div><div class="bmid"><div class="broute">Amtala &nbsp;⟷&nbsp; Ultadanga</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-14 garia depot karunamayee গড়িয়া ডিপো করুণাময়ী" data-b="garia depot karunamayee গড়িয়া ডিপো করুণাময়ী"><div class="bnum">S-14</div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-14c dunlop karunamayee ডানলপ করুণাময়ী" data-b="dunlop karunamayee ডানলপ করুণাময়ী"><div class="bnum">S-14C</div><div class="bmid"><div class="broute">Dunlop &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-15g baruipur dakshineswar বারুইপুর দক্ষিণেশ্বর" data-b="baruipur dakshineswar বারুইপুর দক্ষিণেশ্বর"><div class="bnum">S-15G</div><div class="bmid"><div class="broute">Baruipur &nbsp;⟷&nbsp; Dakshineswar</div><div class="bmeta">8 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-16 behala 3a stand karunamayee বেহালা স্ট্যান্ড করুণাময়ী" data-b="behala 3a stand karunamayee বেহালা স্ট্যান্ড করুণাময়ী"><div class="bnum">S-16</div><div class="bmid"><div class="broute">Behala 3A Stand &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">16 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-17a ariadaha kudghat  কুড়ঘাট" data-b="ariadaha kudghat  কুড়ঘাট"><div class="bnum">S-17A</div><div class="bmid"><div class="broute">Ariadaha &nbsp;⟷&nbsp; Kudghat</div><div class="bmeta">56 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-2 howrah stn kudghat হাওড়া স্টেশন কুড়ঘাট" data-b="howrah stn kudghat হাওড়া স্টেশন কুড়ঘাট"><div class="bnum">S-2</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Kudghat</div><div class="bmeta">36 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-21 garia depot bagbazar গড়িয়া ডিপো " data-b="garia depot bagbazar গড়িয়া ডিপো "><div class="bnum">S-21</div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Bagbazar</div><div class="bmeta">99 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-22 karunamayee sakuntala park করুণাময়ী শাকুন্তলা পার্ক" data-b="karunamayee sakuntala park করুণাময়ী শাকুন্তলা পার্ক"><div class="bnum">S-22</div><div class="bmid"><div class="broute">Karunamayee &nbsp;⟷&nbsp; Sakuntala Park</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-22a dakgarh karunamayee  করুণাময়ী" data-b="dakgarh karunamayee  করুণাময়ী"><div class="bnum">S-22A</div><div class="bmid"><div class="broute">Dakgarh &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">24 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-23a bally khal sld gate  গেট" data-b="bally khal sld gate  গেট"><div class="bnum">S-23A</div><div class="bmid"><div class="broute">Bally Khal &nbsp;⟷&nbsp; SLD Gate</div><div class="bmeta">32 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-24 patuli howrah stn পাতুলি হাওড়া স্টেশন" data-b="patuli howrah stn পাতুলি হাওড়া স্টেশন"><div class="bnum">S-24</div><div class="bmid"><div class="broute">Patuli &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">108 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-2a paikpara-33 ballygunge পাইকপাড়া বালিগঞ্জ" data-b="paikpara-33 ballygunge পাইকপাড়া বালিগঞ্জ"><div class="bnum">S-2A</div><div class="bmid"><div class="broute">Paikpara-33 &nbsp;⟷&nbsp; Ballygunge</div><div class="bmeta">60 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-2b bagbazar kasba depot gate  ডিপো গেট" data-b="bagbazar kasba depot gate  ডিপো গেট"><div class="bnum">S-2B</div><div class="bmid"><div class="broute">Bagbazar &nbsp;⟷&nbsp; Kasba Depot Gate</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-30 ultadanga ecospace উল্টোডাঙ্গা ইকোস্পেস" data-b="ultadanga ecospace উল্টোডাঙ্গা ইকোস্পেস"><div class="bnum">S-30</div><div class="bmid"><div class="broute">Ultadanga &nbsp;⟷&nbsp; Ecospace</div><div class="bmeta">72 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-31 jadavpur behala chowrastha যাদবপুর বেহালা চৌরাস্তা" data-b="jadavpur behala chowrastha যাদবপুর বেহালা চৌরাস্তা"><div class="bnum">S-31</div><div class="bmid"><div class="broute">Jadavpur &nbsp;⟷&nbsp; Behala Chowrastha</div><div class="bmeta">173 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-32 barrackpur court howrah stn ব্যারাকপুর কোর্ট হাওড়া স্টেশন" data-b="barrackpur court howrah stn ব্যারাকপুর কোর্ট হাওড়া স্টেশন"><div class="bnum">S-32</div><div class="bmid"><div class="broute">Barrackpur Court &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">56 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-37a garia-6 airport gate-1 গড়িয়া এয়ারপোর্ট গেট" data-b="garia-6 airport gate-1 গড়িয়া এয়ারপোর্ট গেট"><div class="bnum">S-37A</div><div class="bmid"><div class="broute">Garia-6 &nbsp;⟷&nbsp; Airport Gate-1</div><div class="bmeta">64 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-3a behala 3a stand sealdah-rajabazar বেহালা স্ট্যান্ড শিয়ালদহ" data-b="behala 3a stand sealdah-rajabazar বেহালা স্ট্যান্ড শিয়ালদহ"><div class="bnum">S-3A</div><div class="bmid"><div class="broute">Behala 3A Stand &nbsp;⟷&nbsp; Sealdah-Rajabazar</div><div class="bmeta">83 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-3b behala 14 no stand kakurgachi 3a/1 বেহালা স্ট্যান্ড কাকুরগাছি" data-b="behala 14 no stand kakurgachi 3a/1 বেহালা স্ট্যান্ড কাকুরগাছি"><div class="bnum">S-3B</div><div class="bmid"><div class="broute">Behala 14 No Stand &nbsp;⟷&nbsp; Kakurgachi 3A/1</div><div class="bmeta">142 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-3w ecospace joka ইকোস্পেস জোকা" data-b="ecospace joka ইকোস্পেস জোকা"><div class="bnum">S-3W</div><div class="bmid"><div class="broute">Ecospace &nbsp;⟷&nbsp; Joka</div><div class="bmeta">40 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-4 sld gate parnasree গেট " data-b="sld gate parnasree গেট "><div class="bnum">S-4</div><div class="bmid"><div class="broute">SLD Gate &nbsp;⟷&nbsp; Parnasree</div><div class="bmeta">64 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-44 ecospace nabanna ইকোস্পেস নবান্না" data-b="ecospace nabanna ইকোস্পেস নবান্না"><div class="bnum">S-44</div><div class="bmid"><div class="broute">Ecospace &nbsp;⟷&nbsp; Nabanna</div><div class="bmeta">16 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-46 karunamayee santoshpur/akra করুণাময়ী " data-b="karunamayee santoshpur/akra করুণাময়ী "><div class="bnum">S-46</div><div class="bmid"><div class="broute">Karunamayee &nbsp;⟷&nbsp; Santoshpur/Akra</div><div class="bmeta">16 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-47 eden city howrah stn  হাওড়া স্টেশন" data-b="eden city howrah stn  হাওড়া স্টেশন"><div class="bnum">S-47</div><div class="bmid"><div class="broute">Eden City &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">72 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-4b haridevpur new town  নিউ টাউন" data-b="haridevpur new town  নিউ টাউন"><div class="bnum">S-4B</div><div class="bmid"><div class="broute">Haridevpur &nbsp;⟷&nbsp; New Town</div><div class="bmeta">32 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-5 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন" data-b="garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"><div class="bnum">S-5</div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">120 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-51 eden city garia depot  গড়িয়া ডিপো" data-b="eden city garia depot  গড়িয়া ডিপো"><div class="bnum">S-51</div><div class="bmid"><div class="broute">Eden City &nbsp;⟷&nbsp; Garia Depot</div><div class="bmeta">36 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-53 kolkata stn unitech কলকাতা স্টেশন ইউনিটেক" data-b="kolkata stn unitech কলকাতা স্টেশন ইউনিটেক"><div class="bnum">S-53</div><div class="bmid"><div class="broute">Kolkata Stn &nbsp;⟷&nbsp; Unitech</div><div class="bmeta">60 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-5c howrah stn nayabad bus stand হাওড়া স্টেশন নয়াবাদ স্ট্যান্ড" data-b="howrah stn nayabad bus stand হাওড়া স্টেশন নয়াবাদ স্ট্যান্ড"><div class="bnum">S-5C</div><div class="bmid"><div class="broute">Howrah Stn &nbsp;⟷&nbsp; Nayabad Bus Stand</div><div class="bmeta">48 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-7 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন" data-b="garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"><div class="bnum">S-7</div><div class="bmid"><div class="broute">Garia Depot &nbsp;⟷&nbsp; Howrah Stn</div><div class="bmeta">121 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row" href="#" data-a="s-9 jadavpur karunamayee যাদবপুর করুণাময়ী" data-b="jadavpur karunamayee যাদবপুর করুণাময়ী"><div class="bnum">S-9</div><div class="bmid"><div class="broute">Jadavpur &nbsp;⟷&nbsp; Karunamayee</div><div class="bmeta">121 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">Coming soon</span><span class="label-bn">শীঘ্রই আসছে</span></div></a>
+<a class="bus-row ok" href="bus-time-table/s-9a-dunlop-to-ballygunge.html" data-a="s-9a dunlop ballygunge stn dunlop tobin rd sinthi more chiriamore shyambazar grey st vivekananda rd m.g. road colutala st c.r. ave bbd bag esplanade park street hazra rashbehari ave deshapriya park gariahat ballygunge stn ডানলপ বালিগঞ্জ স্টেশন ডানলপ টবিন রোড সিন্থি মোড় চিরিয়ামোড় শ্যামবাজার গ্রে স্ট্রিট বিবেকানন্দ রোড এম জি রোড কলুটোলা স্ট্রিট সি আর অ্যাভিনিউ বিবিডি বাগ এসপ্ল্যানেড পার্ক স্ট্রিট হাজরা রাসবিহারী অ্যাভিনিউ দেশপ্রিয় পার্ক ঘড়িয়াহাট বালিগঞ্জ স্টেশন" data-b="dunlop ballygunge stn dunlop tobin rd sinthi more chiriamore shyambazar grey st vivekananda rd m.g. road colutala st c.r. ave bbd bag esplanade park street hazra rashbehari ave deshapriya park gariahat ballygunge stn ডানলপ বালিগঞ্জ স্টেশন ডানলপ টবিন রোড সিন্থি মোড় চিরিয়ামোড় শ্যামবাজার গ্রে স্ট্রিট বিবেকানন্দ রোড এম জি রোড কলুটোলা স্ট্রিট সি আর অ্যাভিনিউ বিবিডি বাগ এসপ্ল্যানেড পার্ক স্ট্রিট হাজরা রাসবিহারী অ্যাভিনিউ দেশপ্রিয় পার্ক ঘড়িয়াহাট বালিগঞ্জ স্টেশন"><div class="bnum">S-9A</div><div class="bmid"><div class="broute">Dunlop &nbsp;⟷&nbsp; Ballygunge Stn</div><div class="bmeta">119 buses/day · 2 directions</div></div><div class="bright"><span class="label-en">View timetable</span><span class="label-bn">টাইম টেবিল দেখুন</span></div></a>
+  </details>
+
+  <section class="seo-section">
+    <h3 class="section-title"><span class="label-en">FAQs</span><span class="label-bn">সাধারণ প্রশ্ন</span></h3>
+    <div class="faq-list">
+      <div class="faq-item"><div class="faq-q" onclick="this.parentNode.classList.toggle('open')"><span class="label-en">How do I find my Kolkata city bus?</span><span class="label-bn">আমার কলকাতা সিটি বাস কীভাবে খুঁজব?</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a"><p><span class="label-en">Type your route number (like S9A), any stop name (like Dunlop) or a place (like Howrah) in the search box. You can also tap a popular place above. Tap your route to see departure times, stop-wise timings and metro connections.</span><span class="label-bn">সার্চ বক্সে রুট নম্বর (যেমন S9A), যেকোনো স্টপের নাম (যেমন Dunlop) বা জায়গা (যেমন Howrah) লিখুন। উপরের জনপ্রিয় জায়গাতেও ট্যাপ করতে পারেন। ছাড়ার সময়, স্টপ-ভিত্তিক সময় এবং মেট্রো সংযোগ দেখতে রুটে ট্যাপ করুন।</span></p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentNode.classList.toggle('open')"><span class="label-en">Are the stop-wise timings exact?</span><span class="label-bn">স্টপ-ভিত্তিক সময় কি নির্ভুল?</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a"><p><span class="label-en">First and last stop times are from the official WB Transport Dept schedule. Mid-route times (marked ≈) are estimated from real stop-to-stop distances and traffic patterns.</span><span class="label-bn">প্রথম ও শেষ স্টপের সময় অফিসিয়াল পশ্চিমবঙ্গ পরিবহণ দফতরের শিডিউল থেকে। মাঝের সময়গুলি (≈ চিহ্নিত) প্রকৃত দূরত্ব ও ট্রাফিক থেকে আনুমানিক।</span></p></div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentNode.classList.toggle('open')"><span class="label-en">Which AC buses run in Kolkata?</span><span class="label-bn">কলকাতায় কোন কোন এসি বাস চলে?</span><svg class="chev" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg></div><div class="faq-a"><p><span class="label-en">WBTC runs 25 AC/Volvo routes including AC-39 (Howrah to Airport), AC-12, AC-20 and more — see the AC section above. Private AC operators like Shyamoli Paribahan and Greenline also run on major corridors.</span><span class="label-bn">ডাব্লুবিটিসি ২৫ টি এসি / ভলভো রুট চালায় — এসি-৩৯ (হাওড়া থেকে এয়ারপোর্ট), এসি-১২, এসি-২০ সহ — উপরের এসি সেকশন দেখুন। শ্যামলী পরিবহন ও গ্রীনলাইনের মতো বেসরকারি এসি অপারেটরও প্রধান রুটে চলে।</span></p></div></div>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="index.html">All Bus Timetables</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="contribute.html">Contribute a Bus</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </div>
+    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
+    Not affiliated with any transport corporation<br>
+    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
+  </div>
+</footer>
+<script>
+var ROUTES=[{"n": "11A", "a": "Dudum Stn", "b": "Howrah Stn", "t": 32, "d": 2, "ac": false, "ok": false, "da": "11a dudum stn howrah stn দমদম স্টেশন হাওড়া স্টেশন", "db": "dudum stn howrah stn দমদম স্টেশন হাওড়া স্টেশন"}, {"n": "14", "a": "Behala 14 No Stand", "b": "Bengal Chemical", "t": 30, "d": 2, "ac": false, "ok": false, "da": "14 behala 14 no stand bengal chemical বেহালা স্ট্যান্ড ", "db": "behala 14 no stand bengal chemical বেহালা স্ট্যান্ড "}, {"n": "14A", "a": "HMG College", "b": "Karunamayee", "t": 16, "d": 2, "ac": false, "ok": false, "da": "14a hmg college karunamayee  করুণাময়ী", "db": "hmg college karunamayee  করুণাময়ী"}, {"n": "15", "a": "Howrah Stn", "b": "Ultadanga", "t": 40, "d": 2, "ac": false, "ok": false, "da": "15 howrah stn ultadanga হাওড়া স্টেশন উল্টোডাঙ্গা", "db": "howrah stn ultadanga হাওড়া স্টেশন উল্টোডাঙ্গা"}, {"n": "33", "a": "Chetla", "b": "Paikpara-33", "t": 36, "d": 2, "ac": false, "ok": false, "da": "33 chetla paikpara-33  পাইকপাড়া", "db": "chetla paikpara-33  পাইকপাড়া"}, {"n": "7A", "a": "Howrah Stn", "b": "Sarsuna", "t": 72, "d": 2, "ac": false, "ok": false, "da": "7a howrah stn sarsuna হাওড়া স্টেশন ", "db": "howrah stn sarsuna হাওড়া স্টেশন "}, {"n": "7C", "a": "Howrah Stn", "b": "Sastir More", "t": 48, "d": 2, "ac": false, "ok": false, "da": "7c howrah stn sastir more হাওড়া স্টেশন ", "db": "howrah stn sastir more হাওড়া স্টেশন "}, {"n": "7E", "a": "Bagpota", "b": "Howrah Stn", "t": 24, "d": 2, "ac": false, "ok": false, "da": "7e bagpota howrah stn  হাওড়া স্টেশন", "db": "bagpota howrah stn  হাওড়া স্টেশন"}, {"n": "AC-1", "a": "Howrah Stn", "b": "Jadavpur", "t": 40, "d": 2, "ac": true, "ok": false, "da": "ac-1 howrah stn jadavpur হাওড়া স্টেশন যাদবপুর", "db": "howrah stn jadavpur হাওড়া স্টেশন যাদবপুর"}, {"n": "AC-10", "a": "Howrah Stn", "b": "Madhyamgram", "t": 56, "d": 2, "ac": true, "ok": false, "da": "ac-10 howrah stn madhyamgram হাওড়া স্টেশন মধ্যমগ্রাম", "db": "howrah stn madhyamgram হাওড়া স্টেশন মধ্যমগ্রাম"}, {"n": "AC-12", "a": "Howrah Stn", "b": "Sapurji", "t": 36, "d": 2, "ac": true, "ok": false, "da": "ac-12 howrah stn sapurji হাওড়া স্টেশন সাপুরজি", "db": "howrah stn sapurji হাওড়া স্টেশন সাপুরজি"}, {"n": "AC-12D", "a": "Howrah Stn", "b": "Joka", "t": 56, "d": 2, "ac": true, "ok": false, "da": "ac-12d howrah stn joka হাওড়া স্টেশন জোকা", "db": "howrah stn joka হাওড়া স্টেশন জোকা"}, {"n": "AC-14", "a": "Baruipur", "b": "Karunamayee", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-14 baruipur karunamayee বারুইপুর করুণাময়ী", "db": "baruipur karunamayee বারুইপুর করুণাময়ী"}, {"n": "AC-15", "a": "Bantala IT Park", "b": "Howrah Stn", "t": 22, "d": 2, "ac": true, "ok": false, "da": "ac-15 bantala it park howrah stn বানতলা পার্ক হাওড়া স্টেশন", "db": "bantala it park howrah stn বানতলা পার্ক হাওড়া স্টেশন"}, {"n": "AC-20", "a": "Barrackpur Court", "b": "Santragachi", "t": 52, "d": 2, "ac": true, "ok": false, "da": "ac-20 barrackpur court santragachi ব্যারাকপুর কোর্ট সাঁতরাগাছি", "db": "barrackpur court santragachi ব্যারাকপুর কোর্ট সাঁতরাগাছি"}, {"n": "AC-24", "a": "Patuli", "b": "Howrah Stn", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-24 patuli howrah stn পাতুলি হাওড়া স্টেশন", "db": "patuli howrah stn পাতুলি হাওড়া স্টেশন"}, {"n": "AC-3", "a": "Kolkata Stn", "b": "Unitech", "t": 20, "d": 2, "ac": true, "ok": false, "da": "ac-3 kolkata stn unitech কলকাতা স্টেশন ইউনিটেক", "db": "kolkata stn unitech কলকাতা স্টেশন ইউনিটেক"}, {"n": "AC-37A", "a": "Garia Depot", "b": "Airport Gate No-3", "t": 68, "d": 2, "ac": true, "ok": false, "da": "ac-37a garia depot airport gate no-3 গড়িয়া ডিপো এয়ারপোর্ট গেট", "db": "garia depot airport gate no-3 গড়িয়া ডিপো এয়ারপোর্ট গেট"}, {"n": "AC-37B", "a": "Airport Gate-1", "b": "Garia Depot", "t": 72, "d": 2, "ac": true, "ok": false, "da": "ac-37b airport gate-1 garia depot এয়ারপোর্ট গেট গড়িয়া ডিপো", "db": "airport gate-1 garia depot এয়ারপোর্ট গেট গড়িয়া ডিপো"}, {"n": "AC-39", "a": "Airport Gate-1", "b": "Howrah Stn", "t": 64, "d": 2, "ac": true, "ok": true, "da": "ac-39 airport gate-1 howrah stn এয়ারপোর্ট গেট হাওড়া স্টেশন", "db": "airport gate-1 howrah stn এয়ারপোর্ট গেট হাওড়া স্টেশন"}, {"n": "AC-4", "a": "Parnasree", "b": "Howrah Stn", "t": 100, "d": 2, "ac": true, "ok": false, "da": "ac-4 parnasree howrah stn  হাওড়া স্টেশন", "db": "parnasree howrah stn  হাওড়া স্টেশন"}, {"n": "AC-41", "a": "Santragachi", "b": "Ecospace", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-41 santragachi ecospace সাঁতরাগাছি ইকোস্পেস", "db": "santragachi ecospace সাঁতরাগাছি ইকোস্পেস"}, {"n": "AC-42", "a": "Behala 3A Stand", "b": "Santragachi", "t": 24, "d": 2, "ac": true, "ok": false, "da": "ac-42 behala 3a stand santragachi বেহালা স্ট্যান্ড সাঁতরাগাছি", "db": "behala 3a stand santragachi বেহালা স্ট্যান্ড সাঁতরাগাছি"}, {"n": "AC-43", "a": "Airport Gate No-3", "b": "Golf Green", "t": 36, "d": 2, "ac": true, "ok": false, "da": "ac-43 airport gate no-3 golf green এয়ারপোর্ট গেট গল্ফ গ্রীন", "db": "airport gate no-3 golf green এয়ারপোর্ট গেট গল্ফ গ্রীন"}, {"n": "AC-45", "a": "Kolkata Stn", "b": "Sakuntala Park", "t": 30, "d": 2, "ac": true, "ok": false, "da": "ac-45 kolkata stn sakuntala park কলকাতা স্টেশন শাকুন্তলা পার্ক", "db": "kolkata stn sakuntala park কলকাতা স্টেশন শাকুন্তলা পার্ক"}, {"n": "AC-47", "a": "Kudghat", "b": "Unitech", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-47 kudghat unitech কুড়ঘাট ইউনিটেক", "db": "kudghat unitech কুড়ঘাট ইউনিটেক"}, {"n": "AC-48", "a": "Kudghat", "b": "Bantala IT Park", "t": 24, "d": 2, "ac": true, "ok": false, "da": "ac-48 kudghat bantala it park কুড়ঘাট বানতলা পার্ক", "db": "kudghat bantala it park কুড়ঘাট বানতলা পার্ক"}, {"n": "AC-4A", "a": "Parnasree", "b": "Sapurji", "t": 30, "d": 2, "ac": true, "ok": false, "da": "ac-4a parnasree sapurji  সাপুরজি", "db": "parnasree sapurji  সাপুরজি"}, {"n": "AC-5", "a": "Garia Depot", "b": "Howrah Stn", "t": 72, "d": 2, "ac": true, "ok": false, "da": "ac-5 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন", "db": "garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"}, {"n": "AC-50", "a": "Belur", "b": "Garia-6", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-50 belur garia-6  গড়িয়া", "db": "belur garia-6  গড়িয়া"}, {"n": "AC-6", "a": "Garia Depot", "b": "Howrah Stn", "t": 96, "d": 2, "ac": true, "ok": false, "da": "ac-6 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন", "db": "garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"}, {"n": "AC-9", "a": "Jadavpur", "b": "Karunamayee", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-9 jadavpur karunamayee যাদবপুর করুণাময়ী", "db": "jadavpur karunamayee যাদবপুর করুণাময়ী"}, {"n": "AC-9A", "a": "Dakshineswar", "b": "Golf Green", "t": 48, "d": 2, "ac": true, "ok": false, "da": "ac-9a dakshineswar golf green দক্ষিণেশ্বর গল্ফ গ্রীন", "db": "dakshineswar golf green দক্ষিণেশ্বর গল্ফ গ্রীন"}, {"n": "S-10", "a": "Airport Gate No-3", "b": "Nabanna", "t": 32, "d": 2, "ac": false, "ok": false, "da": "s-10 airport gate no-3 nabanna এয়ারপোর্ট গেট নবান্না", "db": "airport gate no-3 nabanna এয়ারপোর্ট গেট নবান্না"}, {"n": "S-10A", "a": "Ballygunge", "b": "Howrah Stn", "t": 120, "d": 2, "ac": false, "ok": false, "da": "s-10a ballygunge howrah stn বালিগঞ্জ হাওড়া স্টেশন", "db": "ballygunge howrah stn বালিগঞ্জ হাওড়া স্টেশন"}, {"n": "S-11", "a": "Esplanade", "b": "ND Depot Gate", "t": 64, "d": 2, "ac": false, "ok": false, "da": "s-11 esplanade nd depot gate এসপ্ল্যানেড ডিপো গেট", "db": "esplanade nd depot gate এসপ্ল্যানেড ডিপো গেট"}, {"n": "S-12", "a": "Howrah Stn", "b": "New Town", "t": 145, "d": 2, "ac": false, "ok": false, "da": "s-12 howrah stn new town হাওড়া স্টেশন নিউ টাউন", "db": "howrah stn new town হাওড়া স্টেশন নিউ টাউন"}, {"n": "S-12C", "a": "Dum Dum 7 Tanks", "b": "Nayabad Bus Stand", "t": 40, "d": 2, "ac": false, "ok": false, "da": "s-12c dum dum 7 tanks nayabad bus stand  নয়াবাদ স্ট্যান্ড", "db": "dum dum 7 tanks nayabad bus stand  নয়াবাদ স্ট্যান্ড"}, {"n": "S-12D", "a": "Behala 3A Stand", "b": "Howrah Stn", "t": 84, "d": 2, "ac": false, "ok": false, "da": "s-12d behala 3a stand howrah stn বেহালা স্ট্যান্ড হাওড়া স্টেশন", "db": "behala 3a stand howrah stn বেহালা স্ট্যান্ড হাওড়া স্টেশন"}, {"n": "S-12E", "a": "Ecospace", "b": "Howrah Stn", "t": 24, "d": 2, "ac": false, "ok": false, "da": "s-12e ecospace howrah stn ইকোস্পেস হাওড়া স্টেশন", "db": "ecospace howrah stn ইকোস্পেস হাওড়া স্টেশন"}, {"n": "S-13", "a": "Amtala", "b": "Ultadanga", "t": 24, "d": 2, "ac": false, "ok": false, "da": "s-13 amtala ultadanga  উল্টোডাঙ্গা", "db": "amtala ultadanga  উল্টোডাঙ্গা"}, {"n": "S-14", "a": "Garia Depot", "b": "Karunamayee", "t": 24, "d": 2, "ac": false, "ok": false, "da": "s-14 garia depot karunamayee গড়িয়া ডিপো করুণাময়ী", "db": "garia depot karunamayee গড়িয়া ডিপো করুণাময়ী"}, {"n": "S-14C", "a": "Dunlop", "b": "Karunamayee", "t": 48, "d": 2, "ac": false, "ok": false, "da": "s-14c dunlop karunamayee ডানলপ করুণাময়ী", "db": "dunlop karunamayee ডানলপ করুণাময়ী"}, {"n": "S-15G", "a": "Baruipur", "b": "Dakshineswar", "t": 8, "d": 2, "ac": false, "ok": false, "da": "s-15g baruipur dakshineswar বারুইপুর দক্ষিণেশ্বর", "db": "baruipur dakshineswar বারুইপুর দক্ষিণেশ্বর"}, {"n": "S-16", "a": "Behala 3A Stand", "b": "Karunamayee", "t": 16, "d": 2, "ac": false, "ok": false, "da": "s-16 behala 3a stand karunamayee বেহালা স্ট্যান্ড করুণাময়ী", "db": "behala 3a stand karunamayee বেহালা স্ট্যান্ড করুণাময়ী"}, {"n": "S-17A", "a": "Ariadaha", "b": "Kudghat", "t": 56, "d": 2, "ac": false, "ok": false, "da": "s-17a ariadaha kudghat  কুড়ঘাট", "db": "ariadaha kudghat  কুড়ঘাট"}, {"n": "S-2", "a": "Howrah Stn", "b": "Kudghat", "t": 36, "d": 2, "ac": false, "ok": false, "da": "s-2 howrah stn kudghat হাওড়া স্টেশন কুড়ঘাট", "db": "howrah stn kudghat হাওড়া স্টেশন কুড়ঘাট"}, {"n": "S-21", "a": "Garia Depot", "b": "Bagbazar", "t": 99, "d": 2, "ac": false, "ok": false, "da": "s-21 garia depot bagbazar গড়িয়া ডিপো ", "db": "garia depot bagbazar গড়িয়া ডিপো "}, {"n": "S-22", "a": "Karunamayee", "b": "Sakuntala Park", "t": 48, "d": 2, "ac": false, "ok": false, "da": "s-22 karunamayee sakuntala park করুণাময়ী শাকুন্তলা পার্ক", "db": "karunamayee sakuntala park করুণাময়ী শাকুন্তলা পার্ক"}, {"n": "S-22A", "a": "Dakgarh", "b": "Karunamayee", "t": 24, "d": 2, "ac": false, "ok": false, "da": "s-22a dakgarh karunamayee  করুণাময়ী", "db": "dakgarh karunamayee  করুণাময়ী"}, {"n": "S-23A", "a": "Bally Khal", "b": "SLD Gate", "t": 32, "d": 2, "ac": false, "ok": false, "da": "s-23a bally khal sld gate  গেট", "db": "bally khal sld gate  গেট"}, {"n": "S-24", "a": "Patuli", "b": "Howrah Stn", "t": 108, "d": 2, "ac": false, "ok": false, "da": "s-24 patuli howrah stn পাতুলি হাওড়া স্টেশন", "db": "patuli howrah stn পাতুলি হাওড়া স্টেশন"}, {"n": "S-2A", "a": "Paikpara-33", "b": "Ballygunge", "t": 60, "d": 2, "ac": false, "ok": false, "da": "s-2a paikpara-33 ballygunge পাইকপাড়া বালিগঞ্জ", "db": "paikpara-33 ballygunge পাইকপাড়া বালিগঞ্জ"}, {"n": "S-2B", "a": "Bagbazar", "b": "Kasba Depot Gate", "t": 48, "d": 2, "ac": false, "ok": false, "da": "s-2b bagbazar kasba depot gate  ডিপো গেট", "db": "bagbazar kasba depot gate  ডিপো গেট"}, {"n": "S-30", "a": "Ultadanga", "b": "Ecospace", "t": 72, "d": 2, "ac": false, "ok": false, "da": "s-30 ultadanga ecospace উল্টোডাঙ্গা ইকোস্পেস", "db": "ultadanga ecospace উল্টোডাঙ্গা ইকোস্পেস"}, {"n": "S-31", "a": "Jadavpur", "b": "Behala Chowrastha", "t": 173, "d": 2, "ac": false, "ok": false, "da": "s-31 jadavpur behala chowrastha যাদবপুর বেহালা চৌরাস্তা", "db": "jadavpur behala chowrastha যাদবপুর বেহালা চৌরাস্তা"}, {"n": "S-32", "a": "Barrackpur Court", "b": "Howrah Stn", "t": 56, "d": 2, "ac": false, "ok": false, "da": "s-32 barrackpur court howrah stn ব্যারাকপুর কোর্ট হাওড়া স্টেশন", "db": "barrackpur court howrah stn ব্যারাকপুর কোর্ট হাওড়া স্টেশন"}, {"n": "S-37A", "a": "Garia-6", "b": "Airport Gate-1", "t": 64, "d": 2, "ac": false, "ok": false, "da": "s-37a garia-6 airport gate-1 গড়িয়া এয়ারপোর্ট গেট", "db": "garia-6 airport gate-1 গড়িয়া এয়ারপোর্ট গেট"}, {"n": "S-3A", "a": "Behala 3A Stand", "b": "Sealdah-Rajabazar", "t": 83, "d": 2, "ac": false, "ok": false, "da": "s-3a behala 3a stand sealdah-rajabazar বেহালা স্ট্যান্ড শিয়ালদহ", "db": "behala 3a stand sealdah-rajabazar বেহালা স্ট্যান্ড শিয়ালদহ"}, {"n": "S-3B", "a": "Behala 14 No Stand", "b": "Kakurgachi 3A/1", "t": 142, "d": 2, "ac": false, "ok": false, "da": "s-3b behala 14 no stand kakurgachi 3a/1 বেহালা স্ট্যান্ড কাকুরগাছি", "db": "behala 14 no stand kakurgachi 3a/1 বেহালা স্ট্যান্ড কাকুরগাছি"}, {"n": "S-3W", "a": "Ecospace", "b": "Joka", "t": 40, "d": 2, "ac": false, "ok": false, "da": "s-3w ecospace joka ইকোস্পেস জোকা", "db": "ecospace joka ইকোস্পেস জোকা"}, {"n": "S-4", "a": "SLD Gate", "b": "Parnasree", "t": 64, "d": 2, "ac": false, "ok": false, "da": "s-4 sld gate parnasree গেট ", "db": "sld gate parnasree গেট "}, {"n": "S-44", "a": "Ecospace", "b": "Nabanna", "t": 16, "d": 2, "ac": false, "ok": false, "da": "s-44 ecospace nabanna ইকোস্পেস নবান্না", "db": "ecospace nabanna ইকোস্পেস নবান্না"}, {"n": "S-46", "a": "Karunamayee", "b": "Santoshpur/Akra", "t": 16, "d": 2, "ac": false, "ok": false, "da": "s-46 karunamayee santoshpur/akra করুণাময়ী ", "db": "karunamayee santoshpur/akra করুণাময়ী "}, {"n": "S-47", "a": "Eden City", "b": "Howrah Stn", "t": 72, "d": 2, "ac": false, "ok": false, "da": "s-47 eden city howrah stn  হাওড়া স্টেশন", "db": "eden city howrah stn  হাওড়া স্টেশন"}, {"n": "S-4B", "a": "Haridevpur", "b": "New Town", "t": 32, "d": 2, "ac": false, "ok": false, "da": "s-4b haridevpur new town  নিউ টাউন", "db": "haridevpur new town  নিউ টাউন"}, {"n": "S-5", "a": "Garia Depot", "b": "Howrah Stn", "t": 120, "d": 2, "ac": false, "ok": false, "da": "s-5 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন", "db": "garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"}, {"n": "S-51", "a": "Eden City", "b": "Garia Depot", "t": 36, "d": 2, "ac": false, "ok": false, "da": "s-51 eden city garia depot  গড়িয়া ডিপো", "db": "eden city garia depot  গড়িয়া ডিপো"}, {"n": "S-53", "a": "Kolkata Stn", "b": "Unitech", "t": 60, "d": 2, "ac": false, "ok": false, "da": "s-53 kolkata stn unitech কলকাতা স্টেশন ইউনিটেক", "db": "kolkata stn unitech কলকাতা স্টেশন ইউনিটেক"}, {"n": "S-5C", "a": "Howrah Stn", "b": "Nayabad Bus Stand", "t": 48, "d": 2, "ac": false, "ok": false, "da": "s-5c howrah stn nayabad bus stand হাওড়া স্টেশন নয়াবাদ স্ট্যান্ড", "db": "howrah stn nayabad bus stand হাওড়া স্টেশন নয়াবাদ স্ট্যান্ড"}, {"n": "S-7", "a": "Garia Depot", "b": "Howrah Stn", "t": 121, "d": 2, "ac": false, "ok": false, "da": "s-7 garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন", "db": "garia depot howrah stn গড়িয়া ডিপো হাওড়া স্টেশন"}, {"n": "S-9", "a": "Jadavpur", "b": "Karunamayee", "t": 121, "d": 2, "ac": false, "ok": false, "da": "s-9 jadavpur karunamayee যাদবপুর করুণাময়ী", "db": "jadavpur karunamayee যাদবপুর করুণাময়ী"}, {"n": "S-9A", "a": "Dunlop", "b": "Ballygunge Stn", "t": 119, "d": 2, "ac": false, "ok": true, "da": "s-9a dunlop ballygunge stn dunlop tobin rd sinthi more chiriamore shyambazar grey st vivekananda rd m.g. road colutala st c.r. ave bbd bag esplanade park street hazra rashbehari ave deshapriya park gariahat ballygunge stn ডানলপ বালিগঞ্জ স্টেশন ডানলপ টবিন রোড সিন্থি মোড় চিরিয়ামোড় শ্যামবাজার গ্রে স্ট্রিট বিবেকানন্দ রোড এম জি রোড কলুটোলা স্ট্রিট সি আর অ্যাভিনিউ বিবিডি বাগ এসপ্ল্যানেড পার্ক স্ট্রিট হাজরা রাসবিহারী অ্যাভিনিউ দেশপ্রিয় পার্ক ঘড়িয়াহাট বালিগঞ্জ স্টেশন", "db": "dunlop ballygunge stn dunlop tobin rd sinthi more chiriamore shyambazar grey st vivekananda rd m.g. road colutala st c.r. ave bbd bag esplanade park street hazra rashbehari ave deshapriya park gariahat ballygunge stn ডানলপ বালিগঞ্জ স্টেশন ডানলপ টবিন রোড সিন্থি মোড় চিরিয়ামোড় শ্যামবাজার গ্রে স্ট্রিট বিবেকানন্দ রোড এম জি রোড কলুটোলা স্ট্রিট সি আর অ্যাভিনিউ বিবিডি বাগ এসপ্ল্যানেড পার্ক স্ট্রিট হাজরা রাসবিহারী অ্যাভিনিউ দেশপ্রিয় পার্ক ঘড়িয়াহাট বালিগঞ্জ স্টেশন"}];
+var LINKS={"S-9A":"bus-time-table/s-9a-dunlop-to-ballygunge.html","AC-39":"bus-time-table/ac-39-howrah-to-airport.html"};
+function norm(s){return (s||'').toLowerCase().replace(/[^a-z0-9\u0980-\u09FF]/g,'')}
+var mode='ft';
+function switchMode(m){mode=m;document.getElementById('ftPane').style.display=(m=='ft')?'':'none';document.getElementById('rtPane').style.display=(m=='rt')?'':'none';document.getElementById('tabFT').classList.toggle('on',m=='ft');document.getElementById('tabRT').classList.toggle('on',m=='rt');document.getElementById('results').style.display='none';}
+function searchBus(){
+  var f,t;
+  if(mode=='rt'){f=norm(document.getElementById('routeQ').value||'');t='';}
+  else{f=norm(document.getElementById('fromQ').value||'');t=norm(document.getElementById('toQ').value||'');}
+  var box=document.getElementById('results'),list=document.getElementById('resList'),cnt=document.getElementById('resCount');
+  if(!f&&!t){box.style.display='none';return;}
+  var hits=[];
+  ROUTES.forEach(function(r){
+    var hit=true;
+    if(mode=='rt'){if(f)hit=(norm(r.n).indexOf(f)>=0);}
+    else{var DA=norm(r.da),DB=norm(r.db);
+      if(f)hit=(DA.indexOf(f)>=0||DB.indexOf(f)>=0);
+      if(hit&&t)hit=(DA.indexOf(t)>=0||DB.indexOf(t)>=0);}
+    if(hit)hits.push(r);
+  });
+  var html='';
+  hits.slice(0,10).forEach(function(r){
+    html+='<a class="res-row'+(r.ok?'':' dis')+'" href="'+(LINKS[r.n]||'#')+'"><span class="rn">'+r.n+'</span><span class="rr">'+r.a+' ⟷ '+r.b+'</span><span class="go">'+(r.ok?'View timetable →':'Coming soon')+'</span></a>';
+  });
+  if(hits.length>10)html+='<div class="no-res">+'+(hits.length-10)+' more — add "To" to narrow down</div>';
+  if(!hits.length)html='<div class="no-res">No bus found — try a nearby stop or place name</div>';
+  list.innerHTML=html;
+  cnt.innerHTML='<b>'+hits.length+'</b> '+(hits.length==1?'bus':'buses')+' found';
+  box.style.display='block';
+  box.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+function swapFT(){var a=document.getElementById('fromQ'),b=document.getElementById('toQ'),t=a.value;a.value=b.value;b.value=t;}
+function q(t){document.getElementById('fromQ').value=t;document.getElementById('toQ').value='';searchBus();document.querySelector('.hub-search').scrollIntoView({behavior:'smooth',block:'start'});window.scrollBy(0,120);}
+(function(){
+  var en=document.getElementById('langEn'),bn=document.getElementById('langBn');
+  function setLang(bnOn){document.body.classList.toggle('lang-bn',bnOn);document.body.lang=bnOn?'bn':'en';en.classList.toggle('on',!bnOn);bn.classList.toggle('on',bnOn);}
+  en.addEventListener('click',function(){setLang(false)});
+  bn.addEventListener('click',function(){setLang(true)});
+  document.getElementById('themeBtn').addEventListener('click',function(){document.body.classList.toggle('dark')});
+})();
+</script>
+</body>
+</html>
