@@ -42,7 +42,7 @@ def insert_back_before(path, anchor_re, anchor_group=0):
     m = re.search(anchor_re, src)
     if not m:
         stats.setdefault("noanchor", []).append(path); return 0
-    out = src[:m.end()] + "\n    " + BACK_BTN + srr[m.end():]
+    out = src[:m.end()] + "\n    " + BACK_BTN + src[m.end():]
     write(path, out); return 1
 
 # ---------------------------------------------------------------- 1. seo-page.js (route + sbstc pages)
@@ -140,7 +140,7 @@ if 'id="themeBtn" class="lang-btn"' in src:
     if "bjBackBtn" not in src:
         m = re.search(r'<div class="container header-inner">', src)
         if m:
-            src = src[:m.end()] + "\n    " + BACK_BTN + srr[m.end():]
+            src = src[:m.end()] + "\n    " + BACK_BTN + src[m.end():]
     write(p, src); stats["sbstc"] = k + k2
 
 # ---------------------------------------------------------------- 5. stand pages (76): back button
@@ -206,7 +206,7 @@ for f in ["404.html", "kolkata-city-routes.html"]:
     if 'id="bjBackBtn"' in src: stats.setdefault("skipped", []).append(f); continue
     m = re.search(r'<div class="header-inner">', src)
     if m:
-        src = src[:m.end()] + "\n    " + BACK_BTN + srr[m.end():]; write(f, src); n += 1
+        src = src[:m.end()] + "\n    " + BACK_BTN + src[m.end():]; write(f, src); n += 1
 stats["404-cityroutes-back"] = n
 
 # contribute.html (no dark support on this page - back button only)
