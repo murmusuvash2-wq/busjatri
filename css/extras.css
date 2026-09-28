@@ -212,3 +212,7 @@ body.lang-bn .route-chip{letter-spacing:0}
 
 /* report form: type select */
 .rf-row select{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font-size:13px;min-height:42px;max-width:100%}
+
+/* 2026-09-28: chips/cards are now <a> — keep them visually identical */
+a.route-chip,a.place-card{color:inherit;text-decoration:none}
+a.place-card{display:flex}

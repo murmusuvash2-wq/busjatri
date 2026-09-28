@@ -569,21 +569,36 @@ function computePopularRoutes() {
 }
 
 
+/* SEO/via pages that exist as real files (homepage chips/cards link to these) */
+const __BJ_SEO_SLUGS = new Set(['cooch-behar-to-siliguri', 'durgapur-to-karunamoyee', 'kolkata-to-haldia', 'burdwan-to-kolkata', 'durgapur-to-esplanade', 'burdwan-to-karunamoyee', 'kolkata-to-durgapur', 'kolkata-to-asansol', 'durgapur-to-kolkata', 'asansol-to-kolkata']);
+const __BJ_VIA_SLUGS = new Set(['digha', 'mukutmanipur', 'bishnupur', 'jhargram', 'purulia', 'tarapith', 'mayapur', 'bolpur', 'kolkata', 'mandarmani', 'bankura', 'darjeeling']);
 function renderHome(el) {
   const placeCards = POPULAR_PLACES.map((p, i) => {
     const stop = Object.values(STOPS).find(s => s.name.toLowerCase() === p.name.toLowerCase())
       || Object.values(STOPS).find(s => s.name.toLowerCase().includes(p.name.toLowerCase()));
     const iconName = PLACE_ICONS[p.name] || 'pin';
     const featured = FEATURED_PLACES.includes(p.name) ? ' featured' : '';
-    return `<div class="place-card${featured}" style="--i:${i}" onclick="location.hash='#/place/${encodeURIComponent(p.name)}'">
-      <div class="icon-badge">${icon(iconName)}</div>
+    const vslug = String(p.name).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-');
+    const cardInner = `<div class="icon-badge">${icon(iconName)}</div>
       <div class="name">${esc(p.name)}</div>
-      <div class="place-tag">${esc(p.tag || 'Explore')}</div>
-    </div>`;
+      <div class="place-tag">${esc(p.tag || 'Explore')}</div>`;
+    /* 2026-09-28: real link to via/ page; click still opens the SPA place view. */
+    return __BJ_VIA_SLUGS.has(vslug)
+      ? `<a class="place-card${featured}" style="--i:${i}" href="via/${vslug}.html" onclick="event.preventDefault();location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</a>`
+      : `<div class="place-card${featured}" style="--i:${i}" onclick="location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</div>`;
   }).join('');
 
-  const routeChips = computePopularRoutes().map(p =>
-    `<span class="route-chip" onclick="location.hash='#/search?from=${encodeURIComponent(p.from)}&to=${encodeURIComponent(p.to)}'">${esc(pn(p.from))} <span class="rarr">→</span> ${esc(pn(p.to))}<span class="rcnt">${p.n}</span></span>`).join('');
+  const bjSlug = s => String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-');
+  const routeChips = computePopularRoutes().map(p => {
+    const hashNav = `location.hash='#/search?from=${encodeURIComponent(p.from)}&to=${encodeURIComponent(p.to)}'`;
+    const slug = bjSlug(p.from) + '-to-' + bjSlug(p.to);
+    const inner = `${esc(pn(p.from))} <span class="rarr">→</span> ${esc(pn(p.to))}<span class="rcnt">${p.n}</span>`;
+    /* 2026-09-28: chips are real <a> links to the SEO page for Google, but
+       onclick preventDefault keeps the in-app SPA search UX unchanged. */
+    return __BJ_SEO_SLUGS.has(slug)
+      ? `<a class="route-chip" href="bus-time-table/${slug}.html" onclick="event.preventDefault();${hashNav}">${inner}</a>`
+      : `<span class="route-chip" onclick="${hashNav}">${inner}</span>`;
+  }).join('');
 
   var homeHTML = `
   <div class="hero">
