@@ -1,0 +1,47 @@
+name: UI unify (dark + back buttons) 20260928
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run apply script
+        run: python3 scripts/apply_ui_unify.py
+
+      - name: Validate
+        run: |
+          grep -q 'addBackBtn' js/seo-page.js
+          grep -q 'uifix20260928a' bus-time-table/adra-to-khatra.html
+          grep -q 'seo-page.js?v=uifix20260928a' bus-time-table/sbstc-buses.html
+          grep -q 'id="bjBackBtn"' bus-time-table/buses-from-khatra.html
+          grep -q 'id="bjBackBtn"' via/adra.html
+          grep -q 'id="bjBackBtn"' blog/kolkata-to-digha-bus-guide.html
+          grep -q 'id="bjBackBtn"' about.html
+          grep -q 'id="bjBackBtn"' contact.html
+          grep -q 'id="bjBackBtn"' privacy-policy.html
+          grep -q 'id="bjBackBtn"' contribute.html
+          grep -q 'id="bjBackBtn"' 404.html
+          grep -q 'id="bjBackBtn"' kolkata-city-routes.html
+          grep -q 'class="theme-btn"' bus-time-table/sbstc-buses.html
+          grep -q 'uifix20260928a' index.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "UI unify: one dark-button design + back button on all pages"
+            git push
+          fi
