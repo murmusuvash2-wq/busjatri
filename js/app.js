@@ -850,7 +850,7 @@ async function renderBus(el, id) {
   id = id.split('?')[0];  // strip query (?full=1) so the bus ID resolves
   const b = await loadFullBus(id);
   if (!b) {
-    el.innerHTML = `<div class="container" style="padding:40px"><div class="empty-state">${icon('alert')}<p>Bus not found.</p></div><div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} Back</div></div>`;
+    el.innerHTML = `<div class="container" style="padding:40px"><div class="empty-state">${icon('alert')}<p>Bus not found.</p></div><div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div></div>`;
     return;
   }
   const stops = b.stoppages || [];
@@ -950,7 +950,7 @@ function renderRoute(el, key) {
   const buses = (r.bus_ids || []).map(id => BUSES[id]).filter(Boolean);
   el.innerHTML = `
   <div class="container" style="padding-top:22px;padding-bottom:40px">
-    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} Back</div>
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <h2 class="page-title">${esc(r.from)} → ${esc(r.to)}</h2>
     <p style="color:var(--ink-dim);margin-bottom:18px">${buses.length} buses</p>
     ${buses.map((b, i) => `
@@ -975,7 +975,7 @@ function renderStop(el, slugKey) {
   const next = stopDepartures(slugKey, stop.bus_ids || [], 6);
   el.innerHTML = `
   <div class="container" style="padding-top:22px;padding-bottom:40px">
-    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} Back</div>
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <h2 class="page-title">${esc(LANG === 'bn' ? (pn(stop.name)) : stop.name)}</h2>
     <p style="color:var(--ink-dim);margin-bottom:14px">${buses.length} buses pass through</p>
     ${stn ? `<div class="info-item" style="margin:0 0 16px"><div class="lbl">${icon('train')} <span class="label-en">Nearest railway station</span><span class="label-bn">নিকটতম রেলওয়ে স্টেশন</span></div><div class="val">${esc(stn.name)}${stn.code ? ' (' + esc(stn.code) + ')' : ''} · ~${stn.km} km</div></div>` : ''}
@@ -1004,7 +1004,7 @@ function renderAbout(el) {
   const sources = (DATA.meta && DATA.meta.sources) || ['bussathi.in', 'wbbus.in', 'wbbustime.in', 'WBTC', 'NBSTC'];
   el.innerHTML = `
   <div class="container" style="padding-top:26px;padding-bottom:40px">
-    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} Back</div>
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <div class="about-card">
       <h3>${icon('bus')} About BusJatri</h3>
       <p>

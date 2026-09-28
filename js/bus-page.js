@@ -110,7 +110,7 @@ async function renderBus(el, id) {
   id = id.split('?')[0];
   const b = typeof loadFullBus === 'function' ? await loadFullBus(id) : BUSES[id];
   if (!b) {
-    el.innerHTML = '<div class="container" style="padding:40px"><div class="empty-state">' + icon('alert') + '<p>Bus not found.</p></div><div class="back-btn" onclick="location.hash=\'#/\'">' + icon('chevronLeft') + ' Back</div></div>';
+    el.innerHTML = '<div class="container" style="padding:40px"><div class="empty-state">' + icon('alert') + '<p>Bus not found.</p></div><div class="back-btn" onclick="location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class=\"label-en\">Back</span><span class=\"label-bn\">পিছনে</span></div></div>';
     return;
   }
   const stops = b.stoppage_pages || b.stoppages || [];
@@ -180,7 +180,7 @@ async function renderBus(el, id) {
   })();
   el.innerHTML =
     '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
-      '<div class="back-btn" onclick="history.length>1?history.back():location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class="label-en">Back</span></div>' +
+      '<div class="back-btn" onclick="history.length>1?history.back():location.hash=\'#/\'">' + icon('chevronLeft') + ' <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>' +
       '<div class="bus-head">' +
         '<div style="display:flex;align-items:flex-start;justify-content:space-between;gap:10px">' +
         '<h2 style="flex:1 1 auto;min-width:0">' + esc(b.bus_name) + (b.reg_no ? ' <span class="reg">' + esc(b.reg_no) + '</span>' : '') + ' ' + busTypeBadge(b.bus_type) + '</h2>' +
