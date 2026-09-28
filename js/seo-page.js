@@ -80,3 +80,41 @@
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
   else init();
 })();
+
+/* 2026-09-28 interlinking: reverse-link chips injected into existing chip-rows
+   (All buses from X / Buses via Y) — same .rel-chip style, idempotent. */
+(function () {
+  'use strict';
+  var STAND = new Set(['alipurduar', 'amtala', 'asansol', 'babughat', 'bagnan', 'bandwan', 'bankura', 'barabazar', 'barasat', 'barasat-chapadali', 'barddhaman-alisha-bus-stand', 'barddhaman-nawabhat-bus-stand', 'bardhaman', 'baruipur', 'basirhat', 'bbd-bag', 'benachity', 'berhampore', 'bishnupur', 'boga', 'bolpur', 'burdwan', 'chandrakona-road', 'chittaranjan', 'contai', 'cooch-behar', 'dakshineswar', 'dhamakhali', 'dhanbad', 'digha', 'dinhata', 'durgapur', 'durgapur-station', 'egra', 'esplanade', 'fulkusma', 'garia', 'garia-bus-stand', 'ghatal', 'habra', 'habra-depot', 'habra-station', 'haldia', 'howrah-maidan', 'howrah-station', 'jadavpur-8b', 'jhargram', 'kalna', 'karimpur', 'karunamoyee', 'kharagpur', 'khatra', 'kolkata', 'krishnanagar', 'manbazar', 'mathabhanga', 'medinipur', 'midnapur', 'nabadwip', 'nabanna', 'newtown', 'purulia', 'raipur', 'rajabazar', 'santragachi', 'sealdah', 'sector-v', 'shapoorji', 'shyambazar', 'siliguri', 'suri', 'tarakeshwar', 'tarkeshwar', 'tatanagar', 'thakurpukur', 'ultadanga']);
+  var VIA = new Set(['arambagh', 'asansol', 'bandwan', 'bankura', 'barasat', 'belpahari', 'burdwan', 'dhumsai', 'digha', 'durgapur', 'durgapur-station', 'esplanade', 'garia', 'habra', 'habra-depot', 'haldia', 'jhargram', 'karunamoyee', 'katwa', 'kolkata', 'medinipur', 'midnapore', 'purulia', 'siliguri', 'suri', 'tarakeswar']);
+  function slug(s) { return String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''); }
+  function nextChipRow(el) {
+    var n = el.nextElementSibling;
+    while (n) { if (n.classList && n.classList.contains('chip-row')) return n; n = n.nextElementSibling; }
+    return null;
+  }
+  function inject() {
+    var titles = document.querySelectorAll('.section-title');
+    for (var i = 0; i < titles.length; i++) {
+      var t = titles[i], en = t.querySelector('.label-en');
+      if (!en) continue;
+      var txt = (en.textContent || '').trim();
+      var m = txt.match(/^More Routes from (.+)$/) || txt.match(/^More Buses to (.+)$/);
+      if (!m) continue;
+      var row = nextChipRow(t);
+      if (!row) continue;
+      var isFrom = txt.indexOf('More Routes from') === 0;
+      var sl = slug(m[1]);
+      var target = isFrom ? 'buses-from-' + sl + '.html' : '../via/' + sl + '.html';
+      var has = isFrom ? STAND.has(sl) : VIA.has(sl);
+      if (!has || row.querySelector('a[href="' + target + '"]')) continue;
+      var a = document.createElement('a');
+      a.className = 'rel-chip';
+      a.href = target;
+      a.textContent = (isFrom ? 'All buses from ' : 'Buses via ') + m[1].trim() + ' \u2192';
+      row.insertBefore(a, row.firstChild);
+    }
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', inject);
+  else inject();
+})();
