@@ -42,7 +42,7 @@ def insert_back_before(path, anchor_re, anchor_group=0):
     m = re.search(anchor_re, src)
     if not m:
         stats.setdefault("noanchor", []).append(path); return 0
-    out = src[:m.end()] + "\n    " + BACK_BTN + src[m.end():]
+    out = src[:m.end()] + "\n    " + BACK_BTN + srr[m.end():]
     write(path, out); return 1
 
 # ---------------------------------------------------------------- 1. seo-page.js (route + sbstc pages)
@@ -140,7 +140,7 @@ if 'id="themeBtn" class="lang-btn"' in src:
     if "bjBackBtn" not in src:
         m = re.search(r'<div class="container header-inner">', src)
         if m:
-            src = src[:m.end()] + "\n    " + BACK_BTN + src[m.end():]
+            src = src[:m.end()] + "\n    " + BACK_BTN + srr[m.end():]
     write(p, src); stats["sbstc"] = k + k2
 
 # ---------------------------------------------------------------- 5. stand pages (76): back button
@@ -187,4 +187,51 @@ for f in glob.glob("blog/*.html"):
     if changed: write(f, src); n += 1
 stats["blog-patched"] = n
 
-# --------------------------KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKHˆİ]XÈYÙ\Â›ˆH™›Üˆ‹][ˆÈ ‰…‰½ÕĞ¹¡Ñµ°ˆ°Èœñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•È¡•…‘•Èµ¥¹¹•ÈˆùqÌ¨ñ‘¥Ø±…ÍÌô‰±½¼ˆœ¤°(€€€€€€€€€€€€€€€ ‰½¹Ñ…Ğ¹¡Ñµ°ˆ°Èœñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•È¡•…‘•Èµ¥¹¹•ÈˆùqÌ¨ñ‘¥Ø±…ÍÌô‰±½¼ˆœ¤°(€€€€€€€€€€€€€€€ ‰ÁÉ¥Ù…äµÁ½±¥ä¹¡Ñµ°ˆ°Èœñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•È¡•…‘•Èµ¥¹¹•ÈˆùqÌ¨ñ‘¥Ø±…ÍÌô‰±½¼ˆœ¥tè(€€€ÍÉŒ€ôÉ•…¡˜¤(€€€¥˜€¥ô‰‰©	…­	Ñ¸ˆœ¥¸ÍÉŒèÍÑ…ÑÌ¹Í•Ñ‘•™…Õ±Ğ ‰Í­¥ÁÁ•ˆ°mt¤¹…ÁÁ•¹¡˜¤ì½¹Ñ¥¹Õ”(€€€´€ôÉ”¹Í•…É ¡Á…Ğ°ÍÉŒ¤(€€€¥˜´è(€€€€€€€ÍÉŒ€ôÍÉlé´¹ÍÑ…ÉĞ ¥t€¬€œñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•È¡•…‘•Èµ¥¹¹•Èˆùq¸€€€€œ€¬	-}	Q8€¬ÍÉm´¹ÍÑ…ÉĞ ¤­±•¸ œñ‘¥Ø±…ÍÌô‰½¹Ñ…¥¹•È¡•…‘•Èµ¥¹¹•Èˆøœ¤ét(€€€€€€€İÉ¥Ñ”¡˜°ÍÉŒ¤ì¸€¬ô€Ä)ÍÑ…ÑÍl‰ÍÑ…Ñ¥Œµ‰…¬‰t€ô¸()¸€ô€À)™½È˜¥¸lˆĞÀĞ¹¡Ñµ°ˆ°€‰­½±­…Ñ„µ¥ÑäµÉ½ÕÑ•Ì¹¡Ñµ°‰tè(€€€ÍÉŒ€ôÉ•…¡˜¤(€€€¥˜€¥ô‰‰©	…­	Ñ¸ˆœ¥¸ÍÉŒèÍÑ…ÑÌ¹Í•Ñ‘•™…Õ±Ğ ‰Í­¥ÁÁ•ˆ°mt¤¹…ÁÁ•¹¡˜¤ì½¹Ñ¥¹Õ”(€€€´€ôÉ”¹Í•…É ¡Èœñ‘¥Ø±…ÍÌô‰¡•…‘•Èµ¥¹¹•Èˆøœ°ÍÉŒ¤(€€€¥˜´è(€€€€€€€ÍÉŒ€ôÍÉlé´¹•¹ ¥t€¬€‰q¸€€€€ˆ€¬	-}	S8€¬ÍÉm´¹•¹ ¤étìİÉ¥Ñ”¡˜°ÍÉŒ¤ì¸€¬ô€Ä)ÍÑ…ÑÍlˆĞÀĞµ¥ÑåÉ½ÕÑ•Ìµ‰…¬‰t€ô¸((Œ½¹ÑÉ¥‰ÕÑ”¹¡Ñµ°€¡¹¼‘…É¬ÍÕÁÁ½ÉĞ½¸Ñ¡¥ÌÁ…”€´‰…¬‰ÕÑÑ½¸½¹±ä¤)ÍÉŒ€ôÉ•… ‰½¹ÑÉ¥‰ÕÑ”¹¡Ñµ°ˆ¤)¥˜€¥ô‰‰©	…­	Ñ¸ˆœ¹½Ğ¥¸ÍÉŒè(€€€´€ôÉ”¹Í•…É ¡Èœ ñ¡•…‘•ÈùqÌ¨ñ‘¥Øø¤ ñ„±…ÍÌô‰±½¼ˆ¡É•˜ôˆ¼ˆø¤œ°ÍÉŒ¤(€€€¥˜´è(€€€€€€€ÍÉŒ€ôÍÉlé´¹•¹ Ä¥t€¬	-}	Q8€¬€ˆ€ˆ€¬ÍÉm´¹•¹ Ä¤ét(€€€€€€€İÉ¥Ñ” ‰½¹ÑÉ¥‰ÕÑ”¹¡Ñµ°ˆ°ÍÉŒ¤ìÍÑ…ÑÍl‰½¹ÑÉ¥‰ÕÑ”µ‰…¬‰t€ô€Ä(€€€•±Í”èÍÑ…ÑÍl‰½¹ÑÉ¥‰ÕÑ”µ‰…¬‰t€ô€À)•±Í”èÍÑ…ÑÍl‰½¹ÑÉ¥‰ÕÑ”µ‰…¬‰t€ô€À((Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´€ä¸¥¹‘•à¹¡Ñµ°Ù•ÉÍ¥½¸‰ÕµÁÌ€¡…ÁÀ¹©Ì°‰ÕÌµÁ…”¹©Ì¤)ÍÉŒ€ôÉ•… ‰¥¹‘•à¹¡Ñµ°ˆ¤)¹•Ü°¬Ä€ôÉ”¹ÍÕ‰¸¡Èˆ¡…ÁÁp¹©ÍpıØô¥mqÜµt¬ˆ°È‰qœğÄùÕ¥™¥àÈÀÈØÀäÈá„ˆ°ÍÉŒ¤)¹•Ü°¬È€ôÉ”¹ÍÕ‰¸¡Èˆ¡‰ÕÌµÁ…•p¹©ÍpıØô¥mqÜµt¬ˆ°È‰qœğÄùÕ¥™¥àÈÀÈØÀäÈá„ˆ°¹•Ü¤)¥˜¹•Ü€„ôÍÉŒèİÉ¥Ñ” ‰¥¹‘•à¹¡Ñµ°ˆ°¹•Ü¤)ÍÑ…ÑÍl‰¥¹‘•àµ‰ÕµÁÌ‰t€ô¬Ä€¬¬È((Œ€´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´´É•Á½ÉĞ)ÁÉ¥¹Ğ ‰AQ MU55Idˆ¤)™½È¬°Ø¥¸ÍÑ…ÑÌ¹¥Ñ•µÌ ¤è(€€€¥˜¥Í¥¹ÍÑ…¹”¡Ø°±¥ÍĞ¤è(€€€€€€€ÁÉ¥¹Ğ¡˜ˆ€í­ôèí±•¸¡Ø¥ô™¥±•Ì€¡íÙlèÍuô¤ˆ¤(€€€•±Í”è(€€€€€€€ÁÉ¥¹Ğ¡˜ˆ€í­ôèíÙôˆ¤)¥˜ÍÑ…ÑÌ¹•Ğ ‰¹½…¹¡½Èˆ¤è(€€€ÁÉ¥¹Ğ ‰]I9%9¹½…¹¡½Èèˆ°ÍÑ…ÑÍl‰¹½…¹¡½È‰ulèÄÁt¤
+# ---------------------------------------------------------------- 8. static pages
+n = 0
+for f, pat in [("about.html", r'<div class="container header-inner">\s*<div class="logo"'),
+               ("contact.html", r'<div class="container header-inner">\s*<div class="logo"'),
+               ("privacy-policy.html", r'<div class="container header-inner">\s*<div class="logo"')]:
+    src = read(f)
+    if 'id="bjBackBtn"' in src: stats.setdefault("skipped", []).append(f); continue
+    m = re.search(pat, src)
+    if m:
+        src = src[:m.start()] + '<div class="container header-inner">\n    ' + BACK_BTN + src[m.start()+len('<div class="container header-inner">'):]
+        write(f, src); n += 1
+stats["static-back"] = n
+
+n = 0
+for f in ["404.html", "kolkata-city-routes.html"]:
+    src = read(f)
+    if 'id="bjBackBtn"' in src: stats.setdefault("skipped", []).append(f); continue
+    m = re.search(r'<div class="header-inner">', src)
+    if m:
+        src = src[:m.end()] + "\n    " + BACK_BTN + srr[m.end():]; write(f, src); n += 1
+stats["404-cityroutes-back"] = n
+
+# contribute.html (no dark support on this page - back button only)
+src = read("contribute.html")
+if 'id="bjBackBtn"' not in src:
+    m = re.search(r'(<header>\s*<div>)(<a class="logo" href="/">)', src)
+    if m:
+        src = src[:m.end(1)] + BACK_BTN + " " + src[m.end(1):]
+        write("contribute.html", src); stats["contribute-back"] = 1
+    else: stats["contribute-back"] = 0
+else: stats["contribute-back"] = 0
+
+# ---------------------------------------------------------------- 9. index.html version bumps (app.js, bus-page.js)
+src = read("index.html")
+new, k1 = re.subn(r"(app\.js\?v=)[\w-]+", r"\g<1>uifix20260928a", src)
+new, k2 = re.subn(r"(bus-page\.js\?v=)[\w-]+", r"\g<1>uifix20260928a", new)
+if new != src: write("index.html", new)
+stats["index-bumps"] = k1 + k2
+
+# ---------------------------------------------------------------- report
+print("PATCH SUMMARY")
+for k, v in stats.items():
+    if isinstance(v, list):
+        print(f"  {k}: {len(v)} files ({v[:3]})")
+    else:
+        print(f"  {k}: {v}")
+if stats.get("noanchor"):
+    print("WARNING noanchor:", stats["noanchor"][:10])
