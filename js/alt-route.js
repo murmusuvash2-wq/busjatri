@@ -159,7 +159,7 @@
         '<div class="route">' + esc(pn(dispName(fromLbl, b.operator))) + ' <span class="rarr">→</span> ' + esc(pn(dispName(toLbl, b.operator))) + '</div>' +
         '<div style="font-size:12px;color:var(--amber);font-weight:600;margin-top:2px"><span class="label-en">' + pillNote.en + '</span><span class="label-bn">' + pillNote.bn + '</span></div>' +
         '</div>' +
-        '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(depMin) + '</span></div>';
+        '<span class="time-pill">' + icon('clock') + ' <span class="label-en">' + fmtTime(depMin) + '</span><span class="label-bn">' + bnTime(depMin) + '</span></span></div>';
     }
     return '<div style="margin:0 0 14px;border:1.5px solid var(--line,rgba(33,28,22,.13));border-radius:14px;padding:12px;background:var(--surface,#fffcf4)">' +
       '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;font-size:12px;color:var(--ink-dim,#665)">' +
@@ -169,9 +169,9 @@
       '<div style="display:flex;align-items:center;gap:10px;margin:8px 0;padding:8px 12px;border-radius:10px;background:rgba(46,125,50,.08)">' +
       '<span style="color:#2e7d32;font-weight:800;line-height:1">⇅</span>' +
       '<span style="flex:1;min-width:0;font-size:12.5px;color:#2e7d32;font-weight:600"><span class="label-en">Change at </span><span class="label-bn">বাস বদলান: </span>' + esc(pn(dispName(o.hub, o.b2.operator))) + '</span>' +
-      '<span style="font-size:11px;color:#2e7d32;border:1px solid rgba(46,125,50,.35);border-radius:99px;padding:1px 8px;white-space:nowrap">' + bnNum(o.wait) + ' <span class="label-en">min wait</span><span class="label-bn">মিনিট অপেক্ষা</span></span></div>' +
+      '<span style="font-size:11px;color:#2e7d32;border:1px solid rgba(46,125,50,.35);border-radius:99px;padding:1px 8px;white-space:nowrap;margin-left:6px">'+'<span class="label-en">' + o.wait + ' min wait</span><span class="label-bn">' + bnNum(o.wait) + ' মিনিট অপেক্ষা</span></span></div>' +
       leg(b2, o.hub, o.toLbl, o.boardHub % 1440, { en: 'arrives ' + esc(pn(o.toLbl)) + ' ' + fmtTime(o.arriveTo % 1440), bn: esc(pn(o.toLbl)) + ' পৌঁছায় ' + bnTime(o.arriveTo) }) +
-      '<div style="font-size:11.5px;color:var(--ink-dim,#665);margin-top:8px;text-align:right"><span class="label-en">Total: </span><span class="label-bn">মোট যাত্রা: </span><b>' + fmtTime(o.depFrom % 1440) + ' → ' + fmtTime(o.arriveTo % 1440) + ' · ' + durTxtBn(o.arriveTo - o.depFrom) + ' (' + durTxt(o.arriveTo - o.depFrom) + ')</b></div>' +
+      '<div style="font-size:11.5px;color:var(--ink-dim,#665);margin-top:8px;text-align:right"><span class="label-en">Total: <b>' + fmtTime(o.depFrom % 1440) + ' → ' + fmtTime(o.arriveTo % 1440) + ' · ' + durTxt(o.arriveTo - o.depFrom) + '</b></span><span class="label-bn">মোট যাত্রা: <b>' + bnTime(o.depFrom) + ' → ' + bnTime(o.arriveTo) + ' · ' + durTxtBn(o.arriveTo - o.depFrom) + '</b></span></div>' +
       '</div>';
   }
   function bnTime(min) {
