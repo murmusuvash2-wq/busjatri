@@ -229,7 +229,7 @@ function openJourney(i){
     var mins=sh+Math.round((eh-sh)*cum/total);
     var cls=s===0?'first':(s===STOPS.length-1?'last':'mid');
     var ap=(s===0||s===STOPS.length-1)?'':'<span class="approx"> ≈</span>';
-    html+='<div class="j-stop '+cls+'"><div class="dot"></div><div class="s-name">'+STOPS[s][1]+'</div><div class="s-time">'+t12(mins)+ap+'</div></div>';
+    html+='<div class="j-stop '+cls+'"><div class="dot"></div><div class="s-name">'+(document.body.classList.contains("lang-bn")?STOPS[s][1]:STOPS[s][0])+'</div><div class="s-time">'+t12(mins)+ap+'</div></div>';
     if(s<LEGS.length)cum+=LEGS[s];
   }
   document.getElementById('jTitle').innerHTML='<span class="label-en">'+t12(sh)+' → '+t12(eh)+' bus</span><span class="label-bn">'+t12(sh)+' → '+t12(eh)+' বাস</span>';
