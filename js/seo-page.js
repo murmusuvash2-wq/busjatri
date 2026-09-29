@@ -45,7 +45,7 @@
     try { localStorage.setItem('bj-lang', bn ? 'bn' : 'en'); } catch (e) {}
   }
 
-  function addBackBtn() {
+  function addBackBtn() { return; /* 2026-09-29: back button removed from all pages per user */
     if (document.body.getAttribute('data-noback') === '1') return;
     var host = document.querySelector('.header-inner');
     if (!host || document.getElementById('bjBackBtn')) return;
