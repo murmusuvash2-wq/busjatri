@@ -254,7 +254,7 @@ document.getElementById('rail').addEventListener('click',function(e){
 });
 (function(){
   var en=document.getElementById('langEn'),bn=document.getElementById('langBn');
-  function setLang(bnOn){document.body.classList.toggle('lang-bn',bnOn);document.body.lang=bnOn?'bn':'en';en.classList.toggle('on',!bnOn);bn.classList.toggle('on',bnOn);}
+  function setLang(bnOn){document.body.classList.toggle('lang-bn',bnOn);document.body.lang=bnOn?'bn':'en';en.classList.toggle('on',!bnOn);bn.classList.toggle('on',bnOn);var sr=document.querySelector('.tr.sel');if(sr&&typeof openJourney==='function'){try{openJourney(parseInt(sr.getAttribute('data-i'),10))}catch(e){}}}
   en.addEventListener('click',function(){setLang(false)});
   bn.addEventListener('click',function(){setLang(true)});
   document.getElementById('themeBtn').addEventListener('click',function(){document.body.classList.toggle('dark')});
