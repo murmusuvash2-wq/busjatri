@@ -33,7 +33,7 @@
   gtag('js', new Date());
   gtag('config', 'G-L4E3D1YX9X');
 </script>
-<style>@media(max-width:640px){.hdr-links{display:none!important}}</style>
+<style>@media(max-width:640px){.hdr-links{display:none!important}}.hero-badge{display:inline-flex;align-items:center;background:linear-gradient(135deg,#c98a2b,#a13b2e);color:#fffcf4;font-weight:800;letter-spacing:.08em;border-radius:14px;padding:6px 18px;font-size:.72em;box-shadow:0 3px 14px rgba(184,121,31,.4);text-transform:uppercase}</style>
 </head>
 <body data-noback="1">
 <header class="header">
@@ -48,9 +48,9 @@
       <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Home</span><span class="label-bn">হোম</span></a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Routes</span><span class="label-bn">রুট</span></a>
       <span class="lang-group" style="display:flex;gap:4px;margin-left:4px">
-        <button class="lang-btn" id="langEN" onclick="setLang('en')" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
-      </span>
+        <button class="lang-btn" id="langEn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
+        <button class="lang-btn" id="langBn" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
+      </span> <button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode" title="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
     </nav>
   </div>
 </header>
@@ -58,8 +58,7 @@
 <div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>WBTC Buses</span></div>
 <div class="op-onebox" style="background:var(--surface,#fffcf4);border:1.5px solid var(--line,rgba(33,28,22,.15));border-radius:14px;padding:16px 18px;margin:10px 0 18px">
 <div class="op-hero">
-<h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">WBTC Buses</h1>
-<div class="bn-line only-bn" style="color:var(--ink-dim);margin-top:6px">পশ্চিমবঙ্গ পরিবহণ নিগমের বাস</div>
+<h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0;display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span class="hero-badge">WBTC</span><span class="label-en">Buses</span><span class="label-bn">বাস</span></h1> <div class="only-en" style="color:var(--ink-dim);margin-top:8px;font-size:14.5px">West Bengal Transport Corporation — Kolkata city & suburban bus routes</div> <div class="bn-line only-bn" style="color:var(--ink-dim);margin-top:8px;font-size:14.5px">পশ্চিমবঙ্গ পরিবহণ নিগমের বাস</div>
 </div>
 <div class="op-statline" style="display:flex;gap:14px;align-items:center;justify-content:center;flex-wrap:wrap;font-size:13.5px;font-weight:700;color:var(--ink,#211c16);margin:10px 0 2px"><span style='font-size:14px;font-weight:700'>🚌 952 <span class='label-en'>buses listed</span><span class='label-bn'>টি বাস তালিকাভুক্ত</span></span><span style="color:var(--line,#ccc)">|</span><span style='font-size:14px;font-weight:700'>🛣 801 <span class='label-en'>routes covered</span><span class='label-bn'>টি রুট</span></span></div><section class='bj-op-search'><div class='lb'><span class='label-en'>Search WBTC buses</span><span class='label-bn'>ডব্লিউবিটিসি বাস খুঁজুন</span></div><div class='row'><input id='bjFrom' type='text' placeholder='e.g. Esplanade' autocomplete='off'><button class='swap' onclick='bjSwap()' title='Swap' type='button'>⇆</button><input id='bjTo' type='text' placeholder='e.g. Digha' autocomplete='off'></div><div class='row' style='margin-top:8px'><input id='bjDate' type='date' style='flex:1.2'><button class='go' style='margin-top:0;width:auto;flex:1.4' onclick='bjSearchGo()' type='button'>🚊 <span class='label-en'>Search</span><span class='label-bn'>সার্চ করুন</span></button></div></section>
 </div>
@@ -144,6 +143,6 @@
   </div>
 </footer>
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
-<script>(function(){function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');var a=document.getElementById('langEN'),b=document.getElementById('langBN');if(a)a.style.background=l==='en'?'var(--amber-soft,#f6e7c6)':'transparent';if(b)b.style.background=l==='bn'?'var(--amber-soft,#f6e7c6)':'transparent';try{localStorage.setItem('seo-lang',l);}catch(e){}}window.setLang=setLang;var sv=null;try{sv=localStorage.getItem('seo-lang');}catch(e){}setLang(sv||'en');})();</script>
+<script src="../js/seo-page.js?v=uifix20260928a"></script>
 </body>
 </html>
