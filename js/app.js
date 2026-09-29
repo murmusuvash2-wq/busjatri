@@ -306,6 +306,15 @@ function placeMatchesCore(value, query) {
      "santuri" (sntr), and via the kolkata alias group that pulled
      1585 buses into a small village's stop search. */
   if (qs.length >= 4 && (vs === qs || (vs.includes(qs) && vs.length - qs.length <= 2))) return true;
+  /* 2026-09-29: qualifier tier — query adds a generic suffix to a shorter
+     value, e.g. value "Howrah" should match query "howrah station" or
+     "howrah bus stand". Reverse of the v.includes(q) tier above. Only
+     whitelisted suffix words, value >= 4 chars, so unrelated strings
+     can't creep in; PLACE_TRAPS above still apply. */
+  if (vc.length >= 4 && qc.startsWith(vc)) {
+    const rem = qc.slice(vc.length);
+    if (/^(station|stn|busstand|bustand|junction|jn|terminal|depot|court|airport|road|rd|stand|college|university|stadium)$/.test(rem)) return true;
+  }
   return false;
 }
 
