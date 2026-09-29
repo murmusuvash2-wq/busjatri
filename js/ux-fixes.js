@@ -770,7 +770,7 @@
       var b = (typeof FULL_BUSES !== 'undefined' && FULL_BUSES && FULL_BUSES[id]) || BUSES[id];
       var sts = (b && b.stoppages) || [];
       var via = [];
-      for (var i = 1; i < sts.length - 1 && via.length < 6; i++) {
+      for (var i = 1; i < sts.length - 1 && via.length < 3; i++) {
         var nm = sts[i] && sts[i].name;
         if (nm && via.indexOf(nm) === -1) via.push(nm);
       }

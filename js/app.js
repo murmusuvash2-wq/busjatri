@@ -975,7 +975,7 @@ async function renderBus(el, id) {
         <div class="stops-list">
           ${visible.map(s => `<div class="stop-row">
             <span class="stop-dot"></span>
-            <span class="stop-name"><a href="#/stop/${slug(s.name)}">${esc(pn(s.name))}</a>${stationBadge(s.name)}</span>
+            <span class="stop-name"><a href="#/stop/${slug(s.name)}">${esc(pn(s.name))}</a></span>
             ${timeOrDash(s.up_time)}
             ${timeOrDash(s.down_time)}
           </div>`).join('')}

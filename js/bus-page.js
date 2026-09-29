@@ -140,7 +140,7 @@ async function renderBus(el, id) {
 
   const stopHTML = visible.map(function(s, i) {
     var isEnd = i === 0 || i === visible.length - 1;
-    var stn = (STOPS[s.name] || {}).nearest_station;
+    var stn = null; /* 2026-09-29: railway station badge removed from stop rows per user */
     var stnBadge = stn ? '<span class="rail">Railway: ' + esc(stn.name) + (stn.code ? ' (' + esc(stn.code) + ')' : '') + ' \u00b7 ~' + stn.km + ' km</span>' : '';
     var upT = timeCell(s, i, 'up', id);
     var dnT = timeCell(s, i, 'down', id);
