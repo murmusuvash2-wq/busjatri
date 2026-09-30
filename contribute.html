@@ -55,51 +55,7 @@ footer a{color:var(--acc);text-decoration:none}
 <body>
 <div class="wrap">
 <header>
-  <div><button type="button" id="bjBackBtn" class="back-nav" aria-label="Back" title="Back" onclick="if(history.length>1&&document.referrer.indexOf(location.origin)===0){history.back()}else if(location.pathname!=='/'){location.href='/'}" style="width:38px;height:38px;border-radius:50%;border:1px solid var(--line,rgba(33,28,22,.12));background:var(--surface-2,#f6efe0);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;color:var(--ink,#211c16);padding:0;margin-right:10px;flex:0 0 auto;transition:border-color .2s,transform .3s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="width:18px;height:18px"><path d="M15 18l-6-6 6-6"/></svg></button> <a class="logo" href="/">🚌 Bus<b>Jatri</b></a></div>
-  <h1>Bus Contribution</h1>
-  <div class="meta">নতুন বাসের তথ্য দিন — West Bengal</div>
-</header>
-<p class="lead">Know a bus that is not on BusJatri yet? Fill this form — our team verifies every bus before it goes live. Top contributors may get rewards in the future.</p>
-<form id="f" onsubmit="return submitBus(event)">
-  <div class="field">
-    <label>Bus name <small>বাসের নাম</small></label>
-    <input id="bName" maxlength="60" placeholder="e.g. SHAKTI SREE" required>
-  </div>
-  <div class="two">
-    <div class="field">
-      <label>Bus number <small>বাসের নম্বর (WB-…)</small></label>
-      <input id="bReg" maxlength="30" placeholder="WB67C2286">
-    </div>
-    <div class="field">
-      <label>Bus contact <small>বাসের ফোন (optional)</small></label>
-      <input id="bContact" maxlength="20" placeholder="98XXXXXXXX">
-    </div>
-  </div>
-  <div class="two">
-    <div class="field">
-      <label>From <small>কোথা থেকে</small></label>
-      <input id="bFrom" maxlength="60" placeholder="Howrah" required>
-    </div>
-    <div class="field">
-      <label>To <small>কোথায়</small></label>
-      <input id="bTo" maxlength="60" placeholder="Bankura" required>
-    </div>
-  </div>
-  <div class="two">
-    <div class="field">
-      <label>Departure time <small>ছাড়ার সময়</small></label>
-      <input id="bDep" type="time" required>
-    </div>
-    <div class="field">
-      <label>Arrival time <small>পৌঁছানোর সময় (optional)</small></label>
-      <input id="bArr" type="time">
-    </div>
-  </div>
-  <div class="field">
-    <label>Stoppages with times <small>স্টপেজ ও সময় — যতগুলো জানা থাকে</small></label>
-    <div id="stops"></div>
-    <button type="button" class="addstop" onclick="addStop()">+ Add stoppage</button>
-  </div>
+  <div></div>
   <div class="two">
     <div class="field">
       <label>Your name <small>আপনার নাম (optional)</small></label>
