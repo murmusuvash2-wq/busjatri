@@ -21,7 +21,7 @@ jobs:
             echo "FAIL: bjBackBtn still present in HTML"; exit 1
           fi
           grep -q 'noback20260930' bus-time-table/kolkata-to-digha.html
-          grep -q 'noback20260930' index.html
+          grep -q 'noback20260930' bus-time-table/wbtc-buses.html
           ! grep -q 'uifix20260928a' bus-time-table/kolkata-to-digha.html
           python3 - <<'PY'
           import re
