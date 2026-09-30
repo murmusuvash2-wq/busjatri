@@ -1,0 +1,1285 @@
+{
+ "source": "https://transport.wb.gov.in/wp-content/uploads/2016/09/RouteTimeTableFareSBSTC.pdf",
+ "note": "Official SBSTC route timetable (WB Transport Dept listing). Times as published; verify before travel.",
+ "routes": [
+  {
+   "sl": 1,
+   "route": "BURDWAN TO KOLKATA",
+   "km": 110,
+   "up_times": [
+    "4:50 AM",
+    "5:45 AM",
+    "6:15 AM",
+    "6:40 AM",
+    "7:00 AM",
+    "7:45 AM",
+    "8:15 AM",
+    "8:35 AM",
+    "9:00 AM",
+    "9:30 AM",
+    "10:30 AM",
+    "11:00 AM",
+    "11:30 AM",
+    "12:30 PM",
+    "1:00 PM",
+    "1:30 PM",
+    "2:30 PM",
+    "3:25 PM",
+    "4:10 PM",
+    "4:30 PM",
+    "5:00 PM",
+    "5:30 PM",
+    "6:00 PM",
+    "6:45 PM"
+   ],
+   "down_times": [
+    "6:30 AM",
+    "7:15 AM",
+    "7:40 AM",
+    "8:15 AM",
+    "8:45 AM",
+    "9:10 AM",
+    "9:45 AM",
+    "10:45 AM",
+    "11:40 AM",
+    "12:30 PM",
+    "1:00 PM",
+    "1:30 PM",
+    "2:00 PM",
+    "2:30 PM",
+    "3:00 PM"
+   ],
+   "up_raw": "4.50/5.45/6.15/6.40/7.00/7.45/8.15/8.35/9.00/9.30/10.30/11.00/11.30/12.30/13.00/13.30/14.30/15.25/16.10/16.30/17.00/17.30/18.00/18.45",
+   "down_raw": "6.30/7.15/7.40/8.15/8.45/9.10/9.45/10.45/11.40/12.30/13.00/13.30/14.00/14.30/15.00",
+   "fare_inr": 75,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 2,
+   "route": "BURDWAN TO KARUNAMOYEE",
+   "km": 120,
+   "up_times": [
+    "5:50 AM",
+    "6:25 AM",
+    "6:50 AM",
+    "7:10 AM",
+    "7:30 AM",
+    "8:00 AM",
+    "9:00 AM",
+    "9:30 AM",
+    "10:15 AM",
+    "11:00 AM",
+    "11:30 AM",
+    "12:30 PM",
+    "1:00 PM",
+    "1:30 PM",
+    "2:10 PM",
+    "3:10 PM",
+    "4:10 PM",
+    "4:45 PM",
+    "5:30 PM",
+    "6:30 PM"
+   ],
+   "down_times": [
+    "6:30 AM",
+    "7:15 AM",
+    "7:45 AM",
+    "8:30 AM",
+    "9:00 AM",
+    "9:45 AM",
+    "10:15 AM",
+    "10:45 AM",
+    "11:30 AM",
+    "12:30 PM",
+    "1:00 PM",
+    "1:30 PM",
+    "2:00 PM",
+    "3:00 PM"
+   ],
+   "up_raw": "5.50/6.25/6.50/7.10/7.30/8.00/9.00/9.30/10.15/11.00/11.30/12.30/13.00/13.30/14.10/15.10/16.10/16.45/17.30/18.30",
+   "down_raw": "6.30/7.15/7.45/8.30/9.00/9.45/10.15/10.45/11.30/12.30/13.00/13.30/14.00/15.00",
+   "fare_inr": 80,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 3,
+   "route": "BURDWAN TO KOLKATA A.C",
+   "km": 110,
+   "up_times": [
+    "7:15 AM",
+    "8:00 AM",
+    "9:45 AM",
+    "1:15 PM",
+    "3:00 PM",
+    "3:45 PM"
+   ],
+   "down_times": [
+    "9:45 AM",
+    "11:00 AM",
+    "12:15 PM",
+    "4:50 PM",
+    "5:50 PM",
+    "6:45 PM"
+   ],
+   "up_raw": "7.15/8.00/9.45/13.15/15.00/15.45",
+   "down_raw": "9.45/11.00/12.15/16.50/17.50/18.45",
+   "fare_inr": 170,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 5,
+   "route": "BURDWAN TO NAGAR VIA KOLKATA",
+   "km": 217,
+   "up_times": [
+    "12:00 PM"
+   ],
+   "down_times": [
+    "5:00 AM"
+   ],
+   "up_raw": "12.00",
+   "down_raw": "5.00",
+   "fare_inr": 72,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 6,
+   "route": "NABADWIP TO DIGHA VIA KALNA KOLKATA",
+   "km": 306,
+   "up_times": [
+    "6:30 AM"
+   ],
+   "down_times": [
+    "8:00 AM"
+   ],
+   "up_raw": "6.30",
+   "down_raw": "8.00",
+   "fare_inr": 185,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 7,
+   "route": "KALNA TO KOLKATA",
+   "km": 162,
+   "up_times": [
+    "6:30 AM"
+   ],
+   "down_times": [
+    "1:15 PM"
+   ],
+   "up_raw": "6.30",
+   "down_raw": "13.15",
+   "fare_inr": 115,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 8,
+   "route": "ASANSOL TO KOLKATA",
+   "km": 225,
+   "up_times": [
+    "5:35 AM",
+    "6:20 AM",
+    "7:30 AM",
+    "7:50 AM",
+    "8:50 AM",
+    "10:10 AM",
+    "10:30 AM",
+    "11:10 AM"
+   ],
+   "down_times": [
+    "11:40 AM",
+    "12:30 PM",
+    "1:15 PM",
+    "2:45 PM",
+    "3:00 PM",
+    "4:00 PM",
+    "4:30 PM",
+    "5:00 PM"
+   ],
+   "up_raw": "5.35/6.20/7.30/7.50/8.50/10.10/10.30/11.10",
+   "down_raw": "11.40/12.30/13.15/14.45/15.00/16.00/16.30/17.00",
+   "fare_inr": 150,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 9,
+   "route": "ASANSOL TO KARUNAMOYEE",
+   "km": 235,
+   "up_times": [
+    "6:00 AM",
+    "7:00 AM",
+    "7:35 AM",
+    "8:45 AM",
+    "1:55 PM",
+    "4:40 PM"
+   ],
+   "down_times": [
+    "5:15 AM",
+    "8:30 AM",
+    "1:30 PM",
+    "2:00 PM",
+    "3:00 PM",
+    "3:30 PM"
+   ],
+   "up_raw": "6.00/7.00/7.35/8.45/13.55/16.40",
+   "down_raw": "5.15/8.30/13.30/14.00/15.00/15.30",
+   "fare_inr": 155,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 10,
+   "route": "ASANSOL TO DIAMOND",
+   "km": 275,
+   "up_times": [
+    "1:05 PM"
+   ],
+   "down_times": [
+    "2:45 PM"
+   ],
+   "up_raw": "13.05",
+   "down_raw": "14.45",
+   "fare_inr": 181,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 11,
+   "route": "BANKURA TO KOLKATA",
+   "km": 225,
+   "up_times": [
+    "6:00 AM",
+    "7:05 AM"
+   ],
+   "down_times": [
+    "2:15 PM",
+    "3:30 PM"
+   ],
+   "up_raw": "6.00/7.05",
+   "down_raw": "14.15/15.30",
+   "fare_inr": 150,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 12,
+   "route": "BANKURA TO KARUNAMOYEE",
+   "km": 235,
+   "up_times": [
+    "5:40 AM",
+    "7:30 AM",
+    "12:10 PM",
+    "1:00 PM",
+    "2:15 PM"
+   ],
+   "down_times": [
+    "12:30 PM",
+    "2:30 PM",
+    "5:40 AM",
+    "6:40 AM",
+    "7:20 AM"
+   ],
+   "up_raw": "5.40/7.30/12.10/13.00/14.15",
+   "down_raw": "12.30/14.30/5.40/6.40/7.20",
+   "fare_inr": 155,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 13,
+   "route": "PURULIA TO KOLKATA VIA BANKURA",
+   "km": 310,
+   "up_times": [
+    "4:45 AM"
+   ],
+   "down_times": [],
+   "up_raw": "4.45",
+   "down_raw": "13",
+   "fare_inr": 210,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 14,
+   "route": "PURULIA TO KOLKATA VIA ASANSOL",
+   "km": 320,
+   "up_times": [
+    "6:10 AM",
+    "9:15 AM",
+    "1:45 PM"
+   ],
+   "down_times": [
+    "2:15 PM",
+    "5:00 AM",
+    "6:45 AM"
+   ],
+   "up_raw": "6.10/9.15/13.45",
+   "down_raw": "14.15/5.00/6.45",
+   "fare_inr": 210,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 15,
+   "route": "DURGAPUR TO HABRA VIA BARASAT",
+   "km": 184,
+   "up_times": [
+    "2:05 PM"
+   ],
+   "down_times": [],
+   "up_raw": "14.05",
+   "down_raw": "",
+   "fare_inr": 124,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 16,
+   "route": "DURGAPUR TO KOLKATA",
+   "km": 370,
+   "up_times": [
+    "4:15 AM",
+    "4:50 AM",
+    "5:15 AM",
+    "5:20 AM",
+    "5:50 AM",
+    "6:35 AM",
+    "7:20 AM",
+    "8:50 AM",
+    "11:20 AM",
+    "12:20 PM",
+    "1:20 PM",
+    "1:50 PM"
+   ],
+   "down_times": [
+    "9:00 AM",
+    "9:15 AM",
+    "10:00 AM",
+    "11:20 AM",
+    "12:45 PM",
+    "2:00 PM",
+    "3:15 PM",
+    "4:15 PM",
+    "5:15 PM",
+    "5:45 PM",
+    "6:00 PM",
+    "6:30 PM"
+   ],
+   "up_raw": "4.15/4.50/5.15/5.20/5.50/6.35/7.20/8.50/11.20/12.20/13.20/13.50",
+   "down_raw": "9.00/9.15/10.00/11.20/12.45/14.00/15.15/16.15/17.15/17.45/18.00/18.30",
+   "fare_inr": 125,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 17,
+   "route": "DURGAPUR TO KARUNAMOYEE",
+   "km": 380,
+   "up_times": [
+    "5:05 AM",
+    "5:45 AM",
+    "7:10 AM",
+    "11:15 AM"
+   ],
+   "down_times": [
+    "10:15 AM",
+    "11:30 AM",
+    "1:00 PM",
+    "5:00 PM"
+   ],
+   "up_raw": "5.05/5.45/7.10/11.15",
+   "down_raw": "10.15/11.30/13.00/17.00",
+   "fare_inr": 130,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 18,
+   "route": "KOLKATA TO BISHNUPUR VIA ARAMBAG",
+   "km": 240,
+   "up_times": [
+    "9:30 AM"
+   ],
+   "down_times": [
+    "4:00 AM"
+   ],
+   "up_raw": "9.30",
+   "down_raw": "4.00",
+   "fare_inr": 104,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 19,
+   "route": "KOLKATA TO KHATRA VIA ARAMBAG",
+   "km": 305,
+   "up_times": [
+    "4:50 AM"
+   ],
+   "down_times": [
+    "4:00 AM"
+   ],
+   "up_raw": "4.50",
+   "down_raw": "4.00",
+   "fare_inr": 138,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 20,
+   "route": "ARAMBAG TO KOLKATA",
+   "km": 90,
+   "up_times": [
+    "5:40 AM",
+    "6:20 AM",
+    "7:00 AM",
+    "7:40 AM",
+    "8:15 AM",
+    "9:00 AM"
+   ],
+   "down_times": [
+    "6:30 AM",
+    "7:30 AM",
+    "8:30 AM",
+    "9:30 AM",
+    "10:30 AM",
+    "11:30 AM"
+   ],
+   "up_raw": "5.40/6.20/7.00/7.40/8.15/9.00",
+   "down_raw": "6.30/7.30/8.30/9.30/10.30/11.30",
+   "fare_inr": 60,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 21,
+   "route": "KOLKATA TO ASANSOL",
+   "km": 450,
+   "up_times": [
+    "5:30 AM",
+    "6:00 AM",
+    "6:15 AM",
+    "7:00 AM",
+    "7:45 AM",
+    "8:15 AM",
+    "9:45 AM",
+    "10:30 AM",
+    "11:00 AM"
+   ],
+   "down_times": [
+    "11:30 AM",
+    "12:35 PM",
+    "1:35 PM",
+    "2:05 PM",
+    "2:35 PM",
+    "3:05 PM",
+    "3:35 PM",
+    "4:30 PM",
+    "5:00 PM"
+   ],
+   "up_raw": "5.30/6.00/6.15/7.00/7.45/8.15/9.45/10.30/11.00",
+   "down_raw": "11.30/12.35/13.35/14.05/14.35/15.05/15.35/16.30/17.00",
+   "fare_inr": 150,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 22,
+   "route": "KOLKATA TO DIGHA",
+   "km": 183,
+   "up_times": [
+    "6:30 AM",
+    "7:00 AM",
+    "7:30 AM"
+   ],
+   "down_times": [
+    "11:10 AM",
+    "12:35 PM",
+    "3:10 PM"
+   ],
+   "up_raw": "6.30/7.00/7.30",
+   "down_raw": "11.10/12.35/15.10",
+   "fare_inr": 125,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 23,
+   "route": "KOLKATA TO DURGAPUR",
+   "km": 360,
+   "up_times": [
+    "7:15 AM",
+    "7:30 AM",
+    "8:00 AM",
+    "9:30 AM",
+    "10:15 AM",
+    "12:15 PM"
+   ],
+   "down_times": [
+    "1:15 PM",
+    "3:00 PM",
+    "3:30 PM",
+    "4:00 PM",
+    "4:30 PM",
+    "5:00 PM"
+   ],
+   "up_raw": "7.15/7.30/8.00/9.30/10.15/12.15",
+   "down_raw": "13.15/15.00/15.30/16.00/16.30/17.00",
+   "fare_inr": 125,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 24,
+   "route": "KOLKATA TO PURULIA",
+   "km": 310,
+   "up_times": [
+    "12:00 PM"
+   ],
+   "down_times": [
+    "6:30 AM"
+   ],
+   "up_raw": "12.00",
+   "down_raw": "6.30",
+   "fare_inr": 210,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 25,
+   "route": "KOLKATA TO NANDIGRAM",
+   "km": 274,
+   "up_times": [
+    "4:45 PM"
+   ],
+   "down_times": [
+    "8:00 AM"
+   ],
+   "up_raw": "16.45",
+   "down_raw": "8.00",
+   "fare_inr": 182,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 26,
+   "route": "KOLKATA TO JAMURIA",
+   "km": 230,
+   "up_times": [
+    "5:30 PM"
+   ],
+   "down_times": [
+    "6:15 AM"
+   ],
+   "up_raw": "17.30",
+   "down_raw": "6.15",
+   "fare_inr": 150,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 27,
+   "route": "KOLKATA TO GARHBHOWANIPUR",
+   "km": 55,
+   "up_times": [
+    "6:30 AM",
+    "7:00 AM"
+   ],
+   "down_times": [
+    "8:15 AM",
+    "9:00 AM"
+   ],
+   "up_raw": "6.30/7.00",
+   "down_raw": "8.15/09.00",
+   "fare_inr": 55,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 28,
+   "route": "KOLKATA TO HALDIA",
+   "km": 126,
+   "up_times": [
+    "2:20 PM"
+   ],
+   "down_times": [
+    "6:00 PM"
+   ],
+   "up_raw": "14.20",
+   "down_raw": "18.00",
+   "fare_inr": 85,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 29,
+   "route": "KOLKATA TO SURI",
+   "km": 225,
+   "up_times": [
+    "5:30 AM",
+    "6:30 AM",
+    "5:00 PM"
+   ],
+   "down_times": [
+    "5:30 AM",
+    "12:15 PM",
+    "1:30 PM"
+   ],
+   "up_raw": "5.30/6.30/17.00",
+   "down_raw": "5.30/12.15/13.30",
+   "fare_inr": 150,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 30,
+   "route": "KOLKATA TO SONACHURA",
+   "km": 227,
+   "up_times": [
+    "7:30 AM"
+   ],
+   "down_times": [
+    "6:15 AM"
+   ],
+   "up_raw": "7.30",
+   "down_raw": "6.15",
+   "fare_inr": 151,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 31,
+   "route": "KOLKATA TO BELPAHARI",
+   "km": 208,
+   "up_times": [
+    "12:30 PM"
+   ],
+   "down_times": [
+    "7:00 AM"
+   ],
+   "up_raw": "12.30",
+   "down_raw": "7.00",
+   "fare_inr": 140,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 32,
+   "route": "KOLKATA TO GOPIGANJ",
+   "km": 114,
+   "up_times": [
+    "7:30 AM",
+    "5:30 PM"
+   ],
+   "down_times": [
+    "6:30 AM",
+    "1:10 PM"
+   ],
+   "up_raw": "7.30/17.30",
+   "down_raw": "6.30/13.10",
+   "fare_inr": 78,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 33,
+   "route": "DIGHA TO GARIA A.C",
+   "km": 196,
+   "up_times": [
+    "1:45 PM"
+   ],
+   "down_times": [
+    "7:00 AM"
+   ],
+   "up_raw": "13.45",
+   "down_raw": "7.00",
+   "fare_inr": 350,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 34,
+   "route": "DIGHA TO BARUIPUR",
+   "km": 213,
+   "up_times": [
+    "12:10 PM"
+   ],
+   "down_times": [
+    "6:00 AM"
+   ],
+   "up_raw": "12.10",
+   "down_raw": "6.00",
+   "fare_inr": 375,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 35,
+   "route": "DIGHA TO HABRA",
+   "km": 230,
+   "up_times": [
+    "11:00 AM",
+    "11:40 AM",
+    "1:40 PM"
+   ],
+   "down_times": [
+    "5:00 AM",
+    "5:30 AM",
+    "4:30 PM"
+   ],
+   "up_raw": "11.00/11.40/13.40",
+   "down_raw": "5.00/5.30/16.30",
+   "fare_inr": 155,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 36,
+   "route": "DIGHA TO DUMDUM",
+   "km": 190,
+   "up_times": [
+    "1:30 PM"
+   ],
+   "down_times": [
+    "7:00 AM"
+   ],
+   "up_raw": "13.30",
+   "down_raw": "7.00",
+   "fare_inr": 130,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 37,
+   "route": "DIGHA TO KOLKATA",
+   "km": 362,
+   "up_times": [
+    "4:50 AM",
+    "4:40 PM",
+    "10:00 PM"
+   ],
+   "down_times": [
+    "4:30 AM",
+    "10:00 PM",
+    "11:30 PM"
+   ],
+   "up_raw": "4.50/16.40/22.00",
+   "down_raw": "4.30/22.00/23.30",
+   "fare_inr": 125,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 38,
+   "route": "DIGHA TO KOLKATA A.C",
+   "km": 362,
+   "up_times": [
+    "11:45 AM",
+    "1:15 PM"
+   ],
+   "down_times": [
+    "8:15 AM",
+    "11:30 AM"
+   ],
+   "up_raw": "11.45/13.15",
+   "down_raw": "8.15/11.30",
+   "fare_inr": 330,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 39,
+   "route": "DIGHA TO KARUNAMOYEE",
+   "km": 400,
+   "up_times": [
+    "6:00 AM"
+   ],
+   "down_times": [
+    "12:45 PM"
+   ],
+   "up_raw": "6.00",
+   "down_raw": "12.45",
+   "fare_inr": 135,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 40,
+   "route": "DIGHA TO HALDIA VIA KOLKATA",
+   "km": 303,
+   "up_times": [
+    "10:50 AM"
+   ],
+   "down_times": [
+    "4:30 PM"
+   ],
+   "up_raw": "10.50",
+   "down_raw": "16.30",
+   "fare_inr": 85,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 41,
+   "route": "DIGHA TO BELGHORIA",
+   "km": 187,
+   "up_times": [
+    "3:00 PM",
+    "3:40 PM"
+   ],
+   "down_times": [
+    "11:30 AM",
+    "12:00 PM"
+   ],
+   "up_raw": "15.00/15.40",
+   "down_raw": "11.30/12.00",
+   "fare_inr": 125,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 42,
+   "route": "DIGHA TO BARASAT A.C",
+   "km": 206,
+   "up_times": [
+    "1:30 PM"
+   ],
+   "down_times": [
+    "6:00 AM"
+   ],
+   "up_raw": "13.30",
+   "down_raw": "6.00",
+   "fare_inr": 300,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 43,
+   "route": "DIGHA TO BARASAT",
+   "km": 206,
+   "up_times": [
+    "6:20 AM",
+    "10:25 AM",
+    "1:10 PM",
+    "2:20 PM"
+   ],
+   "down_times": [
+    "4:45 AM",
+    "6:30 AM",
+    "7:00 AM",
+    "11:30 AM"
+   ],
+   "up_raw": "6.20/10.25/13.10/14.20",
+   "down_raw": "4.45/6.30/7.00/11.30",
+   "fare_inr": 140,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 44,
+   "route": "DIGHA TO GOYESPUR",
+   "km": 238,
+   "up_times": [
+    "2:00 PM"
+   ],
+   "down_times": [
+    "6:45 AM"
+   ],
+   "up_raw": "14.00",
+   "down_raw": "6.45",
+   "fare_inr": 160,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 45,
+   "route": "DIGHA TO KAKDWIP",
+   "km": 240,
+   "up_times": [
+    "9:40 AM"
+   ],
+   "down_times": [
+    "4:30 AM"
+   ],
+   "up_raw": "9.40",
+   "down_raw": "4.30",
+   "fare_inr": 165,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 46,
+   "route": "DIGHA TO NAGAR",
+   "km": 400,
+   "up_times": [
+    "8:50 AM"
+   ],
+   "down_times": [
+    "5:50 AM"
+   ],
+   "up_raw": "8.50",
+   "down_raw": "5.50",
+   "fare_inr": 265,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 47,
+   "route": "DIGHA TO SALAR",
+   "km": 382,
+   "up_times": [
+    "8:25 AM"
+   ],
+   "down_times": [
+    "5:15 AM"
+   ],
+   "up_raw": "8.25",
+   "down_raw": "5.15",
+   "fare_inr": 250,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 48,
+   "route": "DIGHA TO DURGAPUR",
+   "km": 361,
+   "up_times": [
+    "7:50 AM"
+   ],
+   "down_times": [
+    "7:00 AM"
+   ],
+   "up_raw": "7.50",
+   "down_raw": "7.00",
+   "fare_inr": 250,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 49,
+   "route": "DIGHA TO KIRNAHAR",
+   "km": 361,
+   "up_times": [
+    "10:00 AM"
+   ],
+   "down_times": [
+    "5:00 AM"
+   ],
+   "up_raw": "10.00",
+   "down_raw": "5.00",
+   "fare_inr": 240,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 50,
+   "route": "DIGHA TO LALGOLA",
+   "km": 497,
+   "up_times": [
+    "6:45 AM"
+   ],
+   "down_times": [
+    "4:45 AM"
+   ],
+   "up_raw": "6.45",
+   "down_raw": "4.45",
+   "fare_inr": 310,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 51,
+   "route": "DIGHA TO FALTA VIA BUDGE BUDGE",
+   "km": 246,
+   "up_times": [
+    "11:50 AM"
+   ],
+   "down_times": [
+    "6:00 AM"
+   ],
+   "up_raw": "11.50",
+   "down_raw": "6.00",
+   "fare_inr": 165,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 52,
+   "route": "DIGHA TO ASANSOL A.C.",
+   "km": 361,
+   "up_times": [
+    "10:45 AM"
+   ],
+   "down_times": [
+    "5:15 AM"
+   ],
+   "up_raw": "10.45",
+   "down_raw": "5.15",
+   "fare_inr": 610,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 53,
+   "route": "DIGHA TO SURI VIA KOLKATA",
+   "km": 406,
+   "up_times": [
+    "7:30 AM",
+    "9:10 AM"
+   ],
+   "down_times": [
+    "4:10 AM",
+    "8:30 AM"
+   ],
+   "up_raw": "7.30/9.10",
+   "down_raw": "4.10/8.30",
+   "fare_inr": 270,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 54,
+   "route": "DIGHA TO FALTA VIA DOSTIPUR",
+   "km": 231,
+   "up_times": [
+    "11:50 AM"
+   ],
+   "down_times": [
+    "6:30 AM"
+   ],
+   "up_raw": "11.50",
+   "down_raw": "6.30",
+   "fare_inr": 165,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 55,
+   "route": "DIGHA TO BARUIPUR A.C",
+   "km": 213,
+   "up_times": [
+    "1:45 PM"
+   ],
+   "down_times": [
+    "6:30 AM"
+   ],
+   "up_raw": "13.45",
+   "down_raw": "6.30",
+   "fare_inr": 375,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 56,
+   "route": "DIGHA TO THAKURPUKUR",
+   "km": 200,
+   "up_times": [
+    "11:20 AM",
+    "2:30 PM"
+   ],
+   "down_times": [
+    "4:45 AM",
+    "5:45 AM"
+   ],
+   "up_raw": "11.20/14.30",
+   "down_raw": "4.45/5.45",
+   "fare_inr": 130,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 57,
+   "route": "DIGHA TO NANDIGRAM",
+   "km": 201,
+   "up_times": [
+    "3:50 PM"
+   ],
+   "down_times": [
+    "6:20 AM"
+   ],
+   "up_raw": "15.50",
+   "down_raw": "6.20",
+   "fare_inr": 65,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 58,
+   "route": "DIGHA TO GARIA",
+   "km": 196,
+   "up_times": [
+    "5:20 AM",
+    "9:25 AM",
+    "12:50 PM",
+    "2:40 PM",
+    "4:00 PM",
+    "10:00 PM"
+   ],
+   "down_times": [
+    "4:30 AM",
+    "5:00 AM",
+    "6:00 AM",
+    "7:00 AM",
+    "12:15 PM",
+    "3:15 PM"
+   ],
+   "up_raw": "5.20/9.25/12.50/14.40/16.00/22.00",
+   "down_raw": "4.30/5.00/6.00/7.00/12.15/15.15",
+   "fare_inr": 130,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 59,
+   "route": "DIGHA TO DHAMAKHALI",
+   "km": 257,
+   "up_times": [
+    "4:00 AM",
+    "10:40 AM"
+   ],
+   "down_times": [
+    "5:00 AM",
+    "11:30 AM"
+   ],
+   "up_raw": "4.00/10.40",
+   "down_raw": "5.00/11.30",
+   "fare_inr": 180,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 60,
+   "route": "DIGHA TO NAIHATI",
+   "km": 230,
+   "up_times": [
+    "12:40 PM"
+   ],
+   "down_times": [
+    "5:45 AM"
+   ],
+   "up_raw": "12.40",
+   "down_raw": "5.45",
+   "fare_inr": 153,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 61,
+   "route": "DIGHA TO HALDIA VIA-KOLKATA",
+   "km": 303,
+   "up_times": [
+    "7:00 AM",
+    "10:50 AM"
+   ],
+   "down_times": [
+    "4:30 AM",
+    "5:15 AM"
+   ],
+   "up_raw": "7.00/10.50",
+   "down_raw": "4.30/5.15",
+   "fare_inr": 210,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 62,
+   "route": "MIDNAPUR TO KOLKATA",
+   "km": 139,
+   "up_times": [
+    "4:40 AM",
+    "5:50 AM",
+    "8:15 AM",
+    "1:30 PM",
+    "2:30 PM",
+    "3:15 PM"
+   ],
+   "down_times": [
+    "8:00 AM",
+    "9:30 AM",
+    "12:00 PM",
+    "5:15 PM",
+    "6:00 PM",
+    "6:30 PM"
+   ],
+   "up_raw": "4.40/5.50/8.15/13.30/14.30/15.15",
+   "down_raw": "8.00/9.30/12.00/17.15/18.00/18.30",
+   "fare_inr": 85,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 63,
+   "route": "MIDNAPUR TO KARUNAMOYEE",
+   "km": 278,
+   "up_times": [
+    "6:30 AM",
+    "7:15 AM"
+   ],
+   "down_times": [
+    "12:00 PM",
+    "1:00 PM"
+   ],
+   "up_raw": "6.30/7.15",
+   "down_raw": "12.00/13.00",
+   "fare_inr": 95,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 64,
+   "route": "MIDNAPUR TO KHARIKA MATHANI VIA KOLKATA",
+   "km": 303,
+   "up_times": [
+    "9:00 AM"
+   ],
+   "down_times": [
+    "6:00 AM"
+   ],
+   "up_raw": "9.00",
+   "down_raw": "6.00",
+   "fare_inr": 120,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 65,
+   "route": "MIDNAPUR TO NAMKHANA",
+   "km": 244,
+   "up_times": [
+    "11:00 AM"
+   ],
+   "down_times": [
+    "5:00 AM"
+   ],
+   "up_raw": "11.00",
+   "down_raw": "5.00",
+   "fare_inr": 159,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 66,
+   "route": "MIDNAPUR TO DHAMAKHALI",
+   "km": 205,
+   "up_times": [
+    "5:10 AM",
+    "5:30 AM"
+   ],
+   "down_times": [
+    "11:30 AM",
+    "12:30 PM"
+   ],
+   "up_raw": "5.10/5.30",
+   "down_raw": "11.30/12.30",
+   "fare_inr": 139,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 67,
+   "route": "MIDNAPUR TO MOHAR VIA KOLKATA",
+   "km": 267,
+   "up_times": [
+    "12:30 PM"
+   ],
+   "down_times": [
+    "6:00 AM"
+   ],
+   "up_raw": "12.30",
+   "down_raw": "6.00",
+   "fare_inr": 47,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 68,
+   "route": "MIDNAPUR TO INDUS VIA-KOLKATA",
+   "km": 295,
+   "up_times": [
+    "11:45 AM"
+   ],
+   "down_times": [
+    "6:00 AM"
+   ],
+   "up_raw": "11.45",
+   "down_raw": "6.00",
+   "fare_inr": 195,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  },
+  {
+   "sl": 69,
+   "route": "HALDIA TO KOLKATA",
+   "km": 125,
+   "up_times": [
+    "4:30 AM",
+    "5:30 AM",
+    "6:40 AM",
+    "8:00 AM",
+    "8:45 AM",
+    "1:30 PM",
+    "2:00 PM",
+    "2:30 PM",
+    "3:30 PM",
+    "5:20 PM",
+    "5:40 PM"
+   ],
+   "down_times": [
+    "5:30 AM",
+    "7:15 AM",
+    "7:45 AM",
+    "8:30 AM",
+    "11:15 AM",
+    "12:30 PM",
+    "2:00 PM",
+    "5:00 PM",
+    "5:30 PM",
+    "6:15 PM",
+    "6:45 PM"
+   ],
+   "up_raw": "4.30/5.30/6.40/8.00/8.45/13.30/14.00/14.30/15.30/17.20/17.40",
+   "down_raw": "5.30/7.15/7.45/8.30/11.15/12.30/14.00/17.00/17.30/18.15/18.45",
+   "fare_inr": 115,
+   "source": "transport.wb.gov.in RouteTimeTableFareSBSTC.pdf (official WB Transport listing)"
+  }
+ ]
+}
