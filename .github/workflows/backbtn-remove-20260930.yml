@@ -1,0 +1,48 @@
+name: Remove back buttons 20260930
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run removal script
+        run: python3 scripts/remove_backbtn_20260930.py
+
+      - name: Validate
+        run: |
+          if grep -rl 'bjBackBtn' --include='*.html' . | grep -q .; then
+            echo "FAIL: bjBackBtn still present in HTML"; exit 1
+          fi
+          grep -q 'noback20260930' bus-time-table/kolkata-to-digha.html
+          grep -q 'noback20260930' index.html
+          ! grep -q 'uifix20260928a' bus-time-table/kolkata-to-digha.html
+          python3 - <<'PY'
+          import re
+          files = ['index.html', 'about.html', 'via/digha.html',
+                   'bus-time-table/buses-from-esplanade.html',
+                   'blog/kolkata-to-digha-bus-guide.html',
+                   'bus-time-table/kolkata-to-digha.html',
+                   'bus-time-table/wbtc-buses.html']
+          for f in files:
+              h = open(f, encoding='utf-8').read()
+              assert 'bjBackBtn' not in h, f
+              for tag in ['div', 'section', 'header', 'button']:
+                  o = len(re.findall(r'<' + tag + r'[ >]', h))
+                  c = h.count('</' + tag + '>')
+                  assert o == c, (f, tag, o, c)
+          print('validation OK: no back buttons, tags balanced')
+          PY
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet && echo "No changes" || (git commit -m "Remove static back buttons (bjBackBtn) from 2703 pages + bump seo-page.js cache version to noback20260930 across 3227 pages" && git push)
