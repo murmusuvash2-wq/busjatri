@@ -20,6 +20,7 @@
   window.__bjAltRouteV1 = true;
   if (typeof renderSearch !== 'function' || typeof BUSES === 'undefined') return;
   var prevRender = renderSearch;
+  var hubCache = {}; /* slug(to) -> {deliverers, hubIndex}; 2026-09-30 perf */
 
   renderSearch = async function (el) {
     await prevRender(el);
@@ -65,37 +66,44 @@
   }
 
   /* ---- core: find 1-change options from -> to ---- */
-  function findAlt(from, to, now) {
+  function findAlt(from, to, now, maxWait, maxTotal) {
+    maxWait = maxWait || 90; maxTotal = maxTotal || 480;
     var buses = Object.values(BUSES);
     var i, b, p;
 
-    /* deliverers: buses that can reach `to` (boarded somewhere before) */
-    var deliverers = [];
-    for (i = 0; i < buses.length; i++) {
-      b = buses[i];
-      if (!b.stoppages && b.sx && window.DATA && DATA.sn) {
-        b.stoppages = b.sx.map(function (x, k) { return { name: DATA.sn[x] || '', um: (b.ux && b.ux[k]) || 0, dm: (b.dx && b.dx[k]) || 0 }; });
+    /* deliverers + hub index: depend only on `to` — cached per session (2026-09-30) */
+    var hubCacheKey = slug(to);
+    var HC = hubCache[hubCacheKey];
+    if (!HC) {
+      /* deliverers: buses that can reach `to` (boarded somewhere before) */
+      var deliverers = [];
+      for (i = 0; i < buses.length; i++) {
+        b = buses[i];
+        if (!b.stoppages && b.sx && window.DATA && DATA.sn) {
+          b.stoppages = b.sx.map(function (x, k) { return { name: DATA.sn[x] || '', um: (b.ux && b.ux[k]) || 0, dm: (b.dx && b.dx[k]) || 0 }; });
+        }
+        if (b.stoppages && b.stoppages.length) {
+          var t = posIn(b, to);
+          if (t >= 1 && posIn(b, from) < 0) deliverers.push({ b: b, tPos: t });
+        }
       }
-      if (b.stoppages && b.stoppages.length) {
-        var t = posIn(b, to);
-        if (t >= 1 && posIn(b, from) < 0) deliverers.push({ b: b, tPos: t });
-      }
-    }
 
-    /* hub index: hub slug -> deliverer board points */
-    var hubIndex = {};
-    for (i = 0; i < deliverers.length; i++) {
-      var d = deliverers[i];
-      var maxPos = (d.b.stoppages || []).length + 2;
-      for (p = 0; p <= maxPos; p++) {
-        if (p === (d.b.stoppages || []).length + 1) continue; /* unreachable pos */
-        if (p === d.tPos) continue;
-        var nm = posName(d.b, p);
-        if (!nm) continue;
-        var key = slug(nm);
-        if (!hubIndex[key]) hubIndex[key] = [];
-        hubIndex[key].push({ b: d.b, tPos: d.tPos, hPos: p });
+      /* hub index: hub slug -> deliverer board points */
+      var hubIndex = {};
+      for (i = 0; i < deliverers.length; i++) {
+        var d = deliverers[i];
+        var maxPos = (d.b.stoppages || []).length + 2;
+        for (p = 0; p <= maxPos; p++) {
+          if (p === (d.b.stoppages || []).length + 1) continue; /* unreachable pos */
+          if (p === d.tPos) continue;
+          var nm = posName(d.b, p);
+          if (!nm) continue;
+          var key = slug(nm);
+          if (!hubIndex[key]) hubIndex[key] = [];
+          hubIndex[key].push({ b: d.b, tPos: d.tPos, hPos: p });
+        }
       }
+      HC = hubCache[hubCacheKey] = { deliverers: deliverers, hubIndex: hubIndex };
     }
 
     var options = [];
@@ -114,7 +122,7 @@
         var depFrom1 = stopAt(b1, fPos, 'up');
         if (depFrom1 == null || arrHub1 == null) continue;
         var arr1 = arrHub1; if (arr1 < depFrom1) arr1 += 1440;
-        var cands = hubIndex[slug(hub)];
+        var cands = HC.hubIndex[slug(hub)];
         if (!cands) continue;
         for (var c = 0; c < cands.length; c++) {
           var e = cands[c], b2 = e.b;
@@ -127,10 +135,10 @@
           var wait = b2n - arr1;
       /* 2026-09-28 sanity: a >90 min changeover or >8 h door-to-door is a
          worse plan than waiting for the next direct bus — don't offer it. */
-      if (wait < 5 || wait > 90) continue;
+      if (wait < 5 || wait > maxWait) continue;
       var a2n = arr2; while (a2n <= b2n) a2n += 1440;
       var start = depFrom1; if (start < now - 15) { start += 1440; arr1 += 1440; b2n += 1440; a2n += 1440; }
-      if (a2n - start > 8 * 60) continue;
+      if (a2n - start > maxTotal) continue;
           var okey = slug(hub) + '|' + b1.id + '|' + b2.id;
           var opt = { b1: b1, b2: b2, hub: hub, depFrom: start, arrHub: arr1, boardHub: b2n, arriveTo: a2n, wait: wait, arrivalRel: a2n - now };
           if (!best[okey] || opt.arrivalRel < best[okey].arrivalRel) best[okey] = opt;
@@ -184,6 +192,9 @@
     if (mode === 'A') {
       head = '<span class="label-en">Alternative route · 1 change</span><span class="label-bn">বিকল্প পথ · ১ বার বাস বদল</span>';
       note = '<span class="label-en">No direct bus on this route — but you can get there with one bus change:</span><span class="label-bn">এই পথে সরাসরি কোনো বাস নেই — কিন্তু এক বার বাস বদলে যাওয়া যায়:</span>';
+    } else if (mode === 'AR') {
+      head = '<span class="label-en">Alternative route · 1 change (longer wait)</span><span class="label-bn">বিকল্প পথ · ১ বার বাস বদল</span>';
+      note = '<span class="label-en">No direct bus, and no quick connection either — these options need a longer wait at the change point, but they still get you there:</span><span class="label-bn">সরাসরি বাস নেই, দ্রুত বদলও নেই — এই পথগুলোতে বদলের জায়গায় একটু বেশি অপেক্ষা লাগবে, কিন্তু পৌঁছানো যাবে:</span>';
     } else {
       head = '<span class="label-en">Alternative route · 1 change</span><span class="label-bn">বিকল্প পথ · ১ বার বাস বদল</span>';
       note = '<span class="label-en">The next direct bus is about <b>' + gapHrs + 'h away</b> — these routes may get you there sooner:</span><span class="label-bn">পরের সরাসরি বাস প্রায় <b>' + bnNum(gapHrs) + ' ঘণ্টা পরে</b> — এই পথগুলোতে আগে পৌঁছানো যেতে পারে:</span>';
@@ -227,18 +238,42 @@
     if (!mode) return;
 
     var opts = findAlt(from, to, now);
+    var relaxed = false;
+    if (mode === 'A' && !opts.length) {
+      /* 2026-09-30: no direct bus AND no quick 1-change — retry with relaxed
+         caps (wait up to 3 h, door-to-door up to 12 h) before giving up. */
+      opts = findAlt(from, to, now, 180, 720);
+      relaxed = true;
+    }
     var fromLbl = from.charAt(0).toUpperCase() + from.slice(1);
     var toLbl = to.charAt(0).toUpperCase() + to.slice(1);
     var gapHrs = Math.round(minRel / 60);
     var html = null;
     if (opts.length) {
-      html = sectionHtml(opts, mode, gapHrs, fromLbl, toLbl);
+      html = sectionHtml(opts, relaxed && mode === 'A' ? 'AR' : mode, gapHrs, fromLbl, toLbl);
     } else if (mode === 'B' && nextB && nextDep != null) {
       /* 2026-09-28: every 1-change option failed sanity (wait >90 min or
          total >8 h) — show the next direct bus instead of junk detours */
+      /* 2026-09-30: place-name caution — West Bengal has more than one place
+         called e.g. Mayapur / Bishnupur; a mid-route stop match may be the
+         wrong one. Warn instead of advising blindly. */
+      var AMBIG = ['mayapur', 'bishnupur'];
+      var ambWhich = null;
+      if (AMBIG.indexOf(to) !== -1) ambWhich = toLbl;
+      else if (AMBIG.indexOf(from) !== -1) ambWhich = fromLbl;
+      var caution = '';
+      if (ambWhich) {
+        caution = '<p style="font-size:12px;color:#8a5a00;background:rgba(184,121,31,.09);border:1px solid rgba(184,121,31,.25);border-radius:10px;padding:8px 12px;margin:10px 0 0;line-height:1.5"><span class="label-en">Heads-up: more than one place in West Bengal is called ' + esc(ambWhich) + '. This bus serves a stop with that name mid-route — please confirm it is the one you want before traveling.</span><span class="label-bn">সতর্কতা: পশ্চিমবঙ্গে একাধিক জায়গার নাম ' + esc(ambWhich) + '। এই বাস পথের মাঝে সেই নামের স্টপে থাকে — যাত্রার আগে নিশ্চিত হয়ে নিন এটি আপনার চাওয়া জায়গাই কি না।</span></p>';
+      }
       html = '<div id="bj-alt-route" style="margin:26px 0 4px;border-top:1.5px dashed var(--line,rgba(33,28,22,.13));padding-top:18px">' +
         '<h3 style="font-size:15px;font-weight:800;margin:0 0 4px;color:var(--ink)"><span class="label-en">No quicker 1-change route</span><span class="label-bn">এত ভালো বদলে-যাওয়া পথ নেই</span></h3>' +
-        '<p style="font-size:12.5px;color:var(--ink-dim,#665);margin:0;line-height:1.6"><span class="label-en">Every option with a change needs a long wait or a big detour. Next direct bus: <b>' + esc(nextB.bus_name) + '</b> at <b>' + fmtTime(nextDep % 1440) + '</b> — best to wait.</span><span class="label-bn">বাস বদলে গেলে দীর্ঘ অপেক্ষা বা বড় পথ লাগবে। পরের সরাসরি বাস: <b>' + esc(pn(nextB.bus_name)) + '</b>, <b>' + bnTime(nextDep) + '</b>-এ — অপেক্ষা করাই ভালো।</span></p></div>';
+        '<p style="font-size:12.5px;color:var(--ink-dim,#665);margin:0;line-height:1.6"><span class="label-en">Every option with a change needs a long wait or a big detour. Next direct bus: <b>' + esc(nextB.bus_name) + '</b> at <b>' + fmtTime(nextDep % 1440) + '</b> — best to wait.</span><span class="label-bn">বাস বদলে গেলে দীর্ঘ অপেক্ষা বা বড় পথ লাগবে। পরের সরাসরি বাস: <b>' + esc(pn(nextB.bus_name)) + '</b>, <b>' + bnTime(nextDep) + '</b>-এ — অপেক্ষা করাই ভালো।</span></p>' + caution + '</div>';
+    } else if (mode === 'A') {
+      /* 2026-09-30: no direct bus and even relaxed search found nothing —
+         give a real answer instead of a silent dead end. */
+      html = '<div id="bj-alt-route" style="margin:26px 0 4px;border-top:1.5px dashed var(--line,rgba(33,28,22,.13));padding-top:18px">' +
+        '<h3 style="font-size:15px;font-weight:800;margin:0 0 4px;color:var(--ink)"><span class="label-en">No 1-change route found</span><span class="label-bn">বদলে-যাওয়া পথ পাওয়া যায়নি</span></h3>' +
+        '<p style="font-size:12.5px;color:var(--ink-dim,#665);margin:0;line-height:1.6"><span class="label-en">We could not build a timetable-based one-change plan for this search. Try a nearby major bus stand as your start or end point — for example Esplanade, Howrah, Barasat, Bardhaman or Digha — and search again.</span><span class="label-bn">এই খোঁজার জন্য সময়সূচি-ভিত্তিক এক-বার-বদল পথ পাওয়া যায়নি। শুরু বা শেষ বিন্দু হিসেবে কাছের বড় বাস স্ট্যান্ড নিয়ে আবার খুঁজুন — যেমন এসপ্ল্যানেড, হাওড়া, বারাসত, বর্ধমান বা দীঘা।</span></p></div>';
     }
     if (!html) return;
 
