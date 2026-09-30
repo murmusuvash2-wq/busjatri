@@ -1,1 +1,190 @@
-{}
+{
+  "_readme": "Runtime time overrides. Keys are bus-ids from busjatri_data.json. Per stop: up = time at that stop in the listed (forward) direction, down = reverse direction. Special key _dep sets the search-card departure time (first departure of the day). All times below are official wbtconline.in bookable-service times (searched from the named stoppage), collected 2026-09-30. Services with multiple daily departures show the first one here; full timetables are on the route pages.",
+  "ktr-government-act-17": {
+    "_dep": "5:50 PM",
+    "Esplanade": {
+      "up": "5:50 PM"
+    },
+    "Siliguri": {
+      "down": "6:30 PM"
+    }
+  },
+  "ktr-government-act-17-1": {
+    "_dep": "6:30 PM",
+    "Siliguri": {
+      "up": "6:30 PM"
+    },
+    "Esplanade": {
+      "down": "5:50 PM"
+    }
+  },
+  "ktr-government-be-7": {
+    "_dep": "7:00 PM",
+    "Esplanade": {
+      "up": "7:00 PM"
+    },
+    "Malda": {
+      "down": "9:00 PM"
+    }
+  },
+  "ktr-government-be-7-1": {
+    "Malda": {
+      "up": "9:00 PM"
+    }
+  },
+  "ktr-government-act-12": {
+    "_dep": "6:00 AM",
+    "Esplanade": {
+      "up": "6:00 AM"
+    },
+    "Asansol": {
+      "down": "1:15 PM"
+    }
+  },
+  "ktr-government-act-12-1": {
+    "_dep": "1:15 PM",
+    "Asansol": {
+      "up": "1:15 PM"
+    },
+    "Esplanade": {
+      "down": "6:00 AM"
+    }
+  },
+  "ktr-government-be-12": {
+    "_dep": "6:00 AM",
+    "Esplanade": {
+      "up": "6:00 AM"
+    },
+    "Asansol": {
+      "down": "8:15 AM"
+    }
+  },
+  "ktr-government-be-12-1": {
+    "Asansol": {
+      "up": "8:15 AM"
+    }
+  },
+  "ktr-government-be-19": {
+    "_dep": "6:15 AM",
+    "Esplanade": {
+      "up": "6:15 AM"
+    },
+    "Mayapur": {
+      "down": "3:00 PM"
+    }
+  },
+  "ktr-government-be-19-1": {
+    "_dep": "3:00 PM",
+    "Mayapur": {
+      "up": "3:00 PM"
+    },
+    "Esplanade": {
+      "down": "6:15 AM"
+    }
+  },
+  "ktr-government-e-38": {
+    "_dep": "6:15 AM",
+    "Esplanade": {
+      "up": "6:15 AM"
+    },
+    "Mayapur": {
+      "down": "3:30 PM"
+    }
+  },
+  "ktr-government-e-38-1": {
+    "_dep": "3:30 PM",
+    "Mayapur": {
+      "up": "3:30 PM"
+    },
+    "Esplanade": {
+      "down": "6:15 AM"
+    }
+  },
+  "ktr-government-e-40": {
+    "_dep": "4:45 PM",
+    "Esplanade": {
+      "up": "4:45 PM"
+    },
+    "Digha": {
+      "down": "3:00 PM"
+    }
+  },
+  "ktr-government-e-40-2": {
+    "_dep": "3:00 PM",
+    "Digha": {
+      "up": "3:00 PM"
+    },
+    "Esplanade": {
+      "down": "4:45 PM"
+    }
+  },
+  "ktr-government-e-40-1": {
+    "_dep": "2:40 PM",
+    "Esplanade": {
+      "up": "2:40 PM"
+    },
+    "Digha": {
+      "down": "1:50 PM"
+    }
+  },
+  "ktr-government-e-40-1-1": {
+    "_dep": "1:50 PM",
+    "Digha": {
+      "up": "1:50 PM"
+    },
+    "Esplanade": {
+      "down": "2:40 PM"
+    }
+  },
+  "ktr-government-e-45": {
+    "Esplanade": {
+      "up": "5:45 PM"
+    },
+    "Digha": {
+      "down": "2:30 PM"
+    }
+  },
+  "ktr-government-e-45-1": {
+    "_dep": "2:30 PM",
+    "Digha": {
+      "up": "2:30 PM"
+    },
+    "Esplanade": {
+      "down": "5:45 PM"
+    }
+  },
+  "ktr-government-act-5": {
+    "Esplanade": {
+      "up": "11:45 PM"
+    },
+    "Digha": {
+      "down": "1:10 PM"
+    }
+  },
+  "ktr-government-act-5-1": {
+    "_dep": "1:10 PM",
+    "Digha": {
+      "up": "1:10 PM"
+    },
+    "Esplanade": {
+      "down": "11:45 PM"
+    }
+  },
+  "ktr-government-e-17": {
+    "Esplanade": {
+      "up": "11:55 PM"
+    },
+    "Digha": {
+      "down": "10:20 PM"
+    }
+  },
+  "ktr-government-e-17-2": {
+    "_dep": "10:20 PM",
+    "Digha": {
+      "up": "10:20 PM"
+    },
+    "Esplanade": {
+      "down": "11:55 PM"
+    }
+  }
+}

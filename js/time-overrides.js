@@ -24,6 +24,7 @@
   function patchBusDetail(d) { // {id, stoppages:[...]}
     if (!d || !d.id || !d.stoppages) return d;
     var ov = OVERRIDES[d.id]; if (!ov) return d;
+    if (ov._dep && !d.departure_time) d.departure_time = ov._dep;
     d.stoppages.forEach(function (s) {
       var t = ov[s.name]; if (!t) return;
       if (t.up) s.up_time = t.up;
@@ -35,7 +36,9 @@
   function patchIndex(d) { // {buses:[{id,sx,ux,dx}], sn:[...]}
     if (!d || !d.buses) return d;
     d.buses.forEach(function (b) {
-      var ov = b.id && OVERRIDES[b.id]; if (!ov || !b.sx) return;
+      var ov = b.id && OVERRIDES[b.id]; if (!ov) return;
+      if (ov._dep && !b.departure_time) b.departure_time = ov._dep;
+      if (!b.sx) return;
       b.sx.forEach(function (si, i) {
         var nm = d.sn && d.sn[si]; if (!nm) return;
         var t = ov[nm]; if (!t) return;
