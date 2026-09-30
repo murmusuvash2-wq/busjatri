@@ -88,6 +88,9 @@ UMBRELLA = {
     "kolkata": ("Kolkata (Esplanade)", ("kolkata", "esplanade")),
     "karunamoyee": ("Kolkata (Karunamoyee)", ("karunamoyee",)),
     "santragachi": ("Kolkata (Santragachi)", ("santragachi",)),
+    # Bardhaman-area satellite stands, shown as Bardhaman (<stand>)
+    "barddhaman-alisha-bus-stand": ("Bardhaman (Alisha Bus Stand)", ("barddhaman alisha bus stand", "bardhaman alisha", "burdwan alisha", "alisha bus stand")),
+    "barddhaman-nawabhat-bus-stand": ("Bardhaman (Nawabhat Bus Stand)", ("barddhaman nawabhat bus stand", "nawabhat bus stand", "nawabhat")),
 }
 
 def card_name(stand):

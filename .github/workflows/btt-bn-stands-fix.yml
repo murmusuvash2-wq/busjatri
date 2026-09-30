@@ -1,0 +1,47 @@
+name: BTT Bengali toggle + stand names fix
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  btt-bn-stands:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fix Bengali toggle bug + 43 missing stand names
+        run: python3 scripts/patch_btt_bn_stands.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import re
+          h = open('bus-time-table/index.html', encoding='utf-8').read()
+          cards = re.findall(r'<div class="sname">(.*?)</div>', h)
+          sen = [c for c in cards if 'class="sen"' in c]
+          sbn = [c for c in cards if 'class="sbn"' in c]
+          assert len(cards) == 76, f"expected 76 cards, got {len(cards)}"
+          assert len(sen) == 76, f"only {len(sen)}/76 have span.sen"
+          assert len(sbn) == 76, f"only {len(sbn)}/76 have Bengali"
+          assert 'body.lang-bn .sname .sen{display:none}' in h
+          assert 'body.lang-bn .sname{display:none}' not in h, "old whole-div hiding CSS still present!"
+          assert 'Kolkata (Esplanade)</span> <span class="sbn">কলকাতা (এসপ্ল্যানেড)</span>' in h, "umbrella card lost its qualifier!"
+          assert 'সানত্রাগাছি' not in h, "wrong Santragachi spelling present!"
+          assert 'সাঁতরাগাছি' in h, "correct Santragachi spelling missing!"
+          assert 'Bardhaman (Alisha Bus Stand)' in h and 'Bardhaman (Nawabhat Bus Stand)' in h, "Bardhaman stands not organised!"
+          print("validation OK: 76/76 cards, Bengali toggle fixed, qualifiers intact, renames done")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_btt_bn_stands.py scripts/gen_seo_pages.py scripts/gen_btt_v2.py scripts/gen_stand_v2.py bus-time-table/index.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "fix: Bengali toggle hid stand names on /bus-time-table/ (hide .sen only, not .sname); add 43 missing Bengali stand names"
+            git push
+          fi

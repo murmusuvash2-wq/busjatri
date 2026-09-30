@@ -99,8 +99,9 @@ body.lang-bn .only-bn{display:block}
 /* ---- clean i18n ---- */
 body:not(.lang-bn) .hbn{display:none}
 body:not(.lang-bn) .sbn{display:none}
-body.lang-bn .sname{display:none}
-body.lang-bn .keep-en .sname{display:inline}
+body.lang-bn .sname .sen{display:none}
+body.lang-bn .keep-en .sen{display:inline}
+body.lang-bn .sbn{font-size:16.5px;font-weight:800;color:inherit;margin-left:0}
 /* ---- search box ---- */
 .rt-search{background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;padding:8px 10px 8px;box-shadow:var(--shadow-sm);margin:10px 0 2px;animation:fadeUp .5s .15s ease both}
 .rt-search .rt-f,.rt-search .rt-go,.rt-search .rt-viarow{animation:fadeUp .4s ease both;animation-delay:calc(.15s + var(--i,0)*.06s)}
@@ -200,14 +201,14 @@ def stand_stats():
 
 
 def _card(name, fname, n, dests, first, last):
-    bn = v2.bnplace(name)
+    bn = g.bn(card_name(name)) or g.bn(name) or v2.bnplace(name)
     bn_span = ' <span class="sbn">{}</span>'.format(g.esc(bn)) if bn and bn != name else ""
     if first is not None and last is not None:
         time_row = "⏰ " + L("First", "প্রথম") + " " + g.esc(g.format_time(first)) + " – " + L("Last", "শেষ") + " " + g.esc(g.format_time(last))
     else:
         time_row = "⏰ " + L("Timings on page", "সময়সূচি পেজে")
     return """<a class="scard" href="{href}">
-  <div class="sname">{name}{bn}</div>
+  <div class="sname"><span class="sen">{name}</span>{bn}</div>
   <div class="smeta"><b>{n}</b> buses listed · {d} destinations</div>
   <div class="stime">{t}</div>
 </a>""".format(href=g.esc(fname), name=g.esc(card_name(name)), bn=bn_span, n=n, d=dests, t=time_row)
