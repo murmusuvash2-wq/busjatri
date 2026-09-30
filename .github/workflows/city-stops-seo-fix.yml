@@ -1,0 +1,57 @@
+name: Kolkata city bus stops + SEO interlinking
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  city-stops-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fill STOPS/LEGS on 58 city route pages + journey panels + interlinking
+        run: python3 scripts/patch_city_stops_seo.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import re, json, glob
+          from pathlib import Path
+          empty, total = [], 0
+          for f in glob.glob('bus-time-table/*.html'):
+              h = Path(f).read_text(encoding='utf-8')
+              if 'var TRIPS' not in h: continue
+              total += 1
+              m = re.search(r'var STOPS=(\[.*?\]);', h, re.S)
+              if m and m.group(1).strip() == '[]':
+                  empty.append(f)
+              if 'var STOPS=[]' in h:
+                  raise SystemExit('empty STOPS in ' + f)
+          assert not empty, f'{len(empty)} pages still have empty STOPS'
+          ac39 = Path('bus-time-table/ac-39-howrah-to-airport.html').read_text(encoding='utf-8')
+          assert 'id="journey"' in ac39 and 'id="jStops"' in ac39, 'AC-39 journey panel missing'
+          m = re.search(r'var STOPS=(\[.*?\]);', ac39, re.S)
+          stops = json.loads(m.group(1))
+          assert len(stops) == 15 and stops[0][0] == 'Howrah Stn' and stops[-1][0] == 'Airport Gate-1'
+          assert 'city-stops-v1' in ac39 and 'city-rel-v1' in ac39
+          idx = Path('bus-time-table/index.html').read_text(encoding='utf-8')
+          assert 'city-hub-v1' in idx, 'BTT index missing city hub link'
+          n_stands = sum(1 for f in glob.glob('bus-time-table/buses-from-*.html')
+                         if 'city-stand-v1' in Path(f).read_text(encoding='utf-8'))
+          assert n_stands >= 8, f'only {n_stands} stand pages patched'
+          print(f'validation OK: {total} city pages, 0 empty STOPS, AC-39 15 stops, hub+{n_stands} stands linked')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_city_stops_seo.py bus-time-table/
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat: stop-wise data on all 58 empty city route pages (journey panels), static stop lists, related-route links, BTT hub + stand interlinking"
+            git push
+          fi
