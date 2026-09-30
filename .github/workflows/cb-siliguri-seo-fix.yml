@@ -1,0 +1,48 @@
+name: Cooch Behar-Siliguri route SEO enrichment
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cb-siliguri-seo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enrich route page (distance, variants, boarding points, fare)
+        run: python3 scripts/patch_cb_siliguri_seo.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json, re
+          h = open('bus-time-table/cooch-behar-to-siliguri.html', encoding='utf-8').read()
+          ok = False
+          for mm in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+              try:
+                  d = json.loads(mm.group(1))
+                  if d.get('@type') == 'FAQPage':
+                      assert len(d['mainEntity']) == 16
+                      ok = True
+              except Exception:
+                  pass
+          assert ok, "FAQPage schema invalid"
+          assert 'coach bihar' in h, "spelling variants missing"
+          assert 'about 140 km' in h, "distance info missing"
+          assert len(re.findall(r'<details class="faq only-en"', h)) == 8
+          print("validation OK: route page enriched, schema valid")
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_cb_siliguri_seo.py bus-time-table/cooch-behar-to-siliguri.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "seo: enrich Cooch Behar->Siliguri route page (distance, duration, spelling variants, boarding points, fare)"
+            git push
+          fi
