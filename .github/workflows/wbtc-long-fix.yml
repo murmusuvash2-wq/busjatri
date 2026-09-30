@@ -1,0 +1,52 @@
+name: WBTC long-route timings + new pages
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  wbtc-long:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fill WBTC cards + sections + new pages
+        run: python3 scripts/patch_wbtc_long_seo.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import re, json, glob
+          from pathlib import Path
+          nsec = 0; nfill = 0; errors = []
+          for f in glob.glob('bus-time-table/*.html'):
+              h = Path(f).read_text(encoding='utf-8')
+              if 'wbtc-long-v1' in h: nsec += 1
+              nfill += len(re.findall(r'<span class="label-en">First \d', h))
+              for m in re.finditer(r'<script type="application/ld\+json">(.*?)</script>', h, re.S):
+                  try: json.loads(m.group(1))
+                  except Exception as e: errors.append(f)
+          assert nsec >= 28, f'only {nsec} WBTC sections'
+          assert nfill >= 850, f'only {nfill} cards filled'
+          assert not errors, f'bad json-ld: {errors[:3]}'
+          for slug in ['kolkata-to-mayapur', 'kolkata-airport-to-digha', 'barasat-to-kolaghat', 'kharagpur-to-barasat']:
+              p = Path(f'bus-time-table/{slug}.html')
+              assert p.exists(), slug + ' missing'
+              assert '../css/seo.css' in p.read_text(encoding='utf-8'), slug + ' unstyled'
+          sm = Path('sitemap.xml').read_text(encoding='utf-8')
+          assert 'kolkata-to-mayapur' in sm, 'sitemap missing new pages'
+          print(f'validation OK: {nsec} sections, {nfill} cards, new pages styled + sitemapped')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/patch_wbtc_long_seo.py bus-time-table/ sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "feat: WBTC long-route first/last bus times on 858 cards (147 pages), 28 route sections, 12 new route pages + sitemap"
+            git push
+          fi
