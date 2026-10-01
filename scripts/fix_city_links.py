@@ -9,6 +9,10 @@ so every card 404'd. This rebuilds LINKS so each route points at a page
 that actually exists (verified: the page must mention the route number);
 routes with no matching page fall back to the bus-time-table hub.
 
+Candidates are tried from the ROUTES from/to stands AND from the matching
+bus record's origin/destination in data/app-index.json (that covers the
+routes whose stands are spelled differently in the page names).
+
 Idempotent.  Usage: python3 scripts/fix_city_links.py [--write]
 """
 import json
@@ -19,6 +23,7 @@ import sys
 BASE = pathlib.Path(__file__).resolve().parent.parent
 PAGE = BASE / "kolkata-city-bus-timetable.html"
 BTT = BASE / "bus-time-table"
+INDEX = BASE / "data" / "app-index.json"
 FALLBACK = "bus-time-table/"
 
 
@@ -41,14 +46,17 @@ def variants(s):
     return {v for v in out if v}
 
 
-def find_page(n, a, b, files):
+def pairs(a, b):
     for va in variants(a):
         for vb in variants(b):
-            for c in (va + "-to-" + vb, vb + "-to-" + va):
-                if c in files:
-                    txt = (BTT / (c + ".html")).read_text(encoding="utf-8", errors="replace").upper()
-                    if n.upper() in txt:      # page really is this route
-                        return c
+            yield va + "-to-" + vb
+            yield vb + "-to-" + va
+
+
+def find_page(n, cands, files):
+    for c in cands:
+        if c in files and n.upper() in (BTT / (c + ".html")).read_text(encoding="utf-8", errors="replace").upper():
+            return c
     return None
 
 
@@ -64,10 +72,20 @@ def main():
     links = json.loads(ml.group(2))
     city = {x["n"]: x for x in json.loads(mr.group(2)) if not x.get("pvt")}
 
+    buses = []
+    if INDEX.exists():
+        buses = json.loads(INDEX.read_text(encoding="utf-8")).get("buses", [])
+
     new, fixed, fallback = {}, 0, 0
     for n in links:
-        x = city.get(n)
-        cand = find_page(n, x.get("a"), x.get("b"), files) if x else None
+        x = city.get(n) or {}
+        cands = list(pairs(x.get("a"), x.get("b")))
+        rn = slug(n)
+        bus = next((b for b in buses
+                    if re.match(r"^wbtc-gov-wbtc-" + re.escape(rn) + r"-\d+$", str(b.get("id", "")))), None)
+        if bus:
+            cands += list(pairs(bus.get("origin"), bus.get("destination")))
+        cand = find_page(n, cands, files)
         if cand:
             new[n] = "bus-time-table/" + cand + ".html"
             fixed += 1
