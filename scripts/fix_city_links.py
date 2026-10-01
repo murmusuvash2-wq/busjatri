@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """Fix the "View timetable" links on the Kolkata city hub page.
 
-The LINKS map on kolkata-city-bus-timetable.html points at
+Two things on kolkata-city-bus-timetable.html point at
     bus-time-table/<route>-<from>-to-<to>.html
-files that no longer exist - the route pages are now named
-    bus-time-table/<from>-to-<to>.html
-so every card 404'd. This rebuilds LINKS so each route points at a page
-that actually exists (verified: the page must mention the route number);
-routes with no matching page fall back to the bus-time-table hub.
+files that no longer exist (route pages are now named
+    bus-time-table/<from>-to-<to>.html):
 
-Candidates are tried from the ROUTES from/to stands AND from the matching
-bus record's origin/destination in data/app-index.json (that covers the
-routes whose stands are spelled differently in the page names).
+  1. the JS LINKS map (used by the search-result rows)
+  2. hardcoded href="..." on the "All 73 routes (A-Z)" / Popular cards
+
+This rebuilds BOTH so every link points at a page that exists (verified:
+the target page must mention the route number); routes with no matching
+page fall back to the bus-time-table hub.
 
 Idempotent.  Usage: python3 scripts/fix_city_links.py [--write]
 """
@@ -76,9 +76,9 @@ def main():
     if INDEX.exists():
         buses = json.loads(INDEX.read_text(encoding="utf-8")).get("buses", [])
 
-    new, fixed, fallback = {}, 0, 0
-    for n in links:
-        x = city.get(n) or {}
+    # route no -> correct target url
+    target, fixed, fallback = {}, 0, 0
+    for n, x in city.items():
         cands = list(pairs(x.get("a"), x.get("b")))
         rn = slug(n)
         bus = next((b for b in buses
@@ -87,17 +87,46 @@ def main():
             cands += list(pairs(bus.get("origin"), bus.get("destination")))
         cand = find_page(n, cands, files)
         if cand:
-            new[n] = "bus-time-table/" + cand + ".html"
+            target[n] = "bus-time-table/" + cand + ".html"
             fixed += 1
         else:
-            new[n] = FALLBACK
+            target[n] = FALLBACK
             fallback += 1
+    print(f"routes {len(city)} -> page {fixed} | fallback {fallback}")
 
-    print(f"LINKS {len(links)} -> fixed {fixed} | fallback {fallback}")
-    if new == links:
+    changed = False
+
+    # ---- 1. JS LINKS map ---------------------------------------------------
+    new_links = {n: target.get(n, FALLBACK) for n in links}
+    if new_links != links:
+        h = h[: ml.start(2)] + json.dumps(new_links, ensure_ascii=False, separators=(",", ":")) + h[ml.end(2):]
+        changed = True
+
+    # ---- 2. hardcoded hrefs ------------------------------------------------
+    slugs = sorted((slug(n) for n in city), key=len, reverse=True)
+
+    def repl(m):
+        nonlocal changed
+        url = m.group(1)
+        if url == FALLBACK or (BASE / url).exists():
+            return m.group(0)
+        inner = url[len("bus-time-table/"):-len(".html")]
+        # which route does this href belong to? longest matching route slug prefix
+        rn = next((s for s in slugs if inner == s or inner.startswith(s + "-")), None)
+        newurl = None
+        if rn:
+            n = next(n for n in city if slug(n) == rn)
+            newurl = target[n]
+        if newurl and newurl != url:
+            changed = True
+            return 'href="' + newurl + '"'
+        return m.group(0)
+
+    h = re.sub(r'href="(bus-time-table/[^"]+\.html)"', repl, h)
+
+    if not changed:
         print("already correct - nothing to do")
         return
-    h = h[: ml.start(2)] + json.dumps(new, ensure_ascii=False, separators=(",", ":")) + h[ml.end(2):]
     if write:
         PAGE.write_text(h, encoding="utf-8")
         print("wrote %s: %d bytes" % (PAGE.name, len(h)))
