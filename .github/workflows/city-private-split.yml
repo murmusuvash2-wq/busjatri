@@ -1,0 +1,45 @@
+name: Split Kolkata city hub - drop private list, keep searchable
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Split the page (remove private LIST, filter ROUTES)
+        run: python3 scripts/split_city_private.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import re, json, pathlib
+          h = pathlib.Path('kolkata-city-bus-timetable.html').read_text(encoding='utf-8')
+          assert 'id="pvtGrid"' not in h, 'pvtGrid still present'
+          assert 'Private Bus Routes' not in h, 'private section still present'
+          assert 'class="badge badge-priv"' not in h, 'private badge still present'
+          m = re.search(r'(?:var|const|let)\s+ROUTES\s*=\s*(\[.*?\]);', h, re.DOTALL)
+          arr = json.loads(m.group(1))
+          city = [r for r in arr if not r.get('pvt')]
+          pvt  = [r for r in arr if r.get('pvt')]
+          assert len(city) == 73, f'expected 73 WBTC city routes, got {len(city)}'
+          assert len(pvt) == 254, f'expected 254 kept private routes, got {len(pvt)}'
+          print(f'OK: {len(arr)} searchable routes (73 WBTC + {len(pvt)} Kolkata-area private)')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/split_city_private.py kolkata-city-bus-timetable.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Kolkata city hub: drop 428-row private list, keep 254 Kolkata-area private routes searchable (73 WBTC + 254)"
+            git push
+          fi
