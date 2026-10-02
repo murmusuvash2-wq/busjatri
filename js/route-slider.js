@@ -1,3 +1,4 @@
+/* private city route bilingual labels: EN/বাংলা toggle aware */
 /* BusJatri route map / chip-row horizontal slider (UX audit 2026-09-19).
    Adds swipe scrolling + prev/next arrow buttons to .routemap and
    .chip-row.hscroll containers. Arrows appear only when the content
@@ -50,20 +51,20 @@
     }).filter(Boolean);
     var uniq = [];
     stops.forEach(function (s) { if (uniq.indexOf(s) < 0) uniq.push(s); });
-    var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title">Route stops</div><div class="private-stop-list">' +
-      uniq.map(function (s, i) { return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'">'+s+'</span>'; }).join('<span class="private-stop-arrow">›</span>') +
+    var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title"></div><div class="private-stop-list">' +
+      '<span class="label-en private-stops-label">Route stops</span><span class="label-bn private-stops-label">রুটের স্টপেজ</span><div class="private-stop-list-inner">' + uniq.map(function (s, i) { return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'">'+s+'</span>'; }).join('<span class="private-stop-arrow">›</span>') + '</div>' +
       '</div></div>' : '';
     var card = document.createElement('div');
     card.className = 'tt-card private-no-time';
     card.innerHTML =
-      '<div class="tt-head"><div><div class="tt-title">Timetable</div><div class="tt-sub">schedule not listed · private route</div></div><span class="private-na-pill">NO SCHEDULE</span></div>' +
+      '<div class="tt-head"><div><div class="tt-title"><span class="label-en">Timetable</span><span class="label-bn">টাইম টেবিল</span></div><div class="tt-sub"><span class="label-en">schedule not listed · private route</span><span class="label-bn">সময়সূচি তালিকাভুক্ত নেই · বেসরকারি রুট</span></div></div><span class="private-na-pill"><span class="label-en">NO SCHEDULE</span><span class="label-bn">সময়সূচি নেই</span></span></div>' +
       '<div class="private-rail-wrap">' +
-        '<div class="private-rail-cols"><span>Departure</span><span>Ride</span><span>Arrival</span></div>' +
-        '<div class="private-rail-row"><div>—</div><div><i></i><span>Not available</span><i></i></div><div>—</div></div>' +
+        '<div class="private-rail-cols"><span><span class="label-en">Departure</span><span class="label-bn">ছাড়ার সময়</span></span><span><span class="label-en">Ride</span><span class="label-bn">যাত্রা</span></span><span><span class="label-en">Arrival</span><span class="label-bn">পৌঁছানোর সময়</span></span></div>' +
+        '<div class="private-rail-row"><div>—</div><div><i></i><span class="label-en">Not available</span><span class="label-bn">উপলভ্য নয়</span><i></i></div><div>—</div></div>' +
       '</div>' +
-      '<div class="private-message"><strong>'+route+'</strong><br>Official departure and arrival times are not listed yet. When a published timetable becomes available, the exact times can be added here.</div>' +
+      '<div class="private-message"><strong>'+route+'</strong><br><span class="label-en">Official departure and arrival times are not listed yet. When a published timetable becomes available, the exact times can be added here.</span><span class="label-bn">সরকারি ছাড়ার ও পৌঁছানোর সময় এখনও তালিকাভুক্ত নেই। প্রকাশিত সময়সূচি পাওয়া গেলে সঠিক সময় এখানে যোগ করা যাবে।</span></div>' +
       stopHtml +
-      '<p class="tt-note">No timing values have been estimated or invented for this private route.</p>';
+      '<p class="tt-note"><span class="label-en">No timing values have been estimated or invented for this private route.</span><span class="label-bn">এই বেসরকারি রুটের কোনো সময় অনুমান বা মনগড়া করে দেখানো হয়নি।</span></p>';
     if (row) row.remove();
     sec.appendChild(card);
     var mapSec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
