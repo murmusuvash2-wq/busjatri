@@ -35,6 +35,28 @@
     upd();
   }
 
+  function stopBnMap() {
+    var map = {};
+    var stops = window.STOPS;
+    if (Array.isArray(stops)) {
+      stops.forEach(function (p) {
+        if (Array.isArray(p) && p.length > 1 && p[0] && p[1]) map[String(p[0]).trim()] = String(p[1]).trim();
+      });
+    }
+    return map;
+  }
+
+  function enhanceRouteMapLanguage() {
+    var map = stopBnMap();
+    if (!Object.keys(map).length) return;
+    document.querySelectorAll('.routemap .rm-name').forEach(function (el) {
+      if (el.querySelector('.label-en')) return;
+      var en = (el.textContent || '').trim();
+      if (!en || !map[en]) return;
+      el.innerHTML = '<span class="label-en">'+en+'</span><span class="label-bn">'+map[en]+'</span>';
+    });
+  }
+
   function privateNoSchedule() {
     if (!document.querySelector('.badge-priv')) return;
     var sec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
@@ -46,13 +68,17 @@
     var row = sec.querySelector('.bus-row');
     var hero = document.querySelector('.seo-hero h1');
     var route = hero ? hero.textContent.replace(/\s+/g,' ').trim() : 'This private bus route';
+    var map = stopBnMap();
     var stops = Array.from(document.querySelectorAll('.routemap .rm-name')).map(function (x) {
       return (x.textContent || '').trim();
     }).filter(Boolean);
     var uniq = [];
     stops.forEach(function (s) { if (uniq.indexOf(s) < 0) uniq.push(s); });
     var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title"><span class="label-en">Route stops</span><span class="label-bn">রুটের স্টপেজ</span></div><div class="private-stop-list">' +
-      uniq.map(function (s, i) { return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'">'+s+'</span>'; }).join('<span class="private-stop-arrow">›</span>') +
+      uniq.map(function (s, i) {
+        var bn = map[s] || s;
+        return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'><span class="label-en">'+s+'</span><span class="label-bn">'+bn+'</span></span>';
+      }).join('<span class="private-stop-arrow">›</span>') +
       '</div></div>' : '';
     var card = document.createElement('div');
     card.className = 'tt-card private-no-time';
@@ -76,6 +102,7 @@
 
   function init() {
     document.querySelectorAll('.routemap, .chip-row.hscroll').forEach(initOne);
+    enhanceRouteMapLanguage();
     initPrivateNoSchedule();
   }
   if (document.readyState === 'loading') {
