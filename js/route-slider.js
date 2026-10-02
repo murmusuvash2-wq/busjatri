@@ -33,8 +33,49 @@
     }
     upd();
   }
+
+  function privateNoSchedule() {
+    if (!document.querySelector('.badge-priv')) return;
+    var sec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
+      var h = s.querySelector('.section-title');
+      return h && /Scheduled Departures/i.test(h.textContent || '');
+    });
+    if (!sec || sec.__bjPrivateRail) return;
+    sec.__bjPrivateRail = 1;
+    var row = sec.querySelector('.bus-row');
+    var hero = document.querySelector('.seo-hero h1');
+    var route = hero ? hero.textContent.replace(/\s+/g,' ').trim() : 'This private bus route';
+    var stops = Array.from(document.querySelectorAll('.routemap .rm-name')).map(function (x) {
+      return (x.textContent || '').trim();
+    }).filter(Boolean);
+    var uniq = [];
+    stops.forEach(function (s) { if (uniq.indexOf(s) < 0) uniq.push(s); });
+    var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title">Route stops</div><div class="private-stop-list">' +
+      uniq.map(function (s, i) { return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'">'+s+'</span>'; }).join('<span class="private-stop-arrow">›</span>') +
+      '</div></div>' : '';
+    var card = document.createElement('div');
+    card.className = 'tt-card private-no-time';
+    card.innerHTML =
+      '<div class="tt-head"><div><div class="tt-title">Timetable</div><div class="tt-sub">schedule not listed · private route</div></div><span class="private-na-pill">NO SCHEDULE</span></div>' +
+      '<div class="private-rail-wrap">' +
+        '<div class="private-rail-cols"><span>Departure</span><span>Ride</span><span>Arrival</span></div>' +
+        '<div class="private-rail-row"><div>—</div><div><i></i><span>Not available</span><i></i></div><div>—</div></div>' +
+      '</div>' +
+      '<div class="private-message"><strong>'+route+'</strong><br>Official departure and arrival times are not listed yet. When a published timetable becomes available, the exact times can be added here.</div>' +
+      stopHtml +
+      '<p class="tt-note">No timing values have been estimated or invented for this private route.</p>';
+    if (row) row.remove();
+    sec.appendChild(card);
+    var mapSec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
+      var h=s.querySelector('.section-title'); return h && /^Route Map$/i.test((h.textContent||'').trim());
+    });
+    if (mapSec) mapSec.style.display='none';
+  }
+  function initPrivateNoSchedule() { privateNoSchedule(); }
+
   function init() {
     document.querySelectorAll('.routemap, .chip-row.hscroll').forEach(initOne);
+    initPrivateNoSchedule();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
