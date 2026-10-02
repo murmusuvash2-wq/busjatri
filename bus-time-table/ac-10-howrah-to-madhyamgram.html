@@ -177,9 +177,9 @@ function openJourney(i){
  document.querySelectorAll('.tr.sel').forEach(function(r){r.classList.remove('sel')});
  var row=document.querySelector('.tr[data-i="'+i+'"]');if(row)row.classList.add('sel');
  var total=LEGS.length,cum=0,html='';
- for(var s=0;s<STOPS.length;s++){var mins=sh+Math.round((eh-sh)*cum/total),cls=s===0?'first':(s===STOPS.length-1?'last':'mid'),ap=(s===0||s===STOPS.length-1)?'':'<span class="approx"> ≈</span>';html+='<div class="j-stop '+cls+'"><div class="dot"></div><div class="s-name">'+STOPS[s][0]+'</div><div class="s-time">'+t12(mins)+ap+'</div></div>';if(s<LEGS.length)cum++}
+ for(var s=0;s<STOPS.length;s++){var mins=sh+Math.round((eh-sh)*cum/total),cls=s===0?'first':(s===STOPS.length-1?'last':'mid'),ap=(s===0||s===STOPS.length-1)?'':'<span class="approx"> ≈</span>';html+='<div class="j-stop '+cls+'"><div class="dot"></div><div class="s-name">'+(document.body.classList.contains("lang-bn")?STOPS[s][1]:STOPS[s][0])+'</div><div class="s-time">'+t12(mins)+ap+'</div></div>';if(s<LEGS.length)cum++}
  document.getElementById('jTitle').textContent=t12(sh)+' → '+t12(eh)+' bus';
- document.getElementById('jRoute').textContent=STOPS[0][0]+' → '+STOPS[STOPS.length-1][0];
+ document.getElementById('jRoute').textContent=(document.body.classList.contains('lang-bn')?STOPS[0][1]:STOPS[0][0])+' → '+(document.body.classList.contains('lang-bn')?STOPS[STOPS.length-1][1]:STOPS[STOPS.length-1][0]);
  document.getElementById('jStops').innerHTML=html;document.getElementById('journey').style.display='block';document.getElementById('jHint').style.display='none';
 }
 function closeJourney(){document.getElementById('journey').style.display='none';document.getElementById('jHint').style.display=''}
