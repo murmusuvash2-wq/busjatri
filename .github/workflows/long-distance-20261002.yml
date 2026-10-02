@@ -1,0 +1,39 @@
+name: Long-distance routes section 20261002
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run script
+        run: python3 scripts/add_long_distance_section_20261002.py
+
+      - name: Validate
+        run: |
+          set -e
+          f=bus-time-table/index.html
+          grep -q 'id="longDistanceSec"' "$f"
+          grep -q 'Private Long-Distance Routes' "$f"
+          grep -q 'Open all long-distance buses in search' "$f"
+          python3 scripts/check_long_distance_section.py
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "All Bus Timetable: add Private Long-Distance Routes section (1115 services)"
+            git push
+          fi
