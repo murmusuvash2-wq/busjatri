@@ -257,8 +257,9 @@ def main():
         if not rel: continue
         def mk(r, bn_mode):
             p = links.get(r["n"], "#")
+            # Route pages live inside /bus-time-table/, so related links must be page-relative.\n            p = p.split("bus-time-table/",1)[-1]
             lab = f"{r['n']} {r['a']} ⟷ {r['b']}"
-            return f'<a href="{p}">{lab}</a>'
+            if bn_mode:\n                # Use the same verified Bengali stop dictionary used by STOPS.\n                aa = existing_map.get(r["a"], BN.get(r["a"], r["a"]))\n                bb = existing_map.get(r["b"], BN.get(r["b"], r["b"]))\n                lab = f"{r['n']} {aa} ⟷ {bb}"\n            return f'<a href="{p}">{lab}</a>'
         en = " · ".join(mk(r, False) for r in rel)
         bn = " · ".join(mk(r, True) for r in rel)
         block = (f'\n<!-- city-rel-v1 -->\n<p class="tt-note" style="margin-top:10px">'
