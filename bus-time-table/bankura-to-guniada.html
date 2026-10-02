@@ -41,18 +41,20 @@
 </head>
 <body>
 <header class="header">
-  <div class="container header-inner">
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
     <a href="../index.html" class="logo" aria-label="BusJatri home">
-      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
       Bus<span>Jatri</span>
     </a>
-    <div class="hdr-ctrl">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" id="langEn" class="pill pill-en on">EN</button>
-        <button type="button" id="langBn" class="pill pill-bn">বাংলা</button>
-      </div>
-      <button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
-    </div>
+    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
+<nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    </nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
@@ -169,5 +171,6 @@
 </footer>
 <script defer src="../js/seo-page.js?v=noback20260930"></script>
 <script defer src="../js/route-slider.js"></script>
+<script src="../js/hdr.js?v=hdrunify20261002"></script>
 </body>
 </html>

@@ -113,18 +113,20 @@ body.lang-bn .mt-stn .mt-en{display:none}
 </head>
 <body>
 <header class="header">
-  <div class="container header-inner">
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
     <a href="../index.html" class="logo" aria-label="BusJatri home">
-      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
       Bus<span>Jatri</span>
     </a>
-    <div class="hdr-ctrl">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" id="langEn" class="pill pill-en on">EN</button>
-        <button type="button" id="langBn" class="pill pill-bn">বাংলা</button>
-      </div>
-      <button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
-    </div>
+    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
+<nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    </nav>
   </div>
 </header>
 <main class="container seo-main">
@@ -181,5 +183,6 @@ function m(t){var h=+t.slice(0,2),mi=+t.slice(3);return h*60+mi}function t12(mm)
 (function(){var rail=document.getElementById('rail'),html='',nx=-1,now=new Date().getHours()*60+new Date().getMinutes();for(var i=0;i<TRIPS.length;i++){var sh=m(TRIPS[i][0]),eh=arrFor(i);html+='<div class="tr" data-i="'+i+'"><div class="dep">'+t12(sh)+'</div><div class="mid"><span class="ln"></span>'+dur(t12(sh),t12(eh))+'<span class="ln"></span></div><div class="arr">'+t12(eh)+'<small>≈</small></div></div>'}rail.innerHTML=html;var rows=rail.querySelectorAll('.tr');for(var i=0;i<rows.length;i++)if(m(TRIPS[i][0])>=now){rows[i].classList.add('next');nx=i;document.getElementById('nextPill').textContent='Next '+t12(m(TRIPS[i][0]));document.getElementById('nextPill').style.display='inline-flex';break}if(nx<0&&rows.length){rows[0].classList.add('next');document.getElementById('nextPill').textContent='Next (tomorrow) '+t12(m(TRIPS[0][0]));document.getElementById('nextPill').style.display='inline-flex'}var target=rows[nx<0?0:nx];if(target)rail.scrollTop=Math.max(0,target.offsetTop-rail.clientHeight/2+target.offsetHeight/2)})();
 function openJourney(i){var sh=m(TRIPS[i][0]),eh=arrFor(i);document.querySelectorAll('.tr.sel').forEach(function(r){r.classList.remove('sel')});var row=document.querySelector('.tr[data-i="'+i+'"]');if(row)row.classList.add('sel');var total=LEGS.length,cum=0,html='';for(var s=0;s<STOPS.length;s++){var mins=sh+Math.round((eh-sh)*cum/total),cls=s===0?'first':(s===STOPS.length-1?'last':'mid'),ap=(s===0||s===STOPS.length-1)?'':'<span class="approx"> ≈</span>';html+='<div class="j-stop '+cls+'"><div class="dot"></div><div class="s-name">'+(document.body.classList.contains("lang-bn")?STOPS[s][1]:STOPS[s][0])+'</div><div class="s-time">'+t12(mins)+ap+'</div></div>';if(s<LEGS.length)cum++}document.getElementById('jTitle').textContent=t12(sh)+' → '+t12(eh)+' bus';document.getElementById('jRoute').textContent=(document.body.classList.contains('lang-bn')?STOPS[0][1]:STOPS[0][0])+' → '+(document.body.classList.contains('lang-bn')?STOPS[STOPS.length-1][1]:STOPS[STOPS.length-1][0]);document.getElementById('jStops').innerHTML=html;document.getElementById('journey').style.display='block';document.getElementById('jHint').style.display='none'}function closeJourney(){document.getElementById('journey').style.display='none';document.getElementById('jHint').style.display=''}document.getElementById('rail').addEventListener('click',function(e){var r=e.target.closest('.tr');if(!r)return;if(r.classList.contains('sel')){r.classList.remove('sel');closeJourney()}else openJourney(+r.getAttribute('data-i'))});
 </script>
-<script id="bj-departure-only-fix">(function(){var card=document.querySelector('.tt-card.deponly');if(!card)return;var rail=document.getElementById('rail');if(rail){rail.querySelectorAll('.tr').forEach(function(r){var m=r.querySelector('.mid'),a=r.querySelector('.arr');if(m)m.remove();if(a)a.remove()});rail.addEventListener('click',function(e){var r=e.target.closest('.tr');if(r)e.stopImmediatePropagation()},true)}var j=document.getElementById('journey'),h=document.getElementById('jHint');if(j)j.style.display='none';if(h)h.style.display='none'})();</script></body>
+<script id="bj-departure-only-fix">(function(){var card=document.querySelector('.tt-card.deponly');if(!card)return;var rail=document.getElementById('rail');if(rail){rail.querySelectorAll('.tr').forEach(function(r){var m=r.querySelector('.mid'),a=r.querySelector('.arr');if(m)m.remove();if(a)a.remove()});rail.addEventListener('click',function(e){var r=e.target.closest('.tr');if(r)e.stopImmediatePropagation()},true)}var j=document.getElementById('journey'),h=document.getElementById('jHint');if(j)j.style.display='none';if(h)h.style.display='none'})();</script><script src="../js/hdr.js?v=hdrunify20261002"></script>
+</body>
 </html>

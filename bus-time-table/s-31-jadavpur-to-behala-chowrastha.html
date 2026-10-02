@@ -113,18 +113,20 @@ body.lang-bn .mt-stn .mt-en{display:none}
 </head>
 <body>
 <header class="header">
-  <div class="container header-inner">
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
     <a href="../index.html" class="logo" aria-label="BusJatri home">
-      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
       Bus<span>Jatri</span>
     </a>
-    <div class="hdr-ctrl">
-      <div class="lang-switch" role="group" aria-label="Language">
-        <button type="button" id="langEn" class="pill pill-en on">EN</button>
-        <button type="button" id="langBn" class="pill pill-bn">বাংলা</button>
-      </div>
-      <button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
-    </div>
+    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
+<nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    </nav>
   </div>
 </header>
 <main class="container seo-main">
@@ -223,5 +225,6 @@ function t12(mm){var h=Math.floor(mm/60),mi=mm%60;var ap=h<12?'AM':'PM';var h12=
   document.getElementById('themeBtn').addEventListener('click',function(){document.body.classList.toggle('dark')});
 })();
 </script>
-<script id="bj-derived-arrival">(function(){var DUR=50;function m(t){return +t.slice(0,2)*60+ +t.slice(3)}function t12(mm){mm=(mm+1440)%1440;var h=Math.floor(mm/60),mi=mm%60,ap=h<12?'AM':'PM',h12=h%12||12;return h12+':'+(mi<10?'0':'')+mi+' '+ap}var rail=document.getElementById('rail');if(!rail||typeof TRIPS==='undefined')return;var rows=TRIPS.map(function(x){var sh=m(x[0]),eh=sh+DUR;return [x[0],String(Math.floor(eh/60)%24).padStart(2,'0')+':'+String(eh%60).padStart(2,'0')]});rail.innerHTML=rows.map(function(x,i){return '<div class="tr" data-i="'+i+'"><div class="dep">'+t12(m(x[0]))+'</div><div class="mid"><span class="ln"></span>'+t12(m(x[0])+DUR)+'<span class="ln"></span></div><div class="arr">'+t12(m(x[1]))+'</div></div>'}).join('');var nm=new Date().getHours()*60+new Date().getMinutes(),rs=rail.querySelectorAll('.tr'),ni=-1;for(var i=0;i<rs.length;i++){if(m(rows[i][0])>=nm){rs[i].classList.add('next');ni=i;break}}if(ni<0&&rs.length){rs[0].classList.add('next');ni=0}if(rs[ni])rail.scrollTop=Math.max(0,rs[ni].offsetTop-rail.clientHeight/2+rs[ni].offsetHeight/2);var n=document.querySelector('.next-pill');if(n&&rs[ni]){n.innerHTML='<span class="label-en">Next '+t12(m(rows[ni][0]))+'</span><span class="label-bn">আগামী '+t12(m(rows[ni][0]))+'</span>';n.style.display='inline-flex'}})();</script><p class="tt-note"><span class="label-en">Arrival times are estimated at ~50 min from the published route duration; the official source publishes departure times. Verify before travel.</span><span class="label-bn">পৌঁছানোর সময় প্রকাশিত রুটের প্রায় ৫০ মিনিট মোট সময় থেকে আনুমানিক হিসাব করা হয়েছে; সরকারি উৎসে ছাড়ার সময় প্রকাশিত। যাত্রার আগে যাচাই করুন।</span></p></body>
+<script id="bj-derived-arrival">(function(){var DUR=50;function m(t){return +t.slice(0,2)*60+ +t.slice(3)}function t12(mm){mm=(mm+1440)%1440;var h=Math.floor(mm/60),mi=mm%60,ap=h<12?'AM':'PM',h12=h%12||12;return h12+':'+(mi<10?'0':'')+mi+' '+ap}var rail=document.getElementById('rail');if(!rail||typeof TRIPS==='undefined')return;var rows=TRIPS.map(function(x){var sh=m(x[0]),eh=sh+DUR;return [x[0],String(Math.floor(eh/60)%24).padStart(2,'0')+':'+String(eh%60).padStart(2,'0')]});rail.innerHTML=rows.map(function(x,i){return '<div class="tr" data-i="'+i+'"><div class="dep">'+t12(m(x[0]))+'</div><div class="mid"><span class="ln"></span>'+t12(m(x[0])+DUR)+'<span class="ln"></span></div><div class="arr">'+t12(m(x[1]))+'</div></div>'}).join('');var nm=new Date().getHours()*60+new Date().getMinutes(),rs=rail.querySelectorAll('.tr'),ni=-1;for(var i=0;i<rs.length;i++){if(m(rows[i][0])>=nm){rs[i].classList.add('next');ni=i;break}}if(ni<0&&rs.length){rs[0].classList.add('next');ni=0}if(rs[ni])rail.scrollTop=Math.max(0,rs[ni].offsetTop-rail.clientHeight/2+rs[ni].offsetHeight/2);var n=document.querySelector('.next-pill');if(n&&rs[ni]){n.innerHTML='<span class="label-en">Next '+t12(m(rows[ni][0]))+'</span><span class="label-bn">আগামী '+t12(m(rows[ni][0]))+'</span>';n.style.display='inline-flex'}})();</script><p class="tt-note"><span class="label-en">Arrival times are estimated at ~50 min from the published route duration; the official source publishes departure times. Verify before travel.</span><span class="label-bn">পৌঁছানোর সময় প্রকাশিত রুটের প্রায় ৫০ মিনিট মোট সময় থেকে আনুমানিক হিসাব করা হয়েছে; সরকারি উৎসে ছাড়ার সময় প্রকাশিত। যাত্রার আগে যাচাই করুন।</span></p><script src="../js/hdr.js?v=hdrunify20261002"></script>
+</body>
 </html>
