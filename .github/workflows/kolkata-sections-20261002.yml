@@ -1,0 +1,49 @@
+name: Kolkata sections + audit fixes 20261002
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run fix script
+        run: python3 scripts/fix_kolkata_sections_20261002.py
+
+      - name: Validate
+        run: |
+          set -e
+          if grep -rq 'href="bus-time-table/' bus-time-table/ ; then
+            echo "doubled-path links still present"; exit 1
+          fi
+          for f in bus-time-table/kolkata-to-balurghat.html index.html; do
+            en=$(grep -o 'class="label-en"' "$f" | wc -l)
+            bn=$(grep -o 'class="label-bn"' "$f" | wc -l)
+            [ "$en" = "$bn" ] || { echo "label mismatch in $f ($en/$bn)"; exit 1; }
+          done
+          if grep -q '<title>Kolkata City Bus Timetable (WBTC)' kolkata-city-bus-timetable.html ; then
+            echo "city hub still branded WBTC"; exit 1
+          fi
+          grep -q 'Long-distance buses' kolkata-city-bus-timetable.html
+          grep -q 'WBTC Long Routes' bus-time-table/wbtc-buses.html
+          grep -q 'bus-time-table/adra-to-khatra.html' sitemap.xml
+          python3 scripts/check_dupe_freshness.py
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Kolkata sections split (WBTC city/long, city hub rebrand) + audit fixes (links, labels, sitemap)"
+            git push
+          fi
