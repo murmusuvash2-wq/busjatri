@@ -1,0 +1,49 @@
+name: Unify site header 20261002
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run header unify script
+        run: python3 scripts/unify_header_20261002.py
+
+      - name: Validate
+        run: |
+          set -e
+          for f in bus-time-table/sbstc-buses.html \
+                   bus-time-table/nbstc-buses.html \
+                   bus-time-table/volvo-ac-buses.html \
+                   blog/how-to-find-bus-timings.html \
+                   index.html about.html 404.html \
+                   kolkata-city-bus-timetable.html via/adra.html; do
+            grep -q 'class="bj-nav"' "$f" || { echo "missing canonical header: $f"; exit 1; }
+            grep -q 'js/hdr.js' "$f" || { echo "missing controller: $f"; exit 1; }
+            grep -q 'id="themeBtn"' "$f" || { echo "missing theme button: $f"; exit 1; }
+            grep -q 'id="langEn"' "$f" || { echo "missing EN button: $f"; exit 1; }
+            grep -q 'id="langBn"' "$f" || { echo "missing Bengali button: $f"; exit 1; }
+          done
+          if grep -rl --include='*.html' 'id="bjThemeBtn"' . ; then
+            echo "old duplicate theme button still present"; exit 1
+          fi
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "Header unify: one language switch + one theme switch on every page"
+            git push
+          fi
