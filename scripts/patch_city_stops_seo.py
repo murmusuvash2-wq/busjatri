@@ -346,6 +346,25 @@ def main():
         changed[str(p)] = h[:fi] + block + h[fi:]
         print(f"  patched stand page: {name}")
 
+    # ---- 7. repair existing city-page internal links + bilingual wording
+    print("== 7. repair existing city-page links/wording ==")
+    n = 0
+    for f in sorted(glob.glob(str(ROOT / "bus-time-table" / "*.html"))):
+        h = changed.get(f) or Path(f).read_text(encoding="utf-8")
+        if "var TRIPS" not in h: continue
+        original = h
+        # These pages live inside /bus-time-table/, so related city links must be page-relative.
+        h = h.replace('href="bus-time-table/', 'href="')
+        # Route pages should return to the Kolkata City Bus hub, not the generic timetable index.
+        h = h.replace('<a href="./">All Bus Timetables</a>', '<a href="../kolkata-city-bus-timetable.html"><span class="label-en">Kolkata City Bus Timetable</span><span class="label-bn">কলকাতা সিটি বাস টাইম টেবিল</span></a>')
+        # Keep Bengali copy fully Bengali where the page already has a Bengali language span.
+        h = re.sub(r'(class="label-bn"[^>]*>[^<]*?)1 hour 0 minutes', r'\\1১ ঘণ্টা', h)
+        h = re.sub(r'(class="label-bn"[^>]*>[^<]*?)1 hour', r'\\1১ ঘণ্টা', h)
+        if h != original:
+            changed[f] = h
+            n += 1
+    print(f"  existing city pages repaired: {n}")
+
     # ---- write out
     print(f"\n== files changed: {len(changed)} ({'WRITE' if WRITE else 'DRY-RUN'}) ==")
     if DRY:
