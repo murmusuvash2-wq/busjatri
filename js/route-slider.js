@@ -51,8 +51,8 @@
     }).filter(Boolean);
     var uniq = [];
     stops.forEach(function (s) { if (uniq.indexOf(s) < 0) uniq.push(s); });
-    var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title"></div><div class="private-stop-list">' +
-      '<span class="label-en private-stops-label">Route stops</span><span class="label-bn private-stops-label">রুটের স্টপেজ</span><div class="private-stop-list-inner">' + uniq.map(function (s, i) { return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'">'+s+'</span>'; }).join('<span class="private-stop-arrow">›</span>') + '</div>' +
+    var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title"><span class="label-en">Route stops</span><span class="label-bn">রুটের স্টপেজ</span></div><div class="private-stop-list">' +
+      uniq.map(function (s, i) { return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'">'+s+'</span>'; }).join('<span class="private-stop-arrow">›</span>') +
       '</div></div>' : '';
     var card = document.createElement('div');
     card.className = 'tt-card private-no-time';
