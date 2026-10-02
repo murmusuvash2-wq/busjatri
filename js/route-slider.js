@@ -77,7 +77,7 @@
     var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title"><span class="label-en">Route stops</span><span class="label-bn">রুটের স্টপেজ</span></div><div class="private-stop-list">' +
       uniq.map(function (s, i) {
         var bn = map[s] || s;
-        return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'><span class="label-en">'+s+'</span><span class="label-bn">'+bn+'</span></span>';
+        return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'"><span class="label-en">'+s+'</span><span class="label-bn">'+bn+'</span></span>';
       }).join('<span class="private-stop-arrow">›</span>') +
       '</div></div>' : '';
     var card = document.createElement('div');
