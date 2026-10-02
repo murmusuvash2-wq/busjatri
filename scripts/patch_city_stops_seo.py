@@ -22,7 +22,7 @@ WRITE = not DRY
 
 # ---------------------------------------------------------------- Bengali ----
 BN = {
- "Airport Gate-1":"এয়ারপোর্ট গেট-১","Ajoynagar":"অজয়নগর","Akra Rabindranagar":"আকরা রবীন্দ্রনগর",
+ "Airport Gate-1":"এয়ারপোর্ট গেট-১", "Howrah Stn":"হাওড়া স্টেশন", "Howrah Station":"হাওড়া স্টেশন", "Garia Depot":"গড়িয়া ডিপো", "Ballygunge Stn":"বালিগঞ্জ স্টেশন", "Ballygunge":"বালিগঞ্জ", "Dunlop":"ডানলপ", "New Town":"নিউ টাউন", "Ecospace":"ইকোস্পেস", "Ultadanga":"উল্টোডাঙ্গা", "Karunamayee":"করুণাময়ী","Ajoynagar":"অজয়নগর","Akra Rabindranagar":"আকরা রবীন্দ্রনগর",
  "Alipore Zoo":"আলিপুর চিড়িয়াখানা","Amtala":"আমতলা","Baguihati":"বাগুইয়াটি","Bakultala":"বকুলতলা",
  "Bally Khal":"বালি খাল","Bantala IT Park":"বানতলা আইটি পার্ক","Baranagar":"বরানগর","Baruipur":"বারুইপুর",
  "Batamore":"বাটামোড়","Beckbagan":"বেকবাগান","Behala 3A Stand":"বেহালা ৩এ স্ট্যান্ড","Behala P.S":"বেহালা থানা",
