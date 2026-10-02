@@ -111,3 +111,31 @@
     init();
   }
 })();
+
+
+/* private route EN/বাংলা toggle */
+(function(){
+  function setupLang(){
+    if(!document.querySelector('.badge-priv') || document.getElementById('bjLangSwitch')) return;
+    var host=document.querySelector('.header-inner nav')||document.querySelector('.header-inner')||document.querySelector('header');
+    if(!host)return;
+    var wrap=document.createElement('div'); wrap.id='bjLangSwitch'; wrap.style.cssText='display:flex;gap:4px;align-items:center;margin-left:6px';
+    wrap.innerHTML='<button type="button" data-lang="en" style="border:1px solid var(--line,#ccc);border-radius:999px;padding:5px 9px;background:var(--surface,#fff);color:var(--ink,#222);font:600 11px/1 inherit;cursor:pointer">EN</button><button type="button" data-lang="bn" style="border:1px solid var(--line,#ccc);border-radius:999px;padding:5px 9px;background:var(--surface,#fff);color:var(--ink,#222);font:600 11px/1 inherit;cursor:pointer">বাংলা</button>';
+    host.appendChild(wrap);
+    function setLang(lang){
+      document.body.classList.toggle('lang-bn',lang==='bn');
+      document.documentElement.lang=lang;
+      try{localStorage.setItem('bj-lang',lang)}catch(e){}
+      wrap.querySelectorAll('button').forEach(function(b){b.style.background=b.getAttribute('data-lang')===lang?'var(--amber,#b8791f)':'var(--surface,#fff)';b.style.color=b.getAttribute('data-lang')===lang?'#fff':'var(--ink,#222)'});
+      document.querySelectorAll('.seo-section .section-title').forEach(function(h){
+        var t=(h.textContent||'').trim();
+        if(/^Scheduled Departures$/i.test(t)) h.innerHTML='<span class="label-en">Scheduled Departures</span><span class="label-bn">ছাড়ার সময়</span>';
+        else if(/^Route Map$/i.test(t)) h.innerHTML='<span class="label-en">Route Stops</span><span class="label-bn">রুটের স্টপেজ</span>';
+      });
+    }
+    wrap.querySelectorAll('button').forEach(function(b){b.addEventListener('click',function(){setLang(b.getAttribute('data-lang'))})});
+    var saved='en';try{saved=localStorage.getItem('bj-lang')||'en'}catch(e){}
+    setLang(saved);
+  }
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setupLang);else setupLang();
+})();
