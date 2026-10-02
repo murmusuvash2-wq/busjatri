@@ -254,6 +254,31 @@
     if (s.dm != null) return s.dm || null;
     return parseTime(s.down_time);
   }
+
+  /* Restore the old stop-page fallback: when a route has official
+     first/last times but a middle stop has no stored time, estimate its
+     position by evenly distributing the trip duration across the listed
+     stops. These are deliberately marked approximate in the UI. */
+  function bjEstimatedStop(b, stopIndex, dir) {
+    if (!b || !Array.isArray(b.stoppages) || stopIndex < 0) return null;
+    if (dir !== 'up') return null;
+    var dep = parseTime(b.departure_time), arr = parseTime(b.arrival_time);
+    if (dep == null || arr == null) return null;
+    var count = b.stoppages.length;
+    if (!count || stopIndex >= count) return null;
+    var total = arr - dep;
+    if (total < 0) total += 1440;
+    if (total <= 0) return null;
+    return Math.round(dep + total * (stopIndex / Math.max(1, count - 1))) % 1440;
+  }
+
+  function bjStopTime(b, stopIndex, dir) {
+    var s = b && b.stoppages ? b.stoppages[stopIndex] : null;
+    var exact = bjFromStop(s, dir);
+    if (exact != null) return { t: exact, approx: false };
+    var est = bjEstimatedStop(b, stopIndex, dir);
+    return est == null ? null : { t: est, approx: true };
+  }
   function bjStopMin(b, posIdx, dir) {
     var sts = b.stoppages || [];
     if (posIdx === 0) {
@@ -471,9 +496,10 @@
       var sts = b.stoppages || [];
       for (var k = 0; k < sts.length; k++) {
         if (slug(sts[k].name) !== slugKey) continue;
-        var tu = bjFromStop(sts[k], 'up');
+        var tuObj = bjStopTime(b, k, 'up');
+        var tu = tuObj ? tuObj.t : null;
         var td = bjFromStop(sts[k], 'down');
-        if (tu != null) { var d = tu - now; if (d < -10) d += 1440; out.push({ b: b, t: tu, diff: d, dir: 'up' }); }
+        if (tu != null) { var d = tu - now; if (d < -10) d += 1440; out.push({ b: b, t: tu, diff: d, dir: 'up', approx: !!(tuObj && tuObj.approx) }); }
         if (td != null) { var d2 = td - now; if (d2 < -10) d2 += 1440; out.push({ b: b, t: td, diff: d2, dir: 'down' }); }
         break;
       }
@@ -588,7 +614,7 @@
               var dO = parseTime(b.departure_time);
               if (dO != null) tU = dO;
             }
-            if (tU != null) allDeps.push({ b: b, t: tU, fwd: true });
+            if (tU != null) allDeps.push({ b: b, t: tU, fwd: true, approx: !!(typeof tuObj !== 'undefined' && tuObj && tuObj.approx) });
             if (tD != null) allDeps.push({ b: b, t: tD, fwd: false });
             if (tU == null && tD == null) allDeps.push({ b: b, t: null, fwd: true });
           });
@@ -609,7 +635,7 @@
               '<div class="ri-main"><div class="name">' + esc(n.b.bus_name) + badge + '</div>' +
               '<div class="route">' + esc(pn(tail)) + ' <span class="rarr">→</span> ' + esc(pn(head)) + '</div>' +
               '<div class="meta"><span>' + icon('stops') + ' ' + ((n.b.stoppages || []).length || n.b.total_stoppages || 0) + ' stops</span></div></div>' +
-              '<span class="time-pill">' + icon('clock') + ' ' + (n.t == null ? '<span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span>' : fmtTime(n.t)) + near + '</span></div>';
+              '<span class="time-pill">' + icon('clock') + ' ' + (n.t == null ? '<span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span>' : (n.approx ? '≈ ' : '') + fmtTime(n.t)) + near + '</span></div>';
           }).join('');
         })() +
         '</div>';
