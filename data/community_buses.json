@@ -4476,6 +4476,132 @@
      "down": "6:10 AM"
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Jhilimili-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39B 3633",
+   "origin": "Jhilimili",
+   "destination": "Kolkata",
+   "departure_time": "4:25 AM",
+   "arrival_time": "10:30 AM",
+   "depot_name": "Jhilimili",
+   "route": "Jhilimili - Ranibandh - Khatra - Bankura - Durgapur - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Jhilimili",
+     "up": "4:25 AM",
+     "down": "8:50 PM"
+    },
+    {
+     "name": "Jabla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khejuria",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranibandh",
+     "up": "4:50 AM",
+     "down": "8:25 PM"
+    },
+    {
+     "name": "Akkhuta More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ambikanagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mukutmanipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khatra",
+     "up": "5:15 AM",
+     "down": "8:05 PM"
+    },
+    {
+     "name": "Supur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bangla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Puabagan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "6:15 AM",
+     "down": "7:15 PM"
+    },
+    {
+     "name": "Beliator",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Durgapur",
+     "up": "7:10 AM",
+     "down": "6:25 PM"
+    },
+    {
+     "name": "Bardhaman Bypass",
+     "up": "8:25 AM",
+     "down": "5:10 PM"
+    },
+    {
+     "name": "Shaktigarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salap",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolkata (Dharmatala)",
+     "up": "10:30 AM",
+     "down": "3:10 PM"
+    }
+   ]
   }
  ],
  "enrich": [
