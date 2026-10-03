@@ -6506,6 +6506,175 @@
     }
    ],
    "total_stoppages": 11
+  },
+  {
+   "target_id": "wbbus-in-sbstc-durgapur-city-center-gopiballabpur-4313",
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Durgapur-Gopiballabpur",
+   "bus_type": "Government - SBSTC",
+   "departure_time": "5:15 AM",
+   "arrival_time": "11:15 AM",
+   "route": "Durgapur - Bankura - Jhargram - Gopiballabpur",
+   "time_source": "facebook (community report)",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Durgapur (City Center)",
+     "up_time": "5:15 AM",
+     "down_time": "6:30 PM"
+    },
+    {
+     "no": 2,
+     "name": "Durgapur (Station)",
+     "up_time": "5:45 AM",
+     "down_time": "6:15 PM"
+    },
+    {
+     "no": 3,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Beliator",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Bankura Bypass",
+     "up_time": "6:45 AM",
+     "down_time": "5:15 PM"
+    },
+    {
+     "no": 6,
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nutangram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Ratanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Taldangra",
+     "up_time": "7:35 AM",
+     "down_time": "4:35 PM"
+    },
+    {
+     "no": 10,
+     "name": "Simlapal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Bikrampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "P More",
+     "up_time": "8:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Raipur",
+     "up_time": "8:25 AM",
+     "down_time": "3:50 PM"
+    },
+    {
+     "no": 14,
+     "name": "Phulkushma",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Mandalkuli",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Silda",
+     "up_time": "9:10 AM",
+     "down_time": "3:15 PM"
+    },
+    {
+     "no": 17,
+     "name": "Kanko",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Binpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Andharia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Dahijuri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Jhargram Panch Mathar More",
+     "up_time": "10:10 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "no": 22,
+     "name": "Lodhasuli",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Fekoghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Tapsia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Rontua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Gopiballabpur",
+     "up_time": "11:15 AM",
+     "down_time": "1:15 PM"
+    }
+   ],
+   "total_stoppages": 26
   }
  ]
 }
