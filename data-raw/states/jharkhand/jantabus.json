@@ -1,7 +1,7 @@
 {
  "state": "jharkhand",
  "operator": "Janta Bus Service (private)",
- "fetched_at": "2026-10-03T00:35:09+00:00",
+ "fetched_at": "2026-10-03T23:57:26+00:00",
  "source_url": "https://www.jantabus.in/schedules.html",
  "rows": [
   {
@@ -99,7 +99,175 @@
    "fare": "₹ 800/ 1150/ 1000/ 900/ 900",
    "departure": "21:00",
    "journey": "08:45hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Ayodhya to Nagpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:00",
+   "journey": "16:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Ayodhya to Faizabad",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:00",
+   "journey": "00:20hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Ayodhya to Sultanpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:00",
+   "journey": "02:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Faizabad to Sultanpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:20",
+   "journey": "01:40hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Ayodhya to Pratapgarh(up)",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:00",
+   "journey": "03:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Faizabad to Pratapgarh(up)",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:20",
+   "journey": "02:40hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Sultanpur to Pratapgarh(up)",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "17:00",
+   "journey": "01:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Ayodhya to Prayagraj",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:00",
+   "journey": "04:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Faizabad to Prayagraj",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:20",
+   "journey": "04:10hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Sultanpur to Prayagraj",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "17:00",
+   "journey": "02:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Pratapgarh(up) to Prayagraj",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "18:00",
+   "journey": "01:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Ayodhya to Jabalpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:00",
+   "journey": "12:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Faizabad to Jabalpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:20",
+   "journey": "11:40hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Sultanpur to Jabalpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "17:00",
+   "journey": "10:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Pratapgarh(up) to Jabalpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "18:00",
+   "journey": "09:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Prayagraj to Jabalpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "19:30",
+   "journey": "07:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Faizabad to Nagpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "15:20",
+   "journey": "16:10hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Sultanpur to Nagpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "17:00",
+   "journey": "14:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Pratapgarh(up) to Nagpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "18:00",
+   "journey": "13:30hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Prayagraj to Nagpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "19:30",
+   "journey": "12:00hrs"
+  },
+  {
+   "service": "Ayodhya-Nagpur J1",
+   "route": "Jabalpur to Nagpur",
+   "coach": "1+2, Sleeper, AC (36 seats)",
+   "fare": "₹ 1800/ 1800/ 1800/ 1800",
+   "departure": "03:00",
+   "journey": "04:30hrs"
   }
  ],
- "sha256": "10dd28ab139ab906"
+ "sha256": "da3f13ca2d3068b6"
 }
