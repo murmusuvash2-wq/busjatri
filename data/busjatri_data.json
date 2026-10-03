@@ -411450,34 +411450,130 @@
   },
   {
    "id": "wbbus-in-sbstc-kharagpur-manbazar-4321",
-   "bus_name": "SBSTC",
-   "reg_no": "",
-   "operator": "—",
+   "bus_name": "SBSTC Kharagpur-Manbazar",
+   "reg_no": "WB 39B 8543",
+   "operator": "SBSTC",
    "bus_type": "Government - SBSTC",
    "origin": "Kharagpur",
    "destination": "Manbazar",
-   "departure_time": "6:00 AM",
+   "departure_time": "6:05 AM",
    "arrival_time": "11:50 AM",
    "contact_number": "Not Available !",
    "depot_name": "Kharagpur",
-   "route": "Kharagpur - Manbazar",
+   "route": "Kharagpur - Medinipur - Sarenga - Khatra - Manbazar",
    "stoppages": [
     {
      "no": 1,
      "name": "Kharagpur",
-     "up_time": "6:00 AM",
-     "down_time": ""
+     "up_time": "6:05 AM",
+     "down_time": "6:30 PM"
     },
     {
      "no": 2,
-     "name": "Manbazar",
+     "name": "Kharagpur Chowringhee",
      "up_time": "",
-     "down_time": "11:50 AM"
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur",
+     "up_time": "7:00 AM",
+     "down_time": "6:00 PM"
+    },
+    {
+     "no": 4,
+     "name": "Bhadutala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Godapiashal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Salbani",
+     "up_time": "7:30 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "no": 7,
+     "name": "Sijua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Goaltore",
+     "up_time": "8:30 AM",
+     "down_time": "4:05 PM"
+    },
+    {
+     "no": 9,
+     "name": "Sarenga",
+     "up_time": "9:00 AM",
+     "down_time": "3:35 PM"
+    },
+    {
+     "no": 10,
+     "name": "P More",
+     "up_time": "9:30 AM",
+     "down_time": "3:15 PM"
+    },
+    {
+     "no": 11,
+     "name": "Raipur",
+     "up_time": "10:10 AM",
+     "down_time": "2:40 PM"
+    },
+    {
+     "no": 12,
+     "name": "Haludkanali",
+     "up_time": "10:30 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "no": 13,
+     "name": "Akkhuta More",
+     "up_time": "10:40 AM",
+     "down_time": "2:10 PM"
+    },
+    {
+     "no": 14,
+     "name": "Khatra",
+     "up_time": "11:00 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "no": 15,
+     "name": "Supur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Hatirampur",
+     "up_time": "11:15 AM",
+     "down_time": "1:30 PM"
+    },
+    {
+     "no": 17,
+     "name": "Pairachali",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Manbazar",
+     "up_time": "11:50 AM",
+     "down_time": "12:50 PM"
     }
    ],
    "source": "wbbus.in",
-   "time_source": "wbbus.in",
-   "total_stoppages": 2,
+   "time_source": "facebook (community report)",
+   "total_stoppages": 18,
    "detail_url": "https://wbbus.in/bus/sbstc-kharagpur-manbazar-817"
   },
   {
