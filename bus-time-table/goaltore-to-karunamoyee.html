@@ -38,23 +38,18 @@
 </head>
 <body>
 <header class="header">
-  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
+  <div class="container header-inner">
     <a href="../index.html" class="logo" style="text-decoration:none;color:inherit">
-      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
 
 
       Bus<span>Jatri</span>
     </a>
-    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
-<nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
-      <a href="../index.html" style="color:var(--ink-dim,#6b6257);text-decoration:none;font-weight:600;white-space:nowrap">Home</a>
-      <a href="./" style="color:var(--ink-dim,#6b6257);text-decoration:none;font-weight:600;white-space:nowrap">Routes</a>
-      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
-        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
-        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
-      </span>
-      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
-    </nav>
+    <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
+      <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
+      <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◐</button>
+</nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
@@ -62,7 +57,7 @@
 <div class="seo-hero">
   <h1>Goaltore <span class="arr">→</span> Karunamoyee</h1>
   
-  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-09-27</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
+  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-09-18</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
     <span class="schip">🚌 1 bus</span>
     <span class="schip hot">⏰ First 5:10 AM</span>
     <span class="schip">⏰ Last 5:10 AM</span>
@@ -107,6 +102,5 @@
 </footer>
 <script defer src="../js/route-slider.js"></script>
 <script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
-<script src="../js/hdr.js?v=hdrunify20261002"></script>
 </body>
 </html>
