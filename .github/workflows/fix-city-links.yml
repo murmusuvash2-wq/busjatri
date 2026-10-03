@@ -15,7 +15,7 @@ jobs:
       - name: Rebuild the LINKS map so every card points at a real page
         run: python3 scripts/fix_city_links.py --write
 
-      - name: Validate - no link may 404
+      - name: Validate - no link may 404 (clean URLs: target is <url>.html)
         run: |
           python3 - <<'EOF'
           import json, re, pathlib
@@ -25,7 +25,7 @@ jobs:
           bad = []
           for rn, url in links.items():
               if url.startswith('bus-time-table/') and url != 'bus-time-table/':
-                  if not (base / url).exists():
+                  if not (base / (url + '.html')).exists():
                       bad.append((rn, url))
           assert not bad, f'{len(bad)} links still point at missing files: {bad[:5]}'
           n_page = sum(1 for u in links.values() if u != 'bus-time-table/')
