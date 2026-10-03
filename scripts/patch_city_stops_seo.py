@@ -257,9 +257,15 @@ def main():
         if not rel: continue
         def mk(r, bn_mode):
             p = links.get(r["n"], "#")
-            # Route pages live inside /bus-time-table/, so related links must be page-relative.\n            p = p.split("bus-time-table/",1)[-1]
+            # Route pages live inside /bus-time-table/, so related links must be page-relative.
+            p = p.split("bus-time-table/", 1)[-1]
             lab = f"{r['n']} {r['a']} ⟷ {r['b']}"
-            if bn_mode:\n                # Use the same verified Bengali stop dictionary used by STOPS.\n                aa = existing_map.get(r["a"], BN.get(r["a"], r["a"]))\n                bb = existing_map.get(r["b"], BN.get(r["b"], r["b"]))\n                lab = f"{r['n']} {aa} ⟷ {bb}"\n            return f'<a href="{p}">{lab}</a>'
+            if bn_mode:
+                # Use the same verified Bengali stop dictionary used by STOPS.
+                aa = existing_map.get(r["a"], BN.get(r["a"], r["a"]))
+                bb = existing_map.get(r["b"], BN.get(r["b"], r["b"]))
+                lab = f"{r['n']} {aa} ⟷ {bb}"
+            return f'<a href="{p}">{lab}</a>'
         en = " · ".join(mk(r, False) for r in rel)
         bn = " · ".join(mk(r, True) for r in rel)
         block = (f'\n<!-- city-rel-v1 -->\n<p class="tt-note" style="margin-top:10px">'
@@ -357,9 +363,8 @@ def main():
         h = h.replace('href="bus-time-table/', 'href="')
         # Route pages should return to the Kolkata City Bus hub, not the generic timetable index.
         h = h.replace('<a href="./">All Bus Timetables</a>', '<a href="../kolkata-city-bus-timetable.html"><span class="label-en">Kolkata City Bus Timetable</span><span class="label-bn">কলকাতা সিটি বাস টাইম টেবিল</span></a>')
-        # Keep Bengali copy fully Bengali where the page already has a Bengali language span.
-        h = re.sub(r'(class="label-bn"[^>]*>[^<]*?)1 hour 0 minutes', r'\\1১ ঘণ্টা', h)
-        h = re.sub(r'(class="label-bn"[^>]*>[^<]*?)1 hour', r'\\1১ ঘণ্টা', h)
+        # Keep the language toggle clean: English stays English, Bengali stays Bengali.
+        h = h.replace('<span class="label-bn">Kolkata City Bus Timetable</span>', '<span class="label-bn">কলকাতা সিটি বাস টাইম টেবিল</span>')
         if h != original:
             changed[f] = h
             n += 1
