@@ -4602,6 +4602,151 @@
      "down": "3:10 PM"
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kudghat-Manbazar",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Kudghat",
+   "destination": "Manbazar",
+   "departure_time": "5:20 AM",
+   "arrival_time": "",
+   "route": "Kudghat - Dharmatala - Jhargram - Manbazar",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kudghat",
+     "up": "5:20 AM",
+     "down": ""
+    },
+    {
+     "name": "Tollygunge",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rashbehari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hazra",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Esplanade",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dharmatala",
+     "up": "6:15 AM",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulagarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranihati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bagnan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mechogram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Panskura Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chourangi More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kharagpur Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kalaikunda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Guptamoni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Lodhasuli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jhargram",
+     "up": "10:25 AM",
+     "down": "2:40 PM"
+    },
+    {
+     "name": "Binpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Silda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Belpahari",
+     "up": "11:30 AM",
+     "down": "1:20 PM"
+    },
+    {
+     "name": "Paradi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bandwan",
+     "up": "",
+     "down": "12:20 PM"
+    },
+    {
+     "name": "Boro",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Manbazar",
+     "up": "",
+     "down": "11:20 AM"
+    }
+   ]
   }
  ],
  "enrich": [
