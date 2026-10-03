@@ -5621,6 +5621,7 @@
    "bus_name": "SBSTC Asansol-Digha",
    "bus_type": "Government - SBSTC",
    "departure_time": "5:45 AM",
+   "arrival_time": "3:30 PM",
    "route": "Asansol - Durgapur - Bankura - Bishnupur - Medinipur - Kharagpur - Digha",
    "time_source": "facebook (community report)",
    "stoppages": [
@@ -5628,11 +5629,11 @@
      "no": 1,
      "name": "Asansol",
      "up_time": "5:45 AM",
-     "down_time": ""
+     "down_time": "3:45 PM"
     },
     {
      "no": 2,
-     "name": "Raniganj Punjabi More",
+     "name": "Raniganj",
      "up_time": "",
      "down_time": ""
     },
@@ -5640,124 +5641,280 @@
      "no": 3,
      "name": "Durgapur City Centre",
      "up_time": "6:50 AM",
-     "down_time": ""
+     "down_time": "2:30 PM"
     },
     {
      "no": 4,
      "name": "Durgapur (Station)",
      "up_time": "7:15 AM",
-     "down_time": ""
+     "down_time": "2:10 PM"
     },
     {
      "no": 5,
-     "name": "Bankura",
-     "up_time": "8:20 AM",
+     "name": "Barjora",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 6,
-     "name": "Onda",
+     "name": "Beliator",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 7,
-     "name": "Ramsagar",
-     "up_time": "",
-     "down_time": ""
+     "name": "Bankura Bypass",
+     "up_time": "8:10 AM",
+     "down_time": "1:20 PM"
     },
     {
      "no": 8,
-     "name": "Bishnupur Bypass",
+     "name": "Dhaldanga",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 9,
-     "name": "Dhadika",
+     "name": "Onda",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 10,
-     "name": "Garhbeta",
+     "name": "Ramsagar",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 11,
-     "name": "Chandrakona Road",
+     "name": "Bishnupur Bypass",
+     "up_time": "8:50 AM",
+     "down_time": "12:20 PM"
+    },
+    {
+     "no": 12,
+     "name": "Bankadaha",
+     "up_time": "9:10 AM",
+     "down_time": "11:50 AM"
+    },
+    {
+     "no": 13,
+     "name": "Dhadika",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 12,
+     "no": 14,
+     "name": "Garhbeta",
+     "up_time": "9:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Chandrakona Road",
+     "up_time": "10:20 AM",
+     "down_time": "11:05 AM"
+    },
+    {
+     "no": 16,
      "name": "Salboni",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 13,
-     "name": "Medinipur",
-     "up_time": "11:00 AM",
-     "down_time": "10:00 AM"
-    },
-    {
-     "no": 14,
-     "name": "Kharagpur",
-     "up_time": "12:00 PM",
-     "down_time": "9:00 AM"
-    },
-    {
-     "no": 15,
-     "name": "Belda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Khakurda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
      "no": 17,
-     "name": "Egra",
+     "name": "Bhadutala",
      "up_time": "",
-     "down_time": "7:25 AM"
+     "down_time": ""
     },
     {
      "no": 18,
-     "name": "Contai",
-     "up_time": "",
-     "down_time": "6:50 AM"
+     "name": "Medinipur",
+     "up_time": "11:00 AM",
+     "down_time": "10:20 AM"
     },
     {
      "no": 19,
-     "name": "Chaulkhola",
+     "name": "Kharagpur Chowringhee",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 20,
-     "name": "Balisai",
-     "up_time": "",
-     "down_time": ""
+     "name": "Kharagpur",
+     "up_time": "12:00 PM",
+     "down_time": "9:00 AM"
     },
     {
      "no": 21,
-     "name": "Ramnagar",
+     "name": "Makrampur",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 22,
-     "name": "Digha",
+     "name": "Narayangarh",
      "up_time": "",
-     "down_time": "5:50 AM"
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Bakhrabad",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Belda",
+     "up_time": "1:00 PM",
+     "down_time": "8:10 AM"
+    },
+    {
+     "no": 25,
+     "name": "Thakurchak",
+     "up_time": "",
+     "down_time": "8:00 AM"
+    },
+    {
+     "no": 26,
+     "name": "Khakurda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Sauri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Jahalda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Lalat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Egra",
+     "up_time": "1:45 PM",
+     "down_time": "7:25 AM"
+    },
+    {
+     "no": 31,
+     "name": "Dobadhi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Balighai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Tajpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 34,
+     "name": "Bhabanichak",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 35,
+     "name": "Satmile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Rautara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Contai",
+     "up_time": "2:30 PM",
+     "down_time": "6:50 AM"
+    },
+    {
+     "no": 38,
+     "name": "Ghatua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 39,
+     "name": "Pichaboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 40,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 41,
+     "name": "Balisai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 42,
+     "name": "Chouddodomile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 43,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 44,
+     "name": "Thikra More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 45,
+     "name": "Old Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 46,
+     "name": "New Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 47,
+     "name": "Digha Border",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 48,
+     "name": "Digha",
+     "up_time": "3:30 PM",
+     "down_time": "5:40 AM"
     }
    ],
-   "total_stoppages": 22
+   "total_stoppages": 48
   }
  ]
 }
