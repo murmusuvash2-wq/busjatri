@@ -1,9 +1,9 @@
 name: Enforce clean URLs + prune thin pages
 
-# Keeps every deployed page URL in clean (extensionless) form, and noindexes +
-# de-lists "via" stop pages that list fewer than 3 buses, matching what Google
-# already indexes as canonical. Runs after any push that changes pages or
-# sitemaps, so a regeneration is corrected automatically.
+# Keeps every deployed page URL in clean (extensionless) form, noindexes +
+# de-lists "via" stop pages that list fewer than 3 buses, and repoints the
+# Kolkata city hub's route links so none 404. Runs after any push that changes
+# pages or sitemaps, so a regeneration is corrected automatically.
 #
 # NOTE: the normalizing commit must NOT carry a "[skip ci]" marker. Cloudflare
 # Workers Builds (the deploy path for this repo) honours skip-ci and would then
@@ -39,6 +39,10 @@ jobs:
       - name: noindex + de-list thin via pages
         run: python3 scripts/prune_thin_via_pages.py
 
+      - name: Repoint Kolkata city hub route links (no 404s)
+        continue-on-error: true
+        run: python3 scripts/fix_city_links.py --write
+
       - name: Commit if changed
         run: |
           if git diff --quiet; then
@@ -48,5 +52,5 @@ jobs:
           git config user.name "busjatri-bot"
           git config user.email "busjatri@zohomail.in"
           git add -A
-          git commit -m "chore: normalize URLs + prune thin via pages"
+          git commit -m "chore: normalize URLs + prune thin via pages + fix city hub links"
           git push
