@@ -97707,21 +97707,155 @@
   },
   {
    "id": "bussathi-sbstc-873",
-   "bus_name": "SBSTC",
+   "bus_name": "SBSTC Asansol-Digha",
    "reg_no": "",
-   "operator": "—",
-   "bus_type": "",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
    "origin": "Asansol",
    "destination": "Digha",
    "departure_time": "5:45 AM",
    "arrival_time": "3:30 PM",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Asansol - Digha",
-   "stoppages": [],
+   "route": "Asansol - Durgapur - Bankura - Bishnupur - Medinipur - Kharagpur - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Asansol",
+     "up_time": "5:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Raniganj Punjabi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Durgapur City Centre",
+     "up_time": "6:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Durgapur (Station)",
+     "up_time": "7:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Bankura",
+     "up_time": "8:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Onda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Ramsagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Bishnupur Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Dhadika",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Garhbeta",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Chandrakona Road",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Salboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Medinipur",
+     "up_time": "11:00 AM",
+     "down_time": "10:00 AM"
+    },
+    {
+     "no": 14,
+     "name": "Kharagpur",
+     "up_time": "12:00 PM",
+     "down_time": "9:00 AM"
+    },
+    {
+     "no": 15,
+     "name": "Belda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Khakurda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Egra",
+     "up_time": "",
+     "down_time": "7:25 AM"
+    },
+    {
+     "no": 18,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": "6:50 AM"
+    },
+    {
+     "no": 19,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Balisai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": "5:50 AM"
+    }
+   ],
    "source": "bussathi.in",
-   "total_stoppages": 0,
-   "detail_url": "https://bussathi.in/bus/1251"
+   "total_stoppages": 22,
+   "detail_url": "https://bussathi.in/bus/1251",
+   "time_source": "facebook (community report)"
   },
   {
    "id": "bussathi-sbstc-875",
