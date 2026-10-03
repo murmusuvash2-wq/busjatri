@@ -411708,17 +411708,17 @@
   },
   {
    "id": "wbbus-in-sbstc-bolpur-digha-4320",
-   "bus_name": "SBSTC",
+   "bus_name": "SBSTC Bolpur-Digha",
    "reg_no": "",
-   "operator": "—",
+   "operator": "SBSTC",
    "bus_type": "Government - SBSTC",
    "origin": "Bolpur",
    "destination": "Digha",
    "departure_time": "5:30 AM",
    "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Bolpur",
-   "route": "Bolpur - Digha",
+   "contact_number": "7699993942",
+   "depot_name": "Digha",
+   "route": "Bolpur - Bardhaman - Arambagh - Ghatal - Contai - Digha",
    "stoppages": [
     {
      "no": 1,
@@ -411728,14 +411728,272 @@
     },
     {
      "no": 2,
-     "name": "Digha",
+     "name": "Rajatpur",
      "up_time": "",
      "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Bhedia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Gobindapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Guskara",
+     "up_time": "6:10 AM",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Haldi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Bardhaman Nawabhat",
+     "up_time": "7:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Bardhaman Rail Station",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Bardhaman Alisha Bus Stand",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Telipukur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Bankura More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Seherabazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Moglamari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Mirepota",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Uchalan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bulchandpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Naisharai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Arambagh",
+     "up_time": "8:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Goghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Kamarpukur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Ramjibanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Srinagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Jara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Khirpai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Radhanagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Ghatal",
+     "up_time": "",
+     "down_time": "11:40 AM"
+    },
+    {
+     "no": 27,
+     "name": "Daspur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Deulia Bazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 31,
+     "name": "Radhamoni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Nimtouri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": "9:50 AM"
+    },
+    {
+     "no": 34,
+     "name": "Narghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 35,
+     "name": "Chandipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Bajkul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Nachinda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 38,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 39,
+     "name": "Pichaboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 40,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 41,
+     "name": "Balisai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 42,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 43,
+     "name": "Old Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 44,
+     "name": "New Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 45,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": "7:30 AM"
     }
    ],
    "source": "wbbus.in",
-   "time_source": "wbbus.in",
-   "total_stoppages": 2,
+   "time_source": "facebook (community report)",
+   "total_stoppages": 45,
    "detail_url": "https://wbbus.in/bus/sbstc-bolpur-digha-742"
   },
   {
