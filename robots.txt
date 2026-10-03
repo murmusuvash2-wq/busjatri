@@ -3,3 +3,6 @@ Allow: /
 
 Sitemap: https://busjatri.in/sitemap.xml
 Sitemap: https://busjatri.in/sitemap-extra.xml
+Sitemap: https://busjatri.in/sitemap-via.xml
+Sitemap: https://busjatri.in/sitemap-city.xml
+Sitemap: https://busjatri.in/sitemap-popular.xml
