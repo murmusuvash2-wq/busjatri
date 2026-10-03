@@ -4948,6 +4948,217 @@
      "down": "2:05 PM"
     }
    ]
+  },
+  {
+   "operator": "NBSTC",
+   "bus_name": "NBSTC Coochbehar-Kolkata",
+   "bus_type": "Government",
+   "reg_no": "WB 63E 7307",
+   "origin": "Coochbehar",
+   "destination": "Kolkata",
+   "departure_time": "3:00 PM",
+   "arrival_time": "",
+   "depot_name": "Coochbehar",
+   "route": "Coochbehar - Siliguri - Malda - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Coochbehar",
+     "up": "3:00 PM",
+     "down": ""
+    },
+    {
+     "name": "Khagrabari Chowpathi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pundibari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ghoshkadanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Falakata",
+     "up": "3:40 PM",
+     "down": ""
+    },
+    {
+     "name": "Moranga Chowpathi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhupguri",
+     "up": "4:00 PM",
+     "down": ""
+    },
+    {
+     "name": "Maynaguri Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Goshala More",
+     "up": "4:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Fatapukur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Fulbari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Air View More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siliguri",
+     "up": "6:50 PM",
+     "down": ""
+    },
+    {
+     "name": "Islampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dalkhola",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Raiganj",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gazole",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Malda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Farakka",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Omorpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Morgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Baharampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Beldanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Palashi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Debagram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bethuadahari",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhubulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Krishnanagar",
+     "up": "",
+     "down": "10:20 PM"
+    },
+    {
+     "name": "Santipur Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Fulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chakda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kalyani More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jaguli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Aowalsiddhi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barasat",
+     "up": "",
+     "down": "8:05 PM"
+    },
+    {
+     "name": "Madhyamgram",
+     "up": "",
+     "down": "7:55 PM"
+    },
+    {
+     "name": "Airport",
+     "up": "",
+     "down": "7:35 PM"
+    },
+    {
+     "name": "Kolkata (Dharmatala)",
+     "up": "",
+     "down": "6:50 PM"
+    }
+   ]
   }
  ],
  "enrich": [
