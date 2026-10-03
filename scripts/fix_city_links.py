@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """Fix the "View timetable" links on the Kolkata city hub page.
 
-Two things on kolkata-city-bus-timetable.html point at
-    bus-time-table/<route>-<from>-to-<to>.html
-files that no longer exist (route pages are now named
-    bus-time-table/<from>-to-<to>.html):
-
+Links on kolkata-city-bus-timetable.html point at
+    bus-time-table/<route>-<from>-to-<to>
+pages that do not exist (route pages are named bus-time-table/<from>-to-<to>).
+Two places are affected:
   1. the JS LINKS map (used by the search-result rows)
   2. hardcoded href="..." on the "All 73 routes (A-Z)" / Popular cards
 
-This rebuilds BOTH so every link points at a page that exists (verified:
-the target page must mention the route number); routes with no matching
-page fall back to the bus-time-table hub.
+This rebuilds BOTH so every link points at a page that exists (verified: the
+target page must mention the route number); routes with no matching page fall
+back to the bus-time-table hub.
+
+URL form: clean (extensionless) - matches the site-wide clean-URL migration.
+Handles both "bus-time-table/<slug>" and legacy "bus-time-table/<slug>.html".
 
 Idempotent.  Usage: python3 scripts/fix_city_links.py [--write]
 """
@@ -47,8 +49,10 @@ def variants(s):
 
 
 def pairs(a, b):
-    for va in variants(a):
-        for vb in variants(b):
+    # sorted -> deterministic candidate order (sets iterate in a per-process
+    # order that varies with PYTHONHASHSEED, which made the output unstable)
+    for va in sorted(variants(a)):
+        for vb in sorted(variants(b)):
             yield va + "-to-" + vb
             yield vb + "-to-" + va
 
@@ -76,7 +80,7 @@ def main():
     if INDEX.exists():
         buses = json.loads(INDEX.read_text(encoding="utf-8")).get("buses", [])
 
-    # route no -> correct target url
+    # route no -> correct target url (clean, no .html)
     target, fixed, fallback = {}, 0, 0
     for n, x in city.items():
         cands = list(pairs(x.get("a"), x.get("b")))
@@ -87,12 +91,12 @@ def main():
             cands += list(pairs(bus.get("origin"), bus.get("destination")))
         cand = find_page(n, cands, files)
         if cand:
-            target[n] = "bus-time-table/" + cand + ".html"
+            target[n] = "bus-time-table/" + cand
             fixed += 1
         else:
             target[n] = FALLBACK
             fallback += 1
-    print(f"routes {len(city)} -> page {fixed} | fallback {fallback}")
+    print("routes %d -> page %d | fallback %d" % (len(city), fixed, fallback))
 
     changed = False
 
@@ -102,16 +106,15 @@ def main():
         h = h[: ml.start(2)] + json.dumps(new_links, ensure_ascii=False, separators=(",", ":")) + h[ml.end(2):]
         changed = True
 
-    # ---- 2. hardcoded hrefs ------------------------------------------------
+    # ---- 2. hardcoded hrefs (clean OR legacy .html) ------------------------
     slugs = sorted((slug(n) for n in city), key=len, reverse=True)
 
     def repl(m):
         nonlocal changed
-        url = m.group(1)
-        if url == FALLBACK or (BASE / url).exists():
+        url = m.group(1)  # without optional .html
+        if url == FALLBACK or (BASE / url).exists() or (BASE / (url + ".html")).exists():
             return m.group(0)
-        inner = url[len("bus-time-table/"):-len(".html")]
-        # which route does this href belong to? longest matching route slug prefix
+        inner = url[len("bus-time-table/"):]
         rn = next((s for s in slugs if inner == s or inner.startswith(s + "-")), None)
         newurl = None
         if rn:
@@ -122,7 +125,7 @@ def main():
             return 'href="' + newurl + '"'
         return m.group(0)
 
-    h = re.sub(r'href="(bus-time-table/[^"]+\.html)"', repl, h)
+    h = re.sub(r'href="(bus-time-table/[^"#]+?)(?:\.html)?"', repl, h)
 
     if not changed:
         print("already correct - nothing to do")
