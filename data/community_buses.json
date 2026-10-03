@@ -4747,6 +4747,127 @@
      "down": "11:20 AM"
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Purulia-Lalgola",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39B 4712",
+   "origin": "Purulia",
+   "destination": "Lalgola",
+   "departure_time": "11:00 AM",
+   "arrival_time": "8:30 PM",
+   "depot_name": "Purulia",
+   "route": "Purulia - Asansol - Suri - Lalgola",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Purulia",
+     "up": "11:00 AM",
+     "down": "2:20 PM"
+    },
+    {
+     "name": "Golkunda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Anara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Raghunathpur",
+     "up": "12:00 PM",
+     "down": "12:40 PM"
+    },
+    {
+     "name": "Sarbari More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Disergarh",
+     "up": "12:50 PM",
+     "down": "11:50 AM"
+    },
+    {
+     "name": "Niamatpur",
+     "up": "1:05 PM",
+     "down": "11:35 AM"
+    },
+    {
+     "name": "Asansol",
+     "up": "1:20 PM",
+     "down": "11:20 AM"
+    },
+    {
+     "name": "Raniganj",
+     "up": "2:20 PM",
+     "down": "10:50 AM"
+    },
+    {
+     "name": "Haripur",
+     "up": "2:40 PM",
+     "down": "10:35 AM"
+    },
+    {
+     "name": "Pandaveswar",
+     "up": "3:10 PM",
+     "down": "10:10 AM"
+    },
+    {
+     "name": "Dubrajpur",
+     "up": "3:40 PM",
+     "down": "9:35 AM"
+    },
+    {
+     "name": "Suri",
+     "up": "4:20 PM",
+     "down": "8:50 AM"
+    },
+    {
+     "name": "Mohammad Bazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mallarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rampurhat",
+     "up": "5:30 PM",
+     "down": "7:15 AM"
+    },
+    {
+     "name": "Nalhati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Morgram",
+     "up": "6:35 PM",
+     "down": "6:35 AM"
+    },
+    {
+     "name": "Omorpur",
+     "up": "7:25 PM",
+     "down": "5:50 AM"
+    },
+    {
+     "name": "Jangipur",
+     "up": "7:45 PM",
+     "down": "5:30 AM"
+    },
+    {
+     "name": "Lalgola",
+     "up": "8:30 PM",
+     "down": "4:50 AM"
+    }
+   ]
   }
  ],
  "enrich": [
