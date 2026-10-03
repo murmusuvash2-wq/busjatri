@@ -1,6 +1,7 @@
 User-agent: *
 Allow: /
 
+# All sitemaps now list clean (extensionless) URLs
 Sitemap: https://busjatri.in/sitemap.xml
 Sitemap: https://busjatri.in/sitemap-extra.xml
 Sitemap: https://busjatri.in/sitemap-via.xml
