@@ -5279,6 +5279,281 @@
    "source": "facebook (community report)",
    "detail_url": "",
    "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Suri-Digha",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Suri",
+   "destination": "Digha",
+   "departure_time": "6:30 AM",
+   "arrival_time": "4:40 PM",
+   "route": "Suri - Bishnupur - Medinipur - Digha",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Suri",
+     "up": "6:30 AM",
+     "down": "8:25 PM"
+    },
+    {
+     "name": "Dubrajpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ilambazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Panagarh Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Muchipara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Durgapur City Centre",
+     "up": "8:50 AM",
+     "down": "6:10 PM"
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up": "9:15 AM",
+     "down": "5:50 PM"
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Beliator",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Makurgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "10:30 AM",
+     "down": "4:35 PM"
+    },
+    {
+     "name": "Dhaldanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Onda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramsagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up": "11:15 AM",
+     "down": "4:00 PM"
+    },
+    {
+     "name": "Bankadaha",
+     "up": "",
+     "down": "3:30 PM"
+    },
+    {
+     "name": "Dhadika",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Garhbeta",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chandrakona Road",
+     "up": "11:45 AM",
+     "down": "3:05 PM"
+    },
+    {
+     "name": "Salboni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Godapiashal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhadutala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Medinipur",
+     "up": "1:25 PM",
+     "down": "2:20 PM"
+    },
+    {
+     "name": "Mohanpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kharagpur",
+     "up": "2:15 PM",
+     "down": "1:20 PM"
+    },
+    {
+     "name": "Kharagpur Chowringhee",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Makrampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Narayangarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bakhrabad",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Belda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Thakurchak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khakurda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sauri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Lalat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jahalda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Egra",
+     "up": "",
+     "down": "11:20 AM"
+    },
+    {
+     "name": "Dobadhi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Balighai",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tajpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bhabanichak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Satmile",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rautara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Contai",
+     "up": "3:50 PM",
+     "down": "10:45 AM"
+    },
+    {
+     "name": "Ghatua",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pichaboni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chaulkhola",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Balisai",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chouddodomile",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramnagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Thikra More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Alankarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Digha",
+     "up": "4:40 PM",
+     "down": "9:50 AM"
+    }
+   ]
   }
  ],
  "enrich": [
