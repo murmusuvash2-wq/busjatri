@@ -5161,305 +5161,124 @@
    ]
   },
   {
-   "operator": "NBSTC",
-   "bus_name": "NBSTC Malda-Dinhata",
-   "bus_type": "Government",
-   "reg_no": "WB 63B 6327",
-   "origin": "Malda",
-   "destination": "Dinhata",
-   "departure_time": "7:00 AM",
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kolkata-Medinipur",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Medinipur",
+   "departure_time": "7:20 AM",
    "arrival_time": "",
-   "depot_name": "Dinhata",
-   "route": "Malda - Siliguri - Dinhata",
+   "depot_name": "Belghoria",
+   "route": "Kolkata - Medinipur",
    "source": "facebook (community report)",
    "detail_url": "",
-   "stops": [
-    {
-     "name": "Malda",
-     "up": "7:00 AM",
-     "down": ""
-    },
-    {
-     "name": "Narayanpur",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Alampur",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Gazole",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Moyna",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Checkpost",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Baliyapara",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Itahar",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Durgapur",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Kasba",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Raiganj",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Siliguri More",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Nagar",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Tungidighi",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Karandighi",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Domohona",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dalkhola",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Purnia More",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Kanki",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Kishanganj",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Panjipara",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Islampur",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Chopra",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Bidhannagar",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Ghoshpukur",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Bagdogra",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Matigara",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Siliguri",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Naukaghat More",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Fulbari",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Fatapukur",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Gosal More",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Jalpaiguri Bypass",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Domohoni",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Maynaguri Bypass",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dhupguri",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Salbari",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Falakata",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Falakata Checkpost",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Ghoshkadanga",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Pundibari",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Rajarhat",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Khagrabari Chowpathi",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Cooch Behar",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Cooch Behar Public Bus Stand",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Kachari More",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Station Chowpathi",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Morapora Chowpathi",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Harinchawra",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Ghughumari",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dhalubari",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Kalakata",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dewanhat",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Bhetaguri Bazar",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dinhata College",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dinhata Chowpathi",
-     "up": "",
-     "down": ""
-    },
-    {
-     "name": "Dinhata",
-     "up": "",
-     "down": "4:30 AM"
-    }
-   ]
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kolkata-Medinipur",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Medinipur",
+   "departure_time": "7:45 AM",
+   "arrival_time": "",
+   "depot_name": "Belghoria",
+   "route": "Kolkata - Medinipur",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kolkata-Medinipur",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Medinipur",
+   "departure_time": "1:00 PM",
+   "arrival_time": "",
+   "depot_name": "Medinipur",
+   "route": "Kolkata - Medinipur",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kolkata-Medinipur",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Medinipur",
+   "departure_time": "1:40 PM",
+   "arrival_time": "",
+   "depot_name": "Khirapai",
+   "route": "Kolkata - Medinipur",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Medinipur-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Medinipur",
+   "destination": "Kolkata",
+   "departure_time": "7:50 AM",
+   "arrival_time": "",
+   "depot_name": "Medinipur",
+   "route": "Medinipur - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Medinipur-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Medinipur",
+   "destination": "Kolkata",
+   "departure_time": "9:15 AM",
+   "arrival_time": "",
+   "depot_name": "Khirapai",
+   "route": "Medinipur - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Medinipur-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Medinipur",
+   "destination": "Kolkata",
+   "departure_time": "2:15 PM",
+   "arrival_time": "",
+   "depot_name": "Belghoria",
+   "route": "Medinipur - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Medinipur-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Medinipur",
+   "destination": "Kolkata",
+   "departure_time": "2:50 PM",
+   "arrival_time": "",
+   "depot_name": "Belghoria",
+   "route": "Medinipur - Kolkata",
+   "source": "facebook (community report)",
+   "detail_url": "",
+   "stops": []
   }
  ],
  "enrich": [
