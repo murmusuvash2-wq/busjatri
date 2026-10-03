@@ -1,0 +1,1635 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/bus-time-table/bardhaman-to-agra",
+      "destination": "/bus-time-table/burdwan-to-agra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-agra.html",
+      "destination": "/bus-time-table/burdwan-to-agra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-aurangabad-bihar",
+      "destination": "/bus-time-table/burdwan-to-aurangabad-bihar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-aurangabad-bihar.html",
+      "destination": "/bus-time-table/burdwan-to-aurangabad-bihar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-barhi",
+      "destination": "/bus-time-table/burdwan-to-barhi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-barhi.html",
+      "destination": "/bus-time-table/burdwan-to-barhi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-delhi",
+      "destination": "/bus-time-table/burdwan-to-delhi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-delhi.html",
+      "destination": "/bus-time-table/burdwan-to-delhi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-dhanbad",
+      "destination": "/bus-time-table/burdwan-to-dhanbad",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-dhanbad.html",
+      "destination": "/bus-time-table/burdwan-to-dhanbad",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-dobhi",
+      "destination": "/bus-time-table/burdwan-to-dobhi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-dobhi.html",
+      "destination": "/bus-time-table/burdwan-to-dobhi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-durgapur",
+      "destination": "/bus-time-table/burdwan-to-durgapur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-durgapur.html",
+      "destination": "/bus-time-table/burdwan-to-durgapur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-etawah",
+      "destination": "/bus-time-table/burdwan-to-etawah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-etawah.html",
+      "destination": "/bus-time-table/burdwan-to-etawah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-fatehpur",
+      "destination": "/bus-time-table/burdwan-to-fatehpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-fatehpur.html",
+      "destination": "/bus-time-table/burdwan-to-fatehpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-kandra",
+      "destination": "/bus-time-table/burdwan-to-kandra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-kandra.html",
+      "destination": "/bus-time-table/burdwan-to-kandra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-karunamoyee",
+      "destination": "/bus-time-table/burdwan-to-karunamoyee",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-karunamoyee.html",
+      "destination": "/bus-time-table/burdwan-to-karunamoyee",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-kolkata",
+      "destination": "/bus-time-table/burdwan-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-kolkata-a-c",
+      "destination": "/bus-time-table/burdwan-to-kolkata-a-c",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-kolkata-a-c.html",
+      "destination": "/bus-time-table/burdwan-to-kolkata-a-c",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-kolkata.html",
+      "destination": "/bus-time-table/burdwan-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-mathura",
+      "destination": "/bus-time-table/burdwan-to-mathura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-mathura.html",
+      "destination": "/bus-time-table/burdwan-to-mathura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-nagar",
+      "destination": "/bus-time-table/burdwan-to-nagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-nagar.html",
+      "destination": "/bus-time-table/burdwan-to-nagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-prayagraj",
+      "destination": "/bus-time-table/burdwan-to-prayagraj",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-prayagraj.html",
+      "destination": "/bus-time-table/burdwan-to-prayagraj",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-sasaram",
+      "destination": "/bus-time-table/burdwan-to-sasaram",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-sasaram.html",
+      "destination": "/bus-time-table/burdwan-to-sasaram",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-varanasi",
+      "destination": "/bus-time-table/burdwan-to-varanasi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bardhaman-to-varanasi.html",
+      "destination": "/bus-time-table/burdwan-to-varanasi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-babuijore",
+      "destination": "/bus-time-table/bardhaman-to-babuijore",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-babuijore.html",
+      "destination": "/bus-time-table/bardhaman-to-babuijore",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-baharampur",
+      "destination": "/bus-time-table/bardhaman-to-baharampur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-baharampur.html",
+      "destination": "/bus-time-table/bardhaman-to-baharampur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-balaipanda",
+      "destination": "/bus-time-table/bardhaman-to-balaipanda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-balaipanda.html",
+      "destination": "/bus-time-table/bardhaman-to-balaipanda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-balichak",
+      "destination": "/bus-time-table/bardhaman-to-balichak",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-balichak.html",
+      "destination": "/bus-time-table/bardhaman-to-balichak",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bandwan",
+      "destination": "/bus-time-table/bardhaman-to-bandwan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bandwan.html",
+      "destination": "/bus-time-table/bardhaman-to-bandwan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bangaon",
+      "destination": "/bus-time-table/bardhaman-to-bangaon",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bangaon.html",
+      "destination": "/bus-time-table/bardhaman-to-bangaon",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bankura",
+      "destination": "/bus-time-table/bardhaman-to-bankura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bankura.html",
+      "destination": "/bus-time-table/bardhaman-to-bankura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-beldanga",
+      "destination": "/bus-time-table/bardhaman-to-beldanga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-beldanga.html",
+      "destination": "/bus-time-table/bardhaman-to-beldanga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-berhampore",
+      "destination": "/bus-time-table/bardhaman-to-berhampore",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-berhampore.html",
+      "destination": "/bus-time-table/bardhaman-to-berhampore",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bidyanagar",
+      "destination": "/bus-time-table/bardhaman-to-bidyanagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-bidyanagar.html",
+      "destination": "/bus-time-table/bardhaman-to-bidyanagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chakta",
+      "destination": "/bus-time-table/bardhaman-to-chakta",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chakta.html",
+      "destination": "/bus-time-table/bardhaman-to-chakta",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chandrakona-road",
+      "destination": "/bus-time-table/bardhaman-to-chandrakona-road",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chandrakona-road.html",
+      "destination": "/bus-time-table/bardhaman-to-chandrakona-road",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chandrakona-town",
+      "destination": "/bus-time-table/bardhaman-to-chandrakona-town",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chandrakona-town.html",
+      "destination": "/bus-time-table/bardhaman-to-chandrakona-town",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chittaranjan",
+      "destination": "/bus-time-table/bardhaman-to-chittaranjan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-chittaranjan.html",
+      "destination": "/bus-time-table/bardhaman-to-chittaranjan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-digha",
+      "destination": "/bus-time-table/bardhaman-to-digha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-digha.html",
+      "destination": "/bus-time-table/bardhaman-to-digha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-garhbeta",
+      "destination": "/bus-time-table/bardhaman-to-garhbeta",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-garhbeta.html",
+      "destination": "/bus-time-table/bardhaman-to-garhbeta",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-ghatal",
+      "destination": "/bus-time-table/bardhaman-to-ghatal",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-ghatal.html",
+      "destination": "/bus-time-table/bardhaman-to-ghatal",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-hetia",
+      "destination": "/bus-time-table/bardhaman-to-hetia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-hetia.html",
+      "destination": "/bus-time-table/bardhaman-to-hetia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-hoomgarh",
+      "destination": "/bus-time-table/bardhaman-to-hoomgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-hoomgarh.html",
+      "destination": "/bus-time-table/bardhaman-to-hoomgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-jangipur",
+      "destination": "/bus-time-table/bardhaman-to-jangipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-jangipur.html",
+      "destination": "/bus-time-table/bardhaman-to-jangipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-jhargram",
+      "destination": "/bus-time-table/bardhaman-to-jhargram",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-jhargram.html",
+      "destination": "/bus-time-table/bardhaman-to-jhargram",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-karimpur",
+      "destination": "/bus-time-table/bardhaman-to-karimpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-karimpur.html",
+      "destination": "/bus-time-table/bardhaman-to-karimpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-katwa",
+      "destination": "/bus-time-table/bardhaman-to-katwa",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-katwa.html",
+      "destination": "/bus-time-table/bardhaman-to-katwa",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kharagpur",
+      "destination": "/bus-time-table/bardhaman-to-kharagpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kharagpur-via-arambagh",
+      "destination": "/bus-time-table/bardhaman-to-kharagpur-via-arambagh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kharagpur-via-arambagh.html",
+      "destination": "/bus-time-table/bardhaman-to-kharagpur-via-arambagh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kharagpur-via-sehara-bazar",
+      "destination": "/bus-time-table/bardhaman-to-kharagpur-via-sehara-bazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kharagpur-via-sehara-bazar.html",
+      "destination": "/bus-time-table/bardhaman-to-kharagpur-via-sehara-bazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kharagpur.html",
+      "destination": "/bus-time-table/bardhaman-to-kharagpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-khatra",
+      "destination": "/bus-time-table/bardhaman-to-khatra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-khatra.html",
+      "destination": "/bus-time-table/bardhaman-to-khatra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kukrahati",
+      "destination": "/bus-time-table/bardhaman-to-kukrahati",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kukrahati.html",
+      "destination": "/bus-time-table/bardhaman-to-kukrahati",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kushdwip",
+      "destination": "/bus-time-table/bardhaman-to-kushdwip",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kushdwip.html",
+      "destination": "/bus-time-table/bardhaman-to-kushdwip",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kutni",
+      "destination": "/bus-time-table/bardhaman-to-kutni",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-kutni.html",
+      "destination": "/bus-time-table/bardhaman-to-kutni",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-lalgola",
+      "destination": "/bus-time-table/bardhaman-to-lalgola",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-lalgola.html",
+      "destination": "/bus-time-table/bardhaman-to-lalgola",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-manbazar",
+      "destination": "/bus-time-table/bardhaman-to-manbazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-manbazar-via-khandaghosh",
+      "destination": "/bus-time-table/bardhaman-to-manbazar-via-khandaghosh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-manbazar-via-khandaghosh.html",
+      "destination": "/bus-time-table/bardhaman-to-manbazar-via-khandaghosh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-manbazar-via-telipukur",
+      "destination": "/bus-time-table/bardhaman-to-manbazar-via-telipukur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-manbazar-via-telipukur.html",
+      "destination": "/bus-time-table/bardhaman-to-manbazar-via-telipukur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-manbazar.html",
+      "destination": "/bus-time-table/bardhaman-to-manbazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-mecheda",
+      "destination": "/bus-time-table/bardhaman-to-mecheda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-mecheda.html",
+      "destination": "/bus-time-table/bardhaman-to-mecheda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-nabadwip",
+      "destination": "/bus-time-table/bardhaman-to-nabadwip",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-nabadwip.html",
+      "destination": "/bus-time-table/bardhaman-to-nabadwip",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-panskura",
+      "destination": "/bus-time-table/bardhaman-to-panskura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-panskura.html",
+      "destination": "/bus-time-table/bardhaman-to-panskura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-patharchapuri",
+      "destination": "/bus-time-table/bardhaman-to-patharchapuri",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-patharchapuri.html",
+      "destination": "/bus-time-table/bardhaman-to-patharchapuri",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-purulia",
+      "destination": "/bus-time-table/bardhaman-to-purulia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-purulia.html",
+      "destination": "/bus-time-table/bardhaman-to-purulia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-rampurhat",
+      "destination": "/bus-time-table/bardhaman-to-rampurhat",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-rampurhat.html",
+      "destination": "/bus-time-table/bardhaman-to-rampurhat",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-ranchi",
+      "destination": "/bus-time-table/bardhaman-to-ranchi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-ranchi.html",
+      "destination": "/bus-time-table/bardhaman-to-ranchi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-ranibandh",
+      "destination": "/bus-time-table/bardhaman-to-ranibandh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-ranibandh.html",
+      "destination": "/bus-time-table/bardhaman-to-ranibandh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-sagarpara",
+      "destination": "/bus-time-table/bardhaman-to-sagarpara",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-sagarpara.html",
+      "destination": "/bus-time-table/bardhaman-to-sagarpara",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-samaspur",
+      "destination": "/bus-time-table/bardhaman-to-samaspur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-samaspur.html",
+      "destination": "/bus-time-table/bardhaman-to-samaspur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-shikarpur",
+      "destination": "/bus-time-table/bardhaman-to-shikarpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-shikarpur.html",
+      "destination": "/bus-time-table/bardhaman-to-shikarpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-suri",
+      "destination": "/bus-time-table/bardhaman-to-suri",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-suri.html",
+      "destination": "/bus-time-table/bardhaman-to-suri",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tamluk",
+      "destination": "/bus-time-table/bardhaman-to-tamluk",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tamluk.html",
+      "destination": "/bus-time-table/bardhaman-to-tamluk",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tatanagar",
+      "destination": "/bus-time-table/bardhaman-to-tatanagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tatanagar.html",
+      "destination": "/bus-time-table/bardhaman-to-tatanagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tatarpur",
+      "destination": "/bus-time-table/bardhaman-to-tatarpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tatarpur.html",
+      "destination": "/bus-time-table/bardhaman-to-tatarpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tentulia",
+      "destination": "/bus-time-table/bardhaman-to-tentulia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/burdwan-to-tentulia.html",
+      "destination": "/bus-time-table/bardhaman-to-tentulia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-dhamakhali",
+      "destination": "/bus-time-table/midnapur-to-dhamakhali",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-dhamakhali.html",
+      "destination": "/bus-time-table/midnapur-to-dhamakhali",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-indus-via-kolkata",
+      "destination": "/bus-time-table/midnapur-to-indus-via-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-indus-via-kolkata.html",
+      "destination": "/bus-time-table/midnapur-to-indus-via-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-karunamoyee",
+      "destination": "/bus-time-table/midnapur-to-karunamoyee",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-karunamoyee.html",
+      "destination": "/bus-time-table/midnapur-to-karunamoyee",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-kharika-mathani",
+      "destination": "/bus-time-table/midnapur-to-kharika-mathani",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-kharika-mathani.html",
+      "destination": "/bus-time-table/midnapur-to-kharika-mathani",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-kolkata",
+      "destination": "/bus-time-table/midnapur-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-kolkata.html",
+      "destination": "/bus-time-table/midnapur-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-mohar",
+      "destination": "/bus-time-table/midnapur-to-mohar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-mohar.html",
+      "destination": "/bus-time-table/midnapur-to-mohar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-namkhana",
+      "destination": "/bus-time-table/midnapur-to-namkhana",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/medinipur-to-namkhana.html",
+      "destination": "/bus-time-table/midnapur-to-namkhana",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-amlasuli",
+      "destination": "/bus-time-table/medinipur-to-amlasuli",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-amlasuli.html",
+      "destination": "/bus-time-table/medinipur-to-amlasuli",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-badanganj",
+      "destination": "/bus-time-table/medinipur-to-badanganj",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-badanganj.html",
+      "destination": "/bus-time-table/medinipur-to-badanganj",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-balarampur",
+      "destination": "/bus-time-table/medinipur-to-balarampur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-balarampur.html",
+      "destination": "/bus-time-table/medinipur-to-balarampur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bandwan",
+      "destination": "/bus-time-table/medinipur-to-bandwan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bandwan.html",
+      "destination": "/bus-time-table/medinipur-to-bandwan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bankura",
+      "destination": "/bus-time-table/medinipur-to-bankura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bankura.html",
+      "destination": "/bus-time-table/medinipur-to-bankura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-banspahari",
+      "destination": "/bus-time-table/medinipur-to-banspahari",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-banspahari.html",
+      "destination": "/bus-time-table/medinipur-to-banspahari",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-belpahari",
+      "destination": "/bus-time-table/medinipur-to-belpahari",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-belpahari.html",
+      "destination": "/bus-time-table/medinipur-to-belpahari",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bhalukbasa",
+      "destination": "/bus-time-table/medinipur-to-bhalukbasa",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bhalukbasa.html",
+      "destination": "/bus-time-table/medinipur-to-bhalukbasa",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-binpur",
+      "destination": "/bus-time-table/medinipur-to-binpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-binpur.html",
+      "destination": "/bus-time-table/medinipur-to-binpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bishnupur",
+      "destination": "/bus-time-table/medinipur-to-bishnupur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-bishnupur.html",
+      "destination": "/bus-time-table/medinipur-to-bishnupur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-chandipur",
+      "destination": "/bus-time-table/medinipur-to-chandipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-chandipur.html",
+      "destination": "/bus-time-table/medinipur-to-chandipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-chandrakona-road",
+      "destination": "/bus-time-table/medinipur-to-chandrakona-road",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-chandrakona-road.html",
+      "destination": "/bus-time-table/medinipur-to-chandrakona-road",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-contai",
+      "destination": "/bus-time-table/medinipur-to-contai",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-contai-via-kharagpur",
+      "destination": "/bus-time-table/medinipur-to-contai-via-kharagpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-contai-via-kharagpur.html",
+      "destination": "/bus-time-table/medinipur-to-contai-via-kharagpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-contai.html",
+      "destination": "/bus-time-table/medinipur-to-contai",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-deulihat",
+      "destination": "/bus-time-table/medinipur-to-deulihat",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-deulihat.html",
+      "destination": "/bus-time-table/medinipur-to-deulihat",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-digha",
+      "destination": "/bus-time-table/medinipur-to-digha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-digha-via-belda",
+      "destination": "/bus-time-table/medinipur-to-digha-via-belda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-digha-via-belda.html",
+      "destination": "/bus-time-table/medinipur-to-digha-via-belda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-digha-via-kharagpur",
+      "destination": "/bus-time-table/medinipur-to-digha-via-kharagpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-digha-via-kharagpur.html",
+      "destination": "/bus-time-table/medinipur-to-digha-via-kharagpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-digha.html",
+      "destination": "/bus-time-table/medinipur-to-digha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-durgachak",
+      "destination": "/bus-time-table/medinipur-to-durgachak",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-durgachak.html",
+      "destination": "/bus-time-table/medinipur-to-durgachak",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-fulkusma",
+      "destination": "/bus-time-table/medinipur-to-fulkusma",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-fulkusma.html",
+      "destination": "/bus-time-table/medinipur-to-fulkusma",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-garhbeta",
+      "destination": "/bus-time-table/medinipur-to-garhbeta",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-garhbeta.html",
+      "destination": "/bus-time-table/medinipur-to-garhbeta",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ghatal",
+      "destination": "/bus-time-table/medinipur-to-ghatal",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ghatal.html",
+      "destination": "/bus-time-table/medinipur-to-ghatal",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-goaltore",
+      "destination": "/bus-time-table/medinipur-to-goaltore",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-goaltore.html",
+      "destination": "/bus-time-table/medinipur-to-goaltore",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-haldia",
+      "destination": "/bus-time-table/medinipur-to-haldia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-haldia.html",
+      "destination": "/bus-time-table/medinipur-to-haldia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-harinarayanpur",
+      "destination": "/bus-time-table/medinipur-to-harinarayanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-harinarayanpur.html",
+      "destination": "/bus-time-table/medinipur-to-harinarayanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-hoomgarh",
+      "destination": "/bus-time-table/medinipur-to-hoomgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-hoomgarh.html",
+      "destination": "/bus-time-table/medinipur-to-hoomgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-howrah",
+      "destination": "/bus-time-table/medinipur-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-howrah.html",
+      "destination": "/bus-time-table/medinipur-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-indus",
+      "destination": "/bus-time-table/medinipur-to-indus",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-indus.html",
+      "destination": "/bus-time-table/medinipur-to-indus",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-jhargram",
+      "destination": "/bus-time-table/medinipur-to-jhargram",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-jhargram.html",
+      "destination": "/bus-time-table/medinipur-to-jhargram",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-kalyani",
+      "destination": "/bus-time-table/medinipur-to-kalyani",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-kalyani.html",
+      "destination": "/bus-time-table/medinipur-to-kalyani",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-kankardanga",
+      "destination": "/bus-time-table/medinipur-to-kankardanga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-kankardanga.html",
+      "destination": "/bus-time-table/medinipur-to-kankardanga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-khatra",
+      "destination": "/bus-time-table/medinipur-to-khatra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-khatra.html",
+      "destination": "/bus-time-table/medinipur-to-khatra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-kotulpur",
+      "destination": "/bus-time-table/medinipur-to-kotulpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-kotulpur.html",
+      "destination": "/bus-time-table/medinipur-to-kotulpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-lalgarh",
+      "destination": "/bus-time-table/medinipur-to-lalgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-lalgarh.html",
+      "destination": "/bus-time-table/medinipur-to-lalgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-manbazar",
+      "destination": "/bus-time-table/medinipur-to-manbazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-manbazar.html",
+      "destination": "/bus-time-table/medinipur-to-manbazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mandarmani",
+      "destination": "/bus-time-table/medinipur-to-mandarmani",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mandarmani.html",
+      "destination": "/bus-time-table/medinipur-to-mandarmani",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mayapur",
+      "destination": "/bus-time-table/medinipur-to-mayapur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mayapur.html",
+      "destination": "/bus-time-table/medinipur-to-mayapur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mecheda",
+      "destination": "/bus-time-table/medinipur-to-mecheda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mecheda.html",
+      "destination": "/bus-time-table/medinipur-to-mecheda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mohanpur",
+      "destination": "/bus-time-table/medinipur-to-mohanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-mohanpur.html",
+      "destination": "/bus-time-table/medinipur-to-mohanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-nandakumar",
+      "destination": "/bus-time-table/medinipur-to-nandakumar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-nandakumar.html",
+      "destination": "/bus-time-table/medinipur-to-nandakumar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-patharpara",
+      "destination": "/bus-time-table/medinipur-to-patharpara",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-patharpara.html",
+      "destination": "/bus-time-table/medinipur-to-patharpara",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-purulia",
+      "destination": "/bus-time-table/medinipur-to-purulia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-purulia.html",
+      "destination": "/bus-time-table/medinipur-to-purulia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-raipur",
+      "destination": "/bus-time-table/medinipur-to-raipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-raipur.html",
+      "destination": "/bus-time-table/medinipur-to-raipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ramgarh",
+      "destination": "/bus-time-table/medinipur-to-ramgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ramgarh.html",
+      "destination": "/bus-time-table/medinipur-to-ramgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ramjibanpur",
+      "destination": "/bus-time-table/medinipur-to-ramjibanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ramjibanpur.html",
+      "destination": "/bus-time-table/medinipur-to-ramjibanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ranibandh",
+      "destination": "/bus-time-table/medinipur-to-ranibandh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-ranibandh.html",
+      "destination": "/bus-time-table/medinipur-to-ranibandh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-raskundu",
+      "destination": "/bus-time-table/medinipur-to-raskundu",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-raskundu.html",
+      "destination": "/bus-time-table/medinipur-to-raskundu",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-sarenga",
+      "destination": "/bus-time-table/medinipur-to-sarenga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-sarenga.html",
+      "destination": "/bus-time-table/medinipur-to-sarenga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-tarakeshwar",
+      "destination": "/bus-time-table/medinipur-to-tarakeshwar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-tarakeshwar.html",
+      "destination": "/bus-time-table/medinipur-to-tarakeshwar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-tarkeshwar",
+      "destination": "/bus-time-table/medinipur-to-tarkeshwar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-tarkeshwar.html",
+      "destination": "/bus-time-table/medinipur-to-tarkeshwar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-tatanagar",
+      "destination": "/bus-time-table/medinipur-to-tatanagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-tatanagar.html",
+      "destination": "/bus-time-table/medinipur-to-tatanagar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-trilochanpur",
+      "destination": "/bus-time-table/medinipur-to-trilochanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/midnapur-to-trilochanpur.html",
+      "destination": "/bus-time-table/medinipur-to-trilochanpur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-badanganj",
+      "destination": "/bus-time-table/tarkeshwar-to-badanganj",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-badanganj.html",
+      "destination": "/bus-time-table/tarkeshwar-to-badanganj",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bandwan",
+      "destination": "/bus-time-table/tarkeshwar-to-bandwan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bandwan.html",
+      "destination": "/bus-time-table/tarkeshwar-to-bandwan",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bankura",
+      "destination": "/bus-time-table/tarkeshwar-to-bankura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bankura-via-arambagh",
+      "destination": "/bus-time-table/tarkeshwar-to-bankura-via-arambagh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bankura-via-arambagh.html",
+      "destination": "/bus-time-table/tarkeshwar-to-bankura-via-arambagh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bankura-via-bengai",
+      "destination": "/bus-time-table/tarkeshwar-to-bankura-via-bengai",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bankura-via-bengai.html",
+      "destination": "/bus-time-table/tarkeshwar-to-bankura-via-bengai",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-bankura.html",
+      "destination": "/bus-time-table/tarkeshwar-to-bankura",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-belpahari",
+      "destination": "/bus-time-table/tarkeshwar-to-belpahari",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-belpahari.html",
+      "destination": "/bus-time-table/tarkeshwar-to-belpahari",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-benachity",
+      "destination": "/bus-time-table/tarkeshwar-to-benachity",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-benachity.html",
+      "destination": "/bus-time-table/tarkeshwar-to-benachity",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-birsingha",
+      "destination": "/bus-time-table/tarkeshwar-to-birsingha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-birsingha.html",
+      "destination": "/bus-time-table/tarkeshwar-to-birsingha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-chandrakona-road",
+      "destination": "/bus-time-table/tarkeshwar-to-chandrakona-road",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-chandrakona-road.html",
+      "destination": "/bus-time-table/tarkeshwar-to-chandrakona-road",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-chandrakona-town",
+      "destination": "/bus-time-table/tarkeshwar-to-chandrakona-town",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-chandrakona-town.html",
+      "destination": "/bus-time-table/tarkeshwar-to-chandrakona-town",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-digha",
+      "destination": "/bus-time-table/tarkeshwar-to-digha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-digha.html",
+      "destination": "/bus-time-table/tarkeshwar-to-digha",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-durgachak",
+      "destination": "/bus-time-table/tarkeshwar-to-durgachak",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-durgachak.html",
+      "destination": "/bus-time-table/tarkeshwar-to-durgachak",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-fulkusma",
+      "destination": "/bus-time-table/tarkeshwar-to-fulkusma",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-fulkusma.html",
+      "destination": "/bus-time-table/tarkeshwar-to-fulkusma",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-jamtoria",
+      "destination": "/bus-time-table/tarkeshwar-to-jamtoria",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-jamtoria.html",
+      "destination": "/bus-time-table/tarkeshwar-to-jamtoria",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-kharagpur-via-champadanga",
+      "destination": "/bus-time-table/tarkeshwar-to-kharagpur-via-champadanga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-kharagpur-via-champadanga.html",
+      "destination": "/bus-time-table/tarkeshwar-to-kharagpur-via-champadanga",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-kharagpur-via-mayapur",
+      "destination": "/bus-time-table/tarkeshwar-to-kharagpur-via-mayapur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-kharagpur-via-mayapur.html",
+      "destination": "/bus-time-table/tarkeshwar-to-kharagpur-via-mayapur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-khatra",
+      "destination": "/bus-time-table/tarkeshwar-to-khatra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-khatra.html",
+      "destination": "/bus-time-table/tarkeshwar-to-khatra",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-lalgarh",
+      "destination": "/bus-time-table/tarkeshwar-to-lalgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-lalgarh.html",
+      "destination": "/bus-time-table/tarkeshwar-to-lalgarh",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-manbazar",
+      "destination": "/bus-time-table/tarkeshwar-to-manbazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-manbazar.html",
+      "destination": "/bus-time-table/tarkeshwar-to-manbazar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-mangrul",
+      "destination": "/bus-time-table/tarkeshwar-to-mangrul",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-mangrul.html",
+      "destination": "/bus-time-table/tarkeshwar-to-mangrul",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-mecheda",
+      "destination": "/bus-time-table/tarkeshwar-to-mecheda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarakeshwar-to-mecheda.html",
+      "destination": "/bus-time-table/tarkeshwar-to-mecheda",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarkeshwar-to-haldia",
+      "destination": "/bus-time-table/tarakeshwar-to-haldia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/tarkeshwar-to-haldia.html",
+      "destination": "/bus-time-table/tarakeshwar-to-haldia",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-garia",
+      "destination": "/bus-time-table/buses-from-garia-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-garia.html",
+      "destination": "/bus-time-table/buses-from-garia-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-barddhaman-alisha",
+      "destination": "/bus-time-table/buses-from-barddhaman-alisha-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-barddhaman-alisha.html",
+      "destination": "/bus-time-table/buses-from-barddhaman-alisha-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-barddhaman-nawabhat",
+      "destination": "/bus-time-table/buses-from-barddhaman-nawabhat-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-barddhaman-nawabhat.html",
+      "destination": "/bus-time-table/buses-from-barddhaman-nawabhat-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-burdwan",
+      "destination": "/bus-time-table/buses-from-bardhaman",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-burdwan.html",
+      "destination": "/bus-time-table/buses-from-bardhaman",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-midnapur",
+      "destination": "/bus-time-table/buses-from-medinipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-midnapur.html",
+      "destination": "/bus-time-table/buses-from-medinipur",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-tarkeshwar",
+      "destination": "/bus-time-table/buses-from-tarakeshwar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-tarkeshwar.html",
+      "destination": "/bus-time-table/buses-from-tarakeshwar",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-esplanade",
+      "destination": "/bus-time-table/buses-from-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/buses-from-esplanade.html",
+      "destination": "/bus-time-table/buses-from-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/shyamoli-paribahan-buses",
+      "destination": "/bus-time-table/volvo-ac-buses",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/shyamoli-paribahan-buses.html",
+      "destination": "/bus-time-table/volvo-ac-buses",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/11a-dum-dum-to-howrah",
+      "destination": "/bus-time-table/dum-dum-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/11a-dum-dum-to-howrah.html",
+      "destination": "/bus-time-table/dum-dum-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-12-sapurji-to-howrah",
+      "destination": "/bus-time-table/new-town-sapoorji-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-12-sapurji-to-howrah.html",
+      "destination": "/bus-time-table/new-town-sapoorji-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-12d-joka-to-howrah",
+      "destination": "/bus-time-table/joka-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-12d-joka-to-howrah.html",
+      "destination": "/bus-time-table/joka-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-20-barrackpore-court-to-santragachi",
+      "destination": "/bus-time-table/barrackpore-court-to-santragachi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-20-barrackpore-court-to-santragachi.html",
+      "destination": "/bus-time-table/barrackpore-court-to-santragachi",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-24-patuli-to-howrah",
+      "destination": "/bus-time-table/patuli-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/ac-24-patuli-to-howrah.html",
+      "destination": "/bus-time-table/patuli-to-howrah",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/dunlop-to-ballygunge-station",
+      "destination": "/bus-time-table/s-9a-dunlop-to-ballygunge",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/dunlop-to-ballygunge-station.html",
+      "destination": "/bus-time-table/s-9a-dunlop-to-ballygunge",
+      "permanent": true
+    }
+  ]
+}
