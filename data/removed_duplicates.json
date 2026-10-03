@@ -1,6 +1,6 @@
 [
  {
-  "id": "monika-travels-ramharipur-purulia-4427",
+  "id": "monika-travels-ramharipur-purulia-4435",
   "bus_name": "Monika Travels Ramharipur-Purulia",
   "route": "Ramharipur - Purulia",
   "time": "6:30 AM",
@@ -8,7 +8,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "promila-bolpur-barakar-4430",
+  "id": "promila-bolpur-barakar-4438",
   "bus_name": "Promila Bolpur-Barakar",
   "route": "Bolpur - Barakar",
   "time": "6:20 AM",
@@ -16,7 +16,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "rbn-travels-kharagpur-barabazar-4428",
+  "id": "rbn-travels-kharagpur-barabazar-4436",
   "bus_name": "RBN Travels Kharagpur-Barabazar",
   "route": "Kharagpur - Barabazar",
   "time": "4:40 AM",
@@ -24,7 +24,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "samrat-bolpur-dumka-4429",
+  "id": "samrat-bolpur-dumka-4437",
   "bus_name": "Samrat Bolpur-Suri-Dumka (Priti Coach)",
   "route": "Bolpur - Dumka",
   "time": "6:50 AM",
@@ -32,7 +32,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "swapnamay-travels-haldia-durgapur-city-center-4431",
+  "id": "swapnamay-travels-haldia-durgapur-city-center-4439",
   "bus_name": "Swapnamay Travels Haldia-Durgapur",
   "route": "Haldia - Durgapur (City Center)",
   "time": "12:05 AM",
