@@ -45,7 +45,8 @@ def main(write=False):
         existing_pairs.setdefault(
             ((b.get("origin") or "").strip().lower(),
              (b.get("destination") or "").strip().lower(),
-             norm_op(b.get("operator"))), True
+             norm_op(b.get("operator")),
+             (b.get("departure_time") or "").strip().lower()), True
         )
 
     with open(SRC, encoding="utf-8") as f:
@@ -55,7 +56,8 @@ def main(write=False):
     for entry in report.get("add", []):
         key = ((entry["origin"] or "").strip().lower(),
                (entry["destination"] or "").strip().lower(),
-               norm_op(entry["operator"]))
+               norm_op(entry["operator"]),
+               (entry.get("departure_time") or "").strip().lower())
         if existing_pairs.get(key):
             skipped += 1
             print("skip (already exists):", entry["operator"], entry["origin"], "->", entry["destination"])
