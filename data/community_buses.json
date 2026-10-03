@@ -6424,6 +6424,88 @@
     }
    ],
    "total_stoppages": 15
+  },
+  {
+   "target_id": "sbstc-fb-bankura-kolkata-500am",
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Harkusum Express",
+   "reg_no": "WB 39E 9255",
+   "bus_type": "Government - SBSTC",
+   "departure_time": "5:00 AM",
+   "arrival_time": "10:45 AM",
+   "contact_number": "7699993928",
+   "depot_name": "Bankura",
+   "route": "Bankura - Sonamukhi - Bardhaman - Kolkata",
+   "time_source": "facebook (community report)",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "5:00 AM",
+     "down_time": "9:20 PM"
+    },
+    {
+     "no": 2,
+     "name": "Bankura Satighat Bridge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Beliator",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Ashuria More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Pakhanna",
+     "up_time": "6:10 AM",
+     "down_time": "8:15 PM"
+    },
+    {
+     "no": 6,
+     "name": "Dhulai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Sonamukhi",
+     "up_time": "6:55 AM",
+     "down_time": "7:50 PM"
+    },
+    {
+     "no": 8,
+     "name": "Bardhaman",
+     "up_time": "8:45 AM",
+     "down_time": "6:20 PM"
+    },
+    {
+     "no": 9,
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "2nd Bridge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Kolkata (Dharmatala)",
+     "up_time": "10:45 AM",
+     "down_time": "3:50 PM"
+    }
+   ],
+   "total_stoppages": 11
   }
  ]
 }
