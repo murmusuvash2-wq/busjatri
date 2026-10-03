@@ -1,0 +1,28 @@
+name: Run Kolkata city SEO patch once
+on:
+  push:
+    branches: [main]
+permissions:
+  contents: write
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Kolkata city bus SEO/interlink patch
+        run: python3 scripts/patch_city_stops_seo.py --write
+      - name: Validate script output
+        run: python3 -m py_compile scripts/patch_city_stops_seo.py
+      - name: Commit generated city-page changes and remove one-shot workflow
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bus-time-table/ scripts/patch_city_stops_seo.py .github/workflows/_run-city-seo-once.yml
+          if git diff --cached --quiet; then
+            git rm .github/workflows/_run-city-seo-once.yml
+            git commit -m "chore: remove one-shot city SEO workflow"
+          else
+            git rm .github/workflows/_run-city-seo-once.yml
+            git commit -m "feat: interlink Kolkata city bus routes and bilingual stop SEO"
+          fi
+          git push
