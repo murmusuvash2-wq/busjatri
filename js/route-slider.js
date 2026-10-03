@@ -92,6 +92,9 @@
       stopHtml +
       '<p class="tt-note"><span class="label-en">No timing values have been estimated or invented for this private route.</span><span class="label-bn">এই বেসরকারি রুটের কোনো সময় অনুমান বা মনগড়া করে দেখানো হয়নি।</span></p>';
     if (row) row.remove();
+    // This page is already the canonical static route page. Do not send
+    // private-route users through the old hash SPA (/index.html#/bus/...).
+    sec.querySelectorAll('a.bd-link[href*="#/bus/"]').forEach(function (a) { a.remove(); });
     sec.appendChild(card);
     var mapSec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
       var h=s.querySelector('.section-title'); return h && /^Route Map$/i.test((h.textContent||'').trim());
