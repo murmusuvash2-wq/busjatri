@@ -1,8 +1,9 @@
-name: Enforce clean URLs (sitemap + canonicals + links)
+name: Enforce clean URLs + prune thin pages
 
-# Keeps every deployed page URL in clean (extensionless) form, matching what
-# Google already indexes as canonical. Runs after any push that changes pages
-# or sitemaps, so a regeneration that re-emits ".html" is corrected automatically.
+# Keeps every deployed page URL in clean (extensionless) form, and noindexes +
+# de-lists "via" stop pages that list fewer than 3 buses, matching what Google
+# already indexes as canonical. Runs after any push that changes pages or
+# sitemaps, so a regeneration is corrected automatically.
 #
 # NOTE: the normalizing commit must NOT carry a "[skip ci]" marker. Cloudflare
 # Workers Builds (the deploy path for this repo) honours skip-ci and would then
@@ -35,6 +36,9 @@ jobs:
       - name: Normalize .html to clean URLs
         run: python3 scripts/fix_clean_urls.py
 
+      - name: noindex + de-list thin via pages
+        run: python3 scripts/prune_thin_via_pages.py
+
       - name: Commit if changed
         run: |
           if git diff --quiet; then
@@ -44,5 +48,5 @@ jobs:
           git config user.name "busjatri-bot"
           git config user.email "busjatri@zohomail.in"
           git add -A
-          git commit -m "chore: normalize .html to clean URLs"
+          git commit -m "chore: normalize URLs + prune thin via pages"
           git push
