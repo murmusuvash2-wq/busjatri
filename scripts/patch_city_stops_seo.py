@@ -4,7 +4,7 @@
 1. 29 routes (58 pages) get stop-wise STOPS + LEGS data (stop-wise journey view).
    Sources: official WBTC/wbtconline route paths (direct matches) + corridor-
    composites built from official paths of sibling routes.
-   Times: official first/last per trip; mid-stop times interpolated (≈ in UI).
+   Times: official first/last per trip; mid-stop times interpolated (≈ in UI). Departure-only routes remain departure-only until official arrival data exists.
 2. Static crawlable stop list added to every city route page (124 pages).
 3. Related-routes internal links on every city route page.
 4. /bus-time-table/ index links to the Kolkata city bus hub.
