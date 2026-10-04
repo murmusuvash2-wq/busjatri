@@ -3,209 +3,103 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>S-9A Dunlop to Ballygunge Bus Time Table (CSTC, stops, metro & map) | BusJatri</title>
-<meta name="description" content="S-9A CSTC city bus Kolkata: Dunlop to Ballygunge, 24 stops via Shyambazar, Esplanade, Park Street, Kalighat and Gariahat. Official CSTC timetable with stoppage rail, route map and metro stations.">
-<link rel="canonical" href="https://busjatri.in/bus-time-table/dunlop-to-ballygunge">
-<meta property="og:title" content="S-9A Dunlop to Ballygunge Bus Time Table (CSTC, stops, metro & map) | BusJatri">
-<meta property="og:description" content="S-9A CSTC city bus Kolkata: Dunlop to Ballygunge, 24 stops via Shyambazar, Esplanade, Park Street, Kalighat and Gariahat. Official CSTC timetable with stoppage rail, route map and metro stations.">
+<title>Dunlop to Ballygunge Bus Time Table | BusJatri</title>
+<meta name="description" content="Dunlop to Ballygunge bus time table with routes, stoppages and operators on BusJatri.">
+<link rel="canonical" href="https://busjatri.in/bus-time-table/dunlop-to-ballygunge.html">
+<meta property="og:title" content="Dunlop to Ballygunge Bus Time Table | BusJatri">
+<meta property="og:description" content="Dunlop to Ballygunge bus time table with routes, stoppages and operators on BusJatri.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://busjatri.in/bus-time-table/dunlop-to-ballygunge">
+<meta property="og:url" content="https://busjatri.in/bus-time-table/dunlop-to-ballygunge.html">
 <meta property="og:image" content="https://busjatri.in/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dunlop to Ballygunge Bus Time Table | BusJatri">
+<meta name="twitter:description" content="Dunlop to Ballygunge bus time table with routes, stoppages and operators on BusJatri.">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Bengali:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <link rel="stylesheet" href="../css/seo.css?v=rt20260920">
 <link rel="stylesheet" href="../css/extras.css">
-
-<style>
-.bjr{--bg:#f5efe1;--surface:#fffcf4;--surface-2:#efe6d3;--ink:#211c16;--ink-dim:#6f6653;
---line:rgba(33,28,22,.13);--line-strong:rgba(33,28,22,.24);--amber:#b8791f;--amber-ink:#6b4610;
---amber-soft:rgba(184,121,31,.14);--green:#3f6b42;--green-soft:rgba(63,107,66,.13);
---blue:#35608a;--blue-soft:rgba(53,96,138,.12);--priv:#8a5a1f;--priv-soft:rgba(138,90,31,.14);
---radius:12px;--font-display:'Fraunces',Georgia,serif;--font-body:'IBM Plex Sans','IBM Plex Sans Bengali',system-ui,sans-serif;--font-mono:'IBM Plex Mono',ui-monospace,monospace}
-.bjr *{box-sizing:border-box}
-.bjr{font-family:var(--font-body);color:var(--ink);line-height:1.45}
-.bjr a{color:inherit}
-.bjr .crumb{font-size:11.5px;color:var(--ink-dim);margin:4px 0 10px}
-.bjr .crumb a{text-decoration:none}.bjr .crumb b{color:var(--ink)}
-.bjr .hero{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:13px 15px;box-shadow:0 2px 12px rgba(33,28,22,.1)}
-.bjr .herotop{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.bjr .rnum{font-family:var(--font-mono);font-weight:700;font-size:18px;background:var(--amber);color:#fff;border-radius:8px;padding:3px 10px}
-.bjr .badges{display:flex;gap:5px;flex-wrap:wrap}
-.bjr .badge{font-size:9.5px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;font-family:var(--font-mono)}
-.bjr .badge-govt{background:var(--blue-soft);color:var(--blue)}
-.bjr .badge-nonac{background:var(--surface-2);color:var(--ink-dim)}
-.bjr .badge-amber{background:var(--amber-soft);color:var(--amber-ink)}
-.bjr .badge-priv{background:var(--priv-soft);color:var(--priv)}
-.bjr .rname{font-family:var(--font-display);font-size:1.5rem;font-weight:700;line-height:1.12;margin:9px 0 0;display:flex;align-items:center;gap:9px;flex-wrap:wrap}
-.bjr .rname .arrow{color:var(--amber)}
-.bjr .stat-chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
-.bjr .schip{display:inline-flex;align-items:center;gap:5px;background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;padding:4px 10px;font-family:var(--font-mono);font-size:11.5px;font-weight:600}
-.bjr .schip b{color:var(--amber-ink)}
-.bjr .seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line-strong);border-radius:999px;overflow:hidden;background:var(--surface);margin:12px 0 8px}
-.bjr .seg button{border:0;background:transparent;padding:8px 10px;font-family:var(--font-body);font-size:12.5px;font-weight:600;color:var(--ink);cursor:pointer;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.bjr .seg button.on{background:var(--amber);color:#fff}
-.bjr .sec{margin-top:14px}
-.bjr .section-title{font-family:var(--font-display);font-size:1.05rem;font-weight:700;display:flex;align-items:center;gap:7px;margin:0 0 8px}
-.bjr .section-title .bn{font-family:var(--font-body);font-size:.8rem;color:var(--ink-dim);font-weight:600}
-.bjr .section-title svg{width:16px;height:16px;color:var(--amber)}
-.bjr .stops{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:var(--radius);padding:4px 15px}
-.bjr .stop{display:flex;align-items:flex-start;gap:11px;padding:7px 0;position:relative}
-.bjr .stop .dot{width:9px;height:9px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:5px;border:2px solid var(--surface);box-shadow:0 0 0 1.5px var(--amber)}
-.bjr .stop.term .dot{background:var(--ink);box-shadow:0 0 0 1.5px var(--ink)}
-.bjr .stop:not(:last-child)::after{content:"";position:absolute;left:4px;top:22px;width:1.5px;height:calc(100% - 10px);background:var(--line-strong)}
-.bjr .stop .no{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);width:20px;flex-shrink:0;margin-top:2px}
-.bjr .stop .body{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
-.bjr .stop .sn{font-weight:500;font-size:14px}.bjr .stop.term .sn{font-weight:700}
-.bjr .stags{display:inline-flex;gap:5px;flex-wrap:wrap}
-.bjr .stag{font-size:9.5px;font-weight:700;padding:1.5px 7px;border-radius:999px;font-family:var(--font-mono);white-space:nowrap}
-.bjr .stag.m{background:var(--blue-soft);color:var(--blue)}.bjr .stag.l{background:var(--green-soft);color:var(--green)}.bjr .stag.h{background:var(--amber-soft);color:var(--amber-ink)}
-.bjr .legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11.5px;color:var(--ink-dim);margin:8px 2px 0;align-items:center}
-.bjr #map{height:300px;border-radius:var(--radius);border:1px solid var(--line);overflow:hidden;z-index:0}
-.bjr .leaflet-popup-content{font-family:var(--font-body);font-size:12px}
-.bjr .metro{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:4px 14px}
-.bjr .mline{display:flex;align-items:center;gap:9px;flex-wrap:wrap;padding:9px 0;border-top:1px solid var(--line)}
-.bjr .mline:first-child{border-top:0}
-.bjr .lnb{font-family:var(--font-mono);font-size:10px;font-weight:700;padding:3px 9px;border-radius:999px;color:#fff;width:74px;text-align:center;flex-shrink:0}
-.bjr .lnb.blue{background:var(--blue)}.bjr .lnb.green{background:var(--green)}
-.bjr .mst{font-size:12.5px;font-weight:600;background:var(--surface-2);border-radius:999px;padding:3px 10px}
-.bjr .mst.ix{background:var(--blue-soft);color:var(--blue)}
-.bjr .lmk-row{display:flex;flex-wrap:wrap;gap:6px;padding-top:8px;margin-top:4px;border-top:1px solid var(--line)}
-.bjr .lmk{font-size:12px;color:var(--green);background:var(--green-soft);border-radius:999px;padding:3px 10px}
-/* rail scroll (govt) */
-.bjr .list{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
-.bjr .list-hd{display:flex;align-items:center;justify-content:center;gap:22px;padding:9px 14px;background:var(--surface-2);font-size:10px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-dim);font-family:var(--font-mono)}
-.bjr .scroll{max-height:320px;overflow:auto}
-.bjr .dep{display:flex;align-items:center;justify-content:center;gap:12px;padding:8px 14px;border-top:1px solid var(--line);cursor:pointer}
-.bjr .dep:hover{background:var(--surface-2)}
-.bjr .dep .tt{font-family:var(--font-mono);font-weight:700;font-size:15px;padding:4px 10px;border-radius:8px;border:1px solid transparent}
-.bjr .dep .tt.arr{color:var(--amber-ink)}.bjr .dep .tt.on{background:var(--amber);color:#fff}
-.bjr .dep .link{display:flex;align-items:center;gap:5px;color:var(--ink-dim);font-family:var(--font-mono);font-size:10.5px}
-.bjr .dep .link .ln{width:12px;height:1px;background:var(--line-strong)}
-.bjr .dep.open{background:var(--amber-soft)}
-.bjr .rail{padding:6px 14px 12px;background:var(--surface-2);border-top:1px solid var(--line)}
-.bjr .rail .hint{font-size:10.5px;color:var(--ink-dim);margin:4px 0 8px;font-family:var(--font-mono);text-align:center}
-.bjr .rrow{display:flex;align-items:center}
-.bjr .railcol{position:relative;width:16px;align-self:stretch;flex-shrink:0}
-.bjr .railcol .line{position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--amber)}
-.bjr .rrow:first-child .railcol .line{top:50%}.bjr .rrow:last-child .railcol .line{bottom:50%}
-.bjr .railcol .dot{position:absolute;left:2px;top:50%;transform:translateY(-50%);width:12px;height:12px;border-radius:50%;background:var(--surface);border:2px solid var(--amber);z-index:1}
-.bjr .rrow.term .railcol .dot{background:var(--ink);border-color:var(--ink)}
-.bjr .txt{flex:1;display:flex;align-items:baseline;justify-content:center;gap:12px;padding:4px 0;flex-wrap:wrap}
-.bjr .rrow .sn{font-size:13px}.bjr .rrow.term .sn{font-weight:700}
-.bjr .rrow .tm{font-family:var(--font-mono);font-weight:700;font-size:13px}
-.bjr .rrow .tm.est{font-weight:500;color:var(--ink-dim)}
-.bjr .notimes{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:10px 13px;display:flex;gap:10px;align-items:center}
-.bjr .notimes .ic{flex-shrink:0;width:28px;height:28px;border-radius:8px;background:var(--amber-soft);display:flex;align-items:center;justify-content:center}
-.bjr .notimes .ic svg{width:16px;height:16px;color:var(--amber)}
-.bjr .notimes .hd{font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
-.bjr .notimes .pill{background:var(--priv-soft);color:var(--priv);border-radius:999px;padding:2px 9px;font-size:10px;font-weight:700;font-family:var(--font-mono);text-transform:uppercase}
-.bjr .notimes p{margin:2px 0 0;font-size:12px;color:var(--ink-dim)}
-.bjr .about{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;font-size:13px;color:var(--ink-dim)}
-.bjr .about b{color:var(--ink)}
-.bjr .faq{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:2px 14px}
-.bjr .faq details{border-top:1px solid var(--line);padding:8px 0}.bjr .faq details:first-child{border-top:0}
-.bjr .faq summary{font-weight:600;cursor:pointer;font-size:13px}.bjr .faq p{margin:5px 0 1px;color:var(--ink-dim);font-size:12.5px}
-@media(max-width:560px){.bjr .rname{font-size:1.25rem}.bjr .seg button{font-size:11.5px;padding:8px 6px}.bjr .lnb{width:64px}}
-</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the bus timing from Dunlop to Ballygunge?", "acceptedAnswer": {"@type": "Answer", "text": "Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand."}}, {"@type": "Question", "name": "How many buses run from Dunlop to Ballygunge?", "acceptedAnswer": {"@type": "Answer", "text": "1 bus services are listed on this route."}}, {"@type": "Question", "name": "Which operators run buses on the Dunlop to Ballygunge route?", "acceptedAnswer": {"@type": "Answer", "text": "Services include government operators such as WBTC S-9A."}}, {"@type": "Question", "name": "What is the bus fare from Dunlop to Ballygunge?", "acceptedAnswer": {"@type": "Answer", "text": "Fares for this route are not listed yet. West Bengal bus fares depend on distance and bus type — confirm the exact fare with the conductor or the bus stand counter."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://busjatri.in/"}, {"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "https://busjatri.in/bus-time-table/"}, {"@type": "ListItem", "position": 3, "name": "Dunlop to Ballygunge", "item": "https://busjatri.in/bus-time-table/dunlop-to-ballygunge.html"}]}</script>
+<style id="busjatri-ux-polish">
+.trust-note{margin:12px 0;padding:10px 14px;border:1px solid color-mix(in srgb,var(--accent,#b8791f) 35%,transparent);border-radius:12px;background:color-mix(in srgb,var(--accent,#b8791f) 8%,transparent);color:var(--ink-dim,#665);font-size:.82rem;line-height:1.5}.trust-note strong{color:var(--ink,#222)}
+.no-results,.empty-state{display:none}.bus-card{transition:transform .18s ease,box-shadow .18s ease}.bus-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(50,35,10,.10)}.bus-card .dep{font-variant-numeric:tabular-nums;white-space:nowrap}.missing-data{color:var(--ink-dim,#777);font-style:italic}
+@media(min-width:760px){.bus-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bus-card{height:fit-content}.search-panel,.search-box{position:sticky;top:10px;z-index:4}.letter-nav{position:sticky;top:0;z-index:3;background:var(--paper,#fbf7ee);padding:8px 0}}
+@media(max-width:759px){.bus-card{border-radius:14px}.trust-note{font-size:.76rem}.letter-nav{overflow-x:auto;white-space:nowrap}}
+</style><!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4E3D1YX9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L4E3D1YX9X');
+</script>
 </head>
 <body>
 <header class="header">
-  <div class="container header-inner">
-    <a href="../" class="logo" style="text-decoration:none;color:inherit">
-      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
+    <a href="../index.html" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
       Bus<span>Jatri</span>
     </a>
-    <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
-      <a href="../" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
-      <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
-      <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">&#9686;</button>
-    </nav>
+    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
+    <nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      <a href="../index.html" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Home</a>
+      <a href="./" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Routes</a>
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    
+</nav>
   </div>
 </header>
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
-<div class="bjr">
-<div class="crumb"><a href="../">Home</a> › <a href="./">Bus Timetable</a> › <b>S-9A</b></div>
-<header class="hero">
-  <div class="herotop"><span class="rnum">S-9A</span>
-    <div class="badges"><span class="badge badge-govt">CSTC · Govt</span><span class="badge badge-nonac">Non-AC</span><span class="badge badge-amber">City route</span></div>
+<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>Dunlop → Ballygunge</span></div>
+<div class="seo-hero">
+  <h1>Dunlop <span class="arr">→</span> Ballygunge</h1>
+  
+  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-09-18</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
+    <span class="schip">🚌 1 bus</span>
+    <span class="schip hot">⏰ First —</span>
+    <span class="schip">⏰ Last —</span>
+    <span class="schip">⏱ ~—</span>
   </div>
-  <h1 class="rname"><span id="odFrom">Dunlop</span> <span class="arrow">↔</span> <span id="odTo">Ballygunge</span></h1>
-  <div class="stat-chips"><span class="schip"><b>120</b> services/day</span><span class="schip">First <b>04:20</b></span><span class="schip">Last <b>21:25</b></span><span class="schip">🚇 <b>12</b> metro stations</span><span class="schip"><b>24</b> stops</span></div>
-</header>
-<div class="seg" id="seg"><button class="on" data-dir="0">▸ Dunlop → Ballygunge</button><button data-dir="1">◂ Ballygunge → Dunlop</button></div>
-<section class="sec">
-    <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 4v16"/></svg> Timetable &mdash; stoppage times <span class="bn">(সময়সূচি)</span></h2>
-    <div class="list"><div class="list-hd"><span>Departure</span><span>Arrival</span></div><div class="scroll" id="depList"></div></div>
-    <div class="legend"><span><span class="stag m">🚇 Metro</span> metro</span><span><span class="stag l">🏛 Landmark</span> notable</span><span><span class="stag h">Hub</span> boarding point</span><span>est. = approximate</span></div>
-    <p style="font-size:12px;color:var(--ink-dim);margin:8px 2px 0">Departure &amp; arrival times are the official CSTC schedule; in-between stoppage times are approximate. Tap a departure to see its stoppage rail.</p>
-  </section>
-<section class="sec"><h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 20l-5.4-2.7V4L9 6.7 15 4l5.4 2.7V20L15 17.3 9 20Z"/><path d="M9 6.7v13.3M15 4v13.3"/></svg> Route map <span class="bn">(রুট ম্যাপ)</span></h2><div id="map"></div><script>window.__BJR_COORDS__={"Dunlop": [22.644, 88.376], "Bonhooghly": [22.636, 88.382], "Tobin Road": [22.641, 88.379], "Sinthi": [22.623, 88.387], "Chiria More": [22.617, 88.389], "Shyambazar": [22.599, 88.374], "Rajballavpara": [22.597, 88.372], "Sovabazar": [22.593, 88.37], "Girish Park": [22.587, 88.362], "MG Road": [22.582, 88.357], "Central": [22.573, 88.354], "Chandni Chowk": [22.567, 88.352], "Esplanade": [22.5645, 88.351], "Park Street": [22.553, 88.352], "Maidan": [22.553, 88.346], "Rabindra Sadan": [22.544, 88.347], "Bhowanipore": [22.535, 88.348], "Hazra": [22.525, 88.35], "Kalighat": [22.518, 88.343], "Rashbehari": [22.514, 88.353], "Lake Mall": [22.52, 88.355], "Deshapriya Park": [22.515, 88.36], "Gariahat": [22.517, 88.366], "Ballygunge Station": [22.529, 88.365]};</script></section>
-<section class="sec"><h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="14" rx="3"/><path d="M4 10h16M8 21l2-3M16 21l-2-3"/></svg> Metro on this route <span class="bn">(মেট্রো)</span></h2><div class="metro"><div class="mline"><span class="lnb blue">BLUE LINE</span><span class="mst">Shyambazar</span><span class="mst">Sovabazar Sutanuti</span><span class="mst">Girish Park</span><span class="mst">Mahatma Gandhi Road</span><span class="mst">Central</span><span class="mst">Chandni Chowk</span><span class="mst ix">Esplanade</span><span class="mst">Park Street</span><span class="mst">Maidan</span><span class="mst">Rabindra Sadan</span><span class="mst">Kalighat</span><span class="mst">Rabindra Sarobar</span></div><div class="mline"><span class="lnb green">GREEN LINE</span><span class="mst ix">Esplanade</span></div><div class="lmk-row"><span class="lmk">🏛 Hatibagan</span><span class="lmk">🏛 Dalhousie</span><span class="lmk">🏛 Park Street</span><span class="lmk">🏛 Maidan</span><span class="lmk">🏛 Nandan</span><span class="lmk">🏛 Bhowanipore</span><span class="lmk">🏛 Hazra</span><span class="lmk">🏛 Kalighat Kali Temple</span><span class="lmk">🏛 Lake Mall</span><span class="lmk">🏛 Deshapriya Park</span></div></div></section>
-<section class="sec"><h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 4.9.7c0 1.6-2.4 2-2.4 3.3"/><path d="M12 17h.01"/></svg> FAQs <span class="bn">(সাধারণ প্রশ্ন)</span></h2>
-<div class="faq">
-<details open><summary>What time is the first and last S-9A bus?</summary><p>First bus leaves Dunlop at 05:50 and Ballygunge at 04:20. Last bus leaves Dunlop at 21:25 and Ballygunge at 21:15.</p></details>
-<details><summary>How often does S-9A run?</summary><p>Roughly every 15 minutes through the day &mdash; about 120 services daily across both directions.</p></details>
-<details><summary>Which metro stations are on the S-9A route?</summary><p>Twelve Blue Line stations including Shyambazar, Girish Park, Central, Chandni Chowk, Esplanade, Park Street, Maidan, Rabindra Sadan and Kalighat. Esplanade is a Blue + Green interchange.</p></details>
-</div></section>
-<section class="sec"><h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg> About route S-9A <span class="bn">(রুট সম্পর্কে)</span></h2>
-<p class="about"><b>S-9A</b> is a CSTC (government) city bus in Kolkata running between <b>Dunlop</b> in the north and <b>Ballygunge</b> in the south, via Shyambazar, Girish Park, Central, Esplanade, Park Street, Rabindra Sadan, Kalighat and Gariahat. It is one of the most metro-connected city routes &mdash; twelve Blue Line stations sit on or beside the route, and Esplanade connects to the Green Line. Landmarks along the way include Hatibagan, Writers' Building, the Victoria Memorial, Nandan, Kalighat Kali Temple and Gariahat market. Departure and arrival times follow the official CSTC schedule; in-between stoppage times are approximate.</p></section>
+</div><section class="seo-section">
+  <h3 class="section-title">Scheduled Departures</h3>
+  <div class="bus-row">
+  <div class="dep"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span class="no-time">Time N/A</span></div>
+  <div class="bmid">
+    <div class="op">WBTC S-9A · WBTC</div>
+    <div class="mrow">⏱ ~— · 🚏 0 stops</div>
+  </div>
+  <div class="bright"><span class="badge badge-govt">Govt</span><a class="bd-link" href="../index.html#/bus/wbtc-gov-wbtc-s-9a-1098" aria-label="View full timetable for WBTC S-9A">Details ›</a></div>
 </div>
+</section><section class="seo-section">
+  <h3 class="section-title">More Routes from Dunlop</h3>
+  <div class="chip-row"><a class="rel-chip" href="dunlop-to-howrah-station.html">Dunlop → Howrah Station</a><a class="rel-chip" href="dunlop-to-bbd-bag.html">Dunlop → BBD Bag</a><a class="rel-chip" href="dunlop-to-ballygunge-station.html">Dunlop → Ballygunge Station</a><a class="rel-chip" href="dunlop-to-esplanade.html">Dunlop → Esplanade</a><a class="rel-chip" href="dunlop-to-nabanna.html">Dunlop → Nabanna</a><a class="rel-chip" href="dunlop-to-panchla.html">Dunlop → Panchla</a><a class="rel-chip" href="dunlop-to-sakher-bazar.html">Dunlop → Sakher Bazar</a></div>
+</section>
+<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\2013"}.bj-faq .bjfa{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>
+<section class="bj-faq" aria-label="FAQ"><h2>Frequently Asked Questions — Dunlop to Ballygunge</h2><details class="faq-item"><summary>What is the bus timing from Dunlop to Ballygunge?</summary><div class="bjfa">Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand.</div></details><details class="faq-item"><summary>How many buses run from Dunlop to Ballygunge?</summary><div class="bjfa">1 bus services are listed on this route.</div></details><details class="faq-item"><summary>Which operators run buses on the Dunlop to Ballygunge route?</summary><div class="bjfa">Services include government operators such as WBTC S-9A.</div></details><details class="faq-item"><summary>What is the bus fare from Dunlop to Ballygunge?</summary><div class="bjfa">Fares for this route are not listed yet. West Bengal bus fares depend on distance and bus type — confirm the exact fare with the conductor or the bus stand counter.</div></details></section>
 </main>
 <footer class="footer">
   <div class="container">
     <div class="footer-links">
-      <a href="../about">About Us</a>
-      <a href="../contact">Contact Us</a>
-      <a href="../privacy-policy">Privacy Policy</a>
-      <a href="../about#credits">Credits</a>
+      <a href="../about.html">About Us</a>
+      <a href="../contact.html">Contact Us</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../about.html#credits">Credits</a>
       <a href="./">All Bus Timetables</a>
     </div>
-    <p><strong>BusJatri</strong> &mdash; West Bengal Bus Timetable<br>
+    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
     Not affiliated with any transport corporation<br>
     Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
   </div>
 </footer>
+<script defer src="../js/hdr.js?v=hdrunify20261002"></script>
 <script defer src="../js/route-slider.js"></script>
-<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script>
-var DIRS = [{"from": "Dunlop", "to": "Ballygunge", "stops": ["Dunlop", "Bonhooghly", "Tobin Road", "Sinthi", "Chiria More", "Shyambazar", "Rajballavpara", "Sovabazar", "Girish Park", "MG Road", "Central", "Chandni Chowk", "Esplanade", "Park Street", "Maidan", "Rabindra Sadan", "Bhowanipore", "Hazra", "Kalighat", "Rashbehari", "Lake Mall", "Deshapriya Park", "Gariahat", "Ballygunge Station"], "dep": ["05:50", "06:05", "06:20", "06:35", "06:50", "07:05", "07:20", "07:35", "07:50", "08:05", "08:20", "08:35", "08:50", "09:05", "09:20", "09:35", "09:50", "10:05", "10:20", "10:35", "10:50", "11:05", "11:20", "11:35", "11:50", "12:05", "12:34", "12:49", "13:04", "13:19", "13:30", "14:00", "14:15", "14:30", "14:45", "15:00", "15:15", "15:30", "15:45", "16:00", "16:15", "16:30", "16:45", "17:00", "17:15", "17:40", "18:10", "18:25", "18:40", "18:55", "19:10", "19:25", "19:40", "19:55", "20:10", "20:25", "20:40", "20:55", "21:10", "21:25"], "arr": ["07:14", "07:29", "07:44", "07:59", "08:14", "08:29", "08:44", "08:59", "09:14", "09:29", "09:44", "09:59", "10:14", "10:29", "10:44", "10:59", "11:14", "11:29", "11:44", "11:59", "12:14", "12:29", "12:44", "12:59", "13:14", "13:29", "14:24", "14:39", "14:54", "15:09", "15:20", "15:50", "16:05", "16:20", "16:35", "16:50", "17:05", "17:20", "17:35", "17:50", "18:05", "18:20", "18:35", "18:50", "19:05", "19:30", "20:00", "20:15", "20:30", "20:45", "21:00", "21:15", "21:30", "21:45", "22:00", "22:15", "22:30", "22:45", "23:00", "23:15"]}, {"from": "Ballygunge", "to": "Dunlop", "stops": ["Ballygunge Station", "Gariahat", "Deshapriya Park", "Lake Mall", "Rashbehari", "Kalighat", "Hazra", "Bhowanipore", "Rabindra Sadan", "Maidan", "Park Street", "Esplanade", "Chandni Chowk", "Central", "MG Road", "Girish Park", "Sovabazar", "Rajballavpara", "Shyambazar", "Chiria More", "Sinthi", "Tobin Road", "Bonhooghly", "Dunlop"], "dep": ["04:20", "04:45", "05:00", "05:15", "05:30", "06:00", "06:15", "06:30", "06:45", "07:00", "07:15", "07:30", "07:45", "08:00", "08:15", "08:30", "08:45", "09:00", "09:15", "09:30", "09:45", "10:00", "10:15", "10:30", "10:45", "11:00", "11:15", "11:30", "11:45", "12:00", "12:15", "12:30", "12:45", "13:00", "13:15", "13:30", "13:45", "14:00", "14:15", "14:30", "14:45", "15:00", "15:15", "15:30", "16:00", "16:30", "16:50", "17:05", "17:20", "17:35", "17:50", "18:05", "18:20", "18:35", "18:50", "19:05", "19:20", "19:45", "20:15", "21:15"], "arr": ["05:44", "06:09", "06:24", "06:39", "06:54", "07:24", "07:39", "07:54", "08:09", "08:24", "08:39", "08:54", "09:09", "09:24", "09:39", "09:54", "10:09", "10:24", "10:39", "10:54", "11:09", "11:24", "11:39", "11:54", "12:09", "12:24", "12:39", "12:54", "13:09", "13:24", "13:50", "14:05", "14:20", "14:35", "14:50", "15:05", "15:20", "15:35", "15:50", "16:05", "16:20", "16:35", "17:25", "17:55", "18:10", "18:25", "18:40", "18:55", "19:10", "19:25", "19:40", "19:55", "20:10", "20:25", "20:40", "20:55", "21:10", "21:35", "21:39", "22:39"]}];
-var TAGS = {"Dunlop": {"coord": [22.644, 88.376]}, "Bonhooghly": {"coord": [22.636, 88.382]}, "Tobin Road": {"coord": [22.641, 88.379]}, "Sinthi": {"coord": [22.623, 88.387]}, "Chiria More": {"coord": [22.617, 88.389]}, "Shyambazar": {"metro": "Shyambazar", "land": "Hatibagan \u00b7 5-point crossing", "coord": [22.599, 88.374]}, "Rajballavpara": {"coord": [22.597, 88.372]}, "Sovabazar": {"metro": "Sovabazar Sutanuti", "coord": [22.593, 88.37]}, "Girish Park": {"metro": "Girish Park", "coord": [22.587, 88.362]}, "MG Road": {"metro": "Mahatma Gandhi Road", "coord": [22.582, 88.357]}, "Central": {"metro": "Central", "coord": [22.573, 88.354]}, "Chandni Chowk": {"metro": "Chandni Chowk", "coord": [22.567, 88.352]}, "Esplanade": {"metro": "Esplanade", "hub": true, "land": "Dalhousie \u00b7 Grand Hotel", "coord": [22.5645, 88.351]}, "Park Street": {"metro": "Park Street", "land": "Park Street", "coord": [22.553, 88.352]}, "Maidan": {"metro": "Maidan", "land": "Maidan \u00b7 Victoria Memorial", "coord": [22.553, 88.346]}, "Rabindra Sadan": {"metro": "Rabindra Sadan", "land": "Nandan \u00b7 Academy of Fine Arts", "coord": [22.544, 88.347]}, "Bhowanipore": {"land": "Bhowanipore", "coord": [22.535, 88.348]}, "Hazra": {"land": "Hazra", "coord": [22.525, 88.35]}, "Kalighat": {"metro": "Kalighat", "land": "Kalighat Kali Temple", "coord": [22.518, 88.343]}, "Rashbehari": {"metro": "Rabindra Sarobar", "coord": [22.514, 88.353]}, "Lake Mall": {"land": "Lake Mall", "coord": [22.52, 88.355]}, "Deshapriya Park": {"land": "Deshapriya Park", "coord": [22.515, 88.36]}, "Gariahat": {"land": "Gariahat market", "coord": [22.517, 88.366]}, "Ballygunge Station": {"land": "Ballygunge rail stn.", "hub": true, "coord": [22.529, 88.365]}, "Shibrampur": {"coord": [22.4845, 88.2679]}, "Shakuntala Park": {"coord": [22.4848, 88.2894]}, "Bakultala": {"coord": [22.492, 88.298]}, "Behala Chowrasta": {"land": "Behala market", "coord": [22.498, 88.311]}, "Behala 14 No": {"coord": [22.506, 88.317]}, "Majherhat": {"land": "Majherhat rail stn.", "coord": [22.523, 88.321]}, "Mominpore": {"coord": [22.531, 88.327]}, "Ekbalpur": {"coord": [22.535, 88.328]}, "Kidderpore": {"land": "Kidderpore Docks", "coord": [22.538, 88.332]}, "Hastings": {"land": "Fort William \u00b7 Race Course", "coord": [22.547, 88.334]}, "PTS": {"coord": [22.546, 88.34]}, "BBD Bag": {"land": "Writers' Building \u00b7 Dalhousie", "coord": [22.5697, 88.3486]}, "Barabazar": {"land": "Barabazar market", "coord": [22.576, 88.353]}, "Howrah Station": {"metro": "Howrah", "hub": true, "land": "Howrah rail terminal", "coord": [22.5838, 88.3426]}};
-var cur=0, openIdx=-1;
-function toMin(t){var p=t.split(':');return +p[0]*60 + +p[1];}
-function toStr(v){v=((v%1440)+1440)%1440;var h=Math.floor(v/60),m=Math.round(v%60);if(m===60){m=0;h=(h+1)%24;}return (h<10?'0':'')+h+':'+(m<10?'0':'')+m;}
-function stopTimes(dep,arr,n){var s=toMin(dep),e=toMin(arr),dur=e-s;if(dur<=0)dur+=1440;var gaps=n-1,w=[],i;for(i=0;i<gaps;i++){var x=gaps>1?i/(gaps-1):0;w.push(0.8+0.7*Math.sin(Math.PI*x));}var sum=w.reduce(function(a,b){return a+b;},0),t=s,out=[toStr(t)];for(i=0;i<gaps;i++){t+=dur*w[i]/sum;out.push(toStr(t));}out[n-1]=arr;return out;}
-function tagHTML(stop){var g=TAGS[stop];if(!g)return '';var h='<span class="stags">';if(g.metro)h+='<span class="stag m">\uD83D\uDE87 '+g.metro+'</span>';if(g.hub)h+='<span class="stag h">Hub</span>';if(g.land)h+='<span class="stag l">\uD83C\uDFDB '+g.land+'</span>';return h+'</span>';}
-function render(){
-  var d=DIRS[cur];
-  document.getElementById('odFrom').textContent=d.from;document.getElementById('odTo').textContent=d.to;
-  var html='';
-  for(var j=0;j<d.dep.length;j++){
-    html+='<div class="dep" id="dep'+j+'" onclick="toggle('+j+')"><span class="tt" id="td'+j+'">'+d.dep[j]+'</span>'
-        +'<span class="link"><span class="ln"></span><span>'+d.stops.length+' stops</span><span class="ln"></span></span>'
-        +'<span class="tt arr" id="ta'+j+'">'+d.arr[j]+'</span></div><div id="r'+j+'" style="display:none"></div>';
-  }
-  document.getElementById('depList').innerHTML=html;openIdx=-1;
-  document.querySelectorAll('#seg button').forEach(function(b,i){b.classList.toggle('on',i===cur);});
-  drawMap(d.stops);
-}
-function railHTML(i){var d=DIRS[cur];var times=stopTimes(d.dep[i],d.arr[i],d.stops.length);var h='<div class="rail"><div class="hint">'+d.from+' \u2192 '+d.to+' \u00b7 dep '+d.dep[i]+' \u2192 arr '+d.arr[i]+' \u00b7 intermediate times approximate</div>';
-  for(var k=0;k<d.stops.length;k++){var term=(k===0||k===d.stops.length-1);h+='<div class="rrow'+(term?' term':'')+'"><span class="railcol"><span class="line"></span><span class="dot"></span></span><span class="txt"><span class="sn">'+d.stops[k]+'</span><span class="tm'+(term?'':' est')+'">'+times[k]+'</span>'+tagHTML(d.stops[k])+'</span></div>';}
-  return h+'</div>';}
-function closeAll(){DIRS[cur].dep.forEach(function(_,j){var b=document.getElementById('r'+j);if(b)b.style.display='none';var row=document.getElementById('dep'+j);if(row)row.classList.remove('open');var td=document.getElementById('td'+j);if(td)td.classList.remove('on');var ta=document.getElementById('ta'+j);if(ta)ta.classList.remove('on');});}
-function toggle(i){if(openIdx===i){closeAll();openIdx=-1;return;}closeAll();var box=document.getElementById('r'+i);box.innerHTML=railHTML(i);box.style.display='block';document.getElementById('dep'+i).classList.add('open');document.getElementById('td'+i).classList.add('on');document.getElementById('ta'+i).classList.add('on');openIdx=i;}
-document.querySelectorAll('#seg button').forEach(function(b){b.addEventListener('click',function(){cur=+b.dataset.dir;render();});});
-var map=L.map('map',{scrollWheelZoom:false}).setView([22.56,88.36],12);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'\u00a9 OpenStreetMap'}).addTo(map);
-var layer=null;
-function drawMap(stops){var C=window.__BJR_COORDS__||{};if(layer)map.removeLayer(layer);layer=L.layerGroup().addTo(map);var pts=[];stops.forEach(function(s,i){var c=C[s];if(!c)return;pts.push(c);L.circleMarker(c,{radius:6,color:'#b8791f',weight:2,fillColor:'#fffcf4',fillOpacity:1}).addTo(layer).bindPopup('<b>'+(i+1)+'. '+s+'</b>');});if(pts.length){L.polyline(pts,{color:'#b8791f',weight:3,opacity:.75}).addTo(layer);map.fitBounds(pts,{padding:[24,24]});}}
-render();
-</script>
+
 </body>
 </html>
