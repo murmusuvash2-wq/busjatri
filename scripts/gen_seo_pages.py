@@ -758,16 +758,18 @@ def generate_route_page(origin, destination, buses):
     count = len(buses)
     dur_text = fmt_duration(duration) if duration else "—"
 
-    title = f"{origin} to {destination} Bus Time Table | {SITE_NAME}"
     bus_word = "bus" if count == 1 else "buses"
     ops = [o for o in operators if o and o.strip() and o.strip() not in ("—", "-")][:3]
-    run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
-    if stats["first"] is None:
-        description = f"{origin} to {destination} bus time table with routes, stoppages and operators on {SITE_NAME}."[:300]
-    elif count == 1:
-        description = f"{origin} to {destination} bus time table — 1 bus daily at {first}.{run_by} Timings and stoppages on {SITE_NAME}."[:300]
+    if stats["first"] is not None:
+        title = f"{origin} to {destination} Bus Timetable — {count} {bus_word.title()} ({first})"
+        if len(title) > 60:
+            title = f"{origin} to {destination} Bus Timetable — {count} {bus_word.title()}"
+        tail = f", last {last}" if stats["last"] is not None else ""
+        opsd = f" ({', '.join(ops)})" if ops else ""
+        description = f"{origin} \u2192 {destination} bus timetable: {count} {bus_word} daily, first {first}{tail}{opsd}. Departure times, stoppages & operators."[:300]
     else:
-        description = f"{origin} to {destination} bus time table — {count} {bus_word} daily, first {first}, last {last}.{run_by} Timings and stoppages on {SITE_NAME}."[:300]
+        title = f"{origin} to {destination} Bus Timetable | {SITE_NAME}"
+        description = f"{origin} to {destination} bus timetable with routes, stoppages and operators on {SITE_NAME}."[:300]
     canonical = f"{BASE}/bus-time-table/{filename}"
     major_stops = stoppage_summary(buses)
 
