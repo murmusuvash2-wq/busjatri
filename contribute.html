@@ -54,8 +54,66 @@ footer a{color:var(--acc);text-decoration:none}
 </head>
 <body>
 <div class="wrap">
-<header>
-  <div></div>
+<header class="header">
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
+    <div class="logo" onclick="location.href='index.html'">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
+      Bus<span>Jatri</span>
+    </div>
+    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
+<nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    </nav>
+  </div>
+</header>
+<h1>Contribute a bus</h1>
+<p class="meta">Add a bus that is missing from BusJatri &mdash; West Bengal Bus Timetable.</p>
+<p class="lead">Fill what you know and leave the rest blank. Our team verifies each submission before it goes live. Your name and email are optional, but they let us credit you.</p>
+<form id="f" onsubmit="return submitBus(event)">
+  <div class="field">
+    <label>Bus name <small>বাসের নাম</small></label>
+    <input id="bName" maxlength="60" placeholder="e.g. SBSTC Bankura-Kolkata" required>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>From <small>কোথা থেকে</small></label>
+      <input id="bFrom" maxlength="40" placeholder="Bankura" required>
+    </div>
+    <div class="field">
+      <label>To <small>কোথায়</small></label>
+      <input id="bTo" maxlength="40" placeholder="Durgapur" required>
+    </div>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>Departure time <small>ছাড়ার সময়</small></label>
+      <input id="bDep" type="time" required>
+    </div>
+    <div class="field">
+      <label>Arrival time <small>পৌঁছানোর সময় (optional)</small></label>
+      <input id="bArr" type="time">
+    </div>
+  </div>
+  <div class="field">
+    <label>Stops along the way <small>মাঝপথের স্টপ (optional)</small></label>
+    <div id="stops"></div>
+    <button type="button" class="addstop" onclick="addStop()">+ Add a stop</button>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>Registration no. <small>গাড়ির নম্বর (optional)</small></label>
+      <input id="bReg" maxlength="20" placeholder="WB 32 ...">
+    </div>
+    <div class="field">
+      <label>Contact / phone <small>ফোন (optional)</small></label>
+      <input id="bContact" maxlength="20" placeholder="98765 43210">
+    </div>
+  </div>
   <div class="two">
     <div class="field">
       <label>Your name <small>আপনার নাম (optional)</small></label>
@@ -142,5 +200,6 @@ function submitBus(ev) {
   return false;
 }
 </script>
+<script defer src="js/hdr.js?v=hdrunify20261002"></script>
 </body>
 </html>
