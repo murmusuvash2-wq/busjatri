@@ -891,20 +891,18 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
     count = len(faq_buses)
     dur_text = g.fmt_duration(duration) if duration else "—"
 
-    if count > 1 and stats["first"] is not None:
-        title = f"{origin} to {destination} Bus Time Table ({count} buses, first {first})"
-    elif stats["first"] is not None:
-        title = f"{origin} to {destination} Bus Time Table (1 bus, departs {first})"
-    else:
-        title = f"{origin} to {destination} Bus Time Table | {g.SITE_NAME}"
+    bus_word = "bus" if count == 1 else "buses"
     ops = [o for o in operators if o and o.strip() and o.strip() not in ("—", "-")][:3]
-    run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
-    if stats["first"] is None:
-        description = f"{origin} to {destination} bus time table with routes, stoppages and operators on {g.SITE_NAME}."[:300]
-    elif count == 1:
-        description = f"{origin} to {destination} bus time table — 1 bus listed, departing at {first}.{run_by} Timings and stoppages on {g.SITE_NAME}."[:300]
+    if stats["first"] is not None:
+        title = f"{origin} to {destination} Bus Timetable — {count} {bus_word.title()} ({first})"
+        if len(title) > 60:
+            title = f"{origin} to {destination} Bus Timetable — {count} {bus_word.title()}"
+        tail = f", last {last}" if stats["last"] is not None else ""
+        opsd = f" ({', '.join(ops)})" if ops else ""
+        description = f"{origin} \u2192 {destination} bus timetable: {count} {bus_word} daily, first {first}{tail}{opsd}. Departure times, stoppages & operators."[:300]
     else:
-        description = f"{origin} to {destination} bus time table — {count} buses listed, first {first}, last {last}.{run_by} Timings and stoppages on {g.SITE_NAME}."[:300]
+        title = f"{origin} to {destination} Bus Timetable | {g.SITE_NAME}"
+        description = f"{origin} to {destination} bus timetable with routes, stoppages and operators on {g.SITE_NAME}."[:300]
     canonical = f"{g.BASE}/bus-time-table/{filename}"
 
     # ---- hero (safe wording: what is LISTED) ----
