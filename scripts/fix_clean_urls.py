@@ -54,14 +54,21 @@ DOT_RE = re.compile(r'href="\./(?!index\.html)([A-Za-z0-9][A-Za-z0-9._/-]*)\.htm
 BARE_RE = re.compile(r'href="(?!https?:|\.\.?/|/|mailto:|#|index\.html)([A-Za-z0-9][A-Za-z0-9._/-]*)\.html(?=["?#])')
 # _redirects: "<source> <destination.html> <status>"  -> clean the destination
 REDIR_RE = re.compile(r'^(\S+\s+)(/\S+?)\.html(\s+\d{3}.*)$')
+# legacy corruption: href="X" followed by a stray quote -> href="X"
+STRAY_HREF_RE = re.compile(r'(href="[^"]*")"')
 
 
 def normalize(text: str) -> str:
+    # self-heal: an older version of this script emitted href="X"" (see line below),
+    # so a re-run on an already-processed tree must clean that up first.
+    text = STRAY_HREF_RE.sub(r"\1", text)
     text = ABS_HOME_RE.sub("https://busjatri.in/", text)
     text = LOC_HOME_RE.sub("<loc>https://busjatri.in/</loc>", text)
     text = ABS_RE.sub(r"\1", text)
     text = LOC_RE.sub(r"\1\2", text)
-    text = PARENT_HOME_RE.sub('href="../"', text)
+    # NOTE: PARENT_HOME_RE matches with a LOOKAHEAD, so it does not consume the
+    # closing quote -- the replacement must NOT add one, or we get href=".."".
+    text = PARENT_HOME_RE.sub('href="../', text)
     text = PARENT_RE.sub(r'href="../\1"', text)
     text = DOT_RE.sub(r'href="\1"', text)
     text = BARE_RE.sub(r'href="\1"', text)
