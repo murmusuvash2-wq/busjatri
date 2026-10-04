@@ -71,7 +71,49 @@ footer a{color:var(--acc);text-decoration:none}
     </nav>
   </div>
 </header>
+<h1>Contribute a bus</h1>
+<p class="meta">Add a bus that is missing from BusJatri &mdash; West Bengal Bus Timetable.</p>
+<p class="lead">Fill what you know and leave the rest blank. Our team verifies each submission before it goes live. Your name and email are optional, but they let us credit you.</p>
 <form id="f" onsubmit="return submitBus(event)">
+  <div class="field">
+    <label>Bus name <small>বাসের নাম</small></label>
+    <input id="bName" maxlength="60" placeholder="e.g. SBSTC Bankura-Kolkata" required>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>From <small>কোথা থেকে</small></label>
+      <input id="bFrom" maxlength="40" placeholder="Bankura" required>
+    </div>
+    <div class="field">
+      <label>To <small>কোথায়</small></label>
+      <input id="bTo" maxlength="40" placeholder="Durgapur" required>
+    </div>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>Departure time <small>ছাড়ার সময়</small></label>
+      <input id="bDep" type="time" required>
+    </div>
+    <div class="field">
+      <label>Arrival time <small>পৌঁছানোর সময় (optional)</small></label>
+      <input id="bArr" type="time">
+    </div>
+  </div>
+  <div class="field">
+    <label>Stops along the way <small>মাঝপথের স্টপ (optional)</small></label>
+    <div id="stops"></div>
+    <button type="button" class="addstop" onclick="addStop()">+ Add a stop</button>
+  </div>
+  <div class="two">
+    <div class="field">
+      <label>Registration no. <small>গাড়ির নম্বর (optional)</small></label>
+      <input id="bReg" maxlength="20" placeholder="WB 32 ...">
+    </div>
+    <div class="field">
+      <label>Contact / phone <small>ফোন (optional)</small></label>
+      <input id="bContact" maxlength="20" placeholder="98765 43210">
+    </div>
+  </div>
   <div class="two">
     <div class="field">
       <label>Your name <small>আপনার নাম (optional)</small></label>
