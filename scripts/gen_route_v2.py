@@ -718,17 +718,18 @@ def faq_html_v2(en, bn):
     return "".join(parts)
 
 
-ABOUT_STYLE = "<style>.bj-about{margin:26px 0 6px}.bj-about details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-about summary{padding:11px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-about summary::-webkit-details-marker{display:none}.bj-about summary::after{content:\"+\";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-about details[open] summary::after{content:\"\\2013\"}.bj-about .bjab{padding:2px 14px 12px;color:var(--ink-dim,#6f6653);font-size:.9rem;line-height:1.6}.bj-about .bjab p{margin:8px 0}</style>"
+ABOUT_STYLE = "<style>.bj-about{margin:26px 0 6px}.bj-about details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-about summary{padding:11px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-about summary::-webkit-details-marker{display:none}.bj-about summary::after{content:\"+\";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-about details[open] summary::after{content:\"\\2013\"}.bj-about .bjab{padding:2px 14px 12px;color:var(--ink-dim,#6f6653);font-size:.9rem;line-height:1.6}.bj-about .bjab p{margin:8px 0}.bj-about .bjab h4{margin:14px 0 4px;font-size:.86rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink,#211c16);opacity:.8}.bj-about .bjab-list{margin:6px 0 4px;padding-left:20px}.bj-about .bjab-list li{margin:4px 0}</style>"
 
 
-def about_section(origin, destination, facts, major_stops):
-    """SEO 'About this route' block: collapsed <details> (screen stays clean) whose
-    text is still in the HTML source, so search engines can read it. Every fact is
-    derived from the same data as the timetable - nothing is invented."""
+def about_section(origin, destination, facts, major_stops, buses=None):
+    """SEO 'About this route' block: a collapsed <details> so the page stays clean,
+    but the full text sits in the HTML source (no JS), so crawlers read it.
+    Every fact comes from the same data as the timetable - nothing is invented."""
     o, d = g.esc(origin), g.esc(destination)
     ob, db = g.esc(bnplace(origin)), g.esc(bnplace(destination))
     count = facts["count"]
     pl = "" if count == 1 else "s"
+
     def _np(x):
         return g.norm_place(x)
     via = [s for s in major_stops if _np(s) not in (_np(origin), _np(destination))][:8]
@@ -736,64 +737,130 @@ def about_section(origin, destination, facts, major_stops):
     via_bn = ", ".join(g.esc(bnplace(s)) for s in via)
     ops = [x for x in facts["operators"] if x and x.strip() not in (".", "-", "—", "..")]
     ops_txt = ", ".join(g.esc(x) for x in ops[:4])
-    kind_en, kind_bn = [], []
-    if facts["govt"]:
-        kind_en.append(f"{facts['govt']} government")
-        kind_bn.append(f"{bn_num(facts['govt'])}টি সরকারি")
-    priv = count - facts["govt"]
-    if priv > 0:
-        kind_en.append(f"{priv} private")
-        kind_bn.append(f"{bn_num(priv)}টি বেসরকারি")
+    govt, priv = facts["govt"], count - facts["govt"]
 
+    am = pm = 0
+    for b in (buses or []):
+        t = g.parse_time(b.get("departure_time"))
+        if t is None:
+            continue
+        if t < 720:
+            am += 1
+        else:
+            pm += 1
+
+    first_t = g.format_time(facts["first"]) if facts["first"] is not None else None
+    last_t = g.format_time(facts["last"]) if facts["last"] is not None else None
+    dur_t = g.fmt_duration(facts["median"]) if facts["median"] is not None else None
+
+    # ---------------- English ----------------
     en = []
-    en.append(f"The <b>{o} &rarr; {d}</b> bus route links {o} with {d} in West Bengal. "
-              f"BusJatri lists <b>{count}</b> bus service{pl} on this route, and this page shows each departure with the stops it passes.")
+    en.append(("Route overview", [
+        f"Looking for <b>{o} to {d}</b> bus timings? This is the {o} to {d} bus timetable &mdash; every listed departure, "
+        f"the stoppages in between, and who runs it. The route links {o} with {d} in West Bengal, and BusJatri currently "
+        f"lists <b>{count}</b> bus service{pl} on this corridor. Each row above is one departure, so you can plan by clock time as well as by route."
+    ]))
     if via_en:
-        en.append(f"Most of these services run via {via_en}. That means you can also board or get down at any of these towns in between, "
-                  f"not only at the two end points &mdash; handy for shorter hops along the corridor.")
+        en.append(("Stops along the way", [
+            f"Most of these services run via {via_en}. That means you can board or get down at any of these towns in between, "
+            f"not only at the two end points &mdash; handy for shorter hops along the {o}&ndash;{d} corridor. Buses heading further "
+            f"afield also pass through here, so a through service is often an option when a direct one has already left."
+        ]))
     else:
-        en.append("No intermediate stoppages are recorded for this route yet, so the listed services appear to run direct between the two places.")
-    if facts["first"] is not None:
-        t = f"The earliest departure listed is at <b>{g.format_time(facts['first'])}</b>"
-        if facts["last"] is not None and facts["last"] != facts["first"]:
-            t += f" and the last at <b>{g.format_time(facts['last'])}</b>"
-        en.append(t + ".")
-    if facts["median"] is not None:
-        en.append(f"Most buses cover the journey in about <b>{g.fmt_duration(facts['median'])}</b>; the actual time varies with stops and traffic.")
+        en.append(("Stops along the way", [
+            "No intermediate stoppages are recorded for this route yet, so the listed services appear to run direct between the two places."
+        ]))
+    timing = []
+    if first_t:
+        t = f"The first departure listed leaves {o} at <b>{first_t}</b>"
+        if last_t and last_t != first_t:
+            t += f" and the last at <b>{last_t}</b>"
+        timing.append(t + ".")
+    if am and pm:
+        timing.append(f"About <b>{am}</b> services depart before noon and <b>{pm}</b> later in the day, so the corridor stays fairly busy through the day.")
+    if dur_t:
+        timing.append(f"Most buses cover the journey in roughly <b>{dur_t}</b>. The actual time depends on the number of stops, traffic and the season, so allow a little slack if you are catching a connection.")
+    if timing:
+        en.append(("Timings and frequency", timing))
+    opsp = []
     if ops_txt:
-        kt = (" &mdash; roughly " + " and ".join(kind_en) + " service" + pl) if kind_en else ""
-        en.append(f"Operators listed include {ops_txt}{kt}." + (" AC coaches are also available on this route." if facts["ac"] else ""))
-    if not facts["fares"]:
-        en.append("Fares are not listed for this route yet; West Bengal bus fares depend on distance and bus type, so confirm the amount with the conductor.")
+        s = f"Operators listed include {ops_txt}."
+        if govt and priv:
+            s += f" Roughly {govt} are government services (SBSTC, WBTC or NBSTC) and {priv} private."
+        elif govt:
+            s += " These are government services."
+        elif priv:
+            s += " These are private services."
+        if facts["ac"]:
+            s += " AC coaches are also available on this route."
+        opsp.append(s)
+    opsp.append("Fares for a specific journey depend on the distance you travel and the bus type (AC costs more). Confirm the exact amount with the conductor or at the stand counter before boarding.")
+    en.append(("Operators, bus types and fare", opsp))
+    tips = [
+        "Reach the stand about 10&ndash;15 minutes early &mdash; many buses leave once the seats fill up.",
+        "Confirm the last departure of the day at the counter, as timings shift with the season and road conditions.",
+        "Keep small change handy; not every conductor accepts UPI on this route.",
+        "Schedules can change without notice, so treat the times here as a guide rather than a guarantee.",
+    ]
+    en.append(("Before you travel", ["<ul class=\"bjab-list\">" + "".join(f"<li>{x}</li>" for x in tips) + "</ul>"]))
 
+    # ---------------- Bangla ----------------
     bn = []
-    bn.append(f"<b>{ob} &rarr; {db}</b> বাস রুটটি পশ্চিমবঙ্গের {ob}-কে {db}-এর সঙ্গে যুক্ত করে। "
-              f"বাসযাত্রী-তে এই রুটে <b>{bn_num(count)}</b>টি বাস সার্ভিস তালিকাভুক্ত আছে, এবং প্রতিটি ছাড়ার সময় ও তার পথের স্টপ এই পাতায় দেওয়া আছে।")
+    bn.append(("রুটের পরিচয়", [
+        f"<b>{ob} থেকে {db}</b> বাসের সময়সূচি খুঁজছেন? এই পাতায় {ob} থেকে {db} পর্যন্ত তালিকাভুক্ত প্রতিটি বাস, মাঝপথের স্টপ ও চালানোর সংস্থার নাম দেওয়া আছে। "
+        f"রুটটি পশ্চিমবঙ্গের {ob}-কে {db}-এর সঙ্গে যুক্ত করে; বাসযাত্রী-তে এখন <b>{bn_num(count)}</b>টি বাস সার্ভিস তালিকাভুক্ত আছে। উপরের প্রতিটি সারি একটি ছাড়ার সময়, তাই ঘড়ির সময় আর পথ &mdash; দুটো দিক থেকেই পরিকল্পনা করা যায়।"
+    ]))
     if via_bn:
-        bn.append(f"বেশিরভাগ বাস {via_bn} হয়ে যায়। তাই শুধু দু’প্রান্তে নয়, মাঝের এই শহরগুলোতেও বাসে ওঠা বা নামা যায় &mdash; কাছের যাত্রার জন্য সুবিধা।")
+        bn.append(("মাঝপথের স্টপ", [
+            f"বেশিরভাগ বাস {via_bn} হয়ে যায়। তাই শুধু দু’প্রান্তে নয়, মাঝের এই শহরগুলোতেও বাসে ওঠা বা নামা যায় &mdash; কাছের যাত্রার জন্য সুবিধা। "
+            f"দূরের গন্তব্যে যাওয়া বাসও এই পথ দিয়ে যায়, তাই সরাসরি বাস চলে গেলে অনেক সময় ওই বাসেই ওঠা যায়।"
+        ]))
     else:
-        bn.append("এই রুটে মাঝপথের স্টপ এখনও নথিভুক্ত নেই, তাই তালিকার বাসগুলো দু’জায়গার মধ্যে সরাসরি চলছে বলে মনে হয়।")
-    if facts["first"] is not None:
-        t = f"তালিকায় প্রথম বাস ছাড়ে <b>{g.format_time(facts['first'])}</b>-এ"
-        if facts["last"] is not None and facts["last"] != facts["first"]:
-            t += f" এবং শেষ বাস <b>{g.format_time(facts['last'])}</b>-এ"
-        bn.append(t + "।")
-    if facts["median"] is not None:
-        bn.append(f"বেশিরভাগ বাস যাত্রাপথ প্রায় <b>{g.fmt_duration(facts['median'])}</b>-এ কভার করে; স্টপ ও ট্রাফিক অনুযায়ী সময় বদলায়।")
+        bn.append(("মাঝপথের স্টপ", [
+            "এই রুটে মাঝপথের স্টপ এখনও নথিভুক্ত নেই, তাই তালিকার বাসগুলো দু’জায়গার মধ্যে সরাসরি চলছে বলে মনে হয়।"
+        ]))
+    timing_bn = []
+    if first_t:
+        t = f"তালিকায় প্রথম বাস {ob} থেকে ছাড়ে <b>{first_t}</b>-এ"
+        if last_t and last_t != first_t:
+            t += f" এবং শেষ বাস <b>{last_t}</b>-এ"
+        timing_bn.append(t + "।")
+    if am and pm:
+        timing_bn.append(f"দুপুরের আগে প্রায় <b>{bn_num(am)}</b>টি আর পরে <b>{bn_num(pm)}</b>টি বাস ছাড়ে, তাই সারা দিনই এই পথে বাস চলাচল চলে।")
+    if dur_t:
+        timing_bn.append(f"বেশিরভাগ বাস যাত্রাপথ প্রায় <b>{dur_t}</b>-এ কভার করে। স্টপ, ট্রাফিক ও ঋতু অনুযায়ী সময় বদলায়, তাই সংযোগ ধরতে হলে একটু হাতে সময় রাখুন।")
+    if timing_bn:
+        bn.append(("সময় ও ছাড়ার হার", timing_bn))
+    opsp_bn = []
     if ops_txt:
-        kt = (" &mdash; মোটামুটি " + " ও ".join(kind_bn) + " সার্ভিস") if kind_bn else ""
-        bn.append(f"তালিকায় থাকা অপারেটরদের মধ্যে আছে {ops_txt}{kt}।" + (" এই রুটে AC বাসও পাওয়া যায়।" if facts["ac"] else ""))
-    if not facts["fares"]:
-        bn.append("এই রুটের ভাড়া এখনও তালিকাভুক্ত নয়; পশ্চিমবঙ্গে দূরত্ব ও বাসের ধরন অনুযায়ী ভাড়া হয়, তাই কন্ডাক্টরের কাছে জেনে নিন।")
+        s = f"তালিকায় থাকা অপারেটরদের মধ্যে আছে {ops_txt}।"
+        if govt and priv:
+            s += f" এর মধ্যে প্রায় {bn_num(govt)}টি সরকারি (SBSTC, WBTC বা NBSTC) ও {bn_num(priv)}টি বেসরকারি সার্ভিস।"
+        elif govt:
+            s += " এগুলো সরকারি সার্ভিস।"
+        elif priv:
+            s += " এগুলো বেসরকারি সার্ভিস।"
+        if facts["ac"]:
+            s += " এই রুটে AC বাসও পাওয়া যায়।"
+        opsp_bn.append(s)
+    opsp_bn.append("যাত্রার দূরত্ব ও বাসের ধরন অনুযায়ী ভাড়া বদলায় (AC-তে বেশি)। ওঠার আগে কন্ডাক্টর বা স্ট্যান্ড কাউন্টারে সঠিক টাকা জেনে নিন।")
+    bn.append(("অপারেটর, বাসের ধরন ও ভাড়া", opsp_bn))
+    tips_bn = [
+        "স্ট্যান্ডে ১০&ndash;১৫ মিনিট আগে পৌঁছে যান &mdash; সিট ভরে গেলেই অনেক বাস ছেড়ে দেয়।",
+        "দিনের শেষ বাসের সময় কাউন্টারে গিয়ে আরেকবার জেনে নিন; ঋতু ও রাস্তার অবস্থা অনুযায়ী সময় বদলায়।",
+        "খুচরো টাকা সঙ্গে রাখুন; এই রুটে সব কন্ডাক্টর UPI নেন না।",
+        "সময়সূচি আগে জানানো ছাড়াই বদলাতে পারে, তাই এখানকার সময়কে পথের নির্দেশিকা ভাবুন, চূড়ান্ত নিশ্চয়তা নয়।",
+    ]
+    bn.append(("যাত্রার আগে", ["<ul class=\"bjab-list\">" + "".join(f"<li>{x}</li>" for x in tips_bn) + "</ul>"]))
 
-    def det(paras, cls, q):
-        inner = "".join(f"<p>{p}</p>" for p in paras)
+    def det(blocks, cls, q):
+        inner = "".join(f"<h4>{h}</h4>{''.join(f'<p>{p}</p>' for p in ps)}" for h, ps in blocks)
         return f'<details class="about-item {cls}"><summary>{q}</summary><div class="bjab">{inner}</div></details>'
 
     return (ABOUT_STYLE + f"""<section class="seo-section bj-about" aria-label="About this route">
   <h3 class="section-title">{L("About this route", "এই রুট সম্পর্কে")}</h3>
-  {det(en, "only-en", f"Read about the {o} to {d} bus route &mdash; stops, operators &amp; travel notes")}
-  {det(bn, "only-bn", f"{ob} থেকে {db} বাস রুট &mdash; স্টপ, অপারেটর ও যাত্রার টিপস")}
+  {det(en, "only-en", f"Read about the {o} to {d} bus route &mdash; timings, stops, operators &amp; travel tips")}
+  {det(bn, "only-bn", f"{ob} থেকে {db} বাস রুট &mdash; সময়, স্টপ, অপারেটর ও যাত্রার টিপস")}
 </section>""")
 
 # ------------------------------------------------------------
@@ -1141,7 +1208,7 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
   <div class="chip-row">{links2}</div>
 </section>"""
 
-    about_html = about_section(origin, destination, _facts, major_stops)
+    about_html = about_section(origin, destination, _facts, major_stops, faq_buses)
     body = hero + timetable + alt_section + major_section + faq_section + about_html + reverse_section + related_section + to_section
 
     schema = (
