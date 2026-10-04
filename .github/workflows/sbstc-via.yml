@@ -1,0 +1,49 @@
+name: SBSTC via-stop fill
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sbstc-via:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fill SBSTC via stops from data/sbstc_via_map.json
+        run: python3 scripts/patch_sbstc_via.py
+
+      - name: Regenerate route pages
+        run: python3 scripts/gen_route_v2.py --all
+
+      - name: Regenerate via-stop pages + sitemaps
+        run: |
+          python3 scripts/gen_via_stop_v2.py
+          python3 scripts/patch_via_sitemap.py
+
+      - name: Rebuild client search data
+        run: python3 scripts/build_client_data.py
+
+      - name: Validate
+        run: |
+          grep -q 'Durgapur' bus-time-table/bankura-to-karunamoyee.html
+          grep -q 'Barjora' bus-time-table/bankura-to-durgapur.html
+          grep -q 'Kolaghat' bus-time-table/kolkata-to-haldia.html
+          grep -q 'class="seo-section bj-about"' bus-time-table/bankura-to-durgapur.html
+          grep -q 'About this route' bus-time-table/bankura-to-durgapur.html
+          echo "validation OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data scripts bus-time-table via sitemap.xml sitemap-via.xml robots.txt
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "SBSTC via-fill: add via stops + About-this-route block on route pages"
+            git push
+          fi
