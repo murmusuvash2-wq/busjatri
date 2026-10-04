@@ -18,16 +18,24 @@ jobs:
       # before generation. Their changes are already part of the current generator.
 
       - name: Generate og-image (social share card)
+        timeout-minutes: 8
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y -qq fonts-beng-extra
           python3 -m pip install --quiet pillow
           python3 scripts/make_og_image.py
 
+      # SKIP_GEOCODE=1 -> reuse data/stop_coords.json instead of calling Open-Meteo.
+      # Without it this step sat on the network for 30 minutes and the whole job was
+      # cancelled by its timeout, so no page ever got regenerated.
       - name: Attach railway stations (bbox filter + name matching)
+        timeout-minutes: 6
+        env:
+          SKIP_GEOCODE: "1"
         run: python3 scripts/add_railway_stations.py
 
       - name: Regenerate bus-time-table pages
+        timeout-minutes: 10
         env:
           SITE_BASE: https://busjatri.in
         run: |
@@ -36,6 +44,7 @@ jobs:
           python3 scripts/finalize_pages.py
 
       - name: Unify header on every page (same header + toggle as the homepage)
+        timeout-minutes: 6
         run: python3 scripts/unify_header_20261002.py
 
       - name: Validate
