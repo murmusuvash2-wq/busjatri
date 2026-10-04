@@ -86,6 +86,33 @@ ROUTE_STOPS = {
  "S-51": (["Eden City Gate","Mollar Gate","Taratala Xing","New Alipore","Chetla","R.B. Avenue","Gariahat","Dhakuria","Jadavpur","Garia Depot"], None),
 }
 
+# -------------------------------------- official terminal timetables ----
+# Source: published CSTC/CTC timetable supplied for the Kolkata city-bus
+# rollout. First/last terminal times are official; intermediate stop times
+# are calculated only when STOPS/LEGS data exists.
+OFFICIAL_TRIPS = {
+    "AC-10": {
+        "howrah-to-madhyamgram": [
+            ["07:00","08:18"],["07:30","08:48"],["08:00","09:18"],["08:48","10:06"],
+            ["09:18","10:36"],["09:48","11:06"],["10:36","11:54"],["10:48","12:06"],
+            ["11:06","12:24"],["11:36","12:54"],["12:24","13:42"],["12:54","14:12"],
+            ["13:24","14:42"],["14:00","15:18"],["14:24","15:42"],["14:30","15:48"],
+            ["15:00","16:18"],["15:48","17:06"],["16:18","17:36"],["16:48","18:06"],
+            ["17:18","18:36"],["17:36","18:54"],["18:06","19:24"],["18:36","19:54"],
+            ["19:24","20:42"],["19:54","21:12"],["20:24","21:42"],["20:54","22:12"]
+        ],
+        "madhyamgram-to-howrah": [
+            ["07:00","08:18"],["07:30","08:48"],["08:00","09:18"],["08:48","10:06"],
+            ["09:00","10:18"],["09:18","10:36"],["09:48","11:06"],["10:36","11:54"],
+            ["11:06","12:24"],["11:36","12:54"],["12:24","13:42"],["12:36","13:54"],
+            ["12:54","14:12"],["13:24","14:42"],["14:00","15:18"],["14:30","15:48"],
+            ["15:00","16:18"],["15:30","16:48"],["15:48","17:06"],["16:18","17:36"],
+            ["16:48","18:06"],["17:36","18:54"],["18:06","19:24"],["18:36","19:54"],
+            ["19:06","20:24"],["19:24","20:42"],["19:54","21:12"],["20:24","21:42"]
+        ]
+    }
+}
+
 # --------------------------------------------- hub ROUTES db (for related) --
 def load_hub_routes():
     h = (ROOT / "kolkata-city-bus-timetable.html").read_text(encoding="utf-8")
@@ -407,6 +434,75 @@ def main():
         changed[f] = h.replace('</body>', I18N + '</body>', 1)
         n += 1
     print(f"  bilingual journey runtime added: {n}")
+
+    # ---- 8. official terminal arrival times (no estimated terminal times)
+    print("== 8. official terminal arrival times ==")
+    n = 0
+    for rno, directions in OFFICIAL_TRIPS.items():
+        for path in sorted(glob.glob(str(ROOT / "bus-time-table" / "*.html"))):
+            h = changed.get(path) or Path(path).read_text(encoding="utf-8")
+            if f"({rno})" not in h:
+                continue
+            name = Path(path).name.lower()
+            direction = None
+            if rno == "AC-10":
+                direction = "howrah-to-madhyamgram" if "howrah-to-madhyamgram" in name else (
+                    "madhyamgram-to-howrah" if "madhyamgram-to-howrah" in name else None
+                )
+            trips = directions.get(direction) if direction else None
+            if not trips:
+                continue
+
+            new_trips = "var TRIPS=" + json.dumps(trips, separators=(",", ":")) + ";"
+            h2, k = re.subn(r"var TRIPS=\[.*?\];", new_trips, h, count=1, flags=re.S)
+            if not k:
+                print(f"  !! no TRIPS anchor: {Path(path).name}")
+                continue
+
+            h2 = h2.replace('class="tt-card deponly"', 'class="tt-card"', 1)
+            h2 = h2.replace("official departure times", "official departure & arrival times", 1)
+            h2 = h2.replace("অফিসিয়াল সময়সূচি", "অফিসিয়াল ছাড়ার ও পৌঁছানোর সময়সূচি", 1)
+            h2 = h2.replace(
+                "departure times only. Times auto-scroll",
+                "official departure & terminal arrival times. Times auto-scroll", 1
+            )
+            h2 = h2.replace(
+                "শুধু ছাড়ার সময়। আপনার আগামী বাসে স্ক্রল",
+                "অফিসিয়াল ছাড়ার ও টার্মিনাল পৌঁছানোর সময়। আপনার আগামী বাসে স্ক্রল", 1
+            )
+
+            h2 = re.sub(
+                r'<script id="bj-derived-arrival">.*?</script>\s*<p class="tt-note">.*?</p>',
+                "",
+                h2, count=1, flags=re.S
+            )
+
+            renderer = r'''<script id="bj-official-arrival-v1">
+(function(){
+  var rail=document.getElementById('rail');
+  if(!rail || typeof TRIPS==='undefined') return;
+  function m(t){return +t.slice(0,2)*60 + +t.slice(3)}
+  function t12(mm){mm=(mm+1440)%1440;var h=Math.floor(mm/60),mi=mm%60,ap=h<12?'AM':'PM',h12=h%12||12;return h12+':'+(mi<10?'0':'')+mi+' '+ap}
+  function dur(a,b){var d=m(b)-m(a);if(d<0)d+=1440;var h=Math.floor(d/60),mi=d%60;return h?h+'h '+(mi?mi+'m':''):mi+'m'}
+  var html='';
+  TRIPS.forEach(function(t,i){
+    html+='<div class="tr" data-i="'+i+'"><div class="dep">'+t12(m(t[0]))+'</div><div class="mid"><span class="ln"></span>'+dur(t[0],t[1])+'<span class="ln"></span></div><div class="arr">'+t12(m(t[1]))+'</div></div>';
+  });
+  rail.innerHTML=html;
+  var rows=rail.querySelectorAll('.tr'),now=new Date(),nm=now.getHours()*60+now.getMinutes(),ni=-1;
+  for(var i=0;i<rows.length;i++){if(m(TRIPS[i][0])>=nm){rows[i].classList.add('next');ni=i;break;}}
+  if(ni<0&&rows.length){rows[0].classList.add('next');ni=0;}
+  if(rows[ni]) rail.scrollTop=Math.max(0,rows[ni].offsetTop-rail.clientHeight/2+rows[ni].offsetHeight/2);
+  var pill=document.getElementById('nextPill');
+  if(pill&&rows[ni]){pill.innerHTML='<span class="label-en">Next '+t12(m(TRIPS[ni][0]))+'</span><span class="label-bn">আগামী '+t12(m(TRIPS[ni][0]))+'</span>';pill.style.display='inline-flex';}
+})();
+</script>
+'''
+            h2 = h2.replace("</body>", renderer + "</body>", 1)
+            if h2 != h:
+                changed[path] = h2
+                n += 1
+    print(f"  official terminal timetable pages patched: {n}")
 
     # ---- write out
     print(f"\n== files changed: {len(changed)} ({'WRITE' if WRITE else 'DRY-RUN'}) ==")
