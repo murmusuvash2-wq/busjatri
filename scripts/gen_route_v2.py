@@ -717,6 +717,85 @@ def faq_html_v2(en, bn):
     parts += [det(q, a, "faq only-bn", i) for i, (q, a) in enumerate(bn)]
     return "".join(parts)
 
+
+ABOUT_STYLE = "<style>.bj-about{margin:26px 0 6px}.bj-about details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-about summary{padding:11px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-about summary::-webkit-details-marker{display:none}.bj-about summary::after{content:\"+\";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-about details[open] summary::after{content:\"\\2013\"}.bj-about .bjab{padding:2px 14px 12px;color:var(--ink-dim,#6f6653);font-size:.9rem;line-height:1.6}.bj-about .bjab p{margin:8px 0}</style>"
+
+
+def about_section(origin, destination, facts, major_stops):
+    """SEO 'About this route' block: collapsed <details> (screen stays clean) whose
+    text is still in the HTML source, so search engines can read it. Every fact is
+    derived from the same data as the timetable - nothing is invented."""
+    o, d = g.esc(origin), g.esc(destination)
+    ob, db = g.esc(bnplace(origin)), g.esc(bnplace(destination))
+    count = facts["count"]
+    pl = "" if count == 1 else "s"
+    def _np(x):
+        return g.norm_place(x)
+    via = [s for s in major_stops if _np(s) not in (_np(origin), _np(destination))][:8]
+    via_en = ", ".join(g.esc(s) for s in via)
+    via_bn = ", ".join(g.esc(bnplace(s)) for s in via)
+    ops = [x for x in facts["operators"] if x and x.strip() not in (".", "-", "—", "..")]
+    ops_txt = ", ".join(g.esc(x) for x in ops[:4])
+    kind_en, kind_bn = [], []
+    if facts["govt"]:
+        kind_en.append(f"{facts['govt']} government")
+        kind_bn.append(f"{bn_num(facts['govt'])}টি সরকারি")
+    priv = count - facts["govt"]
+    if priv > 0:
+        kind_en.append(f"{priv} private")
+        kind_bn.append(f"{bn_num(priv)}টি বেসরকারি")
+
+    en = []
+    en.append(f"The <b>{o} &rarr; {d}</b> bus route links {o} with {d} in West Bengal. "
+              f"BusJatri lists <b>{count}</b> bus service{pl} on this route, and this page shows each departure with the stops it passes.")
+    if via_en:
+        en.append(f"Most of these services run via {via_en}. That means you can also board or get down at any of these towns in between, "
+                  f"not only at the two end points &mdash; handy for shorter hops along the corridor.")
+    else:
+        en.append("No intermediate stoppages are recorded for this route yet, so the listed services appear to run direct between the two places.")
+    if facts["first"] is not None:
+        t = f"The earliest departure listed is at <b>{g.format_time(facts['first'])}</b>"
+        if facts["last"] is not None and facts["last"] != facts["first"]:
+            t += f" and the last at <b>{g.format_time(facts['last'])}</b>"
+        en.append(t + ".")
+    if facts["median"] is not None:
+        en.append(f"Most buses cover the journey in about <b>{g.fmt_duration(facts['median'])}</b>; the actual time varies with stops and traffic.")
+    if ops_txt:
+        kt = (" &mdash; roughly " + " and ".join(kind_en) + " service" + pl) if kind_en else ""
+        en.append(f"Operators listed include {ops_txt}{kt}." + (" AC coaches are also available on this route." if facts["ac"] else ""))
+    if not facts["fares"]:
+        en.append("Fares are not listed for this route yet; West Bengal bus fares depend on distance and bus type, so confirm the amount with the conductor.")
+
+    bn = []
+    bn.append(f"<b>{ob} &rarr; {db}</b> বাস রুটটি পশ্চিমবঙ্গের {ob}-কে {db}-এর সঙ্গে যুক্ত করে। "
+              f"বাসযাত্রী-তে এই রুটে <b>{bn_num(count)}</b>টি বাস সার্ভিস তালিকাভুক্ত আছে, এবং প্রতিটি ছাড়ার সময় ও তার পথের স্টপ এই পাতায় দেওয়া আছে।")
+    if via_bn:
+        bn.append(f"বেশিরভাগ বাস {via_bn} হয়ে যায়। তাই শুধু দু’প্রান্তে নয়, মাঝের এই শহরগুলোতেও বাসে ওঠা বা নামা যায় &mdash; কাছের যাত্রার জন্য সুবিধা।")
+    else:
+        bn.append("এই রুটে মাঝপথের স্টপ এখনও নথিভুক্ত নেই, তাই তালিকার বাসগুলো দু’জায়গার মধ্যে সরাসরি চলছে বলে মনে হয়।")
+    if facts["first"] is not None:
+        t = f"তালিকায় প্রথম বাস ছাড়ে <b>{g.format_time(facts['first'])}</b>-এ"
+        if facts["last"] is not None and facts["last"] != facts["first"]:
+            t += f" এবং শেষ বাস <b>{g.format_time(facts['last'])}</b>-এ"
+        bn.append(t + "।")
+    if facts["median"] is not None:
+        bn.append(f"বেশিরভাগ বাস যাত্রাপথ প্রায় <b>{g.fmt_duration(facts['median'])}</b>-এ কভার করে; স্টপ ও ট্রাফিক অনুযায়ী সময় বদলায়।")
+    if ops_txt:
+        kt = (" &mdash; মোটামুটি " + " ও ".join(kind_bn) + " সার্ভিস") if kind_bn else ""
+        bn.append(f"তালিকায় থাকা অপারেটরদের মধ্যে আছে {ops_txt}{kt}।" + (" এই রুটে AC বাসও পাওয়া যায়।" if facts["ac"] else ""))
+    if not facts["fares"]:
+        bn.append("এই রুটের ভাড়া এখনও তালিকাভুক্ত নয়; পশ্চিমবঙ্গে দূরত্ব ও বাসের ধরন অনুযায়ী ভাড়া হয়, তাই কন্ডাক্টরের কাছে জেনে নিন।")
+
+    def det(paras, cls, q):
+        inner = "".join(f"<p>{p}</p>" for p in paras)
+        return f'<details class="about-item {cls}"><summary>{q}</summary><div class="bjab">{inner}</div></details>'
+
+    return (ABOUT_STYLE + f"""<section class="seo-section bj-about" aria-label="About this route">
+  <h3 class="section-title">{L("About this route", "এই রুট সম্পর্কে")}</h3>
+  {det(en, "only-en", f"Read about the {o} to {d} bus route &mdash; stops, operators &amp; travel notes")}
+  {det(bn, "only-bn", f"{ob} থেকে {db} বাস রুট &mdash; স্টপ, অপারেটর ও যাত্রার টিপস")}
+</section>""")
+
 # ------------------------------------------------------------
 # v2 shell / header / footer
 # ------------------------------------------------------------
@@ -1062,7 +1141,8 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
   <div class="chip-row">{links2}</div>
 </section>"""
 
-    body = hero + timetable + alt_section + major_section + faq_section + reverse_section + related_section + to_section
+    about_html = about_section(origin, destination, _facts, major_stops)
+    body = hero + timetable + alt_section + major_section + faq_section + about_html + reverse_section + related_section + to_section
 
     schema = (
         g.faq_schema(en + bn) + "\n"
