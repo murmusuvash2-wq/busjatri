@@ -32,6 +32,8 @@ jobs:
           grep -q 'Durgapur' bus-time-table/bankura-to-karunamoyee.html
           grep -q 'Barjora' bus-time-table/bankura-to-durgapur.html
           grep -q 'Kolaghat' bus-time-table/kolkata-to-haldia.html
+          grep -q 'class="seo-section bj-about"' bus-time-table/bankura-to-durgapur.html
+          grep -q 'About this route' bus-time-table/bankura-to-durgapur.html
           echo "validation OK"
 
       - name: Commit and push if changed
@@ -42,6 +44,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "SBSTC via-fill: add via stops to SBSTC buses from sbstc_via_map.json"
+            git commit -m "SBSTC via-fill: add via stops + About-this-route block on route pages"
             git push
           fi
