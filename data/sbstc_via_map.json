@@ -1,0 +1,32 @@
+{
+ "note": "SBSTC corridor via-stops. Key = two corridor endpoints sorted alphabetically (normalised, lowercase). 'via' is in travel order starting from 'first'. Sources: RailYatri SBSTC operator routes, verified route list, or derived from SBSTC buses already carrying the same corridor.",
+ "corridors": [
+  {"a": "durgapur", "b": "kolkata", "via": ["Panagarh", "Bardhaman", "Saktigarh", "Dankuni", "Salap", "Kona Express More"], "source": "derived x1", "first": "durgapur"},
+  {"a": "burdwan", "b": "karunamoyee", "via": ["Dankuni", "Dunlop", "Airport", "Ultadanga", "Baguihati"], "source": "User", "first": "burdwan"},
+  {"a": "asansol", "b": "kolkata", "via": ["Raniganj", "Andal", "Durgapur", "Panagarh", "Bardhaman", "Dankuni", "Dunlop", "Shyambazar", "Esplanade"], "source": "User", "first": "asansol"},
+  {"a": "haldia", "b": "kolkata", "via": ["Mecheda", "Kolaghat"], "source": "derived x13", "first": "haldia"},
+  {"a": "bankura", "b": "karunamoyee", "via": ["Durgapur"], "source": "RailYatri", "first": "karunamoyee"},
+  {"a": "asansol", "b": "karunamoyee", "via": ["Raniganj", "Andal", "Durgapur", "Panagarh", "Bardhaman", "Dankuni", "Dunlop", "Airport", "Ultadanga", "Baguihati"], "source": "User", "first": "asansol"},
+  {"a": "arambag", "b": "kolkata", "via": ["Champadanga", "Dankuni", "Dakshineswar", "Dunlop", "Shyambazar", "Esplanade"], "source": "User", "first": "arambag"},
+  {"a": "digha", "b": "kolkata", "via": ["Karunamoyee", "Garia", "Mecheda", "Panskura", "Kolaghat", "Contai", "Ramnagar"], "source": "User", "first": "kolkata"},
+  {"a": "digha", "b": "garia", "via": ["Ramnagar", "Contai", "Nandakumar", "Panskura", "Mecheda", "Kolaghat", "Uluberia", "Santragachi", "Tollygunge", "Garia"], "source": "User", "first": "digha"},
+  {"a": "kolkata", "b": "midnapur", "via": ["Kolaghat"], "source": "derived x8", "first": "kolkata"},
+  {"a": "durgapur", "b": "karunamoyee", "via": ["Durgapur City Centre", "Panagarh", "Bardhaman", "Dankuni", "Dunlop", "Airport", "Ultadanga", "Baguihati"], "source": "User", "first": "durgapur"},
+  {"a": "barasat", "b": "digha", "via": ["Ramnagar", "Contai", "Mecheda", "Santragachi", "Dankuni", "Dunlop", "Airport", "Madhyamgram", "Barasat"], "source": "User", "first": "digha"},
+  {"a": "kolkata", "b": "medinipur", "via": ["Kolaghat"], "source": "derived x6", "first": "kolkata"},
+  {"a": "kolkata", "b": "suri", "via": ["Santragachi", "Dankuni", "Bardhaman", "Panagarh", "Illambazar", "Bolpur", "Suri"], "source": "User", "first": "kolkata"},
+  {"a": "digha", "b": "habra", "via": ["Ramnagar", "Contai", "Mecheda", "Santragachi", "Dankuni", "Dunlop", "Airport", "Madhyamgram", "Barasat", "Ashoknagar", "Habra"], "source": "User", "first": "digha"},
+  {"a": "bankura", "b": "durgapur", "via": ["Barjora", "Beliator"], "source": "derived x3", "first": "durgapur"},
+  {"a": "bankura", "b": "kolkata", "via": ["Maliara"], "source": "RailYatri", "first": "bankura"},
+  {"a": "karunamoyee", "b": "midnapur", "via": ["Kolaghat", "Esplanade"], "source": "derived x2", "first": "midnapur"},
+  {"a": "kolkata", "b": "purulia", "via": ["Asansol"], "source": "derived x3", "first": "purulia"},
+  {"a": "belpahari", "b": "kolkata", "via": ["Jhargram", "Lodhashuli"], "source": "derived x1", "first": "belpahari"},
+  {"a": "bankura", "b": "durgapur city centre", "via": ["Durgapur (Station)", "Barjora", "Beliator"], "source": "derived x1", "first": "durgapur city centre"},
+  {"a": "belpahari", "b": "jhargram", "via": ["Binpur", "Silda"], "source": "derived x1", "first": "jhargram"},
+  {"a": "jhalda", "b": "karunamoyee", "via": ["Durgapur", "Asansol", "Purulia"], "source": "RailYatri", "first": "karunamoyee"},
+  {"a": "durgapur", "b": "purulia", "via": ["Ladhurka", "Hura", "Puabagan", "Bankura", "Makurgram", "Beliatore", "Barjora"], "source": "derived x1", "first": "purulia"},
+  {"a": "asansol", "b": "bankura", "via": ["Raniganj", "Durgapur City Centre", "Durgapur (Station)", "Barjora", "Beliator"], "source": "derived x1", "first": "asansol"},
+  {"a": "bardhaman", "b": "purulia", "via": ["Ladhurka", "Hura", "Puabagan", "Bankura", "Makurgram", "Beliatore", "Barjora", "Durgapur (Station)", "Panagarh"], "source": "derived x1", "first": "purulia"},
+  {"a": "bandwan", "b": "jhargram", "via": ["Binpur", "Silda", "Belpahari", "Paradi"], "source": "derived x1", "first": "jhargram"}
+ ]
+}
