@@ -370,7 +370,45 @@ def main():
             n += 1
     print(f"  existing city pages repaired: {n}")
 
-    # ---- 7.5 bilingual journey/stop labels (all Kolkata city route pages)\n    print("== 7.5 bilingual journey/stop labels ==")\n    n = 0\n    I18N = r'''<script id="city-i18n-v1">\n(function(){\n  function syncJourneyLang(){\n    if(typeof STOPS === 'undefined' || !Array.isArray(STOPS) || !STOPS.length) return;\n    var bn=document.body.classList.contains('lang-bn');\n    var rows=document.querySelectorAll('#jStops .j-stop');\n    rows.forEach(function(row,i){\n      if(STOPS[i]){\n        var name=row.querySelector('.s-name');\n        if(name) name.textContent=bn ? STOPS[i][1] : STOPS[i][0];\n      }\n    });\n    var jr=document.getElementById('jRoute');\n    if(jr){\n      jr.textContent=(bn ? STOPS[0][1] : STOPS[0][0])+' → '+(bn ? STOPS[STOPS.length-1][1] : STOPS[STOPS.length-1][0]);\n    }\n  }\n  window.bjSyncJourneyLang=syncJourneyLang;\n  var obs=new MutationObserver(function(){syncJourneyLang()});\n  obs.observe(document.body,{attributes:true,attributeFilter:['class']});\n  document.addEventListener('click',function(e){\n    if(e.target && (e.target.id==='langBn' || e.target.id==='langEn')) setTimeout(syncJourneyLang,0);\n  });\n  setTimeout(syncJourneyLang,50);\n})();\n</script>\n'''\n    for f in sorted(glob.glob(str(ROOT / "bus-time-table" / "*.html"))):\n        h = changed.get(f) or Path(f).read_text(encoding="utf-8")\n        if "var TRIPS" not in h or 'id="city-i18n-v1"' in h: continue\n        if '</body>' not in h: continue\n        changed[f] = h.replace('</body>', I18N + '</body>', 1)\n        n += 1\n    print(f"  bilingual journey runtime added: {n}")\n\n    # ---- write out
+    # ---- 7.5 bilingual journey/stop labels (all Kolkata city route pages)
+    print("== 7.5 bilingual journey/stop labels ==")
+    n = 0
+    I18N = '''<script id="city-i18n-v1">
+(function(){
+  function syncJourneyLang(){
+    if(typeof STOPS === 'undefined' || !Array.isArray(STOPS) || !STOPS.length) return;
+    var bn=document.body.classList.contains('lang-bn');
+    var rows=document.querySelectorAll('#jStops .j-stop');
+    rows.forEach(function(row,i){
+      if(STOPS[i]){
+        var name=row.querySelector('.s-name');
+        if(name) name.textContent=bn ? STOPS[i][1] : STOPS[i][0];
+      }
+    });
+    var jr=document.getElementById('jRoute');
+    if(jr){
+      jr.textContent=(bn ? STOPS[0][1] : STOPS[0][0])+' → '+(bn ? STOPS[STOPS.length-1][1] : STOPS[STOPS.length-1][0]);
+    }
+  }
+  window.bjSyncJourneyLang=syncJourneyLang;
+  var obs=new MutationObserver(function(){syncJourneyLang()});
+  obs.observe(document.body,{attributes:true,attributeFilter:['class']});
+  document.addEventListener('click',function(e){
+    if(e.target && (e.target.id==='langBn' || e.target.id==='langEn')) setTimeout(syncJourneyLang,0);
+  });
+  setTimeout(syncJourneyLang,50);
+})();
+</script>
+'''
+    for f in sorted(glob.glob(str(ROOT / "bus-time-table" / "*.html"))):
+        h = changed.get(f) or Path(f).read_text(encoding="utf-8")
+        if "var TRIPS" not in h or 'id="city-i18n-v1"' in h: continue
+        if '</body>' not in h: continue
+        changed[f] = h.replace('</body>', I18N + '</body>', 1)
+        n += 1
+    print(f"  bilingual journey runtime added: {n}")
+
+    # ---- write out
     print(f"\n== files changed: {len(changed)} ({'WRITE' if WRITE else 'DRY-RUN'}) ==")
     if DRY:
         for p in sorted(changed): print("  ~", Path(p).name)
