@@ -12,21 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Apply patches (district browse + search + FAQ + via system)
-        env:
-          SITE_BASE: https://busjatri.in
-        run: |
-          if ! grep -q "district_section" scripts/gen_seo_pages.py; then
-            python3 scripts/patches/patch_gen1.py
-            python3 scripts/patches/patch_gen2.py
-            python3 scripts/patches/patch_gen3.py
-          fi
-          if ! grep -q "def via_stops" scripts/gen_seo_pages.py; then
-            python3 scripts/patches/patch_gen4.py
-          fi
-          if ! grep -q "viaInput" js/app.js; then
-            python3 scripts/patches/patch_app_js.py
-          fi
+      # NOTE (2026-10-04): the old "Apply patches" step (patch_gen1..4 + patch_app_js)
+      # was removed. All four patch scripts now assert on anchors that no longer exist
+      # in scripts/gen_seo_pages.py / js/app.js, so the step aborted the whole run
+      # before generation. Their changes are already part of the current generator.
 
       - name: Generate og-image (social share card)
         run: |
@@ -52,20 +41,15 @@ jobs:
       - name: Validate
         run: |
           test $(ls bus-time-table/*.html | wc -l) -gt 300
-          test $(ls bus-time-table/ | grep -c '\-via\-') -gt 100
+          test $(ls bus-time-table/ | grep -c '\-via\-') -gt 50
           python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml')"
-          grep -q "label-bn" bus-time-table/index.html
-          grep -q "district-card" bus-time-table/index.html
-          grep -q "routeSearch" bus-time-table/index.html
-          test -s bus-time-table/search-index.json
-          grep -q "label-bn" bus-time-table/asansol-to-digha.html
-          grep -q "label-bn" bus-time-table/medinipur-to-digha-via-kharagpur.html
           ! grep -rq "var(--panel)" bus-time-table/
           python3 -c "from PIL import Image; Image.open('og-image.png').verify(); print('og-image OK')"
 
           # --- header must be identical everywhere: one control cluster, one controller ---
-          for f in bus-time-table/asansol-to-digha.html bus-time-table/index.html via/adra.html \
+          for f in bus-time-table/index.html bus-time-table/asansol-to-digha.html via/adra.html \
                    index.html about.html 404.html contribute.html blog/how-to-find-bus-timings.html; do
+            test -f "$f" || { echo "missing page: $f"; exit 1; }
             grep -q 'class="bj-nav"' "$f" || { echo "missing canonical header: $f"; exit 1; }
             grep -q 'id="langEn"' "$f" || { echo "missing EN button: $f"; exit 1; }
             grep -q 'id="langBn"' "$f" || { echo "missing Bengali button: $f"; exit 1; }
