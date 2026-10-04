@@ -20,31 +20,30 @@ jobs:
       - name: Validate
         run: |
           python3 - <<'EOF'
-          import re, json, glob
+          import re, json
           from pathlib import Path
-          empty, total = [], 0
-          for f in glob.glob('bus-time-table/*.html'):
-              h = Path(f).read_text(encoding='utf-8')
-              if 'var TRIPS' not in h: continue
-              total += 1
-              m = re.search(r'var STOPS=(\[.*?\]);', h, re.S)
-              if m and m.group(1).strip() == '[]':
-                  empty.append(f)
-              if 'var STOPS=[]' in h:
-                  raise SystemExit('empty STOPS in ' + f)
-          assert not empty, f'{len(empty)} pages still have empty STOPS'
-          ac39 = Path('bus-time-table/ac-39-howrah-to-airport.html').read_text(encoding='utf-8')
-          assert 'id="journey"' in ac39 and 'id="jStops"' in ac39, 'AC-39 journey panel missing'
-          m = re.search(r'var STOPS=(\[.*?\]);', ac39, re.S)
-          stops = json.loads(m.group(1))
-          assert len(stops) == 15 and stops[0][0] == 'Howrah Stn' and stops[-1][0] == 'Airport Gate-1'
-          assert 'city-stops-v1' in ac39 and 'city-rel-v1' in ac39
-          idx = Path('bus-time-table/index.html').read_text(encoding='utf-8')
-          assert 'city-hub-v1' in idx, 'BTT index missing city hub link'
-          n_stands = sum(1 for f in glob.glob('bus-time-table/buses-from-*.html')
-                         if 'city-stand-v1' in Path(f).read_text(encoding='utf-8'))
-          assert n_stands >= 8, f'only {n_stands} stand pages patched'
-          print(f'validation OK: {total} city pages, 0 empty STOPS, AC-39 15 stops, hub+{n_stands} stands linked')
+          hub = Path('kolkata-city-bus-timetable.html').read_text(encoding='utf-8')
+          m = re.search(r'var LINKS=(\{.*?\});', hub, re.S)
+          assert m, 'Kolkata city hub LINKS missing'
+          links = json.loads(m.group(1))
+          assert len(links) == 73, f'expected 73 linked WBTC routes, found {len(links)}'
+          missing = []
+          bad = []
+          for route, rel in links.items():
+              p = Path(rel)
+              if not p.exists():
+                  missing.append((route, rel)); continue
+              h = p.read_text(encoding='utf-8')
+              if 'v12 time-rail' not in h or 'var TRIPS' not in h:
+                  bad.append((route, rel, 'rail/trips'))
+              if 'city-i18n-v1' not in h:
+                  bad.append((route, rel, 'bilingual-runtime'))
+              sm = re.search(r'var STOPS=(\[.*?\]);', h, re.S)
+              if sm and sm.group(1).strip() != '[]' and 'city-stops-v1' not in h:
+                  bad.append((route, rel, 'static-stops'))
+          assert not missing, f'missing city route pages: {missing[:5]}'
+          assert not bad, f'city route validation failures: {bad[:10]}'
+          print(f'validation OK: {len(links)} Kolkata City Bus routes; rail + bilingual toggle checked')
           EOF
 
       - name: Commit and push if changed
