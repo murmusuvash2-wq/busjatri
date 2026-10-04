@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Fill STOPS/LEGS on 58 empty Kolkata city-route pages + SEO/interlinking.
+"""Fill STOPS/LEGS on Kolkata city-route pages + SEO/interlinking + bilingual journey labels.
 
 1. 29 routes (58 pages) get stop-wise STOPS + LEGS data (stop-wise journey view).
    Sources: official WBTC/wbtconline route paths (direct matches) + corridor-
