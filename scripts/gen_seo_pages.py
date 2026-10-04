@@ -413,21 +413,27 @@ for (o_, t_), bs_ in route_meta.items():
 
 
 def header_html():
+    # Unified header - matches the homepage exactly (logo + Home/Routes + EN/বাংলা + theme).
+    # Ids langEn / langBn / themeBtn are the ones js/hdr.js wires, so the switch works
+    # the same way on every page.
     return """<header class="header">
-  <div class="container header-inner">
-    <a href="../index.html" class="logo" style="text-decoration:none;color:inherit">
-      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">
-
-
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
+    <a href="../index.html" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
       Bus<span>Jatri</span>
     </a>
-    <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
-      <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
-      <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
+    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>
+    <nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      <a href="../index.html" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Home</a>
+      <a href="./" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Routes</a>
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
     </nav>
   </div>
 </header>"""
-
 
 def footer_html():
     return """<footer class="footer">
@@ -477,6 +483,7 @@ def shell(title, description, canonical, body, schema=""):
 {body}
 </main>
 {footer_html()}
+<script defer src="../js/hdr.js?v=hdrunify20261002"></script>
 <script defer src="../js/route-slider.js"></script>
 </body>
 </html>"""

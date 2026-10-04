@@ -50,6 +50,13 @@ THEME_STYLE = ('width:30px;height:30px;border-radius:50%;border:1px solid var(--
                'align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto')
 
 
+# Legacy leftovers from the pre-unify pages: a SECOND theme button (id bjThemeBtn)
+# and one or more inline scripts that wired it. Both are dead now that js/hdr.js is
+# the single controller, so they are stripped from every page on every run.
+LEGACY_THEME_BTN_RE = re.compile(r'<button\b[^>]*id="bjThemeBtn"[^>]*>.*?</button>', re.S)
+LEGACY_THEME_SCRIPT_RE = re.compile(r'<script\b[^>]*>(?:(?!</script>).)*?bjThemeBtn(?:(?!</script>).)*?</script>', re.S)
+
+
 def canonical_controls(links_html: str) -> str:
     return (
         f'{HDR_CSS}\n'
@@ -86,11 +93,22 @@ def fix_logo_img(logo_html: str) -> str:
 
 def process(path: Path) -> str:
     html = path.read_text(encoding='utf-8', errors='ignore')
+
+    # 0. strip legacy duplicate theme button + its inline scripts (idempotent)
+    html, _c1 = LEGACY_THEME_BTN_RE.subn('', html)
+    html, _c2 = LEGACY_THEME_SCRIPT_RE.subn('', html)
+    cleaned = bool(_c1 or _c2)
+
     m = re.search(r'<header[^>]*>.*?</header>', html, re.S)
     if not m:
+        if cleaned:
+            path.write_text(html, encoding='utf-8')
         return 'no-header'
     header = m.group(0)
     if 'bj-nav' in header:
+        if cleaned:
+            path.write_text(html, encoding='utf-8')
+            return 'cleaned'
         return 'already'
 
     # 1. logo block (anchor or div with class="logo")
