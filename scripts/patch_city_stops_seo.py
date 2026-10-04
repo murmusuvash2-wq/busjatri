@@ -17,7 +17,7 @@ import json, re, sys, glob
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DRY = "--write" not in sys.argv
+DRY = "--write" not in sys.argv  # route-page rebuild runs through CI
 WRITE = not DRY
 
 # ---------------------------------------------------------------- Bengali ----
