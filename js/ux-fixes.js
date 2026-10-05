@@ -87,83 +87,9 @@
     document.querySelectorAll('.search-actions .browse-btn').forEach(function (b) { b.remove(); });
   }
 
-  /* ---- 3. Custom autocomplete (replaces datalist overlay) ---- */
-  var LIMIT = 8;
-  var NAMES = null;
-  function stopNames() {
-    if (!NAMES) {
-      var src = (typeof STOPS !== 'undefined' && STOPS) || {};
-      NAMES = Object.values(src).map(function (s) { return s && s.name; }).filter(Boolean);
-    }
-    return NAMES;
-  }
-  function findMatches(q) {
-    var t = (q || '').toLowerCase().trim();
-    if (!t) return [];
-    var starts = [], has = [];
-    var names = stopNames();
-    for (var i = 0; i < names.length; i++) {
-      var ln = names[i].toLowerCase();
-      if (ln.indexOf(t) === 0) {
-        starts.push(names[i]);
-        if (starts.length >= LIMIT) break;
-      } else if (ln.indexOf(t) !== -1) {
-        has.push(names[i]);
-      }
-    }
-    return starts.concat(has).slice(0, LIMIT);
-  }
-  function isSearchInput(el) {
-    return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));
-  }
-  function hideDrop() {
-    document.querySelectorAll('.ac-drop').forEach(function (d) { d.remove(); });
-  }
-  function showDrop(input) {
-    hideDrop();
-    var m = findMatches(input.value);
-    if (!m.length) return;
-    var field = input.closest('.search-field');
-    if (!field) return;
-    var d = document.createElement('div');
-    d.className = 'ac-drop';
-    d.innerHTML = m.map(function (n) {
-      return '<div class="ac-item">' + escHtml(n) + '</div>';
-    }).join('');
-    field.appendChild(d);
-  }
-  var acTimer = null;
-  document.addEventListener('input', function (e) {
-    if (!isSearchInput(e.target)) return;
-    if (acTimer) clearTimeout(acTimer);
-    var t = e.target;
-    acTimer = setTimeout(function () { showDrop(t); }, 110);
-  });
-  document.addEventListener('click', function (e) {
-    var item = e.target.closest ? e.target.closest('.ac-item') : null;
-    if (item) {
-      var field = item.closest('.search-field');
-      var input = field && field.querySelector('input');
-      if (input) {
-        input.value = item.textContent;
-        hideDrop();
-        input.focus();
-      }
-      return;
-    }
-    if (isSearchInput(e.target)) { showDrop(e.target); return; }
-    hideDrop();
-  });
-  /* native datalist off — custom dropdown does not block other fields */
-  function stripDatalist() {
-    ['fromInput', 'toInput', 'stopInput'].forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) el.removeAttribute('list');
-    });
-    var dl = document.getElementById('stopList');
-    if (dl) dl.remove();
-  }
-
+  /* ---- 3. Autocomplete ownership moved to stop-search-all.js ----
+     This file no longer installs a second autocomplete listener. Keeping a
+     single owner prevents duplicate dropdown handlers and race conditions. */
   /* ---- 4. Show-all-stops without history pollution ---- */
   function fixShowAll() {
     document.querySelectorAll('.show-all, .show-more-btn').forEach(function (b) {
