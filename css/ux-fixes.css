@@ -115,3 +115,6 @@
    Old .map-btn rule in style.css has margin 4px 0 18px which pushed
    the share-row map button down. Grid row items need margin 0. */
 .wa-row .map-btn{margin:0}
+
+/* Phase 2: keyboard-selected autocomplete item */
+.ac-item.is-active,.ac-item:focus{background:rgba(184,121,31,.12);outline:2px solid var(--amber,#b8791f);outline-offset:-2px}
