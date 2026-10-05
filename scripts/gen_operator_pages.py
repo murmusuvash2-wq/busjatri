@@ -298,7 +298,7 @@ def build_page(op, stems):
     else:
         board = ("<section id='bjLive' style='margin-top:16px'></section>" +
             "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-            "<script src='../js/lang.js?v=lang20261005a'></script><script src='../js/op-board.js?v=opsf20261005c' defer></script>")
+            "<script src='../js/lang.js?v=lang20261005b'></script><script src='../js/op-board.js?v=opsf20261005c' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:
@@ -359,7 +359,7 @@ def build_page(op, stems):
     # Shared Bengali place-name map for every operator's departure board.
     # This translates place names embedded in bus names while preserving operator/brand names.
     body = body.replace('<script src="../js/op-board.js?v=opd20260926"></script>',
-                        '<script src="../js/lang.js?v=lang20261005a"></script>\n'
+                        '<script src="../js/lang.js?v=lang20261005b"></script>\n'
                         '<script>window.bjStops = ' + SBSTC_STOPS_JSON + ';</script>\n'
                         '<script src="../js/op-board.js?v=opsf20261005c"></script>', 1)
     return apply_sbstc_toggle(body, op)
