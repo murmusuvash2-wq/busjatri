@@ -40,8 +40,7 @@ jobs:
               def repl(match):
                   block = match.group(0)
                   lower = block.lower()
-                  if ('function toggletheme(' in lower and 'function setlang(' in lower
-                      and ('var moon' in lower or 'id="langen"' in lower or "id='langen'" in lower)):
+                  if ('function toggletheme(' in lower and 'function setlang(' in lower):
                       return ''
                   return block
               return pattern.sub(repl, html)
@@ -99,6 +98,15 @@ jobs:
               print(p)
           if len(changed) > 25:
               print('...')
+
+      - name: Verify no legacy header controllers remain in generated HTML
+        shell: bash
+        run: |
+          if grep -RIl --include='*.html' -E 'function[[:space:]]+(toggleTheme|setLang)[[:space:]]*\\(' . | grep -v '^./.git/' | head -1; then
+            echo "Legacy header language/theme controller still exists in generated HTML."
+            exit 1
+          fi
+          echo "Generated HTML is using the central language/header controllers."
 
       - name: Commit generated HTML changes
         shell: bash
