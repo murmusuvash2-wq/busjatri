@@ -83,7 +83,8 @@ body.lang-bn .only-bn{display:block}
 body:not(.lang-bn) .hbn{display:none}
 .day-group{margin:20px 0 8px;font-size:12px;font-weight:800;letter-spacing:.08em;color:var(--ink-dim);border-bottom:1px solid var(--line-strong);padding-bottom:4px}
 .idx-letter{margin:22px 0 8px;font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--amber-ink)}
-</style></head>
+</style><script defer src="../js/lang.js?v=lang20261005c"></script>
+</head>
 <body>
 <header class="header">
   <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
@@ -118,5 +119,5 @@ function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(b
 function toggleTheme(){var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('bj-theme',next);updateThemeIcon(next);}
 function setLang(l){document.body.className=l==='bn'?'lang-bn':'';localStorage.setItem('bj-lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langBN').classList.toggle('active',l==='bn');}
 (function(){var t=localStorage.getItem('bj-theme');if(t)document.documentElement.setAttribute('data-theme',t);updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));var l=localStorage.getItem('bj-lang');if(l&&l!=='en'){setLang(l);}})();</script>
-<script src="../js/hdr.js?v=hdrunify20261002"></script>
+<script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body></html>

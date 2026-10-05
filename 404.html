@@ -90,6 +90,7 @@ body:not(.lang-bn) .hbn{display:none}
   gtag('js', new Date());
   gtag('config', 'G-L4E3D1YX9X');
 </script>
+<script defer src="js/lang.js?v=lang20261005c"></script>
 </head>
 <body>
 <header class="header">
@@ -130,5 +131,5 @@ function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(b
 function toggleTheme(){var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('bj-theme',next);localStorage.setItem('seo-theme',next);updateThemeIcon(next);}
 function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');localStorage.setItem('bj-lang',l);localStorage.setItem('seo-lang',l);document.getElementById('langEn').classList.toggle('active',l==='en');document.getElementById('langBn').classList.toggle('active',l==='bn');}
 (function(){var t=localStorage.getItem('bj-theme');if(t)document.documentElement.setAttribute('data-theme',t);updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));var l=localStorage.getItem('bj-lang');if(l&&l!=='en'){setLang(l);}})();</script>
-<script src="js/hdr.js?v=hdrunify20261002"></script>
+<script src="js/hdr.js?v=hdrunify20261005d"></script>
 </body></html>
