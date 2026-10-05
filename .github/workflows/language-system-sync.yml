@@ -1,0 +1,92 @@
+name: Language system generated-page sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/lang.js'
+      - 'js/hdr.js'
+      - 'scripts/gen_route_v2.py'
+      - 'scripts/gen_via_v2.py'
+      - 'scripts/gen_btt_v2.py'
+      - 'scripts/gen_stand_v2.py'
+      - 'scripts/gen_via_stop_v2.py'
+      - '.github/workflows/language-system-sync.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Normalize generated HTML language assets
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          roots = [Path('.')]
+          changed = []
+
+          for p in Path('.').rglob('*.html'):
+              if '.git' in p.parts:
+                  continue
+              s = p.read_text(encoding='utf-8')
+              original = s
+
+              depth = len(p.parent.parts)
+              rel = '../' * depth
+              lang_src = rel + 'js/lang.js?v=lang20261005c'
+              hdr_src = rel + 'js/hdr.js?v=hdrunify20261005d'
+
+              # All generated/legacy header references use the current controller.
+              s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/hdr\.js)\?v=[^"\']+',
+                         lambda m: m.group('prefix') + '?v=hdrunify20261005d', s)
+
+              # Route/SEO pages get a fresh seo-page asset where one already exists.
+              s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/seo-page\.js)\?v=[^"\']+',
+                         lambda m: m.group('prefix') + '?v=spg20261005c', s)
+
+              has_lang = 'js/lang.js?v=' in s
+              has_hdr = 'js/hdr.js?v=' in s
+              has_seo = 'js/seo-page.js?v=' in s
+
+              if (has_hdr or has_seo) and not has_lang:
+                  marker = '</head>'
+                  if marker in s:
+                      s = s.replace(marker, '<script defer src="' + lang_src + '"></script>\n' + marker, 1)
+                  else:
+                      s = s.replace('</body>', '<script defer src="' + lang_src + '"></script>\n</body>', 1)
+
+              # SEO route pages that previously had only seo-page.js now also use
+              # the unified header controller.
+              has_hdr = 'js/hdr.js?v=' in s
+              has_seo = 'js/seo-page.js?v=' in s
+              if has_seo and not has_hdr:
+                  s = s.replace('</body>', '<script src="' + hdr_src + '"></script>\n</body>', 1)
+
+              if s != original:
+                  p.write_text(s, encoding='utf-8')
+                  changed.append(str(p))
+
+          print('normalized', len(changed), 'HTML files')
+          for p in changed[:25]:
+              print(p)
+          if len(changed) > 25:
+              print('...')
+
+      - name: Commit generated HTML changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add '*.html' '**/*.html'
+          if git diff --cached --quiet; then
+            echo "No generated HTML changes."
+            exit 0
+          fi
+          git commit -m "Sync generated pages with central language system"
+          git push
