@@ -115,3 +115,17 @@
    Old .map-btn rule in style.css has margin 4px 0 18px which pushed
    the share-row map button down. Grid row items need margin 0. */
 .wa-row .map-btn{margin:0}
+
+
+/* Phase 2 foundation — search accessibility + touch feedback */
+.ac-drop{overscroll-behavior:contain;scrollbar-width:thin}
+.ac-item{min-height:42px;display:flex;align-items:center;box-sizing:border-box}
+.ac-item.is-active{background:color-mix(in srgb,var(--amber,#b8791f) 14%,transparent);color:var(--ink,#221c16);outline:none}
+.search-field input:focus{border-color:var(--amber,#b8791f);box-shadow:0 0 0 3px color-mix(in srgb,var(--amber,#b8791f) 16%,transparent)}
+@media(max-width:759px){
+  .ac-item{min-height:46px;padding:12px 14px}
+  .search-field input{min-height:44px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ac-drop,.ac-item{scroll-behavior:auto}
+}
