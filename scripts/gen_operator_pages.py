@@ -115,7 +115,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="stylesheet" href="../css/seo.css?v=opt20260920">
+<link rel="stylesheet" href="../css/seo.css?v=opt20261005a">
 <link rel="stylesheet" href="../css/extras.css">
 <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{{"@type": "ListItem", "position": 1, "name": "Home", "item": "{BASE}/"}}, {{"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "{BASE}/bus-time-table/"}}, {{"@type": "ListItem", "position": 3, "name": "{h1}", "item": "{BASE}/bus-time-table/{stem}.html"}}]}}</script>
 {faq_schema}
@@ -133,9 +133,10 @@ HEAD = '''<!DOCTYPE html>
       <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Home</span><span class="label-bn">হোম</span></a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Routes</span><span class="label-bn">রুট</span></a>
       <span class="lang-group" style="display:flex;gap:4px;margin-left:4px">
-        <button class="lang-btn" id="langEN" onclick="setLang('en')" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
+        <button type="button" class="lang-btn" id="langEn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
+        <button type="button" class="lang-btn" id="langBn" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
       </span>
+      <button type="button" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#ccc);background:transparent;color:var(--ink,#211c16);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
     </nav>
   </div>
 </header>
@@ -149,8 +150,8 @@ HEAD = '''<!DOCTYPE html>
 
 ROW_T = '''<a href="{href}" class="op-card">
   <span class="rt">{fr} <span class="arr">→</span> {to}</span>
-  <span class="meta">🚌 {n} buses</span>
-  <span class="go">View Schedule ›</span>
+  <span class="meta">🚌 {n} <span class="label-en">buses</span><span class="label-bn">টি বাস</span></span>
+  <span class="go"><span class="label-en">View Schedule ›</span><span class="label-bn">সময়সূচি দেখুন ›</span></span>
 </a>'''
 
 FOOT = '''<footer class="footer">
@@ -168,7 +169,7 @@ FOOT = '''<footer class="footer">
   </div>
 </footer>
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
-<script>(function(){function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');var a=document.getElementById('langEN'),b=document.getElementById('langBN');if(a)a.style.background=l==='en'?'var(--amber-soft,#f6e7c6)':'transparent';if(b)b.style.background=l==='bn'?'var(--amber-soft,#f6e7c6)':'transparent';try{localStorage.setItem('seo-lang',l);}catch(e){}}window.setLang=setLang;var sv=null;try{sv=localStorage.getItem('seo-lang');}catch(e){}setLang(sv||'en');})();</script>
+<script src="../js/hdr.js?v=hdrunify20261005a"></script>
 </body>
 </html>
 '''
@@ -207,12 +208,12 @@ def build_page(op, stems):
             chips.append(f'<span class="via-chip" style="--i:{min(i, 15)}">{esc(label)}</span>')
 
 
-    popular = f'''<h2 class="op-h2">Popular {esc(op['name'])} Routes</h2>
+    popular = f'''<h2 class="op-h2"><span class="label-en">Popular {esc(op['name'])} Routes</span><span class="label-bn">{op['bn']} জনপ্রিয় রুট</span></h2>
 <div class="op-grid">
 {''.join(rows)}
 </div>'''
 
-    chiprow = f'''<h2 class="op-h2" style="margin-top:26px">All Destinations</h2>
+    chiprow = f'''<h2 class="op-h2" style="margin-top:26px"><span class="label-en">All Destinations</span><span class="label-bn">সব গন্তব্য</span></h2>
 <div class="chip-row" aria-label="All destinations">{''.join(chips)}</div>'''
 
     op_info = OPS_INFO.get(op["stem"], ("bus services", "বাস পরিষেবা"))
@@ -426,19 +427,12 @@ def apply_sbstc_toggle(body, op):
     b = b.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">',
                   '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
                   '<meta name="color-scheme" content="light dark">', 1)
-    moon = ('<button id="themeBtn" class="lang-btn" aria-label="Theme" style="background:transparent;'
-            'border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;'
-            'font-weight:700;font-size:12px;font-family:inherit;display:inline-flex;align-items:center">'
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
-            'stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">'
-            '<path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>')
-    b = b.replace('<span class="lang-group"', moon + '\n        <span class="lang-group"', 1)
-    b = b.replace("id=\"langEN\" onclick=\"setLang('en')\"", 'id="langEn"', 1)
-    b = b.replace("id=\"langBN\" onclick=\"setLang('bn')\"", 'id="langBn"', 1)
-    # swap the inline setLang IIFE for the site-standard controls script
-    b = re.sub(r'<script>\(function\(\)\{function setLang[\s\S]*?\}\)\(\);</script>',
-               '<script src="../js/seo-page.js?v=spg20260926" defer></script>', b, count=1)
-    assert 'seo-page.js' in b and 'function setLang' not in b
+    # Canonical theme/language controls are already in HEAD; do not inject a second theme button.
+    # Shared hdr.js now owns the canonical language/theme controls.
+    # SBSTC keeps seo-page.js only for its route-specific Bengali enhancements.
+    if 'seo-page.js?v=spg20260926' not in b:
+        b = b.replace('</main>', '<script src="../js/seo-page.js?v=spg20260926" defer></script>\n</main>', 1)
+    assert 'seo-page.js' in b
 
     # ---- hero: badge + bilingual ----
     old_h1 = '<h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">SBSTC Buses</h1>'
