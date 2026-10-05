@@ -162,29 +162,8 @@ function fil(){
   document.getElementById('scnt').textContent=isBn()?bnd(shown)+' / '+bnd(cs.length):shown+' of '+cs.length;
   var b=document.getElementById('smore');if(b){b.style.display=shown>=cs.length?'none':'';}
 }
-function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(btn)btn.innerHTML=theme==='dark'?SUN:MOON;}
-function toggleTheme(){
-  var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
-  var next=cur==='dark'?'light':'dark';
-  document.documentElement.setAttribute('data-theme',next);
-  localStorage.setItem('bj-theme',next);localStorage.setItem('seo-theme',next);
-  updateThemeIcon(next);
-}
-function setLang(l){
-  document.body.classList.toggle('lang-bn',l==='bn');
-  localStorage.setItem('bj-lang',l);localStorage.setItem('seo-lang',l);
-  document.getElementById('langEN').classList.toggle('active',l==='en');
-  document.getElementById('langBN').classList.toggle('active',l==='bn');
-  var q=document.getElementById('q');if(q){q.placeholder=l==='bn'?PH.bn:PH.en;}if(window.rtPH){rtPH();}
-  srefresh();
-}
-(function(){
-  var t=localStorage.getItem('bj-theme')||localStorage.getItem('seo-theme');
-  if(t)document.documentElement.setAttribute('data-theme',t);
-  updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
-  var l=localStorage.getItem('bj-lang')||localStorage.getItem('seo-lang');
-  if(l&&l!=='en'){setLang(l);}else{var q=document.getElementById('q');if(q)q.placeholder=PH.en;}
-})();"""
+document.addEventListener('bj:langchange',function(){srefresh();});
+"""
 
 
 
@@ -459,10 +438,10 @@ def generate_btt_page():
       Bus<span>Jatri</span>
     </a>
     <div class="header-actions">
-      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle dark mode"></button>
       <div class="lang-group">
-        <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')">বাংলা</button>
+        <button class="lang-btn active" id="langEN">EN</button>
+        <button class="lang-btn" id="langBN">বাংলা</button>
       </div>
     </div>
   </div>
@@ -485,6 +464,8 @@ def generate_btt_page():
 <footer>{n} bus stands · {r:,} routes · {b:,} buses · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>{js}</script>
+<script src="../js/lang.js?v=lang20261005c"></script>
+<script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body></html>""".format(header=header_html,
                          home=L("Home", "হোম"), btt=L("All Bus Timetables", "সব বাসের সময়সূচী"),
                          h1=L("All Bus Timetables", "সব বাসের সময়সূচী"),
