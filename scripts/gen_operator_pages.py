@@ -150,8 +150,8 @@ HEAD = '''<!DOCTYPE html>
 
 ROW_T = '''<a href="{href}" class="op-card">
   <span class="rt">{fr} <span class="arr">→</span> {to}</span>
-  <span class="meta">🚌 {n} buses</span>
-  <span class="go">View Schedule ›</span>
+  <span class="meta">🚌 {n} <span class="label-en">buses</span><span class="label-bn">টি বাস</span></span>
+  <span class="go"><span class="label-en">View Schedule ›</span><span class="label-bn">সময়সূচি দেখুন ›</span></span>
 </a>'''
 
 FOOT = '''<footer class="footer">
@@ -208,7 +208,7 @@ def build_page(op, stems):
             chips.append(f'<span class="via-chip" style="--i:{min(i, 15)}">{esc(label)}</span>')
 
 
-    popular = f'''<h2 class="op-h2"><span class="label-en">Popular {esc(op['name'])} Routes</span><span class="label-bn">{bn} জনপ্রিয় রুট</span></h2>
+    popular = f'''<h2 class="op-h2"><span class="label-en">Popular {esc(op['name'])} Routes</span><span class="label-bn">{op['bn']} জনপ্রিয় রুট</span></h2>
 <div class="op-grid">
 {''.join(rows)}
 </div>'''
@@ -265,12 +265,12 @@ def build_page(op, stems):
         "<section class='bj-op-search'>" +
         "<div class='lb'><span class='label-en'>Search " + esc(op['name']) + " buses</span><span class='label-bn'>" + bn_short + " বাস খুঁজুন</span></div>" +
         "<div class='row'>" +
-        "<label class='op-field-label'><span class='label-en'>From</span><span class='label-bn'>কোথা থেকে</span></label><input id='bjFrom' type='text' placeholder='e.g. " + ph_fr + "' autocomplete='off'>" +
+        "<input id='bjFrom' type='text' placeholder='e.g. " + ph_fr + "' autocomplete='off'>" +
         "<button class='swap' onclick='bjSwap()' title='Swap' type='button'>⇆</button>" +
-        "<label class='op-field-label'><span class='label-en'>To</span><span class='label-bn'>কোথায়</span></label><input id='bjTo' type='text' placeholder='e.g. " + ph_to + "' autocomplete='off'>" +
+        "<input id='bjTo' type='text' placeholder='e.g. " + ph_to + "' autocomplete='off'>" +
         "</div>" +
         "<div class='row' style='margin-top:8px'>" +
-        "<label class='op-field-label'><span class='label-en'>Date</span><span class='label-bn'>তারিখ</span></label><input id='bjDate' type='date' style='flex:1.2'>" +
+        "<input id='bjDate' type='date' style='flex:1.2'>" +
         "<button class='go' style='margin-top:0;width:auto;flex:1.4' onclick='bjSearchGo()' type='button'>🚊 <span class='label-en'>Search</span><span class='label-bn'>সার্চ করুন</span></button>" +
         "</div>" +
         off_link +
@@ -278,8 +278,7 @@ def build_page(op, stems):
         "<style>" +
         ".bj-op-search{background:var(--surface,#fffcf4);border:1.5px solid var(--line,rgba(33,28,22,.15));border-radius:14px;padding:16px;margin:20px 0 14px;box-shadow:0 2px 12px rgba(33,28,22,.06)}" +
         ".bj-op-search .lb{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--amber-ink,#6b4610);text-transform:uppercase;margin-bottom:10px}" +
-        ".bj-op-search .row{display:flex;gap:8px;align-items:stretch;position:relative}" +
-         ".bj-op-search .op-field-label{position:absolute;left:8px;top:-7px;padding:0 5px;background:var(--surface,#fffcf4);font-size:10px;font-weight:700;color:var(--amber-ink,#6b4610);z-index:1}" +
+        ".bj-op-search .row{display:flex;gap:8px;align-items:stretch}" +
         ".bj-op-search input{flex:1;min-width:0;padding:12px;border-radius:10px;border:1.5px solid var(--line,#ccc);background:var(--bg,#fff);font:inherit;font-size:15px}" +
         ".bj-op-search input:focus{outline:none;border-color:var(--amber,#b8791f)}" +
         ".bj-op-search .swap{flex:none;width:40px;border-radius:10px;border:1.5px solid var(--line,#ccc);background:var(--surface,#fffcf4);font-size:16px;cursor:pointer;color:var(--amber,#b8791f)}" +
