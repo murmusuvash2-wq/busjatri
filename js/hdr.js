@@ -43,6 +43,10 @@
   }
 
   function applyLang(bn) {
+    if (window.BJLang) {
+      window.BJLang.setLang(bn ? 'bn' : 'en');
+      return;
+    }
     document.body.classList.toggle('lang-bn', bn);
     var en = firstById(['langEn', 'langEN']);
     var bnBtn = firstById(['langBn', 'langBN']);
@@ -57,7 +61,6 @@
     var lang = bn ? 'bn' : 'en';
     write('bj-lang', lang);
     write('seo-lang', lang);
-    /* Homepage app.js listens for this event and rerenders dynamic content. */
     try { document.dispatchEvent(new CustomEvent('bj:langchange', { detail: { lang: lang } })); } catch (e) {}
   }
 

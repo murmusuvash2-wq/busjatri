@@ -28,45 +28,14 @@ const ICONS = {
   data: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Z"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>',
 };
 
-const BN_PLACES = {
-  'Bankura': 'বাঁকুড়া', 'Digha': 'দীঘা', 'Kolkata': 'কলকাতা', 'Medinipur': 'মেদিনীপুর',
-  'Bardhaman': 'বর্ধমান', 'Burdwan': 'বর্ধমান', 'Kharagpur': 'খড়্গপুর', 'Siliguri': 'শিলিগুড়ি',
-  'Cooch Behar': 'কোচবিহার', 'Asansol': 'আসানসোল', 'Durgapur': 'দুর্গাপুর', 'Purulia': 'পুরুলিয়া',
-  'Jhargram': 'ঝাড়গ্রাম', 'Contai': 'কাঁথি', 'Tamluk': 'তমলুক', 'Bishnupur': 'বিষ্ণুপুর',
-  'Khatra': 'খাতড়া', 'Alipurduar': 'আলিপুরদুয়ার', 'Dinhata': 'দিনহাটা', 'Mathabhanga': 'মাথাভাঙ্গা',
-  'Ghatal': 'ঘাটাল', 'Nabadwip': 'নবদ্বীপ', 'Arambagh': 'আরামবাগ', 'Manbazar': 'মানবাজার',
-  'Tarkeshwar': 'তারকেশ্বর', 'Mecheda': 'মেছেদা', 'Haldia': 'হলদিয়া', 'Baruipur': 'বারুইপুর',
-  'Esplanade': 'এসপ্ল্যানেড', 'Howrah': 'হাওড়া', 'Ranaghat': 'রানাঘাট', 'Krishnanagar': 'কৃষ্ণনগর',
-  'Malda': 'মালদা', 'Raiganj': 'রায়গঞ্জ', 'Balurghat': 'বালুরঘাট', 'Suri': 'সিউড়ি',
-  'Sainthia': 'সাঁইথিয়া', 'Bolpur': 'বোলপুর', 'Kalna': 'কালনা', 'Guskara': 'গুসকরা',
-  'Katwa': 'কাটোয়া', 'Bandel': 'বান্দেল', 'Chandannagar': 'চন্দননগর', 'Kalyani': 'কল্যাণী',
-  'Barasat': 'বারাসাত', 'Barrackpore': 'ব্যারাকপুর', 'Garia': 'গড়িয়া', 'Berhampore': 'বহরমপুর',
-  'Berhampur': 'বহরমপুর', 'Salar': 'সালার', 'Kirnahar': 'কীর্ণাহার', 'Karunamoyee': 'করুণাময়ী',
-  'Belpahari': 'বেলপাহাড়ি', 'Sonamukhi': 'সোনামুখী', 'Patrasayer': 'পাত্রসায়ের', 'Onda': 'অন্ড়াল',
-  'Mukutmanipur': 'মুকুটমণিপুর', 'Ranibandh': 'রানিবাঁধ', 'Simlapal': 'সিমলাপাল',
-  'Kharagpur (Town)': 'খড়্গপুর (টাউন)', 'Egra': 'এগরা', 'Ramnagar': 'রামনগর', 'Kalinagar': 'কালীনগর',
-  'Kakdwip': 'কাকদ্বীপ', 'Namkhana': 'নামখানা', 'Falta': 'ফল্টা', 'Diamond Harbour': 'ডায়মন্ড হারবার',
-  'Jaynagar': 'জয়নগর', 'Bagnan': 'বাগনান', 'Amtala': 'আমতলা', 'Behala': 'বেহালা',
-  'Nabadwip Dham': 'নবদ্বীপ ধাম', 'Sainthia Town': 'সাঁইথিয়া টাউন', 'Panagarh': 'পানাগড়়',
-  'Durgapur (Station)': 'দুর্গাপুর (স্টেশন)', 'Bishnupur (Bankura)': 'বিষ্ণুপুর (বাঁকুড়া)',
-  'Durgapur (City Center)': 'দুর্গাপুর (সিটি সেন্টার)', 'Durgapur (Bus Stand)': 'দুর্গাপুর (বাস স্ট্যান্ড)', 'Durgapur (Expressway)': 'দুর্গাপুর (এক্সপ্রেসওয়ে)',
-  'Bankura (Bypass)': 'বাঁকুড়া (বাইপাস)', 'Bankura (Bus Stand)': 'বাঁকুড়া (বাস স্ট্যান্ড)', 'Bankura (Station)': 'বাঁকুড়া (স্টেশন)',
-  'Bankura (Pump More)': 'বাঁকুড়া (পাম্প মোড়)', 'Bankura (More)': 'বাঁকুড়া (মোড়)', 'Bankura (Satighat Bridge)': 'বাঁকুড়া (সতীঘাট ব্রিজ)',
-  'Kolkata (Karunamoyee)': 'কলকাতা (করুণাময়ী)', 'Kolkata (Esplanade)': 'কলকাতা (এসপ্ল্যানেড)', 'Kolkata (Dharmatala)': 'কলকাতা (ধর্মতলা)', 'Kolkata (Babughat)': 'কলকাতা (বাবুঘাট)',
-};
+const BN_PLACES = (window.BJLang && window.BJLang.places) || {};
+const BN_PLACE_KEYS = (window.BJLang && window.BJLang.keys) || [];
 function pn(s) {
   return (LANG === 'bn' && BN_PLACES[s]) ? BN_PLACES[s] : s;
 }
-// Translate place names embedded inside bus names too (e.g. "SBSTC Kolkata-Bankura")
-// without altering operator/brand text such as SBSTC, NBSTC, Volvo, etc.
-const BN_PLACE_KEYS = Object.keys(BN_PLACES).sort((a, b) => b.length - a.length);
 function bnBusName(s) {
-  let r = String(s == null ? '' : s);
-  if (LANG !== 'bn') return r;
-  for (const k of BN_PLACE_KEYS) {
-    if (r.includes(k)) r = r.split(k).join(BN_PLACES[k]);
-  }
-  return r;
+  if (window.BJLang) return window.BJLang.translate(s);
+  return String(s == null ? '' : s);
 }
 
 const PLACE_ICONS = {
@@ -179,27 +148,19 @@ function ensureFullData() {
 }
 
 function setLang(l) {
+  if (window.BJLang) return window.BJLang.setLang(l);
   LANG = l === 'bn' ? 'bn' : 'en';
   document.body.classList.toggle('lang-bn', LANG === 'bn');
-  ['langEN', 'langEn'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.toggle('active', LANG === 'en');
-  });
-  ['langBN', 'langBn'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.classList.toggle('active', LANG === 'bn');
-  });
-  try {
-    localStorage.setItem('bj-lang', LANG);
-    localStorage.setItem('seo-lang', LANG);
-  } catch (e) {}
   render();
 }
 
-/* Keep the homepage renderer's internal LANG state in sync with the shared header. */
+/* Central language system owns the state; homepage only updates its renderer. */
 document.addEventListener('bj:langchange', function (ev) {
   var next = ev && ev.detail && ev.detail.lang === 'bn' ? 'bn' : 'en';
-  if (LANG !== next) setLang(next);
+  if (LANG !== next) {
+    LANG = next;
+    render();
+  }
 });
 
 function toggleTheme() {
