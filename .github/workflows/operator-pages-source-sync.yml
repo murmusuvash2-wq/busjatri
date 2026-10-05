@@ -30,7 +30,8 @@ jobs:
           set -e
           for f in sbstc-buses.html nbstc-buses.html wbtc-buses.html shyamoli-paribahan-buses.html volvo-ac-buses.html; do
             test -f "bus-time-table/$f"
-            grep -q 'js/hdr.js?v=hdrunify20261005a' "bus-time-table/$f"
+            grep -q 'js/hdr.js?v=hdrunify20261005c' "bus-time-table/$f"
+            grep -q 'js/lang.js?v=lang20261005a' "bus-time-table/$f"
             grep -q 'id="themeBtn"' "bus-time-table/$f"
             grep -q 'id="langEn"' "bus-time-table/$f"
             grep -q 'id="langBn"' "bus-time-table/$f"
