@@ -46,12 +46,14 @@ jobs:
           from pathlib import Path
           import re
           rx = re.compile(r'<script>\s*var MOON=.*?function setLang\(.*?</script>\s*', re.S)
+          lang_rx = re.compile(r'(?P<prefix>(?:\.\./|/|)js/lang\.js)\?v=[^"\']+')
           changed = 0
           for p in Path('.').rglob('*.html'):
             if '.git' in p.parts:
               continue
             text = p.read_text(encoding='utf-8')
             cleaned = rx.sub('', text)
+            cleaned = lang_rx.sub(lambda m: m.group('prefix') + '?v=lang20261005c', cleaned)
             if cleaned != text:
               p.write_text(cleaned, encoding='utf-8')
               changed += 1
