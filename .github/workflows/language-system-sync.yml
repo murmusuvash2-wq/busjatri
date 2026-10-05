@@ -6,15 +6,23 @@ on:
     paths:
       - 'js/lang.js'
       - 'js/hdr.js'
+      - 'js/app.js'
+      - 'js/seo-page.js'
       - 'scripts/gen_route_v2.py'
       - 'scripts/gen_via_v2.py'
       - 'scripts/gen_btt_v2.py'
       - 'scripts/gen_stand_v2.py'
       - 'scripts/gen_via_stop_v2.py'
+      - 'scripts/gen_operator_pages.py'
       - '.github/workflows/language-system-sync.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: language-system-sync
+  cancel-in-progress: true
 
 jobs:
   sync:
@@ -23,71 +31,76 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
-      - name: Normalize generated HTML language assets
+      - name: Normalize generated HTML language system
         shell: python
         run: |
           from pathlib import Path
           import re
 
-          roots = [Path('.')]
           changed = []
+
+          def remove_legacy_header_scripts(html):
+              pattern = re.compile(r'<script\\b[^>]*>.*?</script>\\s*', re.I | re.S)
+              def repl(match):
+                  block = match.group(0)
+                  lower = block.lower()
+                  if ('function toggletheme(' in lower
+                      and 'function setlang(' in lower
+                      and ('var moon' in lower or 'id="langen"' in lower or "id='langen'" in lower)):
+                      return ''
+                  return block
+              return pattern.sub(repl, html)
 
           for p in Path('.').rglob('*.html'):
               if '.git' in p.parts:
                   continue
-              s = p.read_text(encoding='utf-8')
-              original = s
+              original = p.read_text(encoding='utf-8')
+              s = remove_legacy_header_scripts(original)
 
-              depth = len(p.parent.parts)
-              rel = '../' * depth
+              rel = '../' * len(p.parent.parts)
               lang_src = rel + 'js/lang.js?v=lang20261005c'
               hdr_src = rel + 'js/hdr.js?v=hdrunify20261005d'
 
-              # Remove the old embedded header controller from legacy/generated pages.
-              # It is presentation-only glue that now conflicts with js/hdr.js + js/lang.js.
-              s = re.sub(r'<script>\\s*var MOON=.*?function setLang\\(.*?</script>\\s*', '', s, flags=re.S)
-
-              # All generated/legacy header references use the current controller.
-              s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/hdr\.js)\?v=[^"\']+',
+              s = re.sub(r'(?P<prefix>(?:\\.\\./|/|)js/lang\\.js)\\?v=[^"\\']+',
+                         lambda m: m.group('prefix') + '?v=lang20261005c', s)
+              s = re.sub(r'(?P<prefix>(?:\\.\\./|/|)js/hdr\\.js)\\?v=[^"\\']+',
                          lambda m: m.group('prefix') + '?v=hdrunify20261005d', s)
-
-              # Route/SEO pages get a fresh seo-page asset where one already exists.
-              s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/seo-page\.js)\?v=[^"\']+',
+              s = re.sub(r'(?P<prefix>(?:\\.\\./|/|)js/seo-page\\.js)\\?v=[^"\\']+',
                          lambda m: m.group('prefix') + '?v=spg20261005c', s)
+
+              s = re.sub(r'\\s+onclick=(["\\'])setLang\\(\\s*["\\'](?:en|bn)["\\']\\s*\\)\\1', '', s, flags=re.I)
+              s = re.sub(r'\\s+onclick=(["\\'])toggleTheme\\(\\s*\\)\\1', '', s, flags=re.I)
 
               has_lang = 'js/lang.js?v=' in s
               has_hdr = 'js/hdr.js?v=' in s
               has_seo = 'js/seo-page.js?v=' in s
 
               if (has_hdr or has_seo) and not has_lang:
-                  marker = '</head>'
-                  if marker in s:
-                      s = s.replace(marker, '<script defer src="' + lang_src + '"></script>\n' + marker, 1)
+                  tag = f'<script defer src="{lang_src}"></script>\\n'
+                  if '</head>' in s:
+                      s = s.replace('</head>', tag + '</head>', 1)
                   else:
-                      s = s.replace('</body>', '<script defer src="' + lang_src + '"></script>\n</body>', 1)
+                      s = s.replace('</body>', tag + '</body>', 1)
 
-              # SEO route pages that previously had only seo-page.js now also use
-              # the unified header controller.
-              has_hdr = 'js/hdr.js?v=' in s
-              has_seo = 'js/seo-page.js?v=' in s
               if has_seo and not has_hdr:
-                  s = s.replace('</body>', '<script src="' + hdr_src + '"></script>\n</body>', 1)
+                  s = s.replace('</body>', f'<script src="{hdr_src}"></script>\\n</body>', 1)
 
               if s != original:
                   p.write_text(s, encoding='utf-8')
                   changed.append(str(p))
 
           print('normalized', len(changed), 'HTML files')
-          for p in changed[:25]:
+          for p in changed[:50]:
               print(p)
-          if len(changed) > 25:
+          if len(changed) > 50:
               print('...')
 
       - name: Commit generated HTML changes
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add '*.html' '**/*.html'
+          git add --all -- '*.html' '**/*.html'
           if git diff --cached --quiet; then
             echo "No generated HTML changes."
             exit 0
