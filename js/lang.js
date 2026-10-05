@@ -8,7 +8,10 @@
 
   var PLACES = {
     'Bankura':'বাঁকুড়া','Digha':'দীঘা','Kolkata':'কলকাতা','Medinipur':'মেদিনীপুর',
-    'Bardhaman':'বর্ধমান','Burdwan':'বর্ধমান','Kharagpur':'খড়্গপুর','Siliguri':'শিলিগুড়ি','Jalpaiguri':'জলপাইগুড়ি','Jalpaiguri Bypass':'জলপাইগুড়ি বাইপাস',
+    'Bardhaman':'বর্ধমান','Burdwan':'বর্ধমান','Kharagpur':'খড়্গপুর','Siliguri':'শিলিগুড়ি','Jalpaiguri':'জলপাইগুড়ি','Jalpaiguri Bypass':'জলপাইগুড়ি বাইপাস','Sitai':'সিতাই','Silda':'শিলদা',
+    'Barjora':'বড়জোড়া','Beliatore':'বেলিয়াতোড়','Adra':'আদ্রা','Arsha':'আর্শা','Baghmundi':'বাঘমুন্ডি',
+    'Belda':'বেলদা','Binpur':'বিনপুর','Budbud':'বুদবুদ','Chhatna':'ছাতনা','Chittaranjan':'চিত্তরঞ্জন',
+    'Dainhat':'দাঁইহাট','Dantan':'দাঁতন','Debra':'দেবরা','Andal':'অন্ডাল',
     'Darjeeling':'দার্জিলিং','Kalimpong':'কালিম্পং','Islampur':'ইসলামপুর','Panitanki':'পানিট্যাঙ্কি',
     'Cooch Behar':'কোচবিহার','Coach Behar':'কোচবিহার','Coochbehar':'কোচবিহার','Koch Bihar':'কোচবিহার',
     'Mainaguri':'ময়নাগুড়ি','Moynaguri':'ময়নাগুড়ি','Dhupguri':'ধূপগুড়ি','Falakata':'ফালাকাটা',
