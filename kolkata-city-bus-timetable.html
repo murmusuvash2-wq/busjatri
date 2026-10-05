@@ -1384,7 +1384,7 @@ function searchBus(){
   var html='';
   hits.slice(0,10).forEach(function(r){
     var href=LINKS[r.n]||('bus-time-table/'+normSlug(r.a)+'-to-'+normSlug(r.b)+'.html');
-    html+='<a class="res-row'+(r.ok?'':(r.pvt?'':' dis'))+'" href="'+href+'"><span class="rn">'+r.n+'</span><span class="rr">'+r.a+' ⟷ '+r.b+'</span><span class="go">'+(r.ok?'View timetable →':(r.pvt?'View route →':'Coming soon'))+'</span></a>';
+    html+='<a class="res-row'+(r.ok?'':(r.pvt?'':' dis'))+'" href="'+href+'"><span class="rn">'+r.n+'</span><span class="rr">'+(window.BJLang?window.BJLang.translate(r.a):r.a)+' ⟷ '+(window.BJLang?window.BJLang.translate(r.b):r.b)+'</span><span class="go">'+(r.ok?'View timetable →':(r.pvt?'View route →':'Coming soon'))+'</span></a>';
   });
   if(hits.length>10)html+='<div class="no-res">+'+(hits.length-10)+' more — add "To" to narrow down</div>';
   if(!hits.length)html='<div class="no-res">No bus found — try a nearby stop or place name</div>';
@@ -1395,14 +1395,10 @@ function searchBus(){
 }
 function swapFT(){var a=document.getElementById('fromQ'),b=document.getElementById('toQ'),t=a.value;a.value=b.value;b.value=t;}
 function q(t){document.getElementById('fromQ').value=t;document.getElementById('toQ').value='';searchBus();document.querySelector('.hub-search').scrollIntoView({behavior:'smooth',block:'start'});window.scrollBy(0,120);}
-(function(){
-  var en=document.getElementById('langEn'),bn=document.getElementById('langBn');
-  function setLang(bnOn){document.body.classList.toggle('lang-bn',bnOn);document.body.lang=bnOn?'bn':'en';en.classList.toggle('on',!bnOn);bn.classList.toggle('on',bnOn);}
-  en.addEventListener('click',function(){setLang(false)});
-  bn.addEventListener('click',function(){setLang(true)});
-  document.getElementById('themeBtn').addEventListener('click',function(){document.body.classList.toggle('dark')});
-})();
+/* Central language system owns EN/বাংলা state. */
+if(window.BJLang){window.BJLang.onChange(function(){var box=document.getElementById('results');if(box&&box.style.display!=='none')searchBus();});}
 </script>
-<script src="js/hdr.js?v=hdrunify20261002"></script>
+<script src="js/lang.js?v=lang20261005a"></script>
+<script src="js/hdr.js?v=hdrunify20261005c"></script>
 </body>
 </html>
