@@ -1,0 +1,52 @@
+name: Regenerate operator pages from source
+
+on:
+  push:
+    paths:
+      - 'scripts/gen_operator_pages.py'
+      - 'css/seo.css'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate generator
+        run: python3 -m py_compile scripts/gen_operator_pages.py
+
+      - name: Regenerate operator pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: python3 scripts/gen_operator_pages.py
+
+      - name: Validate generated operator pages
+        run: |
+          set -e
+          for f in sbstc-buses.html nbstc-buses.html wbtc-buses.html shyamoli-paribahan-buses.html volvo-ac-buses.html; do
+            test -f "bus-time-table/$f"
+            grep -q 'js/hdr.js?v=hdrunify20261005a' "bus-time-table/$f"
+            grep -q 'id="themeBtn"' "bus-time-table/$f"
+            grep -q 'id="langEn"' "bus-time-table/$f"
+            grep -q 'id="langBn"' "bus-time-table/$f"
+            grep -q 'opt20261005a' "bus-time-table/$f"
+          done
+          ! grep -q 'function setLang' bus-time-table/nbstc-buses.html
+          ! grep -q 'function setLang' bus-time-table/wbtc-buses.html
+
+      - name: Commit generated pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/gen_operator_pages.py css/seo.css bus-time-table sitemap.xml
+          if git diff --cached --quiet; then
+            echo "No generated changes"
+          else
+            git commit -m "Regenerate operator pages from source template"
+            git push
+          fi
