@@ -115,7 +115,7 @@ HEAD = '''<!DOCTYPE html>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-<link rel="stylesheet" href="../css/seo.css?v=opt20260920">
+<link rel="stylesheet" href="../css/seo.css?v=opt20261005a">
 <link rel="stylesheet" href="../css/extras.css">
 <script type="application/ld+json">{{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{{"@type": "ListItem", "position": 1, "name": "Home", "item": "{BASE}/"}}, {{"@type": "ListItem", "position": 2, "name": "Bus Timetable", "item": "{BASE}/bus-time-table/"}}, {{"@type": "ListItem", "position": 3, "name": "{h1}", "item": "{BASE}/bus-time-table/{stem}.html"}}]}}</script>
 {faq_schema}
