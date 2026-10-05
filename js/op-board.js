@@ -51,7 +51,11 @@
     var f = fromI ? fromI.value.trim() : '';
     var t = toI ? toI.value.trim() : '';
     if (!f && !t) { alert(document.body.classList.contains('lang-bn') ? '\u09b6\u09c1\u09b0\u09c1 \u09ac\u09be \u0997\u09a8\u09cd\u09a4\u09ac\u09cd\u09af \u09aa\u09c2\u09b0\u09a3 \u0995\u09b0\u09c1\u09a8' : 'Fill From or To'); return; }
-    location.href = '../index.html#/search?from=' + encodeURIComponent(f) + '&to=' + encodeURIComponent(t);
+    var cfgNow = window.bjOpCfg || {};
+    var opToken = cfgNow.token || '';
+    var q = '?from=' + encodeURIComponent(f) + '&to=' + encodeURIComponent(t);
+    if (opToken) q += '&op=' + encodeURIComponent(opToken);
+    location.href = '../index.html#/search' + q;
   };
 
   /* ---- depo departure board ---- */

@@ -1,4 +1,7 @@
-/* BusJatri unified header controller - 2026-10-02
+/* BusJatri unified header controller - 2026-10-05 Phase 1
+   Supports both legacy header id casing variants during migration.
+
+   
    One language switch + one theme switch, wired the same way on every page.
 
    Before this, each page family shipped its own header wiring: inline
@@ -32,6 +35,7 @@
 
   function applyTheme(dark) {
     document.body.classList.toggle('dark', dark);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
     var b = document.getElementById('themeBtn');
     if (b) b.innerHTML = dark ? SUN : MOON;
     write('bj-theme', dark ? 'dark' : 'light');
@@ -40,8 +44,8 @@
 
   function applyLang(bn) {
     document.body.classList.toggle('lang-bn', bn);
-    var en = document.getElementById('langEn');
-    var bnBtn = document.getElementById('langBn');
+    var en = firstById(['langEn', 'langEN']);
+    var bnBtn = firstById(['langBn', 'langBN']);
     if (en) {
       en.classList.toggle('on', !bn);
       en.style.background = bn ? 'transparent' : 'var(--amber-soft,#f6e7c6)';
@@ -54,7 +58,14 @@
     write('seo-lang', bn ? 'bn' : 'en');
   }
 
-  var IDS = ['themeBtn', 'langEn', 'langBn'];
+  var IDS = ['themeBtn', 'langEn', 'langBn', 'langEN', 'langBN'];
+  function firstById(ids) {
+    for (var i = 0; i < ids.length; i++) {
+      var el = document.getElementById(ids[i]);
+      if (el) return el;
+    }
+    return null;
+  }
 
   /* Some legacy pages load js/seo-page.js, which assigns .onclick to these
      same ids. Clear any handler set by another script so only this
@@ -89,8 +100,8 @@
     applyLang(read('bj-lang') === 'bn' || read('seo-lang') === 'bn');
 
     wire('themeBtn', function () { applyTheme(!document.body.classList.contains('dark')); });
-    wire('langEn', function () { applyLang(false); });
-    wire('langBn', function () { applyLang(true); });
+    wire(firstById(['langEn', 'langEN']) ? firstById(['langEn', 'langEN']).id : 'langEn', function () { applyLang(false); });
+    wire(firstById(['langBn', 'langBN']) ? firstById(['langBn', 'langBN']).id : 'langBn', function () { applyLang(true); });
 
     neutralise();
     setTimeout(neutralise, 0);
