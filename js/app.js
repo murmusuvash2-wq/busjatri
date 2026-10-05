@@ -57,6 +57,17 @@ const BN_PLACES = {
 function pn(s) {
   return (LANG === 'bn' && BN_PLACES[s]) ? BN_PLACES[s] : s;
 }
+// Translate place names embedded inside bus names too (e.g. "SBSTC Kolkata-Bankura")
+// without altering operator/brand text such as SBSTC, NBSTC, Volvo, etc.
+const BN_PLACE_KEYS = Object.keys(BN_PLACES).sort((a, b) => b.length - a.length);
+function bnBusName(s) {
+  let r = String(s == null ? '' : s);
+  if (LANG !== 'bn') return r;
+  for (const k of BN_PLACE_KEYS) {
+    if (r.includes(k)) r = r.split(k).join(BN_PLACES[k]);
+  }
+  return r;
+}
 
 const PLACE_ICONS = {
   Mukutmanipur: 'waves', Digha: 'waves', Bankura: 'landmark', Kolkata: 'building',
@@ -550,7 +561,7 @@ function renderBoard() {
       }
       return `<div class="lv-row ${cls}" style="animation-delay:${i*0.07}s" onclick="location.hash='#/bus/${encodeURIComponent(n.b.id)}'">` +
         `<span class="lt">${fmtTime(n.t).replace(' ','')}</span>` +
-        `<span class="lnm">${esc(n.b.bus_name)}</span>` +
+        `<span class="lnm">${esc(bnBusName(n.b.bus_name))}</span>` +
         `<span class="ldst">→ ${esc(pn(n.b.destination))}</span>` +
         `${right}</div>`;
     }).join('');
@@ -837,7 +848,7 @@ async function renderSearch(el) {
       return `<div class="result-item ${isNear ? 'near' : ''}" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
         <div class="ri-main">
           ${isNear ? `<div class="near-label">${icon('clock')} <span class="label-en">Coming up</span><span class="label-bn">আসছে</span></div>` : ''}
-          <div class="name">${esc(b.bus_name)} ${b.reg_no ? `<span class="reg">${esc(b.reg_no)}</span>` : ''} ${busTypeBadge(b.bus_type)}</div>
+          <div class="name">${esc(bnBusName(b.bus_name))} ${b.reg_no ? `<span class="reg">${esc(b.reg_no)}</span>` : ''} ${busTypeBadge(b.bus_type)}</div>
           <div class="route">${esc(pn(b.origin))} → ${esc(pn(b.destination))}</div>
           ${stopInfo}
           <div class="meta">
@@ -876,7 +887,7 @@ function renderPlace(el, placeName) {
     ${related.map((b, i) => `
       <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
         <div class="ri-main">
-          <div class="name">${esc(b.bus_name)} ${busTypeBadge(b.bus_type)}</div>
+          <div class="name">${esc(bnBusName(b.bus_name))} ${busTypeBadge(b.bus_type)}</div>
           <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
           <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
         </div>
@@ -971,7 +982,7 @@ async function renderBus(el, id) {
     ${freshnessNote()}
     <div class="back-btn" onclick="history.length>1?history.back():location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <div class="bus-detail">
-      <h2>${esc(b.bus_name)} ${b.reg_no ? `<span style="font-size:14px;color:var(--ink-dim);font-weight:500;font-family:var(--font-mono)">${esc(b.reg_no)}</span>` : ''}</h2>
+      <h2>${esc(bnBusName(b.bus_name))} ${b.reg_no ? `<span style="font-size:14px;color:var(--ink-dim);font-weight:500;font-family:var(--font-mono)">${esc(b.reg_no)}</span>` : ''}</h2>
       <div class="route-line">${esc(pn(b.origin))} → ${esc(pn(b.destination))} ${busTypeBadge(b.bus_type)}</div>
       <div class="info-grid">
         ${b.departure_time ? `<div class="info-item"><div class="lbl">Departure</div><div class="val">${esc(b.departure_time)}</div></div>` : ''}
@@ -984,7 +995,7 @@ async function renderBus(el, id) {
       </div>
       <p style="font-size:12px;color:var(--ink-dim);margin:10px 0 0">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>
       ${mapUrl ? `<a class="map-btn" href="${mapUrl}" target="_blank" rel="noopener">${icon('map')} <span class="label-en">View route on Google Maps</span><span class="label-bn">গুগল ম্যাপে রুট দেখুন</span></a>` : ''}
-      <a class="map-btn btn-whatsapp" href="javascript:void(0)" data-bus="${esc(b.bus_name)}" data-org="${esc(pn(b.origin))}" data-dest="${esc(pn(b.destination))}" data-dep="${esc(b.departure_time || '')}" data-stops="${stops.length || b.total_stoppages || 0}" onclick="shareWhatsApp(this.dataset.bus,this.dataset.org,this.dataset.dest,this.dataset.dep,this.dataset.stops)">${icon('info')} <span class="label-en">Share on WhatsApp</span><span class="label-bn">শেয়ার করুন</span></a>
+      <a class="map-btn btn-whatsapp" href="javascript:void(0)" data-bus="${esc(bnBusName(b.bus_name))}" data-org="${esc(pn(b.origin))}" data-dest="${esc(pn(b.destination))}" data-dep="${esc(b.departure_time || '')}" data-stops="${stops.length || b.total_stoppages || 0}" onclick="shareWhatsApp(this.dataset.bus,this.dataset.org,this.dataset.dest,this.dataset.dep,this.dataset.stops)">${icon('info')} <span class="label-en">Share on WhatsApp</span><span class="label-bn">শেয়ার করুন</span></a>
       ${b.destination && b.destination !== '—' ? `<div class="info-item" id="weatherCard" data-dest="${esc(b.destination)}" style="margin-top:12px"><div class="lbl">Weather in ${esc(b.destination)} (now)</div><div class="val" id="weatherVal">Loading…</div></div>` : ''}
       ${stops.length ? `
         <h3 class="timetable-title">${icon('ticket')} <span class="label-en">Route Timetable</span><span class="label-bn">রুট টাইমটেবিল</span></h3>
@@ -1046,7 +1057,7 @@ function renderRoute(el, key) {
     ${buses.map((b, i) => `
       <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
         <div class="ri-main">
-          <div class="name">${esc(b.bus_name)} ${busTypeBadge(b.bus_type)}</div>
+          <div class="name">${esc(bnBusName(b.bus_name))} ${busTypeBadge(b.bus_type)}</div>
           <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
         </div>
         ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
@@ -1072,7 +1083,7 @@ function renderStop(el, slugKey) {
     ${next.length ? `<h3 class="timetable-title" style="margin-top:8px">${icon('clock')} <span class="label-en">Next buses from ${esc(stop.name)}</span><span class="label-bn">${esc(stop.name)} থেকে পরবর্তী বাস</span></h3>
       ${next.map(n => `<div class="result-item" onclick="location.hash='#/bus/${encodeURIComponent(n.b.id)}'">
         <div class="ri-main">
-          <div class="name">${esc(n.b.bus_name)}</div>
+          <div class="name">${esc(bnBusName(n.b.bus_name))}</div>
           <div class="route">${esc(pn(n.b.origin))} → ${esc(pn(n.b.destination))}</div>
         </div>
         <span class="time-pill">${icon('clock')} ${fmtTime(n.t)} · <span style="color:var(--amber);font-weight:700" data-nbdep="${n.t}">${countdownText(n.diff)}</span></span>
@@ -1081,7 +1092,7 @@ function renderStop(el, slugKey) {
     ${buses.map((b, i) => `
       <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
         <div class="ri-main">
-          <div class="name">${esc(b.bus_name)}</div>
+          <div class="name">${esc(bnBusName(b.bus_name))}</div>
           <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
         </div>
         ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
