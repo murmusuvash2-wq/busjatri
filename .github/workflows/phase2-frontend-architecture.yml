@@ -1,0 +1,31 @@
+name: Phase 2 frontend architecture guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/lang.js'
+      - 'js/hdr.js'
+      - 'js/stop-search-all.js'
+      - 'scripts/gen_route_v2.py'
+      - 'scripts/gen_via_v2.py'
+      - 'scripts/gen_btt_v2.py'
+      - 'scripts/gen_stand_v2.py'
+      - 'scripts/gen_via_stop_v2.py'
+      - 'scripts/gen_operator_pages.py'
+      - '.github/workflows/language-system-sync.yml'
+      - 'scripts/validate_frontend_architecture.py'
+  pull_request:
+    paths:
+      - 'js/**'
+      - 'scripts/gen_*.py'
+      - '.github/workflows/**'
+      - 'scripts/validate_frontend_architecture.py'
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Validate frontend architecture
+        run: python3 scripts/validate_frontend_architecture.py
