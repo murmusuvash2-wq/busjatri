@@ -356,6 +356,11 @@ def build_page(op, stems):
     body = HEAD.format(title=esc(op['title']), desc=esc(op['desc']), stem=op['stem'], ogt=esc(op['ogt']), ogd=esc(op['ogd']),
                        BASE=BASE, h1=esc(op['h1']), bn=op['bn'], intro=esc(op['intro']), faq_schema=faq_schema)
     body += stats + search_card + board + popular + chiprow + faq_section + chr(10) + '</main>' + chr(10) + FOOT
+    # Shared Bengali place-name map for every operator's departure board.
+    # This translates place names embedded in bus names while preserving operator/brand names.
+    body = body.replace('<script src="../js/op-board.js?v=opd20260926"></script>',
+                        '<script>window.bjStops = ' + SBSTC_STOPS_JSON + ';</script>\n'
+                        '<script src="../js/op-board.js?v=opd20260926"></script>', 1)
     return apply_sbstc_toggle(body, op)
 
 
