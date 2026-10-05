@@ -61,8 +61,8 @@ for rel in generator_paths:
 # The generated-page sync workflow must exist so already-generated output cannot
 # permanently drift from the source architecture.
 sync = read(".github/workflows/language-system-sync.yml")
-if "function setLang" not in sync or "function toggleTheme" not in sync:
-    errors.append("language-system-sync workflow no longer contains legacy cleanup rules")
+if "function setLang" not in sync or "var MOON=" not in sync:
+    errors.append("language-system-sync workflow no longer contains its legacy-controller cleanup rule")
 if "permissions:" not in sync or "contents: write" not in sync:
     errors.append("language-system-sync workflow lacks contents write permission")
 
