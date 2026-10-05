@@ -168,19 +168,33 @@ function ensureFullData() {
 }
 
 function setLang(l) {
-  LANG = l;
-  document.body.className = l === 'bn' ? 'lang-bn' : '';
-  document.getElementById('langEN').classList.toggle('active', l === 'en');
-  document.getElementById('langBN').classList.toggle('active', l === 'bn');
+  LANG = l === 'bn' ? 'bn' : 'en';
+  document.body.classList.toggle('lang-bn', LANG === 'bn');
+  ['langEN', 'langEn'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', LANG === 'en');
+  });
+  ['langBN', 'langBn'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.classList.toggle('active', LANG === 'bn');
+  });
+  try {
+    localStorage.setItem('bj-lang', LANG);
+    localStorage.setItem('seo-lang', LANG);
+  } catch (e) {}
   render();
 }
 
 function toggleTheme() {
-  const cur = document.documentElement.getAttribute('data-theme') ||
-    (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  const cur = document.body.classList.contains('dark') ||
+    document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
   const next = cur === 'dark' ? 'light' : 'dark';
+  document.body.classList.toggle('dark', next === 'dark');
   document.documentElement.setAttribute('data-theme', next);
-  localStorage.setItem('bj-theme', next);
+  try {
+    localStorage.setItem('bj-theme', next);
+    localStorage.setItem('seo-theme', next);
+  } catch (e) {}
   updateThemeIcon(next);
 }
 
@@ -190,10 +204,13 @@ function updateThemeIcon(theme) {
 }
 
 (function () {
-  const saved = localStorage.getItem('bj-theme');
-  if (saved) document.documentElement.setAttribute('data-theme', saved);
-  const effective = saved || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  updateThemeIcon(effective);
+  try {
+    const saved = localStorage.getItem('bj-theme') || localStorage.getItem('seo-theme');
+    if (saved === 'dark' || saved === 'light') {
+      document.documentElement.setAttribute('data-theme', saved);
+      document.body.classList.toggle('dark', saved === 'dark');
+    }
+  } catch (e) {}
 })();
 
 function esc(s) {
