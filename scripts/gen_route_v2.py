@@ -795,8 +795,10 @@ def shell_v2(title, description, canonical, body, schema=""):
 {body}
 </main>
 {footer_html_v2()}
+<script defer src="../js/lang.js?v=lang20261005c"></script>
 <script defer src="../js/seo-page.js?v={JS_V2}"></script>
 <script defer src="../js/route-slider.js"></script>
+<script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body>
 </html>"""
 
