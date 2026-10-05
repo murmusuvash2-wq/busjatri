@@ -173,7 +173,8 @@ body.lang-bn .only-en{display:none}
 body.lang-bn .only-bn{display:block}
 body:not(.lang-bn) .hbn{display:none}"""
 
-JS = """"""
+# Via pages use the shared header/language controllers; no page-local header JS.
+JS = ""
 
 PAGE_TMPL = """<!DOCTYPE html>
 <html lang="en">
