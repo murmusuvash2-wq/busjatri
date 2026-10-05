@@ -43,6 +43,10 @@ jobs:
               lang_src = rel + 'js/lang.js?v=lang20261005c'
               hdr_src = rel + 'js/hdr.js?v=hdrunify20261005d'
 
+              # Remove the old embedded header controller from legacy/generated pages.
+              # It is presentation-only glue that now conflicts with js/hdr.js + js/lang.js.
+              s = re.sub(r'<script>\\s*var MOON=.*?function setLang\\(.*?</script>\\s*', '', s, flags=re.S)
+
               # All generated/legacy header references use the current controller.
               s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/hdr\.js)\?v=[^"\']+',
                          lambda m: m.group('prefix') + '?v=hdrunify20261005d', s)
