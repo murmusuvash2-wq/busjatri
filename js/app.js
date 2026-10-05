@@ -1,6 +1,6 @@
 /* BusJatri — app logic. Hash-based router over a single local JSON dataset. */
 
-let DATA = null, BUSES = {}, ROUTES = {}, STOPS = {}, FULL_BUSES = null, LANG = 'en', SN = [], TOP_ROUTES = null, FULL_PROMISE = null;
+let DATA = null, BUSES = {}, ROUTES = {}, STOPS = {}, FULL_BUSES = null, LANG = 'en', SN = [], TOP_ROUTES = null, FULL_PROMISE = null, LITE_PROMISE = null, DATA_LEVEL = 'none';
 
 const ICONS = {
   bus: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg>',
@@ -99,18 +99,20 @@ async function loadData() {
        in a search field. Route changes already load it on demand. */
     var kicked = false;
     var kick = function () {
-      if (kicked) return;
+      if (kicked || DATA_LEVEL === 'full') return;
       if (document.visibilityState === 'hidden') { setTimeout(kick, 5000); return; }
       kicked = true;
       ensureFullData().then(function () { renderBoard(); }).catch(function () {});
     };
     setTimeout(kick, 10000);
     document.addEventListener('input', function () {
-      if (DATA && DATA.buses) return;
+      ensureLiteData().catch(function () {});
+      if (DATA_LEVEL === 'full') return;
       kick();
     }, { passive: true });
     document.addEventListener('focusin', function () {
-      if (DATA && DATA.buses) return;
+      ensureLiteData().catch(function () {});
+      if (DATA_LEVEL === 'full') return;
       kick();
     }, { passive: true, capture: true });
   } catch (e) {
@@ -129,8 +131,33 @@ async function loadData() {
   }
 }
 
+/* Phase 2 data tiers:
+   home-index.json -> first paint
+   app-index-lite.json -> fast autocomplete/search metadata
+   app-index.json -> full stop timings only when needed
+   Source timetable data is read-only presentation input. */
+function ensureLiteData() {
+  if (DATA_LEVEL === 'full' || DATA_LEVEL === 'lite') return Promise.resolve();
+  if (!LITE_PROMISE) {
+    LITE_PROMISE = fetch('data/app-index-lite.json').then(function (res) {
+      if (!res.ok) { LITE_PROMISE = null; throw new Error('HTTP ' + res.status); }
+      return res.json();
+    }).then(function (lite) {
+      if (DATA_LEVEL === 'full') return;
+      DATA = lite;
+      BUSES = {};
+      (lite.buses || []).forEach(function (b) { BUSES[b.id] = b; });
+      ROUTES = lite.routes || {};
+      STOPS = lite.stops || {};
+      if (lite.sn && lite.sn.length) SN = lite.sn;
+      DATA_LEVEL = 'lite';
+    });
+  }
+  return LITE_PROMISE;
+}
+
 function ensureFullData() {
-  if (DATA && DATA.buses) return Promise.resolve();
+  if (DATA_LEVEL === 'full') return Promise.resolve();
   if (!FULL_PROMISE) {
     FULL_PROMISE = fetch('data/app-index.json').then(function (res) {
       if (!res.ok) { FULL_PROMISE = null; throw new Error('HTTP ' + res.status); }
@@ -138,10 +165,11 @@ function ensureFullData() {
     }).then(function (full) {
       DATA = full;
       BUSES = {};
-      DATA.buses.forEach(b => BUSES[b.id] = b);
+      DATA.buses.forEach(function (b) { BUSES[b.id] = b; });
       ROUTES = DATA.routes || {};
       STOPS = DATA.stops || {};
       if (DATA.sn && DATA.sn.length) SN = DATA.sn;
+      DATA_LEVEL = 'full';
     });
   }
   return FULL_PROMISE;
