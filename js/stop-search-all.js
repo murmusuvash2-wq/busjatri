@@ -147,38 +147,95 @@
   function acHide() {
     document.querySelectorAll('.ac-drop').forEach(function (d) { d.remove(); });
   }
+  var AC_ACTIVE = -1;
+  var AC_INPUT = null;
   function acShow(input) {
     acHide();
+    AC_INPUT = input;
+    AC_ACTIVE = -1;
     var m = acFind(input.value);
-    if (!m.length) return;
+    if (!m.length) {
+      input.removeAttribute('aria-activedescendant');
+      input.setAttribute('aria-expanded', 'false');
+      return;
+    }
     var field = input.closest('.search-field');
     if (!field) return;
     var d = document.createElement('div');
     d.className = 'ac-drop';
-    d.innerHTML = m.map(function (n) {
-      return '<div class="ac-item">' + acHtml(n) + '</div>';
+    d.id = 'bj-ac-' + input.id;
+    d.setAttribute('role', 'listbox');
+    d.setAttribute('aria-label', 'Search suggestions');
+    d.innerHTML = m.map(function (n, i) {
+      return '<div class="ac-item" id="bj-ac-' + input.id + '-' + i + '" role="option" aria-selected="false">' + acHtml(n) + '</div>';
     }).join('');
     field.appendChild(d);
+    input.setAttribute('aria-expanded', 'true');
+    input.setAttribute('aria-controls', d.id);
   }
   function acIsInput(el) {
     return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));
   }
+  function acSetActive(input, next) {
+    var d = input && input.closest('.search-field') && input.closest('.search-field').querySelector('.ac-drop');
+    if (!d) return;
+    var items = d.querySelectorAll('.ac-item');
+    if (!items.length) return;
+    AC_ACTIVE = Math.max(0, Math.min(next, items.length - 1));
+    items.forEach(function (it, i) {
+      var on = i === AC_ACTIVE;
+      it.setAttribute('aria-selected', on ? 'true' : 'false');
+      it.classList.toggle('is-active', on);
+    });
+    input.setAttribute('aria-activedescendant', items[AC_ACTIVE].id);
+    items[AC_ACTIVE].scrollIntoView({block:'nearest'});
+  }
+  function acChoose(input, item) {
+    if (!input || !item) return;
+    input.value = item.textContent;
+    acHide();
+    input.focus();
+    input.dispatchEvent(new Event('change', {bubbles:true}));
+  }
+  function acHide() {
+    document.querySelectorAll('.ac-drop').forEach(function (d) { d.remove(); });
+    if (AC_INPUT) {
+      AC_INPUT.setAttribute('aria-expanded', 'false');
+      AC_INPUT.removeAttribute('aria-activedescendant');
+    }
+    AC_ACTIVE = -1;
+    AC_INPUT = null;
+  }
   var acTimer = null;
+  document.addEventListener('focusin', function (e) {
+    if (!acIsInput(e.target)) return;
+    e.target.setAttribute('autocomplete', 'off');
+    e.target.setAttribute('aria-autocomplete', 'list');
+    e.target.setAttribute('aria-haspopup', 'listbox');
+    e.target.setAttribute('aria-expanded', 'false');
+  });
   document.addEventListener('input', function (e) {
     if (!acIsInput(e.target)) return;
     if (acTimer) clearTimeout(acTimer);
     acTimer = setTimeout(function () { acShow(e.target); }, 160);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!acIsInput(e.target)) return;
+    var input = e.target;
+    var drop = input.closest('.search-field') && input.closest('.search-field').querySelector('.ac-drop');
+    var items = drop ? drop.querySelectorAll('.ac-item') : [];
+    if (e.key === 'Escape') { if (drop) { e.preventDefault(); acHide(); } return; }
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); acSetActive(input, AC_ACTIVE + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); acSetActive(input, AC_ACTIVE <= 0 ? items.length - 1 : AC_ACTIVE - 1); }
+    else if (e.key === 'Enter' && AC_ACTIVE >= 0) { e.preventDefault(); acChoose(input, items[AC_ACTIVE]); }
   });
   document.addEventListener('click', function (e) {
     var item = e.target.closest ? e.target.closest('.ac-item') : null;
     if (item) {
       var field = item.closest('.search-field');
       var input = field && field.querySelector('input');
-      if (input) {
-        input.value = item.textContent;
-        acHide();
-        input.focus();
-      }
+      if (input) acChoose(input, item);
       return;
     }
     if (acIsInput(e.target)) { acShow(e.target); return; }
