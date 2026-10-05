@@ -298,7 +298,7 @@ def build_page(op, stems):
     else:
         board = ("<section id='bjLive' style='margin-top:16px'></section>" +
             "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-            "<script src='../js/op-board.js?v=opsf20260926' defer></script>")
+            "<script src='../js/op-board.js?v=opsf20261005a' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:

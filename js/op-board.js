@@ -77,15 +77,21 @@
   var lvQ = '';
   /* v2 (SBSTC page): bn stop names + time-of-day / tomorrow filters */
   var STOPS = window.bjStops || null;
+  // Generic fallback for operators without an injected SBSTC stop map.
+  var BN_PLACES = {'Bankura':'বাঁকুড়া','Digha':'দীঘা','Kolkata':'কলকাতা','Medinipur':'মেদিনীপুর','Bardhaman':'বর্ধমান','Burdwan':'বর্ধমান','Kharagpur':'খড়্গপুর','Siliguri':'শিলিগুড়ি','Cooch Behar':'কোচবিহার','Asansol':'আসানসোল','Durgapur':'দুর্গাপুর','Purulia':'পুরুলিয়া','Jhargram':'ঝাড়গ্রাম','Contai':'কাঁথি','Tamluk':'তমলুক','Bishnupur':'বিষ্ণুপুর','Khatra':'খাতড়া','Alipurduar':'আলিপুরদুয়ার','Dinhata':'দিনহাটা','Mathabhanga':'মাথাভাঙ্গা','Ghatal':'ঘাটাল','Nabadwip':'নবদ্বীপ','Arambagh':'আরামবাগ','Manbazar':'মানবাজার','Haldia':'হলদিয়া','Baruipur':'বারুইপুর','Esplanade':'এসপ্ল্যানেড','Howrah':'হাওড়া','Ranaghat':'রানাঘাট','Krishnanagar':'কৃষ্ণনগর','Malda':'মালদা','Raiganj':'রায়গঞ্জ','Balurghat':'বালুরঘাট','Suri':'সিউড়ি','Sainthia':'সাঁইথিয়া','Bolpur':'বোলপুর','Kalna':'কালনা','Katwa':'কাটোয়া','Kalyani':'কল্যাণী','Barasat':'বারাসাত','Barrackpore':'ব্যারাকপুর','Garia':'গড়িয়া','Berhampore':'বহরমপুর','Berhampur':'বহরমপুর','Karunamoyee':'করুণাময়ী','Belpahari':'বেলপাহাড়ি','Sonamukhi':'সোনামুখী','Mukutmanipur':'মুকুটমণিপুর','Ranibandh':'রানিবাঁধ','Egra':'এগরা','Ramnagar':'রামনগর','Kakdwip':'কাকদ্বীপ','Namkhana':'নামখানা','Falta':'ফল্টা','Diamond Harbour':'ডায়মন্ড হারবার','Jaynagar':'জয়নগর','Bagnan':'বাগনান','Amtala':'আমতলা','Behala':'বেহালা','Panagarh':'পানাগড়','Durgapur (Station)':'দুর্গাপুর (স্টেশন)','Durgapur (City Center)':'দুর্গাপুর (সিটি সেন্টার)','Durgapur (Bus Stand)':'দুর্গাপুর (বাস স্ট্যান্ড)','Bankura (Bypass)':'বাঁকুড়া (বাইপাস)','Bankura (Bus Stand)':'বাঁকুড়া (বাস স্ট্যান্ড)','Bankura (Station)':'বাঁকুড়া (স্টেশন)','Kolkata (Karunamoyee)':'কলকাতা (করুণাময়ী)','Kolkata (Esplanade)':'কলকাতা (এসপ্ল্যানেড)','Kolkata (Dharmatala)':'কলকাতা (ধর্মতলা)','Kolkata (Babughat)':'কলকাতা (বাবুঘাট)'};
+  var BNKEYS = Object.keys(BN_PLACES).sort(function (a, b) { return b.length - a.length; });
   var STKEYS = STOPS ? Object.keys(STOPS).sort(function (a, b) { return b.length - a.length; }) : [];
   var RSTOPS = {};
   if (STOPS) for (var sk in STOPS) { RSTOPS[STOPS[sk]] = sk; }
   var TOD = 'any', DAY = '';
   function bnName(s) {
-    if (!STOPS || !document.body.classList.contains('lang-bn')) return String(s == null ? '' : s);
-    var r = String(s);
-    for (var si = 0; si < STKEYS.length; si++) {
+    var r = String(s == null ? '' : s);
+    if (!document.body.classList.contains('lang-bn')) return r;
+    if (STOPS) for (var si = 0; si < STKEYS.length; si++) {
       if (r.indexOf(STKEYS[si]) > -1) r = r.split(STKEYS[si]).join(STOPS[STKEYS[si]]);
+    }
+    for (var bi = 0; bi < BNKEYS.length; bi++) {
+      if (r.indexOf(BNKEYS[bi]) > -1) r = r.split(BNKEYS[bi]).join(BN_PLACES[BNKEYS[bi]]);
     }
     return r;
   }
