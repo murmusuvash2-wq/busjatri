@@ -169,7 +169,7 @@ FOOT = '''<footer class="footer">
   </div>
 </footer>
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
-<script src="../js/hdr.js?v=hdrunify20261005a"></script>
+<script src="../js/hdr.js?v=hdrunify20261005c"></script>
 </body>
 </html>
 '''
@@ -298,7 +298,7 @@ def build_page(op, stems):
     else:
         board = ("<section id='bjLive' style='margin-top:16px'></section>" +
             "<script>window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-            "<script src='../js/op-board.js?v=opsf20261005b' defer></script>")
+            "<script src='../js/lang.js?v=lang20261005a'></script><script src='../js/op-board.js?v=opsf20261005c' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:
