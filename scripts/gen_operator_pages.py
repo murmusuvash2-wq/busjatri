@@ -428,13 +428,7 @@ def apply_sbstc_toggle(body, op):
     b = b.replace('<meta name="viewport" content="width=device-width, initial-scale=1.0">',
                   '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n'
                   '<meta name="color-scheme" content="light dark">', 1)
-    moon = ('<button id="themeBtn" class="lang-btn" aria-label="Theme" style="background:transparent;'
-            'border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;'
-            'font-weight:700;font-size:12px;font-family:inherit;display:inline-flex;align-items:center">'
-            '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" '
-            'stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">'
-            '<path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>')
-    b = b.replace('<span class="lang-group"', moon + '\n        <span class="lang-group"', 1)
+    # Canonical theme/language controls are already in HEAD; do not inject a second theme button.
     # Shared hdr.js now owns the canonical language/theme controls.
     # SBSTC keeps seo-page.js only for its route-specific Bengali enhancements.
     if 'seo-page.js?v=spg20260926' not in b:
