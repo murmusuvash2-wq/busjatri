@@ -359,8 +359,9 @@ def build_page(op, stems):
     # Shared Bengali place-name map for every operator's departure board.
     # This translates place names embedded in bus names while preserving operator/brand names.
     body = body.replace('<script src="../js/op-board.js?v=opd20260926"></script>',
+                        '<script src="../js/lang.js?v=lang20261005a"></script>\n'
                         '<script>window.bjStops = ' + SBSTC_STOPS_JSON + ';</script>\n'
-                        '<script src="../js/op-board.js?v=opd20260926"></script>', 1)
+                        '<script src="../js/op-board.js?v=opsf20261005c"></script>', 1)
     return apply_sbstc_toggle(body, op)
 
 
