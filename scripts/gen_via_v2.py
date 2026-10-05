@@ -176,9 +176,9 @@ body:not(.lang-bn) .hbn{display:none}"""
 JS = """var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
 var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
 function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(btn)btn.innerHTML=theme==='dark'?SUN:MOON;}
-function toggleTheme(){var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('bj-theme',next);updateThemeIcon(next);}
-function setLang(l){document.body.className=l==='bn'?'lang-bn':'';localStorage.setItem('bj-lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langBN').classList.toggle('active',l==='bn');}
-(function(){var t=localStorage.getItem('bj-theme');if(t)document.documentElement.setAttribute('data-theme',t);updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));var l=localStorage.getItem('bj-lang');if(l&&l!=='en'){setLang(l);}})();"""
+function toggleTheme(){var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('bj-theme',next);localStorage.setItem('seo-theme',next);updateThemeIcon(next);}
+function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');localStorage.setItem('bj-lang',l);localStorage.setItem('seo-lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langBN').classList.toggle('active',l==='bn');}
+(function(){var t=localStorage.getItem('bj-theme')||localStorage.getItem('seo-theme');if(t)document.documentElement.setAttribute('data-theme',t);updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));var l=localStorage.getItem('bj-lang')||localStorage.getItem('seo-lang');if(l&&l!=='en'){setLang(l);}})();"""
 
 PAGE_TMPL = """<!DOCTYPE html>
 <html lang="en">

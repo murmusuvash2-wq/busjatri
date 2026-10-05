@@ -1220,7 +1220,7 @@ var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-widt
 var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
 var PH={en:"\\uD83D\\uDD0E Search destination — e.g. Purulia, Kolkata\\u2026",bn:"\\uD83D\\uDD0E \\u0997\\u09A8\\u09CD\\u09A4\\u09AC\\u09CD\\u09AF \\u0996\\u09C1\\u0981\\u099C\\u09C1\\u09A8 \\u2014 \\u09AF\\u09C7\\u09AE\\u09A8 \\u09AA\\u09C1\\u09B0\\u09C1\\u09B2\\u09BF\\u09AF\\u09BC\\u09BE, \\u0995\\u09B2\\u0995\\u09BE\\u09A4\\u09BE\\u2026"};
 function bnd(s){return String(s).replace(/[0-9]/g,function(d){return "\\u09E7\\u09E8\\u09E9\\u09EA\\u09EB\\u09EC\\u09ED\\u09EE\\u09EF\\u09E6"[d];});}
-function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+function isBn(){return document.body.classList.contains('lang-bn');}
 function mcards(){return Array.prototype.slice.call(document.querySelectorAll('#minis .mcard'));}
 function mrefresh(){
   var cs=mcards();var shown=cs.filter(function(c){return c.style.display!=='none';}).length;
@@ -1251,22 +1251,22 @@ function toggleTheme(){
   var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
   var next=cur==='dark'?'light':'dark';
   document.documentElement.setAttribute('data-theme',next);
-  localStorage.setItem('bj-theme',next);
+  localStorage.setItem('bj-theme',next);localStorage.setItem('seo-theme',next);
   updateThemeIcon(next);
 }
 function setLang(l){
-  document.body.className=l==='bn'?'lang-bn':'';
-  localStorage.setItem('bj-lang',l);
+  document.body.classList.toggle('lang-bn',l==='bn');
+  localStorage.setItem('bj-lang',l);localStorage.setItem('seo-lang',l);
   document.getElementById('langEN').classList.toggle('active',l==='en');
   document.getElementById('langBN').classList.toggle('active',l==='bn');
   var q=document.getElementById('q');if(q){q.placeholder=l==='bn'?PH.bn:PH.en;}
   mrefresh();
 }
 (function(){
-  var t=localStorage.getItem('bj-theme');
+  var t=localStorage.getItem('bj-theme')||localStorage.getItem('seo-theme');
   if(t)document.documentElement.setAttribute('data-theme',t);
   updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));
-  var l=localStorage.getItem('bj-lang');
+  var l=localStorage.getItem('bj-lang')||localStorage.getItem('seo-lang');
   if(l&&l!=='en'){setLang(l);}else{var q=document.getElementById('q');if(q)q.placeholder=PH.en;}
 })();"""
 

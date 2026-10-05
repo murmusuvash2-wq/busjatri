@@ -340,7 +340,7 @@ SEE_MORE_JS = """<script>
   if(rows.length<=14){return;}
   var KEEP=15,STEP=50,btn=null;
   function bn(n){var d='০১২৩৪৫৬৭৮৯';return String(n).replace(/[0-9]/g,function(c){return d[+c];});}
-  function isBn(){return document.body.className.indexOf('lang-bn')>-1;}
+  function isBn(){return document.body.classList.contains('lang-bn');}
   function leftCount(){var n=0;for(var i=0;i<rows.length;i++){if(rows[i].classList.contains('cut')){n++;}}return n;}
   function label(){
     var m=leftCount();
