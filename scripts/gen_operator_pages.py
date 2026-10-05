@@ -133,9 +133,10 @@ HEAD = '''<!DOCTYPE html>
       <a href="../index.html" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Home</span><span class="label-bn">হোম</span></a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600"><span class="label-en">Routes</span><span class="label-bn">রুট</span></a>
       <span class="lang-group" style="display:flex;gap:4px;margin-left:4px">
-        <button class="lang-btn" id="langEN" onclick="setLang('en')" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
+        <button type="button" class="lang-btn" id="langEn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">EN</button>
+        <button type="button" class="lang-btn" id="langBn" style="background:transparent;border:1px solid var(--line,#ccc);border-radius:999px;padding:4px 10px;cursor:pointer;font-weight:700;font-size:12px;font-family:inherit">বাংলা</button>
       </span>
+      <button type="button" id="themeBtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#ccc);background:transparent;color:var(--ink,#211c16);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
     </nav>
   </div>
 </header>
@@ -168,7 +169,7 @@ FOOT = '''<footer class="footer">
   </div>
 </footer>
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
-<script>(function(){function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');var a=document.getElementById('langEN'),b=document.getElementById('langBN');if(a)a.style.background=l==='en'?'var(--amber-soft,#f6e7c6)':'transparent';if(b)b.style.background=l==='bn'?'var(--amber-soft,#f6e7c6)':'transparent';try{localStorage.setItem('seo-lang',l);}catch(e){}}window.setLang=setLang;var sv=null;try{sv=localStorage.getItem('seo-lang');}catch(e){}setLang(sv||'en');})();</script>
+<script src="../js/hdr.js?v=hdrunify20261005a"></script>
 </body>
 </html>
 '''
@@ -207,12 +208,12 @@ def build_page(op, stems):
             chips.append(f'<span class="via-chip" style="--i:{min(i, 15)}">{esc(label)}</span>')
 
 
-    popular = f'''<h2 class="op-h2">Popular {esc(op['name'])} Routes</h2>
+    popular = f'''<h2 class="op-h2"><span class="label-en">Popular {esc(op['name'])} Routes</span><span class="label-bn">{bn} জনপ্রিয় রুট</span></h2>
 <div class="op-grid">
 {''.join(rows)}
 </div>'''
 
-    chiprow = f'''<h2 class="op-h2" style="margin-top:26px">All Destinations</h2>
+    chiprow = f'''<h2 class="op-h2" style="margin-top:26px"><span class="label-en">All Destinations</span><span class="label-bn">সব গন্তব্য</span></h2>
 <div class="chip-row" aria-label="All destinations">{''.join(chips)}</div>'''
 
     op_info = OPS_INFO.get(op["stem"], ("bus services", "বাস পরিষেবা"))
@@ -264,12 +265,12 @@ def build_page(op, stems):
         "<section class='bj-op-search'>" +
         "<div class='lb'><span class='label-en'>Search " + esc(op['name']) + " buses</span><span class='label-bn'>" + bn_short + " বাস খুঁজুন</span></div>" +
         "<div class='row'>" +
-        "<input id='bjFrom' type='text' placeholder='e.g. " + ph_fr + "' autocomplete='off'>" +
+        "<label class='op-field-label'><span class='label-en'>From</span><span class='label-bn'>কোথা থেকে</span></label><input id='bjFrom' type='text' placeholder='e.g. " + ph_fr + "' autocomplete='off'>" +
         "<button class='swap' onclick='bjSwap()' title='Swap' type='button'>⇆</button>" +
-        "<input id='bjTo' type='text' placeholder='e.g. " + ph_to + "' autocomplete='off'>" +
+        "<label class='op-field-label'><span class='label-en'>To</span><span class='label-bn'>কোথায়</span></label><input id='bjTo' type='text' placeholder='e.g. " + ph_to + "' autocomplete='off'>" +
         "</div>" +
         "<div class='row' style='margin-top:8px'>" +
-        "<input id='bjDate' type='date' style='flex:1.2'>" +
+        "<label class='op-field-label'><span class='label-en'>Date</span><span class='label-bn'>তারিখ</span></label><input id='bjDate' type='date' style='flex:1.2'>" +
         "<button class='go' style='margin-top:0;width:auto;flex:1.4' onclick='bjSearchGo()' type='button'>🚊 <span class='label-en'>Search</span><span class='label-bn'>সার্চ করুন</span></button>" +
         "</div>" +
         off_link +
@@ -277,7 +278,8 @@ def build_page(op, stems):
         "<style>" +
         ".bj-op-search{background:var(--surface,#fffcf4);border:1.5px solid var(--line,rgba(33,28,22,.15));border-radius:14px;padding:16px;margin:20px 0 14px;box-shadow:0 2px 12px rgba(33,28,22,.06)}" +
         ".bj-op-search .lb{font-size:11px;letter-spacing:.12em;font-weight:700;color:var(--amber-ink,#6b4610);text-transform:uppercase;margin-bottom:10px}" +
-        ".bj-op-search .row{display:flex;gap:8px;align-items:stretch}" +
+        ".bj-op-search .row{display:flex;gap:8px;align-items:stretch;position:relative}" +
+         ".bj-op-search .op-field-label{position:absolute;left:8px;top:-7px;padding:0 5px;background:var(--surface,#fffcf4);font-size:10px;font-weight:700;color:var(--amber-ink,#6b4610);z-index:1}" +
         ".bj-op-search input{flex:1;min-width:0;padding:12px;border-radius:10px;border:1.5px solid var(--line,#ccc);background:var(--bg,#fff);font:inherit;font-size:15px}" +
         ".bj-op-search input:focus{outline:none;border-color:var(--amber,#b8791f)}" +
         ".bj-op-search .swap{flex:none;width:40px;border-radius:10px;border:1.5px solid var(--line,#ccc);background:var(--surface,#fffcf4);font-size:16px;cursor:pointer;color:var(--amber,#b8791f)}" +
@@ -433,12 +435,11 @@ def apply_sbstc_toggle(body, op):
             'stroke-linejoin="round" aria-hidden="true" style="width:14px;height:14px">'
             '<path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>')
     b = b.replace('<span class="lang-group"', moon + '\n        <span class="lang-group"', 1)
-    b = b.replace("id=\"langEN\" onclick=\"setLang('en')\"", 'id="langEn"', 1)
-    b = b.replace("id=\"langBN\" onclick=\"setLang('bn')\"", 'id="langBn"', 1)
-    # swap the inline setLang IIFE for the site-standard controls script
-    b = re.sub(r'<script>\(function\(\)\{function setLang[\s\S]*?\}\)\(\);</script>',
-               '<script src="../js/seo-page.js?v=spg20260926" defer></script>', b, count=1)
-    assert 'seo-page.js' in b and 'function setLang' not in b
+    # Shared hdr.js now owns the canonical language/theme controls.
+    # SBSTC keeps seo-page.js only for its route-specific Bengali enhancements.
+    if 'seo-page.js?v=spg20260926' not in b:
+        b = b.replace('</main>', '<script src="../js/seo-page.js?v=spg20260926" defer></script>\n</main>', 1)
+    assert 'seo-page.js' in b
 
     # ---- hero: badge + bilingual ----
     old_h1 = '<h1 style="font-size:clamp(1.8rem,5vw,2.5rem);line-height:1.2;margin:0">SBSTC Buses</h1>'
