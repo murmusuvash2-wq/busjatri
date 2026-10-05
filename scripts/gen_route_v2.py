@@ -52,7 +52,7 @@ for _need in ("BUSES", "route_meta", "slug", "esc", "parse_time", "route_stats")
 # version tags (bump on every change)
 # ------------------------------------------------------------
 CSS_V2 = "seov2b"
-JS_V2 = "seopagea"
+JS_V2 = "seopageb"
 
 # ------------------------------------------------------------
 # Bengali helpers
