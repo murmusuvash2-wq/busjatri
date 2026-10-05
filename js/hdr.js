@@ -1,7 +1,7 @@
 /* BusJatri unified header controller - 2026-10-05 Phase 1
    Supports both legacy header id casing variants during migration.
 
-   /* BusJatri unified header controller - 2026-10-02
+   
    One language switch + one theme switch, wired the same way on every page.
 
    Before this, each page family shipped its own header wiring: inline
@@ -35,6 +35,7 @@
 
   function applyTheme(dark) {
     document.body.classList.toggle('dark', dark);
+    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
     var b = document.getElementById('themeBtn');
     if (b) b.innerHTML = dark ? SUN : MOON;
     write('bj-theme', dark ? 'dark' : 'light');
