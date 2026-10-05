@@ -22,7 +22,7 @@ WRITE = not DRY
 
 # ---------------------------------------------------------------- Bengali ----
 BN = {
- "Airport Gate-1":"এয়ারপোর্ট গেট-১", "Howrah Stn":"হাওড়া স্টেশন", "Howrah Station":"হাওড়া স্টেশন", "Garia Depot":"গড়িয়া ডিপো", "Ballygunge Stn":"বালিগঞ্জ স্টেশন", "Ballygunge":"বালিগঞ্জ", "Dunlop":"ডানলপ", "New Town":"নিউ টাউন", "Ecospace":"ইকোস্পেস", "Ultadanga":"উল্টোডাঙ্গা", "Karunamayee":"করুণাময়ী","Ajoynagar":"অজয়নগর","Akra Rabindranagar":"আকরা রবীন্দ্রনগর",
+ "Airport Gate-1":"এয়ারপোর্ট গেট-১", "Howrah Stn":"হাওড়া স্টেশন", "Howrah Bridge East":"হাওড়া ব্রিজ ইস্ট", "BBD Bag":"বিবিডি বাগ", "Esplanade":"এসপ্ল্যানেড", "Lalbazar":"লালবাজার", "Manicktala":"মানিকতলা", "Kankurgachi":"কাঁকুড়গাছি", "Kaikhali":"কৈখালি", "Tobin Rd":"টোবিন রোড", "Sinthi More":"সিঁথি মোড়", "Chiriamore":"চিড়িয়ামোড়", "Shyambazar":"শ্যামবাজার", "Grey St":"গ্রে স্ট্রিট", "Vivekananda Rd":"বিবেকানন্দ রোড", "Colutala St":"কলুটোলা স্ট্রিট", "C.R. Ave":"সি আর অ্যাভিনিউ", "Park Street":"পার্ক স্ট্রিট", "Hazra":"হাজরা", "Rashbehari Ave":"রাসবিহারী অ্যাভিনিউ", "Deshapriya Park":"দেশপ্রিয় পার্ক", "Gariahat":"গড়িয়াহাট", "Howrah Station":"হাওড়া স্টেশন", "Garia Depot":"গড়িয়া ডিপো", "Ballygunge Stn":"বালিগঞ্জ স্টেশন", "Ballygunge":"বালিগঞ্জ", "Dunlop":"ডানলপ", "New Town":"নিউ টাউন", "Ecospace":"ইকোস্পেস", "Ultadanga":"উল্টোডাঙ্গা", "Karunamayee":"করুণাময়ী","Ajoynagar":"অজয়নগর","Akra Rabindranagar":"আকরা রবীন্দ্রনগর",
  "Alipore Zoo":"আলিপুর চিড়িয়াখানা","Amtala":"আমতলা","Baguihati":"বাগুইয়াটি","Bakultala":"বকুলতলা",
  "Bally Khal":"বালি খাল","Bantala IT Park":"বানতলা আইটি পার্ক","Baranagar":"বরানগর","Baruipur":"বারুইপুর",
  "Batamore":"বাটামোড়","Beckbagan":"বেকবাগান","Behala 3A Stand":"বেহালা ৩এ স্ট্যান্ড","Behala P.S":"বেহালা থানা",
@@ -405,6 +405,7 @@ def main():
   function syncJourneyLang(){
     if(typeof STOPS === 'undefined' || !Array.isArray(STOPS) || !STOPS.length) return;
     var bn=document.body.classList.contains('lang-bn');
+    var first=STOPS[0], last=STOPS[STOPS.length-1];
     var rows=document.querySelectorAll('#jStops .j-stop');
     rows.forEach(function(row,i){
       if(STOPS[i]){
@@ -412,10 +413,13 @@ def main():
         if(name) name.textContent=bn ? STOPS[i][1] : STOPS[i][0];
       }
     });
+    var route=(bn ? first[1] : first[0])+' → '+(bn ? last[1] : last[0]);
     var jr=document.getElementById('jRoute');
-    if(jr){
-      jr.textContent=(bn ? STOPS[0][1] : STOPS[0][0])+' → '+(bn ? STOPS[STOPS.length-1][1] : STOPS[STOPS.length-1][0]);
-    }
+    if(jr) jr.textContent=route;
+    var h1=document.querySelector('.seo-hero h1');
+    if(h1) h1.innerHTML='<span class="label-en">'+first[0]+' <span class="arr">→</span> '+last[0]+'</span><span class="label-bn">'+first[1]+' <span class="arr">→</span> '+last[1]+'</span>';
+    var cr=document.querySelector('.crumbs');
+    if(cr) cr.innerHTML='<a href="../"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> › <a href="./"><span class="label-en">Bus Timetable</span><span class="label-bn">বাস টাইম টেবিল</span></a> › <span>'+route+'</span>';
   }
   window.bjSyncJourneyLang=syncJourneyLang;
   var obs=new MutationObserver(function(){syncJourneyLang()});
