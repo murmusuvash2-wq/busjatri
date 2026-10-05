@@ -155,19 +155,49 @@
     if (!field) return;
     var d = document.createElement('div');
     d.className = 'ac-drop';
-    d.innerHTML = m.map(function (n) {
-      return '<div class="ac-item">' + acHtml(n) + '</div>';
+    d.setAttribute('role', 'listbox');
+    d.id = 'bj-ac-' + input.id;
+    d.innerHTML = m.map(function (n, i) {
+      return '<div class="ac-item" id="' + d.id + '-item-' + i + '" role="option" aria-selected="false">' + acHtml(n) + '</div>';
     }).join('');
+    input.setAttribute('aria-controls', d.id);
     field.appendChild(d);
   }
   function acIsInput(el) {
     return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));
   }
   var acTimer = null;
+  var acActiveIndex = -1;
+  function acItems() { return Array.prototype.slice.call(document.querySelectorAll('.ac-drop .ac-item')); }
+  function acSetActive(input, idx) {
+    var items = acItems();
+    if (!items.length) { acActiveIndex = -1; return; }
+    if (idx < 0) idx = items.length - 1;
+    if (idx >= items.length) idx = 0;
+    acActiveIndex = idx;
+    items.forEach(function (item, i) {
+      item.classList.toggle('is-active', i === idx);
+      item.setAttribute('aria-selected', i === idx ? 'true' : 'false');
+    });
+    var active = items[idx];
+    if (active && active.scrollIntoView) active.scrollIntoView({ block: 'nearest' });
+    input.setAttribute('aria-activedescendant', active.id || '');
+  }
   document.addEventListener('input', function (e) {
     if (!acIsInput(e.target)) return;
+    acActiveIndex = -1;
+    e.target.removeAttribute('aria-activedescendant');
     if (acTimer) clearTimeout(acTimer);
     acTimer = setTimeout(function () { acShow(e.target); }, 160);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (!acIsInput(e.target)) return;
+    var items = acItems();
+    if (!items.length) return;
+    if (e.key === 'ArrowDown') { e.preventDefault(); acSetActive(e.target, acActiveIndex + 1); }
+    else if (e.key === 'ArrowUp') { e.preventDefault(); acSetActive(e.target, acActiveIndex - 1); }
+    else if (e.key === 'Escape') { acHide(); e.target.removeAttribute('aria-activedescendant'); acActiveIndex = -1; }
+    else if (e.key === 'Enter' && acActiveIndex >= 0 && items[acActiveIndex]) { e.preventDefault(); items[acActiveIndex].click(); }
   });
   document.addEventListener('click', function (e) {
     var item = e.target.closest ? e.target.closest('.ac-item') : null;
