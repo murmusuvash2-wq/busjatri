@@ -216,3 +216,76 @@ body.lang-bn .route-chip{letter-spacing:0}
 /* 2026-09-28: chips/cards are now <a> — keep them visually identical */
 a.route-chip,a.place-card{color:inherit;text-decoration:none}
 a.place-card{display:flex}
+
+
+/* =========================================================
+   Phase 2 — mobile-first UX hardening (2026-10-05)
+   Keep the same data/layout semantics; improve touch, width,
+   wrapping and scanability on small screens.
+   ========================================================= */
+@media (max-width: 640px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .container{padding-left:14px;padding-right:14px}
+  .top-inner{padding-left:14px;padding-right:14px}
+  .top-actions{gap:6px}
+  .top-btn{min-height:42px;padding:8px 11px;font-size:12px}
+
+  .search-box{padding:14px;border-radius:14px;margin-top:8px}
+  .search-row{display:grid;grid-template-columns:1fr;gap:8px}
+  .search-field{min-width:0}
+  .search-field input{font-size:16px;min-height:44px;padding:8px 2px}
+  .search-actions{padding-top:2px}
+  .search-btn{width:100%;min-height:46px;padding:12px 18px}
+  .swap-btn{display:none}
+  .ac-drop{left:0;right:0;max-height:52vh}
+  .ac-item{min-height:44px;padding:11px 13px}
+
+  .hero{padding-top:14px}
+  .hero h1{font-size:clamp(1.55rem,8vw,2rem);line-height:1.2}
+  .tagline{font-size:13px}
+  .stat-chips{gap:6px}
+  .stat-chip{min-height:36px;padding:6px 10px}
+
+  .lv-clock-wrap{padding:11px 12px 9px;gap:8px}
+  .lv-clock-big{font-size:23px}
+  .lv-geo{max-width:120px}
+  .lv-board{padding:9px}
+  .lv-tabs{flex-wrap:nowrap;overflow-x:auto;padding-bottom:3px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .lv-tabs::-webkit-scrollbar{display:none}
+  .lv-tab{flex:0 0 auto;min-height:40px;padding:7px 11px}
+  .lv-row{display:grid;grid-template-columns:auto 1fr auto;grid-template-areas:"time name tag" "time dest dest";column-gap:8px;row-gap:2px;padding:10px 5px;min-height:62px}
+  .lv-row .lt{grid-area:time;min-width:48px;font-size:14px;align-self:start;padding-top:1px}
+  .lv-row .lnm{grid-area:name;font-size:12px;white-space:normal;overflow:visible;text-overflow:clip;line-height:1.3}
+  .lv-row .ldst{grid-area:dest;min-width:0;max-width:none;text-align:left;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:10px}
+  .lv-row .ltag{grid-area:tag;justify-self:end;align-self:start;font-size:9.5px;padding:3px 7px}
+  .lv-row .lgone{grid-area:tag;justify-self:end;align-self:end;font-size:9px}
+
+  .section{padding:14px 0 22px}
+  .section-title{font-size:1.08rem;margin-bottom:11px}
+  .route-chips{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .route-chip{min-height:46px;padding:9px 10px;font-size:12px;line-height:1.3;justify-content:flex-start}
+  .route-chip .rcnt{margin-left:auto}
+  .place-cards{gap:8px;padding-bottom:8px}
+  .place-card{flex-basis:138px;min-height:120px;padding:11px}
+
+  .bus-list{gap:8px}
+  .bus-card{border-radius:13px}
+  .bus-head{gap:8px;padding:12px;min-height:58px}
+  .bus-head .name{font-size:14px;line-height:1.35}
+  .bus-head .route{font-size:11px;line-height:1.35}
+  .bus-head .dep-time,.bus-head .no-time{font-size:11px;padding:5px 7px}
+  .bus-meta-grid{grid-template-columns:1fr 1fr}
+
+  .footer-links{gap:5px}
+  .footer-links a{min-height:40px;display:inline-flex;align-items:center;padding:6px 10px}
+}
+
+@media (max-width: 380px){
+  .top-btn{padding:8px 9px;font-size:11px}
+  .brand{font-size:1.25rem}
+  .lv-clock-big{font-size:21px}
+  .lv-geo{max-width:100px;font-size:9px}
+  .route-chips{grid-template-columns:1fr}
+  .route-chip{min-height:44px}
+  .bus-meta-grid{grid-template-columns:1fr}
+}
