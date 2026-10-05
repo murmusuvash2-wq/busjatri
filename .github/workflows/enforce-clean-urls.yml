@@ -45,7 +45,7 @@ jobs:
         run: |
           from pathlib import Path
           import re
-          rx = re.compile(r'<script>\\s*var MOON=.*?function setLang\\(.*?</script>\\s*', re.S)
+          rx = re.compile(r'<script>\s*var MOON=.*?function setLang\(.*?</script>\s*', re.S)
           changed = 0
           for p in Path('.').rglob('*.html'):
             if '.git' in p.parts:
