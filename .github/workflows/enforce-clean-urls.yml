@@ -17,6 +17,10 @@ on:
       - '**/*.html'
       - 'sitemap*.xml'
       - '_redirects'
+      - '.github/workflows/enforce-clean-urls.yml'
+      - 'scripts/gen_via_v2.py'
+      - 'js/lang.js'
+      - 'js/hdr.js'
   workflow_dispatch:
 
 permissions:
@@ -35,6 +39,23 @@ jobs:
 
       - name: Normalize .html to clean URLs
         run: python3 scripts/fix_clean_urls.py
+
+      - name: Remove legacy embedded language controller
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          rx = re.compile(r'<script>\\s*var MOON=.*?function setLang\\(.*?</script>\\s*', re.S)
+          changed = 0
+          for p in Path('.').rglob('*.html'):
+            if '.git' in p.parts:
+              continue
+            text = p.read_text(encoding='utf-8')
+            cleaned = rx.sub('', text)
+            if cleaned != text:
+              p.write_text(cleaned, encoding='utf-8')
+              changed += 1
+          print('removed legacy language controller from', changed, 'HTML files')
 
       - name: noindex + de-list thin via pages
         run: python3 scripts/prune_thin_via_pages.py
