@@ -690,8 +690,16 @@ function renderHome(el) {
     var keepOps = el.querySelector('[data-keep="1"]');
     var freshOps = tmp.querySelector('[data-keep="1"]');
     if (keepOps && freshOps) freshOps.remove();
+    /* Remove every previously-rendered dynamic home section while preserving
+       static data-keep blocks. Stopping at the first keep block left the old
+       Popular Routes/Destinations sections in the DOM, so every render could
+       append another copy. */
     var sib = keepHero.nextElementSibling;
-    while (sib) { var nx2 = sib.nextElementSibling; if (sib.getAttribute && sib.getAttribute('data-keep') === '1') break; sib.remove(); sib = nx2; }
+    while (sib) {
+      var nx2 = sib.nextElementSibling;
+      if (!(sib.getAttribute && sib.getAttribute('data-keep') === '1')) sib.remove();
+      sib = nx2;
+    }
     while (tmp.firstChild) el.appendChild(tmp.firstChild);
   } else {
     el.innerHTML = homeHTML;
