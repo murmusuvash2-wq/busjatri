@@ -8,7 +8,19 @@
 
   var PLACES = {
     'Bankura':'বাঁকুড়া','Digha':'দীঘা','Kolkata':'কলকাতা','Medinipur':'মেদিনীপুর',
-    'Bardhaman':'বর্ধমান','Burdwan':'বর্ধমান','Kharagpur':'খড়্গপুর','Siliguri':'শিলিগুড়ি',
+    'Bardhaman':'বর্ধমান','Burdwan':'বর্ধমান','Kharagpur':'খড়্গপুর','Siliguri':'শিলিগুড়ি','Jalpaiguri':'জলপাইগুড়ি','Jalpaiguri Bypass':'জলপাইগুড়ি বাইপাস',
+    'Darjeeling':'দার্জিলিং','Kalimpong':'কালিম্পং','Islampur':'ইসলামপুর','Panitanki':'পানিট্যাঙ্কি',
+    'Cooch Behar':'কোচবিহার','Coach Behar':'কোচবিহার','Coochbehar':'কোচবিহার','Koch Bihar':'কোচবিহার',
+    'Mainaguri':'ময়নাগুড়ি','Moynaguri':'ময়নাগুড়ি','Dhupguri':'ধূপগুড়ি','Falakata':'ফালাকাটা',
+    'Alipurduar':'আলিপুরদুয়ার','Bagdogra':'বাগডোগরা','Fulbari':'ফুলবাড়ি','Fatapukur':'ফাটাপুকুর',
+    'Salugara':'সালুগাড়া','Sevoke':'সেবক','Coronation Bridge':'করোনেশন ব্রিজ','Bagrakot':'বাগরাকোট',
+    'Oodlabari':'ওদলাবাড়ি','Odlabari':'ওদলাবাড়ি','Damdim':'ডামডিম','Malbazar':'মালবাজার',
+    'Kishanganj':'কিশনগঞ্জ','Dalkhola':'ডালখোলা','Itahar':'ইটাহার','Gangarampur':'গঙ্গারামপুর',
+    'Buniadpur':'বুনিয়াদপুর','Tapan':'তপন','Samsi':'সামসি','Chanchal':'চাঁচল',
+    'Dhubulia':'ধুবুলিয়া','Phulia':'ফুলিয়া','Shantipur':'শান্তিপুর','Beldanga':'বেলডাঙা',
+    'Farakka':'ফারাক্কা','Gazole':'গাজোল','Kaliachak':'কালিয়াচক','Sujapur':'সুজাপুর',
+    'Baharampur':'বহরমপুর','Madhyamgram':'মধ্যমগ্রাম','Amdanga':'আমডাঙা','Sheikhdighi':'শেখদিঘি',
+    'Ahiran':'আহিরণ','Chander':'চাঁদর'
     'Cooch Behar':'কোচবিহার','Asansol':'আসানসোল','Durgapur':'দুর্গাপুর','Purulia':'পুরুলিয়া',
     'Jhargram':'ঝাড়গ্রাম','Contai':'কাঁথি','Tamluk':'তমলুক','Bishnupur':'বিষ্ণুপুর',
     'Khatra':'খাতড়া','Alipurduar':'আলিপুরদুয়ার','Dinhata':'দিনহাটা','Mathabhanga':'মাথাভাঙ্গা',
