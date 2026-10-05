@@ -37,6 +37,10 @@
   }
 
   function setLang(bn) {
+    if (window.BJLang) {
+      window.BJLang.setLang(bn ? 'bn' : 'en');
+      return;
+    }
     document.body.classList.toggle('lang-bn', bn);
     var en = document.getElementById('langEn');
     var bnBtn = document.getElementById('langBn');
