@@ -37,7 +37,7 @@
     'Garia':'গড়িয়া','Berhampore':'বহরমপুর','Berhampur':'বহরমপুর','Salar':'সালার',
     'Kirnahar':'কীর্ণাহার','Karunamoyee':'করুণাময়ী','Karunamayee':'করুণাময়ী',
     'Belpahari':'বেলপাহাড়ি','Sonamukhi':'সোনামুখী','Patrasayer':'পাত্রসায়ের',
-    'Onda':'অন্ডাল','Mukutmanipur':'মুকুটমণিপুর','Ranibandh':'রানিবাঁধ','Simlapal':'সিমলাপাল',
+    'Onda':'ওন্দা','Mukutmanipur':'মুকুটমণিপুর','Ranibandh':'রানিবাঁধ','Simlapal':'সিমলাপাল',
     'Kharagpur (Town)':'খড়্গপুর (টাউন)','Egra':'এগরা','Ramnagar':'রামনগর','Kalinagar':'কালীনগর',
     'Kakdwip':'কাকদ্বীপ','Namkhana':'নামখানা','Falta':'ফলতা','Diamond Harbour':'ডায়মন্ড হারবার',
     'Jaynagar':'জয়নগর','Bagnan':'বাগনান','Amtala':'আমতলা','Behala':'বেহালা',
