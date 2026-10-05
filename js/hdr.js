@@ -96,7 +96,10 @@
     });
   }
 
+  var started = false;
   function init() {
+    if (started) return;
+    started = true;
     var t = read('bj-theme') || read('seo-theme');
     if (t === 'dark') applyTheme(true);
     else if (t === 'light') applyTheme(false);
@@ -114,6 +117,29 @@
     setTimeout(neutralise, 300);
   }
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
-  else init();
+  function boot() {
+    if (window.BJLang) {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+      return;
+    }
+    /* Legacy/generated pages may not yet include lang.js. Load the same
+       central controller relative to this hdr.js path so old page families
+       converge on one language system without another per-page map. */
+    var cur = document.currentScript;
+    var src = cur && cur.src ? cur.src : '';
+    var langSrc = src ? src.replace(/hdr\\.js(?:\\?[^#]*)?(?:#.*)?$/, 'lang.js?v=lang20261005c') : 'lang.js?v=lang20261005c';
+    var s = document.createElement('script');
+    s.src = langSrc;
+    s.onload = function () {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    };
+    s.onerror = function () {
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init);
+      else init();
+    };
+    document.head.appendChild(s);
+  }
+  boot();
 })();
