@@ -47,6 +47,8 @@ jobs:
               # It is presentation-only glue that now conflicts with js/hdr.js + js/lang.js.
               s = re.sub(r'<script>\s*var MOON=.*?function setLang\(.*?</script>\s*', '', s, flags=re.S)
 
+              s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/lang\.js)\?v=[^"\']+', lambda m: m.group('prefix') + '?v=lang20261005c', s)
+
               # All generated/legacy header references use the current controller.
               s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/hdr\.js)\?v=[^"\']+',
                          lambda m: m.group('prefix') + '?v=hdrunify20261005d', s)
