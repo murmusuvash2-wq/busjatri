@@ -32,6 +32,12 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--ink);font-siz
 a{color:var(--amber-ink);text-decoration:none}
 .container{max-width:720px;margin:0 auto;padding:0 18px}
 
+/* bilingual visibility */
+.only-bn{display:none!important}
+.only-en{display:block}
+body.lang-bn .only-bn{display:block!important}
+body.lang-bn .only-en{display:none!important}
+
 /* bengali */
 body.lang-bn .label-bn{display:inline!important}
 body.lang-bn .label-en{display:none!important}
