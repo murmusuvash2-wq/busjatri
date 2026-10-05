@@ -196,6 +196,12 @@ function setLang(l) {
   render();
 }
 
+/* Keep the homepage renderer's internal LANG state in sync with the shared header. */
+document.addEventListener('bj:langchange', function (ev) {
+  var next = ev && ev.detail && ev.detail.lang === 'bn' ? 'bn' : 'en';
+  if (LANG !== next) setLang(next);
+});
+
 function toggleTheme() {
   const cur = document.body.classList.contains('dark') ||
     document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
@@ -572,7 +578,7 @@ function renderBoard() {
   }
 
   const geoHtml = lvNear.length
-    ? `<div class="lv-geo"><span class="label-en">Detected near</span><span class="label-bn">কাছাকাছি শনাক্ত</span><b>${esc(lvNear[0].name)}</b>${lvNear[0].dist != null ? `<span>${Math.round(lvNear[0].dist)} km</span>` : ''}</div>`
+    ? `<div class="lv-geo"><span class="label-en">Detected near</span><span class="label-bn">কাছাকাছি শনাক্ত</span><b>${esc(pn(lvNear[0].name))}</b>${lvNear[0].dist != null ? `<span>${Math.round(lvNear[0].dist)} km</span>` : ''}</div>`
     : `<div class="lv-geo"><span class="label-en">Popular stops</span><span class="label-bn">জনপ্রিয় স্টপ</span></div>`;
 
   wrap.innerHTML = `
@@ -584,7 +590,7 @@ function renderBoard() {
       ${geoHtml}
     </div>
     <div class="lv-board">
-      <div class="lv-tabs">${origins.map(o => `<button class="lv-tab${o.name === lvOrigin ? ' on' : ''}" onclick="lvOrigin='${o.name}';renderBoard()">${esc(o.name)}${o.dist != null ? `<span class="dist">${Math.round(o.dist)}km</span>` : ''}</button>`).join('')}</div>
+      <div class="lv-tabs">${origins.map(o => `<button class="lv-tab${o.name === lvOrigin ? ' on' : ''}" onclick="lvOrigin='${o.name}';renderBoard()">${esc(pn(o.name))}${o.dist != null ? `<span class="dist">${Math.round(o.dist)}km</span>` : ''}</button>`).join('')}</div>
       <div id="lvRows">${rows}</div>
     </div>`;
 }
