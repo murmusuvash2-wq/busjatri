@@ -83,11 +83,36 @@
     if(en){en.classList.toggle('on',next==='en');en.classList.toggle('active',next==='en');}
     if(bn){bn.classList.toggle('on',next==='bn');bn.classList.toggle('active',next==='bn');}
     try { localStorage.setItem('bj-lang',next); localStorage.setItem('seo-lang',next); } catch(e){}
+    translateDom(d.body);
     if (emit) {
       try { d.dispatchEvent(new CustomEvent('bj:langchange',{detail:{lang:next}})); } catch(e){}
     }
     return next;
   }
+  var ORIGINAL = typeof WeakMap !== 'undefined' ? new WeakMap() : null;
+  function translateDom(root) {
+    root = root || d.body;
+    if (!root) return;
+    var walker = d.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function(n) {
+        var p=n.parentNode;
+        if (!p) return NodeFilter.FILTER_REJECT;
+        var tag=(p.nodeName||'').toLowerCase();
+        if (tag==='script'||tag==='style'||tag==='noscript'||tag==='textarea') return NodeFilter.FILTER_REJECT;
+        if (!n.nodeValue || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes=[], n;
+    while ((n=walker.nextNode())) nodes.push(n);
+    for (var i=0;i<nodes.length;i++) {
+      var node=nodes[i];
+      var raw=ORIGINAL ? (ORIGINAL.has(node) ? ORIGINAL.get(node) : node.nodeValue) : node.nodeValue;
+      if (ORIGINAL && !ORIGINAL.has(node)) ORIGINAL.set(node,raw);
+      node.nodeValue = translate(raw);
+    }
+  }
+
   function get() {
     try {
       var v=localStorage.getItem('bj-lang')||localStorage.getItem('seo-lang');
@@ -98,7 +123,17 @@
   function set(lang) { return apply(lang, true); }
   function on(fn) { d.addEventListener('bj:langchange',fn); return fn; }
 
-  w.BJLang = { places:PLACES, keys:KEYS, isBn:isBn, translate:translate, translatePlace:translatePlace, getLang:get, setLang:set, applyLang:apply, onChange:on };
+  w.BJLang = { places:PLACES, keys:KEYS, isBn:isBn, translate:translate, translatePlace:translatePlace, translateDom:translateDom, getLang:get, setLang:set, applyLang:apply, onChange:on };
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded',function(){ apply(get(),false); });
   else apply(get(),false);
+  if (w.MutationObserver) {
+    new MutationObserver(function(muts){
+      for (var i=0;i<muts.length;i++) {
+        for (var j=0;j<muts[i].addedNodes.length;j++) {
+          var n=muts[i].addedNodes[j];
+          if (n.nodeType===1) translateDom(n);
+        }
+      }
+    }).observe(d.body || d.documentElement,{childList:true,subtree:true});
+  }
 })(window,document);
