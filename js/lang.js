@@ -20,7 +20,7 @@
     'Dhubulia':'ধুবুলিয়া','Phulia':'ফুলিয়া','Shantipur':'শান্তিপুর','Beldanga':'বেলডাঙা',
     'Farakka':'ফারাক্কা','Gazole':'গাজোল','Kaliachak':'কালিয়াচক','Sujapur':'সুজাপুর',
     'Baharampur':'বহরমপুর','Madhyamgram':'মধ্যমগ্রাম','Amdanga':'আমডাঙা','Sheikhdighi':'শেখদিঘি',
-    'Ahiran':'আহিরণ','Chander':'চাঁদর'
+    'Ahiran':'আহিরণ','Chander':'চাঁদর',
     'Cooch Behar':'কোচবিহার','Asansol':'আসানসোল','Durgapur':'দুর্গাপুর','Purulia':'পুরুলিয়া',
     'Jhargram':'ঝাড়গ্রাম','Contai':'কাঁথি','Tamluk':'তমলুক','Bishnupur':'বিষ্ণুপুর',
     'Khatra':'খাতড়া','Alipurduar':'আলিপুরদুয়ার','Dinhata':'দিনহাটা','Mathabhanga':'মাথাভাঙ্গা',
