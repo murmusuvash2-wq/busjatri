@@ -139,10 +139,10 @@ PAGE_TMPL = """<!DOCTYPE html>
       Bus<span>Jatri</span>
     </a>
     <div class="header-actions">
-      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle dark mode"></button>
       <div class="lang-group">
-        <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')">বাংলা</button>
+        <button class="lang-btn active" id="langEN">EN</button>
+        <button class="lang-btn" id="langBN">বাংলা</button>
       </div>
     </div>
   </div>
@@ -167,6 +167,8 @@ PAGE_TMPL = """<!DOCTYPE html>
 <footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>@@JS@@</script>
+<script src="../js/lang.js?v=lang20261005c"></script>
+<script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body></html>"""
 
 
@@ -308,10 +310,10 @@ INDEX_TMPL = """<!DOCTYPE html>
       Bus<span>Jatri</span>
     </a>
     <div class="header-actions">
-      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle dark mode"></button>
       <div class="lang-group">
-        <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')">বাংলা</button>
+        <button class="lang-btn active" id="langEN">EN</button>
+        <button class="lang-btn" id="langBN">বাংলা</button>
       </div>
     </div>
   </div>

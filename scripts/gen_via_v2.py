@@ -173,12 +173,7 @@ body.lang-bn .only-en{display:none}
 body.lang-bn .only-bn{display:block}
 body:not(.lang-bn) .hbn{display:none}"""
 
-JS = """var MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-var SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>';
-function updateThemeIcon(theme){var btn=document.getElementById('themeBtn');if(btn)btn.innerHTML=theme==='dark'?SUN:MOON;}
-function toggleTheme(){var cur=document.documentElement.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');var next=cur==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',next);localStorage.setItem('bj-theme',next);localStorage.setItem('seo-theme',next);updateThemeIcon(next);}
-function setLang(l){document.body.classList.toggle('lang-bn',l==='bn');localStorage.setItem('bj-lang',l);localStorage.setItem('seo-lang',l);document.getElementById('langEN').classList.toggle('active',l==='en');document.getElementById('langBN').classList.toggle('active',l==='bn');}
-(function(){var t=localStorage.getItem('bj-theme')||localStorage.getItem('seo-theme');if(t)document.documentElement.setAttribute('data-theme',t);updateThemeIcon(t||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'));var l=localStorage.getItem('bj-lang')||localStorage.getItem('seo-lang');if(l&&l!=='en'){setLang(l);}})();"""
+JS = """"""
 
 PAGE_TMPL = """<!DOCTYPE html>
 <html lang="en">
@@ -205,10 +200,10 @@ PAGE_TMPL = """<!DOCTYPE html>
       Bus<span>Jatri</span>
     </a>
     <div class="header-actions">
-      <button class="icon-btn" id="themeBtn" onclick="toggleTheme()" title="Toggle theme" aria-label="Toggle dark mode"></button>
+      <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle dark mode"></button>
       <div class="lang-group">
-        <button class="lang-btn active" id="langEN" onclick="setLang('en')">EN</button>
-        <button class="lang-btn" id="langBN" onclick="setLang('bn')">বাংলা</button>
+        <button class="lang-btn active" id="langEN">EN</button>
+        <button class="lang-btn" id="langBN">বাংলা</button>
       </div>
     </div>
   </div>
@@ -239,7 +234,8 @@ PAGE_TMPL = """<!DOCTYPE html>
 @@FAQ@@
 <footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
-<script>@@JS@@</script>
+<script src="../js/lang.js?v=lang20261005c"></script>
+<script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body></html>"""
 
 

@@ -92,8 +92,22 @@
     if (d.documentElement) d.documentElement.setAttribute('lang', next);
     var en=d.getElementById('langEn')||d.getElementById('langEN');
     var bn=d.getElementById('langBn')||d.getElementById('langBN');
-    if(en){en.classList.toggle('on',next==='en');en.classList.toggle('active',next==='en');}
-    if(bn){bn.classList.toggle('on',next==='bn');bn.classList.toggle('active',next==='bn');}
+    if(en){
+      var enOn=next==='en';
+      en.classList.toggle('on',enOn); en.classList.toggle('active',enOn); en.classList.toggle('is-active',enOn);
+      en.setAttribute('aria-pressed',enOn?'true':'false');
+      en.style.background=enOn?'var(--amber-soft,#f6e7c6)':'transparent';
+      en.style.borderColor=enOn?'var(--amber,#b8791f)':'var(--line,#d8cfc0)';
+      en.style.fontWeight=enOn?'800':'700';
+    }
+    if(bn){
+      var bnOn=next==='bn';
+      bn.classList.toggle('on',bnOn); bn.classList.toggle('active',bnOn); bn.classList.toggle('is-active',bnOn);
+      bn.setAttribute('aria-pressed',bnOn?'true':'false');
+      bn.style.background=bnOn?'var(--amber-soft,#f6e7c6)':'transparent';
+      bn.style.borderColor=bnOn?'var(--amber,#b8791f)':'var(--line,#d8cfc0)';
+      bn.style.fontWeight=bnOn?'800':'700';
+    }
     try { localStorage.setItem('bj-lang',next); localStorage.setItem('seo-lang',next); } catch(e){}
     translateDom(d.body);
     if (emit) {
@@ -110,7 +124,9 @@
         var p=n.parentNode;
         if (!p) return NodeFilter.FILTER_REJECT;
         var tag=(p.nodeName||'').toLowerCase();
-        if (tag==='script'||tag==='style'||tag==='noscript'||tag==='textarea') return NodeFilter.FILTER_REJECT;
+        if (tag==='script'||tag==='style'||tag==='noscript'||tag==='textarea'||tag==='input'||tag==='option') return NodeFilter.FILTER_REJECT;
+        var owner=p.closest ? p.closest('.ac-drop, #stopList, [data-lang-static="en"]') : null;
+        if (owner) return NodeFilter.FILTER_REJECT;
         if (!n.nodeValue || !n.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
         return NodeFilter.FILTER_ACCEPT;
       }

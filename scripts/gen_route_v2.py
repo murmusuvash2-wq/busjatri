@@ -52,7 +52,7 @@ for _need in ("BUSES", "route_meta", "slug", "esc", "parse_time", "route_stats")
 # version tags (bump on every change)
 # ------------------------------------------------------------
 CSS_V2 = "seov2b"
-JS_V2 = "seopagea"
+JS_V2 = "seopageb"
 
 # ------------------------------------------------------------
 # Bengali helpers
@@ -795,8 +795,10 @@ def shell_v2(title, description, canonical, body, schema=""):
 {body}
 </main>
 {footer_html_v2()}
+<script defer src="../js/lang.js?v=lang20261005c"></script>
 <script defer src="../js/seo-page.js?v={JS_V2}"></script>
 <script defer src="../js/route-slider.js"></script>
+<script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body>
 </html>"""
 
