@@ -1,25 +1,9 @@
-/* BusJatri — language persistence, shared with the static SEO pages.
-   Loaded after app.js; reads/writes the same localStorage key ('bj-lang')
-   so one EN/বাংলা choice carries across the whole site. */
+/* BusJatri — legacy compatibility shim.
+   Language state now belongs to js/lang.js / window.BJLang.
+   Kept as a tiny bridge so older pages that still include this file do not
+   create a second language controller. */
 (function () {
-  var saved = null;
-  try { saved = localStorage.getItem('bj-lang'); } catch (e) {}
-  if (saved === 'bn' || saved === 'en') LANG = saved;
-  else if ((navigator.language || '').toLowerCase().indexOf('bn') === 0) LANG = 'bn';
-
-  document.body.classList.toggle('lang-bn', LANG === 'bn');
-  var e = document.getElementById('langEN') || document.getElementById('langEn'), b = document.getElementById('langBN') || document.getElementById('langBn');
-  if (e) e.classList.toggle('active', LANG === 'en');
-  if (b) b.classList.toggle('active', LANG === 'bn');
-  document.documentElement.setAttribute('lang', LANG === 'bn' ? 'bn' : 'en');
-
-  var _setLang = window.setLang;
-  if (_setLang) {
-    window.setLang = function (l) {
-      l = l === 'bn' ? 'bn' : 'en';
-      try { localStorage.setItem('bj-lang', l); localStorage.setItem('seo-lang', l); } catch (err) {}
-      _setLang(l);
-      document.documentElement.setAttribute('lang', l === 'bn' ? 'bn' : 'en');
-    };
-  }
+  'use strict';
+  if (!window.BJLang) return;
+  window.setLang = function (lang) { return window.BJLang.setLang(lang); };
 })();
