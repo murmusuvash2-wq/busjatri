@@ -133,7 +133,7 @@
     var now = minutesNow();
     var tabs = document.getElementById('bjLvTabs');
     if (tabs) tabs.innerHTML = origins.map(function (o) {
-      return '<button class="lv-tab' + (o.name === lvOrigin && !lvQ ? ' on' : '') + '" onclick="bjLvSet(' + Q + o.name.split(Q).join('') + Q + ')">' + esc(o.name) + '</button>';
+      return '<button class="lv-tab' + (o.name === lvOrigin && !lvQ ? ' on' : '') + '" onclick="bjLvSet(' + Q + o.name.split(Q).join('') + Q + ')">' + esc(bnName(o.name)) + '</button>';
     }).join('');
     var inp = document.getElementById('bjLvSearch');
     if (inp) inp.placeholder = document.body.classList.contains('lang-bn') ? 'স্টপ বা গন্তব্য লিখুন' : 'Search origin / stop';
@@ -167,12 +167,6 @@
       if (toI) toI.placeholder = isBn ? '\u09af\u09c7\u09ae\u09a8: ' + bnName('Kolkata') : 'e.g. Kolkata';
     }
     updPh();
-    if (window.MutationObserver) {
-      new MutationObserver(function () {
-        updPh();
-        renderRows();
-      }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-    }
     var bjDateI = document.getElementById('bjDate');
     var bjHourS = document.getElementById('bjHour');
     if (bjDateI && !bjDateI.value) bjDateI.value = bjTodayStr();
@@ -183,6 +177,14 @@
     }
     if (bjDateI) bjDateI.addEventListener('change', syncFilters);
     if (bjHourS) bjHourS.addEventListener('change', syncFilters);
+  }
+
+  if (window.MutationObserver) {
+    new MutationObserver(function (mutations) {
+      for (var mi = 0; mi < mutations.length; mi++) {
+        if (mutations[mi].attributeName === 'class') { renderRows(); break; }
+      }
+    }).observe(document.body, { attributes: true, attributeFilter: ['class'] });
   }
 
   renderRows();

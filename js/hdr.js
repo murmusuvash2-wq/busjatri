@@ -54,8 +54,11 @@
       bnBtn.classList.toggle('on', bn);
       bnBtn.style.background = bn ? 'var(--amber-soft,#f6e7c6)' : 'transparent';
     }
-    write('bj-lang', bn ? 'bn' : 'en');
-    write('seo-lang', bn ? 'bn' : 'en');
+    var lang = bn ? 'bn' : 'en';
+    write('bj-lang', lang);
+    write('seo-lang', lang);
+    /* Homepage app.js listens for this event and rerenders dynamic content. */
+    try { document.dispatchEvent(new CustomEvent('bj:langchange', { detail: { lang: lang } })); } catch (e) {}
   }
 
   var IDS = ['themeBtn', 'langEn', 'langBn', 'langEN', 'langBN'];
