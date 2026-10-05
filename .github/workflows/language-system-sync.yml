@@ -11,7 +11,11 @@ on:
       - 'scripts/gen_btt_v2.py'
       - 'scripts/gen_stand_v2.py'
       - 'scripts/gen_via_stop_v2.py'
+      - 'js/app.js'
+      - 'js/seo-page.js'
+      - 'scripts/gen_operator_pages.py'
       - '.github/workflows/language-system-sync.yml'
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -29,14 +33,24 @@ jobs:
           from pathlib import Path
           import re
 
-          roots = [Path('.')]
           changed = []
+
+          def remove_legacy_header_scripts(html):
+              pattern = re.compile(r'<script\\b[^>]*>.*?</script>\\s*', re.I | re.S)
+              def repl(match):
+                  block = match.group(0)
+                  lower = block.lower()
+                  if ('function toggletheme(' in lower and 'function setlang(' in lower
+                      and ('var moon' in lower or 'id="langen"' in lower or "id='langen'" in lower)):
+                      return ''
+                  return block
+              return pattern.sub(repl, html)
 
           for p in Path('.').rglob('*.html'):
               if '.git' in p.parts:
                   continue
-              s = p.read_text(encoding='utf-8')
-              original = s
+              original = p.read_text(encoding='utf-8')
+              s = remove_legacy_header_scripts(original)
 
               depth = len(p.parent.parts)
               rel = '../' * depth
@@ -49,13 +63,14 @@ jobs:
 
               s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/lang\.js)\?v=[^"\']+', lambda m: m.group('prefix') + '?v=lang20261005c', s)
 
-              # All generated/legacy header references use the current controller.
               s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/hdr\.js)\?v=[^"\']+',
                          lambda m: m.group('prefix') + '?v=hdrunify20261005d', s)
 
-              # Route/SEO pages get a fresh seo-page asset where one already exists.
               s = re.sub(r'(?P<prefix>(?:\.\./|/|)js/seo-page\.js)\?v=[^"\']+',
                          lambda m: m.group('prefix') + '?v=spg20261005c', s)
+
+              s = re.sub(r'\\s+onclick=(['"'])setLang\\(\\s*['"'](?:en|bn)['"']\\s*\\)\\1', '', s, flags=re.I)
+              s = re.sub(r'\\s+onclick=(['"'])toggleTheme\\(\\s*\\)\\1', '', s, flags=re.I)
 
               has_lang = 'js/lang.js?v=' in s
               has_hdr = 'js/hdr.js?v=' in s
@@ -86,10 +101,11 @@ jobs:
               print('...')
 
       - name: Commit generated HTML changes
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add '*.html' '**/*.html'
+          git add --all -- '*.html' '**/*.html'
           if git diff --cached --quiet; then
             echo "No generated HTML changes."
             exit 0
