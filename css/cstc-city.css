@@ -100,3 +100,32 @@ body:has(.cstc-hero), body:has(.seo-hero) { background:var(--bg,#f5efe1); }
   .cstc-direction-title{font-size:1rem!important;}
   .cstc-table{font-size:.74rem!important;min-width:330px!important;}
 }
+
+/* Phase 2 responsive hardening: stat pills must never clip on narrow screens. */
+.stat-chips,
+.cstc-stats{
+  display:flex!important;
+  flex-wrap:wrap!important;
+  align-items:stretch!important;
+  min-width:0!important;
+}
+.stat-chips .schip,
+.cstc-stat{
+  min-width:0!important;
+  max-width:100%!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+  line-height:1.25!important;
+}
+@media(max-width:680px){
+  .stat-chips .schip,
+  .cstc-stat{
+    flex:1 1 calc(50% - 4px)!important;
+  }
+}
+@media(max-width:390px){
+  .stat-chips .schip,
+  .cstc-stat{
+    flex-basis:100%!important;
+  }
+}
