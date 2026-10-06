@@ -1,0 +1,53 @@
+name: Kolkata city design (route pages + hub)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/build_city_route_pages.py'
+      - 'scripts/patch_city_hub.py'
+      - '.github/workflows/city-design.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Syntax check
+        run: |
+          python3 -c "import py_compile; py_compile.compile('scripts/build_city_route_pages.py', doraise=True)"
+          python3 -c "import py_compile; py_compile.compile('scripts/patch_city_hub.py', doraise=True)"
+
+      - name: Build Kolkata city route pages (time + stoppage + route)
+        run: python3 scripts/build_city_route_pages.py
+
+      - name: Patch hub (remove long list, dedupe CSTC panels)
+        run: python3 scripts/patch_city_hub.py
+
+      - name: Validate
+        run: |
+          test $(ls bus-time-table/*.html | wc -l) -gt 1500
+          grep -q "cstc-hero" bus-time-table/dunlop-to-ballygunge.html
+          grep -q "rm-stops" bus-time-table/dunlop-to-ballygunge.html
+          grep -q "cstc-stops" bus-time-table/dunlop-to-ballygunge.html
+          test $(grep -c 'private-routes-section' kolkata-city-bus-timetable.html) -eq 0
+          test $(grep -c '<section class="cstc-panel"' kolkata-city-bus-timetable.html) -le 1
+          grep -q "hub-search" kolkata-city-bus-timetable.html
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bus-time-table kolkata-city-bus-timetable.html
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "city: implement route page (time+stoppage+route) + hub search-only"
+            git push
+          fi
