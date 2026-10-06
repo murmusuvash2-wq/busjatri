@@ -5,6 +5,14 @@ Newest entries first.
 
 ---
 
+## 2026-10-06 — City route page: every time listed; no time section when none
+- What: `build_city_route_pages.py` now lists EVERY departure time individually as chips (with a "next bus" highlight vs current time, past times dimmed) — and shows NO time section at all for routes with no published times (just hero + route line + stop list). Removed the old "Time N/A" box.
+- Why: User — "time ko single single karo jitna time hain, jis main time nahi usko sirf route do".
+- Files: scripts/build_city_route_pages.py, bus-time-table/* (auto-commit)
+- Commits: 22354bb4 (generator), workflow run 37419332113. Status: SUCCESS.
+- Status: done — verified barabazar-to-kolkata-esplanade shows 1 time chip ("3:40 AM"); dunlop-to-ballygunge has no time section.
+- Also this turn: hub `cstc-panel` ("Official schedule data / Kolkata CSTC city bus timetable") fully removed (commit 2c231856; hub now 132 KB). The 73 CSTC route pages (bus-time-table/cstc-*) are now unlinked from the hub.
+
 ## 2026-10-06 — Kolkata city bus: route page (time+stoppage+route) + hub search-only
 - What:
   1. **Route pages** — new generator `scripts/build_city_route_pages.py` emits the approved city-route design (hero with route code + stats, **TIME** departures table, **ROUTE** horizontal line, **STOPPAGE** list, bilingual EN/বাংলা) for all intra-Kolkata city routes. ~230 pages. Uses existing `cstc-city.css` + a small inline `<style>` for the route line (`.rm-*`).
