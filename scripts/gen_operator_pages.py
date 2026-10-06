@@ -490,7 +490,7 @@ def apply_sbstc_toggle(body, op):
                   '<span class="label-bn">\u09b8\u09ae\u09df\u09b8\u09c2\u099a\u09bf \u09a6\u09c7\u0996\u09c1\u09a8 \u203a</span></span>')
 
     # ---- FAQ: hide EN blocks in BN mode; map stop names inside BN blocks ----
-    b = b.replace('<details class="op-faq open">', '<details class="op-faq only-en open>')
+    b = b.replace('<details class="op-faq open">', '<details class="op-faq only-en" open>')
     b = b.replace('<details class="op-faq">', '<details class="op-faq only-en">')
     def _faq_walk(m):
         return _sbstc_bn_walk(m.group(1)) + m.group(2)
