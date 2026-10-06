@@ -5,6 +5,17 @@ Newest entries first.
 
 ---
 
+## 2026-10-06 — Kolkata city route pages: unified design implemented (CSTC + private)
+- What: Rebuilt `scripts/build_city_route_pages.py` into a unified generator (split into `scripts/city_route_lib.py` + main, since >18KB MCP limit):
+  - **CSTC routes (73, have times)** → hero with bidirectional `⇄` termini + **direction switch** (2 buttons, no scroll) + **compact vertical trips** (Departure | ride | Arrival header) + click-row **drop-down** with stoppages + times.
+  - **Private city routes (188, no time)** → SAME layout: hero `⇄` + stops-only list + "times not published" note.
+  - Every page also has: **dark-mode toggle** (body.dark + localStorage), **breadcrumb** (Home / Kolkata City Bus / Route), **Popular routes interlinked** (chips), **FAQ** (details + FAQPage JSON-LD), **About this route** — so pages aren't thin for Google.
+- Why: User spec — unified design/layout so future times drop in; CSTC=time, private=route only; dark toggle; breadcrumb; popular/FAQ/about for thin-page safety.
+- Files: scripts/city_route_lib.py, scripts/build_city_route_pages.py, .github/workflows/city-design.yml, bus-time-table/* (73 CSTC + 188 private), kolkata-city-bus-timetable.html
+- Commits: 26b02c9d (workflow), 37c57e02 (lib), b735ff01 (main). Run 37434536007: SUCCESS.
+- Status: done — verified live: cstc-11a.html has dswitch/⇄/trips/FAQ/About/Popular/dark/FAQPage; private page has stoplist + FAQ.
+- Notes: earlier run 37434188660 FAILED because the new generator wasn't committed yet (old generator produced no `.dswitch`/`.stoplist`) — fixed once both files landed.
+
 ## 2026-10-06 — City route page: every time listed; no time section when none
 - What: `build_city_route_pages.py` now lists EVERY departure time individually as chips (with a "next bus" highlight vs current time, past times dimmed) — and shows NO time section at all for routes with no published times (just hero + route line + stop list). Removed the old "Time N/A" box.
 - Why: User — "time ko single single karo jitna time hain, jis main time nahi usko sirf route do".
