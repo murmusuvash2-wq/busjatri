@@ -24,22 +24,26 @@ jobs:
           python3 -c "import py_compile; py_compile.compile('scripts/build_city_route_pages.py', doraise=True)"
           python3 -c "import py_compile; py_compile.compile('scripts/patch_city_hub.py', doraise=True)"
 
-      - name: Build Kolkata city route pages (time + stoppage + route)
+      - name: Build Kolkata city route pages (CSTC + private, unified design)
         run: python3 scripts/build_city_route_pages.py
 
-      - name: Patch hub (remove list + CSTC panels)
+      - name: Patch hub (remove list + CSTC panel)
         run: python3 scripts/patch_city_hub.py
 
       - name: Validate
         run: |
           test $(ls bus-time-table/*.html | wc -l) -gt 1500
-          grep -q "cstc-hero" bus-time-table/dunlop-to-ballygunge.html
-          grep -q "rm-stops" bus-time-table/dunlop-to-ballygunge.html
-          grep -q "cstc-stops" bus-time-table/dunlop-to-ballygunge.html
+          # CSTC page: bidirectional hero + direction switch + FAQ
+          grep -q "dswitch" bus-time-table/cstc-11a.html
+          grep -q "⇄" bus-time-table/cstc-11a.html
+          grep -q "Frequently asked" bus-time-table/cstc-11a.html
+          # private page: stops list + not-published note + FAQ
+          grep -q "stoplist" bus-time-table/dunlop-to-ballygunge.html
+          grep -q "Frequently asked" bus-time-table/dunlop-to-ballygunge.html
+          # hub: no long list, no CSTC panel, search intact
           test $(grep -c 'private-routes-section' kolkata-city-bus-timetable.html) -eq 0
           test $(grep -c '<section class="cstc-panel"' kolkata-city-bus-timetable.html) -eq 0
           grep -q "hub-search" kolkata-city-bus-timetable.html
-          test $(grep -c "Official schedule data" kolkata-city-bus-timetable.html) -eq 0
 
       - name: Commit and push
         run: |
@@ -49,6 +53,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "city: hub remove CSTC panel + route pages"
+            git commit -m "city: unified route design (CSTC times + private stops, dark)"
             git push
           fi
