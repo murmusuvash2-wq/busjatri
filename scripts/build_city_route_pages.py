@@ -105,6 +105,10 @@ ROUTE_CSS = """<style>
 .rm-stop.end .rm-dot{background:var(--amber)}
 .rm-name{margin-top:7px;font-size:11px;font-weight:700;text-align:center;line-height:1.25}
 .rm-name .bn{display:block;font-size:10px;color:var(--ink-dim);font-weight:500}
+.dep-chips{display:flex;flex-wrap:wrap;gap:7px}
+.dep-chip{font:700 13px var(--font-mono);background:var(--surface-2);border:1px solid var(--line);border-radius:9px;padding:7px 12px;color:var(--ink);min-width:74px;text-align:center}
+.dep-chip.next{background:var(--amber);border-color:var(--amber);color:#fff9ee;box-shadow:0 4px 12px rgba(184,121,31,.22)}
+.dep-chip.past{opacity:.42}
 </style>"""
 
 def shell(title, desc, canonical, body, jsonld=""):
@@ -117,7 +121,7 @@ def shell(title, desc, canonical, body, jsonld=""):
 {ROUTE_CSS}{ld}</head><body>{header()}<main class="container seo-main">
 <div class="cstc-breadcrumb" style="font:600 11px var(--font-mono);color:var(--ink-dim);padding:14px 0 2px"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / {esc(title.split(' Bus ')[0])}</div>
 {body}</main><footer class="footer"><div class="container"><p><strong>BusJatri</strong> — West Bengal bus timetable<br>Not affiliated with any transport corporation</p></div></footer>
-<script defer src="../js/hdr.js?v=hdrunify20261005d"></script><script defer src="../js/lang.js?v=lang20261005c"></script></body></html>'''
+<script defer src="../js/hdr.js?v=hdrunify20261005d"></script><script defer src="../js/lang.js?v=lang20261005c"></script><script>(function(){{var c=[].slice.call(document.querySelectorAll(".dep-chip"));if(!c.length)return;var d=new Date(),n=d.getHours()*60+d.getMinutes(),nx=null;c.forEach(function(x){{var m=+x.dataset.min;if(m<n)x.classList.add("past");if(m>=n&&(!nx||m<+nx.dataset.min))nx=x;}});if(nx){{nx.classList.add("next");var el=document.getElementById("nextNote");if(el)el.textContent="Next bus "+nx.textContent+" — in "+(+nx.dataset.min-n)+" min";}}}})();</script></body></html>'''
 
 def build_page(origin, destination, buses):
     rn = routenum(buses[0].get('bus_name'))
@@ -140,23 +144,18 @@ def build_page(origin, destination, buses):
         stats.append(f'<span class="cstc-stat">{lbl("Last","শেষ")} <strong>{fmt(times[-1])}</strong></span>')
     stats.append(f'<span class="cstc-stat">{lbl("Stops","স্টপ")} <strong>{n_stops}</strong></span>')
 
-    # TIME section
+    # TIME section — only when times exist; every departure listed individually
     if times:
-        rows = ''.join(f'<tr><td>{i+1}</td><td>{fmt(t)}</td><td>—</td><td>—</td></tr>' for i, t in enumerate(times))
-        time_sec = f'''<section class="cstc-direction">
-  <div class="cstc-direction-head"><div><h2 class="cstc-direction-title">{lbl(f"{origin} → {destination}","")}</h2>
+        chips = ''.join(f'<span class="dep-chip" data-min="{t}">{fmt(t)}</span>' for t in times)
+        time_sec = f'''<section class="cstc-direction" id="departures">
+  <div class="cstc-direction-head"><div><h2 class="cstc-direction-title">{lbl("Departure times","ছাড়ার সময়")}</h2>
   <p class="cstc-direction-meta">{len(times)} departures · first {fmt(times[0])} · last {fmt(times[-1])}</p></div>
   <span class="cstc-eyebrow">{lbl("Time","সময়")}</span></div>
-  <div class="cstc-table-wrap"><table class="cstc-table"><thead><tr><th>#</th><th>Departure</th><th>Arrival</th><th>Ride</th></tr></thead><tbody>{rows}</tbody></table></div>
+  <div class="dep-chips">{chips}</div>
+  <p class="cstc-stop-note" id="nextNote">{lbl("All published departure times for this route.","এই রুটের সব প্রকাশিত ছাড়ার সময়।")}</p>
 </section>'''
     else:
-        time_sec = f'''<section class="cstc-direction">
-  <div class="cstc-direction-head"><div><h2 class="cstc-direction-title">{lbl(f"{origin} → {destination}","")}</h2>
-  <p class="cstc-direction-meta">{lbl("Published timetable not listed yet","প্রকাশিত সময়সূচি এখনও নেই")}</p></div>
-  <span class="cstc-eyebrow">{lbl("Time","সময়")}</span></div>
-  <div class="cstc-stops"><div class="cstc-stops-head"><strong>{lbl("Time N/A","সময় পাওয়া যায়নি")}</strong><span>{esc(op)}</span></div>
-  <p class="cstc-stop-note">{lbl("We do not invent times. Know a time for this route? Report it and it will be added here.","আমরা সময় বানিয়ে দেখাই না। এই রুটের সময় জানেন? জানান — এখানে যোগ হবে।")}</p></div>
-</section>'''
+        time_sec = ''
 
     # ROUTE + STOPPAGE
     rm = ''.join(f'<div class="rm-stop {"end" if i in (0, n_stops-1) else ""}"><span class="rm-dot"></span>'
