@@ -27,7 +27,7 @@ jobs:
       - name: Build Kolkata city route pages (time + stoppage + route)
         run: python3 scripts/build_city_route_pages.py
 
-      - name: Patch hub (remove long list, dedupe CSTC panels)
+      - name: Patch hub (remove list + CSTC panels)
         run: python3 scripts/patch_city_hub.py
 
       - name: Validate
@@ -37,8 +37,9 @@ jobs:
           grep -q "rm-stops" bus-time-table/dunlop-to-ballygunge.html
           grep -q "cstc-stops" bus-time-table/dunlop-to-ballygunge.html
           test $(grep -c 'private-routes-section' kolkata-city-bus-timetable.html) -eq 0
-          test $(grep -c '<section class="cstc-panel"' kolkata-city-bus-timetable.html) -le 1
+          test $(grep -c '<section class="cstc-panel"' kolkata-city-bus-timetable.html) -eq 0
           grep -q "hub-search" kolkata-city-bus-timetable.html
+          test $(grep -c "Official schedule data" kolkata-city-bus-timetable.html) -eq 0
 
       - name: Commit and push
         run: |
@@ -48,6 +49,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "city: implement route page (time+stoppage+route) + hub search-only"
+            git commit -m "city: hub remove CSTC panel + route pages"
             git push
           fi
