@@ -76,6 +76,13 @@ def css_text() -> str:
     return CSS.read_text(encoding="utf-8") if CSS.exists() else ""
 
 
+def stops_html(stops: list[str]) -> str:
+    if not stops:
+        return '<p class="cstc-stop-note">Detailed via/stoppage data is not available in the supplied route record.</p>'
+    items = "".join(f'<li><span class="cstc-stop-dot" aria-hidden="true"></span><span>{esc(stop)}</span></li>' for stop in stops)
+    return f'<div class="cstc-stops" aria-label="Route stoppages"><div class="cstc-stops-head"><strong>Via / stoppages</strong><span>{len(stops)} listed</span></div><ol>{items}</ol></div>'
+
+
 def page_html(route: str, obj: dict, image_rel: str) -> str:
     dirs = obj.get("directions") or []
     first_from, first_to = split_direction(dirs[0].get("direction", "")) if dirs else (route, "Kolkata")
@@ -104,7 +111,7 @@ def page_html(route: str, obj: dict, image_rel: str) -> str:
             warn = f'<p class="cstc-note">This direction has {dep_count} departure entries and {arr_count} arrival entries in the supplied schedule image. Unmatched values are shown as — and should be checked against the original notice.</p>'
         sections.append(f'''<section class="cstc-direction" aria-labelledby="dir-{slug(name)}">
   <div class="cstc-direction-head"><div><h2 class="cstc-direction-title" id="dir-{slug(name)}">{esc(frm)} <span aria-hidden="true">→</span> {esc(to)}</h2><p class="cstc-direction-meta">{dep_count} departures · first {esc(fmt12((direction.get("departures") or [""])[0]))} · last {esc(fmt12((direction.get("departures") or [""])[-1]))}{(' · typical terminal ride '+esc(duration_text)) if duration_text else ''}</p></div><span class="cstc-eyebrow">CSTC timetable</span></div>
-  <div class="cstc-table-wrap"><table class="cstc-table"><caption class="sr-only">{esc(route)} {esc(name)} departure and arrival timetable</caption><thead><tr><th>#</th><th>Departure</th><th>Arrival</th><th>Ride</th></tr></thead><tbody>{''.join(tr)}</tbody></table></div>{warn}
+  <div class="cstc-table-wrap"><table class="cstc-table"><caption class="sr-only">{esc(route)} {esc(name)} departure and arrival timetable</caption><thead><tr><th>#</th><th>Departure</th><th>Arrival</th><th>Ride</th></tr></thead><tbody>{''.join(tr)}</tbody></table></div>{stops_html(direction.get("stoppages") or [])}{warn}
 </section>''')
     faq = f'''<section class="cstc-faq" aria-labelledby="faq-title"><h2 id="faq-title">{esc(route)} bus timetable FAQs</h2><details open><summary>What time does {esc(route)} bus start?</summary><p>The first listed departure for this route is {esc(first)}. The last listed departure in the supplied schedule is {esc(last)}.</p></details><details><summary>Does this page show both directions?</summary><p>Yes. This page lists the official CSTC schedule for both directions where both direction records are available.</p></details><details><summary>Are these timings official?</summary><p>The source supplied for this page is the CSTC/West Bengal Transport schedule image. Timings can change, so confirm before travelling.</p></details></section>'''
     jsonld = {

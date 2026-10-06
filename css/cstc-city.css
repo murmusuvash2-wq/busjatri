@@ -83,6 +83,16 @@ body:has(.cstc-hero), body:has(.seo-hero) { background:var(--bg,#f5efe1); }
 .cstc-faq details{background:var(--surface)!important;border-color:var(--line)!important;}
 .cstc-faq details[open]{border-color:var(--amber)!important;}
 
+/* PDF-derived via/stoppage timeline */
+.cstc-stops{margin-top:14px;padding:13px 14px;background:var(--surface-2);border:1px solid var(--line);border-radius:var(--radius-sm);}
+.cstc-stops-head{display:flex;justify-content:space-between;gap:10px;align-items:center;font-size:.82rem;color:var(--ink);}
+.cstc-stops-head strong{font-family:var(--font-display);font-size:1rem;}
+.cstc-stops-head span{font:600 .68rem var(--font-mono);color:var(--amber-ink);}
+.cstc-stops ol{list-style:none;margin:10px 0 0;padding:0 0 0 8px;border-left:2px dashed color-mix(in srgb,var(--amber) 45%,transparent);}
+.cstc-stops li{display:flex;align-items:flex-start;gap:9px;position:relative;padding:4px 0 4px 8px;color:var(--ink-dim);font-size:.76rem;line-height:1.45;}
+.cstc-stop-dot{width:7px;height:7px;flex:none;margin-top:5px;margin-left:-13px;border-radius:50%;background:var(--surface);border:2px solid var(--amber);}
+.cstc-stop-note{margin:12px 0 0;padding:9px 11px;border-left:3px solid var(--line-strong);color:var(--ink-dim);font-size:.74rem;background:var(--surface-2);}
+
 @media(max-width:680px){
   #popGrid,.cstc-route-grid{grid-template-columns:1fr!important;}
   .seo-hero,.cstc-hero{padding:20px 16px 16px!important;}
