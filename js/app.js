@@ -214,14 +214,17 @@ function minutesNow() {
   return d.getHours() * 60 + d.getMinutes();
 }
 
+function uiPair(en, bn) {
+  return '<span class="label-en">' + esc(en) + '</span><span class="label-bn">' + esc(bn) + '</span>';
+}
 function busTypeBadge(t) {
   if (!t) return '';
   const g = t.toLowerCase();
   if (g.includes('gov') || g.includes('sbstc') || g.includes('nbstc') || g.includes('wbtc'))
-    return '<span class="badge badge-govt">Govt</span>';
+    return '<span class="badge badge-govt">' + uiPair('Govt', 'সরকারি') + '</span>';
   if (g.includes('ac') && !g.includes('non'))
     return '<span class="badge badge-ac">AC</span>';
-  return '<span class="badge badge-private">Private</span>';
+  return '<span class="badge badge-private">' + uiPair('Private', 'বেসরকারি') + '</span>';
 }
 
 function timeOrDash(t) {
@@ -856,7 +859,7 @@ function renderPlace(el, placeName) {
         <div class="ri-main">
           <div class="name">${esc(bnBusName(b.bus_name))} ${busTypeBadge(b.bus_type)}</div>
           <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
-          <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
+          <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} ${uiPair('stops','স্টপ')}</span></div>
         </div>
         ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
       </div>`).join('') || `<div class="empty-state">${icon('bus')}<p>No buses found for this place.</p></div>`}
@@ -1020,7 +1023,7 @@ function renderRoute(el, key) {
   <div class="container" style="padding-top:22px;padding-bottom:40px">
     <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <h2 class="page-title">${esc(r.from)} → ${esc(r.to)}</h2>
-    <p style="color:var(--ink-dim);margin-bottom:18px">${buses.length} buses</p>
+    <p style="color:var(--ink-dim);margin-bottom:18px">${buses.length} ${uiPair('buses','বাস')}</p>
     ${buses.map((b, i) => `
       <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
         <div class="ri-main">
@@ -1045,7 +1048,7 @@ function renderStop(el, slugKey) {
   <div class="container" style="padding-top:22px;padding-bottom:40px">
     <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
     <h2 class="page-title">${esc(LANG === 'bn' ? (pn(stop.name)) : stop.name)}</h2>
-    <p style="color:var(--ink-dim);margin-bottom:14px">${buses.length} buses pass through</p>
+    <p style="color:var(--ink-dim);margin-bottom:14px">${buses.length} ${uiPair('buses pass through','বাস চলাচল করে')}</p>
     ${stn ? `<div class="info-item" style="margin:0 0 16px"><div class="lbl">${icon('train')} <span class="label-en">Nearest railway station</span><span class="label-bn">নিকটতম রেলওয়ে স্টেশন</span></div><div class="val">${esc(stn.name)}${stn.code ? ' (' + esc(stn.code) + ')' : ''} · ~${stn.km} km</div></div>` : ''}
     ${next.length ? `<h3 class="timetable-title" style="margin-top:8px">${icon('clock')} <span class="label-en">Next buses from ${esc(stop.name)}</span><span class="label-bn">${esc(stop.name)} থেকে পরবর্তী বাস</span></h3>
       ${next.map(n => `<div class="result-item" onclick="location.hash='#/bus/${encodeURIComponent(n.b.id)}'">
@@ -1055,7 +1058,7 @@ function renderStop(el, slugKey) {
         </div>
         <span class="time-pill">${icon('clock')} ${fmtTime(n.t)} · <span style="color:var(--amber);font-weight:700" data-nbdep="${n.t}">${countdownText(n.diff)}</span></span>
       </div>`).join('')}` : ''}
-    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stop.name + ', West Bengal, India')}" target="_blank" rel="noopener">${icon('map')} View on Google Maps</a>
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stop.name + ', West Bengal, India')}" target="_blank" rel="noopener">${icon('map')} ${uiPair('View on Google Maps','গুগল ম্যাপে দেখুন')}</a>
     ${buses.map((b, i) => `
       <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
         <div class="ri-main">
