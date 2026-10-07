@@ -83,7 +83,12 @@ def main():
     # route no -> correct target url (clean, no .html)
     target, fixed, fallback = {}, 0, 0
     for n, x in city.items():
-        cands = list(pairs(x.get("a"), x.get("b")))
+        # A CSTC route has a dedicated city page bus-time-table/cstc-<slug>
+        # (city design + real times). Prefer it over the generic
+        # <from>-to-<to> page, which is a different (generic) design and
+        # carries the redundant horizontal "Route Map" block. Falls back to
+        # the <from>-to-<to> candidates only if no cstc page exists.
+        cands = ["cstc-" + slug(n)] + list(pairs(x.get("a"), x.get("b")))
         rn = slug(n)
         bus = next((b for b in buses
                     if re.match(r"^wbtc-gov-wbtc-" + re.escape(rn) + r"-\d+$", str(b.get("id", "")))), None)

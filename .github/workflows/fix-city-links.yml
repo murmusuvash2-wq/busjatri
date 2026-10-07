@@ -15,7 +15,7 @@ jobs:
       - name: Rebuild the LINKS map so every card points at a real page
         run: python3 scripts/fix_city_links.py --write
 
-      - name: Validate - no link may 404 (clean URLs: target is <url>.html)
+      - name: "Validate - no link may 404 (clean URLs: target is <url>.html)"
         run: |
           python3 - <<'EOF'
           import json, re, pathlib
