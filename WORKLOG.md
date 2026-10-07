@@ -5,6 +5,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Bus page: "+ Add time" overflow fixed (root cause: the stale stripDatalist call)
+- What: On the bus page's Route Timetable, the add-time control rendered the full "+ Add time" label inside the 24x24 box — overflowing and overlapping the OUTBOUND / RETURN columns — instead of the small "+".
+  - **Root cause:** `js/ux-fixes.js` `runAll()` still called `stripDatalist()`, which no longer exists → it threw `stripDatalist is not defined` and **aborted runAll() before `compactBusPage()`** — the step that shrinks "+ Add time" to "+". (The same stale call was noted in the 2026-10-07 homepage-search entry; it had more effects than the console error.)
+  - Fix: removed the stale `stripDatalist();` call. Verified with a headless render: the button is now "+", 24x24, and the page has **no** JS errors.
+  - Also bumped the `ux-fixes.js?v=` cache version across the pages that load it.
+- Why: Owner reported the "+ Add time" text showing duplicated / cramped.
+- Files: `js/ux-fixes.js`, `.github/workflows/simplify-route-pages.yml`, pages (cache version).
+- Commits: be96437 (js + workflow), workflow run 37669705291 SUCCESS.
+- Status: fixed and live.
+
 ## 2026-10-07 — Researched stoppages: first NBSTC route (Siliguri <-> Dinhata via Mathabhanga)
 - What: Added a mechanism for manually-researched route stoppages + the first route.
   - `data/researched-stops.json` — route origin/destination + full stop list; applied by `scripts/fill_wbtc_stops.py` to matching buses in **both** directions (overrides partial lists).
