@@ -5,8 +5,8 @@
                  in the background for next visit.
    HTML pages -> network-first, offline falls back to cached index.html.
    Cross-origin requests (analytics, fonts) are never intercepted. */
-var SHELL = 'bj-shell-20260925a';
-var DATA_CACHE = 'bj-data-20260925a';
+var SHELL = 'bj-shell-20261007a';
+var DATA_CACHE = 'bj-data-20261007a';
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(SHELL).then(function (c) {
@@ -16,7 +16,16 @@ self.addEventListener('install', function (e) {
 });
 
 self.addEventListener('activate', function (e) {
-  e.waitUntil(self.clients.claim());
+  /* 2026-10-07: purge every older cache. Before this, activate only claimed
+     clients, so a returning visitor kept serving stale /css and /js from the
+     old shell cache (cache-first) even after a deploy. */
+  e.waitUntil(
+    caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (k) {
+        if (k !== SHELL && k !== DATA_CACHE) return caches.delete(k);
+      }));
+    }).then(function () { return self.clients.claim(); })
+  );
 });
 
 self.addEventListener('fetch', function (e) {

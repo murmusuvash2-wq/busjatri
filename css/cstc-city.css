@@ -45,6 +45,19 @@ body:has(.cstc-hero), body:has(.seo-hero) { background:var(--bg,#f5efe1); }
 .broute{font-weight:700!important;color:var(--ink)!important;line-height:1.25!important;}
 .bmeta{color:var(--ink-dim)!important;font-family:var(--font-mono)!important;font-size:10px!important;}
 .bright{color:var(--amber-ink)!important;font-size:10px!important;}
+
+/* 2026-10-07: bus-row flex children must be allowed to shrink inside their
+   #popGrid cell. Without min-width:0 the row overflowed its grid cell and
+   the Kolkata hub showed a ~21px horizontal scroll on phones. */
+#popGrid .bus-row{overflow:hidden;}
+#popGrid .bus-row .bmid{min-width:0;flex:1 1 auto;overflow:hidden;}
+#popGrid .bus-row .bnum{flex:0 0 auto;}
+#popGrid .bus-row .bright{flex:0 0 auto;text-align:right;}
+#popGrid .bus-row .broute{overflow-wrap:anywhere;}
+@media(max-width:680px){
+  #popGrid .bus-row{padding:9px 10px!important;gap:8px!important;}
+  #popGrid .bus-row .bnum{min-width:42px!important;font-size:13px!important;}
+}
 .badge-govt{background:var(--govt-soft)!important;color:var(--govt)!important;}
 .badge-priv{background:var(--maroon-soft)!important;color:var(--maroon)!important;}
 
