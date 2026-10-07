@@ -974,7 +974,9 @@
   function runAll() {
     fixWording();
     removeBrowseBtn();
-    stripDatalist();
+    /* stripDatalist() removed 2026-10-07: the function no longer exists; the
+       stale call threw and aborted runAll(), so compactBusPage()/the "+ Add time"
+       -> "+" transform never ran. */
     fixShowAll();
     rebuildCompactStops();
     compactShareRow();

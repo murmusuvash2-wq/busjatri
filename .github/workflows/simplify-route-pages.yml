@@ -19,6 +19,11 @@ jobs:
       - name: Strip header links + horizontal Route Map
         run: python3 scripts/simplify_route_pages.py
 
+      - name: Bump ux-fixes.js cache version
+        run: |
+          grep -rl 'ux-fixes.js?v=' --include=*.html . | xargs -r sed -i 's|ux-fixes.js?v=[A-Za-z0-9._-]*|ux-fixes.js?v=uifix20261007|g'
+          echo "pages referencing ux-fixes.js:" $(grep -rl 'ux-fixes.js?v=' --include=*.html . | wc -l)
+
       - name: Validate (no header Home/Routes, no routemap left)
         run: |
           python3 - <<'EOF'
