@@ -878,12 +878,12 @@
     },
     {
       "source": "/bus-time-table/midnapur-to-contai-via-kharagpur",
-      "destination": "/bus-time-table/medinipur-to-contai-via-kharagpur",
+      "destination": "/bus-time-table/medinipur-to-contai",
       "permanent": true
     },
     {
       "source": "/bus-time-table/midnapur-to-contai-via-kharagpur.html",
-      "destination": "/bus-time-table/medinipur-to-contai-via-kharagpur",
+      "destination": "/bus-time-table/medinipur-to-contai",
       "permanent": true
     },
     {
@@ -1623,12 +1623,12 @@
     },
     {
       "source": "/bus-time-table/dunlop-to-ballygunge-station",
-      "destination": "/bus-time-table/s-9a-dunlop-to-ballygunge",
+      "destination": "/bus-time-table/dunlop-to-ballygunge",
       "permanent": true
     },
     {
       "source": "/bus-time-table/dunlop-to-ballygunge-station.html",
-      "destination": "/bus-time-table/s-9a-dunlop-to-ballygunge",
+      "destination": "/bus-time-table/dunlop-to-ballygunge",
       "permanent": true
     }
   ]
