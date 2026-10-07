@@ -5,6 +5,18 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Kolkata city (CSTC) route pages: stoppage list added
+- What: The 73 CSTC city route pages showed departure/arrival times but **no stoppage list** (the CSTC timetable data had `stoppages` for most routes, but the generator only used them inside the per-trip drop-down, never as a visible list).
+  - Sources researched: **wbtconline.in/wbtc-city-bus-routes** (official WBTC — full stoppage chains), onefivenine.com/india/BusRouteStage (per-route stop lists), calcuttayellowpages.com/busroute.html, kolbusopedia.com/bus-routes.
+  - `scripts/add_cstc_stops.py` (new): adds a `stops` array + per-direction `stoppages` to `data/cstc_city_bus_timetable.json` from the official WBTC stoppage chains (16 routes matched by route no.).
+  - `scripts/build_city_route_pages.py`: CSTC pages now render a visible **"Stop list"** (`cstc-stops`). Result: **69/73** CSTC pages now show their stoppages.
+  - `city-design.yml`: runs `add_cstc_stops.py` before building the city pages.
+- Why: Owner — "kolkata city bus k route stopage nikale lo".
+- Files: `scripts/add_cstc_stops.py` (new), `scripts/build_city_route_pages.py`, `data/cstc_city_bus_timetable.json`, `.github/workflows/city-design.yml`, CSTC pages.
+- Commits: bee57d1 (data + generator), 261c3fe (city-design output). Run 37671041176 SUCCESS.
+- Status: 69/73 CSTC pages show a Stop list; 4 routes still lack stops.
+- Next: source stops for the remaining 4 CSTC routes + the other Kolkata routes (openalfa lists ~100 Kolkata routes; the site has 73 CSTC + 188 private city routes).
+
 ## 2026-10-07 — Bus page: "+ Add time" overflow fixed (root cause: the stale stripDatalist call)
 - What: On the bus page's Route Timetable, the add-time control rendered the full "+ Add time" label inside the 24x24 box — overflowing and overlapping the OUTBOUND / RETURN columns — instead of the small "+".
   - **Root cause:** `js/ux-fixes.js` `runAll()` still called `stripDatalist()`, which no longer exists → it threw `stripDatalist is not defined` and **aborted runAll() before `compactBusPage()`** — the step that shrinks "+ Add time" to "+". (The same stale call was noted in the 2026-10-07 homepage-search entry; it had more effects than the console error.)
