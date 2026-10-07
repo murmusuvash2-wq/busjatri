@@ -5,6 +5,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Homepage search box: typing-time diagnosis (no code change)
+- What: Investigated the homepage search box "problem while typing on the keyboard". Served the repo locally and drove the real page in headless Chromium (mobile 390x844 + desktop 1280x900), typing into From/To and inspecting DOM + console. Two issues reproduced:
+  1. **Uncaught JS error on every keystroke** — `stripDatalist is not defined` in `js/ux-fixes.js` (call at line ~977). `runAll()` calls `stripDatalist()`, which is defined nowhere (the datalist-stripping helper was removed when autocomplete ownership moved to `js/stop-search-all.js`, but the call was left behind). The throw aborts the rest of `runAll()` every time, so `fixShowAll()`, `rebuildCompactStops()`, `compactShareRow()`, `fixMapLink()`, `compactBusPage()`, the duplicate "Bus Stand Departure Times" `.section-title` cleanup and the `.data-trust` reposition NEVER run. It fires on every DOM mutation — and each keystroke re-renders the `.ac-drop` suggestion list (a mutation), so it throws continuously while typing.
+  2. **Autocomplete is not keyboard-usable** — ArrowUp/ArrowDown do nothing (no active/highlighted suggestion), Escape does not close the list, and Enter just runs `doSearch()` on the raw typed text (e.g. "Bank" -> `#/search?from=Bank`) instead of the suggestion. The list has no listbox/option ARIA roles. No ArrowUp/Down/Escape/listbox/aria-activedescendant code exists anywhere in `js/` or `css/`. This is exactly the work described in open issues #70, #71, #72 ("harden / improve search autocomplete UX").
+- Why: Owner asked to check the homepage search box for a typing-time problem and report.
+- Files: none changed (diagnosis only).
+- Commits: none (diagnosis only).
+- Status: findings recorded; no fix applied (owner chose note-only for now).
+- Verified working: typing registers the value, suggestions DO appear, tapping a suggestion fills the box, Enter/Search navigates. Quickest safe fix = delete the stale `stripDatalist();` line in `js/ux-fixes.js`. Keyboard autocomplete (ArrowUp/Down/Enter/Escape + ARIA listbox) still to do (issues #70-72). Repo tested at main @ 5eb3e929.
+
 ## 2026-10-06 — Kolkata city route pages: unified design implemented (CSTC + private)
 - What: Rebuilt `scripts/build_city_route_pages.py` into a unified generator (split into `scripts/city_route_lib.py` + main, since >18KB MCP limit):
   - **CSTC routes (73, have times)** → hero with bidirectional `⇄` termini + **direction switch** (2 buttons, no scroll) + **compact vertical trips** (Departure | ride | Arrival header) + click-row **drop-down** with stoppages + times.
