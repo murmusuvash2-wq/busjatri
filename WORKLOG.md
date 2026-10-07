@@ -5,6 +5,18 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Missing stoppages: filled from the WBTC PDF + siblings (196/335)
+- What: Researched and filled stoppages for the buses that had none.
+  - **Source 1 — `data/sources/wbtc-intra-city-routes.pdf`** (the official WBTC intra-city route table). Parsed with `pdfplumber` (`extract_tables`): route no. + originating/terminating point + a stoppage chain. Matched to buses by normalised origin→terminus (either direction) → **106 buses filled**.
+  - **Source 2 — a sibling bus** on the same origin→destination (reuse its stop sequence) → **90 buses filled**.
+  - Result: **196 of 335** no-stops buses now have stoppages. 139 remain (33 NBSTC north-Bengal + 106 private south-Bengal) — no in-repo source, need external research.
+  - New `scripts/fill_wbtc_stops.py` (idempotent) + `.github/workflows/fill-stops-regen.yml` (runs the fill → rebuild client data → regenerate pages → restore the Kolkata city design → unify header → strip header links + route map → commit).
+- Why: Owner asked to research and add stoppages to the pages that had none.
+- Files: `scripts/fill_wbtc_stops.py` (new), `.github/workflows/fill-stops-regen.yml` (new), `data/busjatri_data.json`, `data/bus-details/*`, regenerated pages.
+- Commits: 87b5837 (script + workflow), ceb3cfe (workflow output). Run 37664633356 SUCCESS.
+- Status: 196/335 done and live.
+- Next: the remaining 139 (33 NBSTC Tufanganj/Alipurduar/Mathabhanga/Dinhata + 106 private south-Bengal routes) need external research (operator sources / route research), in batches.
+
 ## 2026-10-07 — Horizontal route map on the cstc-direction pages removed
 - What: The horizontal stop-strip on `bus-time-table/new-town-to-howrah` (and 35 more pages) was a **different variant** — `<div class="rm-wrap">` (rm-track / rm-stops / rm-stop) inside `<section class="cstc-direction">`, not the `<section class="seo-section">…Route Map…` block the earlier pass removed. Extended `scripts/simplify_route_pages.py` to strip the `rm-wrap` block too; the vertical "Stop list" under it is kept.
 - Why: Owner pointed at the horizontal strip on new-town-to-howrah and said that is what he meant.
