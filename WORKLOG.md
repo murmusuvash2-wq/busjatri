@@ -5,6 +5,20 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — GSC deep check + sitemap re-submit; robots.txt + sitemap dedup
+- What: After the redirect / sitemap-city fix, ran a deep indexing check, re-submitted every sitemap, then applied two tidy-ups.
+  - Verified (repo-level): every URL across all 5 sitemaps resolves to 200 — 0 redirect-error, 0 straight-404; no `noindex`; every canonical points at its own URL.
+  - GSC URL inspection: homepage "Submitted and indexed" (PASS); the previously-broken URLs are now neutral ("Discovered - currently not indexed" / "unknown to Google") — no error state.
+  - GSC search performance (9 Sep - 5 Oct): impressions ~750-820/day (up from ~0 in mid-Sept), clicks ~8-13/day, avg position ~9; 32 pages with impressions.
+  - Re-submitted all 5 sitemaps in GSC (sitemap.xml, sitemap-city.xml, sitemap-via.xml, sitemap-popular.xml, sitemap-extra.xml) — all reported success. GSC still shows sitemap-city.xml at 146 URLs (stale, lastDownloaded 2026-10-05) until it re-fetches.
+  - robots.txt now lists all 5 sitemaps (was only sitemap.xml + sitemap-extra.xml).
+  - Sitemap dedup: removed URLs already owned by another sitemap (city/popular/extra) plus one repeated URL, so each URL appears in exactly one sitemap. sitemap.xml 3017->2727, sitemap-popular.xml 53->49; sitemap-city (300), sitemap-via (1825), sitemap-extra (6) unchanged. Total 4907 URLs, 0 duplicates, all resolve to 200. Homepage + hub kept in sitemap.xml.
+- Why: Owner asked to verify all errors deeply and re-submit the sitemaps, then chose to also fix robots.txt and de-duplicate the sitemaps.
+- Files: robots.txt, sitemap.xml, sitemap-popular.xml
+- Commits: ff8e057 (branch fix/robots-and-sitemap-dedup), merged to main as 5ba1fdd. (Earlier this session: 7bba846 = redirect + sitemap-city fix; cbd4432 = worklog.)
+- Status: done. GSC crawl data is still 1-5 Oct; the 7-Oct fixes will surface only after Google re-crawls (2-4 days) — re-run the "Redirect error" validation then.
+- Notes: sitemap.xml no longer lists city/popular pages (they live in sitemap-city / sitemap-popular); the homepage and hub are kept in sitemap.xml.
+
 ## 2026-10-07 — GSC "Redirect error" + stale sitemap-city: fixed
 - What: Fixed the two causes behind the failing Google Search Console "Redirect error" validation, plus the dead URLs in sitemap-city.xml:
   1. `_redirects` / `vercel.json` had 2 rules whose destination page never existed -> GSC "Redirect error":
