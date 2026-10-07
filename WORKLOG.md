@@ -5,6 +5,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Kolkata city hub: Route button + route search were dead (stray literal \n)
+- What: Owner reported the hub's Route tab button did nothing. Headless render confirmed: `switchMode`/`searchBus` were **undefined** and a page error "Invalid or unexpected token" fired.
+  - Root cause: a **literal backslash-n** (`\n`, 2 chars) between `normSlug()` and `norm()` in the hub's inline `<script>` (kolkata-city-bus-timetable.html). An invalid token there made the **whole** script block fail to parse, so no hub function was ever defined — the Route tab and route search did nothing. Same class of bug as the earlier `stripDatalist` abort.
+  - Fix: replaced the literal `\n` with a real newline. Verified headless: Route tab toggles (ftPane hidden, rtPane shown, tab marked `on`) and route search works ("S-9" -> 2 buses, S-9 Jadavpur <-> Karunamayee).
+- Why: Owner — "kolkata city bus hub page route wala button koi kam nahi kar raha".
+- Files: `kolkata-city-bus-timetable.html`. No script emits this JS (checked), so it won't regress from a workflow.
+- Commit: 69c0978. Live.
+- Note: the same corruption exists in the older revision too (present since at least c3d4914, 2026-10-06), so this had been broken for a while.
+
 ## 2026-10-07 — Researched stoppages for 93 West Bengal routes (139 -> 46 no-stop buses)
 - What: Owner asked to research the Kolkata/West Bengal route stoppages from external sources and fill them. Confirmed first: the site already has ALL 4,435 buses — only their stoppage lists were missing (139 buses / 123 route pairs).
   - Researched via 3 parallel research sub-agents (sources: wbbustime.in, wbbus.in, wbbustime.com, nbstc.in per-route pages). Got sourced stoppage chains for 93 routes (south-Bengal private corridors — Bankura/Durgapur/Bardhaman/Kharagpur/Digha/Tarakeswar/Midnapore/Purulia — plus 2 north-Bengal NBSTC).
