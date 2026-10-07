@@ -5,6 +5,19 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Header unified across all pages (city route + operator pages)
+- What: The site header did not match across pages. Audited every page's `<header>`:
+  - **6,107 pages** used the canonical `bj-nav` cluster (homepage, hubs, generic bus-time-table, via, blog, about/contact/etc. — wired by `js/hdr.js`).
+  - **302 Kolkata city route pages** (`cstc-*` + private city) used an older `hdr-ctrl` + `lang-switch` + `.pill` cluster with a `☾` glyph and an inline `bjTheme()`.
+  - **4 operator pages** (`nbstc-buses`, `wbtc-buses`, `volvo-ac-buses`, `shyamoli-paribahan-buses`) used a third variant.
+  - Root cause: the city generator `scripts/build_city_route_pages.py` emits its own header, so the 2026-10-06 city rebuild re-introduced the old header after the site-wide unify (`unify_header_20261002.py`, 2026-10-02). The 41 extra city pages come from other scripts; the 4 operator pages from `gen_operator_pages.py`.
+  - Fix: (1) `build_city_route_pages.py` `header()` now emits the canonical `bj-nav` header (Home/Routes links + `object-fit` logo), so city regens stay in sync; (2) ran `scripts/unify_header_20261002.py` to bring every remaining page onto the canonical header.
+- Why: Owner reported the header design doesn't match across hub pages.
+- Files: `scripts/build_city_route_pages.py` + 304 regenerated/unified HTML pages under `bus-time-table/`.
+- Commits: branch `fix/header-unify-city-pages` -> merged to main as aa4c7b7.
+- Status: done — verified 6,152/6,152 pages now carry the canonical `bj-nav` header (0 non-canonical); sample diffs show only the header changed.
+- Notes / still open: 3 other generators still emit the old header — `gen_route_v2.py` (referenced by ~29 one-off workflows), `build_cstc_city_seo.py` and `gen_wbtc_newroutes.py` (not run by any workflow). They are covered by the safety net: `regen-seo-pages.yml` runs `unify_header_20261002.py` after generation. `city-design.yml` does not run unify_header, but the generator fix now makes it emit canonical headers.
+
 ## 2026-10-07 — Kolkata city hub: route links now point at the CSTC cstc-<code> pages
 - What: Fixed why the Kolkata city bus route pages looked "broken" after private city routes were added.
   - Root cause: `kolkata-city-bus-timetable.html`'s `LINKS` map (the 73 CSTC routes used by the search rows + the A-Z cards) pointed at the generic `<from>-to-<to>` pages (e.g. route 11A -> `bus-time-table/dum-dum-to-howrah`) instead of the real CSTC city page `bus-time-table/cstc-11a`. **0 of 73** pointed at the cstc page; a few even fell back to the hub. The generic page has no times, no route code / direction switch, and carries the redundant horizontal "Route Map" block — so it looked like the city design had broken. `scripts/fix_city_links.py` only ever matched `<from>-to-<to>` slugs, and once the private city routes created those generic pages, the matcher started picking them.
