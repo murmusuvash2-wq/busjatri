@@ -24,6 +24,9 @@ jobs:
           python3 -c "import py_compile; py_compile.compile('scripts/build_city_route_pages.py', doraise=True)"
           python3 -c "import py_compile; py_compile.compile('scripts/patch_city_hub.py', doraise=True)"
 
+      - name: Add researched CSTC route stoppages
+        run: python3 scripts/add_cstc_stops.py
+
       - name: Build Kolkata city route pages (CSTC + private, unified design)
         run: python3 scripts/build_city_route_pages.py
 

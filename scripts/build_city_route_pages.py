@@ -107,6 +107,12 @@ def cstc_page(route, obj, others):
                       f'<div class="trips">{"".join(rows)}</div></div>')
     first_all = min((d.get('departures') or ['zz'])[0] for d in dirs if d.get('departures')) if any(d.get('departures') for d in dirs) else '—'
     last_all = max((d.get('departures') or ['00'])[-1] for d in dirs if d.get('departures')) if any(d.get('departures') for d in dirs) else '—'
+    stops_html = ''
+    if stops0:
+        lis = ''.join(f'<li><span class="cstc-stop-dot"></span>{esc(s)}</li>' for s in stops0)
+        stops_html = (f'<section class="cstc-stops" style="margin-top:0">'
+                      f'<div class="cstc-stops-head"><strong>Stop list</strong><span>{len(stops0)} stops</span></div>'
+                      f'<ol>{lis}</ol></section>')
 
     body = (f'<div class="crumb"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / <span>{esc(route)}</span></div>'
             f'<section class="hero"><span class="eyebrow">Official CSTC schedule</span>'
@@ -114,7 +120,8 @@ def cstc_page(route, obj, others):
             f'<div class="stats"><span class="stat"><b>{total}</b> trips/day</span>'
             f'<span class="stat">First <b>{esc(f12(first_all))}</b></span><span class="stat">Last <b>{esc(f12(last_all))}</b></span>'
             f'<span class="stat"><b>{len(stops0)}</b> stops</span></div></section>'
-            f'<div class="dswitch" role="tablist">{"".join(btns)}</div>{"".join(panels)}')
+            f'<div class="dswitch" role="tablist">{"".join(btns)}</div>{"".join(panels)}'
+            f'{stops_html}')
     faqs = [(f'What is the first {route} bus?', f'The first {route} bus departs at {f12(first_all)}.'),
             (f'What is the last {route} bus?', f'The last {route} bus departs at {f12(last_all)}.'),
             (f'How many stops does route {route} have?', f'Route {route} has {len(stops0)} stops: {", ".join(stops0[:8])}.'),
