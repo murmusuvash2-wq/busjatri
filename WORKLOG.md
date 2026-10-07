@@ -5,6 +5,19 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — GSC "Redirect error" + stale sitemap-city: fixed
+- What: Fixed the two causes behind the failing Google Search Console "Redirect error" validation, plus the dead URLs in sitemap-city.xml:
+  1. `_redirects` / `vercel.json` had 2 rules whose destination page never existed -> GSC "Redirect error":
+     - `/bus-time-table/dunlop-to-ballygunge-station` (+ `.html`) -> `/bus-time-table/s-9a-dunlop-to-ballygunge` — that page never existed; the rule was added in commit 0ed86c1af6 ("301 to canonical keeper") with a wrong keeper slug (the route code "s-9a" got prefixed onto the slug). Repointed to the real keeper `/bus-time-table/dunlop-to-ballygunge`.
+     - `/bus-time-table/midnapur-to-contai-via-kharagpur` (+ `.html`) -> `/bus-time-table/medinipur-to-contai-via-kharagpur` — never existed; leftover from the old `midnapur-to-* -> medinipur-to-*` splat. Repointed to `/bus-time-table/medinipur-to-contai`.
+     `dunlop-to-ballygunge-station` is listed in sitemap.xml and linked from several bus pages, so Google was following the 301 straight into a 404.
+  2. `sitemap-city.xml` listed 146 URLs in the OLD route-code naming (`11a-howrah-to-dum-dum`, `s-9a-dunlop-to-ballygunge`, ...). The city pages were later rebuilt as `cstc-<code>.html` (73) + `<origin>-to-<dest>.html` (227), so 144 of the 146 sitemap URLs 404'd. Rebuilt the sitemap to list the 300 city route pages that actually exist (every bus-time-table page carrying the city design, `cstc-city.css`).
+- Why: Owner forwarded the GSC "some of your pages are still affected" notice for the 'Redirect error' issue and asked to fix both the redirect rules and the stale city sitemap.
+- Files: `_redirects`, `vercel.json`, `sitemap-city.xml`
+- Commits: 34b4080 (branch `fix/redirect-error-and-city-sitemap`), merged to main as 7bba846.
+- Status: done — local validation: no redirect target is missing; every URL across all 5 sitemaps now resolves (0 redirect-error, 0 straight-404); sitemap-city.xml = 300 existing city pages. Live check not possible from the sandbox (busjatri.in is unreachable here); deploy is Cloudflare Pages on push to main.
+- Notes: after deploy, re-validate the fix in GSC. Remaining minor (benign, not errors): sitemap.xml still lists ~10 URLs that 301 (alias keepers such as `buses-from-*`), and one junk self-loop page `ultadanga-to-ultadanga` is in sitemap-city.xml — both can be cleaned up later.
+
 ## 2026-10-07 — Homepage search box: typing-time diagnosis (no code change)
 - What: Investigated the homepage search box "problem while typing on the keyboard". Served the repo locally and drove the real page in headless Chromium (mobile 390x844 + desktop 1280x900), typing into From/To and inspecting DOM + console. Two issues reproduced:
   1. **Uncaught JS error on every keystroke** — `stripDatalist is not defined` in `js/ux-fixes.js` (call at line ~977). `runAll()` calls `stripDatalist()`, which is defined nowhere (the datalist-stripping helper was removed when autocomplete ownership moved to `js/stop-search-all.js`, but the call was left behind). The throw aborts the rest of `runAll()` every time, so `fixShowAll()`, `rebuildCompactStops()`, `compactShareRow()`, `fixMapLink()`, `compactBusPage()`, the duplicate "Bus Stand Departure Times" `.section-title` cleanup and the `.data-trust` reposition NEVER run. It fires on every DOM mutation — and each keystroke re-renders the `.ac-drop` suggestion list (a mutation), so it throws continuously while typing.
