@@ -5,6 +5,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Researched stoppages: first NBSTC route (Siliguri <-> Dinhata via Mathabhanga)
+- What: Added a mechanism for manually-researched route stoppages + the first route.
+  - `data/researched-stops.json` — route origin/destination + full stop list; applied by `scripts/fill_wbtc_stops.py` to matching buses in **both** directions (overrides partial lists).
+  - First entry: NBSTC Express **Siliguri <-> Dinhata via Mathabhanga** — 38 stops (Siliguri, Fulbari, Ambari Falakata, ... Mathabhanga, ... Dinhata Mini Bus Stand), from the operator notice (credit Rahul Barman). Filled **10 buses** (Siliguri->Dinhata as given; Dinhata->Siliguri reversed).
+- Why: Owner supplied the route's stoppage chain and asked to apply researched stoppages.
+- Files: `data/researched-stops.json` (new), `scripts/fill_wbtc_stops.py`, `data/busjatri_data.json`, regenerated pages.
+- Commits: e6317cc (script + data file), workflow run 37666241867 SUCCESS.
+- Status: applied and live. Remaining: 139 buses still without stoppages (33 NBSTC + 106 private).
+
 ## 2026-10-07 — Missing stoppages: filled from the WBTC PDF + siblings (196/335)
 - What: Researched and filled stoppages for the buses that had none.
   - **Source 1 — `data/sources/wbtc-intra-city-routes.pdf`** (the official WBTC intra-city route table). Parsed with `pdfplumber` (`extract_tables`): route no. + originating/terminating point + a stoppage chain. Matched to buses by normalised origin→terminus (either direction) → **106 buses filled**.
