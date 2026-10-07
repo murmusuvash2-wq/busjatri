@@ -10,12 +10,30 @@ from city_route_lib import *
 import json, os, re, html
 
 def header():
-    return ('<header class="header"><div class="container header-inner"><a href="../" class="logo" aria-label="BusJatri home">'
-            '<img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%">Bus<span>Jatri</span></a>'
-            '<div class="hdr-ctrl"><div class="lang-switch" role="group" aria-label="Language">'
-            '<button type="button" id="langEn" class="pill pill-en on">EN</button>'
-            '<button type="button" id="langBn" class="pill pill-bn">বাংলা</button></div>'
-            '<button type="button" id="themeBtn" class="theme-btn" aria-label="Toggle dark mode" onclick="bjTheme()">☾</button></div></div></header>')
+    """Canonical site header (same as every other bus-time-table page).
+
+    Uses the shared bj-nav control cluster wired by js/hdr.js, so city route
+    pages match the rest of the site (see scripts/unify_header_20261002.py).
+    """
+    return (
+        '<header class="header">\n'
+        '  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">\n'
+        '    <a href="../" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px">\n'
+        '      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">\n'
+        '      Bus<span>Jatri</span>\n'
+        '    </a>\n'
+        '    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>\n'
+        '    <nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">\n'
+        '      <a href="../" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Home</a>\n'
+        '      <a href="./" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Routes</a>\n'
+        '      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">\n'
+        '        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>\n'
+        '        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">\u09ac\u09be\u0982\u09b2\u09be</button>\n'
+        '      </span>\n'
+        '      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>\n'
+        '    </nav>\n'
+        '  </div>\n'
+        '</header>')
 
 def shell(title, desc, canonical, body, jsonld):
     ld = f'<script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False, separators=(",", ":"))}</script>' if jsonld else ''
