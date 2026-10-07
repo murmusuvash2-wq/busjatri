@@ -25,6 +25,12 @@ HEADER_RE = re.compile(r'<header\b.*?</header>', re.S | re.I)
 ROUTEMAP_RE = re.compile(
     r'\s*<section class="seo-section">\s*<h3 class="section-title">Route Map</h3>.*?</section>',
     re.S)
+# horizontal map inside <section class="cstc-direction"> (rm-wrap > rm-track > rm-stops)
+RMWRAP_RE = re.compile(r'\s*<div class="rm-wrap"[^>]*>.*?</div></div></div>', re.S)
+
+
+def strip_rmwrap(html: str) -> str:
+    return RMWRAP_RE.sub('', html)
 
 
 def strip_header_links(html: str) -> str:
@@ -39,7 +45,7 @@ def strip_routemap(html: str) -> str:
 
 def main():
     changed = 0
-    hl = rm = 0
+    hl = rm = rmw = 0
     for p in sorted(ROOT.rglob('*.html')):
         if any(part in {'.git', 'node_modules', 'scripts', '.github'} for part in p.parts):
             continue
@@ -58,10 +64,15 @@ def main():
             if n != out:
                 rm += 1
             out = n
+        if 'rm-wrap' in out:
+            n = strip_rmwrap(out)
+            if n != out:
+                rmw += 1
+            out = n
         if out != s:
             p.write_text(out, encoding='utf-8')
             changed += 1
-    print(f'pages changed: {changed} (header-links: {hl}, route-map: {rm})')
+    print(f'pages changed: {changed} (header-links: {hl}, route-map: {rm}, rm-wrap: {rmw})')
 
 
 if __name__ == '__main__':
