@@ -23,6 +23,30 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "busjatri_data.json"
 DETAIL = ROOT / "data" / "bus-details"
 PDF = ROOT / "data" / "sources" / "wbtc-intra-city-routes.pdf"
+RESEARCHED = ROOT / "data" / "researched-stops.json"
+
+
+def apply_researched(buses):
+    """Apply manually-researched route stoppages (data/researched-stops.json).
+    Overrides existing (partial) stoppages for a matching origin->destination,
+    in either direction."""
+    if not RESEARCHED.exists():
+        return 0
+    entries = json.loads(RESEARCHED.read_text(encoding="utf-8"))
+    n = 0
+    for e in entries:
+        o, d, stops = e.get("origin"), e.get("destination"), (e.get("stops") or [])
+        if not (o and d and stops):
+            continue
+        for b in buses:
+            bo, bd = norm(b.get("origin")), norm(b.get("destination"))
+            if bo == norm(o) and bd == norm(d):
+                b["stoppages"] = [{"name": s} for s in stops]
+                n += 1
+            elif bo == norm(d) and bd == norm(o):
+                b["stoppages"] = [{"name": s} for s in reversed(stops)]
+                n += 1
+    return n
 
 
 def clean(s):
@@ -78,6 +102,8 @@ def main():
     buses = raw["buses"] if is_map else raw
 
     idx = pdf_index()
+    n_res = apply_researched(buses)
+    print(f"filled from researched-stops.json: {n_res}")
     filled_pdf = 0
     for b in buses:
         if b.get("stoppages"):
