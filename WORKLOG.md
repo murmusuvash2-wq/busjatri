@@ -5,6 +5,13 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Horizontal route map on the cstc-direction pages removed
+- What: The horizontal stop-strip on `bus-time-table/new-town-to-howrah` (and 35 more pages) was a **different variant** — `<div class="rm-wrap">` (rm-track / rm-stops / rm-stop) inside `<section class="cstc-direction">`, not the `<section class="seo-section">…Route Map…` block the earlier pass removed. Extended `scripts/simplify_route_pages.py` to strip the `rm-wrap` block too; the vertical "Stop list" under it is kept.
+- Why: Owner pointed at the horizontal strip on new-town-to-howrah and said that is what he meant.
+- Files: scripts/simplify_route_pages.py; 36 HTML pages.
+- Commits: ae2e33f (script), ef5edcd (workflow output, run 37663234906 SUCCESS).
+- Status: done — 0 pages with a rendered `rm-wrap`/`rm-track`. No current generator emits `rm-wrap` (`build_cstc_city_seo.py` emits the `cstc-direction` head + a timetable table, not the map), so regens will not bring it back.
+
 ## 2026-10-07 — Route pages: header links removed + horizontal Route Map removed
 - What: Two simplifications applied to the route pages.
   1. **Header** — removed the "Home" / "Routes" links from the header nav (route pages already carry a breadcrumb), so the header is just [logo] + [EN/বাংলা] + [theme]. Applied to 3,045 pages; `gen_seo_pages.py` and `build_city_route_pages.py` no longer emit the links.
