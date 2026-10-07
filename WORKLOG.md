@@ -5,6 +5,19 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Kolkata city hub: route links now point at the CSTC cstc-<code> pages
+- What: Fixed why the Kolkata city bus route pages looked "broken" after private city routes were added.
+  - Root cause: `kolkata-city-bus-timetable.html`'s `LINKS` map (the 73 CSTC routes used by the search rows + the A-Z cards) pointed at the generic `<from>-to-<to>` pages (e.g. route 11A -> `bus-time-table/dum-dum-to-howrah`) instead of the real CSTC city page `bus-time-table/cstc-11a`. **0 of 73** pointed at the cstc page; a few even fell back to the hub. The generic page has no times, no route code / direction switch, and carries the redundant horizontal "Route Map" block — so it looked like the city design had broken. `scripts/fix_city_links.py` only ever matched `<from>-to-<to>` slugs, and once the private city routes created those generic pages, the matcher started picking them.
+  - Fix: `scripts/fix_city_links.py` now tries `cstc-<slug(route)>` FIRST (falls back to `<from>-to-<to>` only if no cstc page exists). Re-ran it -> all 73 LINKS now point at their cstc page; 0 broken, 0 fallback.
+  - Also fixed `.github/workflows/fix-city-links.yml`: it had invalid YAML (unquoted `:` in the validate step name), so it had never actually run (278 runs, 275 failed).
+- Why: Owner reported the Kolkata city bus route/header design looked wrong with a useless horizontal route map, and that it broke after private buses were added.
+- Files: `scripts/fix_city_links.py`, `kolkata-city-bus-timetable.html`, `.github/workflows/fix-city-links.yml`
+- Commits: 793bebb (branch `fix/city-hub-links-to-cstc-pages`), merged to main as 8c0c66f.
+- Status: done — validated: 73/73 LINKS -> cstc pages, 0 broken; workflow YAML valid; the workflow's own validation step passes.
+- Notes / still open:
+  - The generic `<from>-to-<to>` pages (2,417 files) still carry the horizontal "Route Map" block; removing it generally is a `gen_seo_pages.py` change.
+  - The 5 regen workflows that run `gen_seo_pages.py` still overwrite the city design (existing backlog item) — should add `build_city_route_pages.py` after it.
+
 ## 2026-10-07 — GSC deep check + sitemap re-submit; robots.txt + sitemap dedup
 - What: After the redirect / sitemap-city fix, ran a deep indexing check, re-submitted every sitemap, then applied two tidy-ups.
   - Verified (repo-level): every URL across all 5 sitemaps resolves to 200 — 0 redirect-error, 0 straight-404; no `noindex`; every canonical points at its own URL.
