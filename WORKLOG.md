@@ -5,6 +5,17 @@ Newest entries first.
 
 ---
 
+## 2026-10-07 — Route pages: header links removed + horizontal Route Map removed
+- What: Two simplifications applied to the route pages.
+  1. **Header** — removed the "Home" / "Routes" links from the header nav (route pages already carry a breadcrumb), so the header is just [logo] + [EN/বাংলা] + [theme]. Applied to 3,045 pages; `gen_seo_pages.py` and `build_city_route_pages.py` no longer emit the links.
+  2. **Horizontal "Route Map"** — removed the `<section class="seo-section">…<h3>Route Map</h3><div class="routemap">…</div></section>` block from 2,417 pages; `gen_seo_pages.py` no longer emits it (`route_section = ""`). It duplicated the stoppage list and truncated on mobile.
+  - New one-shot normaliser `scripts/simplify_route_pages.py` (+ `.github/workflows/simplify-route-pages.yml`, workflow_dispatch) applied it and committed. Verified on the runner: 0 pages with header Home/Routes, 0 with a rendered routemap.
+- Why: Owner — remove the header Home/Routes links and the horizontal map from the route pages.
+- Files: `scripts/simplify_route_pages.py` (new), `scripts/gen_seo_pages.py`, `scripts/build_city_route_pages.py`, `.github/workflows/simplify-route-pages.yml` (new), 3,045 HTML pages.
+- Commits: f0aaf45 (scripts + workflow), dfa8902 (rebase-before-push fix), 3bdde77 (workflow output: 3,045 pages). Run 37657657163 SUCCESS.
+- Status: done (steps 1–2). Note: `city-design.yml` runs on push and regenerates the 261 city pages (its commit 15ffaed landed mid-run).
+- Notes / next (step 3 — stoppages): 492 route pages show no stoppage data; the source `data/busjatri_data.json` has 335 buses with `stoppages: []` (mostly NBSTC/WBTC north-Bengal). 97 of those can be filled from a sibling bus on the same origin→destination (data-driven); 238 have no sibling and need external research. Plan: (a) data-driven sibling fill first, (b) research the rest in batches from operator sources.
+
 ## 2026-10-07 — Header unified across all pages (city route + operator pages)
 - What: The site header did not match across pages. Audited every page's `<header>`:
   - **6,107 pages** used the canonical `bj-nav` cluster (homepage, hubs, generic bus-time-table, via, blog, about/contact/etc. — wired by `js/hdr.js`).
