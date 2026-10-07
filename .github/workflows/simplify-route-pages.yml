@@ -1,0 +1,46 @@
+name: Simplify route pages (header links + route map)
+
+# One-shot migration runner: strips the "Home"/"Routes" links from the header
+# and removes the horizontal "Route Map" block from every page, then commits.
+# Idempotent - safe to re-run. Delete this file once the pages are migrated.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Strip header links + horizontal Route Map
+        run: python3 scripts/simplify_route_pages.py
+
+      - name: Validate (no header Home/Routes, no routemap left)
+        run: |
+          python3 - <<'EOF'
+          import re, glob
+          hl = rm = 0
+          for f in glob.glob('**/*.html', recursive=True):
+              t = open(f, encoding='utf-8', errors='ignore').read()
+              m = re.search(r'<header\b.*?</header>', t, re.S | re.I)
+              if m and re.search(r'<a\b[^>]*>\s*(?:Home|Routes)\s*</a>', m.group(0)): hl += 1
+              if '<div class="routemap">' in t: rm += 1
+          print('pages with header Home/Routes:', hl, '| pages with routemap:', rm)
+          assert hl == 0 and rm == 0, 'simplify did not complete'
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Simplify route pages: drop header Home/Routes links + horizontal Route Map"
+            git push
+          fi

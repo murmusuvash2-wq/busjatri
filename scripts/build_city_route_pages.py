@@ -24,8 +24,6 @@ def header():
         '    </a>\n'
         '    <style id="bjHdrCss">.label-bn{display:none!important}body.lang-bn .label-en{display:none!important}body.lang-bn .label-bn{display:inline!important}</style>\n'
         '    <nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">\n'
-        '      <a href="../" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Home</a>\n'
-        '      <a href="./" style="color:var(--ink-dim,#665);text-decoration:none;font-weight:600">Routes</a>\n'
         '      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">\n'
         '        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>\n'
         '        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">\u09ac\u09be\u0982\u09b2\u09be</button>\n'
