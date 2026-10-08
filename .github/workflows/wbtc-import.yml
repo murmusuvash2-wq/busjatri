@@ -58,7 +58,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add bus-time-table via blog ./*.html sitemap.xml robots.txt \
                   data/busjatri_data.json data/stop_coords.json data/app-index.json \
-                  data/bus-details.json data/wbtc_official_longdistance.csv
+                  data/bus-details.json data/wbtc_official_longdistance.csv \
+                  data/wbtc_official_suburban.csv
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
