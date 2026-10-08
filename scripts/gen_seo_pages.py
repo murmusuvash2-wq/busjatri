@@ -763,9 +763,12 @@ def generate_route_page(origin, destination, buses):
     count = len(buses)
     dur_text = fmt_duration(duration) if duration else "—"
 
-    title = f"{origin} to {destination} Bus Time Table | {SITE_NAME}"
     bus_word = "bus" if count == 1 else "buses"
     ops = [o for o in operators if o and o.strip() and o.strip() not in ("—", "-")][:3]
+    # put the operator in the title: matches the way people search
+    # ("asansol to kolkata sbstc bus timetable")
+    title = (f"{origin} to {destination} Bus Time Table ({ops[0]}) | {SITE_NAME}"
+             if ops else f"{origin} to {destination} Bus Time Table | {SITE_NAME}")
     run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
     if stats["first"] is None:
         description = f"{origin} to {destination} bus time table with routes, stoppages and operators on {SITE_NAME}."[:300]

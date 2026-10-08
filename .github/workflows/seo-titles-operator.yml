@@ -1,0 +1,40 @@
+name: Add operator name to route-page titles (SEO CTR)
+
+# One-shot, idempotent. Search Console shows high impressions but ~0% CTR on
+# route pages, because queries carry the operator ("asansol to kolkata sbstc
+# bus timetable") while our <title> had none. This rewrites
+#   "A to B Bus Time Table | BusJatri"
+# to
+#   "A to B Bus Time Table (SBSTC) | BusJatri"
+# using the operator already named in each page's own description.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Add operator to route titles
+        run: python3 scripts/add_operator_to_titles.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "seo: add operator name to route-page titles"
+            git pull --rebase origin main
+            git push
+          fi
