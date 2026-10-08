@@ -5,6 +5,17 @@ Newest entries first.
 
 ---
 
+## 2026-10-08 — Domain fix: legacy wb-bus / kolkata-bus .vercel.app -> busjatri.in
+- What: Owner asked to remove the old Vercel links from the site and use busjatri.in. Found two legacy hosts: `wb-bus.vercel.app` (~17k refs) and `kolkata-bus.vercel.app` (~5.5k refs).
+  - Swept **2,808 HTML pages** (canonical / og:url), **1,842 bus-detail JSONs** (`detail_url`), `sitemap.xml` (2,937 URLs), `robots.txt` -> all now `https://busjatri.in`. 0 vercel refs left (spot-checked several files; GitHub code search was stale).
+  - Fixed the generators so it can't come back: `gen_seo_pages.py` default BASE, `add_new_sources.py` detail_url, `redesign_seo_index.py`, `rx_parts/rx_p1`. (Workflows already set SITE_BASE=https://busjatri.in.)
+  - Added `robots.txt` back to all 5 sitemaps (it had dropped to 2).
+  - New one-shot runner `.github/workflows/fix-domain.yml` (idempotent) does the sweep server-side.
+- Why: Owner — "vercel wala website link hata do.. uske jagha busjatri.in laga do".
+- Files: 4 scripts, robots.txt, sitemap.xml, 2,808 HTML, 1,842 JSON, fix-domain.yml.
+- Commits: ce61862 (generators + workflow), aba05fd (workflow output), f072572 (robots). Run 37732554406 SUCCESS.
+- Status: done + verified. Housekeeping: fix-domain.yml is a one-shot runner (can be deleted later).
+
 ## 2026-10-08 — Audit: hub pages design consistency (+ stale canonical found)
 - What: Owner asked to open the hub pages and check whether all hub designs are the same / compact.
   - Rendered all hubs headless at 430px (local HTTP-intercept server).
