@@ -56,8 +56,15 @@ for p in (ROOT / 'bus-time-table').glob('*.html'):
 
 print(f'finalized pages with stats: {stops:,} stops, {routes:,} routes, {buses:,} buses; refreshed {updated}')
 
-# --- Operator pages (SBSTC/NBSTC/WBTC/Shyamoli/Volvo AC) + sitemap + index links ---
 import subprocess, sys
+
+# --- Kolkata city route design (CSTC times + private stops). MUST run after
+#     gen_seo_pages.py: a plain regen overwrites bus-time-table/*.html with the
+#     generic template and wipes the city route pages (stoppage list lost).
+#     Idempotent. ---
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_city_route_pages.py')], check=True)
+
+# --- Operator pages (SBSTC/NBSTC/WBTC/Shyamoli/Volvo AC) + sitemap + index links ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'gen_operator_pages.py')], check=True)
 
 # --- GA4 analytics: keep the tag on every (re)generated page (idempotent) ---
@@ -68,3 +75,7 @@ subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_faq.py')], check=Tru
 
 # --- Bus-row links + dark-mode toggle on every route page (idempotent) ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'polish_route_pages.py')], check=True)
+
+# --- Unify page headers: drop the stray Home/Routes nav links + the duplicate
+#     theme button so every page header matches the standard one (idempotent). ---
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'fix_headers.py')], check=True)

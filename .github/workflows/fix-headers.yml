@@ -1,0 +1,46 @@
+name: Restore Kolkata city route pages + unify headers
+
+# One-shot, idempotent repair. Fixes the two regressions caused by a plain
+# gen_seo_pages.py regen:
+#   1. Kolkata city route pages (private/WBTC intra-city) lost the city design
+#      (route stoppage list) -> rebuild them with build_city_route_pages.py.
+#   2. Some page headers carried stray "Home"/"Routes" nav links and a duplicate
+#      theme button -> strip them with fix_headers.py.
+# Also re-applies the GA4 tag to any regenerated page.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Restore Kolkata city route design (CSTC times + private stops)
+        run: python3 scripts/build_city_route_pages.py
+
+      - name: Re-apply GA4 to any regenerated page
+        run: python3 scripts/add_ga4.py
+
+      - name: Unify headers (drop Home/Routes links + duplicate theme button)
+        run: python3 scripts/fix_headers.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: restore Kolkata city route pages + unify headers"
+            git pull --rebase origin main
+            git push
+          fi
