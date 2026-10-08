@@ -26,7 +26,7 @@ OUT = "bus-time-table"
 
 BASE = os.environ.get(
     "SITE_BASE",
-    "https://wb-bus.vercel.app"
+    "https://busjatri.in"
 ).rstrip("/")
 
 SITE_NAME = "BusJatri"

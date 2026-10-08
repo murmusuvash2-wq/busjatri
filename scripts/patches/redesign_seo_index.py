@@ -17,7 +17,7 @@ import re
 import html as _html
 
 INDEX_PATH = 'bus-time-table/index.html'
-BASE = 'https://wb-bus.vercel.app'
+BASE = 'https://busjatri.in'
 
 MARKER = '<!-- redesigned-index-v1 -->'
 

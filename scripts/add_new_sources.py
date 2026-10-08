@@ -80,7 +80,7 @@ for r in ktr['routes']:
         'stoppages': [{'no': i+1, 'name': s, 'up_time': '', 'down_time': ''} for i, s in enumerate(stops)],
         'source': 'kolkata-travel-router (GitHub)',
         'total_stoppages': len(stops),
-        'detail_url': 'https://kolkata-bus.vercel.app/',
+        'detail_url': 'https://busjatri.in/',
     })
     n_ktr += 1
 print(f"KTR added: {n_ktr}")

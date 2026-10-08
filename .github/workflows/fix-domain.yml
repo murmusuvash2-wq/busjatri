@@ -1,0 +1,52 @@
+name: Fix site domain (vercel to busjatri.in)
+
+# One-shot: replace the legacy wb-bus.vercel.app / kolkata-bus.vercel.app hosts
+# with https://busjatri.in across the generated output (HTML + JSON + sitemaps +
+# robots). The generators/scripts are fixed separately in the same commit.
+# Safe to re-run (idempotent).
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  fix-domain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Replace legacy vercel hosts with busjatri.in
+        run: |
+          set -e
+          mapfile -t files < <(grep -rl -e 'wb-bus\.vercel\.app' -e 'kolkata-bus\.vercel\.app' \
+            --include='*.html' --include='*.json' --include='*.xml' --include='*.txt' \
+            --include='*.webmanifest' . || true)
+          echo "files to patch: ${#files[@]}"
+          if [ "${#files[@]}" -eq 0 ]; then echo "nothing to do"; exit 0; fi
+          printf '%s\n' "${files[@]}" > /tmp/files.txt
+          split -l 500 /tmp/files.txt /tmp/fchunk_
+          for chunk in /tmp/fchunk_*; do
+            xargs -a "$chunk" -d '\n' sed -i \
+              -e 's|https://wb-bus\.vercel\.app|https://busjatri.in|g' \
+              -e 's|https://kolkata-bus\.vercel\.app|https://busjatri.in|g' \
+              -e 's|wb-bus\.vercel\.app|busjatri.in|g' \
+              -e 's|kolkata-bus\.vercel\.app|busjatri.in|g'
+          done
+          echo "--- remaining occurrences (should be 0) ---"
+          grep -rl -e 'wb-bus\.vercel\.app' -e 'kolkata-bus\.vercel\.app' . | wc -l
+
+      - name: Commit and push
+        run: |
+          set -e
+          git config user.name "busjatri-bot"
+          git config user.email "busjatri@zohomail.in"
+          git add -A
+          if git diff --cached --quiet; then echo "no changes"; exit 0; fi
+          git commit -m "fix: replace legacy vercel hosts with busjatri.in in generated output"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && break || sleep 5
+          done
