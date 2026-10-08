@@ -203930,368 +203930,6 @@
    "detail_url": "https://busjatri.in/"
   },
   {
-   "id": "ktr-government-e-55",
-   "bus_name": "E-55",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Madhyamgram",
-   "destination": "Digha",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Madhyamgram - Digha",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Madhyamgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Birati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Birati Station",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Nimta Bazar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Belgharia Station",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Salap",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Ankurhati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Dhulagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Panchla",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Uluberia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Bagnan",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Mecheda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Nimtouri",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Nandakumar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Norghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Bajkul",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Heria",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Nachinda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Contai Bus Stand",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 22,
-     "name": "Chowalkhola",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 23,
-     "name": "Ramnagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 24,
-     "name": "Digha",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 24,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-e-56",
-   "bus_name": "E-56",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Baduria",
-   "destination": "Digha",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Baduria - Digha",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Baduria",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Jadurhati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Berachampa",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Deganga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Golabari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Kadambagachi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Barasat Chapadali",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Madhyamgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Airport Gate 3",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Dunlop Bridge",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Salap",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Ballyhalt",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Salap",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Ankurhati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Dhulagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Panchla",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Uluberia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Bagnan",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Mecheda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Nimtouri",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 22,
-     "name": "Nandakumar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 23,
-     "name": "Norghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 24,
-     "name": "Bajkul",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 25,
-     "name": "Heria",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 26,
-     "name": "Nachinda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 27,
-     "name": "Contai Bus Stand",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 28,
-     "name": "Chowalkhola",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 29,
-     "name": "Ramnagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 30,
-     "name": "Digha",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 30,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
    "id": "ktr-government-e-57",
    "bus_name": "E-57",
    "reg_no": "",
@@ -208516,97 +208154,6 @@
    ],
    "source": "kolkata-travel-router (GitHub)",
    "total_stoppages": 10,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-be-11",
-   "bus_name": "BE-11",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Karunamoyee",
-   "destination": "Asansol",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Karunamoyee - Asansol",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Karunamoyee",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ultadanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Baguiati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Airport Gate 1",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Dunlop Bridge",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Dankuni Housing",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Durgapur Expressway",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Burdwan",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Panagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Durgapur City Center",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Raniganj",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Asansol",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 12,
    "detail_url": "https://busjatri.in/"
   },
   {
@@ -299527,393 +299074,6 @@
    "detail_url": "https://busjatri.in/"
   },
   {
-   "id": "ktr-government-kolkata-to-malda-rocket",
-   "bus_name": "Kolkata to Malda Rocket",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Esplanade",
-   "destination": "Malda",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Esplanade - Malda",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Esplanade",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ultadanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Barasat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Chakdah",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Ranaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Phulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Shantipur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Krishnanagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Palashi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Beldanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Berhampore",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Morgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Omarpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Farakka",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Malda",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 15,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-kolkata-to-malda-ac-rocket",
-   "bus_name": "Kolkata to Malda AC Rocket",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - AC",
-   "origin": "Esplanade",
-   "destination": "Malda",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Esplanade - Malda",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Esplanade",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Airport",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Barasat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Chakdah",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Ranaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Phulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Shantipur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Krishnanagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Dhubulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Bethuadahari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Debagram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Palashi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Rejinagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Beldanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Berhampore",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Palsanda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Morgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Omarpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Farakka",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Malda",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 20,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-kolkata-to-malda-ac-rocket-premium",
-   "bus_name": "Kolkata to Malda AC Rocket Premium",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - AC",
-   "origin": "Esplanade",
-   "destination": "Malda",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Esplanade - Malda",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Esplanade",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Airport",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Barasat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Chakdah",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Ranaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Phulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Shantipur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Krishnanagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Dhubulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Bethuadahari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Debagram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Palashi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Rejinagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Beldanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Berhampore",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Palsanda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Morgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Omarpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Farakka",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Malda",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 20,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
    "id": "ktr-government-kolkata-to-gazole",
    "bus_name": "Kolkata to Gazole",
    "reg_no": "",
@@ -306844,205 +306004,6 @@
    "detail_url": "https://busjatri.in/"
   },
   {
-   "id": "ktr-government-kolkata-to-malda-3",
-   "bus_name": "Kolkata to Malda",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Esplanade",
-   "destination": "Malda",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Esplanade - Malda",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Esplanade",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Santragachi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Salap",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Dankuni",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Shaktigarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Barddhaman Station",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Dewandighi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Norja",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Muratipur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Natunhat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Nutangram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Pirtala",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Futisanko",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Sundarpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Bahadurpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Kuli",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Khargram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Nagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Sherpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Panchgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Morgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 22,
-     "name": "Sekhdighi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 23,
-     "name": "Omarpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 24,
-     "name": "Ahiran",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 25,
-     "name": "Chander",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 26,
-     "name": "Dhulian",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 27,
-     "name": "Farakka",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 28,
-     "name": "Kaliachak",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 29,
-     "name": "Sujapur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 30,
-     "name": "Malda",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 30,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
    "id": "ktr-government-kolkata-to-shyamsundar",
    "bus_name": "Kolkata to Shyamsundar",
    "reg_no": "",
@@ -313457,339 +312418,6 @@
    "detail_url": "https://busjatri.in/"
   },
   {
-   "id": "ktr-government-karunamoyee-to-suri",
-   "bus_name": "Karunamoyee to Suri",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Karunamoyee",
-   "destination": "Suri",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Karunamoyee - Suri",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Karunamoyee",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ultadanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Airport",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Dankuni Housing",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Shaktigarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Barddhaman Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Panagarh Darjeeling",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "11 Mile",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Illambazar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Joydev",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Dubrajpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Kachujor",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Suri",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 14,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-karunamoyee-to-asansol",
-   "bus_name": "Karunamoyee to Asansol",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Karunamoyee",
-   "destination": "Asansol",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Karunamoyee - Asansol",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Karunamoyee",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ultadanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Airport",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Dankuni Housing",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Shaktigarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Barddhaman Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Panagarh Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Muchipara",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Dvc",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Durgapur City Center",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Bhiringi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Andal",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Raniganj Punjabi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Kalipahari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Asansol",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 16,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-karunamoyee-to-asansol-ac-premium",
-   "bus_name": "Karunamoyee to Asansol AC Premium",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - AC",
-   "origin": "Karunamoyee",
-   "destination": "Asansol",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Karunamoyee - Asansol",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Karunamoyee",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ultadanga",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Airport",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Dankuni Housing",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Shaktigarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Barddhaman Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Panagarh Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Muchipara",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Dvc",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Durgapur City Center",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Bhiringi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Andal",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Raniganj Punjabi",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Kalipahari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Asansol",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 16,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
    "id": "ktr-government-karunamoyee-to-haldia-1",
    "bus_name": "Karunamoyee to Haldia",
    "reg_no": "",
@@ -314152,151 +312780,6 @@
    "detail_url": "https://busjatri.in/"
   },
   {
-   "id": "ktr-government-habra-to-midnapore",
-   "bus_name": "Habra to Midnapore",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Habra",
-   "destination": "Midnapore",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Habra - Midnapore",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Habra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ashoknagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Guma",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Bira",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Barasat Chapadali",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Airport Gate 3",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Dunlop Bridge",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Salap",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Kona Expressway",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Dhulagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Uluberia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Bagnan",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Deulia Bazar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Sidda",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Mechogram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Ratulia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 18,
-     "name": "Ashari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 19,
-     "name": "Debra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Kharagpur Chowringhee",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Midnapore",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 21,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
    "id": "ktr-government-habra-to-suri",
    "bus_name": "Habra to Suri",
    "reg_no": "",
@@ -314437,127 +312920,6 @@
    "detail_url": "https://busjatri.in/",
    "fare": "Rs. 165",
    "time_source": "redbus.in (WBTC CTC route 100 listing, Sep 2026)"
-  },
-  {
-   "id": "ktr-government-habra-to-asansol",
-   "bus_name": "Habra to Asansol",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Habra",
-   "destination": "Asansol",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Habra - Asansol",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Habra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Ashoknagar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Guma",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Bira",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Duttapukur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Barasat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Madhyamgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Dankuni",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Shaktigarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Barddhaman Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Panagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Muchipara",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Durgapur City Center",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Raniganj",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Kalipahari",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 17,
-     "name": "Asansol",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 17,
-   "detail_url": "https://busjatri.in/"
   },
   {
    "id": "ktr-government-bongaon-to-asansol",
@@ -314847,121 +313209,6 @@
    ],
    "source": "kolkata-travel-router (GitHub)",
    "total_stoppages": 13,
-   "detail_url": "https://busjatri.in/"
-  },
-  {
-   "id": "ktr-government-barasat-to-suri",
-   "bus_name": "Barasat to Suri",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - NON AC",
-   "origin": "Barasat",
-   "destination": "Suri",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Barasat - Suri",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Barasat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Barasat Chapadali",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Barasat Dakbunglow",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Madhyamgram",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Birati",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Airport Gate 3",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Dankuni",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Shaktigarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Barddhaman Bypass",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Panagarh",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "11 Mile",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Illambazar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Joydev",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 15,
-     "name": "Dubrajpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Suri",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "kolkata-travel-router (GitHub)",
-   "total_stoppages": 16,
    "detail_url": "https://busjatri.in/"
   },
   {
@@ -399461,276 +397708,6 @@
    "detail_url": ""
   },
   {
-   "id": "wbtc-fb-habra-midnapore-455am",
-   "bus_name": "WBTC Habra-Midnapore",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - WBTC",
-   "origin": "Habra",
-   "destination": "Midnapore",
-   "departure_time": "4:55 AM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Midnapur",
-   "route": "Habra - Dunlop - Midnapore",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Habra",
-     "up_time": "4:55 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Midnapore",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "WBTC Medinipur route timetable (Facebook)",
-   "total_stoppages": 4,
-   "detail_url": ""
-  },
-  {
-   "id": "wbtc-fb-habra-midnapore-525am",
-   "bus_name": "WBTC Habra-Midnapore",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - WBTC",
-   "origin": "Habra",
-   "destination": "Midnapore",
-   "departure_time": "5:25 AM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Midnapur",
-   "route": "Habra - Dunlop - Midnapore",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Habra",
-     "up_time": "5:25 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Midnapore",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "WBTC Medinipur route timetable (Facebook)",
-   "total_stoppages": 4,
-   "detail_url": ""
-  },
-  {
-   "id": "wbtc-fb-habra-midnapore-555am",
-   "bus_name": "WBTC Habra-Midnapore",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - WBTC",
-   "origin": "Habra",
-   "destination": "Midnapore",
-   "departure_time": "5:55 AM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Midnapur",
-   "route": "Habra - Dunlop - Midnapore",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Habra",
-     "up_time": "5:55 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Midnapore",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "WBTC Medinipur route timetable (Facebook)",
-   "total_stoppages": 4,
-   "detail_url": ""
-  },
-  {
-   "id": "wbtc-fb-habra-midnapore-620am",
-   "bus_name": "WBTC Habra-Midnapore",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - WBTC",
-   "origin": "Habra",
-   "destination": "Midnapore",
-   "departure_time": "6:20 AM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Midnapur",
-   "route": "Habra - Barasat - Airport Gate 2 - Midnapore",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Habra",
-     "up_time": "6:20 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Barasat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Airport Gate 2",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Midnapore",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "WBTC Medinipur route timetable (Facebook)",
-   "total_stoppages": 5,
-   "detail_url": ""
-  },
-  {
-   "id": "wbtc-fb-barasat-medinipur-830am",
-   "bus_name": "WBTC Barasat-Medinipur",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - WBTC",
-   "origin": "Barasat",
-   "destination": "Medinipur",
-   "departure_time": "8:30 AM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Midnapur",
-   "route": "Barasat - Dunlop - Airport Gate 2 - Medinipur",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Barasat",
-     "up_time": "8:30 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Airport Gate 2",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Medinipur",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "WBTC Medinipur route timetable (Facebook)",
-   "total_stoppages": 5,
-   "detail_url": ""
-  },
-  {
-   "id": "wbtc-fb-barasat-medinipur-345pm",
-   "bus_name": "WBTC Barasat-Medinipur",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - WBTC",
-   "origin": "Barasat",
-   "destination": "Medinipur",
-   "departure_time": "3:45 PM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "Midnapur",
-   "route": "Barasat - Dunlop - Medinipur",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Barasat",
-     "up_time": "3:45 PM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Medinipur",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "source": "WBTC Medinipur route timetable (Facebook)",
-   "total_stoppages": 4,
-   "detail_url": ""
-  },
-  {
    "id": "sbstc-fb-haldia-kolkata-910am",
    "bus_name": "SBSTC Haldia-Kolkata",
    "reg_no": "",
@@ -431181,7 +429158,7 @@
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "5:40 AM",
@@ -431288,15 +429265,132 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
    "id": "wbtc-official-esplanade-digha-2",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
+   "origin": "Esplanade",
+   "destination": "Digha",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Esplanade - Karunamoyee - Baguihati - Kolkata Airport - Dunlop Bridge - Salap - Dhulagarh - Kolaghat - Mecheda - Panskura - Nandakumar - Henria - Contai (Kanthi) - Mandarmani - Ramnagar - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Esplanade",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dunlop Bridge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Salap",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Panskura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Contai (Kanthi)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 16,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
+  },
+  {
+   "id": "wbtc-official-esplanade-digha-3",
+   "bus_name": "WBTC Esplanade-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "8:00 AM",
@@ -431403,15 +429497,16 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
-   "id": "wbtc-official-esplanade-digha-3",
+   "id": "wbtc-official-esplanade-digha-4",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "12:00 PM",
@@ -431518,15 +429613,132 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
-   "id": "wbtc-official-esplanade-digha-4",
+   "id": "wbtc-official-esplanade-digha-5",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
+   "origin": "Esplanade",
+   "destination": "Digha",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Esplanade - Karunamoyee - Baguihati - Kolkata Airport - Dunlop Bridge - Salap - Dhulagarh - Kolaghat - Mecheda - Panskura - Nandakumar - Henria - Contai (Kanthi) - Mandarmani - Ramnagar - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Esplanade",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dunlop Bridge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Salap",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Panskura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Contai (Kanthi)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 16,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
+  },
+  {
+   "id": "wbtc-official-esplanade-digha-6",
+   "bus_name": "WBTC Esplanade-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "3:00 PM",
@@ -431633,15 +429845,16 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
-   "id": "wbtc-official-esplanade-digha-5",
+   "id": "wbtc-official-esplanade-digha-7",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "6:00 PM",
@@ -431748,15 +429961,16 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
-   "id": "wbtc-official-esplanade-digha-6",
+   "id": "wbtc-official-esplanade-digha-8",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "9:00 PM",
@@ -431863,15 +430077,16 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
-   "id": "wbtc-official-esplanade-digha-7",
+   "id": "wbtc-official-esplanade-digha-9",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
    "departure_time": "11:30 PM",
@@ -431978,197 +430193,212 @@
     }
    ],
    "total_stoppages": 16,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
-   "id": "wbtc-official-esplanade-digha-8",
+   "id": "wbtc-official-esplanade-digha-10",
    "bus_name": "WBTC Esplanade-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC Seater / Non-AC / AC",
    "origin": "Esplanade",
    "destination": "Digha",
-   "departure_time": "6:00 AM",
+   "departure_time": "11:58 PM",
    "arrival_time": "",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Esplanade - Khidirpur - Mominpur - Hazra - Bally Bridge - Dhulagarh - Kolaghat - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "route": "Esplanade - Karunamoyee - Baguihati - Kolkata Airport - Dunlop Bridge - Salap - Dhulagarh - Kolaghat - Mecheda - Panskura - Nandakumar - Henria - Contai (Kanthi) - Mandarmani - Ramnagar - Digha",
    "stoppages": [
     {
      "no": 1,
      "name": "Esplanade",
-     "up_time": "6:00 AM",
+     "up_time": "11:58 PM",
      "down_time": ""
     },
     {
      "no": 2,
-     "name": "Khidirpur",
+     "name": "Karunamoyee",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 3,
-     "name": "Mominpur",
+     "name": "Baguihati",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 4,
-     "name": "Hazra",
+     "name": "Kolkata Airport",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 5,
-     "name": "Bally Bridge",
+     "name": "Dunlop Bridge",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 6,
-     "name": "Dhulagarh",
+     "name": "Salap",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 7,
-     "name": "Kolaghat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Nandakumar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Henria",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "Contai",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Mandarmani",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
-     "name": "Digha",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "total_stoppages": 12,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
-  },
-  {
-   "id": "wbtc-official-esplanade-digha-9",
-   "bus_name": "WBTC Esplanade-Digha",
-   "reg_no": "",
-   "operator": "WBTC",
-   "bus_type": "Government - Non-AC Seater",
-   "origin": "Esplanade",
-   "destination": "Digha",
-   "departure_time": "2:00 PM",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Esplanade - Khidirpur - Mominpur - Hazra - Bally Bridge - Dhulagarh - Kolaghat - Nandakumar - Henria - Contai - Mandarmani - Digha",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Esplanade",
-     "up_time": "2:00 PM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Khidirpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Mominpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Hazra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Bally Bridge",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 6,
      "name": "Dhulagarh",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 7,
+     "no": 8,
      "name": "Kolaghat",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 8,
-     "name": "Nandakumar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
      "no": 9,
-     "name": "Henria",
+     "name": "Mecheda",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 10,
-     "name": "Contai",
+     "name": "Panskura",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 11,
-     "name": "Mandarmani",
+     "name": "Nandakumar",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 12,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Contai (Kanthi)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
      "name": "Digha",
      "up_time": "",
      "down_time": ""
     }
    ],
-   "total_stoppages": 12,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "total_stoppages": 16,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
    "id": "wbtc-official-barasat-digha-1",
    "bus_name": "WBTC Barasat-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - AC Volvo / Non-AC",
+   "bus_type": "Government - AC Volvo / Non-AC / Express",
+   "origin": "Barasat",
+   "destination": "Digha",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Madhyamgram - Kolkata Airport - Dunlop - Kolaghat - Mecheda - Nandakumar - Contai - Ramnagar - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Madhyamgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 10,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 150-300"
+  },
+  {
+   "id": "wbtc-official-barasat-digha-2",
+   "bus_name": "WBTC Barasat-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo / Non-AC / Express",
    "origin": "Barasat",
    "destination": "Digha",
    "departure_time": "6:30 AM",
@@ -432239,15 +430469,16 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 150-300"
   },
   {
-   "id": "wbtc-official-barasat-digha-2",
+   "id": "wbtc-official-barasat-digha-3",
    "bus_name": "WBTC Barasat-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - AC Volvo / Non-AC",
+   "bus_type": "Government - AC Volvo / Non-AC / Express",
    "origin": "Barasat",
    "destination": "Digha",
    "departure_time": "1:00 PM",
@@ -432318,15 +430549,16 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 150-300"
   },
   {
-   "id": "wbtc-official-barasat-digha-3",
+   "id": "wbtc-official-barasat-digha-4",
    "bus_name": "WBTC Barasat-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - AC Volvo / Non-AC",
+   "bus_type": "Government - AC Volvo / Non-AC / Express",
    "origin": "Barasat",
    "destination": "Digha",
    "departure_time": "3:30 PM",
@@ -432397,15 +430629,188 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 150-300"
   },
   {
    "id": "wbtc-official-habra-digha-1",
    "bus_name": "WBTC Habra-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "5:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Kolkata Airport - Dunlop - Kolaghat - Mecheda - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-habra-digha-2",
+   "bus_name": "WBTC Habra-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Kolkata Airport - Dunlop - Kolaghat - Mecheda - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-habra-digha-3",
+   "bus_name": "WBTC Habra-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
    "origin": "Habra",
    "destination": "Digha",
    "departure_time": "5:50 AM",
@@ -432482,15 +430887,16 @@
     }
    ],
    "total_stoppages": 11,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
   },
   {
-   "id": "wbtc-official-habra-digha-2",
+   "id": "wbtc-official-habra-digha-4",
    "bus_name": "WBTC Habra-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
    "origin": "Habra",
    "destination": "Digha",
    "departure_time": "8:30 AM",
@@ -432567,15 +430973,16 @@
     }
    ],
    "total_stoppages": 11,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
   },
   {
-   "id": "wbtc-official-habra-digha-3",
+   "id": "wbtc-official-habra-digha-5",
    "bus_name": "WBTC Habra-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
    "origin": "Habra",
    "destination": "Digha",
    "departure_time": "2:00 PM",
@@ -432652,15 +431059,274 @@
     }
    ],
    "total_stoppages": 11,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-habra-digha-6",
+   "bus_name": "WBTC Habra-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "3:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Kolkata Airport - Dunlop - Kolaghat - Mecheda - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "3:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-habra-digha-7",
+   "bus_name": "WBTC Habra-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Kolkata Airport - Dunlop - Kolaghat - Mecheda - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-habra-digha-8",
+   "bus_name": "WBTC Habra-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC / AC Volvo / Non-AC",
+   "origin": "Habra",
+   "destination": "Digha",
+   "departure_time": "11:58 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Kolkata Airport - Dunlop - Kolaghat - Mecheda - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "11:58 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Kolkata Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
   },
   {
    "id": "wbtc-official-karunamoyee-digha-1",
    "bus_name": "WBTC Karunamoyee-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Volvo",
+   "bus_type": "Government - Non-AC / AC Volvo / Non-AC / AC / AC Volvo",
    "origin": "Karunamoyee",
    "destination": "Digha",
    "departure_time": "5:40 AM",
@@ -432725,15 +431391,16 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
    "id": "wbtc-official-karunamoyee-digha-2",
    "bus_name": "WBTC Karunamoyee-Digha",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Volvo",
+   "bus_type": "Government - Non-AC / AC Volvo / Non-AC / AC / AC Volvo",
    "origin": "Karunamoyee",
    "destination": "Digha",
    "departure_time": "11:58 PM",
@@ -432798,15 +431465,16 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-450"
   },
   {
    "id": "wbtc-official-esplanade-siliguri-1",
    "bus_name": "WBTC Esplanade-Siliguri",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo (Banglasree)",
    "origin": "Esplanade",
    "destination": "Siliguri",
    "departure_time": "5:50 PM",
@@ -432889,15 +431557,16 @@
     }
    ],
    "total_stoppages": 12,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 1355"
   },
   {
    "id": "wbtc-official-esplanade-siliguri-2",
    "bus_name": "WBTC Esplanade-Siliguri",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo (Banglasree)",
    "origin": "Esplanade",
    "destination": "Siliguri",
    "departure_time": "6:30 PM",
@@ -432980,8 +431649,9 @@
     }
    ],
    "total_stoppages": 12,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 1355"
   },
   {
    "id": "wbtc-official-siliguri-kolkata-1",
@@ -433071,7 +431741,7 @@
     }
    ],
    "total_stoppages": 12,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433162,7 +431832,7 @@
     }
    ],
    "total_stoppages": 12,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433170,7 +431840,7 @@
    "bus_name": "WBTC Esplanade-Asansol",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Volvo",
+   "bus_type": "Government - Non-AC / AC Volvo / AC Volvo",
    "origin": "Esplanade",
    "destination": "Asansol",
    "departure_time": "6:00 AM",
@@ -433241,15 +431911,16 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
   },
   {
    "id": "wbtc-official-esplanade-asansol-2",
    "bus_name": "WBTC Esplanade-Asansol",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Volvo",
+   "bus_type": "Government - Non-AC / AC Volvo / AC Volvo",
    "origin": "Esplanade",
    "destination": "Asansol",
    "departure_time": "9:00 AM",
@@ -433320,15 +431991,16 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
   },
   {
    "id": "wbtc-official-esplanade-asansol-3",
    "bus_name": "WBTC Esplanade-Asansol",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Volvo",
+   "bus_type": "Government - Non-AC / AC Volvo / AC Volvo",
    "origin": "Esplanade",
    "destination": "Asansol",
    "departure_time": "2:00 PM",
@@ -433399,15 +432071,16 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
   },
   {
    "id": "wbtc-official-esplanade-asansol-4",
    "bus_name": "WBTC Esplanade-Asansol",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Volvo",
+   "bus_type": "Government - Non-AC / AC Volvo / AC Volvo",
    "origin": "Esplanade",
    "destination": "Asansol",
    "departure_time": "5:00 PM",
@@ -433478,8 +432151,89 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
+  },
+  {
+   "id": "wbtc-official-esplanade-asansol-5",
+   "bus_name": "WBTC Esplanade-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC Volvo / AC Volvo",
+   "origin": "Esplanade",
+   "destination": "Asansol",
+   "departure_time": "8:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Esplanade - Karunamoyee - Airport - Dunlop - Dankuni - Burdwan - Panagarh - Durgapur City Centre - Raniganj - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Esplanade",
+     "up_time": "8:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Karunamoyee",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Panagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Durgapur City Centre",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 10,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
   },
   {
    "id": "wbtc-official-asansol-kolkata-1",
@@ -433551,7 +432305,7 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433624,7 +432378,7 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433697,7 +432451,7 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433764,7 +432518,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433831,7 +432585,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433892,7 +432646,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433953,7 +432707,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -433961,7 +432715,7 @@
    "bus_name": "WBTC Esplanade-Purulia",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo",
    "origin": "Esplanade",
    "destination": "Purulia",
    "departure_time": "6:30 AM",
@@ -434026,15 +432780,16 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 595"
   },
   {
    "id": "wbtc-official-esplanade-purulia-2",
    "bus_name": "WBTC Esplanade-Purulia",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo",
    "origin": "Esplanade",
    "destination": "Purulia",
    "departure_time": "3:00 PM",
@@ -434099,15 +432854,16 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 595"
   },
   {
    "id": "wbtc-official-esplanade-suri-1",
    "bus_name": "WBTC Esplanade-Suri",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo",
    "origin": "Esplanade",
    "destination": "Suri",
    "departure_time": "6:45 AM",
@@ -434172,15 +432928,16 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
   },
   {
    "id": "wbtc-official-esplanade-suri-2",
    "bus_name": "WBTC Esplanade-Suri",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo",
    "origin": "Esplanade",
    "destination": "Suri",
    "departure_time": "2:30 PM",
@@ -434245,15 +433002,16 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
   },
   {
    "id": "wbtc-official-esplanade-suri-3",
    "bus_name": "WBTC Esplanade-Suri",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater (2+2)",
+   "bus_type": "Government - Volvo AC Seater (2+2) / AC Volvo",
    "origin": "Esplanade",
    "destination": "Suri",
    "departure_time": "4:30 PM",
@@ -434318,8 +433076,9 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
   },
   {
    "id": "wbtc-official-esplanade-haldia-1",
@@ -434385,7 +433144,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -434452,7 +433211,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -434519,7 +433278,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -434527,7 +433286,7 @@
    "bus_name": "WBTC Esplanade-Mayapur",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - AC Seater",
+   "bus_type": "Government - AC Seater / Non-AC",
    "origin": "Esplanade",
    "destination": "Mayapur",
    "departure_time": "6:15 AM",
@@ -434580,15 +433339,16 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 104-180"
   },
   {
    "id": "wbtc-official-esplanade-mayapur-2",
    "bus_name": "WBTC Esplanade-Mayapur",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - AC Seater",
+   "bus_type": "Government - AC Seater / Non-AC",
    "origin": "Esplanade",
    "destination": "Mayapur",
    "departure_time": "3:30 PM",
@@ -434641,15 +433401,16 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 104-180"
   },
   {
    "id": "wbtc-official-esplanade-balurghat-1",
    "bus_name": "WBTC Esplanade-Balurghat",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater",
+   "bus_type": "Government - Volvo AC Seater / AC Volvo",
    "origin": "Esplanade",
    "destination": "Balurghat",
    "departure_time": "6:00 PM",
@@ -434702,15 +433463,16 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 650-800"
   },
   {
    "id": "wbtc-official-esplanade-balurghat-2",
    "bus_name": "WBTC Esplanade-Balurghat",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Volvo AC Seater",
+   "bus_type": "Government - Volvo AC Seater / AC Volvo",
    "origin": "Esplanade",
    "destination": "Balurghat",
    "departure_time": "8:00 PM",
@@ -434763,8 +433525,9 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 650-800"
   },
   {
    "id": "wbtc-official-esplanade-jhargram-1",
@@ -434842,7 +433605,7 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -434921,7 +433684,7 @@
     }
    ],
    "total_stoppages": 10,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -434929,7 +433692,7 @@
    "bus_name": "WBTC Esplanade-Bakkhali",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC Seater",
+   "bus_type": "Government - Non-AC Seater / Non-AC",
    "origin": "Esplanade",
    "destination": "Bakkhali",
    "departure_time": "6:30 AM",
@@ -434976,15 +433739,16 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 100-150"
   },
   {
    "id": "wbtc-official-esplanade-bakkhali-2",
    "bus_name": "WBTC Esplanade-Bakkhali",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC Seater",
+   "bus_type": "Government - Non-AC Seater / Non-AC",
    "origin": "Esplanade",
    "destination": "Bakkhali",
    "departure_time": "8:15 AM",
@@ -435031,8 +433795,65 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 100-150"
+  },
+  {
+   "id": "wbtc-official-esplanade-bakkhali-3",
+   "bus_name": "WBTC Esplanade-Bakkhali",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC Seater / Non-AC",
+   "origin": "Esplanade",
+   "destination": "Bakkhali",
+   "departure_time": "2:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Esplanade - Khidirpur - Diamond Harbour - Kakdwip - Namkhana - Bakkhali",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Esplanade",
+     "up_time": "2:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Khidirpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Diamond Harbour",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kakdwip",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Namkhana",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bakkhali",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 6,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 100-150"
   },
   {
    "id": "wbtc-official-esplanade-midnapore-1",
@@ -435104,7 +433925,7 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435177,7 +433998,7 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435250,7 +434071,7 @@
     }
    ],
    "total_stoppages": 9,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435305,7 +434126,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435360,7 +434181,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435421,7 +434242,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435482,7 +434303,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435549,7 +434370,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435616,7 +434437,7 @@
     }
    ],
    "total_stoppages": 8,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435677,7 +434498,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435738,7 +434559,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435746,7 +434567,7 @@
    "bus_name": "WBTC Esplanade-Bishnupur",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC",
    "origin": "Esplanade",
    "destination": "Bishnupur",
    "departure_time": "6:00 AM",
@@ -435793,15 +434614,16 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 120-200"
   },
   {
    "id": "wbtc-official-esplanade-bishnupur-2",
    "bus_name": "WBTC Esplanade-Bishnupur",
    "reg_no": "",
    "operator": "WBTC",
-   "bus_type": "Government - Non-AC / AC Seater",
+   "bus_type": "Government - Non-AC / AC Seater / Non-AC",
    "origin": "Esplanade",
    "destination": "Bishnupur",
    "departure_time": "2:30 PM",
@@ -435848,8 +434670,9 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
-   "detail_url": ""
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 120-200"
   },
   {
    "id": "wbtc-official-esplanade-krishnanagar-1",
@@ -435897,7 +434720,7 @@
     }
    ],
    "total_stoppages": 5,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435946,7 +434769,7 @@
     }
    ],
    "total_stoppages": 5,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -435983,7 +434806,7 @@
     }
    ],
    "total_stoppages": 3,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436020,7 +434843,7 @@
     }
    ],
    "total_stoppages": 3,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436075,7 +434898,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436130,7 +434953,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436185,7 +435008,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436240,7 +435063,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436295,7 +435118,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436350,7 +435173,7 @@
     }
    ],
    "total_stoppages": 6,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436411,7 +435234,7 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
   },
   {
@@ -436472,8 +435295,3120 @@
     }
    ],
    "total_stoppages": 7,
-   "source": "WBTC official long-distance list",
+   "source": "WBTC official route list",
    "detail_url": ""
+  },
+  {
+   "id": "wbtc-official-baduria-digha-1",
+   "bus_name": "WBTC Baduria-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Baduria",
+   "destination": "Digha",
+   "departure_time": "5:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Baduria - Barasat - Airport - Dunlop - Kolaghat - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Baduria",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 10,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 130-250"
+  },
+  {
+   "id": "wbtc-official-baduria-digha-2",
+   "bus_name": "WBTC Baduria-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Baduria",
+   "destination": "Digha",
+   "departure_time": "2:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Baduria - Barasat - Airport - Dunlop - Kolaghat - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Baduria",
+     "up_time": "2:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 10,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 130-250"
+  },
+  {
+   "id": "wbtc-official-barasat-asansol-1",
+   "bus_name": "WBTC Barasat-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Barasat",
+   "destination": "Asansol",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Airport - Burdwan - Durgapur - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 5,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
+  },
+  {
+   "id": "wbtc-official-barasat-asansol-2",
+   "bus_name": "WBTC Barasat-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Barasat",
+   "destination": "Asansol",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Airport - Burdwan - Durgapur - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 5,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
+  },
+  {
+   "id": "wbtc-official-barasat-midnapore-1",
+   "bus_name": "WBTC Barasat-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Barasat",
+   "destination": "Midnapore",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 110-180"
+  },
+  {
+   "id": "wbtc-official-barasat-midnapore-2",
+   "bus_name": "WBTC Barasat-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Barasat",
+   "destination": "Midnapore",
+   "departure_time": "4:10 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "4:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 110-180"
+  },
+  {
+   "id": "wbtc-official-barasat-suri-1",
+   "bus_name": "WBTC Barasat-Suri",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Barasat",
+   "destination": "Suri",
+   "departure_time": "6:45 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Airport - Dunlop - Burdwan - Illambazar - Bolpur - Suri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "6:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Illambazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Suri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 7,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
+  },
+  {
+   "id": "wbtc-official-barasat-suri-2",
+   "bus_name": "WBTC Barasat-Suri",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Barasat",
+   "destination": "Suri",
+   "departure_time": "4:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Barasat - Airport - Dunlop - Burdwan - Illambazar - Bolpur - Suri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Barasat",
+     "up_time": "4:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Illambazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Suri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 7,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
+  },
+  {
+   "id": "wbtc-official-baruipur-siliguri-1",
+   "bus_name": "WBTC Baruipur-Siliguri",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo (Banglasree)",
+   "origin": "Baruipur",
+   "destination": "Siliguri",
+   "departure_time": "5:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Baruipur - Garia - Jadavpur - Esplanade - Airport - Barasat - Raiganj - Dalkhola - Kishanganj - Islampur - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Baruipur",
+     "up_time": "5:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Garia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Jadavpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Dalkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Kishanganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Islampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 1100-1355"
+  },
+  {
+   "id": "wbtc-official-baruipur-siliguri-2",
+   "bus_name": "WBTC Baruipur-Siliguri",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo (Banglasree)",
+   "origin": "Baruipur",
+   "destination": "Siliguri",
+   "departure_time": "6:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Baruipur - Garia - Jadavpur - Esplanade - Airport - Barasat - Raiganj - Dalkhola - Kishanganj - Islampur - Siliguri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Baruipur",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Garia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Jadavpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Dalkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Kishanganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Islampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 1100-1355"
+  },
+  {
+   "id": "wbtc-official-baruipur-tarapith-1",
+   "bus_name": "WBTC Baruipur-Tarapith",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Baruipur",
+   "destination": "Tarapith",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Baruipur - Garia - Jadavpur - Esplanade - Burdwan - Illambazar - Bolpur - Suri - Rampurhat - Tarapith",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Baruipur",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Garia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Jadavpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Illambazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Suri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Rampurhat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Tarapith",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 10,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 350-450"
+  },
+  {
+   "id": "wbtc-official-baruipur-tarapith-2",
+   "bus_name": "WBTC Baruipur-Tarapith",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Baruipur",
+   "destination": "Tarapith",
+   "departure_time": "12:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Baruipur - Garia - Jadavpur - Esplanade - Burdwan - Illambazar - Bolpur - Suri - Rampurhat - Tarapith",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Baruipur",
+     "up_time": "12:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Garia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Jadavpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Illambazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Suri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Rampurhat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Tarapith",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 10,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 350-450"
+  },
+  {
+   "id": "wbtc-official-habra-bakkhali-1",
+   "bus_name": "WBTC Habra-Bakkhali",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Bakkhali",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Esplanade - Namkhana - Kakdwip - Kalighat - Bakkhali",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Namkhana",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Kakdwip",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Kalighat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Bakkhali",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 100-150"
+  },
+  {
+   "id": "wbtc-official-habra-bakkhali-2",
+   "bus_name": "WBTC Habra-Bakkhali",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Bakkhali",
+   "departure_time": "2:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Esplanade - Namkhana - Kakdwip - Kalighat - Bakkhali",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "2:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Namkhana",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Kakdwip",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Kalighat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Bakkhali",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 100-150"
+  },
+  {
+   "id": "wbtc-official-habra-purulia-1",
+   "bus_name": "WBTC Habra-Purulia",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Habra",
+   "destination": "Purulia",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Burdwan - Durgapur - Bankura - Purulia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Purulia",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 7,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 500-595"
+  },
+  {
+   "id": "wbtc-official-habra-purulia-2",
+   "bus_name": "WBTC Habra-Purulia",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Habra",
+   "destination": "Purulia",
+   "departure_time": "3:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Burdwan - Durgapur - Bankura - Purulia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "3:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Purulia",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 7,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 500-595"
+  },
+  {
+   "id": "wbtc-official-habra-asansol-1",
+   "bus_name": "WBTC Habra-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Asansol",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Burdwan - Durgapur - Raniganj - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 200-375"
+  },
+  {
+   "id": "wbtc-official-habra-asansol-2",
+   "bus_name": "WBTC Habra-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Asansol",
+   "departure_time": "8:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Burdwan - Durgapur - Raniganj - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "8:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 200-375"
+  },
+  {
+   "id": "wbtc-official-habra-bishnupur-1",
+   "bus_name": "WBTC Habra-Bishnupur",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Bishnupur",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Arambagh - Joyrambati - Bishnupur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Arambagh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Joyrambati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bishnupur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 6,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 120-200"
+  },
+  {
+   "id": "wbtc-official-habra-bishnupur-2",
+   "bus_name": "WBTC Habra-Bishnupur",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Bishnupur",
+   "departure_time": "2:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Arambagh - Joyrambati - Bishnupur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "2:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Arambagh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Joyrambati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bishnupur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 6,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 120-200"
+  },
+  {
+   "id": "wbtc-official-habra-jhargram-1",
+   "bus_name": "WBTC Habra-Jhargram",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Jhargram",
+   "departure_time": "5:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur - Midnapore - Dherua - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Dherua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-250"
+  },
+  {
+   "id": "wbtc-official-habra-jhargram-2",
+   "bus_name": "WBTC Habra-Jhargram",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Jhargram",
+   "departure_time": "3:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur - Midnapore - Dherua - Jhargram",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "3:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Dherua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Jhargram",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-250"
+  },
+  {
+   "id": "wbtc-official-habra-tarapith-1",
+   "bus_name": "WBTC Habra-Tarapith",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Tarapith",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Burdwan - Tarapith",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Tarapith",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 5,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-350"
+  },
+  {
+   "id": "wbtc-official-habra-tarapith-2",
+   "bus_name": "WBTC Habra-Tarapith",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Tarapith",
+   "departure_time": "12:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Burdwan - Tarapith",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "12:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Tarapith",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 5,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-350"
+  },
+  {
+   "id": "wbtc-official-habra-bankura-1",
+   "bus_name": "WBTC Habra-Bankura",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Bankura",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Burdwan - Durgapur - Bankura",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 6,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 200-300"
+  },
+  {
+   "id": "wbtc-official-habra-bankura-2",
+   "bus_name": "WBTC Habra-Bankura",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Bankura",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Burdwan - Durgapur - Bankura",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 6,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 200-300"
+  },
+  {
+   "id": "wbtc-official-habra-haldia-1",
+   "bus_name": "WBTC Habra-Haldia",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Haldia",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Nimtouri - Nandakumar - Haldia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Nimtouri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Haldia",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 95-180"
+  },
+  {
+   "id": "wbtc-official-habra-haldia-2",
+   "bus_name": "WBTC Habra-Haldia",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC / AC",
+   "origin": "Habra",
+   "destination": "Haldia",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Nimtouri - Nandakumar - Haldia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Nimtouri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Haldia",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 95-180"
+  },
+  {
+   "id": "wbtc-official-habra-kharagpur-1",
+   "bus_name": "WBTC Habra-Kharagpur",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Kharagpur",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 105-180"
+  },
+  {
+   "id": "wbtc-official-habra-kharagpur-2",
+   "bus_name": "WBTC Habra-Kharagpur",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Kharagpur",
+   "departure_time": "4:10 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "4:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 105-180"
+  },
+  {
+   "id": "wbtc-official-habra-midnapore-1",
+   "bus_name": "WBTC Habra-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Midnapore",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 9,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 110-180"
+  },
+  {
+   "id": "wbtc-official-habra-midnapore-2",
+   "bus_name": "WBTC Habra-Midnapore",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Midnapore",
+   "departure_time": "4:10 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Dunlop - Kolaghat - Mechogram - Debra - Kharagpur - Midnapore",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "4:10 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kharagpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Midnapore",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 9,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 110-180"
+  },
+  {
+   "id": "wbtc-official-habra-namkhana-1",
+   "bus_name": "WBTC Habra-Namkhana",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Namkhana",
+   "departure_time": "6:30 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Esplanade - Namkhana",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "6:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Namkhana",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 5,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 80-120"
+  },
+  {
+   "id": "wbtc-official-habra-namkhana-2",
+   "bus_name": "WBTC Habra-Namkhana",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Habra",
+   "destination": "Namkhana",
+   "departure_time": "8:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Habra - Barasat - Airport - Esplanade - Namkhana",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Habra",
+     "up_time": "8:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Namkhana",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 5,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 80-120"
+  },
+  {
+   "id": "wbtc-official-joka-digha-1",
+   "bus_name": "WBTC Joka-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Joka",
+   "destination": "Digha",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Joka - Tollygunge - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Joka",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Tollygunge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 4,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-300"
+  },
+  {
+   "id": "wbtc-official-joka-digha-2",
+   "bus_name": "WBTC Joka-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Joka",
+   "destination": "Digha",
+   "departure_time": "11:58 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Joka - Tollygunge - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Joka",
+     "up_time": "11:58 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Tollygunge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 4,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-300"
+  },
+  {
+   "id": "wbtc-official-karunamoyee-asansol-1",
+   "bus_name": "WBTC Karunamoyee-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Karunamoyee",
+   "destination": "Asansol",
+   "departure_time": "6:00 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Karunamoyee - Baguihati - Airport - Dunlop - Burdwan - Durgapur - Raniganj - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Karunamoyee",
+     "up_time": "6:00 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
+  },
+  {
+   "id": "wbtc-official-karunamoyee-asansol-2",
+   "bus_name": "WBTC Karunamoyee-Asansol",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Karunamoyee",
+   "destination": "Asansol",
+   "departure_time": "3:15 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Karunamoyee - Baguihati - Airport - Dunlop - Burdwan - Durgapur - Raniganj - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Karunamoyee",
+     "up_time": "3:15 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-375"
+  },
+  {
+   "id": "wbtc-official-karunamoyee-suri-1",
+   "bus_name": "WBTC Karunamoyee-Suri",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Karunamoyee",
+   "destination": "Suri",
+   "departure_time": "6:45 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Karunamoyee - Baguihati - Airport - Dunlop - Burdwan - Illambazar - Bolpur - Suri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Karunamoyee",
+     "up_time": "6:45 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Illambazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Suri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
+  },
+  {
+   "id": "wbtc-official-karunamoyee-suri-2",
+   "bus_name": "WBTC Karunamoyee-Suri",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Karunamoyee",
+   "destination": "Suri",
+   "departure_time": "4:30 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Karunamoyee - Baguihati - Airport - Dunlop - Burdwan - Illambazar - Bolpur - Suri",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Karunamoyee",
+     "up_time": "4:30 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Baguihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Burdwan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Illambazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Suri",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 8,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 400-435"
+  },
+  {
+   "id": "wbtc-official-khidderpur-digha-1",
+   "bus_name": "WBTC Khidderpur-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Khidderpur",
+   "destination": "Digha",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Khidderpur - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Khidderpur",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-300"
+  },
+  {
+   "id": "wbtc-official-khidderpur-digha-2",
+   "bus_name": "WBTC Khidderpur-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Khidderpur",
+   "destination": "Digha",
+   "departure_time": "11:58 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Khidderpur - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Khidderpur",
+     "up_time": "11:58 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-300"
+  },
+  {
+   "id": "wbtc-official-kolkata-malda-1",
+   "bus_name": "WBTC Kolkata-Malda",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Kolkata",
+   "destination": "Malda",
+   "departure_time": "6:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Esplanade - Airport - Barasat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Esplanade",
+     "up_time": "6:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 4,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 610-750"
+  },
+  {
+   "id": "wbtc-official-kolkata-malda-2",
+   "bus_name": "WBTC Kolkata-Malda",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Kolkata",
+   "destination": "Malda",
+   "departure_time": "8:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Esplanade - Airport - Barasat - Malda",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Esplanade",
+     "up_time": "8:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Airport",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Malda",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 4,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 610-750"
+  },
+  {
+   "id": "wbtc-official-madhyamgram-digha-1",
+   "bus_name": "WBTC Madhyamgram-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Madhyamgram",
+   "destination": "Digha",
+   "departure_time": "5:50 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Madhyamgram - Barasat - Dunlop - Belghoria - Sodepur - Kolaghat - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Madhyamgram",
+     "up_time": "5:50 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Belghoria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Sodepur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 130-250"
+  },
+  {
+   "id": "wbtc-official-madhyamgram-digha-2",
+   "bus_name": "WBTC Madhyamgram-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Madhyamgram",
+   "destination": "Digha",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Madhyamgram - Barasat - Dunlop - Belghoria - Sodepur - Kolaghat - Nandakumar - Henria - Contai - Mandarmani - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Madhyamgram",
+     "up_time": "4:00 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barasat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Dunlop",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Belghoria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Sodepur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Mandarmani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 11,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 130-250"
+  },
+  {
+   "id": "wbtc-official-belgachia-digha-1",
+   "bus_name": "WBTC Belgachia-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Belgachia",
+   "destination": "Digha",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Belgachia - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Belgachia",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-belgachia-digha-2",
+   "bus_name": "WBTC Belgachia-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - AC Volvo",
+   "origin": "Belgachia",
+   "destination": "Digha",
+   "departure_time": "11:58 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Belgachia - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Belgachia",
+     "up_time": "11:58 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 250-450"
+  },
+  {
+   "id": "wbtc-official-tollygunge-digha-1",
+   "bus_name": "WBTC Tollygunge-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Tollygunge",
+   "destination": "Digha",
+   "departure_time": "5:40 AM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Tollygunge - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tollygunge",
+     "up_time": "5:40 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-300"
+  },
+  {
+   "id": "wbtc-official-tollygunge-digha-2",
+   "bus_name": "WBTC Tollygunge-Digha",
+   "reg_no": "",
+   "operator": "WBTC",
+   "bus_type": "Government - Non-AC",
+   "origin": "Tollygunge",
+   "destination": "Digha",
+   "departure_time": "11:58 PM",
+   "arrival_time": "",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Tollygunge - Esplanade - Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tollygunge",
+     "up_time": "11:58 PM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "source": "WBTC official route list",
+   "detail_url": "",
+   "fare": "Rs. 145-300"
   }
  ],
  "routes": {
@@ -526935,7 +528870,7 @@
   }
  },
  "meta": {
-  "total_buses": 4688,
+  "total_buses": 4728,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
