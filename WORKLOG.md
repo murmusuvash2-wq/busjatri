@@ -5,6 +5,16 @@ Newest entries first.
 
 ---
 
+## 2026-10-08 — Audit: hub pages design consistency (+ stale canonical found)
+- What: Owner asked to open the hub pages and check whether all hub designs are the same / compact.
+  - Rendered all hubs headless at 430px (local HTTP-intercept server).
+  - **Not all the same.** Operator hubs (wbtc/nbstc/volvo/shyamoli + buses-from-*) share the `op-*` system, but: SBSTC has a badge + subtitle and the others don't; WBTC's body is route **cards** while NBSTC/Volvo show a **schedule list**. The Kolkata City hub (`cstc-city.css`), Kolkata City Routes (gold hero + rt-cards), and `bus-time-table/index.html` (place cards) are three further designs.
+  - Hero heights vary: 69 (WBTC/NBSTC/Volvo), 122 (SBSTC), 131 (city routes), 164 (index), 174 (city hub). Operator hubs are NOT compact; city hub / city routes / index are.
+  - WBTC hub's "Popular WBTC Routes" = long routes only (Esplanade->Digha, Habra->Midnapore...) with **no route numbers** (origin->destination only).
+- **Bonus bug found**: 2,808 of 3,518 `bus-time-table/*.html` pages still have `<link rel="canonical" href="https://wb-bus.vercel.app/...">` (old domain) instead of busjatri.in. via/, blog/ and root pages are correct. Not fixed — needs a generator fix + regen.
+- Why: Owner — "hub page kholo or sabi design check karo .. kya sabi same hain .. compact hain".
+- Status: audit only; no files changed. Offer: (a) unify the operator hub design, (b) fix the 2,808 stale canonicals.
+
 ## 2026-10-08 — Review: homepage "Popular Operators" hub + improvement demo
 - What: Owner asked to check the homepage Popular Operators section design (heading correct? compact?) and show an improvement demo. No site files changed.
   - Current: heading "POPULAR OPERATORS" (uppercase, amber) + 5 pills (SBSTC, NBSTC, WBTC, Kolkata City Bus, Volvo AC). Rendered headless (local HTTP-intercept server) at 430px.
