@@ -1707,9 +1707,28 @@ sitemap = [
 ]
 
 
+# URLs that are 301-redirected in _redirects must not appear in the sitemap —
+# a sitemap should list only canonical, 200-OK URLs.
+_redirected = set()
+try:
+    with open("_redirects", encoding="utf-8") as _rf:
+        for _line in _rf:
+            _line = _line.strip()
+            if not _line or _line.startswith("#"):
+                continue
+            _parts = _line.split()
+            if len(_parts) < 2:
+                continue
+            _src = _parts[0]
+            _redirected.add(BASE + _src.rstrip("/"))
+            if _src.endswith(".html"):
+                _redirected.add(BASE + _src[:-5].rstrip("/"))
+except FileNotFoundError:
+    pass
+
 _seen = set()
 for url in sitemap_urls:
-    if url in _seen:
+    if url in _seen or url.rstrip("/") in _redirected:
         continue
     _seen.add(url)
     sitemap.append(
