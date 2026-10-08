@@ -313,8 +313,6 @@
 /bus-time-table/buses-from-tarkeshwar.html /bus-time-table/buses-from-tarakeshwar 301
 /bus-time-table/buses-from-esplanade /bus-time-table/buses-from-kolkata 301
 /bus-time-table/buses-from-esplanade.html /bus-time-table/buses-from-kolkata 301
-/bus-time-table/shyamoli-paribahan-buses /bus-time-table/volvo-ac-buses 301
-/bus-time-table/shyamoli-paribahan-buses.html /bus-time-table/volvo-ac-buses 301
 
 # --- duplicate route pages: identical content + identical <title> -> canonical keeper ---
 /bus-time-table/11a-dum-dum-to-howrah /bus-time-table/dum-dum-to-howrah 301
