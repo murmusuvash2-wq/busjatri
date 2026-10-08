@@ -712,11 +712,18 @@ async function renderSearch(el) {
      search no longer downloads the 5MB detail file */
   let results = Object.values(BUSES);
   if (opq) {
-    var opm = opq === 'volvo ac' ? 'volvo' : opq;
-    results = results.filter(b =>
-      (b.bus_name || '').toLowerCase().includes(opm) ||
-      (b.bus_type || '').toLowerCase().includes(opm) ||
-      (b.id || '').toLowerCase().includes(op));
+    /* Operator / type filter. 'volvo-ac' is the AC-buses page: show EVERY AC
+       bus (Volvo + other AC operators), not just Volvo. */
+    var acOnly = (op === 'volvo-ac' || opq === 'volvo ac');
+    results = results.filter(b => {
+      if (acOnly) {
+        var t = (b.bus_type || '').toUpperCase();
+        return t.indexOf('AC') > -1 && t.indexOf('NON') === -1;
+      }
+      return (b.bus_name || '').toLowerCase().includes(opq) ||
+        (b.bus_type || '').toLowerCase().includes(opq) ||
+        (b.id || '').toLowerCase().includes(op);
+    });
   }
 
   if (from && to) {

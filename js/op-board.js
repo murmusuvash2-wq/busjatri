@@ -58,6 +58,62 @@
     location.href = '../index.html#/search' + q;
   };
 
+  /* ---- autocomplete suggestions on From / To (this operator's own places) ---- */
+  (function () {
+    var LIST = window.bjOpStops || [];
+    if (!LIST.length || !fromI) return;
+    var LOW = LIST.map(function (n) { return String(n).toLowerCase(); });
+    function acFind(q) {
+      q = String(q || '').trim().toLowerCase();
+      if (!q) return [];
+      var t1 = [], t2 = [];
+      for (var i = 0; i < LIST.length; i++) {
+        var ln = LOW[i];
+        if (ln.indexOf(q) === 0) t1.push(LIST[i]);
+        else if (ln.indexOf(q) > -1) t2.push(LIST[i]);
+      }
+      return t1.concat(t2).slice(0, 8);
+    }
+    function acHide() { var d = document.querySelector('.bj-ac'); if (d) d.remove(); }
+    function acShow(inp) {
+      acHide();
+      var m = acFind(inp.value);
+      if (!m.length) return;
+      /* anchor under the whole search card so the From/To inputs, the date/time
+         row and the Search button are never covered by the list */
+      var host = (inp.closest && inp.closest('.bj-op-search')) || inp.parentElement;
+      if (!host) return;
+      if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+      var d = document.createElement('div');
+      d.className = 'bj-ac';
+      d.style.cssText = 'position:absolute;top:100%;left:0;right:0;margin-top:6px;background:var(--surface,#fffcf4);' +
+        'border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 10px 26px rgba(60,40,10,.16);' +
+        'z-index:40;max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch';
+      d.innerHTML = m.map(function (n) {
+        return '<div class="bj-ac-i" style="padding:11px 14px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--line,rgba(33,28,22,.13))">' + esc(n) + '</div>';
+      }).join('');
+      host.appendChild(d);
+    }
+    function isIn(el) { return !!(el && (el.id === 'bjFrom' || el.id === 'bjTo')); }
+    var tm = null;
+    document.addEventListener('input', function (e) {
+      if (!isIn(e.target)) return;
+      if (tm) clearTimeout(tm);
+      tm = setTimeout(function () { acShow(e.target); }, 120);
+    });
+    document.addEventListener('click', function (e) {
+      var it = e.target.closest ? e.target.closest('.bj-ac-i') : null;
+      if (it) {
+        var d = it.closest('.bj-ac');
+        var inp = d && d.parentElement ? d.parentElement.querySelector('input') : null;
+        if (inp) { inp.value = it.textContent; acHide(); inp.focus(); }
+        return;
+      }
+      if (isIn(e.target)) { acShow(e.target); return; }
+      acHide();
+    });
+  })();
+
   /* ---- depo departure board ---- */
   var cfg = window.bjOpCfg || {};
   var OP_DATA = window.bjOpData || [];
