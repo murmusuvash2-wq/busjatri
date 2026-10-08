@@ -57,6 +57,7 @@
       <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
     
 
+<button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◐</button>
 </nav>
   </div>
 </header>
@@ -88,6 +89,8 @@
   <h3 class="section-title"><span class="label-en">More Routes from Bardhaman</span><span class="label-bn">বর্ধমান থেকে আরও রুট</span></h3>
   <div class="chip-row"><a class="rel-chip" href="buses-from-bardhaman">All buses from Bardhaman &rarr;</a><a class="rel-chip" href="bardhaman-to-kharagpur">Bardhaman → Kharagpur</a><a class="rel-chip" href="bardhaman-to-manbazar">Bardhaman → Manbazar</a><a class="rel-chip" href="bardhaman-to-mecheda">Bardhaman → Mecheda</a><a class="rel-chip" href="bardhaman-to-nabadwip">Bardhaman → Nabadwip</a><a class="rel-chip" href="bardhaman-to-asansol">Bardhaman → Asansol</a><a class="rel-chip" href="bardhaman-to-karimpur">Bardhaman → Karimpur</a><a class="rel-chip" href="bardhaman-to-suri">Bardhaman → Suri</a><a class="rel-chip" href="bardhaman-to-baharampur">Bardhaman → Baharampur</a></div>
 </section>
+<style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\2013"}.bj-faq .bjfa{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>
+
 <style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\2013"}.bj-faq .bjfa{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>
 
 <style>.bj-faq{margin:26px 0 6px}.bj-faq h2{font-size:1.12rem;margin:0 0 10px}.bj-faq details{border:1px solid var(--line,rgba(33,28,22,.13));border-radius:10px;margin:8px 0;background:var(--surface,#fffdf7)}.bj-faq summary{padding:10px 14px;cursor:pointer;font-weight:600;font-size:.92rem;list-style:none;color:var(--ink,#211c16)}.bj-faq summary::-webkit-details-marker{display:none}.bj-faq summary::after{content:"+";float:right;color:var(--amber,#b8791f);font-weight:700}.bj-faq details[open] summary::after{content:"\2013"}.bj-faq .bjfa{padding:0 14px 12px;color:var(--ink-dim,#6f6653);font-size:.88rem;line-height:1.55}</style>
@@ -169,5 +172,6 @@
 
 
 
+<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
 </body>
 </html>
