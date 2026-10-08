@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://wb-bus.vercel.app/sitemap.xml
-Sitemap: https://wb-bus.vercel.app/sitemap-extra.xml
+Sitemap: https://busjatri.in/sitemap.xml
+Sitemap: https://busjatri.in/sitemap-extra.xml
