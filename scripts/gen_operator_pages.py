@@ -174,18 +174,46 @@ FOOT = '''<footer class="footer">
 </html>
 '''
 
+def _place_key(s):
+    k = re.sub(r'[^a-z0-9\u0980-\u09ff]+', '', s.lower())
+    return k.replace('center', 'centre')
+
+
+def _place_score(s):
+    sc = 0
+    if '(' not in s and '[' not in s:
+        sc += 4
+    if 'centre' in s.lower():
+        sc += 2
+    if s[:1].isupper():
+        sc += 1
+    return sc - len(s) * 0.001
+
+
 def places(buses):
-    s = set()
+    """Sorted unique place names, collapsing near-duplicates (brackets,
+    Center/Centre) to a single, cleanest spelling."""
+    best = {}
+    order = []
+
+    def add(n):
+        n = (n or '').strip()
+        if not n:
+            return
+        k = _place_key(n)
+        if k not in best:
+            best[k] = n
+            order.append(k)
+        elif _place_score(n) > _place_score(best[k]):
+            best[k] = n
+
     for b in buses:
-        for k in ('origin', 'destination'):
-            v = (b.get(k) or '').strip()
-            if v:
-                s.add(v)
+        add(b.get('origin'))
+        add(b.get('destination'))
         for e in (b.get('stoppages') or []):
-            n = e.get('name') if isinstance(e, dict) else (e if isinstance(e, str) else None)
-            if n and n.strip():
-                s.add(n.strip())
-    return sorted(s)
+            nm = e.get('name') if isinstance(e, dict) else (e if isinstance(e, str) else None)
+            add(nm)
+    return sorted(best[k] for k in order)
 
 
 def build_page(op, stems):
@@ -312,7 +340,7 @@ def build_page(op, stems):
     else:
         board = ("<section id='bjLive' style='margin-top:16px'></section>" +
             "<script>window.bjOpStops = " + json.dumps(places(buses), ensure_ascii=False) + "; window.bjOpCfg = " + json.dumps({'name': op['name'], 'bn': bn_short, 'token': op_token, 'count': len(buses)}, ensure_ascii=False) + "; window.bjOpData = " + json.dumps(lv_rows, ensure_ascii=False) + ";</script>" +
-            "<script src='../js/lang.js?v=lang20261005c'></script><script src='../js/op-board.js?v=opac20261008c' defer></script>")
+            "<script src='../js/lang.js?v=lang20261005c'></script><script src='../js/op-board.js?v=opac20261008d' defer></script>")
     booking_q = 'How do I book a ' + clean_name + ' bus ticket online?'
     booking_q_bn = bn_short + ' বাসের টিকিট অনলাইনে কীভাবে বুক করব?'
     if off and off[3]:
@@ -372,10 +400,10 @@ def build_page(op, stems):
     body += stats + search_card + board + popular + chiprow + faq_section + chr(10) + '</main>' + chr(10) + FOOT
     # Shared Bengali place-name map for every operator's departure board.
     # This translates place names embedded in bus names while preserving operator/brand names.
-    body = body.replace('<script src="../js/op-board.js?v=opac20261008c"></script>',
+    body = body.replace('<script src="../js/op-board.js?v=opac20261008d"></script>',
                         '<script src="../js/lang.js?v=lang20261005c"></script>\n'
                         '<script>window.bjStops = ' + SBSTC_STOPS_JSON + ';</script>\n'
-                        '<script src="../js/op-board.js?v=opac20261008c"></script>', 1)
+                        '<script src="../js/op-board.js?v=opac20261008d"></script>', 1)
     return apply_sbstc_toggle(body, op)
 
 

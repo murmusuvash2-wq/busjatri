@@ -101,16 +101,37 @@
      Registered after ux-fixes.js, so its dropdown wins (last write). */
   var AC_LIMIT = 10;
   var AC_NAMES = null;
+  /* Collapse near-duplicate place names (brackets, Center/Centre) to one entry,
+     keeping the cleanest spelling. */
+  function placeKey(s) {
+    return String(s).toLowerCase().replace(/[^a-z0-9\u0980-\u09ff]+/g, '').replace(/centre|center/g, 'centre');
+  }
+  function placeScore(n) {
+    var s = 0;
+    if (n.indexOf('(') === -1 && n.indexOf('[') === -1) s += 4;
+    if (/centre/i.test(n)) s += 2;
+    if (/^[A-Z]/.test(n)) s += 1;
+    return s - n.length * 0.001;
+  }
+  function dedupePlaces(arr) {
+    var best = {}, order = [];
+    arr.forEach(function (n) {
+      if (!n) return;
+      var k = placeKey(n);
+      if (!(k in best)) { best[k] = n; order.push(k); }
+      else if (placeScore(n) > placeScore(best[k])) best[k] = n;
+    });
+    return order.map(function (k) { return best[k]; });
+  }
   function acNames() {
     if (AC_NAMES) return AC_NAMES;
-    var seen = Object.create(null);
     var out = [];
-    function add(n) { if (n && !seen[n]) { seen[n] = 1; out.push(n); } }
+    function add(n) { if (n) out.push(String(n)); }
     Object.values(STOPS || {}).forEach(function (s) { if (s && s.name) add(s.name); });
     if (typeof DATA !== 'undefined' && DATA && DATA.sn) DATA.sn.forEach(add);
     Object.values(BUSES).forEach(function (b) { add(b.origin); add(b.destination); });
-    AC_NAMES = out;
-    return out;
+    AC_NAMES = dedupePlaces(out);
+    return AC_NAMES;
   }
   function acFind(q) {
     var t = (q || '').toLowerCase().trim();

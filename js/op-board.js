@@ -60,7 +60,27 @@
 
   /* ---- autocomplete suggestions on From / To (this operator's own places) ---- */
   (function () {
-    var LIST = window.bjOpStops || [];
+    /* Dedupe near-identical place names so a single place is suggested once,
+       keeping the cleanest spelling (no brackets, British "Centre", shorter). */
+    function normKey(s) {
+      return String(s).toLowerCase().replace(/[^a-z0-9\u0980-\u09ff]+/g, '').replace(/centre|center/g, 'centre');
+    }
+    function nameScore(n) {
+      var s = 0;
+      if (n.indexOf('(') === -1 && n.indexOf('[') === -1) s += 4;
+      if (/centre/i.test(n)) s += 2;
+      if (/^[A-Z]/.test(n)) s += 1;
+      return s - n.length * 0.001;
+    }
+    var LIST = (function () {
+      var src = window.bjOpStops || [], best = {}, order = [];
+      src.forEach(function (n) {
+        var k = normKey(n);
+        if (!(k in best)) { best[k] = n; order.push(k); }
+        else if (nameScore(n) > nameScore(best[k])) best[k] = n;
+      });
+      return order.map(function (k) { return best[k]; });
+    })();
     if (!LIST.length || !fromI) return;
     var LOW = LIST.map(function (n) { return String(n).toLowerCase(); });
     function acFind(q) {
