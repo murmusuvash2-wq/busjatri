@@ -5,6 +5,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-08 — Review: homepage "Popular Operators" hub + improvement demo
+- What: Owner asked to check the homepage Popular Operators section design (heading correct? compact?) and show an improvement demo. No site files changed.
+  - Current: heading "POPULAR OPERATORS" (uppercase, amber) + 5 pills (SBSTC, NBSTC, WBTC, Kolkata City Bus, Volvo AC). Rendered headless (local HTTP-intercept server) at 430px.
+  - Found: ragged wrap (4 pills line 1, 1 lone pill line 2 -> big gap), uneven widths (acronyms vs a long phrase), no counts, low-contrast near-white pills on cream. Heading itself is fine/on-brand.
+  - Proposed: even 2-col grid of operator tiles (monogram badge + name + "952 buses · 801 routes"), last tile full-width for Kolkata City Bus, heading kept + a "See all" link.
+- Why: Owner — "popular operator ka hub design check karo ... improvement demo bhi dikhao".
+- Output: `/scratch/output/popular-operators-demo.html` (before/after + rationale). Counts from data/busjatri_data.json.
+- Status: review only — awaiting owner's go-ahead to apply to `index.html` + `js/app.js:643`.
+
 ## 2026-10-07 — Kolkata city hub: Route button + route search were dead (stray literal \n)
 - What: Owner reported the hub's Route tab button did nothing. Headless render confirmed: `switchMode`/`searchBus` were **undefined** and a page error "Invalid or unexpected token" fired.
   - Root cause: a **literal backslash-n** (`\n`, 2 chars) between `normSlug()` and `norm()` in the hub's inline `<script>` (kolkata-city-bus-timetable.html). An invalid token there made the **whole** script block fail to parse, so no hub function was ever defined — the Route tab and route search did nothing. Same class of bug as the earlier `stripDatalist` abort.
