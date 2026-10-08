@@ -1,0 +1,67 @@
+name: Import official WBTC long-distance list + regenerate pages
+
+# One-shot. Applies data/wbtc_official_longdistance.csv (30 WBTC long-distance
+# services with departure times + via stoppages) to data/busjatri_data.json and
+# rebuilds the pages that read it. Idempotent.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Import the WBTC long-distance services
+        run: python3 scripts/import_wbtc_official.py
+
+      - name: Regenerate bus-time-table pages
+        timeout-minutes: 15
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Unify header + repair malformed hrefs
+        timeout-minutes: 8
+        run: |
+          python3 scripts/unify_header_20261002.py
+          python3 scripts/fix_stray_quotes.py
+
+      - name: Sanity checks
+        run: |
+          test $(ls bus-time-table/*.html | wc -l) -gt 300
+          python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml')"
+          python3 - <<'PY'
+          import json
+          d = json.load(open('data/busjatri_data.json', encoding='utf-8'))
+          buses = d['buses'] if isinstance(d['buses'], list) else list(d['buses'].values())
+          w = [b for b in buses if (b.get('operator') or '').lower() == 'wbtc']
+          timed = [b for b in w if (b.get('departure_time') or '').strip()]
+          print('WBTC buses:', len(w), 'with a time:', len(timed))
+          assert len(timed) >= 70, len(timed)
+          PY
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bus-time-table via blog ./*.html sitemap.xml robots.txt \
+                  data/busjatri_data.json data/stop_coords.json data/app-index.json \
+                  data/bus-details.json data/wbtc_official_longdistance.csv
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "data(wbtc): import official long-distance list + regen pages"
+            git push
+          fi
