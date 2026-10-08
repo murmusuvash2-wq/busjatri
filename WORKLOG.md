@@ -5,6 +5,15 @@ Newest entries first.
 
 ---
 
+## 2026-10-08 — Proposed unified operator-hub design (demo)
+- What: Owner asked how I'd design the hub page for all the popular operators, with a demo. No site files changed.
+  - Built `/scratch/output/operator-hub-design-demo.html`: one template rendered for WBTC / SBSTC / NBSTC / Private with live counts + top routes from data/busjatri_data.json.
+  - Template: breadcrumb -> hero (monogram badge + name + subtitle + "official" chip) -> stats (N buses · M routes) -> search (From/To + swap) -> Popular routes (compact rows) -> Top destinations (chips) -> FAQs.
+  - Key fixes vs today: adopt SBSTC's badge+subtitle on every hub; compact 44px route rows instead of WBTC's card grid; one stats format; one section order; one hero height (~92px, today 69/122/174); show route codes where the data has them.
+- Why: Owner — "hub page ka design kyse banao ge sare popular opretor ka .. demo dekhou".
+- Implementation note: one `gen_operator_pages.py` template + per-operator config so all hubs share markup/CSS.
+- Status: demo only; awaiting go-ahead to implement.
+
 ## 2026-10-08 — Domain fix: legacy wb-bus / kolkata-bus .vercel.app -> busjatri.in
 - What: Owner asked to remove the old Vercel links from the site and use busjatri.in. Found two legacy hosts: `wb-bus.vercel.app` (~17k refs) and `kolkata-bus.vercel.app` (~5.5k refs).
   - Swept **2,808 HTML pages** (canonical / og:url), **1,842 bus-detail JSONs** (`detail_url`), `sitemap.xml` (2,937 URLs), `robots.txt` -> all now `https://busjatri.in`. 0 vercel refs left (spot-checked several files; GitHub code search was stale).
