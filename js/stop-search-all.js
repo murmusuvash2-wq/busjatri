@@ -151,21 +151,18 @@
     acHide();
     var m = acFind(input.value);
     if (!m.length) return;
-    /* Anchor the list under the WHOLE search card, not under the field. On mobile
-       the From/To/Stoppage fields and the Search button sit stacked below each
-       other, so a field-anchored list covered them (and taps hit a suggestion
-       instead of the next field). */
-    var host = input.closest('.search-box') || input.closest('.search-field');
-    if (!host) return;
-    if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+    /* Anchor under the FIELD itself (not under the whole card). On a phone the
+       on-screen keyboard covers everything below the card, so a card-anchored
+       list was invisible while typing; field-anchored keeps the suggestions in
+       view above the keyboard. */
+    var field = input.closest('.search-field');
+    if (!field) return;
     var d = document.createElement('div');
     d.className = 'ac-drop';
-    d.style.cssText = 'position:absolute;top:100%;left:0;right:0;margin-top:8px;' +
-      'max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch;z-index:40';
     d.innerHTML = m.map(function (n) {
       return '<div class="ac-item">' + acHtml(n) + '</div>';
     }).join('');
-    host.appendChild(d);
+    field.appendChild(d);
   }
   function acIsInput(el) {
     return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));

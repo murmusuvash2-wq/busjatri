@@ -79,20 +79,22 @@
       acHide();
       var m = acFind(inp.value);
       if (!m.length) return;
-      /* anchor under the whole search card so the From/To inputs, the date/time
-         row and the Search button are never covered by the list */
-      var host = (inp.closest && inp.closest('.bj-op-search')) || inp.parentElement;
-      if (!host) return;
-      if (getComputedStyle(host).position === 'static') host.style.position = 'relative';
+      /* Anchor under the INPUT itself (not under the whole card): on a phone the
+         on-screen keyboard covers everything below the card, so a card-anchored
+         list was invisible while typing. */
+      var row = inp.parentElement;
+      if (!row) return;
+      if (getComputedStyle(row).position === 'static') row.style.position = 'relative';
       var d = document.createElement('div');
       d.className = 'bj-ac';
-      d.style.cssText = 'position:absolute;top:100%;left:0;right:0;margin-top:6px;background:var(--surface,#fffcf4);' +
+      d.style.cssText = 'position:absolute;top:' + (inp.offsetTop + inp.offsetHeight + 2) + 'px;left:' + inp.offsetLeft +
+        'px;width:' + inp.offsetWidth + 'px;background:var(--surface,#fffcf4);' +
         'border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 10px 26px rgba(60,40,10,.16);' +
         'z-index:40;max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch';
       d.innerHTML = m.map(function (n) {
         return '<div class="bj-ac-i" style="padding:11px 14px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--line,rgba(33,28,22,.13))">' + esc(n) + '</div>';
       }).join('');
-      host.appendChild(d);
+      row.appendChild(d);
     }
     function isIn(el) { return !!(el && (el.id === 'bjFrom' || el.id === 'bjTo')); }
     var tm = null;
