@@ -1,0 +1,460 @@
+Sl No.,From,To,Via,Time
+1,Cooch Behar,Siliguri,Falakata,5:00 AM
+2,Cooch Behar,Siliguri,Falakata,5:30 AM
+3,Cooch Behar,Siliguri,Falakata,5:40 AM
+4,Cooch Behar,Siliguri,Falakata,6:10 AM
+5,Cooch Behar,Siliguri,Falakata,6:20 AM
+6,Cooch Behar,Siliguri,Falakata,7:30 AM
+7,Cooch Behar,Siliguri,Falakata,8:00 AM
+8,Cooch Behar,Siliguri,Mathabhanga,8:20 AM
+9,Cooch Behar,Siliguri,Falakata,8:50 AM
+10,Cooch Behar,Siliguri,Mathabhanga,9:30 AM
+11,Cooch Behar,Siliguri,Falakata,10:15 AM
+12,Cooch Behar,Siliguri,Falakata,10:25 AM
+13,Cooch Behar,Siliguri,Falakata,10:40 AM
+14,Cooch Behar,Siliguri,Falakata,11:00 AM
+15,Cooch Behar,Siliguri,Falakata,11:20 AM
+16,Cooch Behar,Siliguri,Falakata,11:40 AM
+17,Cooch Behar,Siliguri,Falakata,12:00 PM
+18,Cooch Behar,Siliguri,Falakata,12:20 PM
+19,Cooch Behar,Siliguri,Falakata,12:30 PM
+20,Cooch Behar,Siliguri,Falakata,1:00 PM
+21,Cooch Behar,Siliguri,Falakata,2:00 PM
+22,Cooch Behar,Siliguri,Falakata,2:30 PM
+23,Cooch Behar,Siliguri,Falakata,3:00 PM
+24,Cooch Behar,Siliguri,Mathabhanga,3:15 PM
+25,Cooch Behar,Siliguri,Falakata,3:30 PM
+26,Cooch Behar,Siliguri,Falakata,4:00 PM
+27,Cooch Behar,Siliguri,Falakata,4:45 PM
+28,Cooch Behar,Siliguri,Falakata,5:15 PM
+29,Cooch Behar,Siliguri,Falakata,6:00 PM
+30,Cooch Behar,Beldanga,Mathabhanga,5:15 AM
+31,Cooch Behar,Balurghat,Falakata,6:00 AM
+32,Cooch Behar,Krishnagar,Falakata,7:00 AM
+33,Cooch Behar,Gazole,Falakata,7:40 AM
+34,Cooch Behar,Buniadpur,Falakata,8:10 AM
+35,Cooch Behar,Kolkata,Falakata,9:15 AM
+36,Cooch Behar,Kolkata,Falakata,1:30 PM
+37,Cooch Behar,Haldibari,Falakata,4:30 AM
+38,Cooch Behar,Berhampur,Falakata,7:00 AM
+39,Tufanganj,Balurghat,Cooch Behar,6:15 AM
+40,Tufanganj,Kaliyaganj,Alipurduar,6:30 AM
+41,Tufanganj,Raiganj,Cooch Behar,8:30 AM
+42,Tufanganj,Siliguri,Cooch Behar,5:00 AM
+43,Tufanganj,Siliguri,Cooch Behar,7:15 AM
+44,Tufanganj,Siliguri,Alipurduar,8:45 AM
+45,Tufanganj,Siliguri,Cooch Behar,9:00 AM
+46,Alipurduar,Kolkata,Falakata,5:30 AM
+47,Alipurduar,Gangarampur,Falakata,7:00 AM
+48,Alipurduar,Raiganj,Falakata,9:10 AM
+49,Alipurduar,Bongaigaon,Barobisha,5:00 AM
+50,Alipurduar,Dhubri,Tufanganj,5:15 AM
+51,Alipurduar,Dhubri,Tufanganj,1:30 PM
+52,Alipurduar,Bagdogra,Hasimara,6:15 AM
+53,Alipurduar,Siliguri,Falakata,7:30 AM
+54,Alipurduar,Siliguri,Malbazar,7:40 AM
+55,Alipurduar,Siliguri,Falakata,5:00 AM
+56,Alipurduar,Siliguri,Falakata,8:30 AM
+57,Alipurduar,Siliguri,Falakata,9:40 AM
+58,Alipurduar,Siliguri,Falakata,10:40 AM
+59,Alipurduar,Siliguri,Falakata,12:00 Noon
+60,Alipurduar,Siliguri,Falakata,1:00 PM
+61,Mathabhanga,Farakka,Siliguri,5:45 AM
+62,Mathabhanga,Gangarampur,Siliguri,6:45 AM
+63,Mathabhanga,Harirampur,Siliguri,8:00 AM
+64,Mathabhanga,Malda,Siliguri,10:00 AM
+65,Mathabhanga,Islampur,Cooch Behar,11:00 AM
+66,Mathabhanga,Siliguri,Down Cooch Behar,5:15 AM
+67,Mathabhanga,Siliguri,Down Cooch Behar,6:10 AM
+68,Mathabhanga,Siliguri,Down Cooch Behar,6:30 AM
+69,Mathabhanga,Siliguri,Down Cooch Behar,7:30 AM
+70,Mathabhanga,Siliguri,Down Cooch Behar,9:00 AM
+71,Mathabhanga,Siliguri,Down Cooch Behar,10:15 AM
+72,Mathabhanga,Siliguri,Up Cooch Behar,6:00 AM
+73,Mathabhanga,Siliguri,Up Cooch Behar,8:00 AM
+74,Mathabhanga,Siliguri,Up Cooch Behar,9:00 AM
+75,Mathabhanga,Siliguri,Up Cooch Behar,9:20 AM
+76,Mathabhanga,Siliguri,Up Cooch Behar,9:45 AM
+77,Mathabhanga,Siliguri,Up Cooch Behar,11:30 AM
+78,Mathabhanga,Siliguri,Up Cooch Behar,1:00 PM
+79,Mathabhanga,Siliguri,Up Cooch Behar,1:30 PM
+80,Mathabhanga,Sitai - Siliguri,,8:00 AM
+81,Mathabhanga,Sitai - Siliguri,,12:00 Noon
+82,Mathabhanga,Siliguri - Sitai,,8:30 AM
+83,Mathabhanga,Barobisha,Alipurduar,7:30 AM
+84,Mathabhanga,Barobisha,Alipurduar,3:00 PM
+85,Mathabhanga,Alipurduar,Cooch Behar,9:00 AM
+86,Mathabhanga,Alipurduar,Cooch Behar,2:15 PM
+87,Dinhata,Nalagola,Falakata,4:30 AM
+88,Dinhata,Tapan,Falakata,5:00 AM
+89,Dinhata,Chanchal,Falakata,5:30 AM
+90,Dinhata,Kaliyaganj,Falakata,6:00 AM
+91,Dinhata,Raiganj,Falakata,7:30 AM
+92,Dinhata,Siliguri,Falakata,6:30 AM
+93,Dinhata,Siliguri,Falakata,6:45 AM
+94,Dinhata,Siliguri,Falakata,7:15 AM
+95,Dinhata,Siliguri,Falakata,7:45 AM
+96,Dinhata,Siliguri,Mathabhanga,4:10 AM
+97,Dinhata,Siliguri,Mathabhanga,6:20 AM
+98,Dinhata,Siliguri,Mathabhanga,8:05 AM
+99,Dinhata,Cooch Behar,Dewanhat,7:15 AM
+100,Dinhata,Cooch Behar,Dewanhat,7:45 AM
+101,Dinhata,Cooch Behar,Dewanhat,8:00 AM
+102,Dinhata,Cooch Behar,Dewanhat,8:15 AM
+103,Dinhata,Cooch Behar,Dewanhat,8:30 AM
+104,Dinhata,Cooch Behar,Dewanhat,8:45 AM
+105,Dinhata,Cooch Behar,Dewanhat,9:00 AM
+106,Dinhata,Alipurduar,Cooch Behar,1:00 PM
+107,Dinhata,Alipurduar,Cooch Behar,2:00 PM
+108,Dinhata,Choudhuri Hat,Cooch Behar,9:00 AM
+109,Siliguri,Jalpaiguri,,6:15 AM
+110,Siliguri,Jalpaiguri,,6:30 AM
+111,Siliguri,Jalpaiguri,,6:45 AM
+112,Siliguri,Jalpaiguri,,7:00 AM
+113,Siliguri,Jalpaiguri,,7:15 AM
+114,Siliguri,Jalpaiguri,,7:30 AM
+115,Siliguri,Jalpaiguri,,7:45 AM
+116,Siliguri,Jalpaiguri,,8:00 AM
+117,Siliguri,Jalpaiguri,,8:30 AM
+118,Siliguri,Jalpaiguri,,9:00 AM
+119,Siliguri,Jalpaiguri,,9:30 AM
+120,Siliguri,Jalpaiguri,,10:00 AM
+121,Siliguri,Cooch Behar,,5:30 AM
+122,Siliguri,Cooch Behar,,5:45 AM
+123,Siliguri,Cooch Behar,,6:30 AM
+124,Siliguri,Cooch Behar,,6:45 AM
+125,Siliguri,Cooch Behar,,7:00 AM
+126,Siliguri,Cooch Behar,,7:30 AM
+127,Siliguri,Cooch Behar,,8:05 AM
+128,Siliguri,Cooch Behar,,8:30 AM
+129,Siliguri,Cooch Behar,,9:30 AM
+130,Siliguri,Cooch Behar,,10:00 AM
+131,Siliguri,Alipurduar,,6:20 AM
+132,Siliguri,Alipurduar,,7:00 AM
+133,Siliguri,Alipurduar,,8:45 AM
+134,Siliguri,Kharibari,,6:00 AM
+135,Siliguri,Islampur,,6:15 AM
+136,Siliguri,Islampur,,6:45 AM
+137,Siliguri,Islampur,,7:30 AM
+138,Siliguri,Islampur,,7:45 AM
+139,Siliguri,Islampur,,8:15 AM
+140,Siliguri,Islampur,,8:45 AM
+141,Siliguri,Islampur,,9:15 AM
+142,Siliguri,Islampur,,9:45 AM
+143,Siliguri,Islampur,,10:15 AM
+144,Siliguri,Darjeeling,,6:00 AM
+145,Siliguri,Darjeeling,,6:30 AM
+146,Siliguri,Darjeeling,,7:00 AM
+147,Siliguri,Darjeeling,,7:30 AM
+148,Siliguri,Darjeeling,,9:30 AM
+149,Siliguri,Darjeeling,,10:00 AM
+150,Siliguri,Darjeeling,,10:30 AM
+151,Siliguri,Darjeeling,,8:00 AM
+152,Siliguri,Darjeeling,,5:00 AM
+153,Siliguri,Kalimpong,,5:30 AM
+154,Siliguri,Kalimpong,,6:30 AM
+155,Siliguri-Courtmore,Bijanbari,,1:00 PM
+156,Siliguri-Courtmore,Belgachi,,5:30 AM
+157,Siliguri-Courtmore,Panighata,,5:30 AM
+158,Siliguri-Courtmore,Sukna,,8:15 AM
+159,Siliguri-Courtmore,Airport,,7:30 AM
+160,Siliguri-Courtmore,Pahargumia,,7:30 AM
+161,Siliguri-Courtmore,Panitanki-1,,8:00 AM
+162,Siliguri-Courtmore,Panitanki-2,,8:30 AM
+163,Siliguri-Courtmore,Panitanki-3,,9:00 AM
+164,Siliguri-Courtmore,Panitanki-4,,6:30 AM
+165,Siliguri-Courtmore,Panitanki-5,,6:50 AM
+166,Siliguri-Courtmore,Panitanki-6,,7:10 AM
+167,Siliguri-Courtmore,Panitanki-7,,7:30 AM
+168,Siliguri-Courtmore,Panitanki-8,,7:50 AM
+169,Siliguri-Courtmore,Panitanki-9,,7:10 AM
+170,Siliguri-Courtmore,Panitanki-10,,8:30 AM
+171,Siliguri-Courtmore,Panitanki-11,,8:50 AM
+172,Siliguri-Courtmore,Panitanki-12,,9:10 AM
+173,Siliguri-Courtmore,Naxalbari-1,,7:00 AM
+174,Siliguri NJP,Suriyapark,,8:00 AM
+175,Siliguri MM,City 1,,6:30 AM
+176,Siliguri MM,City 2,,7:30 AM
+177,Siliguri MM,City 3,,8:30 AM
+178,Siliguri MM,City 4,,9:30 AM
+179,Siliguri NJP,City 1,,6:30 AM
+180,NJP-GB-MM,City 2,,7:30 AM
+181,NJP-GB-MM,City 3,,8:30 AM
+182,NJP-GB-MM,City 4,,9:30 AM
+183,Siliguri,Mirik,,7:00 AM
+184,Siliguri,Garu Bathan,,
+185,Siliguri,Bindu,,6:30 AM
+186,Siliguri,Bindu,,1:00 PM
+187,Siliguri,Cooch Behar (Non-AC),,2:30 PM
+188,Siliguri,Cooch Behar (AC),,7:00 AM
+189,Siliguri,Farakka,,7:45 AM
+190,Siliguri,Farakka,,8:30 AM
+191,Siliguri,Gangtok,,5:30 AM
+192,Siliguri,Gangtok,,8:15 AM
+193,Siliguri-Hili,Hili,,6:00 AM
+194,Siliguri,Kaliaganj,,3:00 PM
+195,Siliguri,Mekhliganj,,3:30 PM
+196,Siliguri,Delo,,5:30 AM
+197,Siliguri,Kolkata (Rocket),,5:30 AM
+198,Siliguri,Kolkata (AC),,6:30 PM
+199,Siliguri,Krishnanagar,,4:15 AM
+200,Siliguri,Krishnanagar,,5:00 AM
+201,Siliguri,Krishnanagar,,5:30 AM
+202,Siliguri,Omarpur,,5:45 AM
+203,Siliguri,Omarpur,,7:00 AM
+204,Siliguri,Omarpur,,7:45 AM
+205,Siliguri,Raghunathganj,,7:30 AM
+206,Siliguri,Raiganj,,6:30 AM
+207,Siliguri,Raiganj,,
+208,Siliguri,Ranchi,,11:00 AM
+209,Siliguri,Sitai,,12:00 PM
+210,Siliguri,Sitai,,5:00 AM
+211,Siliguri,Sitai,,6:00 AM
+212,Siliguri,Sitai,,7:50 AM
+213,Siliguri,Dinhata,,5:20 AM
+214,Siliguri,Dinhata,,5:45 AM
+215,Siliguri,Jiaganj,,6:30 AM
+216,Siliguri,Beldanga,,5:30 AM
+217,Siliguri,Beldanga,,6:00 AM
+218,Siliguri,Beldanga,,5:30 AM
+219,Siliguri,Sagardighi,,6:15 AM
+220,Siliguri,Tarapith,,5:15 AM
+221,Siliguri,Harishchandrapur,,8:30 AM
+222,Jalpaiguri,Siliguri (TNCBT),,7:00 AM
+223,Jalpaiguri,Siliguri (TNCBT),,7:15 AM
+224,Jalpaiguri,Siliguri (TNCBT),,7:30 AM
+225,Jalpaiguri,Siliguri (TNCBT),,7:45 AM
+226,Jalpaiguri,Siliguri (TNCBT),,8:00 AM
+227,Jalpaiguri,Siliguri (TNCBT),,8:15 AM
+228,Jalpaiguri,Siliguri (TNCBT),,8:30 AM
+229,Jalpaiguri,Siliguri (TNCBT),,8:45 AM
+230,Jalpaiguri,Siliguri (TNCBT),,9:10 AM
+231,Jalpaiguri,Siliguri (TNCBT),,9:40 AM
+232,Jalpaiguri,Siliguri (TNCBT),,10:10 AM
+233,Jalpaiguri,Siliguri (TNCBT),,10:40 AM
+234,Jalpaiguri,Malbazar Depot,,7:00 AM
+235,Jalpaiguri,Malbazar Depot,,7:30 AM
+236,Jalpaiguri,Malbazar Depot,,8:00 AM
+237,Jalpaiguri,Malbazar Depot,,8:20 AM
+238,Jalpaiguri,Malbazar Depot,,8:40 AM
+239,Jalpaiguri,Malbazar Depot,,9:00 AM
+240,Jalpaiguri,Malbazar Depot,,9:15 AM
+241,Jalpaiguri,Dewanganj,,6:30 AM
+242,Jalpaiguri,Haldibari,,7:00 AM
+243,Jalpaiguri,Haldibari,,8:00 AM
+244,Jalpaiguri,Haldibari,,8:30 AM
+245,Jalpaiguri,Haldibari,,9:00 AM
+246,Jalpaiguri,Haldibari,,9:15 AM
+247,Jalpaiguri,Haldibari,,7:30 AM
+248,Jalpaiguri,Satkura,,8:00 AM
+249,Jalpaiguri,Chaulhati,,6:30 AM
+250,Jalpaiguri,Chaulhati,,7:30 AM
+251,Jalpaiguri,Tapan,,7:00 AM
+252,Jalpaiguri,Kardaha,,7:50 AM
+253,Jalpaiguri,Balurghat,,8:30 AM
+254,Jalpaiguri,Malda,,7:10 AM
+255,Jalpaiguri,Malda,,8:30 AM
+256,Jalpaiguri,Farakka,,6:00 AM
+257,Jalpaiguri,Gangarampur,,6:00 AM
+258,Jalpaiguri,Berhampur,,5:00 AM
+259,Jalpaiguri,Jorai,,7:00 AM
+260,Jalpaiguri,Odlabari,,7:00 AM
+261,Jalpaiguri,Cooch Behar,,7:55 AM
+262,Jalpaiguri,Cooch Behar,,9:20 AM
+263,Jalpaiguri,Dhumpara,,8:15 AM
+264,Jalpaiguri,Birpara,,8:30 AM
+265,Jalpaiguri,Siliguri,,6:00 AM
+266,Jalpaiguri,Siliguri,,6:30 AM
+267,Malbazar,Balurghat,,6:30 AM
+268,Malbazar,Malda,,6:00 AM
+269,Malbazar,Islampur,,6:50 AM
+270,Malbazar,Jorai,,6:50 AM
+271,Malbazar,Medical More,,7:40 AM
+272,Malbazar,Jalpaiguri,,7:00 AM
+273,Malbazar,Jalpaiguri,,7:30 AM
+274,Malbazar,Jalpaiguri,,8:00 AM
+275,Malbazar,Jalpaiguri,,8:25 AM
+276,Malbazar,Jalpaiguri,,8:50 AM
+277,Malbazar,Jalpaiguri,,9:15 AM
+278,Malbazar,Siliguri,,8:00 AM
+279,Maynaguri,Farakka,,5:45 AM
+280,Maynaguri,Farakka,,7:15 AM
+281,Maynaguri,Omarpur,,4:00 AM
+282,Maynaguri,Cooch Behar,,6:15 AM
+283,Maynaguri,Cooch Behar,,7:30 AM
+284,Darjeeling,Jaigaon,,7:30 AM
+285,Darjeeling,Siliguri,,7:45 AM
+286,Darjeeling,Siliguri,,1:00 PM
+287,Darjeeling,Siliguri,,2:00 PM
+288,Darjeeling,Islampur,,1:30 PM
+289,Darjeeling,Siliguri,,9:00 AM
+290,Islampur,Balurghat,,5:00 AM
+291,Islampur,Balurghat,,6:00 AM
+292,Islampur,Malda,,7:00 AM
+293,Islampur,Raiganj,Siliguri,6:30 AM
+294,Islampur,Hili,Siliguri,7:30 AM
+295,Islampur,Siliguri,,7:30 AM
+296,Islampur,Siliguri,,8:00 AM
+297,Islampur,Siliguri,,8:30 AM
+298,Islampur,Siliguri,,9:00 AM
+299,Islampur,Siliguri,,9:30 AM
+300,Islampur,Siliguri,,10:00 AM
+301,Islampur,Siliguri,,11:00 AM
+302,Raiganj,Barasat,,7:00 AM
+303,Raiganj,Kolkata,,4:15 AM
+304,Raiganj,Kolkata,,6:15 AM
+305,Raiganj,Kolkata,Kaliyaganj,4:30 AM
+306,Raiganj,Kolkata,,7:30 PM
+307,Raiganj,Alipurduar,,4:30 AM
+308,Raiganj,Falakata,,3:45 AM
+309,Raiganj,Dhupguri,,5:45 AM
+310,Raiganj,Dhupguri,,6:45 AM
+311,Raiganj,Berhampur,,4:45 AM
+312,Raiganj,Berhampur,,7:30 AM
+313,Raiganj,Berhampur,,8:00 AM
+314,Raiganj,Siliguri,,4:45 AM
+315,Raiganj,Siliguri,,5:15 AM
+316,Raiganj,Siliguri,,5:45 AM
+317,Raiganj,Siliguri,,7:30 AM
+318,Raiganj,Balurghat,,5:00 AM
+319,Raiganj,Balurghat,,6:15 AM
+320,Raiganj,Balurghat,,7:00 AM
+321,Raiganj,Balurghat,,8:00 AM
+322,Raiganj,Balurghat,,8:30 AM
+323,Raiganj,Balurghat,,9:15 AM
+324,Raiganj,Balurghat,,10:15 AM
+325,Raiganj,Balurghat,,11:20 AM
+326,Raiganj,Balurghat,,12:10 PM
+327,Raiganj,Balurghat,,1:00 PM
+328,Raiganj,Balurghat,,2:00 PM
+329,Raiganj,Balurghat,,5:00 PM
+330,Raiganj,Hili,,7:30 AM
+331,Raiganj,Hili,,10:45 AM
+332,Raiganj,Dhubri,Gangarampur,4:00 PM
+333,Raiganj,Chanchal,,7:00 AM
+334,Raiganj,Chanchal,,2:00 PM
+335,Raiganj,Rasakhawa,,7:00 AM
+336,Raiganj,Rasakhawa,,1:00 PM
+337,Raiganj,Malda,Bharatpur,8:30 AM
+338,Raiganj,Bharatpur,,5:10 PM
+339,Raiganj,Bharatpur,,9:30 AM
+340,Malda,Kolkata,,5:00 AM
+341,Malda,Kolkata,,5:30 AM
+342,Malda,Kolkata,,6:20 AM
+343,Malda,Joygaon,,5:00 AM
+344,Malda,Dhupguri,,5:30 AM
+345,Malda,Siliguri,,10:30 AM
+346,Malda,Siliguri,,12:00 Noon
+347,Malda,Balurghat,,5:30 AM
+348,Malda,Balurghat,,6:00 AM
+349,Malda,Balurghat,,6:45 AM
+350,Malda,Balurghat,,7:00 AM
+351,Malda,Balurghat,,8:30 AM
+352,Malda,Balurghat,,11:00 AM
+353,Malda,Balurghat,,12:00 Noon
+354,Malda,Balurghat,,1:00 PM
+355,Malda,Mahadebpur,Balurghat,8:00 AM
+356,Malda,Mahadebpur,Balurghat,10:15 AM
+357,Malda,Balurghat,Mahadebpur,8:15 AM
+358,Malda,Balurghat,Mahadebpur,4:00 PM
+359,Malda,Hili,,5:00 AM
+360,Malda,Hili,,7:45 AM
+361,Malda,Hili,,8:50 AM
+362,Malda,Hili,,7:30 AM
+363,Malda,Raiganj,,7:20 AM
+364,Malda,Raiganj,,6:30 AM
+365,Malda,Raiganj,,8:00 AM
+366,Malda,Raiganj,,1:00 PM
+367,Malda,Raiganj,,2:00 PM
+368,Malda,Raiganj,,3:00 PM
+369,Malda,Raiganj,Chanchal,6:30 AM
+370,Malda,Raiganj,Chanchal,1:00 AM
+371,Malda,Berhampur,,8:00 AM
+372,Malda,Berhampur,,10:30 AM
+373,Balurghat,Kolkata,Molla,5:10 AM
+374,Balurghat,Kolkata,,4:45 AM
+375,Balurghat,Kolkata,,6:30 PM
+376,Balurghat,Siliguri,,5:00 AM
+377,Balurghat,Kolkata,Tapan,5:30 AM
+378,Balurghat,Asansol,,6:30 AM
+379,Balurghat,Krishnanagar,,9:15 AM
+380,Balurghat,Malda,Molla,5:00 AM
+381,Balurghat,Malda,,7:00 AM
+382,Balurghat,Malda,,7:45 AM
+383,Balurghat,Malda,,8:30 AM
+384,Balurghat,Malda,,9:45 AM
+385,Balurghat,Malda,,10:15 AM
+386,Balurghat,Malda,,10:40 AM
+387,Balurghat,Malda,,11:35 AM
+388,Balurghat,Malda,,1:30 PM
+389,Balurghat,Malda,,2:30 AM
+390,Balurghat,Malda,,3:00 PM
+391,Balurghat,Malda,,4:30 PM
+392,Balurghat,Raiganj,,6:05 AM
+393,Balurghat,Raiganj,,8:50 AM
+394,Balurghat,Raiganj,,9:30 AM
+395,Balurghat,Raiganj,,11:20 AM
+396,Balurghat,Raiganj,,1:45 PM
+397,Chanchal,Kolkata,,4:45 AM
+398,Chanchal,Siliguri,,5:30 AM
+399,Chanchal,Asansol,,5:30 AM
+400,Chanchal,Kalna,,8:30 AM
+401,Chanchal,Berhampur,,6:30 AM
+402,Chanchal,Raiganj,,7:00 AM
+403,Chanchal,Raiganj,,8:30 AM
+404,Chanchal,Balurghat,,7:15 AM
+405,Chanchal,Malda,,6:00 AM
+406,Chanchal,,,
+407,Farakka,Siliguri,,5:45 AM
+408,Farakka,Kolkata,Samserganj,5:30 AM
+409,Farakka,Kolkata,,6:45 AM
+410,Farakka,Siliguri,,8:00 AM
+411,Farakka,Balurghat,,6:00 AM
+412,Farakka,Balurghat,,7:00 AM
+413,Farakka,Balurghat,,7:45 AM
+414,Farakka,Balurghat,,6:30 AM
+415,Farakka,Raiganj,,8:15 AM
+416,Berhampur,Cooch Behar,,6:30 AM
+417,Berhampur,Dhupguri,,4:30 AM
+418,Berhampur,Dewanganj,,5:00 AM
+419,Berhampur,Haldibari,,5:30 AM
+420,Berhampur,Malbazar,,5:20 AM
+421,Berhampur,Siliguri,,6:00 AM
+422,Berhampur,Siliguri,,6:20 AM
+423,Berhampur,Siliguri,,7:40 AM
+424,Berhampur,Siliguri,,7:50 AM
+425,Berhampur,Siliguri,,9:00 AM
+426,Berhampur,Siliguri,,10:00 AM
+427,Berhampur,Dalkhola,,11:00 AM
+428,Berhampur,Balurghat,,7:00 AM
+429,Berhampur,Rasakhawa,,8:30 AM
+430,Berhampur,Rasakhawa,,10:30 AM
+431,Berhampur,Islampur,,9:00 AM
+432,Berhampur,Islampur,,11:30 AM
+433,Berhampur,Sahapur,,7:20 AM
+434,Berhampur,Chakulia,,9:30 AM
+435,Berhampur,Krishnanagar,Nadia,9:00 AM
+436,Berhampur,Kolkata,Kandi,5:30 AM
+437,Berhampur,Kolkata,Kandi,6:00 AM
+438,Berhampur,Kolkata,Kuli,5:00 AM
+439,Berhampur,Kolkata,Raghunathganj,6:00 AM
+440,Berhampur,Kharagpur,,5:00 AM
+441,Berhampur,Pachthupi,Kolkata,5:30 AM
+442,Berhampur,Raiganj,,8:00 AM
+443,Suri,Kolkata,,5:30 AM
+444,Suri,Siliguri,,5:00 AM
+445,Suri,Siliguri,,6:00 AM
+446,Suri,Islampur,,7:00 AM
+447,Suri,Balurghat,,6:15 AM
+448,Suri,Balurghat,,7:00 AM
+449,Suri,Balurghat,,7:45 AM
+450,Suri,Hili,,6:30 AM
+451,Suri,Patharchapri,Malda,4:00 AM
+452,Ultadanga,Balurghat,,7:00 AM
+453,Ultadanga,Tapan,,7:45 AM
+454,Ultadanga,Malda,Bardhaman,8:10 AM
+455,Ultadanga,Malda,,5:00 AM
+456,Ultadanga,Malda,,6:30 AM
+457,Ultadanga,Kandi,,2:15 AM
+458,Ultadanga,Nagar,,5:00 AM
+459,Ultadanga,Shibaldaha,,4:15 PM

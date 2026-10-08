@@ -67,6 +67,11 @@ subprocess.run([sys.executable, str(ROOT / 'scripts' / 'build_city_route_pages.p
 # --- Operator pages (SBSTC/NBSTC/WBTC/Shyamoli/Volvo AC) + sitemap + index links ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'gen_operator_pages.py')], check=True)
 
+# --- Same hero design on every operator page (badge + description). The
+#     generator emits a plain h1 and only SBSTC gets the badge, so this brings
+#     the rest in line (idempotent). ---
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_operator_badges.py')], check=True)
+
 # --- GA4 analytics: keep the tag on every (re)generated page (idempotent) ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_ga4.py')], check=True)
 
@@ -79,3 +84,9 @@ subprocess.run([sys.executable, str(ROOT / 'scripts' / 'polish_route_pages.py')]
 # --- Unify page headers: drop the stray Home/Routes nav links + the duplicate
 #     theme button so every page header matches the standard one (idempotent). ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'fix_headers.py')], check=True)
+
+# --- Internal linking: a "Related routes & operators" block on every route page
+#     (reverse route, same-origin / same-destination routes, operator pages and
+#     the place page). Must run AFTER the route pages are generated, otherwise a
+#     regen wipes it. Idempotent. ---
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_related_links.py')], check=True)
