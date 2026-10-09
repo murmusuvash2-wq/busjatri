@@ -1686,6 +1686,17 @@ with open(
     )
 
 
+# Kolkata city bus (CSTC / WBTC) route pages — cstc-<route>. These were never
+# in the sitemap; add them so Google can find the city route pages.
+try:
+    _cstc = json.load(open("data/cstc_city_bus_timetable.json", encoding="utf-8"))
+    _cstc = _cstc.get("routes", _cstc)
+    for _r in _cstc:
+        _rs = re.sub(r"[^a-z0-9]+", "-", str(_r).lower()).strip("-")
+        sitemap_urls.append(f"{BASE}/bus-time-table/cstc-{_rs}")
+except FileNotFoundError:
+    pass
+
 # ------------------------------------------------------------
 # SITEMAP
 # ------------------------------------------------------------
