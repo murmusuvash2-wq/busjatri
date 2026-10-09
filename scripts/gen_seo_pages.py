@@ -771,17 +771,24 @@ def generate_route_page(origin, destination, buses):
 
     bus_word = "bus" if count == 1 else "buses"
     ops = [o for o in operators if o and o.strip() and o.strip() not in ("—", "-")][:3]
-    # put the operator in the title: matches the way people search
-    # ("asansol to kolkata sbstc bus timetable")
-    title = (f"{origin} to {destination} Bus Time Table ({ops[0]}) | {SITE_NAME}"
-             if ops else f"{origin} to {destination} Bus Time Table | {SITE_NAME}")
+    # 2026-10-09 SEO, driven by Search Console data: the queries that actually reach
+    # these pages are "<origin> to <destination> bus timetable / time table / timings /
+    # today", so the exact phrase leads the title and the year follows. English only —
+    # all 418 queries GSC reported for this site were romanised English.
+    title = f"{origin} to {destination} Bus Timetable 2026 — Timings, First & Last Bus | {SITE_NAME}"
+    if len(title) > 80:
+        title = f"{origin} to {destination} Bus Timetable 2026 | {SITE_NAME}"
     run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
     if stats["first"] is None:
-        description = f"{origin} to {destination} bus time table with routes, stoppages and operators on {SITE_NAME}."[:300]
+        description = (f"{origin} to {destination} bus timetable 2026 — routes, stoppages "
+                       f"and operators listed on {SITE_NAME}.")[:300]
     elif count == 1:
-        description = f"{origin} to {destination} bus time table — 1 bus daily at {first}.{run_by} Timings and stoppages on {SITE_NAME}."[:300]
+        description = (f"{origin} to {destination} bus timetable 2026 — 1 bus listed, "
+                       f"departing {first}.{run_by} Timings and stoppages on {SITE_NAME}.")[:300]
     else:
-        description = f"{origin} to {destination} bus time table — {count} {bus_word} daily, first {first}, last {last}.{run_by} Timings and stoppages on {SITE_NAME}."[:300]
+        description = (f"{origin} to {destination} bus timetable 2026 — {count} {bus_word} "
+                       f"listed, first {first}, last {last}.{run_by} Timings and stoppages "
+                       f"on {SITE_NAME}.")[:300]
     canonical = f"{BASE}/bus-time-table/{filename}"
     major_stops = stoppage_summary(buses)
 
@@ -876,14 +883,12 @@ def generate_place_page(place, buses):
 
     filename = f"buses-from-{slug(place)}.html"
 
-    title = (
-        f"Buses from {place} – Time Table & Routes | বাস সময়সূচী | {SITE_NAME}"
-    )
+    title = f"Buses from {place} 2026 — Routes, Timings & Operators | {SITE_NAME}"
 
     description = (
-        f"Find bus services from {place}, including "
-        f"departure times, destinations, operators and "
-        f"route information on {SITE_NAME}."
+        f"Buses from {place}: {count} listed services with departure times, "
+        f"destinations and operators across West Bengal. Full timings and "
+        f"stoppages on {SITE_NAME}."
     )
 
     canonical = (
