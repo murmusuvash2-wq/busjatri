@@ -12069,79 +12069,6 @@
    "detail_url": "https://wbbustime.in/bus-timetable/salar-to-rampurhat/"
   },
   {
-   "id": "wbbustime-subarna-paribahan-0",
-   "bus_name": "Subarna Paribahan",
-   "reg_no": "",
-   "operator": "—",
-   "bus_type": "",
-   "origin": "Ranibandh",
-   "destination": "Siliguri",
-   "departure_time": "",
-   "arrival_time": "",
-   "contact_number": "Not Available !",
-   "depot_name": "",
-   "route": "Ranibandh - Siliguri",
-   "stoppages": [
-    {
-     "name": "Khatra"
-    },
-    {
-     "name": "Bangla"
-    },
-    {
-     "name": "Bankura"
-    },
-    {
-     "name": "Durgapur City Centre"
-    },
-    {
-     "name": "Muchipara"
-    },
-    {
-     "name": "Panagarh Bypass"
-    },
-    {
-     "name": "Bolpur"
-    },
-    {
-     "name": "Suri"
-    },
-    {
-     "name": "Moregram"
-    },
-    {
-     "name": "Omarpur"
-    },
-    {
-     "name": "Rampurhat"
-    },
-    {
-     "name": "Dhuliyan"
-    },
-    {
-     "name": "Farakka"
-    },
-    {
-     "name": "Kaliachak"
-    },
-    {
-     "name": "Malda"
-    },
-    {
-     "name": "Gazole"
-    },
-    {
-     "name": "Raiganj"
-    },
-    {
-     "name": "Islampur"
-    }
-   ],
-   "source": "wbbustime.in",
-   "total_stoppages": 0,
-   "detail_url": "https://wbbustime.in/bus-timetable/siliguri-to-ranibandh/"
-  },
-  {
    "id": "wbbustime-ishika-1",
    "bus_name": "ISHIKA",
    "reg_no": "",
@@ -535315,7 +535242,7 @@
   }
  },
  "meta": {
-  "total_buses": 4714,
+  "total_buses": 4713,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
