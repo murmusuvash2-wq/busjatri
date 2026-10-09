@@ -2944,8 +2944,8 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-cooch-behar.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-nabadwip.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-raiganj.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-malda.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kharagpur.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-malda.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-khatra.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-suri.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-balurghat.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
@@ -3362,6 +3362,8 @@
 <url><loc>https://busjatri.in/bus-time-table/tarkeshwar-to-bankura-via-bengai.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/medinipur-to-contai-via-kharagpur.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/medinipur-to-contai-via-belda.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/kharagpur-to-manbazar-via-khatra.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/kharagpur-to-manbazar-via-hatirampur.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/khatra-to-medinipur-via-chandrakona-road.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/khatra-to-medinipur-via-bhadutala.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-digha-via-raniganj.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
@@ -3374,8 +3376,6 @@
 <url><loc>https://busjatri.in/bus-time-table/bardhaman-to-manbazar-via-khandaghosh.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/digha-to-medinipur-via-egra.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/digha-to-medinipur-via-belda.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/kharagpur-to-manbazar-via-khatra.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/kharagpur-to-manbazar-via-hatirampur.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/suri-to-digha-via-dubrajpur.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/suri-to-digha-via-contai.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/tarkeshwar-to-kharagpur-via-champadanga.html</loc><lastmod>2026-10-09</lastmod><priority>0.7</priority></url>
@@ -5477,6 +5477,7 @@
 <url><loc>https://busjatri.in/via/keorapukur.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/keota.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/keranibandh-bypass.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/keranichati.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/keshabchak-gram-panchayat.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/keshabpur.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/keshapat.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
@@ -6636,6 +6637,7 @@
 <url><loc>https://busjatri.in/via/sukantanagar.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sukchar-manument.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sukea-street.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/sukhadali.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sulekha.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sultan-nagar.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sultannagar.html</loc><lastmod>2026-10-09</lastmod><priority>0.6</priority></url>
