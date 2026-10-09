@@ -90,12 +90,31 @@ def first_dep(b):
             return t
     return None
 
+def _crosses_midnight(b):
+    """True if the listed stop times go backwards at any point, i.e. the
+    service runs past midnight (Ranibandh 4:15 PM ... Raiganj 4:00 AM ...)."""
+    prev = None
+    for s in b.get('stoppages') or []:
+        t = to_min(s.get('up_time'))
+        if t is None:
+            continue
+        if prev is not None and t < prev:
+            return True
+        prev = t
+    return False
+
+
 def journey_mins(b):
     d, a = to_min(b.get('departure_time')), to_min(b.get('arrival_time'))
     if d is None or a is None:
         return None
     if a < d:
-        a += 720  # PM arrival recorded as AM bug guard
+        # An arrival earlier than the departure is one of two things:
+        #  * a genuine overnight service -> arrival is the NEXT day (+24h)
+        #  * the old "PM arrival recorded as AM" data bug -> +12h
+        # The stoppage sequence tells them apart: if the listed stop times go
+        # backwards, the bus really does cross midnight.
+        a += 1440 if _crosses_midnight(b) else 720
         if a < d:
             a += 720
     return a - d
@@ -135,7 +154,7 @@ def build_qa(fr, to, buses):
                        "Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand."))
         qa.append((f"How many buses run from {fr_t} to {to_t}?",
                    f"{len(pool)} bus services are listed on this route."))
-    durs = [d for d in (journey_mins(b) for b in pool) if d and 0 < d <= 12 * 60]
+    durs = [d for d in (journey_mins(b) for b in pool) if d and 0 < d <= 18 * 60]
     if durs:
         avg = sum(durs) // len(durs)
         qa.append((f"How long does the bus take from {fr_t} to {to_t}?",
