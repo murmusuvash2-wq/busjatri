@@ -32,7 +32,7 @@ jobs:
           import json
           d = json.load(open('data/busjatri_data.json'))
           n = len(d['buses'])
-          assert 3900 <= n <= 4200, f'unexpected bus count {n}'
+          assert n >= 4500, f'unexpected bus count {n}'
           ml = [b for b in d['buses'] if b['id'] == 'bussathi-maa-laxmi-892'][0]
           assert ml['origin'] == 'Indas' and ml['destination'] == 'Bardhaman', 'maa laxmi not updated'
           sn = [b for b in d['buses'] if 'Snemita Paribahan' in (b.get('bus_name') or '') and 'Digha Border' in (b.get('destination') or '')]
