@@ -5665,6 +5665,117 @@
      "down": "5:45 PM"
     }
    ]
+  },
+  {
+   "operator": "Atithi",
+   "bus_name": "Atithi Kharagpur-Manbazar",
+   "bus_type": "Private",
+   "reg_no": "WB 67J 6667",
+   "origin": "Kharagpur",
+   "destination": "Manbazar",
+   "departure_time": "4:05 AM",
+   "arrival_time": "8:50 AM",
+   "contact_number": "",
+   "route": "Kharagpur - Manbazar",
+   "source": "facebook (Atithi post)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kharagpur",
+     "up": "4:05 AM",
+     "down": "4:10 PM"
+    },
+    {
+     "name": "Keranichati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Medinipur",
+     "up": "4:45 AM",
+     "down": "3:40 PM"
+    },
+    {
+     "name": "Bhadutala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Moupal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pirakata",
+     "up": "5:30 AM",
+     "down": "2:50 PM"
+    },
+    {
+     "name": "Sijua",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Goaltore",
+     "up": "6:00 AM",
+     "down": "2:25 PM"
+    },
+    {
+     "name": "Pingboni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sarenga",
+     "up": "6:25 AM",
+     "down": "1:50 PM"
+    },
+    {
+     "name": "Sukhadali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "P More",
+     "up": "6:45 AM",
+     "down": "1:30 PM"
+    },
+    {
+     "name": "Raipur",
+     "up": "7:05 AM",
+     "down": "1:10 PM"
+    },
+    {
+     "name": "Ankhkhuta More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khatra",
+     "up": "7:55 AM",
+     "down": "12:20 PM"
+    },
+    {
+     "name": "Supur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up": "8:15 AM",
+     "down": "11:50 AM"
+    },
+    {
+     "name": "Payrachali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Manbazar",
+     "up": "",
+     "down": "11:05 AM"
+    }
+   ]
   }
  ],
  "enrich": [
