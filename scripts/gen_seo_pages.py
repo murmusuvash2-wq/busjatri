@@ -1596,7 +1596,6 @@ function initAnim(){
   try{
     var t=localStorage.getItem("seo-theme");
     if(t==="dark")document.body.classList.add("dark");
-    if(t==="dark"&&document.getElementById("bjThemeBtn"))document.getElementById("bjThemeBtn").textContent="\\u2600\\ufe0f";
     var l=localStorage.getItem("seo-lang");
     if(l==="bn"){document.body.classList.add("lang-bn");if(document.getElementById("langBtn"))document.getElementById("langBtn").textContent="English"}
   }catch(e){}
