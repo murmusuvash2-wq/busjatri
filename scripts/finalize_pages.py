@@ -90,3 +90,8 @@ subprocess.run([sys.executable, str(ROOT / 'scripts' / 'fix_headers.py')], check
 #     the place page). Must run AFTER the route pages are generated, otherwise a
 #     regen wipes it. Idempotent. ---
 subprocess.run([sys.executable, str(ROOT / 'scripts' / 'add_related_links.py')], check=True)
+
+# --- Homepage SEO: trimmed meta description (<=155 chars) + an H2 for the
+#     "Popular Operators" block. Rank Math flagged a 191-char description and a
+#     page with no H2. Idempotent. ---
+subprocess.run([sys.executable, str(ROOT / 'scripts' / 'patch_home_seo_20261009.py')], check=True)
