@@ -51,5 +51,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "seo: add 9 missing Kolkata city bus routes (stops-only pages)"
-            git push
+            git pull --rebase origin main
+            git push || { git pull --rebase origin main && git push; }
           fi
