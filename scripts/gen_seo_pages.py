@@ -706,7 +706,13 @@ def bus_card(bus):
         op_line += f' · {esc(operator)}'
     clock = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
     if dep == "—":
-        dep_html = f"{clock}<span class=\"no-time\">Time N/A</span>"
+        # Kolkata city / suburban buses run to frequency — no published
+        # departure times exist for them, so "Time N/A" is wrong here.
+        _src = (bus.get("source") or "").lower()
+        _city = ("kolkata-travel-router" in _src or "kolbusopedia" in _src
+                 or "wbbustime" in _src)
+        _label = "Runs to frequency" if _city else "Time N/A"
+        dep_html = f"{clock}<span class=\"no-time\">{_label}</span>"
     else:
         small = f"<small>{esc(arr)} arr</small>" if arr != "—" else ""
         dep_html = f"{clock}<div class=\"depcol\"><span class=\"dep-t\">{esc(dep)}</span>{small}</div>"

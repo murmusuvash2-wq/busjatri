@@ -1,0 +1,58 @@
+name: Label city routes "Runs to frequency"
+
+# One-shot, idempotent. Kolkata city/suburban routes (source kolkata-travel-router,
+# kolbusopedia, wbbustime) have no published departure times — they run to
+# frequency. The route pages were showing "Time N/A", which reads as broken data.
+# This relabels them "Runs to frequency" and fixes the matching FAQ answer.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Regenerate bus-time-table pages
+        timeout-minutes: 15
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Unify header + repair malformed hrefs
+        timeout-minutes: 8
+        run: |
+          python3 scripts/unify_header_20261002.py
+          python3 scripts/fix_stray_quotes.py
+
+      - name: Sanity checks
+        run: |
+          test $(ls bus-time-table/*.html | wc -l) -gt 300
+          python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml')"
+          # a city route page should now say "Runs to frequency", not "Time N/A"
+          grep -l "Runs to frequency" bus-time-table/*.html | head -1 >/dev/null || { echo "no frequency label found"; exit 1; }
+          echo "frequency label OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "seo: city routes show 'Runs to frequency' instead of 'Time N/A'"
+            git pull --rebase origin main
+            git push || { git pull --rebase origin main && git push; }
+          fi

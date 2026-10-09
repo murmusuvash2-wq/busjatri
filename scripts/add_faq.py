@@ -124,8 +124,15 @@ def build_qa(fr, to, buses):
             qa.append((f"Is there any night bus from {fr_t} to {to_t}?",
                        f"No night service is listed on this route. The last bus leaves at {fmt(max(deps))} and services resume in the morning."))
     else:
-        qa.append((f"What is the bus timing from {fr_t} to {to_t}?",
-                   "Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand."))
+        _city = any(("kolkata-travel-router" in (b.get("source") or "").lower()
+                     or "kolbusopedia" in (b.get("source") or "").lower()
+                     or "wbbustime" in (b.get("source") or "").lower()) for b in pool)
+        if _city:
+            qa.append((f"What is the bus timing from {fr_t} to {to_t}?",
+                       f"{fr_t} to {to_t} is a Kolkata city/suburban route — these buses run to frequency and have no fixed departure times. Check the route and stoppages above, and confirm at the stop."))
+        else:
+            qa.append((f"What is the bus timing from {fr_t} to {to_t}?",
+                       "Timings for this route are still being collected. Please check the timetable above for any listed services, or ask at the bus stand."))
         qa.append((f"How many buses run from {fr_t} to {to_t}?",
                    f"{len(pool)} bus services are listed on this route."))
     durs = [d for d in (journey_mins(b) for b in pool) if d and 0 < d <= 12 * 60]
