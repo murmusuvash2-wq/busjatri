@@ -1,0 +1,55 @@
+name: Add missing Kolkata city bus routes
+
+# One-shot, idempotent. data/cstc_city_bus_timetable.json gained 9 city routes
+# that had no page (AC-2, AC-30, AC-38, AC-40, 5-N, 6-N, C43, C46, S-9C). City
+# buses run to frequency and have no published timetable, so
+# build_city_route_pages.py now renders a stops-only variant for them
+# (cstc_stops_page). This regenerates the city route pages and re-links the hub.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Rebuild Kolkata city route pages
+        run: python3 scripts/build_city_route_pages.py
+
+      - name: Re-link the Kolkata City Bus hub
+        run: python3 scripts/fix_city_links.py --write
+
+      - name: Re-apply GA4 + unify headers
+        run: |
+          python3 scripts/add_ga4.py
+          python3 scripts/fix_headers.py
+
+      - name: Sanity checks
+        run: |
+          for c in ac-2 ac-30 ac-38 ac-40 5-n 6-n c43 c46 s-9c; do
+            test -f "bus-time-table/cstc-$c.html" || { echo "missing cstc-$c"; exit 1; }
+          done
+          test $(ls bus-time-table/cstc-*.html | wc -l) -ge 82
+          grep -q '"AC-2":"bus-time-table/cstc-ac-2"' kolkata-city-bus-timetable.html || { echo "hub not linked to AC-2"; exit 1; }
+          echo "city routes OK"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bus-time-table kolkata-city-bus-timetable.html css sitemap.xml data/cstc_city_bus_timetable.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "seo: add 9 missing Kolkata city bus routes (stops-only pages)"
+            git push
+          fi

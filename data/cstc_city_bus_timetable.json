@@ -12927,5 +12927,453 @@
     "Ballygunge Stn"
    ]
   }
+ },
+ "AC-38": {
+  "route": "AC-38",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "DUM DUM 11A STAND -> KARUNAMOYEE",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Nager Bazar",
+     "Airport Gate No. 1",
+     "Chiner Park",
+     "Akhankha More",
+     "Eco Park",
+     "Jatragachi",
+     "New Town Central Stand",
+     "College More",
+     "Wipro"
+    ]
+   },
+   {
+    "direction": "KARUNAMOYEE -> DUM DUM 11A STAND",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Wipro",
+     "College More",
+     "New Town Central Stand",
+     "Jatragachi",
+     "Eco Park",
+     "Akhankha More",
+     "Chiner Park",
+     "Airport Gate No. 1",
+     "Nager Bazar"
+    ]
+   }
+  ]
+ },
+ "AC-30": {
+  "route": "AC-30",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "LAKE TOWN -> HOWRAH STATION",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "HUDCO/Ultadanga",
+     "Kankurgachi",
+     "Manicktala",
+     "Girish Park/C.R. Avn. Xing./M.G.Road Xing",
+     "Barrabazar"
+    ]
+   },
+   {
+    "direction": "HOWRAH STATION -> LAKE TOWN",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Barrabazar",
+     "Girish Park/C.R. Avn. Xing./M.G.Road Xing",
+     "Manicktala",
+     "Kankurgachi",
+     "HUDCO/Ultadanga"
+    ]
+   }
+  ]
+ },
+ "5-N": {
+  "route": "5-N",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "GARIA -> NABANNA",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Garia",
+     "Ganguli Bagan",
+     "Baghajatin",
+     "Jadavpur",
+     "dhakuria",
+     "Golpark",
+     "D.Park",
+     "R.B.Ave",
+     "Hazra",
+     "Elgin",
+     "Exide",
+     "P.T.S",
+     "Nabanna"
+    ]
+   },
+   {
+    "direction": "NABANNA -> GARIA",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Nabanna",
+     "P.T.S",
+     "Exide",
+     "Elgin",
+     "Hazra",
+     "R.B.Ave",
+     "D.Park",
+     "Golpark",
+     "dhakuria",
+     "Jadavpur",
+     "Baghajatin",
+     "Ganguli Bagan",
+     "Garia"
+    ]
+   }
+  ]
+ },
+ "6-N": {
+  "route": "6-N",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "GARIA -> NABANNA",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Garia",
+     "Ganguli Bagan",
+     "Baghajatin",
+     "Jadavpur",
+     "dhakuria",
+     "Golpark",
+     "D.Park",
+     "R.B.Ave",
+     "Hazra",
+     "Elgin",
+     "Exide",
+     "P.T.S",
+     "Nabanna"
+    ]
+   },
+   {
+    "direction": "NABANNA -> GARIA",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Nabanna",
+     "P.T.S",
+     "Exide",
+     "Elgin",
+     "Hazra",
+     "R.B.Ave",
+     "D.Park",
+     "Golpark",
+     "dhakuria",
+     "Jadavpur",
+     "Baghajatin",
+     "Ganguli Bagan",
+     "Garia"
+    ]
+   }
+  ]
+ },
+ "AC-40": {
+  "route": "AC-40",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "AIRPORT GATE NO. 1 -> HOWRAH MAIDAN",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Nager Bazar",
+     "Jessor Road",
+     "Laketown Xing",
+     "Patipukur",
+     "Shyambazar",
+     "Girish Park",
+     "M.G. Road",
+     "Burrabazar",
+     "Howrah Stn"
+    ]
+   },
+   {
+    "direction": "HOWRAH MAIDAN -> AIRPORT GATE NO. 1",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Howrah Stn",
+     "Burrabazar",
+     "M.G. Road",
+     "Girish Park",
+     "Shyambazar",
+     "Patipukur",
+     "Laketown Xing",
+     "Jessor Road",
+     "Nager Bazar"
+    ]
+   }
+  ]
+ },
+ "C43": {
+  "route": "C43",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "HABRA WBTC DEPOT -> GARIA BUS STAND",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Habra WBTC Depot",
+     "Habra Rail Station",
+     "Ashok Nagar",
+     "Guma",
+     "Bira",
+     "Dutta Pukur",
+     "Banungachi Station Road",
+     "Barasat Champadali",
+     "Hridaypur",
+     "Madhyamgram",
+     "Doltola",
+     "B.T College",
+     "Birati More",
+     "Airport Gate 3",
+     "Airport Gate 1",
+     "Haldiram",
+     "Chinar Park",
+     "City Centre 2",
+     "Ecopark",
+     "Narkel Bagan",
+     "Newtown",
+     "DLF1",
+     "Technopolis",
+     "College More",
+     "SDF",
+     "Chingrighata",
+     "Dhapa Mathpukur",
+     "Science City",
+     "Uttar Panchannagram",
+     "Fortis",
+     "Ruby",
+     "Kalikapur",
+     "Mukundapur",
+     "Ajoynagar",
+     "Hiland Park",
+     "Patuli",
+     "45 Bus Stand",
+     "Garia Bus Stand"
+    ]
+   },
+   {
+    "direction": "GARIA BUS STAND -> HABRA WBTC DEPOT",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Garia Bus Stand",
+     "45 Bus Stand",
+     "Patuli",
+     "Hiland Park",
+     "Ajoynagar",
+     "Mukundapur",
+     "Kalikapur",
+     "Ruby",
+     "Fortis",
+     "Uttar Panchannagram",
+     "Science City",
+     "Dhapa Mathpukur",
+     "Chingrighata",
+     "SDF",
+     "College More",
+     "Technopolis",
+     "DLF1",
+     "Newtown",
+     "Narkel Bagan",
+     "Ecopark",
+     "City Centre 2",
+     "Chinar Park",
+     "Haldiram",
+     "Airport Gate 1",
+     "Airport Gate 3",
+     "Birati More",
+     "B.T College",
+     "Doltola",
+     "Madhyamgram",
+     "Hridaypur",
+     "Barasat Champadali",
+     "Banungachi Station Road",
+     "Dutta Pukur",
+     "Bira",
+     "Guma",
+     "Ashok Nagar",
+     "Habra Rail Station",
+     "Habra WBTC Depot"
+    ]
+   }
+  ]
+ },
+ "C46": {
+  "route": "C46",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "BARUIPUR -> NABANNA",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Hastings/Watgangemore",
+     "Taratala",
+     "Behala Tram Depot",
+     "Sakherbajar",
+     "3A Bus Stand",
+     "Pilan",
+     "Kheriberia",
+     "Amtala",
+     "Rajarhat",
+     "Tahelarampur bazar",
+     "Amratal",
+     "Magurkhali Bridge",
+     "Dhamua",
+     "Basundharia",
+     "Suryapur",
+     "Ranabelia ghat"
+    ]
+   },
+   {
+    "direction": "NABANNA -> BARUIPUR",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Ranabelia ghat",
+     "Suryapur",
+     "Basundharia",
+     "Dhamua",
+     "Magurkhali Bridge",
+     "Amratal",
+     "Tahelarampur bazar",
+     "Rajarhat",
+     "Amtala",
+     "Kheriberia",
+     "Pilan",
+     "3A Bus Stand",
+     "Sakherbajar",
+     "Behala Tram Depot",
+     "Taratala",
+     "Hastings/Watgangemore"
+    ]
+   }
+  ]
+ },
+ "AC-2": {
+  "route": "AC-2",
+  "source": "our data (WBTC official)",
+  "directions": [
+   {
+    "direction": "BARASAT -> HOWRAH STATION",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Hridaypur",
+     "Madhyamgram Chowrasta Xing",
+     "Doltala",
+     "New Barrackpur B.T. College",
+     "Michael Nagar",
+     "Bankra More",
+     "Birati More",
+     "Airport Gate No. 1",
+     "Kaikhali/Haldiram",
+     "Teghoria",
+     "Kestopur/Baguihati",
+     "Bangur/Dum Dum Park",
+     "Lake Town Xing",
+     "HUDCO /Ultadanga",
+     "Kankurgachi",
+     "Manicktala",
+     "Girish Park/C.R. Avn. Xing",
+     "M.G.Road Xing",
+     "Satyanarayan Park",
+     "Howrah Bridge (East)"
+    ]
+   },
+   {
+    "direction": "HOWRAH STATION -> BARASAT",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Howrah Bridge (East)",
+     "Satyanarayan Park",
+     "M.G.Road Xing",
+     "Girish Park/C.R. Avn. Xing",
+     "Manicktala",
+     "Kankurgachi",
+     "HUDCO /Ultadanga",
+     "Lake Town Xing",
+     "Bangur/Dum Dum Park",
+     "Kestopur/Baguihati",
+     "Teghoria",
+     "Kaikhali/Haldiram",
+     "Airport Gate No. 1",
+     "Birati More",
+     "Bankra More",
+     "Michael Nagar",
+     "New Barrackpur B.T. College",
+     "Doltala",
+     "Madhyamgram Chowrasta Xing",
+     "Hridaypur"
+    ]
+   }
+  ]
+ },
+ "S-9C": {
+  "route": "S-9C",
+  "source": "user-provided list",
+  "directions": [
+   {
+    "direction": "JADAVPUR -> SALT LAKE KARUNAMOYEE",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Sulekha",
+     "Santoshpur",
+     "Mukundapur",
+     "Kalikapur",
+     "Ruby Crossing",
+     "Science City",
+     "Chingrighata",
+     "Building More",
+     "Central Park",
+     "City Centre",
+     "Karunamoyee"
+    ]
+   },
+   {
+    "direction": "SALT LAKE KARUNAMOYEE -> JADAVPUR",
+    "departures": [],
+    "arrivals": [],
+    "stoppages": [
+     "Karunamoyee",
+     "City Centre",
+     "Central Park",
+     "Building More",
+     "Chingrighata",
+     "Science City",
+     "Ruby Crossing",
+     "Kalikapur",
+     "Mukundapur",
+     "Santoshpur",
+     "Sulekha"
+    ]
+   }
+  ]
  }
 }

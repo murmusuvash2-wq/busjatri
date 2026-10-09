@@ -61,6 +61,60 @@ def faq_html(faqs):
 def about_html(txt):
     return f'<section class="sec"><h2>About this route</h2><div class="about">{txt}</div></section>'
 
+def short_ends(t):
+    """'DUDUM STATION -> HOWRAH STN.' -> ('Dudum Stn', 'Howrah Stn')"""
+    p = (t or '').replace('->', '|').split('|')
+    def fix(x):
+        x = re.sub(r'\s+', ' ', x).strip(' .')
+        x = re.sub(r'STATION|STN\.?|STN', 'Stn', x, flags=re.I)
+        return x.title()
+    return (fix(p[0]), fix(p[1])) if len(p) == 2 else (fix(t or ''), '')
+
+# ---------------- city route with no published timetable (stops only) ----------------
+def cstc_stops_page(route, obj, dirs, a0, b0, others):
+    """City routes (AC-2, C43, S-9C …) have no published departure times — only
+    the route and its stoppages. Renders the same CSTC design but stops-only."""
+    title = f'{a0} to {b0} Bus Route ({route}) | BusJatri'
+    desc = (f'{route} Kolkata city bus route — {a0} ⇄ {b0}, {len(dirs[0].get("stoppages") or [])} stoppages. '
+            f'City buses run to frequency (no fixed timetable). English and Bengali details on BusJatri.')[:300]
+    canonical = f'{BASE}/bus-time-table/cstc-{slug(route)}'
+
+    btns, panels = [], []
+    for di, d in enumerate(dirs):
+        x, y = short_ends(d['direction'])
+        stops = d.get('stoppages') or []
+        btns.append(f'<button class="{"on" if di==0 else ""}" onclick="sw({di},this)">{esc(x)} <span class="ar">→</span> {esc(y)}</button>')
+        lis = ''.join(f'<li><span class="cstc-stop-dot"></span>{esc(s)}</li>' for s in stops)
+        panels.append(f'<div class="dpanel{" on" if di==0 else ""}" data-dir="{di}">'
+                      f'<div class="meta">{len(stops)} stops · runs to frequency</div>'
+                      f'<section class="cstc-stops" style="margin-top:0"><div class="cstc-stops-head">'
+                      f'<strong>Stop list</strong><span>{len(stops)} stops</span></div><ol>{lis}</ol></section></div>')
+    stops0 = dirs[0].get('stoppages') or []
+    body = (f'<div class="crumb"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / <span>{esc(route)}</span></div>'
+            f'<section class="hero"><span class="eyebrow">WBTC city route</span>'
+            f'<h1><span class="rcode">{esc(route)}</span>{esc(a0)} <span class="bi">⇄</span> {esc(b0)}</h1>'
+            f'<div class="stats"><span class="stat"><b>{len(stops0)}</b> stops</span>'
+            f'<span class="stat">Runs to <b>frequency</b></span></div>'
+            f'<p class="note" style="margin:10px 0 0;color:var(--ink-dim,#665);font-size:13.5px">'
+            f'City buses on this route have no fixed departure times — they run to frequency. '
+            f'Times shown elsewhere are not published by the operator; confirm at the stand.</p></section>'
+            f'<div class="dswitch" role="tablist">{"".join(btns)}</div>{"".join(panels)}')
+    faqs = [(f'Does route {route} have a timetable?',
+             f'No — {route} is a Kolkata city bus route and runs to frequency, so there are no fixed departure times. The route and its {len(stops0)} stoppages are listed here.'),
+            (f'Which stops does route {route} cover?',
+             f'Route {route} has {len(stops0)} stops: {", ".join(stops0[:8])}.'),
+            (f'Where does route {route} run between?',
+             f'Route {route} connects {a0} and {b0} in both directions.'),
+            (f'Who runs route {route}?', f'Route {route} is a WBTC (West Bengal Transport Corporation) Kolkata city route.')]
+    about = (f'<p>Route <b>{route}</b> is a Kolkata city bus route connecting <b>{esc(a0)}</b> and <b>{esc(b0)}</b> '
+             f'in both directions, with {len(stops0)} stoppages. City buses run to frequency — there is no published timetable.</p>'
+             f'<p>Spotted a change? <a href="../contact.html">Tell us</a>.</p>')
+    jsonld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
+    body += popular_html(others) + faq_html(faqs) + about_html(about)
+    return shell(title, desc, canonical, body, jsonld)
+
+
 # ---------------- CSTC page (with times) ----------------
 def cstc_page(route, obj, others):
     dirs = obj.get('directions') or []
@@ -73,6 +127,9 @@ def cstc_page(route, obj, others):
     a0, b0 = short(dirs[0]['direction']) if dirs else ('', '')
     total = sum(len(d.get('departures') or []) for d in dirs)
     stops0 = (dirs[0].get('stoppages') or []) if dirs else []
+    if total == 0:
+        # city route with no published timetable — stops only
+        return cstc_stops_page(route, obj, dirs, a0, b0, others)
     title = f'{a0} to {b0} Bus Timetable ({route}) | BusJatri'
     desc = (f'{route} CSTC Kolkata city bus timetable — {total} departures, first/last times and {len(stops0)} stoppages '
             f'for {a0} ⇄ {b0}. English and Bengali route details on BusJatri.')[:300]
