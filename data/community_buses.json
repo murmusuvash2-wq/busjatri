@@ -5554,6 +5554,117 @@
      "down": "9:50 AM"
     }
    ]
+  },
+  {
+   "operator": "Subarna Paribahan",
+   "bus_name": "Subarna Paribahan Ranibandh-Siliguri (AC Seater/Sleeper)",
+   "bus_type": "Private - AC Seater/Sleeper",
+   "reg_no": "WB 45C 2369",
+   "origin": "Ranibandh",
+   "destination": "Siliguri",
+   "departure_time": "4:15 PM",
+   "arrival_time": "7:35 AM",
+   "contact_number": "9932316172",
+   "route": "Ranibandh - Siliguri",
+   "source": "facebook (Subarna Paribahan post)",
+   "detail_url": "https://www.subarnaparibahan.com",
+   "stops": [
+    {
+     "name": "Ranibandh",
+     "up": "4:15 PM",
+     "down": "9:05 AM"
+    },
+    {
+     "name": "Khatra",
+     "up": "4:40 PM",
+     "down": "8:40 AM"
+    },
+    {
+     "name": "Bangla",
+     "up": "5:25 PM",
+     "down": ""
+    },
+    {
+     "name": "Bankura",
+     "up": "5:55 PM",
+     "down": "7:30 AM"
+    },
+    {
+     "name": "Durgapur City Centre",
+     "up": "7:55 PM",
+     "down": "6:10 AM"
+    },
+    {
+     "name": "Muchipara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Panagarh Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bolpur",
+     "up": "9:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Siuri",
+     "up": "",
+     "down": "3:15 AM"
+    },
+    {
+     "name": "Morgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Omarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulian",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Farakka",
+     "up": "1:20 AM",
+     "down": "12:10 AM"
+    },
+    {
+     "name": "Kaliachak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Malda",
+     "up": "2:30 AM",
+     "down": "11:45 PM"
+    },
+    {
+     "name": "Gazole",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Raiganj",
+     "up": "4:00 AM",
+     "down": "9:20 PM"
+    },
+    {
+     "name": "Islampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siliguri",
+     "up": "",
+     "down": "5:45 PM"
+    }
+   ]
   }
  ],
  "enrich": [
