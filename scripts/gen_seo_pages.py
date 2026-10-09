@@ -1218,11 +1218,16 @@ for bus in BUSES:
         place_buses[origin].append(bus)
 
 
+# A place gets its own page (and a link from the hub) once it has at
+# least this many bus services. Below it, the hub keeps the accordion row
+# only - a link to a page that does not exist is worse than no link.
+PLACE_PAGE_MIN_BUSES = 2
+
 top_places = sorted(
     (
         place
         for place, buses_ in place_buses.items()
-        if len(buses_) >= 10
+        if len(buses_) >= PLACE_PAGE_MIN_BUSES
     ),
     key=lambda place: -len(place_buses[place]),
 )
@@ -1327,11 +1332,18 @@ for letter in _az_letters:
     _az_groups_html.append('<div class="place-list">')
     for p in group_places:
         rs = by_origin[p]
+        # Link the place only when it will actually have a page - a hub link to a
+        # 404 is worse than the plain accordion row it replaces.
+        _name_html = (
+            f'<a class="pr-name" href="buses-from-{slug(p)}.html" onclick="event.stopPropagation()">{esc(p)}</a>'
+            if len(place_buses.get(p, [])) >= PLACE_PAGE_MIN_BUSES
+            else f'<span class="pr-name">{esc(p)}</span>'
+        )
         _az_groups_html.append(
             f'<div class="place-row" data-place="{esc(p)}">'
             f'<div class="pr-head" onclick="togglePlace(this,event)">'
             f'<span class="pr-dots"></span>'
-            f'<a class="pr-name" href="buses-from-{slug(p)}.html" onclick="event.stopPropagation()">{esc(p)}</a>'
+            f'{_name_html}'
             f'<span class="pr-n">{len(rs)} routes</span>'
             f'<svg class="pr-chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>'
             f'</div><div class="pr-body"><div class="pr-inner"></div></div></div>'
