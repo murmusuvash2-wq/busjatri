@@ -5776,6 +5776,178 @@
      "down": "11:05 AM"
     }
    ]
+  },
+  {
+   "operator": "Aditi Travel's",
+   "bus_name": "Aditi Travel's Bappa Saluka-Baksi (1st trip)",
+   "bus_type": "Private",
+   "reg_no": "",
+   "origin": "Saluka",
+   "destination": "Baksi",
+   "departure_time": "5:25 AM",
+   "arrival_time": "8:45 AM",
+   "contact_number": "6294498037",
+   "route": "Saluka - Jhargram - Baksi",
+   "source": "facebook (Aditi Travel's post)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Saluka",
+     "up": "5:25 AM",
+     "down": "1:10 PM"
+    },
+    {
+     "name": "Ramgarh",
+     "up": "5:40 AM",
+     "down": "1:00 PM"
+    },
+    {
+     "name": "Lalgarh",
+     "up": "6:15 AM",
+     "down": "12:30 PM"
+    },
+    {
+     "name": "Bamaal",
+     "up": "6:25 AM",
+     "down": "12:20 PM"
+    },
+    {
+     "name": "Dherua",
+     "up": "6:45 AM",
+     "down": "12:05 PM"
+    },
+    {
+     "name": "Baita",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sebayatan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jhargram",
+     "up": "7:35 AM",
+     "down": "11:20 AM"
+    },
+    {
+     "name": "Jhargram Panchmatha More",
+     "up": "",
+     "down": "11:30 AM"
+    },
+    {
+     "name": "Dahijuri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Binpur",
+     "up": "8:15 AM",
+     "down": "10:40 AM"
+    },
+    {
+     "name": "Kui",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Harda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Baksi",
+     "up": "",
+     "down": "10:10 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Aditi Travel's",
+   "bus_name": "Aditi Travel's Titali Saluka-Baksi (2nd trip)",
+   "bus_type": "Private",
+   "reg_no": "",
+   "origin": "Saluka",
+   "destination": "Baksi",
+   "departure_time": "1:15 PM",
+   "arrival_time": "4:45 PM",
+   "contact_number": "6294498037",
+   "route": "Saluka - Jhargram - Baksi",
+   "source": "facebook (Aditi Travel's post)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Saluka",
+     "up": "1:15 PM",
+     "down": "8:10 PM"
+    },
+    {
+     "name": "Ramgarh",
+     "up": "1:25 PM",
+     "down": "8:00 PM"
+    },
+    {
+     "name": "Lalgarh",
+     "up": "1:55 PM",
+     "down": "7:30 PM"
+    },
+    {
+     "name": "Bamaal",
+     "up": "2:05 PM",
+     "down": "7:20 PM"
+    },
+    {
+     "name": "Dherua",
+     "up": "2:25 PM",
+     "down": "7:00 PM"
+    },
+    {
+     "name": "Baita",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sebayatan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jhargram",
+     "up": "3:35 PM",
+     "down": "6:20 PM"
+    },
+    {
+     "name": "Jhargram Panchmatha More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dahijuri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Binpur",
+     "up": "4:15 PM",
+     "down": "5:40 PM"
+    },
+    {
+     "name": "Kui",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Harda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Baksi",
+     "up": "",
+     "down": "5:10 PM"
+    }
+   ]
   }
  ],
  "enrich": [
