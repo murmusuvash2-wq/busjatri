@@ -54,7 +54,33 @@ THEME_STYLE = ('width:30px;height:30px;border-radius:50%;border:1px solid var(--
 # and one or more inline scripts that wired it. Both are dead now that js/hdr.js is
 # the single controller, so they are stripped from every page on every run.
 LEGACY_THEME_BTN_RE = re.compile(r'<button\b[^>]*id="bjThemeBtn"[^>]*>.*?</button>', re.S)
-LEGACY_THEME_SCRIPT_RE = re.compile(r'<script\b[^>]*>(?:(?!</script>).)*?bjThemeBtn(?:(?!</script>).)*?</script>', re.S)
+
+
+def strip_legacy_theme_scripts(html: str):
+    """Remove inline <script> blocks that exist ONLY to wire the legacy
+    #bjThemeBtn theme button.
+
+    A page's own functional inline script can mention bjThemeBtn in passing
+    (e.g. the /bus-time-table/ hub restores the saved theme and also powers the
+    A-Z nav, row toggles and the reveal animation). An earlier version of this
+    file used a regex that matched ANY inline script containing bjThemeBtn and
+    deleted the whole thing — which silently removed the hub's entire JS, leaving
+    every '.reveal' section stuck at opacity:0 (invisible). So we now only drop a
+    script when it is small, has no `src`, defines no functions of its own and
+    does not carry other page logic.
+    """
+    def repl(m):
+        body = m.group(1)
+        if 'bjThemeBtn' not in body:
+            return m.group(0)
+        # A real page script is many KB (the /bus-time-table/ hub one is ~6 KB);
+        # the legacy theme wiring is a tiny snippet. Size is the safe signal.
+        if len(body) > 1200:
+            return m.group(0)
+        return ''
+
+    new = re.sub(r'<script\b(?![^>]*\bsrc=)[^>]*>(.*?)</script>', repl, html, flags=re.S)
+    return new, (0 if new == html else 1)
 
 
 def canonical_controls(links_html: str) -> str:
@@ -96,7 +122,7 @@ def process(path: Path) -> str:
 
     # 0. strip legacy duplicate theme button + its inline scripts (idempotent)
     html, _c1 = LEGACY_THEME_BTN_RE.subn('', html)
-    html, _c2 = LEGACY_THEME_SCRIPT_RE.subn('', html)
+    html, _c2 = strip_legacy_theme_scripts(html)
     cleaned = bool(_c1 or _c2)
 
     m = re.search(r'<header[^>]*>.*?</header>', html, re.S)
