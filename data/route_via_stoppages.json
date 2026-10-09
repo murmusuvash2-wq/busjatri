@@ -1,0 +1,76 @@
+{
+  "_note": "Verified major via-stoppages for the four highest-impression route pairs. 'forward' is applied to buses whose origin/destination match 'from'/'to'; the reverse chain is applied to the return direction. Sources per route are recorded in 'source'.",
+  "routes": [
+    {
+      "from": "Durgapur",
+      "to": "Kolkata",
+      "source": "SBSTC Official E-Series + Live Tracking",
+      "forward": [
+        "Durgapur City Centre",
+        "Muchipara",
+        "Panagarh Bypass",
+        "Bardhaman",
+        "Dankuni",
+        "Dunlop Bridge",
+        "Kolkata Airport",
+        "Baguihati",
+        "Ultadanga",
+        "Karunamoyee",
+        "Esplanade"
+      ]
+    },
+    {
+      "from": "Kolkata",
+      "to": "Asansol",
+      "source": "SBSTC Official + Aggregator Data",
+      "forward": [
+        "Esplanade",
+        "Karunamoyee",
+        "Airport",
+        "Dunlop",
+        "Dankuni",
+        "Burdwan",
+        "Panagarh",
+        "Durgapur City Centre",
+        "Raniganj",
+        "Kalipahari More",
+        "Asansol Bus Stand"
+      ]
+    },
+    {
+      "from": "Siliguri",
+      "to": "Cooch Behar",
+      "source": "NBSTC Official PDF (Route 121-130)",
+      "forward": [
+        "Siliguri (TNCBT)",
+        "Jalpaiguri Court",
+        "Mainaguri",
+        "Falakata",
+        "Dinhata",
+        "Dewanhat",
+        "Cooch Behar"
+      ],
+      "variant_note": "Some services run via the Mathabhanga corridor (Islampur - Raiganj - Mathabhanga) instead of Falakata/Dinhata. Confirm with the conductor which corridor your bus takes."
+    },
+    {
+      "from": "Kolkata",
+      "to": "Digha",
+      "source": "SBSTC/WBTC Official Long Distance List",
+      "forward": [
+        "Esplanade",
+        "Karunamoyee",
+        "Garia",
+        "Sonarpur",
+        "EM Bypass",
+        "Kolaghat",
+        "Mecheda",
+        "Panskura",
+        "Nandakumar",
+        "Henria",
+        "Contai (Kanthi)",
+        "Ramnagar",
+        "New/Old Digha"
+      ]
+    }
+  ]
+}

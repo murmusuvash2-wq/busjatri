@@ -146,6 +146,10 @@ def build_qa(fr, to, buses):
         if len(via) >= 2:
             qa.append((f"Which places does the {fr_t} to {to_t} bus pass through (via)?",
                        "The main stoppages on the way are " + ", ".join(via) + "."))
+    # corridor / route-variant note (e.g. Siliguri-Cooch Behar runs two corridors)
+    note = next((b.get('via_note') for b in pool if b.get('via_note')), None)
+    if note:
+        qa.append((f"Does the {fr_t} to {to_t} bus run via more than one route?", note))
     fare = FARE.get(slug(f"{fr_t}-to-{to_t}"))
     if fare:
         qa.append((f"What is the bus fare from {fr_t} to {to_t}?",

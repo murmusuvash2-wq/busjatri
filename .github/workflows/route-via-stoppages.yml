@@ -1,0 +1,73 @@
+name: Add verified via-stoppages to top route pages
+
+# One-shot, idempotent. The four highest-impression route pairs carried only
+# "origin > destination" as their stoppages. data/route_via_stoppages.json holds
+# the verified major via-stoppages for each pair (both directions); this applies
+# them, regenerates the pages and commits.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply the via-stoppages
+        run: python3 scripts/add_route_via_stoppages.py
+
+      - name: Regenerate bus-time-table pages
+        timeout-minutes: 15
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Unify header + repair malformed hrefs
+        timeout-minutes: 8
+        run: |
+          python3 scripts/unify_header_20261002.py
+          python3 scripts/fix_stray_quotes.py
+
+      - name: Sanity checks
+        run: |
+          test $(ls bus-time-table/*.html | wc -l) -gt 300
+          python3 -c "import xml.dom.minidom; xml.dom.minidom.parse('sitemap.xml')"
+          python3 - <<'PY'
+          import json
+          d = json.load(open('data/busjatri_data.json', encoding='utf-8'))
+          buses = d['buses'] if isinstance(d['buses'], list) else list(d['buses'].values())
+          import re
+          def n(s): return re.sub(r'[^a-z0-9]+','',(s or '').lower())
+          want = [('Durgapur','Kolkata',11),('Kolkata','Asansol',11),('Siliguri','Cooch Behar',7),('Kolkata','Digha',13)]
+          for o,t,exp in want:
+              hits=[b for b in buses if n(b.get('origin'))==n(o) and n(b.get('destination'))==n(t)]
+              assert hits, (o,t)
+              stops=len(hits[0].get('stoppages') or [])
+              print(o,'->',t,len(hits),'buses,',stops,'stops')
+              assert stops==exp, (o,t,stops,exp)
+          print('via-stoppages OK')
+          PY
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "seo: verified via-stoppages on the top 4 route pages"
+            git pull --rebase origin main
+            git push || { git pull --rebase origin main && git push; }
+          fi
