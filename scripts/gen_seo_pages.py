@@ -1331,7 +1331,7 @@ for letter in _az_letters:
             f'<div class="place-row" data-place="{esc(p)}">'
             f'<div class="pr-head" onclick="togglePlace(this,event)">'
             f'<span class="pr-dots"></span>'
-            f'<span class="pr-name">{esc(p)}</span>'
+            f'<a class="pr-name" href="buses-from-{slug(p)}.html" onclick="event.stopPropagation()">{esc(p)}</a>'
             f'<span class="pr-n">{len(rs)} routes</span>'
             f'<svg class="pr-chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>'
             f'</div><div class="pr-body"><div class="pr-inner"></div></div></div>'
@@ -1429,7 +1429,7 @@ _btt_css = """<style>
 .pr-head{display:flex;align-items:center;gap:10px;padding:11px 14px;cursor:pointer;user-select:none}
 .pr-head:hover{background:var(--surface-2)}
 .pr-dots{width:9px;height:9px;border-radius:50%;background:var(--amber);flex-shrink:0}
-.pr-name{flex:1;font-weight:700;font-size:14px}
+.pr-name{flex:1;font-weight:700;font-size:14px;text-decoration:none;color:inherit}
 .pr-n{font-family:var(--font-mono);font-size:10.5px;color:var(--ink-dim);white-space:nowrap}
 .pr-chev{color:var(--ink-dim);transition:transform .25s;flex-shrink:0}
 .place-row.open .pr-chev{transform:rotate(180deg)}
@@ -1603,9 +1603,9 @@ _index_body = f"""{_btt_css}
   <h1>West Bengal <span class="accent">Bus Time Table</span></h1>
   <p class="tagline">Complete bus timings for every route — SBSTC, WBTC, NBSTC and private operators across all districts.</p>
   <div class="stat-chips">
-    <span class="stat-chip"><strong data-count="{_total_places}">0</strong> places</span>
-    <span class="stat-chip"><strong data-count="{_total_routes}">0</strong> routes</span>
-    <span class="stat-chip"><strong data-count="{_total_buses}">0</strong> bus services</span>
+    <span class="stat-chip"><strong data-count="{_total_places}">{_total_places:,}</strong> places</span>
+    <span class="stat-chip"><strong data-count="{_total_routes}">{_total_routes:,}</strong> routes</span>
+    <span class="stat-chip"><strong data-count="{_total_buses}">{_total_buses:,}</strong> bus services</span>
   </div>
 </div>
 
@@ -1627,19 +1627,19 @@ _index_body = f"""{_btt_css}
 <div class="ad-zone" id="ad1"></div>
 
 <section class="section" id="routeMatchesSec" style="display:none">
-  <div class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> Matching Routes</div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> Matching Routes</h2>
   <div class="chip-row hscroll" id="rmChips"></div>
 </section>
 
 <section class="section" id="popSection">
-  <div class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Popular Starting Places</div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> Popular Starting Places</h2>
   <div class="place-grid">
 {_popular_html}
   </div>
 </section>
 
 <section class="section">
-  <div class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h12"/></svg> All Places &middot; A to Z</div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h12"/></svg> All Places &middot; A to Z</h2>
   <div class="az-nav" id="azNav"></div>
   <div id="azGroups">{_az_html}</div>
   <div class="empty" id="emptyState">
@@ -1651,7 +1651,7 @@ _index_body = f"""{_btt_css}
 <div class="ad-zone" id="ad2"></div>
 
 <section class="section">
-  <div class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/></svg> Frequently Asked Questions</div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/></svg> Frequently Asked Questions</h2>
   <div class="faq-list">
 {_faq_html}
   </div>
