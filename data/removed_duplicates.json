@@ -1,6 +1,38 @@
 [
  {
-  "id": "monika-travels-ramharipur-purulia-4435",
+  "id": "nbstc-official-mathabhanga-siliguri-9",
+  "bus_name": "NBSTC Mathabhanga-Siliguri",
+  "route": "Mathabhanga - Siliguri",
+  "time": "9:00 AM",
+  "source": "NBSTC official (Cooch Behar) PDF",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "nbstc-official-siliguri-beldanga-3",
+  "bus_name": "NBSTC Siliguri-Beldanga",
+  "route": "Siliguri - Beldanga",
+  "time": "5:30 AM",
+  "source": "NBSTC official (Cooch Behar) PDF",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "nbstc-official-malda-raiganj-2",
+  "bus_name": "NBSTC Malda-Raiganj",
+  "route": "Malda - Raiganj",
+  "time": "6:30 AM",
+  "source": "NBSTC official (Cooch Behar) PDF",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "nbstc-official-berhampur-kolkata-4",
+  "bus_name": "NBSTC Berhampur-Kolkata",
+  "route": "Berhampur - Kolkata",
+  "time": "6:00 AM",
+  "source": "NBSTC official (Cooch Behar) PDF",
+  "reason": "same route+time+name as kept copy"
+ },
+ {
+  "id": "monika-travels-ramharipur-purulia-4729",
   "bus_name": "Monika Travels Ramharipur-Purulia",
   "route": "Ramharipur - Purulia",
   "time": "6:30 AM",
@@ -8,7 +40,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "promila-bolpur-barakar-4438",
+  "id": "promila-bolpur-barakar-4732",
   "bus_name": "Promila Bolpur-Barakar",
   "route": "Bolpur - Barakar",
   "time": "6:20 AM",
@@ -16,7 +48,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "rbn-travels-kharagpur-barabazar-4436",
+  "id": "rbn-travels-kharagpur-barabazar-4730",
   "bus_name": "RBN Travels Kharagpur-Barabazar",
   "route": "Kharagpur - Barabazar",
   "time": "4:40 AM",
@@ -24,7 +56,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "samrat-bolpur-dumka-4437",
+  "id": "samrat-bolpur-dumka-4731",
   "bus_name": "Samrat Bolpur-Suri-Dumka (Priti Coach)",
   "route": "Bolpur - Dumka",
   "time": "6:50 AM",
@@ -32,11 +64,107 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "swapnamay-travels-haldia-durgapur-city-center-4439",
+  "id": "swapnamay-travels-haldia-durgapur-city-center-4733",
   "bus_name": "Swapnamay Travels Haldia-Durgapur",
   "route": "Haldia - Durgapur (City Center)",
   "time": "12:05 AM",
   "source": "facebook (community report)",
   "reason": "same reg+route+time as kept copy"
+ },
+ {
+  "id": "wbbustime-joy-bharat-mata-0",
+  "bus_name": "JOY BHARAT MATA",
+  "route": "Balarampur - Khatra",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-bhagyalaxmi-0",
+  "bus_name": "Bhagyalaxmi",
+  "route": "Barabazar - Bankura",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-rbn-travels-0",
+  "bus_name": "RBN TRAVELS",
+  "route": "Berada - Badanganj",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-devi-durga-1",
+  "bus_name": "DEVI DURGA",
+  "route": "Bishnupur - Manbazar",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-laxmi-narayan-0",
+  "bus_name": "LAXMI NARAYAN",
+  "route": "Chandrakona Road - Silda",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-ananya-0",
+  "bus_name": "ANANYA",
+  "route": "Haldia - Belpahari",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-darshan-0",
+  "bus_name": "DARSHAN",
+  "route": "Haldia - Bankura",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-prashanna-0",
+  "bus_name": "PRASHANNA",
+  "route": "Kukrahati - Bardhaman",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-rbn-travels-1",
+  "bus_name": "RBN TRAVELS",
+  "route": "Medinipur - Tatanagar",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbustime-bullet-0",
+  "bus_name": "BULLET",
+  "route": "Purulia - Chandrakona Road",
+  "time": "",
+  "source": "wbbustime.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "wbbus-in-mishra-1403",
+  "bus_name": "MISHRA",
+  "route": "Bhagabanpur - Purulia",
+  "time": "",
+  "source": "wbbus.in",
+  "reason": "untimed copy of a timed service with same route+name"
+ },
+ {
+  "id": "nbstc-official-siliguri-raiganj-2",
+  "bus_name": "NBSTC Siliguri-Raiganj",
+  "route": "Siliguri - Raiganj",
+  "time": "",
+  "source": "NBSTC official (Cooch Behar) PDF",
+  "reason": "untimed copy of a timed service with same route+name"
  }
 ]

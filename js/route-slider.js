@@ -1,4 +1,3 @@
-/* private city route bilingual labels: EN/বাংলা toggle aware */
 /* BusJatri route map / chip-row horizontal slider (UX audit 2026-09-19).
    Adds swipe scrolling + prev/next arrow buttons to .routemap and
    .chip-row.hscroll containers. Arrows appear only when the content
@@ -34,112 +33,12 @@
     }
     upd();
   }
-
-  function stopBnMap() {
-    var map = {};
-    var stops = window.STOPS;
-    if (Array.isArray(stops)) {
-      stops.forEach(function (p) {
-        if (Array.isArray(p) && p.length > 1 && p[0] && p[1]) map[String(p[0]).trim()] = String(p[1]).trim();
-      });
-    }
-    return map;
-  }
-
-  function enhanceRouteMapLanguage() {
-    var map = stopBnMap();
-    if (!Object.keys(map).length) return;
-    document.querySelectorAll('.routemap .rm-name').forEach(function (el) {
-      if (el.querySelector('.label-en')) return;
-      var en = (el.textContent || '').trim();
-      if (!en || !map[en]) return;
-      el.innerHTML = '<span class="label-en">'+en+'</span><span class="label-bn">'+map[en]+'</span>';
-    });
-  }
-
-  function privateNoSchedule() {
-    if (!document.querySelector('.badge-priv')) return;
-    var sec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
-      var h = s.querySelector('.section-title');
-      return h && /Scheduled Departures/i.test(h.textContent || '');
-    });
-    if (!sec || sec.__bjPrivateRail) return;
-    sec.__bjPrivateRail = 1;
-    var row = sec.querySelector('.bus-row');
-    var hero = document.querySelector('.seo-hero h1');
-    var route = hero ? hero.textContent.replace(/\s+/g,' ').trim() : 'This private bus route';
-    var map = stopBnMap();
-    var stops = Array.from(document.querySelectorAll('.routemap .rm-name')).map(function (x) {
-      return (x.textContent || '').trim();
-    }).filter(Boolean);
-    var uniq = [];
-    stops.forEach(function (s) { if (uniq.indexOf(s) < 0) uniq.push(s); });
-    var stopHtml = uniq.length ? '<div class="private-stops"><div class="private-stops-title"><span class="label-en">Route stops</span><span class="label-bn">রুটের স্টপেজ</span></div><div class="private-stop-list">' +
-      uniq.map(function (s, i) {
-        var bn = map[s] || s;
-        return '<span class="private-stop'+(i===0?' first':'')+(i===uniq.length-1?' last':'')+'"><span class="label-en">'+s+'</span><span class="label-bn">'+bn+'</span></span>';
-      }).join('<span class="private-stop-arrow">›</span>') +
-      '</div></div>' : '';
-    var card = document.createElement('div');
-    card.className = 'tt-card private-no-time';
-    card.innerHTML =
-      '<div class="tt-head"><div><div class="tt-title"><span class="label-en">Timetable</span><span class="label-bn">টাইম টেবিল</span></div><div class="tt-sub"><span class="label-en">schedule not listed · private route</span><span class="label-bn">সময়সূচি তালিকাভুক্ত নেই · বেসরকারি রুট</span></div></div><span class="private-na-pill"><span class="label-en">NO SCHEDULE</span><span class="label-bn">সময়সূচি নেই</span></span></div>' +
-      '<div class="private-rail-wrap">' +
-        '<div class="private-rail-cols"><span><span class="label-en">Departure</span><span class="label-bn">ছাড়ার সময়</span></span><span><span class="label-en">Ride</span><span class="label-bn">যাত্রা</span></span><span><span class="label-en">Arrival</span><span class="label-bn">পৌঁছানোর সময়</span></span></div>' +
-        '<div class="private-rail-row"><div>—</div><div><i></i><span class="label-en">Not available</span><span class="label-bn">উপলভ্য নয়</span><i></i></div><div>—</div></div>' +
-      '</div>' +
-      '<div class="private-message"><strong>'+route+'</strong><br><span class="label-en">Official departure and arrival times are not listed yet. When a published timetable becomes available, the exact times can be added here.</span><span class="label-bn">সরকারি ছাড়ার ও পৌঁছানোর সময় এখনও তালিকাভুক্ত নেই। প্রকাশিত সময়সূচি পাওয়া গেলে সঠিক সময় এখানে যোগ করা যাবে।</span></div>' +
-      stopHtml +
-      '<p class="tt-note"><span class="label-en">No timing values have been estimated or invented for this private route.</span><span class="label-bn">এই বেসরকারি রুটের কোনো সময় অনুমান বা মনগড়া করে দেখানো হয়নি।</span></p>';
-    if (row) row.remove();
-    // This page is already the canonical static route page. Do not send
-    // private-route users through the old hash SPA (/index.html#/bus/...).
-    sec.querySelectorAll('a.bd-link[href*="#/bus/"]').forEach(function (a) { a.remove(); });
-    sec.appendChild(card);
-    var mapSec = Array.from(document.querySelectorAll('.seo-section')).find(function (s) {
-      var h=s.querySelector('.section-title'); return h && /^Route Map$/i.test((h.textContent||'').trim());
-    });
-    if (mapSec) mapSec.style.display='none';
-  }
-  function initPrivateNoSchedule() { privateNoSchedule(); }
-
   function init() {
     document.querySelectorAll('.routemap, .chip-row.hscroll').forEach(initOne);
-    enhanceRouteMapLanguage();
-    initPrivateNoSchedule();
   }
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
-})();
-
-
-/* private route EN/বাংলা toggle.
-   The canonical header now ships its own switch (#langEn / #langBn, wired by js/hdr.js),
-   so this only injects a fallback switch on pages that lack one, and always keeps the
-   section headings in the chosen language. */
-(function(){
-  function setupLang(){
-    if(!document.querySelector('.badge-priv')) return;
-
-    function localizeTitles(){
-      document.querySelectorAll('.seo-section .section-title').forEach(function(h){
-        var t=(h.textContent||'').trim();
-        if(/^Scheduled Departures$/i.test(t)) h.innerHTML='<span class="label-en">Scheduled Departures</span><span class="label-bn">ছাড়ার সময়</span>';
-        else if(/^Route Map$/i.test(t)) h.innerHTML='<span class="label-en">Route Stops</span><span class="label-bn">রুটের স্টপেজ</span>';
-      });
-    }
-
-    // Language state belongs to the central controller. This file only
-    // refreshes its page-specific labels when that controller changes state.
-    localizeTitles();
-    if(window.BJLang && typeof window.BJLang.onChange==='function'){
-      window.BJLang.onChange(localizeTitles);
-    }else{
-      document.addEventListener('bj:langchange', localizeTitles);
-    }
-  }
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',setupLang);else setupLang();
 })();
