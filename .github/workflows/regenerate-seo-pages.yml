@@ -42,6 +42,7 @@ jobs:
           SITE_BASE: https://busjatri.in
         run: |
           python3 scripts/gen_seo_pages.py
+          python3 scripts/gen_stand_v2.py --all
           python3 scripts/build_client_data.py
           python3 scripts/finalize_pages.py
 
