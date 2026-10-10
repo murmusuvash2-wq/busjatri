@@ -69992,104 +69992,162 @@
    "id": "bussathi-nandini-0",
    "bus_name": "NANDINI",
    "reg_no": "WB471660",
-   "operator": "—",
-   "bus_type": "Private - NON AC",
+   "operator": "Nandini Travels",
+   "bus_type": "Private",
    "origin": "Panchthupi",
    "destination": "Asansol",
    "departure_time": "7:20 AM",
    "arrival_time": "12:35 PM",
    "contact_number": "Not Available !",
    "depot_name": "Panchthupi",
-   "route": "Panchthupi - Asansol",
+   "route": "Panchthupi - Bolpur - Asansol",
    "stoppages": [
     {
-     "no": 1,
      "name": "Panchthupi",
      "up_time": "7:20 AM",
-     "down_time": "7:30 PM"
+     "down_time": "7:20 PM"
     },
     {
-     "no": 2,
+     "name": "Dakbangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Sundarpur",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 3,
+     "name": "Baidyanathpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Marut",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 4,
-     "name": "Futishanko",
-     "up_time": "8:25 AM",
+     "name": "Futisanko",
+     "up_time": "8:30 AM",
      "down_time": "6:40 PM"
     },
     {
-     "no": 5,
-     "name": "Kirnahar",
-     "up_time": "8:45 AM",
-     "down_time": "6:15 PM"
-    },
-    {
-     "no": 6,
-     "name": "Nanoor",
-     "up_time": "9:05 AM",
+     "name": "Daskalgram",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 7,
+     "name": "Kirnahar",
+     "up_time": "8:50 AM",
+     "down_time": "6:15 PM"
+    },
+    {
+     "name": "Nanoor",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Beluti",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Mohanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sian Hospital",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Bolpur",
      "up_time": "10:00 AM",
      "down_time": "5:15 PM"
     },
     {
-     "no": 8,
-     "name": "Illambazar",
-     "up_time": "10:35 AM",
-     "down_time": "4:05 PM"
+     "name": "Raipur",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 9,
-     "name": "Panagarh",
-     "up_time": "11:05 AM",
+     "name": "Kamarpada",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bonvila",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Illambazar",
+     "up_time": "10:30 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "name": "11 Mile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Darjeeling More",
+     "up_time": "",
      "down_time": "3:25 PM"
     },
     {
-     "no": 10,
-     "name": "Durgapur (Muchipara)",
+     "name": "Rajbandh",
      "up_time": "",
-     "down_time": "3:05 PM"
+     "down_time": ""
     },
     {
-     "no": 11,
-     "name": "Durgapur (Station)",
+     "name": "Muchipara",
      "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "City Centre",
+     "up_time": "11:30 AM",
      "down_time": "2:50 PM"
     },
     {
-     "no": 12,
+     "name": "Gandhi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Biringi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Andal",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 13,
-     "name": "Raniganj",
+     "name": "Raniganj More",
      "up_time": "",
-     "down_time": "2:20 PM"
+     "down_time": ""
     },
     {
-     "no": 14,
+     "name": "Punjabi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Asansol",
      "up_time": "",
      "down_time": "1:50 PM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 14,
-   "detail_url": "https://bussathi.in/bus/736"
+   "total_stoppages": 28,
+   "detail_url": "https://bussathi.in/bus/736",
+   "time_source": "facebook (Nandini Travels post)",
+   "service_note": "Panchthupi–Bolpur–Asansol is covered by a single daily service (Nandini). It is also the last bus from Asansol towards Kirnahar and Futisanko. The operator sometimes runs a substitute vehicle on this duty — confirm with the conductor."
   },
   {
    "id": "bussathi-narayan-0",
