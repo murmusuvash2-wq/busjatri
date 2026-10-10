@@ -7,8 +7,9 @@ which made those buses (e.g. ACT-13 Suri -> Esplanade) show up on the Darjeeling
 place page even though they never go anywhere near the hill town.
 
 Rule: if a bus's own origin/destination is NOT Darjeeling, rename any stoppage
-named exactly "Darjeeling" to "Darjeeling More". Buses that genuinely start or
-end at Darjeeling (the NBSTC Siliguri-Darjeeling services) are left untouched.
+whose name contains "darjeeling" to "Darjeeling More". Buses that genuinely
+start or end at Darjeeling (the NBSTC Siliguri-Darjeeling services) are left
+alone.
 
 Idempotent - a stop already named "Darjeeling More" is skipped.
 
@@ -39,17 +40,18 @@ def main():
             # a genuine Darjeeling route - leave it alone
             continue
         for s in b.get("stoppages", []):
-            if (s.get("name") or "").strip().lower() == TARGET:
+            nm = (s.get("name") or "").strip()
+            if "darjeeling" in nm.lower() and nm.lower() != FIXED.lower():
                 s["name"] = FIXED
-                changed.append((b.get("id"), b.get("origin"), b.get("destination")))
+                changed.append((b.get("id"), b.get("origin"), b.get("destination"), nm))
 
     if not changed:
         print("darjeeling-more: nothing to fix (already clean)")
         return
 
     print("darjeeling-more: renamed a mislabeled stop on %d bus(es):" % len(changed))
-    for bid, o, d in changed:
-        print("   %s  (%s -> %s)" % (bid, o, d))
+    for bid, o, d, old in changed:
+        print("   %s  (%s -> %s)  [%r -> %s]" % (bid, o, d, old, FIXED))
 
     if not WRITE:
         print("dry run - nothing written (use --write)")
