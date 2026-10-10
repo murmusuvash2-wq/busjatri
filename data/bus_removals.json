@@ -10,5 +10,9 @@
  {
   "id": "wbbus-in-maa-tara-medinipur-mayapur-4206",
   "reason": "2-stop stub of the same Medinipur-Mayapur AC service; the full 33-stop entry (bussathi-maa-tara-441) supersedes it"
+ },
+ {
+  "id": "wbbus-in-jai-maa-durga-bandwan-siliguri-4139",
+  "reason": "2-stop stub of the Bandwan-Siliguri service; the full 24-stop entry (wbbustime-jai-maa-durga-0) supersedes it"
  }
 ]
