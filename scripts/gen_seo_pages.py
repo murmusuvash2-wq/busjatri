@@ -181,6 +181,60 @@ def norm_place(name):
     return PLACE_ALIAS.get(t, t)
 
 
+# Display-only label for Kolkata metro localities: "Esplanade" -> "Kolkata (Esplanade)".
+# Applied to titles / headings / FAQ text on LONG-distance routes only. The URL is
+# untouched (the filename still comes from the raw slug), and city routes whose BOTH
+# ends sit in the metro area keep their plain names.
+KOLKATA_DISPLAY = {
+    "Esplanade": "Kolkata (Esplanade)",
+    "Dharmatala": "Kolkata (Dharmatala)",
+    "Karunamoyee": "Kolkata (Karunamoyee)",
+    "Karunamoyee (Salt Lake)": "Kolkata (Karunamoyee)",
+    "Saltlake Karunamoyee": "Kolkata (Karunamoyee)",
+    "Garia": "Kolkata (Garia)",
+    "Garia Bus Stand": "Kolkata (Garia)",
+    "Garia Station": "Kolkata (Garia)",
+    "Tollygunge": "Kolkata (Tollygunge)",
+    "Tollygunge Metro": "Kolkata (Tollygunge)",
+    "Shyambazar": "Kolkata (Shyambazar)",
+    "Sealdah": "Kolkata (Sealdah)",
+    "Ballygunge Station": "Kolkata (Ballygunge)",
+    "Behala Chowrasta": "Kolkata (Behala)",
+    "Behala 14 No": "Kolkata (Behala)",
+    "Jadavpur 8B": "Kolkata (Jadavpur)",
+    "Salt Lake": "Kolkata (Salt Lake)",
+    "Newtown": "Kolkata (Newtown)",
+    "Airport Gate 1": "Kolkata (Airport)",
+    "Airport Terminal": "Kolkata (Airport)",
+    "Airport Gate No-3": "Kolkata (Airport)",
+    "Ballyhalt": "Kolkata (Bally Halt)",
+    "Belghoria": "Kolkata (Belghoria)",
+    "Baguiati": "Kolkata (Baguiati)",
+    "Taratala": "Kolkata (Taratala)",
+    "Science City": "Kolkata (Science City)",
+    "Rajarhat": "Kolkata (Rajarhat)",
+    "Dumdum": "Kolkata (Dumdum)",
+    "Bhowanipore": "Kolkata (Bhowanipore)",
+    "Park Street": "Kolkata (Park Street)",
+}
+
+# Everything in the greater-Kolkata area. If the OTHER end of a route is one of
+# these, the route is local and we leave the plain name alone.
+KOLKATA_AREA = set(KOLKATA_DISPLAY) | {
+    "Kolkata", "Howrah", "Howrah Station", "Howrah Maidan",
+    "Barasat", "Barasat Chapadali", "Barasat Colony", "Barrackpore",
+    "Barrackpore Court", "Barrackpore Station", "Baruipur", "Madhyamgram",
+    "Sonarpur", "Bally", "Kolkata Station",
+}
+
+
+def disp_place(name, other):
+    """Display label for `name` on a route whose other end is `other`."""
+    if name in KOLKATA_DISPLAY and other not in KOLKATA_AREA:
+        return KOLKATA_DISPLAY[name]
+    return name
+
+
 def bn(name):
     return BN.get(clean_text(name))
 
@@ -760,6 +814,9 @@ def _board_data(origin, destination):
 
 def generate_route_page(origin, destination, buses):
     filename = f"{slug(origin)}-to-{slug(destination)}.html"
+    # display-only labels (URL above stays on the raw slug)
+    d_origin = disp_place(origin, destination)
+    d_destination = disp_place(destination, origin)
     route_bn = bn_route(origin, destination)
     stats = route_stats(buses)
     first = format_time(stats["first"])
@@ -775,36 +832,36 @@ def generate_route_page(origin, destination, buses):
     # these pages are "<origin> to <destination> bus timetable / time table / timings /
     # today", so the exact phrase leads the title and the year follows. English only —
     # all 418 queries GSC reported for this site were romanised English.
-    title = f"{origin} to {destination} Bus Timetable 2026 — Timings, First & Last Bus | {SITE_NAME}"
+    title = f"{d_origin} to {d_destination} Bus Timetable 2026 — Timings, First & Last Bus | {SITE_NAME}"
     if len(title) > 80:
-        title = f"{origin} to {destination} Bus Timetable 2026 | {SITE_NAME}"
+        title = f"{d_origin} to {d_destination} Bus Timetable 2026 | {SITE_NAME}"
     run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
     if stats["first"] is None:
-        description = (f"{origin} to {destination} bus timetable 2026 — routes, stoppages "
+        description = (f"{d_origin} to {d_destination} bus timetable 2026 — routes, stoppages "
                        f"and operators listed on {SITE_NAME}.")[:300]
     elif count == 1:
-        description = (f"{origin} to {destination} bus timetable 2026 — 1 bus listed, "
+        description = (f"{d_origin} to {d_destination} bus timetable 2026 — 1 bus listed, "
                        f"departing {first}.{run_by} Timings and stoppages on {SITE_NAME}.")[:300]
     else:
-        description = (f"{origin} to {destination} bus timetable 2026 — {count} {bus_word} "
+        description = (f"{d_origin} to {d_destination} bus timetable 2026 — {count} {bus_word} "
                        f"listed, first {first}, last {last}.{run_by} Timings and stoppages "
                        f"on {SITE_NAME}.")[:300]
     canonical = f"{BASE}/bus-time-table/{filename}"
     major_stops = stoppage_summary(buses)
 
     faqs = [
-        (f"What is the first bus from {origin} to {destination}?",
+        (f"What is the first bus from {d_origin} to {d_destination}?",
          f"The first bus departs at {first}." if stats["first"] is not None else "Check the timetable above."),
-        (f"What is the last bus from {origin} to {destination}?",
+        (f"What is the last bus from {d_origin} to {d_destination}?",
          f"The last bus departs at {last}." if stats["last"] is not None else "Check the timetable above."),
-        (f"How many buses run from {origin} to {destination}?",
+        (f"How many buses run from {d_origin} to {d_destination}?",
          f"{count} bus " + ('service is' if count == 1 else 'services are') + " listed on this route."),
     ]
 
     bn_sub = f'<p class="bn-sub">{esc(route_bn)} বাসের সময়সূচী</p>' if route_bn else ""
-    hero = f"""<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>{esc(origin)} → {esc(destination)}</span></div>
+    hero = f"""<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>{esc(d_origin)} → {esc(d_destination)}</span></div>
 <div class="seo-hero">
-  <h1>{esc(origin)} <span class="arr">→</span> {esc(destination)}</h1>
+  <h1>{esc(d_origin)} <span class="arr">→</span> {esc(d_destination)}</h1>
   {bn_sub}
   <div class="stat-chips">
     <span class="schip">🚌 {count} bus{'es' if count != 1 else ''}</span>
@@ -848,7 +905,7 @@ def generate_route_page(origin, destination, buses):
             for o, t in related
         )
         related_section = f"""<section class="seo-section">
-  <h3 class="section-title">More Routes from {esc(origin)}</h3>
+  <h3 class="section-title">More Routes from {esc(d_origin)}</h3>
   <div class="chip-row">{links}</div>
 </section>"""
 
@@ -856,14 +913,14 @@ def generate_route_page(origin, destination, buses):
     if (destination, origin) in route_meta:
         rev_file = f"{slug(destination)}-to-{slug(origin)}.html"
         reverse_section = f"""<section class="seo-section">
-  <a class="rel-chip" href="{rev_file}">↩ {esc(destination)} → {esc(origin)} (return)</a>
+  <a class="rel-chip" href="{rev_file}">↩ {esc(d_destination)} → {esc(d_origin)} (return)</a>
 </section>"""
 
     body = hero + timetable + route_section + major_section + faq_section + reverse_section + related_section
 
     schema = (
         faq_schema(faqs) + "\n" +
-        breadcrumb_schema([("Home", "/"), ("Bus Timetable", "/bus-time-table/"), (f"{origin} to {destination}", f"/bus-time-table/{filename}")])
+        breadcrumb_schema([("Home", "/"), ("Bus Timetable", "/bus-time-table/"), (f"{d_origin} to {d_destination}", f"/bus-time-table/{filename}")])
     )
     return filename, shell(title, description, canonical, body, schema)
 
