@@ -309,11 +309,11 @@ def stop_page(stop, e, route_pages):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{BASE}/via/{slug(stop)}.html">
+<link rel="canonical" href="{BASE}/via/{slug(stop)}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{BASE}/via/{slug(stop)}.html">
+<meta property="og:url" content="{BASE}/via/{slug(stop)}">
 <meta property="og:image" content="{BASE}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{esc(title)}">
@@ -497,7 +497,7 @@ def main():
         s = sm.read_text(encoding="utf-8")
         s = re.sub(r"<url><loc>" + re.escape(BASE) + r"/via/[^<]*</loc>.*?</url>\n?", "", s)
         add = "".join(
-            f"<url><loc>{BASE}/via/{key}.html</loc><lastmod>{TODAY}</lastmod><priority>0.6</priority></url>\n"
+            f"<url><loc>{BASE}/via/{key}</loc><lastmod>{TODAY}</lastmod><priority>0.6</priority></url>\n"
             for _, key in entries
         )
         add += f"<url><loc>{BASE}/via/</loc><lastmod>{TODAY}</lastmod><priority>0.8</priority></url>\n"
