@@ -1,6 +1,14 @@
 [
-  {
-    "id": "wbbustime-subarna-paribahan-0",
-    "reason": "Untimed stub of the Subarna Paribahan Ranibandh-Siliguri service: no departure time, no bus type, and its stoppage list covers only the Khatra-Islampur middle segment (missing Ranibandh and Siliguri). Superseded by subarna-paribahan-ranibandh-siliguri-4735, added from the operator's own Facebook post. It also produced a wrong '3 hours 20 minutes' journey estimate on the route page."
-  }
+ {
+  "id": "wbbustime-subarna-paribahan-0",
+  "reason": "Untimed stub of the Subarna Paribahan Ranibandh-Siliguri service: no departure time, no bus type, and its stoppage list covers only the Khatra-Islampur middle segment (missing Ranibandh and Siliguri). Superseded by subarna-paribahan-ranibandh-siliguri-4735, added from the operator's own Facebook post. It also produced a wrong '3 hours 20 minutes' journey estimate on the route page."
+ },
+ {
+  "id": "wbbus-in-maa-rudrayani-medinipur-mayapur-4199",
+  "reason": "2-stop stub of the same Medinipur-Mayapur AC service; the full 33-stop entry (bussathi-maa-tara-441, regs WB 35E 2745 & 2746) supersedes it"
+ },
+ {
+  "id": "wbbus-in-maa-tara-medinipur-mayapur-4206",
+  "reason": "2-stop stub of the same Medinipur-Mayapur AC service; the full 33-stop entry (bussathi-maa-tara-441) supersedes it"
+ }
 ]
