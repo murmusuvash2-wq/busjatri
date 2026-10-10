@@ -279,6 +279,22 @@ const PLACE_TRAPS = {
   'durgapurbridge': ['durgapur'],
   'dakshindurgapur': ['durgapur']
 };
+
+/* 2026-10-10: consonant-skeleton collisions. "Bankra" (a Howrah-district
+   locality, incl. "Bankra More") and "Bankura" (the district town) both
+   reduce to the skeleton "bnkr", so the fuzzy tier below made e.g. WBTC
+   AC-2 - which stops at "Bankra More" - show up on the Bankura place page.
+   These pairs are genuinely different places and must never cross-match. */
+const DISTINCT_PLACE_PAIRS = [['bankra', 'bankura']];
+function distinctPlaceBlocked(v, q) {
+  for (let i = 0; i < DISTINCT_PLACE_PAIRS.length; i++) {
+    const a = DISTINCT_PLACE_PAIRS[i][0], b = DISTINCT_PLACE_PAIRS[i][1];
+    const hasA = v.includes(a), hasB = v.includes(b);
+    if (hasA && !hasB && q.includes(b) && !q.includes(a)) return true;
+    if (hasB && !hasA && q.includes(a) && !q.includes(b)) return true;
+  }
+  return false;
+}
 function placeMatchesCore(value, query) {
   const v = String(value || '').toLowerCase().trim();
   const q = String(query || '').toLowerCase().trim();
@@ -290,6 +306,7 @@ function placeMatchesCore(value, query) {
   const vc = compact(v).replace(/ac$/, '');
   const qc = compact(q).replace(/ac$/, '');
   if (vc === qc || vc.includes(qc)) return true;
+  if (distinctPlaceBlocked(v, q)) return false;
   /* Fuzzy tier for Bengali transliteration variants: compare consonant
      skeletons (Mallarpur/Mollarpur, Medinipur/Midnapore, Tarapith/...
      Tarapeeth). Only for queries with at least 4 consonants so short
