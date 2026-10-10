@@ -24493,105 +24493,129 @@
    "bus_type": "Private - NON AC",
    "origin": "Jhargram",
    "destination": "Bankura",
-   "departure_time": "5:40 AM",
+   "departure_time": "5:30 AM",
    "arrival_time": "10:30 AM",
    "contact_number": "8972943932",
    "depot_name": "Jhargram",
    "route": "Jhargram - Bankura",
    "stoppages": [
     {
-     "no": 1,
      "name": "Jhargram",
-     "up_time": "5:40 AM",
-     "down_time": "5:50 PM"
+     "up_time": "5:30 AM",
+     "down_time": "5:15 PM",
+     "no": 1
     },
     {
-     "no": 2,
      "name": "Dahijuri",
-     "up_time": "5:50 AM",
-     "down_time": "5:40 PM"
+     "up_time": "",
+     "down_time": "",
+     "no": 2
     },
     {
-     "no": 3,
      "name": "Binpur",
-     "up_time": "6:10 AM",
-     "down_time": "5:20 PM"
+     "up_time": "",
+     "down_time": "",
+     "no": 3
     },
     {
-     "no": 4,
      "name": "Silda",
-     "up_time": "6:45 AM",
-     "down_time": "5:00 PM"
+     "up_time": "6:40 AM",
+     "down_time": "4:30 PM",
+     "no": 4
     },
     {
-     "no": 5,
      "name": "Fulkusma",
      "up_time": "7:05 AM",
-     "down_time": "4:25 PM"
+     "down_time": "4:00 PM",
+     "no": 5
     },
     {
-     "no": 6,
      "name": "Motgoda",
-     "up_time": "4:00 PM",
-     "down_time": ""
+     "up_time": "7:20 AM",
+     "down_time": "3:45 PM",
+     "no": 6
     },
     {
-     "no": 7,
      "name": "Raipur",
      "up_time": "7:45 AM",
-     "down_time": "3:30 PM"
+     "down_time": "3:30 PM",
+     "no": 7
     },
     {
-     "no": 8,
      "name": "Haludkanali",
-     "up_time": "8:15 AM",
-     "down_time": "3:10 PM"
+     "up_time": "8:10 AM",
+     "down_time": "3:10 PM",
+     "no": 8
     },
     {
-     "no": 9,
+     "name": "Akkhuta More",
+     "up_time": "8:25 AM",
+     "down_time": "2:50 PM",
+     "no": 9
+    },
+    {
      "name": "Khatra",
      "up_time": "8:45 AM",
-     "down_time": "2:25 PM"
+     "down_time": "2:25 PM",
+     "no": 10
     },
     {
-     "no": 10,
+     "name": "Supur",
+     "up_time": "",
+     "down_time": "",
+     "no": 11
+    },
+    {
      "name": "Hatirampur",
      "up_time": "9:10 AM",
-     "down_time": "1:55 PM"
+     "down_time": "1:55 PM",
+     "no": 12
     },
     {
-     "no": 11,
-     "name": "Bangla",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
      "name": "Indpur",
      "up_time": "9:40 AM",
-     "down_time": "1:25 PM"
+     "down_time": "1:25 PM",
+     "no": 13
     },
     {
-     "no": 13,
+     "name": "Dangarampur",
+     "up_time": "",
+     "down_time": "",
+     "no": 14
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": "",
+     "no": 15
+    },
+    {
      "name": "Puabagan",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 16
     },
     {
-     "no": 14,
      "name": "Dhaldanga",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 17
     },
     {
-     "no": 15,
+     "name": "Station",
+     "up_time": "",
+     "down_time": "",
+     "no": 18
+    },
+    {
      "name": "Bankura",
      "up_time": "10:30 AM",
-     "down_time": "12:40 PM"
+     "down_time": "12:40 PM",
+     "no": 19
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 15,
+   "total_stoppages": 19,
    "detail_url": "https://bussathi.in/bus/53"
   },
   {
@@ -408013,38 +408037,6 @@
    "detail_url": "https://wbbus.in/bus/maa-rakshakali-wb67b0053-chandrakona-road-bankura-406"
   },
   {
-   "id": "wbbus-in-maa-rudrayani-medinipur-mayapur-4199",
-   "bus_name": "MAA RUDRAYANI",
-   "reg_no": "WB35E2746",
-   "operator": "—",
-   "bus_type": "Private",
-   "origin": "Medinipur",
-   "destination": "Mayapur",
-   "departure_time": "7:10 AM",
-   "arrival_time": "1:10 PM",
-   "contact_number": "Not Available !",
-   "depot_name": "Medinipur",
-   "route": "Medinipur - Mayapur",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Medinipur",
-     "up_time": "7:10 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Mayapur",
-     "up_time": "",
-     "down_time": "1:10 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "time_source": "wbbus.in",
-   "total_stoppages": 2,
-   "detail_url": "https://wbbus.in/bus/maa-rudrayani-wb35e2746-medinipur-mayapur-1176"
-  },
-  {
    "id": "wbbus-in-maa-sarada-taldangra-bardhaman-4200",
    "bus_name": "MAA SARADA",
    "reg_no": "WB67B7082",
@@ -408235,38 +408227,6 @@
    "time_source": "wbbus.in",
    "total_stoppages": 2,
    "detail_url": "https://wbbus.in/bus/maa-singhabahini-wb41f9422-chakta-katwa-1106"
-  },
-  {
-   "id": "wbbus-in-maa-tara-medinipur-mayapur-4206",
-   "bus_name": "MAA TARA",
-   "reg_no": "WB35E2745",
-   "operator": "—",
-   "bus_type": "Private",
-   "origin": "Medinipur",
-   "destination": "Mayapur",
-   "departure_time": "7:10 AM",
-   "arrival_time": "1:10 PM",
-   "contact_number": "Not Available !",
-   "depot_name": "Medinipur",
-   "route": "Medinipur - Mayapur",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Medinipur",
-     "up_time": "7:10 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Mayapur",
-     "up_time": "",
-     "down_time": "1:10 PM"
-    }
-   ],
-   "source": "wbbus.in",
-   "time_source": "wbbus.in",
-   "total_stoppages": 2,
-   "detail_url": "https://wbbus.in/bus/maa-tara-wb35e2745-medinipur-mayapur-1174"
   },
   {
    "id": "wbbus-in-maa-tara-chandrakona-town-bishnupur-4207",
@@ -445586,6 +445546,74 @@
    "source": "facebook (Avinandan post)",
    "time_source": "facebook (Avinandan post)",
    "total_stoppages": 19,
+   "detail_url": ""
+  },
+  {
+   "id": "chandni-sonaraithari-asansol-4721",
+   "bus_name": "Chandni Asansol-Sonaraithari",
+   "reg_no": "JH 04M 3077",
+   "operator": "Chandni",
+   "bus_type": "Private",
+   "origin": "Sonaraithari",
+   "destination": "Asansol",
+   "departure_time": "5:05 AM",
+   "arrival_time": "9:30 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Sonaraithari - Jamtara - Asansol",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Sonaraithari",
+     "up_time": "5:05 AM",
+     "down_time": "4:10 PM"
+    },
+    {
+     "no": 2,
+     "name": "Palajori",
+     "up_time": "6:00 AM",
+     "down_time": "3:10 PM"
+    },
+    {
+     "no": 3,
+     "name": "Fatehpur",
+     "up_time": "7:00 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "no": 4,
+     "name": "Jamtara",
+     "up_time": "8:00 AM",
+     "down_time": "1:15 PM"
+    },
+    {
+     "no": 5,
+     "name": "Mihijam",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Dendua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Bhagat Singh More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": "11:40 AM"
+    }
+   ],
+   "source": "facebook (Chandni post)",
+   "time_source": "facebook (Chandni post)",
+   "total_stoppages": 8,
    "detail_url": ""
   }
  ],
@@ -536048,7 +536076,7 @@
   }
  },
  "meta": {
-  "total_buses": 4717,
+  "total_buses": 4716,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
