@@ -9225,6 +9225,109 @@
    ]
   },
   {
+   "target_id": "bussathi-basundhara-120",
+   "contact_number": "7595824650",
+   "departure_time": "7:30 AM",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Shyambazar",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "7:50 AM",
+     "down_time": "6:55 PM"
+    },
+    {
+     "no": 3,
+     "name": "Dakshineswar",
+     "up_time": "8:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Bally",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dankuni",
+     "up_time": "8:20 AM",
+     "down_time": "6:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Chanditala",
+     "up_time": "8:35 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 7,
+     "name": "Mosat",
+     "up_time": "8:50 AM",
+     "down_time": "6:05 PM"
+    },
+    {
+     "no": 8,
+     "name": "Siakhala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Champadanga",
+     "up_time": "9:30 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 10,
+     "name": "Mayapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Arambagh",
+     "up_time": "10:25 AM",
+     "down_time": "4:45 PM"
+    },
+    {
+     "no": 12,
+     "name": "Bengai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Khatul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Kotulpur",
+     "up_time": "11:20 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "no": 15,
+     "name": "Joypur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bishnupur",
+     "up_time": "12:25 PM",
+     "down_time": "2:35 PM"
+    }
+   ]
+  },
+  {
    "target_id": "sbstc-digha-garia-0",
    "route": "Digha - Kolkata - Garia",
    "time_source": "facebook (SBSTC Digha-Garia post)",
@@ -10877,107 +10980,156 @@
    "total_stoppages": 38
   },
   {
-   "target_id": "bussathi-basundhara-120",
-   "contact_number": "7595824650",
-   "departure_time": "7:30 AM",
+   "target_id": "bussathi-nandini-0",
+   "operator": "Nandini Travels",
+   "bus_name": "NANDINI",
+   "bus_type": "Private",
+   "route": "Panchthupi - Bolpur - Asansol",
+   "time_source": "facebook (Nandini Travels post)",
+   "service_note": "Panchthupi–Bolpur–Asansol is covered by a single daily service (Nandini). It is also the last bus from Asansol towards Kirnahar and Futisanko. The operator sometimes runs a substitute vehicle on this duty — confirm with the conductor.",
    "stoppages": [
     {
-     "no": 1,
-     "name": "Shyambazar",
-     "up_time": "7:30 AM",
-     "down_time": ""
+     "name": "Panchthupi",
+     "up_time": "7:20 AM",
+     "down_time": "7:20 PM"
     },
     {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "7:50 AM",
-     "down_time": "6:55 PM"
-    },
-    {
-     "no": 3,
-     "name": "Dakshineswar",
-     "up_time": "8:05 AM",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Bally",
+     "name": "Dakbangla",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 5,
-     "name": "Dankuni",
-     "up_time": "8:20 AM",
-     "down_time": "6:25 PM"
+     "name": "Sundarpur",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 6,
-     "name": "Chanditala",
-     "up_time": "8:35 AM",
-     "down_time": "6:10 PM"
+     "name": "Baidyanathpur",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 7,
-     "name": "Mosat",
+     "name": "Marut",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Futisanko",
+     "up_time": "8:30 AM",
+     "down_time": "6:40 PM"
+    },
+    {
+     "name": "Daskalgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kirnahar",
      "up_time": "8:50 AM",
-     "down_time": "6:05 PM"
+     "down_time": "6:15 PM"
     },
     {
-     "no": 8,
-     "name": "Siakhala",
+     "name": "Nanoor",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 9,
-     "name": "Champadanga",
-     "up_time": "9:30 AM",
-     "down_time": "5:30 PM"
-    },
-    {
-     "no": 10,
-     "name": "Mayapur",
+     "name": "Beluti",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 11,
-     "name": "Arambagh",
-     "up_time": "10:25 AM",
-     "down_time": "4:45 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bengai",
+     "name": "Mohanpur",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 13,
-     "name": "Khatul",
+     "name": "Sian Hospital",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 14,
-     "name": "Kotulpur",
-     "up_time": "11:20 AM",
-     "down_time": "3:40 PM"
+     "name": "Bolpur",
+     "up_time": "10:00 AM",
+     "down_time": "5:15 PM"
     },
     {
-     "no": 15,
-     "name": "Joypur",
+     "name": "Raipur",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 16,
-     "name": "Bishnupur",
-     "up_time": "12:25 PM",
-     "down_time": "2:35 PM"
+     "name": "Kamarpada",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bonvila",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Illambazar",
+     "up_time": "10:30 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "name": "11 Mile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Darjeeling More",
+     "up_time": "",
+     "down_time": "3:25 PM"
+    },
+    {
+     "name": "Rajbandh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "City Centre",
+     "up_time": "11:30 AM",
+     "down_time": "2:50 PM"
+    },
+    {
+     "name": "Gandhi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Biringi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Andal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Raniganj More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Punjabi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Asansol",
+     "up_time": "",
+     "down_time": "1:50 PM"
     }
-   ]
+   ],
+   "total_stoppages": 28
   }
  ]
 }
