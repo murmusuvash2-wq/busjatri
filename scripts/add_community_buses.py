@@ -94,6 +94,7 @@ def main(write=False):
             "time_source": entry.get("source", "facebook (community report)"),
             "total_stoppages": len(stops),
             "detail_url": entry.get("detail_url", ""),
+            "service_note": entry.get("service_note", ""),
         })
         existing_pairs[key] = True
         added += 1
