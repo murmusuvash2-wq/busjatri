@@ -28,14 +28,21 @@ p.write_text(s, encoding='utf-8')
 # Generated timetable index: use the same dataset truth everywhere.
 p = ROOT / 'bus-time-table' / 'index.html'
 s = p.read_text(encoding='utf-8')
+# gen_seo_pages.py already baked the true counts into the stat chips
+# (data-count). Read THOSE back and reuse them for the meta description and
+# the FAQ, so every number on the page comes from one place and agrees.
+# (Before this, the FAQ was overwritten from busjatri_data.json meta while
+#  the chips came from live data -> the page contradicted itself.)
+_counts = re.findall(r'data-count="([0-9]+)"', s)
+if len(_counts) >= 3:
+    _places, _routes, _buses = int(_counts[0]), int(_counts[1]), int(_counts[2])
+else:
+    _places, _routes, _buses = stops, routes, buses
 old_desc = re.compile('Complete West Bengal bus time table: [^' + chr(34) + ']+')
-new_desc = f'Complete West Bengal bus time table: {routes:,} routes from {stops:,} stops. Find SBSTC, WBTC, NBSTC and private bus timings with departure times, operators and stoppages.'
+new_desc = f'Complete West Bengal bus time table: {_routes:,} routes from {_places} places. Find SBSTC, WBTC, NBSTC and private bus timings with departure times, operators and stoppages.'
 s = old_desc.sub(new_desc, s)
-s = re.sub(r'<strong data-count="[0-9]+">[0-9]+</strong> <span class="label-en">places</span>', f'<strong data-count="{stops}">{stops:,}</strong> <span class="label-en">stops</span>', s)
-s = re.sub(r'<strong data-count="[0-9]+">[0-9]+</strong> <span class="label-en">routes</span>', f'<strong data-count="{routes}">{routes:,}</strong> <span class="label-en">routes</span>', s)
-s = re.sub(r'<strong data-count="[0-9]+">[0-9]+</strong> <span class="label-en">bus services</span>', f'<strong data-count="{buses}">{buses:,}</strong> <span class="label-en">bus services</span>', s)
-s = s.replace('<span class="label-bn">স্থান</span>', '<span class="label-bn">স্টপ</span>')
-s = re.sub(r'The timetable covers [^<]+daily bus services listed[.]', f'The timetable covers {routes:,} bus routes connecting {stops:,} stops across West Bengal, with {buses:,} listed bus services.', s)
+s = re.sub(r'The timetable covers [^<]+daily bus services listed[.]',
+           f'The timetable covers {_routes:,} bus routes connecting {_places} places across West Bengal, with {_buses:,} listed bus services.', s)
 s = s.replace('<b>No matches found</b>', '<b class="no-results">No matches found</b>')
 s = s.replace('buses daily', 'listed buses')
 s = inject_once(s, '<div class="stat-chips">', trust)
