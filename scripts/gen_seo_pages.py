@@ -165,6 +165,13 @@ def esc(value):
     return html.escape(str(value or ""), quote=True)
 
 
+def _clean_url(name):
+    """Served URL form. Cloudflare 301s /x.html -> /x and Google indexes the
+    clean URL as canonical, so canonicals and sitemap entries must be clean.
+    The on-disk filename keeps its .html."""
+    return name[:-5] if name.endswith(".html") and name != "index.html" else name
+
+
 def clean_text(value):
     return re.sub(r"\s+", " ", str(value or "")).strip()
 
@@ -846,7 +853,7 @@ def generate_route_page(origin, destination, buses):
         description = (f"{d_origin} to {d_destination} bus timetable 2026 — {count} {bus_word} "
                        f"listed, first {first}, last {last}.{run_by} Timings and stoppages "
                        f"on {SITE_NAME}.")[:300]
-    canonical = f"{BASE}/bus-time-table/{filename}"
+    canonical = f"{BASE}/bus-time-table/{_clean_url(filename)}"
     major_stops = stoppage_summary(buses)
 
     faqs = [
@@ -949,7 +956,7 @@ def generate_place_page(place, buses):
     )
 
     canonical = (
-        f"{BASE}/bus-time-table/{filename}"
+        f"{BASE}/bus-time-table/{_clean_url(filename)}"
     )
 
     bengali_line = ""
@@ -1136,7 +1143,7 @@ def generate_via_page(origin, destination, via_stop, buses):
     if via_bn:
         title += f' ({via_bn} হযে)'
     description = f'{origin} to {destination} buses via {via_stop}: {n} of {ntot} buses pass through {via_stop}. First bus {first}, last bus {last}.'
-    canonical = f'{BASE}/bus-time-table/{filename}'
+    canonical = f'{BASE}/bus-time-table/{_clean_url(filename)}'
     trows = ''
     for r in rows:
         dep_f = format_time(r['dep'])
@@ -1264,7 +1271,7 @@ for (origin, destination), buses in sorted(route_meta.items()):
         f.write(content)
 
     sitemap_urls.append(
-        f"{BASE}/bus-time-table/{filename}"
+        f"{BASE}/bus-time-table/{_clean_url(filename)}"
     )
 
     written.append(filename)
@@ -1311,7 +1318,7 @@ for place in top_places:
         f.write(content)
 
     sitemap_urls.append(
-        f"{BASE}/bus-time-table/{filename}"
+        f"{BASE}/bus-time-table/{_clean_url(filename)}"
     )
 
     written.append(filename)
@@ -1326,7 +1333,7 @@ for (origin, destination), vv_ in sorted(VIA.items(), key=lambda kv: -len(route_
         via_path = os.path.join(OUT, via_filename)
         with open(via_path, "w", encoding="utf-8") as f:
             f.write(via_content)
-        sitemap_urls.append(f"{BASE}/bus-time-table/{via_filename}")
+        sitemap_urls.append(f"{BASE}/bus-time-table/{_clean_url(via_filename)}")
         written.append(via_filename)
         via_count += 1
 
