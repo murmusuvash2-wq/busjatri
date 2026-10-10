@@ -55,6 +55,7 @@ jobs:
           python3 scripts/gen_reverse_routes.py --write
           python3 scripts/gen_stop_network.py --write
           python3 scripts/gen_blog.py --write
+          python3 scripts/fix_clean_urls.py
 
       - name: Commit and push if changed
         run: |
