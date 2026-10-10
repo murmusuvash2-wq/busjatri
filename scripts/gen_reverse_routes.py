@@ -218,11 +218,11 @@ def main():
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)}</title>
 <meta name="description" content="{esc(desc)}">
-<link rel="canonical" href="{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}.html">
+<link rel="canonical" href="{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}">
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}.html">
+<meta property="og:url" content="{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}">
 <meta property="og:image" content="{BASE}/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
@@ -269,7 +269,7 @@ def main():
             out = ROOT / "bus-time-table" / f"{slug(dd)}-to-{slug(o)}.html"
             out.write_text(page, encoding="utf-8")
             written.add(out.name)
-            added_urls.append(f"{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}.html")
+            added_urls.append(f"{BASE}/bus-time-table/{slug(dd)}-to-{slug(o)}")
         pages += 1
 
     print(f"reverse route pages: {pages}")
