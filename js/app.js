@@ -840,9 +840,12 @@ async function renderSearch(el) {
 function renderPlace(el, placeName) {
   const q = placeName.toLowerCase();
   const related = Object.values(BUSES).filter(b =>
-    placeMatches(b.origin, q) ||
+    /* skip records that carry nothing useful - no timetable and no stops.
+       They rendered as a bare card with no time at the bottom of the list. */
+    !(!b.departure_time && !(b.total_stoppages > 0)) &&
+    (placeMatches(b.origin, q) ||
     placeMatches(b.destination, q) ||
-    (b.stoppages || []).some(s => placeMatches(s.name, q))
+    (b.stoppages || []).some(s => placeMatches(s.name, q)))
   );
   related.sort((a, b) => {
     const ta = parseTime(a.departure_time), tb = parseTime(b.departure_time);
@@ -865,7 +868,7 @@ function renderPlace(el, placeName) {
           <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
           <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
         </div>
-        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
+        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : `<span class="time-pill" style="opacity:.55;font-weight:500">${icon('clock')} <span class="label-en">Time not listed</span><span class="label-bn">সময় নেই</span></span>`}
       </div>`).join('') || `<div class="empty-state">${icon('bus')}<p>No buses found for this place.</p></div>`}
   </div>`;
 }
