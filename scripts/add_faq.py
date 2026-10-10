@@ -176,6 +176,10 @@ def build_qa(fr, to, buses):
     note = next((b.get('via_note') for b in pool if b.get('via_note')), None)
     if note:
         qa.append((f"Does the {fr_t} to {to_t} bus run via more than one route?", note))
+    # operator service note (e.g. "only service on this corridor", "last bus of the day")
+    svc = next((b.get('service_note') for b in pool if b.get('service_note')), None)
+    if svc:
+        qa.append((f"Any important notes about the {fr_t} to {to_t} bus service?", svc))
     fare = FARE.get(slug(f"{fr_t}-to-{to_t}"))
     if fare:
         qa.append((f"What is the bus fare from {fr_t} to {to_t}?",
