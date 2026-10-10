@@ -185,8 +185,14 @@ def build_qa(fr, to, buses):
         qa.append((f"What is the bus fare from {fr_t} to {to_t}?",
                    f"The listed SBSTC fare for this route is {fare}. Private bus fares may differ — confirm with the conductor."))
     else:
-        qa.append((f"What is the bus fare from {fr_t} to {to_t}?",
-                   "Fares for this route are not listed yet. West Bengal bus fares depend on distance and bus type — confirm the exact fare with the conductor or the bus stand counter."))
+        bus_fare = next(((b.get('fare') or '').strip() for b in pool
+                         if (b.get('fare') or '').strip()), None)
+        if bus_fare:
+            qa.append((f"What is the bus fare from {fr_t} to {to_t}?",
+                       f"The listed fare for this route is {bus_fare}. Fares vary by bus type and are approximate — confirm with the conductor."))
+        else:
+            qa.append((f"What is the bus fare from {fr_t} to {to_t}?",
+                       "Fares for this route are not listed yet. West Bengal bus fares depend on distance and bus type — confirm the exact fare with the conductor or the bus stand counter."))
     return qa
 
 def render(qa, fr_t, to_t):
