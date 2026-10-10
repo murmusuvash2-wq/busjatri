@@ -7404,85 +7404,7 @@
   },
   {
    "target_id": "sbstc-fb-bankura-kolkata-500am",
-   "operator": "SBSTC",
-   "bus_name": "SBSTC Harkusum Express",
-   "reg_no": "WB 39E 9255",
-   "bus_type": "Government - SBSTC",
-   "departure_time": "5:00 AM",
-   "arrival_time": "10:45 AM",
-   "contact_number": "7699993928",
-   "depot_name": "Bankura",
-   "route": "Bankura - Sonamukhi - Bardhaman - Kolkata",
-   "time_source": "facebook (community report)",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bankura",
-     "up_time": "5:00 AM",
-     "down_time": "9:20 PM"
-    },
-    {
-     "no": 2,
-     "name": "Bankura Satighat Bridge",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Beliator",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Ashuria More",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Pakhanna",
-     "up_time": "6:10 AM",
-     "down_time": "8:15 PM"
-    },
-    {
-     "no": 6,
-     "name": "Dhulai",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Sonamukhi",
-     "up_time": "6:55 AM",
-     "down_time": "7:50 PM"
-    },
-    {
-     "no": 8,
-     "name": "Bardhaman",
-     "up_time": "8:45 AM",
-     "down_time": "6:20 PM"
-    },
-    {
-     "no": 9,
-     "name": "Dankuni",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
-     "name": "2nd Bridge",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Kolkata (Dharmatala)",
-     "up_time": "10:45 AM",
-     "down_time": "3:50 PM"
-    }
-   ],
-   "total_stoppages": 11
+   "reg_no": "WB 39C 3166"
   },
   {
    "target_id": "wbbus-in-sbstc-durgapur-city-center-gopiballabpur-4313",
@@ -7755,6 +7677,509 @@
      "down_time": "2:35 PM"
     }
    ]
+  },
+  {
+   "target_id": "ktr-private-pratiksha-barddhaman-to-tatanagar-7004-and-3204",
+   "departure_time": "7:30 AM",
+   "arrival_time": "3:30 PM",
+   "stoppages": [
+    {
+     "name": "Barddhaman Alisha Bus Stand",
+     "up_time": "7:30 AM",
+     "down_time": "",
+     "no": 1
+    },
+    {
+     "name": "Birhata",
+     "up_time": "",
+     "down_time": "",
+     "no": 2
+    },
+    {
+     "name": "Telipukur",
+     "up_time": "",
+     "down_time": "",
+     "no": 3
+    },
+    {
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": "",
+     "no": 4
+    },
+    {
+     "name": "Khandaghosh",
+     "up_time": "",
+     "down_time": "",
+     "no": 5
+    },
+    {
+     "name": "Rasulpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 6
+    },
+    {
+     "name": "Kankordanga",
+     "up_time": "",
+     "down_time": "",
+     "no": 7
+    },
+    {
+     "name": "Sonamukhi",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": "",
+     "no": 9
+    },
+    {
+     "name": "Bankura Bypass",
+     "up_time": "",
+     "down_time": "",
+     "no": 10
+    },
+    {
+     "name": "Satighat",
+     "up_time": "",
+     "down_time": "",
+     "no": 11
+    },
+    {
+     "name": "Bankura Bus Stand",
+     "up_time": "10:45 AM",
+     "down_time": "",
+     "no": 12
+    },
+    {
+     "name": "Poabagan",
+     "up_time": "",
+     "down_time": "",
+     "no": 13
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": "",
+     "no": 14
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": "",
+     "no": 15
+    },
+    {
+     "name": "Khatra",
+     "up_time": "12:30 PM",
+     "down_time": "",
+     "no": 16
+    },
+    {
+     "name": "Akhuta",
+     "up_time": "",
+     "down_time": "",
+     "no": 17
+    },
+    {
+     "name": "Ranibandh",
+     "up_time": "",
+     "down_time": "",
+     "no": 18
+    },
+    {
+     "name": "Poradih",
+     "up_time": "",
+     "down_time": "",
+     "no": 19
+    },
+    {
+     "name": "Banduan",
+     "up_time": "2:00 PM",
+     "down_time": "",
+     "no": 20
+    },
+    {
+     "name": "Dhabani",
+     "up_time": "",
+     "down_time": "",
+     "no": 21
+    },
+    {
+     "name": "Katin",
+     "up_time": "2:30 PM",
+     "down_time": "",
+     "no": 22
+    },
+    {
+     "name": "Patamda",
+     "up_time": "",
+     "down_time": "",
+     "no": 23
+    },
+    {
+     "name": "Tatanagar",
+     "up_time": "",
+     "down_time": "",
+     "no": 24
+    }
+   ],
+   "total_stoppages": 24
+  },
+  {
+   "target_id": "sbstc-fb-haldia-chittaranjan-500am",
+   "arrival_time": "1:50 PM",
+   "reg_no": "WB 39A 9552",
+   "stoppages": [
+    {
+     "name": "Haldia Township",
+     "up_time": "5:00 AM",
+     "down_time": "",
+     "no": 1
+    },
+    {
+     "name": "Ranichak",
+     "up_time": "",
+     "down_time": "",
+     "no": 2
+    },
+    {
+     "name": "City Centre",
+     "up_time": "",
+     "down_time": "",
+     "no": 3
+    },
+    {
+     "name": "Brajlalchak",
+     "up_time": "",
+     "down_time": "",
+     "no": 4
+    },
+    {
+     "name": "Kapsaria",
+     "up_time": "",
+     "down_time": "",
+     "no": 5
+    },
+    {
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": "",
+     "no": 6
+    },
+    {
+     "name": "Nimtauri",
+     "up_time": "",
+     "down_time": "",
+     "no": 7
+    },
+    {
+     "name": "Radhamoni",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": "",
+     "no": 9
+    },
+    {
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": "",
+     "no": 10
+    },
+    {
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": "",
+     "no": 11
+    },
+    {
+     "name": "Birshibpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 12
+    },
+    {
+     "name": "Uluberia Checkpost",
+     "up_time": "",
+     "down_time": "",
+     "no": 13
+    },
+    {
+     "name": "Nimdighi",
+     "up_time": "",
+     "down_time": "",
+     "no": 14
+    },
+    {
+     "name": "Panchla",
+     "up_time": "",
+     "down_time": "",
+     "no": 15
+    },
+    {
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": "",
+     "no": 16
+    },
+    {
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": "",
+     "no": 17
+    },
+    {
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": "",
+     "no": 18
+    },
+    {
+     "name": "2nd Hooghly Bridge",
+     "up_time": "",
+     "down_time": "",
+     "no": 19
+    },
+    {
+     "name": "Kolkata (Dharmatala)",
+     "up_time": "8:45 AM",
+     "down_time": "1:30 PM",
+     "no": 20
+    },
+    {
+     "name": "Salap",
+     "up_time": "",
+     "down_time": "",
+     "no": 21
+    },
+    {
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": "",
+     "no": 22
+    },
+    {
+     "name": "Shaktigarh",
+     "up_time": "",
+     "down_time": "",
+     "no": 23
+    },
+    {
+     "name": "Bardhaman Bypass",
+     "up_time": "",
+     "down_time": "",
+     "no": 24
+    },
+    {
+     "name": "Panagarh Bypass",
+     "up_time": "",
+     "down_time": "",
+     "no": 25
+    },
+    {
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": "",
+     "no": 26
+    },
+    {
+     "name": "DVC More",
+     "up_time": "",
+     "down_time": "",
+     "no": 27
+    },
+    {
+     "name": "Durgapur City Centre",
+     "up_time": "12:15 PM",
+     "down_time": "8:20 AM",
+     "no": 28
+    },
+    {
+     "name": "Andal",
+     "up_time": "",
+     "down_time": "",
+     "no": 29
+    },
+    {
+     "name": "Raniganj Panjabi More",
+     "up_time": "",
+     "down_time": "",
+     "no": 30
+    },
+    {
+     "name": "Asansol",
+     "up_time": "1:00 PM",
+     "down_time": "7:10 AM",
+     "no": 31
+    },
+    {
+     "name": "Salanpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 32
+    },
+    {
+     "name": "Dendua",
+     "up_time": "",
+     "down_time": "",
+     "no": 33
+    },
+    {
+     "name": "Rupnarayanpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 34
+    },
+    {
+     "name": "Chittaranjan",
+     "up_time": "",
+     "down_time": "5:40 AM",
+     "no": 35
+    }
+   ],
+   "total_stoppages": 35
+  },
+  {
+   "target_id": "wbbus-in-radhika-chittaranjan-bardhaman-4263",
+   "arrival_time": "8:10 AM",
+   "stoppages": [
+    {
+     "name": "Chittaranjan",
+     "up_time": "4:20 AM",
+     "down_time": "5:15 PM",
+     "no": 1
+    },
+    {
+     "name": "Deshbandhu Lok Park",
+     "up_time": "",
+     "down_time": "",
+     "no": 2
+    },
+    {
+     "name": "Amladahi Bazar",
+     "up_time": "",
+     "down_time": "",
+     "no": 3
+    },
+    {
+     "name": "Lower Keshia",
+     "up_time": "",
+     "down_time": "",
+     "no": 4
+    },
+    {
+     "name": "Rupnarayanpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 5
+    },
+    {
+     "name": "Ramdi",
+     "up_time": "",
+     "down_time": "",
+     "no": 6
+    },
+    {
+     "name": "Dendua",
+     "up_time": "",
+     "down_time": "",
+     "no": 7
+    },
+    {
+     "name": "Salanpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
+     "name": "Chandrachur Bypass",
+     "up_time": "",
+     "down_time": "",
+     "no": 9
+    },
+    {
+     "name": "Jubilee",
+     "up_time": "",
+     "down_time": "",
+     "no": 10
+    },
+    {
+     "name": "Asansol Bus Stand",
+     "up_time": "5:15 AM",
+     "down_time": "3:50 PM",
+     "no": 11
+    },
+    {
+     "name": "Kalipahari More",
+     "up_time": "",
+     "down_time": "",
+     "no": 12
+    },
+    {
+     "name": "Panjabi More",
+     "up_time": "",
+     "down_time": "",
+     "no": 13
+    },
+    {
+     "name": "Raniganj More",
+     "up_time": "6:10 AM",
+     "down_time": "",
+     "no": 14
+    },
+    {
+     "name": "Andal More",
+     "up_time": "",
+     "down_time": "",
+     "no": 15
+    },
+    {
+     "name": "City Centre",
+     "up_time": "6:35 AM",
+     "down_time": "2:40 PM",
+     "no": 16
+    },
+    {
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": "2:25 PM",
+     "no": 17
+    },
+    {
+     "name": "Panagarh",
+     "up_time": "7:10 AM",
+     "down_time": "2:05 PM",
+     "no": 18
+    },
+    {
+     "name": "Budbud",
+     "up_time": "",
+     "down_time": "1:50 PM",
+     "no": 19
+    },
+    {
+     "name": "Galsi",
+     "up_time": "7:35 AM",
+     "down_time": "1:30 PM",
+     "no": 20
+    },
+    {
+     "name": "Bardhaman Nawabhat Bus Stand",
+     "up_time": "",
+     "down_time": "1:00 PM",
+     "no": 21
+    }
+   ],
+   "total_stoppages": 21
   }
  ]
 }
