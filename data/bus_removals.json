@@ -18,5 +18,433 @@
  {
   "id": "wbbus-in-monami-jhargram-manbazar-4229",
   "reason": "2-stop stub duplicating bussathi-monami-507 (same reg WB39F2442)"
+ },
+ {
+  "id": "wbbustime-joy-baba-khetrapal-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-asansol-salar-express-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-esplanade-mahaprabhu-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-debi-kamakhya-tara-ma-travels-trip-1-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-aayan-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-tulsi-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shubhasree-travels-ma-parbati-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tirumala-bibek-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-madan-mohan-trip-1-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tirupati-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tirupati-1",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-vinayak-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-debibala-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-sarkar-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shika-traders-ishika-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-new-nabarupa-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-nabaraj-mail-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ishika-traders-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-devi-durga-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-mahamaya-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-dakshayaniria-super-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-tara-alaka-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ishika-trip-2-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-rof-rof-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-sbstc-bolpur-digha-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime--0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ambika-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-gitanjali-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ishika-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ishika-traders-1",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tirupati-2",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shreedhar-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-bagala-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-nbstc-coochbehar-depot-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-kolkata-santosh-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-sahil-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-nilachal-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shree-ram-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-sri-ram-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-monikanchan-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-bura-baba-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ratul-babu-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shyamali-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-wasif-super-fast-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-bakkhali-howrah-express-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-atithiparibahan-ac-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-lokenath-bus-service-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-p-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-rahul-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-hetiya-kotulpur-burdwan-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-suparna-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-abha-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-azad-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shahin-super-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shubhasree-travels-ma-parbati-1",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-bhabani-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-786-nosib-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-mousumi-disha-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-tulsi-1",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tara-maa-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-jupiter-express-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tanushree-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-mayer-ashirwad-dadabhai-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ma-babar-ashirbad-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-saradamoyi-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-lalgarh-tarakeswar-service-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shaktiman-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-sonali-ma-durga-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-mangrol-digha-service-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-barnali-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-gobinda-majestic-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-maa-kamala-nandan-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tarakripa-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-charubala-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-palki-route-45-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ramkrishna-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shefali-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-parthsarathi-dutta-motors-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-arya-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-phulkusma-mecheda-express-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-challenger-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-moniraj-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shreedhar-1",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-moonlight-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ishika-1",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-dharmaraj-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-soumen-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-putul-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-garib-nawaz-royal-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-supa-howrah-station-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-kolkata-abir-super-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-ramkrishna-ashirwad-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-akashbristi-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-santoshi-mata-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-datababa-sakil-travels-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-tara-ma-ac-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-shankar-parwati-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "wbbustime-jashoda-0",
+  "reason": "empty stub: no departure time and no stoppages (source wbbustime.in)"
+ },
+ {
+  "id": "whereismybus-amit-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-anushka-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-aditya-smriti-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-argha-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-abhi-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-agantuk-wb41g9264-or-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-agni-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-abhishek-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "whereismybus-ariyan-wb41f5048-or-sahil-0",
+  "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
  }
 ]
