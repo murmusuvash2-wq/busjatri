@@ -406060,38 +406060,6 @@
    "detail_url": "https://wbbus.in/bus/imon-wb41h0075-bardhaman-bankura-660"
   },
   {
-   "id": "wbbus-in-jai-maa-durga-bandwan-siliguri-4139",
-   "bus_name": "JAI MAA DURGA",
-   "reg_no": "WB45B6992",
-   "operator": "—",
-   "bus_type": "Private",
-   "origin": "Bandwan",
-   "destination": "Siliguri",
-   "departure_time": "3:05 PM",
-   "arrival_time": "7:00 AM",
-   "contact_number": "Not Available !",
-   "depot_name": "Bandwan",
-   "route": "Bandwan - Siliguri",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bandwan",
-     "up_time": "3:05 PM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Siliguri",
-     "up_time": "",
-     "down_time": "7:00 AM"
-    }
-   ],
-   "source": "wbbus.in",
-   "time_source": "wbbus.in",
-   "total_stoppages": 2,
-   "detail_url": "https://wbbus.in/bus/jai-maa-durga-wb45b6992-bandwan-siliguri-794"
-  },
-  {
    "id": "wbbus-in-jaleswar-patharpara-chandrakona-town-4140",
    "bus_name": "JALESWAR",
    "reg_no": "WB132540",
@@ -445614,6 +445582,104 @@
    "source": "facebook (Chandni post)",
    "time_source": "facebook (Chandni post)",
    "total_stoppages": 8,
+   "detail_url": ""
+  },
+  {
+   "id": "partha-sarathi-bargaria-purulia-4721",
+   "bus_name": "Partha Sarathi Bargaria-Purulia",
+   "reg_no": "WB 55B 7779",
+   "operator": "Partha Sarathi",
+   "bus_type": "Private",
+   "origin": "Bargaria",
+   "destination": "Purulia",
+   "departure_time": "8:20 AM",
+   "arrival_time": "11:40 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Bargaria - Manbazar - Purulia",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bargaria",
+     "up_time": "8:20 AM",
+     "down_time": "6:30 PM"
+    },
+    {
+     "no": 2,
+     "name": "Jamtoria",
+     "up_time": "8:30 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 3,
+     "name": "Dharampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Burudi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Boro More",
+     "up_time": "8:50 AM",
+     "down_time": "5:50 PM"
+    },
+    {
+     "no": 6,
+     "name": "Khariduara More",
+     "up_time": "9:10 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 7,
+     "name": "Manbazar",
+     "up_time": "9:30 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "no": 8,
+     "name": "Gopalnagar",
+     "up_time": "10:10 AM",
+     "down_time": "4:30 PM"
+    },
+    {
+     "no": 9,
+     "name": "Kenda More",
+     "up_time": "10:40 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "no": 10,
+     "name": "Chakaltor",
+     "up_time": "11:10 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "no": 11,
+     "name": "Tamna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Simulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Purulia",
+     "up_time": "",
+     "down_time": "3:00 PM"
+    }
+   ],
+   "source": "facebook (Partha Sarathi post)",
+   "time_source": "facebook (Partha Sarathi post)",
+   "total_stoppages": 13,
    "detail_url": ""
   }
  ],
