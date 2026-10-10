@@ -6609,6 +6609,522 @@
      "down": "5:00 AM"
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Karunamoyee-Haldia",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39E 3559",
+   "origin": "Karunamoyee",
+   "destination": "Haldia",
+   "departure_time": "6:55 AM",
+   "arrival_time": "10:40 AM",
+   "contact_number": "",
+   "route": "Karunamoyee - Newtown - Kona Expressway - Haldia",
+   "source": "facebook (SBSTC Karunamoyee-Haldia post)",
+   "service_note": "This is the first bus of the day from Karunamoyee to Haldia, and the last bus from Haldia back to Karunamoyee via Dharmatala. Confirm with the conductor before travel.",
+   "stops": [
+    {
+     "name": "Karunamoyee",
+     "up": "6:55 AM",
+     "down": "10:30 PM"
+    },
+    {
+     "name": "Wipro More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sector Five",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "College More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mahishbathan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolbhaban",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "DLF",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Newtown",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Biswa Bangla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Narkelbagan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ecopark",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Akanksha More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "City Centre 2",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chinar Park",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kaikhali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Airport",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Belghoria Expressway",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dunlop",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salap",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dharmatala",
+     "up": "",
+     "down": "9:30 PM"
+    },
+    {
+     "name": "Kona Expressway",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulagarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranihati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Uluberia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bagnan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Haldia More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mecheda Highway",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Radhamoni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nimtauri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nandakumar Highway",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kapasberia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Brajlalchak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ranichak",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Haldia Township",
+     "up": "",
+     "down": "6:30 PM"
+    }
+   ]
+  },
+  {
+   "operator": "NBSTC",
+   "bus_name": "NBSTC Kolkata-Siliguri Volvo",
+   "bus_type": "Government - NBSTC",
+   "reg_no": "WB 05B 6667",
+   "origin": "Kolkata",
+   "destination": "Siliguri",
+   "departure_time": "5:30 PM",
+   "arrival_time": "",
+   "contact_number": "9332110522",
+   "route": "Kolkata - Bardhaman - Malda - Siliguri",
+   "source": "facebook (NBSTC Volvo post)",
+   "stops": [
+    {
+     "name": "Kolkata (Dharmatala L20)",
+     "up": "5:30 PM",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Shaktigarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bardhaman",
+     "up": "8:30 PM",
+     "down": "4:30 AM"
+    },
+    {
+     "name": "Dewandighi More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Narja More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Muratipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Natunhat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nutangram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Futisanko",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bahadurpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dakbangla More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kuli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khargram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sherpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Panchgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Morgram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ompur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhulian",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Farakka",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Malda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gazole",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Raiganj",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dalkhola",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kishanganj",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Islampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bagdogra",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siliguri Junction",
+     "up": "",
+     "down": "6:30 PM"
+    }
+   ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kolkata-Kadra",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Kadra",
+   "departure_time": "4:00 PM",
+   "arrival_time": "",
+   "contact_number": "",
+   "route": "Kolkata - Bardhaman - Kadra",
+   "source": "facebook (SBSTC Kolkata-Kadra post)",
+   "stops": [
+    {
+     "name": "Kolkata (Dharmatala)",
+     "up": "4:00 PM",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salap",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Shaktigarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bardhaman Station",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dewandighi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Narja More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Muratipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Natunhat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nutangram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pirtala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Futisanko",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kurmodanga",
+     "up": "",
+     "down": "5:40 AM"
+    }
+   ]
+  },
+  {
+   "operator": "WBTC",
+   "bus_name": "WBTC Kolkata-Digha",
+   "bus_type": "Government - WBTC",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Digha",
+   "departure_time": "7:30 AM",
+   "arrival_time": "",
+   "contact_number": "8240854746",
+   "route": "Kolkata - Kanthi - Digha",
+   "source": "facebook (WBTC Kolkata-Digha post)",
+   "stops": [
+    {
+     "name": "Kolkata (Dharmatala)",
+     "up": "7:30 AM",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Uluberia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bagnan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolaghat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mecheda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nandakumar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chandipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kanthi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chaulkhola",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ramnagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Digha",
+     "up": "",
+     "down": "1:00 PM"
+    }
+   ]
   }
  ],
  "enrich": [
@@ -11029,6 +11545,109 @@
    "total_stoppages": 28
   },
   {
+   "target_id": "bussathi-basundhara-120",
+   "contact_number": "7595824650",
+   "departure_time": "7:30 AM",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Shyambazar",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "7:50 AM",
+     "down_time": "6:55 PM"
+    },
+    {
+     "no": 3,
+     "name": "Dakshineswar",
+     "up_time": "8:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Bally",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dankuni",
+     "up_time": "8:20 AM",
+     "down_time": "6:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Chanditala",
+     "up_time": "8:35 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 7,
+     "name": "Mosat",
+     "up_time": "8:50 AM",
+     "down_time": "6:05 PM"
+    },
+    {
+     "no": 8,
+     "name": "Siakhala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Champadanga",
+     "up_time": "9:30 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 10,
+     "name": "Mayapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Arambagh",
+     "up_time": "10:25 AM",
+     "down_time": "4:45 PM"
+    },
+    {
+     "no": 12,
+     "name": "Bengai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Khatul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Kotulpur",
+     "up_time": "11:20 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "no": 15,
+     "name": "Joypur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bishnupur",
+     "up_time": "12:25 PM",
+     "down_time": "2:35 PM"
+    }
+   ]
+  },
+  {
    "target_id": "bussathi-veer-849",
    "operator": "Veer (Ayesha)",
    "bus_name": "AYESHA (VEER)",
@@ -12142,105 +12761,121 @@
    ]
   },
   {
-   "target_id": "bussathi-basundhara-120",
-   "contact_number": "7595824650",
-   "departure_time": "7:30 AM",
+   "target_id": "sbstc-jhilimili-kolkata-4426",
+   "departure_time": "4:25 AM",
+   "arrival_time": "10:25 AM",
+   "time_source": "facebook (SBSTC Jhilimili-Kolkata post)",
+   "total_stoppages": 22,
    "stoppages": [
     {
-     "no": 1,
-     "name": "Shyambazar",
-     "up_time": "7:30 AM",
-     "down_time": ""
+     "name": "Jhilimili",
+     "up_time": "4:25 AM",
+     "down_time": "8:50 PM"
     },
     {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "7:50 AM",
-     "down_time": "6:55 PM"
-    },
-    {
-     "no": 3,
-     "name": "Dakshineswar",
-     "up_time": "8:05 AM",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Bally",
+     "name": "Jabla",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 5,
+     "name": "Khejuria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ranibandh",
+     "up_time": "4:50 AM",
+     "down_time": "8:25 PM"
+    },
+    {
+     "name": "Akkhuta More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ambikanagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Mukutmanipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khatra",
+     "up_time": "5:15 AM",
+     "down_time": "8:05 PM"
+    },
+    {
+     "name": "Supur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up_time": "6:15 AM",
+     "down_time": "7:15 PM"
+    },
+    {
+     "name": "Beliator",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur",
+     "up_time": "7:10 AM",
+     "down_time": null
+    },
+    {
+     "name": "Bardhaman Bypass",
+     "up_time": "8:25 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "name": "Shaktigarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Dankuni",
-     "up_time": "8:20 AM",
-     "down_time": "6:25 PM"
-    },
-    {
-     "no": 6,
-     "name": "Chanditala",
-     "up_time": "8:35 AM",
-     "down_time": "6:10 PM"
-    },
-    {
-     "no": 7,
-     "name": "Mosat",
-     "up_time": "8:50 AM",
-     "down_time": "6:05 PM"
-    },
-    {
-     "no": 8,
-     "name": "Siakhala",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 9,
-     "name": "Champadanga",
-     "up_time": "9:30 AM",
-     "down_time": "5:30 PM"
-    },
-    {
-     "no": 10,
-     "name": "Mayapur",
+     "name": "Salap",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 11,
-     "name": "Arambagh",
-     "up_time": "10:25 AM",
-     "down_time": "4:45 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bengai",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Khatul",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Kotulpur",
-     "up_time": "11:20 AM",
-     "down_time": "3:40 PM"
-    },
-    {
-     "no": 15,
-     "name": "Joypur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Bishnupur",
-     "up_time": "12:25 PM",
-     "down_time": "2:35 PM"
+     "name": "Kolkata (Dharmatala)",
+     "up_time": null,
+     "down_time": "3:10 PM"
     }
    ]
   }
