@@ -99,11 +99,11 @@ HEAD = '''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title} | BusJatri</title>
 <meta name="description" content="{desc}">
-<link rel="canonical" href="{BASE}/bus-time-table/{stem}.html">
+<link rel="canonical" href="{BASE}/bus-time-table/{stem}">
 <meta property="og:title" content="{ogt}">
 <meta property="og:description" content="{ogd}">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{BASE}/bus-time-table/{stem}.html">
+<meta property="og:url" content="{BASE}/bus-time-table/{stem}">
 <meta property="og:image" content="{BASE}/og-image.png">
 <meta property="og:locale" content="en_IN">
 <meta property="og:locale:alternate" content="bn_IN">
@@ -627,7 +627,7 @@ def update_sitemap(stems):
     s = p.read_text(encoding='utf-8')
     add = ''
     for op in OPERATORS:
-        url = f'{BASE}/bus-time-table/{op["stem"]}.html'
+        url = f'{BASE}/bus-time-table/{op["stem"]}'
         if url not in s:
             add += f'<url><loc>{url}</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>'
     if add:
