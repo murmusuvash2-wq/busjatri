@@ -14,5 +14,9 @@
  {
   "id": "wbbus-in-jai-maa-durga-bandwan-siliguri-4139",
   "reason": "2-stop stub of the Bandwan-Siliguri service; the full 24-stop entry (wbbustime-jai-maa-durga-0) supersedes it"
+ },
+ {
+  "id": "wbbus-in-monami-jhargram-manbazar-4229",
+  "reason": "2-stop stub duplicating bussathi-monami-507 (same reg WB39F2442)"
  }
 ]
