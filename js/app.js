@@ -313,11 +313,13 @@ function placeMatchesCore(value, query) {
      words like 'pur' cannot match every place. */
   const skel = s => s.replace(/[^bcdfghjklmnpqrstvwxyz]/g, '');
   const vs = skel(v), qs = skel(q);
-  /* 2026-09-25: containment only for near-equal skeletons. Loose
-     containment matched e.g. Santragachi (sntrgch) for the query
-     "santuri" (sntr), and via the kolkata alias group that pulled
-     1585 buses into a small village's stop search. */
-  if (qs.length >= 4 && (vs === qs || (vs.includes(qs) && vs.length - qs.length <= 2))) return true;
+  /* 2026-10-10: EXACT skeleton only. The old containment branch
+     (vs.includes(qs) && diff <= 2) let a longer value match a shorter
+     query on consonants alone - "Bankra More" (bnkrmr) matched the query
+     "bankura" (bnkr) and put WBTC AC-2 on the Bankura page. Spelling
+     variants that matter here (Medinipur/Midnapore, Mallarpur/Mollarpur)
+     all have IDENTICAL skeletons, so equality is enough. */
+  if (qs.length >= 4 && vs === qs) return true;
   /* 2026-09-29: qualifier tier — query adds a generic suffix to a shorter
      value, e.g. value "Howrah" should match query "howrah station" or
      "howrah bus stand". Reverse of the v.includes(q) tier above. Only
