@@ -7125,6 +7125,97 @@
      "down": "1:00 PM"
     }
    ]
+  },
+  {
+   "operator": "WBTC",
+   "bus_name": "WBTC Banglashree Kolkata-Kalimpong",
+   "bus_type": "Government - AC Volvo",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Kalimpong",
+   "departure_time": "6:30 PM",
+   "arrival_time": "12:30 PM",
+   "contact_number": "",
+   "route": "Kolkata - Siliguri - Kalimpong",
+   "source": "wbxpress Banglashree (BE-4)",
+   "service_note": "Banglashree Express (WBTC AC Volvo) — Kolkata to district-town service. Timings from the official Banglashree list; confirm at the counter before travel.",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kolkata",
+     "up": "6:30 PM",
+     "down": "6:30 AM"
+    },
+    {
+     "name": "Siliguri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kalimpong",
+     "up": "12:30 PM",
+     "down": "1:30 PM"
+    }
+   ]
+  },
+  {
+   "operator": "WBTC",
+   "bus_name": "WBTC Banglashree Kolkata-Darjeeling",
+   "bus_type": "Government - AC Volvo",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Darjeeling",
+   "departure_time": "6:30 PM",
+   "arrival_time": "12:00 PM",
+   "contact_number": "",
+   "route": "Kolkata - Siliguri - Darjeeling",
+   "source": "wbxpress Banglashree (BE-5)",
+   "service_note": "Banglashree Express (WBTC AC Volvo) — Kolkata to district-town service. Timings from the official Banglashree list; confirm at the counter before travel.",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kolkata",
+     "up": "6:30 PM",
+     "down": "6:30 AM"
+    },
+    {
+     "name": "Siliguri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Darjeeling",
+     "up": "12:00 PM",
+     "down": "1:30 PM"
+    }
+   ]
+  },
+  {
+   "operator": "WBTC",
+   "bus_name": "WBTC Banglashree Kolkata-Chinsurah",
+   "bus_type": "Government - AC Volvo",
+   "reg_no": "",
+   "origin": "Kolkata",
+   "destination": "Chinsurah",
+   "departure_time": "6:00 PM",
+   "arrival_time": "8:00 PM",
+   "contact_number": "",
+   "route": "Kolkata - Chinsurah",
+   "source": "wbxpress Banglashree (BE-18)",
+   "service_note": "Banglashree Express (WBTC AC Volvo) — Kolkata to district-town service. Timings from the official Banglashree list; confirm at the counter before travel.",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kolkata",
+     "up": "6:00 PM",
+     "down": "10:00 AM"
+    },
+    {
+     "name": "Chinsurah",
+     "up": "8:00 PM",
+     "down": "8:00 AM"
+    }
+   ]
   }
  ],
  "enrich": [
