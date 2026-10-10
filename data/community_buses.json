@@ -12872,6 +12872,56 @@
    "service_note": "This is the first bus of the day from Karunamoyee to Haldia, and the last bus from Haldia back to Karunamoyee via Dharmatala. Confirm with the conductor before travel."
   },
   {
+   "target_id": "sbstc-fb-bankura-durgapur-740am-ac",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "time_source": "community report (AC long-route stops only at Barjora)"
+  },
+  {
+   "target_id": "sbstc-fb-bankura-durgapur-400pm-ac",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "time_source": "community report (AC long-route stops only at Barjora)"
+  },
+  {
    "target_id": "bussathi-basundhara-120",
    "contact_number": "7595824650",
    "departure_time": "7:30 AM",
@@ -12973,56 +13023,6 @@
      "down_time": "2:35 PM"
     }
    ]
-  },
-  {
-   "target_id": "sbstc-fb-bankura-durgapur-740am-ac",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bankura",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Barjora",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Durgapur",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "total_stoppages": 3,
-   "time_source": "community report (AC long-route stops only at Barjora)"
-  },
-  {
-   "target_id": "sbstc-fb-bankura-durgapur-400pm-ac",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Bankura",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Barjora",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Durgapur",
-     "up_time": "",
-     "down_time": ""
-    }
-   ],
-   "total_stoppages": 3,
-   "time_source": "community report (AC long-route stops only at Barjora)"
   }
  ]
 }

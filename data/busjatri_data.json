@@ -400611,42 +400611,28 @@
    "route": "Bankura - Durgapur",
    "stoppages": [
     {
-     "name": "Bhairabsthan"
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "name": "Machantala"
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "name": "Satighat"
-    },
-    {
-     "name": "Lakshya"
-    },
-    {
-     "name": "Tora Bridge"
-    },
-    {
-     "name": "Hebir More"
-    },
-    {
-     "name": "Dhoni"
-    },
-    {
-     "name": "Makurgram"
-    },
-    {
-     "name": "Beliatore"
-    },
-    {
-     "name": "Phulberia"
-    },
-    {
-     "name": "Barjora"
+     "no": 3,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
     }
    ],
    "source": "SBSTC Bankura depot timetable (Facebook)",
-   "total_stoppages": 2,
-   "detail_url": ""
+   "total_stoppages": 3,
+   "detail_url": "",
+   "time_source": "community report (AC long-route stops only at Barjora)"
   },
   {
    "id": "sbstc-fb-bankura-durgapur-315pm",
@@ -400715,42 +400701,28 @@
    "route": "Bankura - Durgapur",
    "stoppages": [
     {
-     "name": "Bhairabsthan"
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "name": "Machantala"
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "name": "Satighat"
-    },
-    {
-     "name": "Lakshya"
-    },
-    {
-     "name": "Tora Bridge"
-    },
-    {
-     "name": "Hebir More"
-    },
-    {
-     "name": "Dhoni"
-    },
-    {
-     "name": "Makurgram"
-    },
-    {
-     "name": "Beliatore"
-    },
-    {
-     "name": "Phulberia"
-    },
-    {
-     "name": "Barjora"
+     "no": 3,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
     }
    ],
    "source": "SBSTC Bankura depot timetable (Facebook)",
-   "total_stoppages": 2,
-   "detail_url": ""
+   "total_stoppages": 3,
+   "detail_url": "",
+   "time_source": "community report (AC long-route stops only at Barjora)"
   },
   {
    "id": "sbstc-fb-bankura-durgapur-430pm",
