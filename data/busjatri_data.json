@@ -83379,74 +83379,98 @@
    "route": "Jhalda - Bankura",
    "stoppages": [
     {
-     "no": 1,
      "name": "Jhalda",
      "up_time": "4:30 AM",
-     "down_time": "8:00 PM"
+     "down_time": "8:00 PM",
+     "no": 1
     },
     {
-     "no": 2,
-     "name": "Chas",
+     "name": "Kotsila",
+     "up_time": "4:50 AM",
+     "down_time": "7:40 PM",
+     "no": 2
+    },
+    {
+     "name": "Jaipur",
+     "up_time": "5:10 AM",
+     "down_time": "7:20 PM",
+     "no": 3
+    },
+    {
+     "name": "Chas Road",
      "up_time": "5:20 AM",
-     "down_time": "7:10 PM"
+     "down_time": "7:10 PM",
+     "no": 4
     },
     {
-     "no": 3,
      "name": "Purulia",
      "up_time": "6:40 AM",
-     "down_time": "6:30 PM"
+     "down_time": "6:30 PM",
+     "no": 5
     },
     {
-     "no": 4,
+     "name": "Hutmura",
+     "up_time": "",
+     "down_time": "",
+     "no": 6
+    },
+    {
      "name": "Ladhurka",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 7
     },
     {
-     "no": 5,
+     "name": "Lakshanpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
      "name": "Lalpur",
      "up_time": "7:30 AM",
-     "down_time": "2:25 PM"
+     "down_time": "2:25 PM",
+     "no": 9
     },
     {
-     "no": 6,
      "name": "Hura",
      "up_time": "7:35 AM",
-     "down_time": "2:20 PM"
+     "down_time": "2:20 PM",
+     "no": 10
     },
     {
-     "no": 7,
      "name": "Bishpuria",
      "up_time": "7:55 AM",
-     "down_time": "2:00 PM"
+     "down_time": "2:00 PM",
+     "no": 11
     },
     {
-     "no": 8,
      "name": "Kamalpur",
      "up_time": "8:15 AM",
-     "down_time": "1:40 PM"
+     "down_time": "1:40 PM",
+     "no": 12
     },
     {
-     "no": 9,
      "name": "Kharbona",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 13
     },
     {
-     "no": 10,
      "name": "Chhatna",
      "up_time": "8:35 AM",
-     "down_time": "1:15 PM"
+     "down_time": "1:15 PM",
+     "no": 14
     },
     {
-     "no": 11,
      "name": "Bankura",
      "up_time": "8:50 AM",
-     "down_time": "12:55 PM"
+     "down_time": "12:55 PM",
+     "no": 15
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 11,
+   "total_stoppages": 15,
    "detail_url": "https://bussathi.in/bus/945"
   },
   {
@@ -97526,104 +97550,116 @@
    "route": "Nabadwip - Asansol",
    "stoppages": [
     {
-     "no": 1,
      "name": "Nabadwip",
      "up_time": "5:05 AM",
-     "down_time": "5:15 PM"
+     "down_time": "5:15 PM",
+     "no": 1
     },
     {
-     "no": 2,
      "name": "Hematpur",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 2
     },
     {
-     "no": 3,
      "name": "Nadanghat",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 3
     },
     {
-     "no": 4,
      "name": "Samudragarh",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 4
     },
     {
-     "no": 5,
+     "name": "Dhatrigram",
+     "up_time": "5:50 AM",
+     "down_time": "4:35 PM",
+     "no": 5
+    },
+    {
      "name": "Satgachia",
      "up_time": "6:20 AM",
-     "down_time": "4:00 PM"
+     "down_time": "4:00 PM",
+     "no": 6
     },
     {
-     "no": 6,
      "name": "Hatgobindapur",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 7
     },
     {
-     "no": 7,
      "name": "Mehedibagan",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 8
     },
     {
-     "no": 8,
+     "name": "Bardhaman Station",
+     "up_time": "7:10 AM",
+     "down_time": "3:10 PM",
+     "no": 9
+    },
+    {
      "name": "Bardhaman",
      "up_time": "7:25 AM",
-     "down_time": "2:40 PM"
+     "down_time": "2:40 PM",
+     "no": 10
     },
     {
-     "no": 9,
      "name": "Galsi",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 11
     },
     {
-     "no": 10,
      "name": "Budbud",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 12
     },
     {
-     "no": 11,
      "name": "Panagarh",
      "up_time": "8:15 AM",
-     "down_time": "1:30 PM"
+     "down_time": "1:30 PM",
+     "no": 13
     },
     {
-     "no": 12,
      "name": "Durgapur (Muchipara)",
      "up_time": "8:30 AM",
-     "down_time": "1:10 PM"
+     "down_time": "1:10 PM",
+     "no": 14
     },
     {
-     "no": 13,
      "name": "Durgapur (City Center)",
      "up_time": "8:50 AM",
-     "down_time": "1:00 PM"
+     "down_time": "1:00 PM",
+     "no": 15
     },
     {
-     "no": 14,
      "name": "Andal",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 16
     },
     {
-     "no": 15,
      "name": "Raniganj",
      "up_time": "",
-     "down_time": ""
+     "down_time": "",
+     "no": 17
     },
     {
-     "no": 16,
      "name": "Asansol",
      "up_time": "9:50 AM",
-     "down_time": "11:40 AM"
+     "down_time": "11:40 AM",
+     "no": 18
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 16,
+   "total_stoppages": 18,
    "detail_url": "https://bussathi.in/bus/1155"
   },
   {
@@ -445417,6 +445453,140 @@
    "time_source": "facebook (Aditi Travel's post)",
    "total_stoppages": 14,
    "detail_url": ""
+  },
+  {
+   "id": "avinandan-kharagpur-durgapur-city-center-4722",
+   "bus_name": "Avinandan Kharagpur-Durgapur (Ayan)",
+   "reg_no": "WB 33P 5428",
+   "operator": "Avinandan",
+   "bus_type": "Private",
+   "origin": "Kharagpur",
+   "destination": "Durgapur (City Center)",
+   "departure_time": "7:30 AM",
+   "arrival_time": "1:15 PM",
+   "contact_number": "7478283173",
+   "depot_name": "",
+   "route": "Kharagpur - Medinipur - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kharagpur Bus Stand",
+     "up_time": "7:30 AM",
+     "down_time": "8:20 PM"
+    },
+    {
+     "no": 2,
+     "name": "Mohanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Medinipur Bus Stand",
+     "up_time": "8:10 AM",
+     "down_time": "7:50 PM"
+    },
+    {
+     "no": 4,
+     "name": "Bhadutala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Godapiyashal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Salboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Chandrakona Road",
+     "up_time": "9:35 AM",
+     "down_time": "6:25 PM"
+    },
+    {
+     "no": 8,
+     "name": "Garhbeta",
+     "up_time": "10:00 AM",
+     "down_time": "5:50 PM"
+    },
+    {
+     "no": 9,
+     "name": "Dhadika",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Bankadah",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Bishnupur",
+     "up_time": "10:50 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "no": 12,
+     "name": "Onda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Dhaldanga",
+     "up_time": "11:35 AM",
+     "down_time": "4:25 PM"
+    },
+    {
+     "no": 14,
+     "name": "Bankura Bypass",
+     "up_time": "11:50 AM",
+     "down_time": "4:10 PM"
+    },
+    {
+     "no": 15,
+     "name": "Makurgaram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Beliatore",
+     "up_time": "12:15 PM",
+     "down_time": "3:35 PM"
+    },
+    {
+     "no": 17,
+     "name": "Barjora",
+     "up_time": "12:25 PM",
+     "down_time": "3:20 PM"
+    },
+    {
+     "no": 18,
+     "name": "Durgapur Station",
+     "up_time": "12:55 PM",
+     "down_time": "2:55 PM"
+    },
+    {
+     "no": 19,
+     "name": "Durgapur (City Center)",
+     "up_time": "",
+     "down_time": "2:15 PM"
+    }
+   ],
+   "source": "facebook (Avinandan post)",
+   "time_source": "facebook (Avinandan post)",
+   "total_stoppages": 19,
+   "detail_url": ""
   }
  ],
  "routes": {
@@ -535878,7 +536048,7 @@
   }
  },
  "meta": {
-  "total_buses": 4716,
+  "total_buses": 4717,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
