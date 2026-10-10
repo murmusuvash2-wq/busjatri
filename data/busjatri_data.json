@@ -14373,9 +14373,9 @@
   },
   {
    "id": "wbbus-in-chiranjit-1281",
-   "bus_name": "CHIRANJIT",
+   "bus_name": "CHIRANJEET",
    "reg_no": "WB433535",
-   "operator": "—",
+   "operator": "Chiranjeet",
    "bus_type": "Private - NON AC",
    "origin": "Asansol",
    "destination": "Krishnanagar",
@@ -14383,7 +14383,7 @@
    "arrival_time": "11:40 AM",
    "contact_number": "Not Available !",
    "depot_name": "Asansol",
-   "route": "Asansol - Krishnanagar",
+   "route": "Asansol - Bardhaman - Krishnanagar",
    "stoppages": [
     {
      "no": 1,
@@ -14405,20 +14405,20 @@
     },
     {
      "no": 4,
-     "name": "Durgapur (City Center)",
+     "name": "Biringi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Durgapur City Centre",
      "up_time": "6:35 AM",
      "down_time": "5:00 PM"
     },
     {
-     "no": 5,
-     "name": "Durgapur (Muchipara)",
-     "up_time": "6:45 AM",
-     "down_time": ""
-    },
-    {
      "no": 6,
      "name": "Panagarh",
-     "up_time": "7:05 AM",
+     "up_time": "",
      "down_time": ""
     },
     {
@@ -14435,68 +14435,129 @@
     },
     {
      "no": 9,
-     "name": "Bardhaman",
+     "name": "Bardhaman Nababhat Bus Stand",
      "up_time": "8:20 AM",
      "down_time": "3:30 PM"
     },
     {
      "no": 10,
-     "name": "Golapbag",
+     "name": "Nababhat More",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 11,
-     "name": "Mehedibagan",
+     "name": "Golapbag",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 12,
-     "name": "Hatgobindapur",
+     "name": "City Hotel",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 13,
-     "name": "Satgachia",
-     "up_time": "9:45 AM",
-     "down_time": "2:00 PM"
+     "name": "College More",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 14,
-     "name": "Samudragarh",
+     "name": "Mehedibagan",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 15,
-     "name": "Nadanghat",
+     "name": "Bardhaman Station More",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 16,
-     "name": "Hematpur",
+     "name": "Kalna Gate",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 17,
-     "name": "Nabadwip",
-     "up_time": "10:10 AM",
-     "down_time": "12:55 PM"
+     "name": "Hatgobindapur",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 18,
+     "name": "Paharhati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Satgachia",
+     "up_time": "9:45 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "no": 20,
+     "name": "Bohar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Bulbulitala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Dhatrigram More",
+     "up_time": "10:15 AM",
+     "down_time": "1:25 PM"
+    },
+    {
+     "no": 23,
+     "name": "Samudragarh More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Nadanghat More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Hematpur More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Nabadwip Railgate",
+     "up_time": "10:40 AM",
+     "down_time": "12:55 PM"
+    },
+    {
+     "no": 27,
+     "name": "Krishnanagar High Road",
+     "up_time": "11:20 AM",
+     "down_time": "12:20 PM"
+    },
+    {
+     "no": 28,
      "name": "Krishnanagar",
      "up_time": "11:40 AM",
      "down_time": "12:00 PM"
     }
    ],
    "source": "wbbus.in",
-   "total_stoppages": 18,
-   "detail_url": "https://wbbus.in/bus/chiranjit-wb433535-asansol-krishnanagar-1373"
+   "total_stoppages": 28,
+   "detail_url": "https://wbbus.in/bus/chiranjit-wb433535-asansol-krishnanagar-1373",
+   "time_source": "facebook (Chiranjeet post)"
   },
   {
    "id": "wbbus-in-dakshayani-1283",
@@ -26390,7 +26451,7 @@
    "id": "bussathi-asha-65",
    "bus_name": "ASHA",
    "reg_no": "WB41K3294",
-   "operator": "—",
+   "operator": "Asha",
    "bus_type": "Private - NON AC",
    "origin": "Barakar",
    "destination": "Krishnanagar",
@@ -26398,25 +26459,25 @@
    "arrival_time": "9:50 AM",
    "contact_number": "7029262612",
    "depot_name": "Barakar",
-   "route": "Barakar - Krishnanagar",
+   "route": "Barakar - Asansol - Bardhaman - Krishnanagar",
    "stoppages": [
     {
      "no": 1,
      "name": "Barakar",
-     "up_time": "3:45 AM",
-     "down_time": "5:20 PM"
+     "up_time": "3:50 AM",
+     "down_time": "5:30 PM"
     },
     {
      "no": 2,
-     "name": "Neamatpur",
+     "name": "Kulti",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 3,
      "name": "Asansol",
-     "up_time": "4:25 AM",
-     "down_time": "4:35 PM"
+     "up_time": "4:30 AM",
+     "down_time": "4:40 PM"
     },
     {
      "no": 4,
@@ -26432,21 +26493,21 @@
     },
     {
      "no": 6,
-     "name": "Durgapur (City Center)",
+     "name": "Durgapur City Centre",
      "up_time": "5:30 AM",
      "down_time": "3:40 PM"
     },
     {
      "no": 7,
-     "name": "Durgapur (Muchipara)",
-     "up_time": "5:40 AM",
+     "name": "Muchipara",
+     "up_time": "",
      "down_time": ""
     },
     {
      "no": 8,
      "name": "Panagarh",
-     "up_time": "6:00 AM",
-     "down_time": "3:10 PM"
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 9,
@@ -26462,56 +26523,81 @@
     },
     {
      "no": 11,
-     "name": "Bardhaman",
+     "name": "Bardhaman Nababhat Bus Stand",
      "up_time": "7:00 AM",
      "down_time": "2:15 PM"
     },
     {
      "no": 12,
-     "name": "Hatgobindapur",
+     "name": "Bardhaman Station More",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 13,
-     "name": "Satgachia",
-     "up_time": "8:20 AM",
-     "down_time": "12:45 PM"
-    },
-    {
-     "no": 14,
-     "name": "Samudragarh",
+     "name": "Hatgobindapur",
      "up_time": "",
      "down_time": ""
     },
     {
+     "no": 14,
+     "name": "Satgachia",
+     "up_time": "8:20 AM",
+     "down_time": "12:55 PM"
+    },
+    {
      "no": 15,
-     "name": "Nadanghat",
+     "name": "Dhatrigram",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 16,
-     "name": "Hematpur",
+     "name": "Samudragarh",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 17,
-     "name": "Nabadwip",
-     "up_time": "9:15 AM",
-     "down_time": "11:45 AM"
+     "name": "Nadanghat More",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 18,
+     "name": "Hematpur More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Nabadwip Railgate",
+     "up_time": "9:20 AM",
+     "down_time": "11:45 AM"
+    },
+    {
+     "no": 20,
+     "name": "Bhaluka Battala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Krishnanagar High Road",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
      "name": "Krishnanagar",
-     "up_time": "9:50 AM",
-     "down_time": "11:00 AM"
+     "up_time": "10:00 AM",
+     "down_time": "11:05 AM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 18,
-   "detail_url": "https://bussathi.in/bus/76"
+   "total_stoppages": 22,
+   "detail_url": "https://bussathi.in/bus/76",
+   "time_source": "facebook (Asha post)"
   },
   {
    "id": "bussathi-ayesha-0",
@@ -63321,7 +63407,7 @@
    "id": "bussathi-mafuzar-454",
    "bus_name": "MAFUZAR",
    "reg_no": "WB37D6341",
-   "operator": "ISRAIL TRAVELS",
+   "operator": "Mir Israil Travels",
    "bus_type": "Private - NON AC",
    "origin": "Mougram",
    "destination": "Asansol",
@@ -63329,7 +63415,7 @@
    "arrival_time": "11:15 AM",
    "contact_number": "8944837277",
    "depot_name": "Mougram",
-   "route": "Mougram - Asansol",
+   "route": "Mougram - Salar - Bolpur - Asansol",
    "stoppages": [
     {
      "no": 1,
@@ -63339,92 +63425,195 @@
     },
     {
      "no": 2,
+     "name": "Kagram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
      "name": "Salar",
      "up_time": "5:55 AM",
      "down_time": "6:10 PM"
     },
     {
-     "no": 3,
-     "name": "Pachundi",
-     "up_time": "6:40 AM",
-     "down_time": "5:45 PM"
-    },
-    {
      "no": 4,
-     "name": "Futishanko",
-     "up_time": "7:10 AM",
-     "down_time": "5:20 PM"
-    },
-    {
-     "no": 5,
-     "name": "Kirnahar",
-     "up_time": "7:30 AM",
-     "down_time": "5:00 PM"
-    },
-    {
-     "no": 6,
-     "name": "Nanoor",
+     "name": "Dakshinkhand",
      "up_time": "",
      "down_time": ""
     },
     {
+     "no": 5,
+     "name": "Sonarandi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Pachundi",
+     "up_time": "6:40 AM",
+     "down_time": ""
+    },
+    {
      "no": 7,
-     "name": "Bolpur",
-     "up_time": "8:45 AM",
-     "down_time": "3:45 PM"
+     "name": "Nirol",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 8,
-     "name": "Illambazar",
-     "up_time": "9:10 AM",
-     "down_time": "3:00 PM"
+     "name": "Komarpur",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 9,
-     "name": "Piyariganj",
+     "name": "Kandara",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 10,
-     "name": "Panagarh",
-     "up_time": "9:45 AM",
-     "down_time": "2:20 PM"
+     "name": "Futisanko",
+     "up_time": "",
+     "down_time": "5:20 PM"
     },
     {
      "no": 11,
-     "name": "Durgapur (Muchipara)",
+     "name": "Daskalgram",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 12,
-     "name": "Durgapur (City Center)",
+     "name": "Jubutia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Kirnahar",
+     "up_time": "7:30 AM",
+     "down_time": "5:00 PM"
+    },
+    {
+     "no": 14,
+     "name": "Nanoor",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Beluti",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Sian Hospital",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Trishulapatti",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Bolpur",
+     "up_time": "8:45 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "no": 19,
+     "name": "Sriniketan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Mahidapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Bonvila",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Illambazar",
+     "up_time": "9:10 AM",
+     "down_time": "3:00 PM"
+    },
+    {
+     "no": 23,
+     "name": "11 Mile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Darjeeling More",
+     "up_time": "9:50 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "no": 25,
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "C.T. Centre",
      "up_time": "10:10 AM",
      "down_time": "1:50 PM"
     },
     {
-     "no": 13,
+     "no": 27,
+     "name": "Gandhi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Biringi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
      "name": "Andal",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 14,
-     "name": "Raniganj",
+     "no": 30,
+     "name": "Raniganj More",
      "up_time": "",
      "down_time": "1:20 PM"
     },
     {
-     "no": 15,
-     "name": "Asansol",
+     "no": 31,
+     "name": "Punjabi More",
      "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Asansol",
+     "up_time": "11:10 AM",
      "down_time": "12:50 PM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 15,
-   "detail_url": "https://bussathi.in/bus/634"
+   "total_stoppages": 32,
+   "detail_url": "https://bussathi.in/bus/634",
+   "time_source": "facebook (Mafuzar post)"
   },
   {
    "id": "bussathi-mafuzar-455",
@@ -67730,22 +67919,22 @@
   },
   {
    "id": "bussathi-mitra-502",
-   "bus_name": "MITRA (Super Fast)",
+   "bus_name": "MITRA TRAVELS",
    "reg_no": "WB31AA9969",
-   "operator": "Mitra",
+   "operator": "Mitra Travels",
    "bus_type": "Private",
    "origin": "Asansol",
-   "destination": "Contai (Kanthi)",
+   "destination": "Digha",
    "departure_time": "6:15 AM",
    "arrival_time": "3:40 PM",
    "contact_number": "7319325245",
    "depot_name": "Asansol",
-   "route": "Asansol - Medinipur - Contai",
+   "route": "Asansol - Bishnupur - Kharagpur - Digha",
    "stoppages": [
     {
      "no": 1,
      "name": "Asansol",
-     "up_time": "6:15 AM",
+     "up_time": "6:20 AM",
      "down_time": "4:50 PM"
     },
     {
@@ -67756,15 +67945,15 @@
     },
     {
      "no": 3,
-     "name": "Durgapur (City Center)",
+     "name": "Durgapur City Centre",
      "up_time": "7:15 AM",
-     "down_time": "3:30 PM"
+     "down_time": "3:45 PM"
     },
     {
      "no": 4,
-     "name": "Durgapur (Station)",
-     "up_time": "7:40 AM",
-     "down_time": "3:15 PM"
+     "name": "Durgapur Station",
+     "up_time": "7:45 AM",
+     "down_time": "3:30 PM"
     },
     {
      "no": 5,
@@ -67780,110 +67969,255 @@
     },
     {
      "no": 7,
-     "name": "Makurgram",
-     "up_time": "",
-     "down_time": ""
+     "name": "Bankura Bypass",
+     "up_time": "8:45 AM",
+     "down_time": "2:15 PM"
     },
     {
      "no": 8,
-     "name": "Bankura Bypass",
-     "up_time": "8:45 AM",
-     "down_time": "2:05 PM"
-    },
-    {
-     "no": 9,
      "name": "Dhaldanga",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 10,
+     "no": 9,
      "name": "Onda",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 11,
+     "no": 10,
      "name": "Ramsagar",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 12,
+     "no": 11,
      "name": "Bishnupur",
-     "up_time": "9:50 AM",
+     "up_time": "9:45 AM",
      "down_time": "1:20 PM"
     },
     {
-     "no": 13,
+     "no": 12,
      "name": "Bankadah",
      "up_time": "10:10 AM",
      "down_time": "12:50 PM"
     },
     {
-     "no": 14,
+     "no": 13,
      "name": "Dhadika",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 15,
+     "no": 14,
      "name": "Garhbeta",
-     "up_time": "",
+     "up_time": "10:25 AM",
      "down_time": "12:40 PM"
     },
     {
-     "no": 16,
-     "name": "Chandrakona",
+     "no": 15,
+     "name": "Chandrakona Road",
      "up_time": "11:00 AM",
-     "down_time": "12:05 PM"
+     "down_time": "12:15 PM"
     },
     {
-     "no": 17,
+     "no": 16,
      "name": "Salboni",
-     "up_time": "",
+     "up_time": "11:45 AM",
      "down_time": ""
     },
     {
-     "no": 18,
+     "no": 17,
      "name": "Bhadutala",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 19,
+     "no": 18,
      "name": "Medinipur",
      "up_time": "12:20 PM",
-     "down_time": "11:00 AM"
+     "down_time": "11:05 AM"
     },
     {
-     "no": 20,
-     "name": "Kharagpur",
-     "up_time": "1:20 PM",
+     "no": 19,
+     "name": "Kharagpur Chourangi",
+     "up_time": "",
      "down_time": "10:00 AM"
     },
     {
+     "no": 20,
+     "name": "Kharagpur Station",
+     "up_time": "1:20 PM",
+     "down_time": ""
+    },
+    {
      "no": 21,
-     "name": "Belda",
-     "up_time": "2:10 PM",
-     "down_time": "9:25 AM"
+     "name": "Makrampur",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 22,
-     "name": "Egra",
-     "up_time": "2:50 PM",
-     "down_time": "8:45 AM"
+     "name": "Narayangarh",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 23,
-     "name": "Contai (Kanthi)",
-     "up_time": "3:40 PM",
+     "name": "Bakhrabad",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Belda",
+     "up_time": "2:05 PM",
+     "down_time": "9:25 AM"
+    },
+    {
+     "no": 25,
+     "name": "Thakurchak",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Khakurda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Sauri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Jahalda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Lalat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Egra",
+     "up_time": "2:50 PM",
+     "down_time": "8:40 AM"
+    },
+    {
+     "no": 31,
+     "name": "Dobadhi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Balighai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Tajpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 34,
+     "name": "Bhawanichak",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 35,
+     "name": "Satmile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Rautara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Kanthi Central Bus Stand",
+     "up_time": "3:30 PM",
      "down_time": "8:00 AM"
+    },
+    {
+     "no": 38,
+     "name": "Ghatua",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 39,
+     "name": "Pichabani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 40,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 41,
+     "name": "Balisai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 42,
+     "name": "Chouddomile",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 43,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 44,
+     "name": "Thikra More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 45,
+     "name": "Old Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 46,
+     "name": "New Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 47,
+     "name": "Digha Border (Udaypur)",
+     "up_time": "",
+     "down_time": ""
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 23,
-   "detail_url": "https://bussathi.in/bus/703"
+   "total_stoppages": 47,
+   "detail_url": "https://bussathi.in/bus/703",
+   "time_source": "facebook (Mitra/Jinia post)"
   },
   {
    "id": "bussathi-mitra-501",
@@ -101707,9 +102041,9 @@
   },
   {
    "id": "bussathi-veer-849",
-   "bus_name": "VEER",
+   "bus_name": "AYESHA (VEER)",
    "reg_no": "WB41H6638",
-   "operator": "—",
+   "operator": "Veer (Ayesha)",
    "bus_type": "Private - NON AC",
    "origin": "Krishnanagar",
    "destination": "Asansol",
@@ -101717,102 +102051,193 @@
    "arrival_time": "10:40 AM",
    "contact_number": "8942809805",
    "depot_name": "Krishnanagar",
-   "route": "Krishnanagar - Asansol",
+   "route": "Krishnanagar - Nabadwip - Bardhaman - Asansol",
    "stoppages": [
     {
      "no": 1,
      "name": "Krishnanagar",
-     "up_time": "4:55 AM",
-     "down_time": "7:15 PM"
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 2,
-     "name": "Nabadwip",
+     "name": "Nabadwip Railgate",
      "up_time": "5:35 AM",
      "down_time": "6:10 PM"
     },
     {
      "no": 3,
-     "name": "Nadanghat",
-     "up_time": "",
+     "name": "Hematpur More",
+     "up_time": "5:45 AM",
      "down_time": ""
     },
     {
      "no": 4,
-     "name": "Kusumgram",
-     "up_time": "6:35 AM",
-     "down_time": "5:30 PM"
+     "name": "Nadanghat More",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 5,
-     "name": "Mehedibagan",
+     "name": "Singhjuli",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 6,
-     "name": "Golapbag",
+     "name": "Rajibpur",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 7,
-     "name": "Bardhaman",
-     "up_time": "8:05 AM",
-     "down_time": "3:55 PM"
+     "name": "Nadanghat",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 8,
-     "name": "Galsi",
+     "name": "Raigram",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 9,
-     "name": "Budbud",
-     "up_time": "",
-     "down_time": ""
+     "name": "Kusumgram",
+     "up_time": "6:40 AM",
+     "down_time": "5:30 PM"
     },
     {
      "no": 10,
-     "name": "Panagarh",
+     "name": "Malamba",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 11,
-     "name": "Durgapur (Muchipara)",
+     "name": "Bhandardihi",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 12,
-     "name": "Durgapur (City Center)",
-     "up_time": "9:35 AM",
-     "down_time": "2:05 PM"
+     "name": "Kurmun",
+     "up_time": "",
+     "down_time": ""
     },
     {
      "no": 13,
-     "name": "Andal",
+     "name": "Dewandighi More",
      "up_time": "",
      "down_time": ""
     },
     {
      "no": 14,
-     "name": "Raniganj",
+     "name": "Bardhaman Station",
+     "up_time": "7:45 AM",
+     "down_time": "3:55 PM"
+    },
+    {
+     "no": 15,
+     "name": "College More",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 15,
+     "no": 16,
+     "name": "City College",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Golapbag",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Nababhat More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Nababhat Bus Stand",
+     "up_time": "8:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Galsi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Budbud",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Panagarh",
+     "up_time": "9:00 AM",
+     "down_time": "2:30 PM"
+    },
+    {
+     "no": 23,
+     "name": "Rajbandh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Durgapur City Centre",
+     "up_time": "9:30 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "no": 26,
+     "name": "Biringi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Andal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Raniganj Punjabi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Kalipahari More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
      "name": "Asansol",
-     "up_time": "10:40 AM",
+     "up_time": "",
      "down_time": "12:55 PM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 15,
-   "detail_url": "https://bussathi.in/bus/1220"
+   "total_stoppages": 30,
+   "detail_url": "https://bussathi.in/bus/1220",
+   "time_source": "facebook (Ayesha/Veer post)"
   },
   {
    "id": "bussathi-vijay-851",
@@ -105624,9 +106049,9 @@
   },
   {
    "id": "bussathi-puspak-904",
-   "bus_name": "PUSPAK",
-   "reg_no": "WB37M2489",
-   "operator": "—",
+   "bus_name": "PUSHPAK (HAR GAURI)",
+   "reg_no": "WB 37B 9424",
+   "operator": "Pushpak (Har Gauri)",
    "bus_type": "",
    "origin": "Barakar",
    "destination": "Bardhaman",
@@ -105634,18 +106059,110 @@
    "arrival_time": "12:50 PM",
    "contact_number": "Not Available !",
    "depot_name": "",
-   "route": "Barakar - Bardhaman",
+   "route": "Barakar - Asansol - Bardhaman",
    "stoppages": [
     {
-     "name": "Barakar"
+     "no": 1,
+     "name": "Barakar",
+     "up_time": "9:25 AM",
+     "down_time": "7:40 PM"
     },
     {
-     "name": "Bardhaman"
+     "no": 2,
+     "name": "Kulti More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Niyamatpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Asansol Bus Stand",
+     "up_time": "10:20 AM",
+     "down_time": "6:50 PM"
+    },
+    {
+     "no": 5,
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Andal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Biringi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "C.T. Centre",
+     "up_time": "11:25 AM",
+     "down_time": "5:45 PM"
+    },
+    {
+     "no": 9,
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Rajbandh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Panagarh",
+     "up_time": "11:55 AM",
+     "down_time": "5:15 PM"
+    },
+    {
+     "no": 12,
+     "name": "Budbud",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Paraj",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Purusha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Galsi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bardhaman Nababhat Bus Stand",
+     "up_time": "12:50 PM",
+     "down_time": "4:20 PM"
     }
    ],
    "source": "bussathi.in",
-   "total_stoppages": 0,
-   "detail_url": "https://bussathi.in/bus/1296"
+   "total_stoppages": 16,
+   "detail_url": "https://bussathi.in/bus/1296",
+   "time_source": "facebook (Pushpak post)",
+   "service_note": "This is the last direct bus from Bardhaman back to Barakar. Confirm with the conductor before travel."
   },
   {
    "id": "bussathi-raja-coach-905",
