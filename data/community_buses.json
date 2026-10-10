@@ -6115,6 +6115,87 @@
      "down": "11:40 AM"
     }
    ]
+  },
+  {
+   "operator": "Partha Sarathi",
+   "bus_name": "Partha Sarathi Bargaria-Purulia",
+   "bus_type": "Private",
+   "reg_no": "WB 55B 7779",
+   "origin": "Bargaria",
+   "destination": "Purulia",
+   "departure_time": "8:20 AM",
+   "arrival_time": "11:40 AM",
+   "contact_number": "",
+   "route": "Bargaria - Manbazar - Purulia",
+   "source": "facebook (Partha Sarathi post)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Bargaria",
+     "up": "8:20 AM",
+     "down": "6:30 PM"
+    },
+    {
+     "name": "Jamtoria",
+     "up": "8:30 AM",
+     "down": "6:10 PM"
+    },
+    {
+     "name": "Dharampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Burudi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Boro More",
+     "up": "8:50 AM",
+     "down": "5:50 PM"
+    },
+    {
+     "name": "Khariduara More",
+     "up": "9:10 AM",
+     "down": "5:30 PM"
+    },
+    {
+     "name": "Manbazar",
+     "up": "9:30 AM",
+     "down": "5:10 PM"
+    },
+    {
+     "name": "Gopalnagar",
+     "up": "10:10 AM",
+     "down": "4:30 PM"
+    },
+    {
+     "name": "Kenda More",
+     "up": "10:40 AM",
+     "down": "4:00 PM"
+    },
+    {
+     "name": "Chakaltor",
+     "up": "11:10 AM",
+     "down": "3:30 PM"
+    },
+    {
+     "name": "Tamna",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Simulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Purulia",
+     "up": "",
+     "down": "3:00 PM"
+    }
+   ]
   }
  ],
  "enrich": [
