@@ -1385,7 +1385,8 @@ def generate_stand_page_v2(stand):
             description += ", first {}, last {}".format(g.format_time(first), g.format_time(last))
         description += ". Popular routes, all destinations and FAQs on {}.".format(g.SITE_NAME)
     description = description[:300]
-    canonical = "{}/bus-time-table/{}".format(g.BASE, filename)
+    _urlname = filename[:-5] if filename.endswith(".html") else filename
+    canonical = "{}/bus-time-table/{}".format(g.BASE, _urlname)
 
     # ---- hero chips (bilingual) ----
     if count == 0:
