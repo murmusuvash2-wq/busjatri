@@ -33,17 +33,9 @@ P.append((
 }''',
 "include single-bus routes"))
 
-# ---- P2: bus_card Time N/A ----
-P.append((
-'''    return f"""<div class="bus-row">
-  <div class="dep">{esc(dep)}<small>{esc(arr)} arr</small></div>''',
-'''    if dep == "—":
-        dep_html = '<span class="no-time">Time N/A</span>'
-    else:
-        dep_html = f"{esc(dep)}<small>{esc(arr)} arr</small>"
-    return f"""<div class="bus-row">
-  <div class="dep">{dep_html}</div>''',
-"bus_card Time N/A"))
+# ---- P2 (bus_card Time N/A) + P5 (place-page 1-bus grammar): REMOVED ----
+#      gen_seo_pages.py already implements both natively (no-time pill +
+#      "1 bus"/"N buses" grammar), so these two patches are superseded.
 
 # ---- P3: route hero grammar ----
 P.append((
@@ -57,13 +49,6 @@ P.append((
 "{len(rs)} route{'s' if len(rs) != 1 else ''}</span>",
 "index pr-n grammar"))
 
-# ---- P5: place page route-links grammar ----
-P.append((
-'''    {number} buses
-  </span>''',
-'''    {number} bus{'es' if number != 1 else ''}
-  </span>''',
-"place page buses grammar"))
 
 # ---- P6: index h1 bilingual ----
 P.append((
@@ -79,16 +64,16 @@ P.append((
 
 # ---- P8: stat chips bilingual ----
 P.append((
-'''<strong data-count="{_total_places}">0</strong> places</span>''',
-'''<strong data-count="{_total_places}">0</strong> <span class="label-en">places</span><span class="label-bn">স্থান</span></span>''',
+'''<strong data-count="{_total_places}">{_total_places:,}</strong> places</span>''',
+'''<strong data-count="{_total_places}">{_total_places:,}</strong> <span class="label-en">places</span><span class="label-bn">স্থান</span></span>''',
 "stat chip places"))
 P.append((
-'''<strong data-count="{_total_routes}">0</strong> routes</span>''',
-'''<strong data-count="{_total_routes}">0</strong> <span class="label-en">routes</span><span class="label-bn">রুট</span></span>''',
+'''<strong data-count="{_total_routes}">{_total_routes:,}</strong> routes</span>''',
+'''<strong data-count="{_total_routes}">{_total_routes:,}</strong> <span class="label-en">routes</span><span class="label-bn">রুট</span></span>''',
 "stat chip routes"))
 P.append((
-'''<strong data-count="{_total_buses}">0</strong> bus services</span>''',
-'''<strong data-count="{_total_buses}">0</strong> <span class="label-en">bus services</span><span class="label-bn">বাস সার্ভিস</span></span>''',
+'''<strong data-count="{_total_buses}">{_total_buses:,}</strong> bus services</span>''',
+'''<strong data-count="{_total_buses}">{_total_buses:,}</strong> <span class="label-en">bus services</span><span class="label-bn">বাস সার্ভিস</span></span>''',
 "stat chip buses"))
 
 # ---- P9: search label bilingual ----
@@ -105,15 +90,15 @@ P.append((
 
 # ---- P11: section titles bilingual ----
 P.append((
-'''</svg> Matching Routes</div>''',
+'''</svg> Matching Routes</h2>''',
 '''</svg> <span class="label-en">Matching Routes</span><span class="label-bn">মিলছে এমন রুট</span></div>''',
 "matching routes title"))
 P.append((
-'''</svg> Popular Starting Places</div>''',
+'''</svg> Popular Starting Places</h2>''',
 '''</svg> <span class="label-en">Popular Starting Places</span><span class="label-bn">জনপ্রিয় ছাড়ার জায়গা</span></div>''',
 "popular title"))
 P.append((
-'''</svg> All Places &middot; A to Z</div>''',
+'''</svg> All Places &middot; A to Z</h2>''',
 '''</svg> <span class="label-en">All Places &middot; A to Z</span><span class="label-bn">সব জায়গা &middot; A–Z</span></div>''',
 "az title"))
 
@@ -197,12 +182,14 @@ function toggleLang(){
 ok = True
 for i, (old, new, desc) in enumerate(P, 1):
     n = src.count(old)
-    if n != 1:
-        print(f"FAIL P{i} ({desc}): found {n} occurrences (need exactly 1)")
-        ok = False
-    else:
+    if n == 1:
         src = src.replace(old, new)
         print(f"OK   P{i}: {desc}")
+    elif new in src:
+        print(f"SKIP P{i} ({desc}): already applied")
+    else:
+        print(f"FAIL P{i} ({desc}): found {n} occurrences (need exactly 1)")
+        ok = False
 
 if not ok:
     print("ABORTED — file NOT written")
