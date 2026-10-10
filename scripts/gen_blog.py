@@ -176,11 +176,11 @@ def article_page(a):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{a["title"]} | BusJatri</title>
 <meta name="description" content="{a["desc"]}">
-<link rel="canonical" href="{BASE}/blog/{a["slug"]}.html">
+<link rel="canonical" href="{BASE}/blog/{a["slug"]}">
 <meta property="og:title" content="{a["title"]} | BusJatri">
 <meta property="og:description" content="{a["desc"]}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="{BASE}/blog/{a["slug"]}.html">
+<meta property="og:url" content="{BASE}/blog/{a["slug"]}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#b8791f">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -316,7 +316,7 @@ def main():
         s = re.sub(r"<url><loc>" + re.escape(BASE) + r"/blog/[^<]*</loc>.*?</url>\n?", "", s)
         add = f"<url><loc>{BASE}/blog/</loc><lastmod>{TODAY}</lastmod><priority>0.8</priority></url>\n"
         for a in manifest_articles() + ARTICLES:
-            add += f"<url><loc>{BASE}/blog/{a['slug']}.html</loc><lastmod>{TODAY}</lastmod><priority>0.7</priority></url>\n"
+            add += f"<url><loc>{BASE}/blog/{a['slug']}</loc><lastmod>{TODAY}</lastmod><priority>0.7</priority></url>\n"
         s = s.replace("</urlset>", add + "</urlset>")
         sm.write_text(s, encoding="utf-8")
         print("sitemap: blog urls added")
