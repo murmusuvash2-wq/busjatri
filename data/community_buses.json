@@ -5948,6 +5948,117 @@
      "down": "5:10 PM"
     }
    ]
+  },
+  {
+   "operator": "Avinandan",
+   "bus_name": "Avinandan Kharagpur-Durgapur (Ayan)",
+   "bus_type": "Private",
+   "reg_no": "WB 33P 5428",
+   "origin": "Kharagpur",
+   "destination": "Durgapur (City Center)",
+   "departure_time": "7:30 AM",
+   "arrival_time": "1:15 PM",
+   "contact_number": "7478283173",
+   "route": "Kharagpur - Medinipur - Durgapur",
+   "source": "facebook (Avinandan post)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kharagpur Bus Stand",
+     "up": "7:30 AM",
+     "down": "8:20 PM"
+    },
+    {
+     "name": "Mohanpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Medinipur Bus Stand",
+     "up": "8:10 AM",
+     "down": "7:50 PM"
+    },
+    {
+     "name": "Bhadutala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Godapiyashal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salboni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Chandrakona Road",
+     "up": "9:35 AM",
+     "down": "6:25 PM"
+    },
+    {
+     "name": "Garhbeta",
+     "up": "10:00 AM",
+     "down": "5:50 PM"
+    },
+    {
+     "name": "Dhadika",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankadah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up": "10:50 AM",
+     "down": "5:10 PM"
+    },
+    {
+     "name": "Onda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up": "11:35 AM",
+     "down": "4:25 PM"
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "11:50 AM",
+     "down": "4:10 PM"
+    },
+    {
+     "name": "Makurgaram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Beliatore",
+     "up": "12:15 PM",
+     "down": "3:35 PM"
+    },
+    {
+     "name": "Barjora",
+     "up": "12:25 PM",
+     "down": "3:20 PM"
+    },
+    {
+     "name": "Durgapur Station",
+     "up": "12:55 PM",
+     "down": "2:55 PM"
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up": "",
+     "down": "2:15 PM"
+    }
+   ]
   }
  ],
  "enrich": [
@@ -8180,6 +8291,216 @@
      "down_time": "2:35 PM"
     }
    ]
+  },
+  {
+   "target_id": "bussathi-s-travels-661",
+   "stoppages": [
+    {
+     "name": "Jhalda",
+     "up_time": "4:30 AM",
+     "down_time": "8:00 PM",
+     "no": 1
+    },
+    {
+     "name": "Kotsila",
+     "up_time": "4:50 AM",
+     "down_time": "7:40 PM",
+     "no": 2
+    },
+    {
+     "name": "Jaipur",
+     "up_time": "5:10 AM",
+     "down_time": "7:20 PM",
+     "no": 3
+    },
+    {
+     "name": "Chas Road",
+     "up_time": "5:20 AM",
+     "down_time": "7:10 PM",
+     "no": 4
+    },
+    {
+     "name": "Purulia",
+     "up_time": "6:40 AM",
+     "down_time": "6:30 PM",
+     "no": 5
+    },
+    {
+     "name": "Hutmura",
+     "up_time": "",
+     "down_time": "",
+     "no": 6
+    },
+    {
+     "name": "Ladhurka",
+     "up_time": "",
+     "down_time": "",
+     "no": 7
+    },
+    {
+     "name": "Lakshanpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
+     "name": "Lalpur",
+     "up_time": "7:30 AM",
+     "down_time": "2:25 PM",
+     "no": 9
+    },
+    {
+     "name": "Hura",
+     "up_time": "7:35 AM",
+     "down_time": "2:20 PM",
+     "no": 10
+    },
+    {
+     "name": "Bishpuria",
+     "up_time": "7:55 AM",
+     "down_time": "2:00 PM",
+     "no": 11
+    },
+    {
+     "name": "Kamalpur",
+     "up_time": "8:15 AM",
+     "down_time": "1:40 PM",
+     "no": 12
+    },
+    {
+     "name": "Kharbona",
+     "up_time": "",
+     "down_time": "",
+     "no": 13
+    },
+    {
+     "name": "Chhatna",
+     "up_time": "8:35 AM",
+     "down_time": "1:15 PM",
+     "no": 14
+    },
+    {
+     "name": "Bankura",
+     "up_time": "8:50 AM",
+     "down_time": "12:55 PM",
+     "no": 15
+    }
+   ],
+   "total_stoppages": 15
+  },
+  {
+   "target_id": "bussathi-sweety-807",
+   "stoppages": [
+    {
+     "name": "Nabadwip",
+     "up_time": "5:05 AM",
+     "down_time": "5:15 PM",
+     "no": 1
+    },
+    {
+     "name": "Hematpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 2
+    },
+    {
+     "name": "Nadanghat",
+     "up_time": "",
+     "down_time": "",
+     "no": 3
+    },
+    {
+     "name": "Samudragarh",
+     "up_time": "",
+     "down_time": "",
+     "no": 4
+    },
+    {
+     "name": "Dhatrigram",
+     "up_time": "5:50 AM",
+     "down_time": "4:35 PM",
+     "no": 5
+    },
+    {
+     "name": "Satgachia",
+     "up_time": "6:20 AM",
+     "down_time": "4:00 PM",
+     "no": 6
+    },
+    {
+     "name": "Hatgobindapur",
+     "up_time": "",
+     "down_time": "",
+     "no": 7
+    },
+    {
+     "name": "Mehedibagan",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
+     "name": "Bardhaman Station",
+     "up_time": "7:10 AM",
+     "down_time": "3:10 PM",
+     "no": 9
+    },
+    {
+     "name": "Bardhaman",
+     "up_time": "7:25 AM",
+     "down_time": "2:40 PM",
+     "no": 10
+    },
+    {
+     "name": "Galsi",
+     "up_time": "",
+     "down_time": "",
+     "no": 11
+    },
+    {
+     "name": "Budbud",
+     "up_time": "",
+     "down_time": "",
+     "no": 12
+    },
+    {
+     "name": "Panagarh",
+     "up_time": "8:15 AM",
+     "down_time": "1:30 PM",
+     "no": 13
+    },
+    {
+     "name": "Durgapur (Muchipara)",
+     "up_time": "8:30 AM",
+     "down_time": "1:10 PM",
+     "no": 14
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up_time": "8:50 AM",
+     "down_time": "1:00 PM",
+     "no": 15
+    },
+    {
+     "name": "Andal",
+     "up_time": "",
+     "down_time": "",
+     "no": 16
+    },
+    {
+     "name": "Raniganj",
+     "up_time": "",
+     "down_time": "",
+     "no": 17
+    },
+    {
+     "name": "Asansol",
+     "up_time": "9:50 AM",
+     "down_time": "11:40 AM",
+     "no": 18
+    }
+   ],
+   "total_stoppages": 18
   }
  ]
 }
