@@ -12973,6 +12973,56 @@
      "down_time": "2:35 PM"
     }
    ]
+  },
+  {
+   "target_id": "sbstc-fb-bankura-durgapur-740am-ac",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "time_source": "community report (AC long-route stops only at Barjora)"
+  },
+  {
+   "target_id": "sbstc-fb-bankura-durgapur-400pm-ac",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Durgapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "total_stoppages": 3,
+   "time_source": "community report (AC long-route stops only at Barjora)"
   }
  ]
 }
