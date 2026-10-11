@@ -58,6 +58,7 @@ jobs:
           python3 scripts/gen_blog.py --write
           python3 scripts/fix_clean_urls.py
           python3 scripts/add_legal_links.py --write
+          python3 scripts/add_consent_banner.py --write
 
       - name: Commit and push if changed
         run: |
