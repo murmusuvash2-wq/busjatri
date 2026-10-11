@@ -67,7 +67,7 @@ def haversine(a, b):
     return 2 * R * math.asin(math.sqrt(h))
 
 
-def get_json(url, timeout=40):
+def get_json(url, timeout=8):
     req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read().decode("utf-8", "replace"))
