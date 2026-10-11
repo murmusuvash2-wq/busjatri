@@ -8,11 +8,12 @@ on:
         required: true
       limit:
         description: "Max stops to process (0 = no limit)"
-        default: "0"
+        default: "300"
         required: false
 jobs:
   run:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     permissions:
       contents: write
     steps:
