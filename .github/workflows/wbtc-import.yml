@@ -33,6 +33,7 @@ jobs:
           python3 scripts/build_client_data.py
           python3 scripts/finalize_pages.py
           python3 scripts/fix_clean_urls.py
+          python3 scripts/add_legal_links.py --write
 
       - name: Unify header + repair malformed hrefs
         timeout-minutes: 8
