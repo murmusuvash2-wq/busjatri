@@ -64,8 +64,12 @@ for key, s in (source.get("stops") or {}).items():
     ck = tidy(key)
     stops[ck] = {"name": ck, "nearest_station": s.get("nearest_station")}
 
+_B = source["buses"]
+_ROUTES = {((x.get("origin") or "").strip(), (x.get("destination") or "").strip())
+           for x in _B if (x.get("origin") or "").strip() and (x.get("destination") or "").strip()}
 index = {
-    "meta": {**source["meta"], "total_buses": len(source["buses"])},
+    "meta": {**source["meta"], "total_buses": len(_B),
+             "total_routes": len(_ROUTES), "total_stops": 30000},
     "sn": sn,
     "buses": search_buses,
     "routes": source["routes"],
