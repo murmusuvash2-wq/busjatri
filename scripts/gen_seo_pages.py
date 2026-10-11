@@ -1883,18 +1883,18 @@ with open(
 # ROBOTS
 # ------------------------------------------------------------
 
-_extra = f"Sitemap: {BASE}/sitemap-extra.xml\n" if os.path.exists("sitemap-extra.xml") else ""
+_sm = "".join(
+    f"Sitemap: {BASE}/{name}\n"
+    for name in ("sitemap.xml", "sitemap-extra.xml", "sitemap-city.xml",
+                 "sitemap-popular.xml", "sitemap-via.xml")
+    if os.path.exists(name)
+)
 with open(
     "robots.txt",
     "w",
     encoding="utf-8",
 ) as f:
-    f.write(
-        "User-agent: *\n"
-        "Allow: /\n\n"
-        f"Sitemap: {BASE}/sitemap.xml\n"
-        + _extra
-    )
+    f.write("User-agent: *\n" "Allow: /\n\n" + _sm)
 
 
 # ------------------------------------------------------------
