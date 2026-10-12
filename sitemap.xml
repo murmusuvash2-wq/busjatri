@@ -1896,6 +1896,7 @@
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-puri</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-purulia</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-rajahmundry</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/kolkata-to-rampurhat</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-ranibandh</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-sasaram</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/kolkata-to-shankarpur</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
@@ -2439,6 +2440,7 @@
 <url><loc>https://busjatri.in/bus-time-table/rampurhat-to-esplanade</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/rampurhat-to-garia</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/rampurhat-to-habra-depot</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/rampurhat-to-kolkata</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ramrajatala-to-esplanade</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ramsagar-to-haldia</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ranaghat-to-joyrampur</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
@@ -2962,6 +2964,7 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-amity-university</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-golf-green</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kamalgazi</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-rampurhat</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kashipur</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-balarampur</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-jhilimili</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
@@ -2978,7 +2981,6 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-mandarmani</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-tufanganj</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-jadavpore</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-rampurhat</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kenjakura</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-badanganj</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-goaltore</loc><lastmod>2026-10-12</lastmod><priority>0.7</priority></url>
@@ -5506,6 +5508,7 @@
 <url><loc>https://busjatri.in/via/kona-expressway</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/konnagar</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/koralitala</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/koralitala-more</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/korapara</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/korui</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/kotshila</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
@@ -5969,6 +5972,7 @@
 <url><loc>https://busjatri.in/via/noorpur</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/norghat</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/norja</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/norja-more</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/noul-bazar</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/nrs-hospital</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/ntutanhat</loc><lastmod>2026-10-12</lastmod><priority>0.6</priority></url>
