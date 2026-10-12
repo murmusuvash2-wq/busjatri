@@ -607,7 +607,7 @@ function renderHome(el) {
       <div class="place-tag">${esc(p.tag || 'Explore')}</div>`;
     /* 2026-09-28: real link to via/ page; click still opens the SPA place view. */
     return __BJ_VIA_SLUGS.has(vslug)
-      ? `<a class="place-card${featured}" style="--i:${i}" href="via/${vslug}.html" onclick="event.preventDefault();location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</a>`
+      ? `<a class="place-card${featured}" style="--i:${i}" href="via/${vslug}" onclick="event.preventDefault();location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</a>`
       : `<div class="place-card${featured}" style="--i:${i}" onclick="location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</div>`;
   }).join('');
 
@@ -619,7 +619,7 @@ function renderHome(el) {
     /* 2026-09-28: chips are real <a> links to the SEO page for Google, but
        onclick preventDefault keeps the in-app SPA search UX unchanged. */
     return __BJ_SEO_SLUGS.has(slug)
-      ? `<a class="route-chip" href="bus-time-table/${slug}.html" onclick="event.preventDefault();${hashNav}">${inner}</a>`
+      ? `<a class="route-chip" href="bus-time-table/${slug}" onclick="event.preventDefault();${hashNav}">${inner}</a>`
       : `<span class="route-chip" onclick="${hashNav}">${inner}</span>`;
   }).join('');
 
@@ -661,11 +661,11 @@ function renderHome(el) {
     <section data-keep="1" style="max-width:720px;margin:0 auto 8px;padding:0 18px 18px">
     <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin-bottom:10px">Popular Operators</div>
     <div style="display:flex;flex-wrap:wrap;gap:8px">
-      <a href="bus-time-table/sbstc-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">SBSTC</a>
-      <a href="bus-time-table/nbstc-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">NBSTC</a>
-      <a href="bus-time-table/wbtc-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">WBTC</a>
-      <a href="kolkata-city-bus-timetable.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Kolkata City Bus</a>
-      <a href="bus-time-table/volvo-ac-buses.html" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
+      <a href="bus-time-table/sbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">SBSTC</a>
+      <a href="bus-time-table/nbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">NBSTC</a>
+      <a href="bus-time-table/wbtc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">WBTC</a>
+      <a href="kolkata-city-bus-timetable" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Kolkata City Bus</a>
+      <a href="bus-time-table/volvo-ac-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
     </div>
   </section>
   <div class="section">
