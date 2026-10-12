@@ -107,6 +107,7 @@
       if (getComputedStyle(row).position === 'static') row.style.position = 'relative';
       var d = document.createElement('div');
       d.className = 'bj-ac';
+      d.__bjInput = inp;
       d.style.cssText = 'position:absolute;top:' + (inp.offsetTop + inp.offsetHeight + 2) + 'px;left:' + inp.offsetLeft +
         'px;width:' + inp.offsetWidth + 'px;background:var(--surface,#fffcf4);' +
         'border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 10px 26px rgba(60,40,10,.16);' +
@@ -127,7 +128,7 @@
       var it = e.target.closest ? e.target.closest('.bj-ac-i') : null;
       if (it) {
         var d = it.closest('.bj-ac');
-        var inp = d && d.parentElement ? d.parentElement.querySelector('input') : null;
+        var inp = d && d.__bjInput ? d.__bjInput : (d && d.parentElement ? d.parentElement.querySelector('input') : null);
         if (inp) { inp.value = it.textContent; acHide(); inp.focus(); }
         return;
       }
