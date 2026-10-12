@@ -7216,6 +7216,298 @@
      "down": "8:00 AM"
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Kolkata-Rampurhat",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39E 7659",
+   "origin": "Kolkata",
+   "destination": "Rampurhat",
+   "departure_time": "",
+   "arrival_time": "",
+   "route": "Kolkata - Toll Plaza - Santragachi - Salap - Dankuni - Shaktigarh - Burdwan Station - Dewandighi - Norja More - Muratipur - Natunhat - Palitpur - Nutangram - Pirtala - Futisanko - Sundarpur - Bahadurpur - Koralitala More - Kuli - Khargram - Eroali - Parulia - Budhigram - Tarapith - Barshal - Rampurhat",
+   "depot_name": "Rampurhat",
+   "source": "SBSTC Rampurhat Depot (operator route chart)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Kolkata",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Toll Plaza",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salap",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Shaktigarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Burdwan Station",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dewandighi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Norja More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Muratipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Natunhat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Palitpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nutangram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pirtala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Futisanko",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sundarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bahadurpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Koralitala More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kuli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khargram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Eroali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Parulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Budhigram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tarapith",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barshal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rampurhat",
+     "up": "",
+     "down": ""
+    }
+   ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Rampurhat-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39E 7659",
+   "origin": "Rampurhat",
+   "destination": "Kolkata",
+   "departure_time": "",
+   "arrival_time": "",
+   "route": "Rampurhat - Barshal - Tarapith - Budhigram - Parulia - Eroali - Khargram - Kuli - Koralitala More - Bahadurpur - Sundarpur - Futisanko - Pirtala - Nutangram - Palitpur - Natunhat - Muratipur - Norja More - Dewandighi - Burdwan Station - Shaktigarh - Dankuni - Salap - Santragachi - Toll Plaza - Kolkata",
+   "depot_name": "Rampurhat",
+   "source": "SBSTC Rampurhat Depot (operator route chart)",
+   "detail_url": "",
+   "stops": [
+    {
+     "name": "Rampurhat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barshal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Tarapith",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Budhigram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Parulia",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Eroali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khargram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kuli",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Koralitala More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bahadurpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Sundarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Futisanko",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Pirtala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nutangram",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Palitpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Natunhat",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Muratipur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Norja More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dewandighi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Burdwan Station",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Shaktigarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salap",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Santragachi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Toll Plaza",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kolkata",
+     "up": "",
+     "down": ""
+    }
+   ]
   }
  ],
  "enrich": [
@@ -12922,6 +13214,109 @@
    "time_source": "community report (AC long-route stops only at Barjora)"
   },
   {
+   "target_id": "bussathi-basundhara-120",
+   "contact_number": "7595824650",
+   "departure_time": "7:30 AM",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Shyambazar",
+     "up_time": "7:30 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Dunlop",
+     "up_time": "7:50 AM",
+     "down_time": "6:55 PM"
+    },
+    {
+     "no": 3,
+     "name": "Dakshineswar",
+     "up_time": "8:05 AM",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Bally",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Dankuni",
+     "up_time": "8:20 AM",
+     "down_time": "6:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Chanditala",
+     "up_time": "8:35 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "no": 7,
+     "name": "Mosat",
+     "up_time": "8:50 AM",
+     "down_time": "6:05 PM"
+    },
+    {
+     "no": 8,
+     "name": "Siakhala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Champadanga",
+     "up_time": "9:30 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 10,
+     "name": "Mayapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Arambagh",
+     "up_time": "10:25 AM",
+     "down_time": "4:45 PM"
+    },
+    {
+     "no": 12,
+     "name": "Bengai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Khatul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Kotulpur",
+     "up_time": "11:20 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "no": 15,
+     "name": "Joypur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Bishnupur",
+     "up_time": "12:25 PM",
+     "down_time": "2:35 PM"
+    }
+   ]
+  },
+  {
    "target_id": "sbstc-bankura-kolkata-0",
    "stoppages": [
     {
@@ -13336,109 +13731,6 @@
    "total_stoppages": 16,
    "route": "Kolkata - Toll Plaza - Santragachi - Salap - Dankuni - Shaktigarh - Burdwan Bypass - Panagarh Bypass - Muchipara - DVC More - Durgapur City Centre - Durgapur Station - Barjora - Beliatore - Makurgram - Bankura",
    "source": "SBSTC Bankura Depot (operator route chart)"
-  },
-  {
-   "target_id": "bussathi-basundhara-120",
-   "contact_number": "7595824650",
-   "departure_time": "7:30 AM",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Shyambazar",
-     "up_time": "7:30 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Dunlop",
-     "up_time": "7:50 AM",
-     "down_time": "6:55 PM"
-    },
-    {
-     "no": 3,
-     "name": "Dakshineswar",
-     "up_time": "8:05 AM",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Bally",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Dankuni",
-     "up_time": "8:20 AM",
-     "down_time": "6:25 PM"
-    },
-    {
-     "no": 6,
-     "name": "Chanditala",
-     "up_time": "8:35 AM",
-     "down_time": "6:10 PM"
-    },
-    {
-     "no": 7,
-     "name": "Mosat",
-     "up_time": "8:50 AM",
-     "down_time": "6:05 PM"
-    },
-    {
-     "no": 8,
-     "name": "Siakhala",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Champadanga",
-     "up_time": "9:30 AM",
-     "down_time": "5:30 PM"
-    },
-    {
-     "no": 10,
-     "name": "Mayapur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 11,
-     "name": "Arambagh",
-     "up_time": "10:25 AM",
-     "down_time": "4:45 PM"
-    },
-    {
-     "no": 12,
-     "name": "Bengai",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 13,
-     "name": "Khatul",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 14,
-     "name": "Kotulpur",
-     "up_time": "11:20 AM",
-     "down_time": "3:40 PM"
-    },
-    {
-     "no": 15,
-     "name": "Joypur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 16,
-     "name": "Bishnupur",
-     "up_time": "12:25 PM",
-     "down_time": "2:35 PM"
-    }
-   ]
   }
  ]
 }
