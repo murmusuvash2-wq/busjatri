@@ -443520,6 +443520,516 @@
    "total_stoppages": 26,
    "detail_url": "",
    "service_note": ""
+  },
+  {
+   "id": "sbstc-midnapur-digha-4626",
+   "bus_name": "SBSTC Midnapur-Digha via Kolkata",
+   "reg_no": "WB 39E 5641",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Midnapur",
+   "destination": "Digha",
+   "departure_time": "",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Midnapore",
+   "route": "Midnapur - Chowringhee More - Basantapur - Debra - Ashari - Panshkura Bypass - Mechogram - Kolaghat - Bagnan - Uluberia Checkpost - Panchla - Ranihati - Dhulagarh - Santragachi - Toll Plaza - Esplanade (Halt) - Toll Plaza - Santragachi - Dhulagarh - Ranihati - Panchla - Uluberia Checkpost - Bagnan - Kolaghat - Mecheda - Radhamoni - Nimtauri - Nandakumar - Norghat - Chandipur - Bajkul - Henria - Nachinda - Contai - Pichaboni - Chaulkhola - Balisai - Ramnagar - Old Digha",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Chowringhee More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Basantapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Ashari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Panshkura Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Uluberia Checkpost",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Panchla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Toll Plaza",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Esplanade (Halt)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Toll Plaza",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Panchla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Uluberia Checkpost",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Radhamoni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Nimtauri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Norghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Chandipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 31,
+     "name": "Bajkul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Nachinda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 34,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 35,
+     "name": "Pichaboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Balisai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 38,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 39,
+     "name": "Old Digha",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Midnapore Depot (operator route chart)",
+   "time_source": "SBSTC Midnapore Depot (operator route chart)",
+   "total_stoppages": 39,
+   "detail_url": "",
+   "service_note": ""
+  },
+  {
+   "id": "sbstc-digha-midnapur-4627",
+   "bus_name": "SBSTC Digha-Digha via Kolkata",
+   "reg_no": "WB 39E 5641",
+   "operator": "SBSTC",
+   "bus_type": "Government - SBSTC",
+   "origin": "Digha",
+   "destination": "Midnapur",
+   "departure_time": "",
+   "arrival_time": "",
+   "contact_number": "",
+   "depot_name": "Midnapore",
+   "route": "Old Digha - Ramnagar - Balisai - Chaulkhola - Pichaboni - Contai - Nachinda - Henria - Bajkul - Chandipur - Norghat - Nandakumar - Nimtauri - Radhamoni - Mecheda - Kolaghat - Bagnan - Uluberia Checkpost - Panchla - Ranihati - Dhulagarh - Santragachi - Toll Plaza - Esplanade (Halt) - Toll Plaza - Santragachi - Dhulagarh - Ranihati - Panchla - Uluberia Checkpost - Bagnan - Kolaghat - Mechogram - Panshkura Bypass - Ashari - Debra - Basantapur - Chowringhee More - Midnapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Old Digha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Balisai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Chaulkhola",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Pichaboni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Contai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Nachinda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Henria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Bajkul",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Chandipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Norghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Nimtauri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Radhamoni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Uluberia Checkpost",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Panchla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 20,
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 23,
+     "name": "Toll Plaza",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Esplanade (Halt)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 25,
+     "name": "Toll Plaza",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 27,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 28,
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 29,
+     "name": "Panchla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 30,
+     "name": "Uluberia Checkpost",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 31,
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 32,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 33,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 34,
+     "name": "Panshkura Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 35,
+     "name": "Ashari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 36,
+     "name": "Debra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 37,
+     "name": "Basantapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 38,
+     "name": "Chowringhee More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 39,
+     "name": "Midnapur",
+     "up_time": "",
+     "down_time": ""
+    }
+   ],
+   "source": "SBSTC Midnapore Depot (operator route chart)",
+   "time_source": "SBSTC Midnapore Depot (operator route chart)",
+   "total_stoppages": 39,
+   "detail_url": "",
+   "service_note": ""
   }
  ],
  "routes": {
@@ -534861,7 +535371,7 @@
   }
  },
  "meta": {
-  "total_buses": 4620,
+  "total_buses": 4622,
   "total_routes": 2526,
   "total_stops": 2740,
   "version": "3.0.0",
