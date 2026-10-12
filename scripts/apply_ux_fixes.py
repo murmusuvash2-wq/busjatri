@@ -91,15 +91,15 @@ P.append((
 # ---- P11: section titles bilingual ----
 P.append((
 '''</svg> Matching Routes</h2>''',
-'''</svg> <span class="label-en">Matching Routes</span><span class="label-bn">মিলছে এমন রুট</span></div>''',
+'''</svg> <span class="label-en">Matching Routes</span><span class="label-bn">মিলছে এমন রুট</span></h2>''',
 "matching routes title"))
 P.append((
 '''</svg> Popular Starting Places</h2>''',
-'''</svg> <span class="label-en">Popular Starting Places</span><span class="label-bn">জনপ্রিয় ছাড়ার জায়গা</span></div>''',
+'''</svg> <span class="label-en">Popular Starting Places</span><span class="label-bn">জনপ্রিয় ছাড়ার জায়গা</span></h2>''',
 "popular title"))
 P.append((
 '''</svg> All Places &middot; A to Z</h2>''',
-'''</svg> <span class="label-en">All Places &middot; A to Z</span><span class="label-bn">সব জায়গা &middot; A–Z</span></div>''',
+'''</svg> <span class="label-en">All Places &middot; A to Z</span><span class="label-bn">সব জায়গা &middot; A–Z</span></h2>''',
 "az title"))
 
 # ---- P12: empty state bilingual ----
