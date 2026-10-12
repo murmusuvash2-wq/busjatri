@@ -635,17 +635,17 @@ function renderHome(el) {
         <div class="search-row">
           <div class="search-field">
             <label>${icon('pin')} <span class="label-en">From</span><span class="label-bn">কোথা থেকে</span></label>
-            <input id="fromInput" list="stopList" placeholder="e.g. Bankura" onkeydown="if(event.key==='Enter')doSearch()">
+            <input id="fromInput" placeholder="e.g. Bankura" onkeydown="if(event.key==='Enter')doSearch()">
             <div class="geo-hint">${icon('pin')} <span class="label-en">Detected:</span> <span class="geo-city"></span></div>
           </div>
           <button class="swap-btn" onclick="swapFromTo()" title="Swap From & To" aria-label="Swap origin and destination">${icon('compass')}</button>
           <div class="search-field">
             <label>${icon('compass')} <span class="label-en">To</span><span class="label-bn">কোথায়</span></label>
-            <input id="toInput" list="stopList" placeholder="e.g. Digha" onkeydown="if(event.key==='Enter')doSearch()">
+            <input id="toInput" placeholder="e.g. Digha" onkeydown="if(event.key==='Enter')doSearch()">
           </div>
           <div class="search-field">
             <label>${icon('stops')} <span class="label-en">Stoppage</span><span class="label-bn">স্টপেজ</span> <span class="via-hint">(optional)</span></label>
-            <input id="stopInput" list="stopList" placeholder="e.g. Kolaghat" onkeydown="if(event.key==='Enter')doSearch()">
+            <input id="stopInput" placeholder="e.g. Kolaghat" onkeydown="if(event.key==='Enter')doSearch()">
           </div>
         </div>
         <div class="search-actions">
