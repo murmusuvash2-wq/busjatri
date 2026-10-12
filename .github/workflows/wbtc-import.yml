@@ -41,6 +41,7 @@ jobs:
         run: |
           python3 scripts/unify_header_20261002.py
           python3 scripts/fix_stray_quotes.py
+          python3 scripts/bump_asset_versions.py
 
       - name: Sanity checks
         run: |
