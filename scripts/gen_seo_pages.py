@@ -1735,19 +1735,19 @@ _index_body = f"""{_btt_css}
 <div class="ad-zone" id="ad1"></div>
 
 <section class="section" id="routeMatchesSec" style="display:none">
-  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> <span class="label-en">Matching Routes</span><span class="label-bn">মিলছে এমন রুট</span></div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg> <span class="label-en">Matching Routes</span><span class="label-bn">মিলছে এমন রুট</span></h2>
   <div class="chip-row hscroll" id="rmChips"></div>
 </section>
 
 <section class="section" id="popSection">
-  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <span class="label-en">Popular Starting Places</span><span class="label-bn">জনপ্রিয় ছাড়ার জায়গা</span></div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.1-7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> <span class="label-en">Popular Starting Places</span><span class="label-bn">জনপ্রিয় ছাড়ার জায়গা</span></h2>
   <div class="place-grid">
 {_popular_html}
   </div>
 </section>
 
 <section class="section">
-  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h12"/></svg> <span class="label-en">All Places &middot; A to Z</span><span class="label-bn">সব জায়গা &middot; A–Z</span></div>
+  <h2 class="section-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h12"/></svg> <span class="label-en">All Places &middot; A to Z</span><span class="label-bn">সব জায়গা &middot; A–Z</span></h2>
   <div class="az-nav" id="azNav"></div>
   <div id="azGroups">{_az_html}</div>
   <div class="empty" id="emptyState">
