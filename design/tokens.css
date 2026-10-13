@@ -1,0 +1,33 @@
+/* BusJatri design tokens — THE one place colours / fonts / spacing live.
+   design/build.py copies this :root block into every css file that has one,
+   so a colour change happens in one place only. */
+:root{
+  --bg:#f5efe1;
+  --bg-alt:#ece2cb;
+  --surface:#fffcf4;
+  --surface-2:#efe6d3;
+  --ink:#211c16;
+  --ink-dim:#6f6653;
+  --line:rgba(33, 28, 22, .13);
+  --line-strong:rgba(33, 28, 22, .24);
+  --border:rgba(33, 28, 22, .13);
+  --panel:#efe6d3;
+  --amber:#b8791f;
+  --amber-ink:#6b4610;
+  --amber-soft:rgba(184, 121, 31, .14);
+  --maroon:#a13b2e;
+  --maroon-soft:rgba(161, 59, 46, .13);
+  --green:#3f6b42;
+  --green-soft:rgba(63, 107, 66, .13);
+  --govt:#35608a;
+  --govt-soft:rgba(53, 96, 138, .12);
+  --shadow:0 10px 34px -12px rgba(33, 28, 22, .28);
+  --shadow-sm:0 2px 12px rgba(33, 28, 22, .1);
+  --radius-lg:20px;
+  --radius:14px;
+  --radius-sm:9px;
+  --font-display:'Fraunces', 'Georgia', serif;
+  --font-body:'IBM Plex Sans', 'IBM Plex Sans Bengali', system-ui, sans-serif;
+  --font-mono:'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
+  --border-strong:var(--line-strong);
+}
