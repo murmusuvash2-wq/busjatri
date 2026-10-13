@@ -157,10 +157,12 @@ ROW_T = '''<a href="{href}" class="op-card">
 FOOT = '''<footer class="footer">
   <div class="container">
     <div class="footer-links">
-      <a href="../about.html">About Us</a>
-      <a href="../contact.html">Contact Us</a>
-      <a href="../privacy-policy.html">Privacy Policy</a>
-      <a href="../about.html#credits">Credits</a>
+      <a href="../blog/"><span class="label-en">Blog</span><span class="label-bn">ব্লগ</span></a>
+      <a href="../about">About Us</a>
+      <a href="../contact">Contact Us</a>
+      <a href="../privacy-policy">Privacy Policy</a>
+      <a href="../about#credits">Credits</a>
+      <a href="../contribute"><span class="label-en">Bus Contribution</span><span class="label-bn">বাস তথ্য যোগ করুন</span></a>
       <a href="./">All Bus Timetables</a>
     </div>
     <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
