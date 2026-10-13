@@ -479,7 +479,7 @@ def header_html():
     # the same way on every page.
     return """<header class="header">
   <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
-    <a href="../index.html" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px">
+    <a href="../" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px">
       <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
       Bus<span>Jatri</span>
     </a>
@@ -498,10 +498,10 @@ def footer_html():
     return """<footer class="footer">
   <div class="container">
     <div class="footer-links">
-      <a href="../about.html">About Us</a>
-      <a href="../contact.html">Contact Us</a>
-      <a href="../privacy-policy.html">Privacy Policy</a>
-      <a href="../about.html#credits">Credits</a>
+      <a href="../about">About Us</a>
+      <a href="../contact">Contact Us</a>
+      <a href="../privacy-policy">Privacy Policy</a>
+      <a href="../about#credits">Credits</a>
       <a href="./">All Bus Timetables</a>
     </div>
     <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
@@ -784,7 +784,7 @@ def bus_card(bus):
     meta_bits.append(f"🚏 {stops or 0} stops")
     link = ""
     if bid:
-        link = f'<a class="bd-link" href="../index.html#/bus/{esc(bid)}" aria-label="View full timetable for {esc(name)}">Details ›</a>'
+        link = f'<a class="bd-link" href="../#/bus/{esc(bid)}" aria-label="View full timetable for {esc(name)}">Details ›</a>'
     return f"""<div class="bus-row">
   <div class="dep">{dep_html}</div>
   <div class="bmid">
@@ -866,7 +866,7 @@ def generate_route_page(origin, destination, buses):
     ]
 
     bn_sub = f'<p class="bn-sub">{esc(route_bn)} বাসের সময়সূচী</p>' if route_bn else ""
-    hero = f"""<div class="crumbs"><a href="../index.html">Home</a> › <a href="./">Bus Timetable</a> › <span>{esc(d_origin)} → {esc(d_destination)}</span></div>
+    hero = f"""<div class="crumbs"><a href="../">Home</a> › <a href="./">Bus Timetable</a> › <span>{esc(d_origin)} → {esc(d_destination)}</span></div>
 <div class="seo-hero">
   <h1>{esc(d_origin)} <span class="arr">→</span> {esc(d_destination)}</h1>
   {bn_sub}
@@ -1007,7 +1007,7 @@ def generate_place_page(place, buses):
     color:var(--ink-dim);
     margin-bottom:14px;
   ">
-    <a href="../index.html">Home</a>
+    <a href="../">Home</a>
     <span style="margin:0 5px">›</span>
     <a href="./">Bus Timetable</a>
     <span style="margin:0 5px">›</span>
@@ -1183,7 +1183,7 @@ def generate_via_page(origin, destination, via_stop, buses):
     if via_bn:
         via_label = ' | ' + via_bn + ' হযে'
     body = '<section style="max-width:760px;margin:0 auto;padding:28px 16px 40px">'
-    body += '<div style="font-size:13px;color:var(--ink-dim);margin-bottom:8px"><a href="../index.html" style="color:var(--amber);text-decoration:none">Home</a> / <a href="index.html" style="color:var(--amber);text-decoration:none">Bus Timetable</a> / ' + esc(origin) + ' to ' + esc(destination) + ' via ' + esc(via_stop) + '</div>'
+    body += '<div style="font-size:13px;color:var(--ink-dim);margin-bottom:8px"><a href="../" style="color:var(--amber);text-decoration:none">Home</a> / <a href="index.html" style="color:var(--amber);text-decoration:none">Bus Timetable</a> / ' + esc(origin) + ' to ' + esc(destination) + ' via ' + esc(via_stop) + '</div>'
     body += '<h1 style="font-size:1.8rem;margin:0 0 6px">' + esc(origin) + ' to ' + esc(destination) + ' Bus Time Table</h1>'
     body += '<p style="color:var(--amber);font-weight:600;margin:0 0 4px">via ' + esc(via_stop) + via_label + '</p>'
     body += '<p style="color:var(--ink-dim);font-size:13px;margin:0 0 20px">Updated ' + LASTMOD + ' - ' + str(n) + ' of ' + str(ntot) + ' buses pass through ' + esc(via_stop) + '</p>'
@@ -1616,7 +1616,7 @@ function bjBusSearch(q,rm,rmc,info,empty){
     var hits=window.__bjBuses.filter(function(b){return (b.bus_name||"").toLowerCase().indexOf(q)>=0;}).slice(0,24);
     if(hits.length){
       var chips=hits.map(function(b){
-        return '<a class="rm-chip" href="../index.html#/bus/'+encodeURIComponent(b.id)+'">'+(b.bus_name||"Bus")+(b.departure_time?' <span class="n">'+b.departure_time+'</span>':'')+(b.origin?' <span class="n">'+b.origin+' '+(b.destination||"")+'</span>':'')+'</a>';
+        return '<a class="rm-chip" href="../#/bus/'+encodeURIComponent(b.id)+'">'+(b.bus_name||"Bus")+(b.departure_time?' <span class="n">'+b.departure_time+'</span>':'')+(b.origin?' <span class="n">'+b.origin+' '+(b.destination||"")+'</span>':'')+'</a>';
       }).join("");
       rmc.innerHTML=chips;
       rm.style.display="";
@@ -1704,7 +1704,7 @@ function toggleLang(){
 
 _index_body = f"""{_btt_css}
 
-<div class="breadcrumb"><a href="../index.html">Home</a><span class="sep">/</span><span>Bus Time Table</span></div>
+<div class="breadcrumb"><a href="../">Home</a><span class="sep">/</span><span>Bus Time Table</span></div>
 
 <div class="hero">
   <span class="eyebrow"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/></svg> West Bengal Bus Routes</span>
