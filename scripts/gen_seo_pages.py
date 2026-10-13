@@ -785,9 +785,11 @@ def bus_card(bus):
     meta_bits.append(f"⏱ ~{esc(dur_text)}")
     meta_bits.append(f"🚏 {stops or 0} stops")
     link = ""
+    row_attr = ""
     if bid:
         link = f'<a class="bd-link" href="../#/bus/{esc(bid)}" aria-label="View full timetable for {esc(name)}">Details ›</a>'
-    return f"""<div class="bus-row">
+        row_attr = f' onclick="location.href=\'../#/bus/{esc(bid)}\'" style="cursor:pointer"'
+    return f"""<div class="bus-row"{row_attr}>
   <div class="dep">{dep_html}</div>
   <div class="bmid">
     <div class="op">{op_line}</div>
@@ -1505,6 +1507,8 @@ _btt_css = """<style>
 .rm-chip .arr{color:var(--amber);font-family:var(--font-mono)}
 .rm-chip .n{font-family:var(--font-mono);font-size:10px;color:var(--ink-dim);background:var(--surface-2);border-radius:999px;padding:1px 8px}
 .az-nav{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:16px;position:sticky;top:60px;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);padding:8px 0;z-index:50;border-bottom:1px solid var(--line)}
+.search-box{position:static!important;top:auto!important}
+.search-go{border:none;border-radius:var(--radius);background:var(--amber);color:#fff;font:700 14px var(--font-body);padding:0 18px;cursor:pointer;min-height:44px;flex:0 0 auto;margin-left:6px}
 .az-btn{font-family:var(--font-mono);font-size:12px;font-weight:700;color:var(--ink-dim);background:var(--surface);border:1px solid var(--line);border-radius:7px;width:30px;height:30px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .12s}
 .az-btn:hover{border-color:var(--amber);color:var(--amber)}
 .az-btn.has{color:var(--ink);border-color:var(--line-strong)}
@@ -1737,6 +1741,7 @@ _index_body = f"""{_btt_css}
       <label><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/></svg> <span class="live-dot"></span> <span class="label-en">Search place or route</span><span class="label-bn">স্থান বা রুট খুঁজুন</span></label>
       <input id="q" type="text" placeholder="e.g. Esplanade, Digha, Bankura..." oninput="doSearch()" autocomplete="off">
     </div>
+    <button class="search-go" id="goBtn" type="button" onclick="doSearch()">Search</button>
     <button class="clear-btn" id="clearBtn" onclick="document.getElementById('q').value='';doSearch()" title="Clear"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
   </div>
   <div class="qchips">
