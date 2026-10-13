@@ -122,6 +122,7 @@
 .tagline { margin-bottom: 14px; font-size: 14px; }
 .section { padding: 18px 0 28px; }
 .section-title { margin-bottom: 12px; font-size: 1.15rem; }
+.section-title svg{width:1.15em;height:1.15em;flex:0 0 auto;color:var(--amber);margin-right:4px}
 
 /* Popular destinations - fit-to-width grid so no card is cut at the edge
    (style.css already declares this grid; extras.css used to override it to a
