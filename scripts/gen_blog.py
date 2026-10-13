@@ -5,6 +5,8 @@ Articles are embedded in this script so the whole blog regenerates
 idempotently on every run (part of the fb-update rebuild chain).
 """
 import os
+import json
+import os
 import re
 import sys
 from datetime import date
