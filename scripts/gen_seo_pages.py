@@ -1398,8 +1398,13 @@ for letter in _az_letters:
         p for p in _az_places
         if (p[0].upper() if p and p[0].isalpha() else "#") == letter
     ]
-    _az_groups_html.append(f'<div class="letter-group reveal" id="L{letter}">')
-    _az_groups_html.append(f'<div class="letter-head">{letter}</div>')
+    _az_groups_html.append(f'<details class="letter-group reveal" id="L{letter}">')
+    _az_groups_html.append(
+        f'<summary class="letter-head"><span class="lh-l">{letter}</span>'
+        f'<span class="lh-n">{len(group_places)} places</span>'
+        f'<svg class="lh-chev" width="16" height="16" viewBox="0 0 24 24" fill="none" '
+        f'stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></summary>'
+    )
     _az_groups_html.append('<div class="place-list">')
     for p in group_places:
         rs = by_origin[p]
@@ -1419,7 +1424,7 @@ for letter in _az_letters:
             f'<svg class="pr-chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>'
             f'</div><div class="pr-body"><div class="pr-inner"></div></div></div>'
         )
-    _az_groups_html.append('</div></div>')
+    _az_groups_html.append('</div></details>')
 
 _az_html = "".join(_az_groups_html)
 
@@ -1504,7 +1509,14 @@ _btt_css = """<style>
 .az-btn:hover{border-color:var(--amber);color:var(--amber)}
 .az-btn.has{color:var(--ink);border-color:var(--line-strong)}
 .az-btn.miss{opacity:.35;cursor:default}
-.letter-group{margin-bottom:6px}
+.letter-group{margin-bottom:6px;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.letter-group>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px}
+.letter-group>summary::-webkit-details-marker{display:none}
+.lh-l{min-width:22px}
+.lh-n{margin-left:auto;font-size:12px;font-weight:600;color:var(--ink-dim)}
+.lh-chev{color:var(--ink-dim);transition:transform .2s;flex:0 0 auto}
+.letter-group[open]>summary .lh-chev{transform:rotate(180deg)}
+.letter-group>.place-list{padding:2px 0 6px}
 .letter-head{font-family:var(--font-display);font-size:1.35rem;font-weight:700;color:var(--amber);padding:12px 4px 8px;position:sticky;top:100px;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);z-index:40;border-bottom:1px solid var(--line)}
 .place-list{display:flex;flex-direction:column;gap:6px;padding-top:8px}
 .place-row{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;animation:fadeUp .35s ease both}
@@ -1559,7 +1571,7 @@ function renderAZ(){
     var b=document.createElement("button");
     b.className="az-btn "+(has?"has":"miss");
     b.textContent=L;
-    if(has)b.onclick=function(){document.getElementById("L"+L).scrollIntoView({behavior:"smooth",block:"start"})};
+    if(has)b.onclick=function(){var el=document.getElementById("L"+L);if(el){el.open=true;el.scrollIntoView({behavior:"smooth",block:"start"})}};
     nav.appendChild(b);
   });
 }
