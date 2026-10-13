@@ -277,7 +277,7 @@ function bjBusSearch(q,rm,rmc,info,empty){
     var hits=window.__bjBuses.filter(function(b){return (b.bus_name||"").toLowerCase().indexOf(q)>=0;}).slice(0,24);
     if(hits.length){
       var chips=hits.map(function(b){
-        return '<a class="rm-chip" href="../index.html#/bus/'+encodeURIComponent(b.id)+'">'+(b.bus_name||"Bus")+(b.departure_time?' <span class="n">'+b.departure_time+'</span>':'')+(b.origin?' <span class="n">'+b.origin+' '+(b.destination||"")+'</span>':'')+'</a>';
+        return '<a class="rm-chip" href="../#/bus/'+encodeURIComponent(b.id)+'">'+(b.bus_name||"Bus")+(b.departure_time?' <span class="n">'+b.departure_time+'</span>':'')+(b.origin?' <span class="n">'+b.origin+' '+(b.destination||"")+'</span>':'')+'</a>';
       }).join("");
       rmc.innerHTML=chips;
       rm.style.display="";
@@ -365,12 +365,12 @@ function toggleLang(){
 <footer class="footer">
   <div class="container">
     <div class="footer-links">
-      <a href="../about"">About Us</a>
-      <a href="../contact"">Contact Us</a>
-      <a href="../privacy-policy"">Privacy Policy</a>
+      <a href="../about">About Us</a>
+      <a href="../contact">Contact Us</a>
+      <a href="../privacy-policy">Privacy Policy</a>
       <a href="../disclaimer">Disclaimer</a>
       <a href="../terms">Terms of Use</a>
-      <a href="../about"#credits">Credits</a>
+      <a href="../about#credits">Credits</a>
       <a href="./">All Bus Timetables</a>
     </div>
     <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
