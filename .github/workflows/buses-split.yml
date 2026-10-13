@@ -1,0 +1,36 @@
+name: Split buses (frozen file -> per-operator sources)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  split:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Extract per-operator sources from the frozen file
+        run: python3 scripts/split_buses.py --write
+
+      - name: Sanity - merge round-trip is byte-identical
+        run: |
+          cp data/busjatri_data.json /tmp/before.json
+          python3 scripts/build_buses.py --write
+          cmp /tmp/before.json data/busjatri_data.json && echo "round-trip OK"
+
+      - name: Commit the source files
+        run: |
+          git config user.name "busjatri-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add data/buses data/routes.json data/stops.json data/meta.json
+          if git diff --cached --quiet; then echo "nothing to commit"; else
+            git commit -m "data(step 6): materialise per-operator bus sources from the frozen file"
+            git push
+          fi
