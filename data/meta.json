@@ -1,0 +1,23 @@
+{
+ "total_buses": 4622,
+ "total_routes": 2526,
+ "total_stops": 2740,
+ "version": "3.0.0",
+ "last_updated": "2026-09-18",
+ "name": "BusJatri",
+ "tagline_en": "West Bengal's largest bus timetable",
+ "tagline_bn": "পশ্চিমবঙ্গের সবচেয়ে বড় বাস টাইম টেবিল",
+ "sources": [
+  "bussathi.in",
+  "wbbus.in",
+  "wbbustime.com",
+  "whereismybus.in",
+  "kolkata-travel-router (GitHub)",
+  "kolbusopedia.com",
+  "nbstc.in",
+  "shyamolibus.com",
+  "SBSTC (govt)",
+  "WBTC (govt)"
+ ],
+ "last_time_fill": "phase-a"
+}
