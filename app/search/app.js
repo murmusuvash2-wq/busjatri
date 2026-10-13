@@ -1,0 +1,1137 @@
+/* BusJatri — app logic. Hash-based router over a single local JSON dataset. */
+
+let DATA = null, BUSES = {}, ROUTES = {}, STOPS = {}, FULL_BUSES = null, LANG = 'en', SN = [], TOP_ROUTES = null, FULL_PROMISE = null;
+
+const ICONS = {
+  bus: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg>',
+  sun: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg>',
+  moon: '<svg class="icon" viewBox="0 0 24 24"><path d="M20.5 14.5a8.5 8.5 0 1 1-9-11 7 7 0 0 0 9 11Z"/></svg>',
+  chevronLeft: '<svg class="icon" viewBox="0 0 24 24"><path d="M14.5 5 8 12l6.5 7"/></svg>',
+  clock: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>',
+  map: '<svg class="icon" viewBox="0 0 24 24"><path d="M9 4 3 6.5v13L9 17l6 3 6-2.5v-13L15 7 9 4Z"/><path d="M9 4v13M15 7v13"/></svg>',
+  pin: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-6.1 7-11.3A7 7 0 0 0 5 9.7C5 14.9 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>',
+  stops: '<svg class="icon" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><path d="M6 8v8"/><path d="M6 12h9a3 3 0 0 0 3-3V7"/></svg>',
+  search: '<svg class="icon" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.3-4.3"/></svg>',
+  mountain: '<svg class="icon" viewBox="0 0 24 24"><path d="m3 19 6.5-11L14 15l2.5-4L21 19Z"/></svg>',
+  waves: '<svg class="icon" viewBox="0 0 24 24"><path d="M2 8c2 2 4 2 6 0s4-2 6 0 4 2 6 0"/><path d="M2 14c2 2 4 2 6 0s4-2 6 0 4 2 6 0"/><path d="M2 20c2 2 4 2 6 0s4-2 6 0 4 2 6 0"/></svg>',
+  landmark: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg>',
+  building: '<svg class="icon" viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h.01M9 11h.01M9 15h.01M15 7h.01M15 11h.01M15 15h.01"/></svg>',
+  factory: '<svg class="icon" viewBox="0 0 24 24"><path d="M3 21V11l5 3v-3l5 3V9l5 3v9Z"/><path d="M3 21h18"/><path d="M8 5.5c0-1 1-1 1-2s-1-1-1-2"/></svg>',
+  train: '<svg class="icon" viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="13" rx="3"/><path d="M5 11h14"/><circle cx="9" cy="17.5" r="1.4"/><circle cx="15" cy="17.5" r="1.4"/><path d="m8 21-2 2M16 21l2 2"/></svg>',
+  trees: '<svg class="icon" viewBox="0 0 24 24"><path d="M8 3 4 9h2l-3 5h4v6M8 3l4 6h-2l3 5h-4"/><path d="M17 7l-3.5 6H15l-2.5 4.5H18v5.5"/></svg>',
+  cog: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.2M12 18.8V21M21 12h-2.2M5.2 12H3M18.4 5.6l-1.5 1.5M7.1 16.9l-1.5 1.5M18.4 18.4l-1.5-1.5M7.1 7.1 5.6 5.6"/></svg>',
+  dome: '<svg class="icon" viewBox="0 0 24 24"><path d="M5 15a7 7 0 0 1 14 0"/><path d="M3 19h18M12 8V4M10 4h4"/><path d="M6 15v4M18 15v4"/></svg>',
+  compass: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m14.5 9.5-1.8 5.2-5.2 1.8 1.8-5.2z"/></svg>',
+  ticket: '<svg class="icon" viewBox="0 0 24 24"><path d="M3 8a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/><path d="M10 6v12" stroke-dasharray="2 3"/></svg>',
+  alert: '<svg class="icon" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4M12 17h.01"/></svg>',
+  info: '<svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.5h.01"/></svg>',
+  data: '<svg class="icon" viewBox="0 0 24 24"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3Z"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>',
+};
+
+const BN_PLACES = (window.BJLang && window.BJLang.places) || {};
+const BN_PLACE_KEYS = (window.BJLang && window.BJLang.keys) || [];
+function pn(s) {
+  return (LANG === 'bn' && BN_PLACES[s]) ? BN_PLACES[s] : s;
+}
+function bnBusName(s) {
+  if (window.BJLang) return window.BJLang.translate(s);
+  return String(s == null ? '' : s);
+}
+
+const PLACE_ICONS = {
+  Mukutmanipur: 'waves', Digha: 'waves', Bankura: 'landmark', Kolkata: 'building',
+  Asansol: 'factory', Burdwan: 'train', Jhargram: 'trees', Purulia: 'mountain',
+  Durgapur: 'cog', Khatra: 'bus', Bishnupur: 'dome', Medinipur: 'pin',
+  Tarapith: 'dome', Mayapur: 'dome', Darjeeling: 'mountain',
+};
+const FEATURED_PLACES = ['Kolkata', 'Digha'];
+
+const POPULAR_PLACES = [
+  { name: 'Digha', tag: 'Sea Beach' },
+  { name: 'Mukutmanipur', tag: 'Lake & Dam' },
+  { name: 'Bishnupur', tag: 'Terracotta Temples' },
+  { name: 'Jhargram', tag: 'Forest & Palaces' },
+  { name: 'Purulia', tag: 'Hills & Falls' },
+  { name: 'Tarapith', tag: 'Temple Town' },
+  { name: 'Mayapur', tag: 'Pilgrimage' },
+  { name: 'Bolpur', tag: 'Shantiniketan' },
+  { name: 'Kolkata', tag: 'City of Joy' },
+  { name: 'Mandarmani', tag: 'Beach Resort' },
+  { name: 'Bankura', tag: 'Heritage Trails' },
+  { name: 'Darjeeling', tag: 'Hill Station' },
+];
+
+function icon(name) { return ICONS[name] || ''; }
+
+function renderInitialSkeleton() {
+  if (document.querySelector('#app .hero')) return; /* 2026-09-25: static hero in index.html already painted */
+  document.getElementById('app').innerHTML = `
+  <div class="hero">
+    <div class="hero-inner skel-hero">
+      <div class="skel skel-line" style="width:40%;height:26px"></div>
+      <div class="skel skel-line" style="width:60%"></div>
+      <div class="skel" style="height:150px;border-radius:20px;margin-top:20px"></div>
+    </div>
+  </div>
+  <div class="section"><div class="container">
+    <div class="skel skel-line" style="width:160px;height:20px;margin:0 0 16px"></div>
+    <div class="skel-grid">${Array(8).fill('<div class="skel skel-card"></div>').join('')}</div>
+  </div></div>`;
+}
+
+async function loadData() {
+  renderInitialSkeleton();
+  try {
+    const res = await fetch('data/home-index.json');
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const home = await res.json();
+    DATA = { meta: home.meta || {} };
+    SN = home.sn || [];
+    TOP_ROUTES = home.top || [];
+    BUSES = {}; ROUTES = {}; STOPS = {};
+    window.addEventListener('hashchange', render);
+    render();
+    /* 2026-09-25: app-index.json (1.9 MB) used to start downloading
+       ~2.5 s after load and hogged mobile bandwidth for 10+ s, which
+       wrecked Time-to-Interactive and the PSI mobile score. Now the
+       full index loads only when needed: 10 s after load (still fills
+       the live board for engaged users), or the moment someone types
+       in a search field. Route changes already load it on demand. */
+    var kicked = false;
+    var kick = function () {
+      if (kicked) return;
+      if (document.visibilityState === 'hidden') { setTimeout(kick, 5000); return; }
+      kicked = true;
+      ensureFullData().then(function () { renderBoard(); }).catch(function () {});
+    };
+    setTimeout(kick, 10000);
+    document.addEventListener('input', function () {
+      if (DATA && DATA.buses) return;
+      kick();
+    }, { passive: true });
+    document.addEventListener('focusin', function () {
+      if (DATA && DATA.buses) return;
+      kick();
+    }, { passive: true, capture: true });
+  } catch (e) {
+    try {
+      await ensureFullData();
+      window.addEventListener('hashchange', render);
+      render();
+      return;
+    } catch (e2) {}
+    document.getElementById('app').innerHTML = `
+    <div class="container"><div class="error-panel">
+      ${icon('alert')}
+      <p><strong>Could not load the timetable.</strong><br>${esc(e.message)}</p>
+      <button class="retry-btn" onclick="loadData()">Try again</button>
+    </div></div>`;
+  }
+}
+
+function ensureFullData() {
+  if (DATA && DATA.buses) return Promise.resolve();
+  if (!FULL_PROMISE) {
+    FULL_PROMISE = fetch('data/app-index.json').then(function (res) {
+      if (!res.ok) { FULL_PROMISE = null; throw new Error('HTTP ' + res.status); }
+      return res.json();
+    }).then(function (full) {
+      DATA = full;
+      BUSES = {};
+      DATA.buses.forEach(b => BUSES[b.id] = b);
+      ROUTES = DATA.routes || {};
+      STOPS = DATA.stops || {};
+      if (DATA.sn && DATA.sn.length) SN = DATA.sn;
+    });
+  }
+  return FULL_PROMISE;
+}
+
+function setLang(l) {
+  if (window.BJLang) return window.BJLang.setLang(l);
+  LANG = l === 'bn' ? 'bn' : 'en';
+  document.body.classList.toggle('lang-bn', LANG === 'bn');
+  render();
+}
+
+/* Central language system owns the state; homepage only updates its renderer. */
+document.addEventListener('bj:langchange', function (ev) {
+  var next = ev && ev.detail && ev.detail.lang === 'bn' ? 'bn' : 'en';
+  if (LANG !== next) {
+    LANG = next;
+    render();
+  }
+});
+
+function toggleTheme() {
+  const cur = document.body.classList.contains('dark') ||
+    document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  const next = cur === 'dark' ? 'light' : 'dark';
+  document.body.classList.toggle('dark', next === 'dark');
+  document.documentElement.setAttribute('data-theme', next);
+  try {
+    localStorage.setItem('bj-theme', next);
+    localStorage.setItem('seo-theme', next);
+  } catch (e) {}
+  updateThemeIcon(next);
+}
+
+function updateThemeIcon(theme) {
+  const btn = document.getElementById('themeBtn');
+  if (btn) btn.innerHTML = theme === 'dark' ? icon('sun') : icon('moon');
+}
+
+(function () {
+  try {
+    const saved = localStorage.getItem('bj-theme') || localStorage.getItem('seo-theme');
+    if (saved === 'dark' || saved === 'light') {
+      document.documentElement.setAttribute('data-theme', saved);
+      document.body.classList.toggle('dark', saved === 'dark');
+    }
+  } catch (e) {}
+})();
+
+function esc(s) {
+  return String(s || '').replace(/[<>&"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c]));
+}
+function slug(s) {
+  return String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$|/g, '');
+}
+
+function parseTime(t) {
+  if (!t) return null;
+  const m = t.match(/(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
+  if (!m) return null;
+  let h = parseInt(m[1], 10), min = parseInt(m[2], 10);
+  const ap = (m[3] || '').toUpperCase();
+  if (ap === 'PM' && h < 12) h += 12;
+  if (ap === 'AM' && h === 12) h = 0;
+  return h * 60 + min;
+}
+
+function minutesNow() {
+  const d = new Date();
+  return d.getHours() * 60 + d.getMinutes();
+}
+
+function busTypeBadge(t) {
+  if (!t) return '';
+  const g = t.toLowerCase();
+  if (g.includes('gov') || g.includes('sbstc') || g.includes('nbstc') || g.includes('wbtc'))
+    return '<span class="badge badge-govt">Govt</span>';
+  if (g.includes('ac') && !g.includes('non'))
+    return '<span class="badge badge-ac">AC</span>';
+  return '<span class="badge badge-private">Private</span>';
+}
+
+function timeOrDash(t) {
+  return t ? `<span class="stop-time">${esc(t)}</span>` : `<span class="no-time">—</span>`;
+}
+
+/* Time query support (UX audit 2026-09-19): "8:15", "8pm", "20:00" */
+function looksLikeTime(q) {
+  q = String(q || '').trim().toLowerCase();
+  return /^\d{1,2}:\d{2}\s*(am|pm)?$/.test(q) || /^\d{1,2}\s*(am|pm)$/.test(q);
+}
+function parseClock(q) {
+  q = String(q || '').trim().toLowerCase().replace(/\s+/g, '');
+  const m = /^(\d{1,2})(?::(\d{2}))?(am|pm)?$/.exec(q);
+  if (!m) return null;
+  let h = +m[1], mi = m[2] ? +m[2] : 0, ap = m[3];
+  if (mi > 59) return null;
+  if (ap) { if (h < 1 || h > 12) return null; h %= 12; if (ap === 'pm') h += 12; }
+  else if (h > 23) return null;
+  return h * 60 + mi;
+}
+function doSearch() {
+  const from = (document.getElementById('fromInput')?.value || '').trim();
+  const to = (document.getElementById('toInput')?.value || '').trim();
+  const stop = (document.getElementById('stopInput')?.value || '').trim();
+  if (!from && !to && !stop) {
+    const emptyBox = document.querySelector('.empty-search');
+    if (emptyBox) { emptyBox.classList.add('show'); emptyBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }
+    return;
+  }
+  const q = new URLSearchParams();
+  if (from) q.set('from', from);
+  if (to) q.set('to', to);
+  if (stop) q.set('stop', stop);
+  location.hash = '#/search?' + q.toString();
+}
+
+function swapFromTo() {
+  const f = document.getElementById('fromInput');
+  const t = document.getElementById('toInput');
+  const tmp = f.value; f.value = t.value; t.value = tmp;
+}
+
+function quickSearch(name) {
+  const q = new URLSearchParams();
+  q.set('from', name);
+  location.hash = '#/search?' + q.toString();
+}
+
+/* 2026-09-28: same-name-different-place traps. 'Durgapur Bridge' is a
+   Kolkata (Behala) landmark on Diamond Harbour Road and 'Dakshin Durgapur'
+   is a South 24 Parganas village near Joynagar — neither is Durgapur city
+   (Bardhaman district), so both are blocked from matching 'durgapur'. */
+const PLACE_TRAPS = {
+  'durgapurbridge': ['durgapur'],
+  'dakshindurgapur': ['durgapur']
+};
+
+/* 2026-10-10: consonant-skeleton collisions. "Bankra" (a Howrah-district
+   locality, incl. "Bankra More") and "Bankura" (the district town) both
+   reduce to the skeleton "bnkr", so the fuzzy tier below made e.g. WBTC
+   AC-2 - which stops at "Bankra More" - show up on the Bankura place page.
+   These pairs are genuinely different places and must never cross-match. */
+const DISTINCT_PLACE_PAIRS = [['bankra', 'bankura']];
+function distinctPlaceBlocked(v, q) {
+  for (let i = 0; i < DISTINCT_PLACE_PAIRS.length; i++) {
+    const a = DISTINCT_PLACE_PAIRS[i][0], b = DISTINCT_PLACE_PAIRS[i][1];
+    const hasA = v.includes(a), hasB = v.includes(b);
+    if (hasA && !hasB && q.includes(b) && !q.includes(a)) return true;
+    if (hasB && !hasA && q.includes(a) && !q.includes(b)) return true;
+  }
+  return false;
+}
+function placeMatchesCore(value, query) {
+  const v = String(value || '').toLowerCase().trim();
+  const q = String(query || '').toLowerCase().trim();
+  if (!v || !q) return false;
+  const _tc = s => s.replace(/[^a-z0-9]/g, '');
+  if (PLACE_TRAPS[_tc(v)] && PLACE_TRAPS[_tc(v)].indexOf(_tc(q)) > -1) return false;
+  if (v.includes(q)) return true;
+  const compact = s => s.replace(/[^a-z0-9]/g, '');
+  const vc = compact(v).replace(/ac$/, '');
+  const qc = compact(q).replace(/ac$/, '');
+  if (vc === qc || vc.includes(qc)) return true;
+  if (distinctPlaceBlocked(v, q)) return false;
+  /* Fuzzy tier for Bengali transliteration variants: compare consonant
+     skeletons (Mallarpur/Mollarpur, Medinipur/Midnapore, Tarapith/...
+     Tarapeeth). Only for queries with at least 4 consonants so short
+     words like 'pur' cannot match every place. */
+  const skel = s => s.replace(/[^bcdfghjklmnpqrstvwxyz]/g, '');
+  const vs = skel(v), qs = skel(q);
+  /* 2026-10-10: EXACT skeleton only. The old containment branch
+     (vs.includes(qs) && diff <= 2) let a longer value match a shorter
+     query on consonants alone - "Bankra More" (bnkrmr) matched the query
+     "bankura" (bnkr) and put WBTC AC-2 on the Bankura page. Spelling
+     variants that matter here (Medinipur/Midnapore, Mallarpur/Mollarpur)
+     all have IDENTICAL skeletons, so equality is enough. */
+  if (qs.length >= 4 && vs === qs) return true;
+  /* 2026-09-29: qualifier tier — query adds a generic suffix to a shorter
+     value, e.g. value "Howrah" should match query "howrah station" or
+     "howrah bus stand". Reverse of the v.includes(q) tier above. Only
+     whitelisted suffix words, value >= 4 chars, so unrelated strings
+     can't creep in; PLACE_TRAPS above still apply. */
+  if (vc.length >= 4 && qc.startsWith(vc)) {
+    const rem = qc.slice(vc.length);
+    if (/^(station|stn|busstand|bustand|junction|jn|terminal|depot|court|airport|road|rd|stand|college|university|stadium)$/.test(rem)) return true;
+  }
+  return false;
+}
+
+/* Place alias groups: same town, different names (Bengali vs English
+   spellings). The data mixes these spellings, so expand both sides of
+   every comparison through the group table. Covers from/to route
+   search, stoppage search and place pages (all use placeMatches). */
+const PLACE_ALIAS_GROUPS = [
+  ['contai', 'kanthi'],
+  ['berhampore', 'baharampur'],
+  ['bardhaman', 'burdwan'],
+  /* 2026-09-28: +babughat/dharmatala — normal users type 'kolkata', SBSTC/private
+     intercity termini must be found. Howrah stays a separate city (user decision). */
+  ['kolkata', 'calcutta', 'esplanade', 'santragachi', 'garia', 'tollygunge', 'kudghat', 'karunamoyee', 'babughat', 'dharmatala', 'dharmatola'],
+  ['bolpur', 'santiniketan'],
+  ['tarakeswar', 'tarakeshwar'],
+  ['malda', 'english bazar', 'malda town'],
+  ['cooch behar', 'koch bihar'],
+  ['krishnanagar', 'krishnagar']
+];
+const PLACE_ALIAS = {};
+PLACE_ALIAS_GROUPS.forEach(function (g) { g.forEach(function (n) { PLACE_ALIAS[n] = g; }); });
+/* 2026-09-28: display-only canonical names — multi-stand towns read as one
+   family: 'Durgapur Station' -> 'Durgapur (Station)', 'Bankura Bypass' ->
+   'Bankura (Bypass)', intercity termini get their city: 'Karunamoyee' ->
+   'Kolkata (Karunamoyee)'. Data files stay untouched (3,363 SEO pages safe);
+   WBTC/Mini Bus city buses keep their raw locality names. */
+const DISPLAY_NAME = {
+  'durgapur station': 'Durgapur (Station)',
+  'durgapur st.': 'Durgapur (Station)',
+  'durgapur st': 'Durgapur (Station)',
+  'durgapur city center': 'Durgapur (City Center)',
+  'durgapur city centre': 'Durgapur (City Center)',
+  'durgapur bus stand': 'Durgapur (Bus Stand)',
+  'durgapur expressway': 'Durgapur (Expressway)',
+  'bankura bypass': 'Bankura (Bypass)',
+  'bankura bus stand': 'Bankura (Bus Stand)',
+  'bankura station': 'Bankura (Station)',
+  'bankura pump more': 'Bankura (Pump More)',
+  'bankura pump': 'Bankura (Pump)',
+  'bankura more': 'Bankura (More)',
+  'bankura satighat bridge': 'Bankura (Satighat Bridge)',
+  'karunamoyee': 'Kolkata (Karunamoyee)',
+  'saltlake karunamoyee': 'Kolkata (Karunamoyee)',
+  'esplanade': 'Kolkata (Esplanade)',
+  'dharmatala': 'Kolkata (Dharmatala)',
+  'dharmatola': 'Kolkata (Dharmatala)',
+  'babughat': 'Kolkata (Babughat)'
+};
+function dispName(name, operator) {
+  const d = DISPLAY_NAME[String(name || '').toLowerCase().trim()];
+  if (!d) return name;
+  if (/WBTC|Mini Bus/i.test(String(operator || ''))) return name;
+  return d;
+}
+function aliasVariants(name) {
+  const k = String(name || '').toLowerCase().trim();
+  const g = PLACE_ALIAS[k];
+  return g ? [k].concat(g) : [k];
+}
+function placeMatches(value, query) {
+  if (placeMatchesCore(value, query)) return true;
+  let aq = aliasVariants(query);
+  for (let i = 0; i < aq.length; i++) {
+    if (placeMatchesCore(value, aq[i])) return true;
+  }
+  let av = aliasVariants(value);
+  for (let i = 0; i < av.length; i++) {
+    if (placeMatchesCore(av[i], query)) return true;
+  }
+  return false;
+}
+
+async function loadFullBus(id) {
+  if (FULL_BUSES && FULL_BUSES[id]) return FULL_BUSES[id];
+  try {
+    const res = await fetch('data/bus-details/' + encodeURIComponent(id) + '.json');
+    if (res.ok) {
+      const b = await res.json();
+      if (!FULL_BUSES) FULL_BUSES = {};
+      FULL_BUSES[id] = b;
+      return b;
+    }
+  } catch (e) {}
+  await loadFullBusData();
+  return FULL_BUSES[id];
+}
+async function loadFullBusData() {
+  if (FULL_BUSES) return FULL_BUSES;
+  const res = await fetch('data/bus-details.json');
+  if (!res.ok) throw new Error('Could not load bus details (HTTP ' + res.status + ')');
+  FULL_BUSES = await res.json();
+  return FULL_BUSES;
+}
+function freshnessNote() {
+  const updated = DATA?.meta?.last_updated || '—';
+  return `<div class="data-trust" role="note">Data last refreshed: <strong>${esc(updated)}</strong> · Schedules may change. Verify with the operator before travel.</div>`;
+}
+async function render() {
+  const hash = location.hash.slice(1) || '/';
+  const app = document.getElementById('app');
+  /* 2026-09-25: bus pages only need their own ~1.5 KB bus-details file -
+     never make them wait for the full 1.9 MB index. Other data pages
+     (search/stop/route/place) do need it; show a spinner while it
+     downloads instead of a frozen screen. */
+  if (hash !== '/' && hash !== '' && !hash.startsWith('/bus/')) {
+    if (!(DATA && DATA.buses)) {
+      app.innerHTML = '<div class="container" style="padding:48px 16px;text-align:center">' +
+        '<style>@keyframes bjspin{to{transform:rotate(360deg)}}.bj-ldr{display:inline-block;width:34px;height:34px;border:3px solid #e8ddc8;border-top-color:#b8791f;border-radius:50%;animation:bjspin .9s linear infinite;margin-bottom:14px}</style>' +
+        '<div class="bj-ldr"></div>' +
+        '<div style="font-size:15px">Loading all bus timings…</div>' +
+        '<div class="label-bn" style="font-size:13px;color:var(--ink-dim);margin-top:4px">সব বাস টাইম টেবিল লোড হচ্ছে…</div>' +
+        '</div>';
+    }
+    try { await ensureFullData(); } catch (e) {}
+  }
+  if (hash === '/' || hash === '') renderHome(app);
+  else if (hash.startsWith('/search')) renderSearch(app);
+  else if (hash.startsWith('/route/')) renderRoute(app, decodeURIComponent(hash.slice(7)));
+  else if (hash.startsWith('/bus/')) {
+    app.innerHTML = `<div class="container" style="padding:40px"><div class="loading">Loading bus details…</div></div>`;
+    try { await renderBus(app, decodeURIComponent(hash.slice(5))); } catch (e) { app.innerHTML = `<div class="container"><div class="error-panel"><p><strong>Could not load bus details.</strong><br>${esc(e.message)}</p></div></div>`; }
+  }
+  else if (hash.startsWith('/stop/')) renderStop(app, decodeURIComponent(hash.slice(6)));
+  else if (hash.startsWith('/place/')) renderPlace(app, decodeURIComponent(hash.slice(7)));
+  else if (hash.startsWith('/about')) renderAbout(app);
+  else renderHome(app);
+  window.scrollTo(0, 0);
+  animateStats();
+}
+
+function animateStats() {
+  document.querySelectorAll('.stat .num[data-target]').forEach(el => {
+    const target = parseInt(el.dataset.target, 10) || 0;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { el.textContent = target.toLocaleString(); return; }
+    const start = performance.now();
+    const dur = 700;
+    function step(now) {
+      const p = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString();
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  });
+}
+
+/* ===================== Live Departures Board (geo-aware) ===================== */
+const LV_ORIGINS = [
+  { name: 'Kolkata', lat: 22.56263, lon: 88.36304 },
+  { name: 'Digha', lat: 21.62776, lon: 87.51965 },
+  { name: 'Burdwan', lat: 23.2324, lon: 87.8678 },
+  { name: 'Siliguri', lat: 26.71004, lon: 88.42851 },
+  { name: 'Bankura', lat: 23.23241, lon: 87.0716 },
+];
+const LV_FALLBACK = ['Kolkata', 'Digha', 'Burdwan'];
+let lvOrigin = null;
+let lvNear = [];
+
+function lvHaversine(lat1, lon1, lat2, lon2) {
+  const R = 6371;
+  const dLat = (lat2 - lat1) * Math.PI / 180;
+  const dLon = (lon2 - lon1) * Math.PI / 180;
+  const a = Math.sin(dLat/2)**2 + Math.cos(lat1*Math.PI/180)*Math.cos(lat2*Math.PI/180)*Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+
+function detectLocation() {
+  if (!navigator.geolocation) { renderBoard(); return; }
+  navigator.geolocation.getCurrentPosition(
+    (pos) => {
+      const { latitude: lat, longitude: lon } = pos.coords;
+      lvNear = LV_ORIGINS.map(o => ({ ...o, dist: lvHaversine(lat, lon, o.lat, o.lon) }))
+        .sort((a, b) => a.dist - b.dist).slice(0, 4);
+      if (lvNear.length && !lvOrigin) lvOrigin = lvNear[0].name;
+      renderBoard();
+    },
+    () => { lvNear = []; renderBoard(); },
+    { timeout: 5000, maximumAge: 300000 }
+  );
+}
+
+function lvGetOrigins() {
+  if (lvNear.length) return lvNear;
+  return LV_FALLBACK.map(n => ({ name: n, dist: null }));
+}
+
+function renderBoard() {
+  const wrap = document.getElementById('lvBoard');
+  if (!wrap) return;
+  if (!lvOrigin) lvOrigin = lvGetOrigins()[0].name;
+  const origins = lvGetOrigins();
+  const now = minutesNow();
+  const clockT = new Date().toLocaleTimeString('en-IN', { hour12: false, timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+
+  const originStop = STOPS[lvOrigin];
+  const deps = originStop
+    ? stopDepartures(slug(lvOrigin), originStop.bus_ids || Object.keys(BUSES), 10)
+    : [];
+
+  let rows = '';
+  if (deps.length) {
+    const nextIdx = deps.findIndex(d => d.diff > 0);
+    const allPast = nextIdx < 0;
+    const idx = allPast ? 0 : nextIdx;
+    rows = deps.map((n, i) => {
+      let cls = '', right = '';
+      if (i === idx) {
+        cls = 'next';
+        right = `<span class="ltag">${allPast ? (LANG==='bn'?'কাল +':'tmrw +') : (LANG==='bn'?'এখন +':'in ')}${countdownText(n.diff)}</span>`;
+      } else if (i > idx && !allPast) {
+        right = `<span class="lgone">+${countdownText(n.diff)}</span>`;
+      } else {
+        cls = 'past';
+        right = `<span class="lgone">✓ ${LANG==='bn'?'চলে গেছে':'departed'}</span>`;
+      }
+      return `<div class="lv-row ${cls}" style="animation-delay:${i*0.07}s" onclick="location.hash='#/bus/${encodeURIComponent(n.b.id)}'">` +
+        `<span class="lt">${fmtTime(n.t).replace(' ','')}</span>` +
+        `<span class="lnm">${esc(bnBusName(n.b.bus_name))}</span>` +
+        `<span class="ldst">→ ${esc(pn(n.b.destination))}</span>` +
+        `${right}</div>`;
+    }).join('');
+  } else if (!(DATA && DATA.buses)) {
+    rows = `<div class="lv-row"><span class="lnm">Loading departures...</span></div>`;
+  } else {
+    rows = `<div class="lv-row"><span class="lnm">${LANG==='bn'?'সময়ের তথ্য নেই':'No timed departures listed'}</span></div>`;
+  }
+
+  const geoHtml = lvNear.length
+    ? `<div class="lv-geo"><span class="label-en">Detected near</span><span class="label-bn">কাছাকাছি শনাক্ত</span><b>${esc(pn(lvNear[0].name))}</b>${lvNear[0].dist != null ? `<span>${Math.round(lvNear[0].dist)} km</span>` : ''}</div>`
+    : `<div class="lv-geo"><span class="label-en">Popular stops</span><span class="label-bn">জনপ্রিয় স্টপ</span></div>`;
+
+  wrap.innerHTML = `
+    <div class="lv-clock-wrap">
+      <div>
+        <div class="lv-clock-label"><span class="ldot"></span> <span class="label-en">Live Departures</span><span class="label-bn">লাইভ ছাড়ার তালিকা</span></div>
+        <div class="lv-clock-big">${clockT}<small>IST</small></div>
+      </div>
+      ${geoHtml}
+    </div>
+    <div class="lv-board">
+      <div class="lv-tabs">${origins.map(o => `<button class="lv-tab${o.name === lvOrigin ? ' on' : ''}" onclick="lvOrigin='${o.name}';renderBoard()">${esc(pn(o.name))}${o.dist != null ? `<span class="dist">${Math.round(o.dist)}km</span>` : ''}</button>`).join('')}</div>
+      <div id="lvRows">${rows}</div>
+    </div>`;
+}
+
+/* ===================== Popular Routes ===================== */
+function computePopularRoutes() {
+  if (TOP_ROUTES && TOP_ROUTES.length) return TOP_ROUTES;
+  const pair = {};
+  for (const id in BUSES) {
+    const b = BUSES[id];
+    const o = (b.origin || '').trim(), d = (b.destination || '').trim();
+    if (o && d && o !== d) {
+      const key = o + '||' + d;
+      pair[key] = (pair[key] || 0) + 1;
+    }
+  }
+  return Object.entries(pair).sort((a, b) => b[1] - a[1]).slice(0, 10)
+    .map(([k, n]) => { const [o, d] = k.split('||'); return { from: o, to: d, n }; });
+}
+
+
+/* SEO/via pages that exist as real files (homepage chips/cards link to these) */
+const __BJ_SEO_SLUGS = new Set(['cooch-behar-to-siliguri', 'durgapur-to-karunamoyee', 'kolkata-to-haldia', 'burdwan-to-kolkata', 'durgapur-to-esplanade', 'burdwan-to-karunamoyee', 'kolkata-to-durgapur', 'kolkata-to-asansol', 'durgapur-to-kolkata', 'asansol-to-kolkata']);
+const __BJ_VIA_SLUGS = new Set(['digha', 'mukutmanipur', 'bishnupur', 'jhargram', 'purulia', 'tarapith', 'mayapur', 'bolpur', 'kolkata', 'mandarmani', 'bankura', 'darjeeling']);
+function renderHome(el) {
+  const placeCards = POPULAR_PLACES.map((p, i) => {
+    const stop = Object.values(STOPS).find(s => s.name.toLowerCase() === p.name.toLowerCase())
+      || Object.values(STOPS).find(s => s.name.toLowerCase().includes(p.name.toLowerCase()));
+    const iconName = PLACE_ICONS[p.name] || 'pin';
+    const featured = FEATURED_PLACES.includes(p.name) ? ' featured' : '';
+    const vslug = String(p.name).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-');
+    const cardInner = `<div class="icon-badge">${icon(iconName)}</div>
+      <div class="name">${esc(p.name)}</div>
+      <div class="place-tag">${esc(p.tag || 'Explore')}</div>`;
+    /* 2026-09-28: real link to via/ page; click still opens the SPA place view. */
+    return __BJ_VIA_SLUGS.has(vslug)
+      ? `<a class="place-card${featured}" style="--i:${i}" href="via/${vslug}" onclick="event.preventDefault();location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</a>`
+      : `<div class="place-card${featured}" style="--i:${i}" onclick="location.hash='#/place/${encodeURIComponent(p.name)}'">${cardInner}</div>`;
+  }).join('');
+
+  const bjSlug = s => String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-');
+  const routeChips = computePopularRoutes().map(p => {
+    const hashNav = `location.hash='#/search?from=${encodeURIComponent(p.from)}&to=${encodeURIComponent(p.to)}'`;
+    const slug = bjSlug(p.from) + '-to-' + bjSlug(p.to);
+    const inner = `${esc(pn(p.from))} <span class="rarr">→</span> ${esc(pn(p.to))}<span class="rcnt">${p.n}</span>`;
+    /* 2026-09-28: chips are real <a> links to the SEO page for Google, but
+       onclick preventDefault keeps the in-app SPA search UX unchanged. */
+    return __BJ_SEO_SLUGS.has(slug)
+      ? `<a class="route-chip" href="bus-time-table/${slug}" onclick="event.preventDefault();${hashNav}">${inner}</a>`
+      : `<span class="route-chip" onclick="${hashNav}">${inner}</span>`;
+  }).join('');
+
+  var homeHTML = `
+  <div class="hero">
+    <div class="hero-route-line">${icon('bus')}</div>
+    <div class="container hero-inner">
+      <span class="eyebrow">${icon('ticket')} West Bengal · Route Data</span>
+      <h1>Bus<span class="accent">Jatri</span></h1>
+      <p class="tagline en">West Bengal's largest bus timetable</p>
+      <p class="tagline bn">পশ্চিমবঙ্গের সবচেয়ে বড় বাস টাইম টেবিল</p>
+      <div class="search-box">
+        <div class="search-row">
+          <div class="search-field">
+            <label>${icon('pin')} <span class="label-en">From</span><span class="label-bn">কোথা থেকে</span></label>
+            <input id="fromInput" placeholder="e.g. Bankura" onkeydown="if(event.key==='Enter')doSearch()">
+            <div class="geo-hint">${icon('pin')} <span class="label-en">Detected:</span> <span class="geo-city"></span></div>
+          </div>
+          <button class="swap-btn" onclick="swapFromTo()" title="Swap From & To" aria-label="Swap origin and destination">${icon('compass')}</button>
+          <div class="search-field">
+            <label>${icon('compass')} <span class="label-en">To</span><span class="label-bn">কোথায়</span></label>
+            <input id="toInput" placeholder="e.g. Digha" onkeydown="if(event.key==='Enter')doSearch()">
+          </div>
+          <div class="search-field">
+            <label>${icon('stops')} <span class="label-en">Stoppage</span><span class="label-bn">স্টপেজ</span> <span class="via-hint">(optional)</span></label>
+            <input id="stopInput" placeholder="e.g. Kolaghat" onkeydown="if(event.key==='Enter')doSearch()">
+          </div>
+        </div>
+        <div class="search-actions">
+          <button class="search-btn" onclick="doSearch()">${icon('search')} <span class="label-en">Search buses</span><span class="label-bn">খুঁজুন</span></button>
+          <a class="browse-btn" href="bus-time-table/"><span class="label-en">Browse all timetables</span><span class="label-bn">সব টাইমটেবিল দেখুন</span> →</a>
+        </div>
+        <datalist id="stopList">${[...new Set([...(SN && SN.length ? SN : Object.keys(STOPS)), ...Object.values(BUSES).flatMap(b => [b.origin, b.destination]).filter(Boolean)])].map(n => `<option value="${esc(n)}">`).join('')}</datalist>
+      </div>
+      <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
+      <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stoppages</span><span class="label-bn">টি স্টপেজ</span></p>
+  </div>
+  </div>
+    <section data-keep="1" style="max-width:720px;margin:0 auto 8px;padding:0 18px 18px">
+    <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin-bottom:10px">Popular Operators</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <a href="bus-time-table/sbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">SBSTC</a>
+      <a href="bus-time-table/nbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">NBSTC</a>
+      <a href="bus-time-table/wbtc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">WBTC</a>
+      <a href="kolkata-city-bus-timetable" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Kolkata City Bus</a>
+      <a href="bus-time-table/volvo-ac-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
+    </div>
+  </section>
+  <div class="section">
+    <div class="container">
+      <div class="section-title">${icon('clock')} <span class="label-en">Live Departures</span><span class="label-bn">লাইভ ছাড়ার তালিকা</span></div>
+      <div id="lvBoard"></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="section-title">${icon('map')} <span class="label-en">Popular Routes</span><span class="label-bn">জনপ্রিয় রুট</span></div>
+      <div class="route-chips">${routeChips}</div>
+    </div>
+  </div>
+<div class="section">
+    <div class="container">
+      <div class="section-title">${icon('pin')} <span class="label-en">Popular Destinations</span><span class="label-bn">জনপ্রিয় স্থান</span></div>
+      <div class="place-cards">${placeCards}</div>
+    </div>
+  </div>`;
+  /* 2026-09-25: keep the already-painted static hero (from index.html)
+     instead of re-rendering it - the identical re-paint after data
+     arrives was becoming the LCP element in PSI. Nothing is injected:
+     the static markup already contains the geo hint (initially empty)
+     and the stats numbers, which are only rewritten if they actually
+     changed (a needless innerHTML write re-paints the element and
+     resets LCP). The native datalist stays off - ux-fixes.js uses a
+     custom autocomplete dropdown. */
+  var keepHero = document.querySelector('#app > .hero');
+  if (keepHero) {
+    var tmp = document.createElement('div');
+    tmp.innerHTML = homeHTML;
+    var freshHero = tmp.querySelector('.hero');
+    if (freshHero) {
+      var s1 = keepHero.querySelector('.stats-inline');
+      var s2 = freshHero.querySelector('.stats-inline');
+      if (s1 && s2 && s1.innerHTML !== s2.innerHTML) s1.innerHTML = s2.innerHTML;
+      freshHero.remove();
+    }
+    /* keep the static Popular Operators section (data-keep) when re-rendering home */
+    var keepOps = el.querySelector('[data-keep="1"]');
+    var freshOps = tmp.querySelector('[data-keep="1"]');
+    if (keepOps && freshOps) freshOps.remove();
+    var sib = keepHero.nextElementSibling;
+    while (sib) { var nx2 = sib.nextElementSibling; if (sib.getAttribute && sib.getAttribute('data-keep') === '1') break; sib.remove(); sib = nx2; }
+    while (tmp.firstChild) el.appendChild(tmp.firstChild);
+  } else {
+    el.innerHTML = homeHTML;
+  }
+  renderBoard();
+  detectLocation();
+}
+
+async function renderSearch(el) {
+  window.__bjTimeQuery = null;
+  const params = new URLSearchParams(location.hash.split('?')[1] || '');
+  const from = (params.get('from') || '').toLowerCase().trim();
+  const to = (params.get('to') || '').toLowerCase().trim();
+  const stop = (params.get('stop') || '').toLowerCase().trim();
+  const op = (params.get('op') || '').toLowerCase().trim();
+  const opq = op ? op.replace(/-/g, ' ') : '';
+  /* compact index (app-index.json) already carries stop names + times:
+     search no longer downloads the 5MB detail file */
+  let results = Object.values(BUSES);
+  if (opq) {
+    /* Operator / type filter. 'volvo-ac' is the AC-buses page: show EVERY AC
+       bus (Volvo + other AC operators), not just Volvo. */
+    var acOnly = (op === 'volvo-ac' || opq === 'volvo ac');
+    results = results.filter(b => {
+      if (acOnly) {
+        var t = (b.bus_type || '').toUpperCase();
+        return t.indexOf('AC') > -1 && t.indexOf('NON') === -1;
+      }
+      return (b.bus_name || '').toLowerCase().includes(opq) ||
+        (b.bus_type || '').toLowerCase().includes(opq) ||
+        (b.id || '').toLowerCase().includes(op);
+    });
+  }
+
+  if (from && to) {
+    const posIn = (b, q) => {
+      if (placeMatches(b.origin, q)) return 0;
+      const sts = b.stoppages || [];
+      const idx = sts.findIndex(s => placeMatches(s.name, q));
+      if (idx >= 0) return idx + 1;
+      if (placeMatches(b.destination, q)) return sts.length + 2;
+      return -1;
+    };
+    results = results.filter(b => {
+      const fi = posIn(b, from), ti = posIn(b, to);
+      if (!(fi >= 0 && ti >= 0 && fi < ti)) return false;
+      if (stop) {
+        const si = posIn(b, stop);
+        if (si < 0) return false;
+      }
+      return true;
+    });
+    if (!results.length && !stop) {
+      results = Object.values(BUSES).filter(b => {
+        const fi = posIn(b, from), ti = posIn(b, to);
+        return fi >= 0 && ti >= 0;
+      });
+    }
+  } else if (stop) {
+    results = results.filter(b =>
+      (b.stoppages || []).some(s => placeMatches(s.name, stop)) ||
+      placeMatches(b.origin, stop) ||
+      placeMatches(b.destination, stop)
+    );
+  } else if ((from || to) && looksLikeTime(from || to) && parseClock(from || to) != null) {
+    const q = from || to;
+    const target = parseClock(q);
+    const cd = t => { const d = Math.abs(t - target) % 1440; return Math.min(d, 1440 - d); };
+    results = results.filter(b => parseTime(b.departure_time) != null && cd(parseTime(b.departure_time)) <= 90);
+    results.sort((a, b) => cd(parseTime(a.departure_time)) - cd(parseTime(b.departure_time)));
+    window.__bjTimeQuery = q;
+  } else if (from || to) {
+    const q = from || to;
+    results = results.filter(b =>
+      placeMatches(b.origin, q) ||
+      placeMatches(b.destination, q) ||
+      (b.bus_name || '').toLowerCase().includes(q) ||
+      (b.route || '').toLowerCase().includes(q) ||
+      (b.stoppages || []).some(s => placeMatches(s.name, q))
+    );
+    if (!results.length && q.length >= 3) {
+      const partial = q.slice(0, 5);
+      results = Object.values(BUSES).filter(b =>
+        (b.origin || '').toLowerCase().startsWith(partial) ||
+        (b.destination || '').toLowerCase().startsWith(partial) ||
+        (b.stoppages || []).some(s => (s.name || '').toLowerCase().startsWith(partial)));
+    }
+  }
+
+  const now = minutesNow();
+  const rel = t => (t == null ? Infinity : (t < now ? t + 1440 : t) - now);
+  results.sort((a, b) => rel(parseTime(a.departure_time)) - rel(parseTime(b.departure_time)));
+
+  const near = results.filter(b => {
+    const t = parseTime(b.departure_time);
+    return t != null && rel(t) <= 180;
+  });
+
+  const emptyState = `
+    <div class="empty-state">
+      ${icon('bus')}
+      <p><span class="label-en">No buses found for that route. Try a nearby town instead.</span><span class="label-bn">কোনো বাস পাওয়া যায়নি। কাছাকাছি কোনো শহর চেষ্টা করুন।</span></p>
+      <div class="chip-row">
+        ${['Bankura', 'Digha', 'Kolkata', 'Durgapur'].map(n => `<span class="sugg-chip" onclick="quickSearch('${n}')">${esc(n)}</span>`).join('')}
+      </div>
+    </div>`;
+
+  el.innerHTML = `
+  <div class="container" style="padding-top:22px;padding-bottom:40px">
+    ${freshnessNote()}
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
+    <h2 class="page-title"><span class="label-en">Search Results</span><span class="label-bn">সার্চ ফলাফল</span> <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(${results.length})</span></h2>
+    ${opq ? `<p style="font-size:13.5px;font-weight:600;color:var(--amber);margin:14px 0 4px">${esc(opq.toUpperCase())} buses (operator filter)</p>` : ''}
+    <p style="font-size:12px;color:var(--ink-dim);margin:2px 0 4px">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>
+    ${window.__bjTimeQuery ? `<p style="color:var(--amber);font-size:13.5px;font-weight:600;margin-bottom:18px">${icon('clock')} Buses departing around ${esc(window.__bjTimeQuery)} (±90 min)</p>` : from || to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${esc(from || '…')} → ${esc(to || '…')}${stop ? ` <span class="badge badge-ac">stop ${esc(stop)}</span>` : ''}</p>` : ''}
+    ${stop && !from && !to ? `<p style="color:var(--ink-dim);font-size:13.5px;margin-bottom:18px">${LANG==='bn'?'এই স্টপেজে থামে: ':'Buses halting at '}${esc(stop)}</p>` : ''}
+    ${near.length ? `<p class="near-label">${icon('clock')} <span class="label-en">${near.length} buses around current time</span><span class="label-bn">${near.length} বাস বর্তমান সময়ের কাছাকাছি</span></p>` : ''}
+    ${results.length ? results.map((b, i) => {
+      const t = parseTime(b.departure_time);
+      const isNear = t != null && rel(t) <= 180;
+      const stopInfo = (() => {
+        const q = from || to;
+        if (!q) return '';
+        const s = (b.stoppages || []).find(x => (x.name || '').toLowerCase().includes(q));
+        if (!s || !s.up_time) return '';
+        return `<div style="font-size:12.5px;color:var(--amber);font-weight:600;margin-top:2px"><span class="label-en">at your stop (${esc(s.name)}): ${esc(s.up_time)}</span><span class="label-bn">আপনার স্টপ (${esc(pn(s.name))}): ${esc(s.up_time)}</span></div>`;
+      })();
+      return `<div class="result-item ${isNear ? 'near' : ''}" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
+        <div class="ri-main">
+          ${isNear ? `<div class="near-label">${icon('clock')} <span class="label-en">Coming up</span><span class="label-bn">আসছে</span></div>` : ''}
+          <div class="name">${esc(bnBusName(b.bus_name))} ${b.reg_no ? `<span class="reg">${esc(b.reg_no)}</span>` : ''} ${busTypeBadge(b.bus_type)}</div>
+          <div class="route">${esc(pn(b.origin))} → ${esc(pn(b.destination))}</div>
+          ${stopInfo}
+          <div class="meta">
+            <span>${icon('stops')} ${b.total_stoppages || (b.stoppages || []).length} stops</span>
+            ${b.operator ? `<span>${esc(b.operator)}</span>` : ''}
+            ${b.fare ? `<span>${esc(b.fare)}</span>` : ''}
+          </div>
+        </div>
+        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
+      </div>`;
+    }).join('') : emptyState}
+  </div>`;
+}
+
+function renderPlace(el, placeName) {
+  const q = placeName.toLowerCase();
+  const related = Object.values(BUSES).filter(b =>
+    /* skip records that carry nothing useful - no timetable and no stops.
+       They rendered as a bare card with no time at the bottom of the list. */
+    !(!b.departure_time && !(b.total_stoppages > 0)) &&
+    (placeMatches(b.origin, q) ||
+    placeMatches(b.destination, q) ||
+    (b.stoppages || []).some(s => placeMatches(s.name, q)))
+  );
+  related.sort((a, b) => {
+    const ta = parseTime(a.departure_time), tb = parseTime(b.departure_time);
+    if (ta == null && tb == null) return 0;
+    if (ta == null) return 1;
+    if (tb == null) return -1;
+    return ta - tb;
+  });
+
+  el.innerHTML = `
+  <div class="container" style="padding-top:22px;padding-bottom:40px">
+    ${freshnessNote()}
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
+    <h2 class="page-title">${esc(placeName)}</h2>
+    <p style="color:var(--ink-dim);font-size:14px;margin-bottom:18px">${related.length} <span class="label-en">buses related to this place</span><span class="label-bn">বাস এই স্থানের সাথে যুক্ত</span></p>
+    ${related.map((b, i) => `
+      <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
+        <div class="ri-main">
+          <div class="name">${esc(bnBusName(b.bus_name))} ${busTypeBadge(b.bus_type)}</div>
+          <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
+          <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
+        </div>
+        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : `<span class="time-pill" style="opacity:.55;font-weight:500">${icon('clock')} <span class="label-en">Time not listed</span><span class="label-bn">সময় নেই</span></span>`}
+      </div>`).join('') || `<div class="empty-state">${icon('bus')}<p>No buses found for this place.</p></div>`}
+  </div>`;
+}
+
+function stationBadge(name) {
+  const st = (STOPS[name] || {}).nearest_station;
+  if (!st) return '';
+  const code = st.code ? ` (${esc(st.code)})` : '';
+  return `<div style="font-size:11px;color:var(--ink-dim);font-weight:500;margin-top:1px">${icon('train')} Railway: ${esc(st.name)}${code} · ~${st.km} km</div>`;
+}
+
+function countdownText(min) {
+  if (min <= 0) return 'now';
+  const h = Math.floor(min / 60), m = min % 60;
+  return h ? `${h}h ${m}m` : `${m}m`;
+}
+
+function fmtTime(min) {
+  let h = Math.floor(min / 60) % 24;
+  const m = min % 60;
+  const ap = h >= 12 ? 'PM' : 'AM';
+  h = h % 12 || 12;
+  return `${h}:${String(m).padStart(2, '0')} ${ap}`;
+}
+
+function stopDepartures(slugKey, busIds, limit) {
+  const now = minutesNow();
+  const out = [];
+  for (const id of busIds) {
+    const b = BUSES[id];
+    if (!b) continue;
+    const s = (b.stoppages || []).find(x => slug(x.name) === slugKey);
+    let t = s ? parseTime(s.up_time) : null;
+    if (t == null && slug(b.origin) === slugKey) t = parseTime(b.departure_time);
+    if (t == null) continue;
+    let diff = t - now;
+    if (diff < 0) diff += 1440;
+    out.push({ b, t, diff });
+  }
+  out.sort((x, y) => x.diff - y.diff);
+  return out.slice(0, limit);
+}
+
+let nbTicker = null;
+function startNextBusTicker() {
+  clearInterval(nbTicker);
+  nbTicker = setInterval(() => {
+    document.querySelectorAll('[data-nbdep]').forEach(el => {
+      let d = parseInt(el.dataset.nbdep, 10) - minutesNow();
+      if (d < 0) d += 1440;
+      el.textContent = countdownText(d);
+    });
+  }, 30000);
+}
+
+async function renderBus(el, id) {
+  id = id.split('?')[0];  // strip query (?full=1) so the bus ID resolves
+  const b = await loadFullBus(id);
+  if (!b) {
+    el.innerHTML = `<div class="container" style="padding:40px"><div class="empty-state">${icon('alert')}<p>Bus not found.</p></div><div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div></div>`;
+    return;
+  }
+  const stops = b.stoppages || [];
+  const INITIAL = 8;
+  const showAll = location.hash.includes('full=1');
+  const visible = showAll ? stops : stops.slice(0, INITIAL);
+
+  const stopNames = stops.map(s => s.name).filter(Boolean);
+  let mapUrl = '';
+  if (stopNames.length >= 2) {
+    const origin = encodeURIComponent(stopNames[0] + ', West Bengal');
+    const dest = encodeURIComponent(stopNames[stopNames.length - 1] + ', West Bengal');
+    const inters = stopNames.slice(1, -1);
+    const wsel = [];
+    const WN = Math.min(3, inters.length);
+    for (let i = 0; i < WN; i++) {
+      const n = inters[Math.round(i * (inters.length - 1) / Math.max(1, WN - 1))];
+      if (wsel.indexOf(n) === -1) wsel.push(n);
+    }
+    const waypoints = wsel.map(n => encodeURIComponent(n + ', West Bengal')).join('%7C');
+    mapUrl = `https://www.google.com/maps/dir/?api=1&origin=${origin}&destination=${dest}` + (waypoints ? `&waypoints=${waypoints}` : '') + '&travelmode=driving';
+  } else if (b.origin && b.destination) {
+    mapUrl = `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(b.origin + ', West Bengal')}&destination=${encodeURIComponent(b.destination + ', West Bengal')}&travelmode=driving`;
+  }
+
+  el.innerHTML = `
+  <div class="container" style="padding-top:22px;padding-bottom:40px">
+    ${freshnessNote()}
+    <div class="back-btn" onclick="history.length>1?history.back():location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
+    <div class="bus-detail">
+      <h2>${esc(bnBusName(b.bus_name))} ${b.reg_no ? `<span style="font-size:14px;color:var(--ink-dim);font-weight:500;font-family:var(--font-mono)">${esc(b.reg_no)}</span>` : ''}</h2>
+      <div class="route-line">${esc(pn(b.origin))} → ${esc(pn(b.destination))} ${busTypeBadge(b.bus_type)}</div>
+      <div class="info-grid">
+        ${b.departure_time ? `<div class="info-item"><div class="lbl">Departure</div><div class="val">${esc(b.departure_time)}</div></div>` : ''}
+        ${b.arrival_time ? `<div class="info-item"><div class="lbl">Arrival</div><div class="val">${esc(b.arrival_time)}</div></div>` : ''}
+        ${b.operator ? `<div class="info-item"><div class="lbl">Operator</div><div class="val">${esc(b.operator)}</div></div>` : ''}
+        ${b.depot_name ? `<div class="info-item"><div class="lbl">Depot</div><div class="val">${esc(b.depot_name)}</div></div>` : ''}
+        ${b.contact_number && b.contact_number !== 'Not Available !' ? `<div class="info-item"><div class="lbl">Contact</div><div class="val"><a href="tel:${esc(b.contact_number)}">${esc(b.contact_number)}</a></div></div>` : ''}
+        <div class="info-item"><div class="lbl">Stops</div><div class="val">${stops.length || b.total_stoppages || 0}</div></div>
+        ${b.fare ? `<div class="info-item"><div class="lbl">Fare</div><div class="val">${esc(b.fare)}</div></div>` : ''}
+      </div>
+      <p style="font-size:12px;color:var(--ink-dim);margin:10px 0 0">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>
+      ${mapUrl ? `<a class="map-btn" href="${mapUrl}" target="_blank" rel="noopener">${icon('map')} <span class="label-en">View route on Google Maps</span><span class="label-bn">গুগল ম্যাপে রুট দেখুন</span></a>` : ''}
+      <a class="map-btn btn-whatsapp" href="javascript:void(0)" data-bus="${esc(bnBusName(b.bus_name))}" data-org="${esc(pn(b.origin))}" data-dest="${esc(pn(b.destination))}" data-dep="${esc(b.departure_time || '')}" data-stops="${stops.length || b.total_stoppages || 0}" onclick="shareWhatsApp(this.dataset.bus,this.dataset.org,this.dataset.dest,this.dataset.dep,this.dataset.stops)">${icon('info')} <span class="label-en">Share on WhatsApp</span><span class="label-bn">শেয়ার করুন</span></a>
+      ${b.destination && b.destination !== '—' ? `<div class="info-item" id="weatherCard" data-dest="${esc(b.destination)}" style="margin-top:12px"><div class="lbl">Weather in ${esc(b.destination)} (now)</div><div class="val" id="weatherVal">Loading…</div></div>` : ''}
+      ${stops.length ? `
+        <h3 class="timetable-title">${icon('ticket')} <span class="label-en">Route Timetable</span><span class="label-bn">রুট টাইমটেবিল</span></h3>
+        <div class="timetable-head"><span>#</span><span><span class="label-en">Stoppage</span><span class="label-bn">স্টপ</span></span><span style="text-align:right">→ ${esc(pn(b.destination))}</span><span style="text-align:right">← ${esc(pn(b.origin))}</span></div>
+        <div class="stops-list">
+          ${visible.map(s => `<div class="stop-row">
+            <span class="stop-dot"></span>
+            <span class="stop-name"><a href="#/stop/${slug(s.name)}">${esc(pn(s.name))}</a></span>
+            ${timeOrDash(s.up_time)}
+            ${timeOrDash(s.down_time)}
+          </div>`).join('')}
+        </div>
+        ${!showAll && stops.length > INITIAL ? `<button class="show-more-btn" onclick="location.hash='#/bus/${encodeURIComponent(id)}?full=1'">Show all ${stops.length} stops ↓</button>` : ''}
+        ${showAll && stops.length > INITIAL ? `<button class="show-more-btn" onclick="location.hash='#/bus/${encodeURIComponent(id)}'">Show less ↑</button>` : ''}
+      ` : '<p style="color:var(--ink-dim);margin-top:12px">Stoppage details not available for this bus.</p>'}
+    </div>
+  </div>`;
+  loadWeather();
+}
+
+const WMO_CODES = { 0: 'Clear sky', 1: 'Mainly clear', 2: 'Partly cloudy', 3: 'Overcast',
+  45: 'Fog', 48: 'Fog', 51: 'Light drizzle', 53: 'Drizzle', 55: 'Heavy drizzle',
+  61: 'Light rain', 63: 'Rain', 65: 'Heavy rain', 66: 'Freezing rain', 67: 'Freezing rain',
+  71: 'Light snow', 73: 'Snow', 75: 'Heavy snow', 77: 'Snow', 80: 'Light showers',
+  81: 'Showers', 82: 'Heavy showers', 85: 'Snow showers', 86: 'Snow showers',
+  95: 'Thunderstorm', 96: 'Thunderstorm', 99: 'Thunderstorm' };
+
+async function loadWeather() {
+  const card = document.getElementById('weatherCard');
+  if (!card) return;
+  const dest = card.dataset.dest;
+  try {
+    const g = await fetch('https://geocoding-api.open-meteo.com/v1/search?count=1&language=en&format=json&name=' +
+      encodeURIComponent(dest + ', West Bengal, India')).then(r => r.json());
+    if (!g.results || !g.results.length) { card.style.display = 'none'; return; }
+    const r = g.results[0];
+    const w = await fetch('https://api.open-meteo.com/v1/forecast?latitude=' + r.latitude +
+      '&longitude=' + r.longitude + '&current=temperature_2m,relative_humidity_2m,weather_code&timezone=auto')
+      .then(x => x.json());
+    const c = w.current || {};
+    card.innerHTML = '<div class="lbl">Weather in ' + esc(dest) + ' (now)</div><div class="val">' +
+      Math.round(c.temperature_2m) + '°C · ' + (WMO_CODES[c.weather_code] || '—') +
+      ' · Humidity ' + c.relative_humidity_2m + '%</div>';
+  } catch (e) { card.style.display = 'none'; }
+}
+
+function renderRoute(el, key) {
+  const r = ROUTES[key];
+  if (!r) {
+    el.innerHTML = `<div class="container" style="padding:40px"><div class="empty-state">${icon('alert')}<p>Route not found.</p></div></div>`;
+    return;
+  }
+  const buses = (r.bus_ids || []).map(id => BUSES[id]).filter(Boolean);
+  el.innerHTML = `
+  <div class="container" style="padding-top:22px;padding-bottom:40px">
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
+    <h2 class="page-title">${esc(r.from)} → ${esc(r.to)}</h2>
+    <p style="color:var(--ink-dim);margin-bottom:18px">${buses.length} buses</p>
+    ${buses.map((b, i) => `
+      <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
+        <div class="ri-main">
+          <div class="name">${esc(bnBusName(b.bus_name))} ${busTypeBadge(b.bus_type)}</div>
+          <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
+        </div>
+        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
+      </div>`).join('')}
+  </div>`;
+}
+
+function renderStop(el, slugKey) {
+  const stop = Object.values(STOPS).find(s => slug(s.name) === slugKey);
+  if (!stop) {
+    el.innerHTML = `<div class="container" style="padding:40px"><div class="empty-state">${icon('alert')}<p>Stop not found.</p></div></div>`;
+    return;
+  }
+  const buses = (stop.bus_ids || []).map(id => BUSES[id]).filter(Boolean);
+  const stn = stop.nearest_station;
+  const next = stopDepartures(slugKey, stop.bus_ids || [], 6);
+  el.innerHTML = `
+  <div class="container" style="padding-top:22px;padding-bottom:40px">
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
+    <h2 class="page-title">${esc(LANG === 'bn' ? (pn(stop.name)) : stop.name)}</h2>
+    <p style="color:var(--ink-dim);margin-bottom:14px">${buses.length} buses pass through</p>
+    ${stn ? `<div class="info-item" style="margin:0 0 16px"><div class="lbl">${icon('train')} <span class="label-en">Nearest railway station</span><span class="label-bn">নিকটতম রেলওয়ে স্টেশন</span></div><div class="val">${esc(stn.name)}${stn.code ? ' (' + esc(stn.code) + ')' : ''} · ~${stn.km} km</div></div>` : ''}
+    ${next.length ? `<h3 class="timetable-title" style="margin-top:8px">${icon('clock')} <span class="label-en">Next buses from ${esc(stop.name)}</span><span class="label-bn">${esc(stop.name)} থেকে পরবর্তী বাস</span></h3>
+      ${next.map(n => `<div class="result-item" onclick="location.hash='#/bus/${encodeURIComponent(n.b.id)}'">
+        <div class="ri-main">
+          <div class="name">${esc(bnBusName(n.b.bus_name))}</div>
+          <div class="route">${esc(pn(n.b.origin))} → ${esc(pn(n.b.destination))}</div>
+        </div>
+        <span class="time-pill">${icon('clock')} ${fmtTime(n.t)} · <span style="color:var(--amber);font-weight:700" data-nbdep="${n.t}">${countdownText(n.diff)}</span></span>
+      </div>`).join('')}` : ''}
+    <a class="map-btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stop.name + ', West Bengal, India')}" target="_blank" rel="noopener">${icon('map')} View on Google Maps</a>
+    ${buses.map((b, i) => `
+      <div class="result-item" style="--i:${i}" onclick="location.hash='#/bus/${encodeURIComponent(b.id)}'">
+        <div class="ri-main">
+          <div class="name">${esc(bnBusName(b.bus_name))}</div>
+          <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
+        </div>
+        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : ''}
+      </div>`).join('')}
+  </div>`;
+  startNextBusTicker();
+}
+
+function renderAbout(el) {
+  const sources = (DATA.meta && DATA.meta.sources) || ['bussathi.in', 'wbbus.in', 'wbbustime.in', 'WBTC', 'NBSTC'];
+  el.innerHTML = `
+  <div class="container" style="padding-top:26px;padding-bottom:40px">
+    <div class="back-btn" onclick="location.hash='#/'">${icon('chevronLeft')} <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>
+    <div class="about-card">
+      <h3>${icon('bus')} About BusJatri</h3>
+      <p>
+        BusJatri is an independent, community-oriented bus timetable for West Bengal.
+        We aggregate publicly available route and timing data so travellers can find buses faster.
+        This is <strong>not</strong> an official government or corporation site.
+      </p>
+    </div>
+    <div class="about-card">
+      <h3>${icon('data')} Data Sources &amp; Credits</h3>
+      <p>
+        Timetable data is compiled from public sources. All credit belongs to the original platforms and transport corporations:
+      </p>
+      <div class="source-list">
+        ${sources.map(s => `<span class="source-chip">${esc(s)}</span>`).join('')}
+        <span class="source-chip">SBSTC</span>
+        <span class="source-chip">Public sources</span>
+      </div>
+      <p style="margin-top:14px;font-size:13px">
+        Last updated: ${esc(DATA.meta?.last_updated || '—')} · Version ${esc(DATA.meta?.version || '2.0')}
+      </p>
+    </div>
+    <div class="about-card">
+      <h3>${icon('info')} Disclaimer</h3>
+      <p>
+        Timings can change. Always verify with the operator or depot before travelling.
+        BusJatri does not guarantee accuracy of schedules.
+      </p>
+    </div>
+  </div>`;
+}
+
+loadData();

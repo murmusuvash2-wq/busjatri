@@ -1,0 +1,451 @@
+/* ============================================================
+   BusJatri search overlay (2026-09-18) - loaded LAST, after ux-fixes.js
+   Search v3 + Autocomplete v2.
+   1. Stop searches list ALL buses serving the stop - untimed services
+      render after the timed ones with a "Time not listed" pill
+      (ux-fixes v2 showed only timed rows: Mallarpur said "10 buses"
+      but rendered 2).
+   2. Header reads "N buses - M with timings"; times already past
+      today get an explicit "tomorrow" tag.
+   3. Autocomplete v2: ranked prefix -> substring -> fuzzy/alias
+      (placeMatches), sourced from STOPS + sn + origins/destinations,
+      so typos like "mollarpur" and aliases like "kanthi" suggest
+      results instead of an empty box (374 names were never suggested).
+   4. canonName resolves titles through the same fuzzy tiers, so the
+      page title shows "Mallarpur" even when the query was misspelled.
+   Helpers below are copies of closure-local functions from ux-fixes.js.
+   ============================================================ */
+(function () {
+  'use strict';
+  if (typeof renderSearch !== 'function' || window.__bjSearchV3) return;
+  window.__bjSearchV3 = true;
+
+  function rebuildCompactStops() {
+    if (typeof DATA === 'undefined' || !DATA || !DATA.buses || !DATA.sn) return;
+    DATA.buses.forEach(function (b) {
+      if (b.sx && !b.stoppages) {
+        b.stoppages = b.sx.map(function (i, k) {
+          return { name: DATA.sn[i] || '', um: (b.ux && b.ux[k]) || 0, dm: (b.dx && b.dx[k]) || 0 };
+        });
+        delete b.sx;
+        delete b.ux;
+        delete b.dx;
+      }
+    });
+  }
+
+  function canonName(q) {
+    var best = null;
+    Object.values(STOPS || {}).forEach(function (s) {
+      if (!best && slug(s.name) === slug(q)) best = s.name;
+    });
+    if (!best) {
+      Object.values(BUSES).forEach(function (b) {
+        if (!best) {
+          if (slug(b.origin) === slug(q)) best = b.origin;
+          else if (slug(b.destination) === slug(q)) best = b.destination;
+        }
+      });
+    }
+    if (!best) {
+      /* fuzzy tiers: prefix, then placeMatches (typos + aliases), so a
+         misspelled query still gets the real place name in the title */
+      var t = String(q || '').toLowerCase();
+      acNames().forEach(function (n) {
+        if (!best) {
+          if (n.toLowerCase().indexOf(t) === 0) best = n;
+          else if (t.length >= 4 && placeMatches(n, t)) best = n;
+        }
+      });
+    }
+    return best || q;
+  }
+  function bjPosIn(b, q) {
+    if (placeMatches(b.origin, q)) return 0;
+    var sts = b.stoppages || [];
+    for (var i = 0; i < sts.length; i++) {
+      if (placeMatches(sts[i].name, q)) return i + 1;
+    }
+    if (placeMatches(b.destination, q)) return sts.length + 2;
+    return -1;
+  }
+  function bjFromStop(s, dir) {
+    if (!s) return null;
+    if (dir === 'up') {
+      if (s.um != null) return s.um || null;
+      return parseTime(s.up_time);
+    }
+    if (s.dm != null) return s.dm || null;
+    return parseTime(s.down_time);
+  }
+  function bjStopMin(b, posIdx, dir) {
+    var sts = b.stoppages || [];
+    if (posIdx === 0) {
+      if (dir === 'up') return parseTime(b.departure_time);
+      return sts.length ? bjFromStop(sts[sts.length - 1], 'down') : null;
+    }
+    if (posIdx >= 1 && posIdx <= sts.length) return bjFromStop(sts[posIdx - 1], dir);
+    if (dir === 'down') return sts.length ? bjFromStop(sts[sts.length - 1], 'down') : null;
+    return sts.length ? bjFromStop(sts[0], 'up') : parseTime(b.arrival_time);
+  }
+
+    /* ---- 4. Autocomplete v2: fuzzy + alias aware, full name coverage ----
+     ux-fixes.js autocomplete does prefix/substring only and reads just the
+     STOPS dict (2,740 names; 374 real names are never suggested, and any
+     typo or alias input gets an empty box). This replacement ranks:
+       tier 1 - prefix matches
+       tier 2 - substring matches
+       tier 3 - placeMatches (compact + consonant-skeleton typo tolerance
+                + alias groups), only when the query has 4+ letters
+     and sources names from STOPS + DATA.sn + all origins/destinations.
+     Registered after ux-fixes.js, so its dropdown wins (last write). */
+  var AC_LIMIT = 10;
+  var AC_NAMES = null;
+  /* Collapse near-duplicate place names (brackets, Center/Centre) to one entry,
+     keeping the cleanest spelling. */
+  function placeKey(s) {
+    return String(s).toLowerCase().replace(/[^a-z0-9\u0980-\u09ff]+/g, '').replace(/centre|center/g, 'centre');
+  }
+  function placeScore(n) {
+    var s = 0;
+    if (n.indexOf('(') === -1 && n.indexOf('[') === -1) s += 4;
+    if (/centre/i.test(n)) s += 2;
+    if (/^[A-Z]/.test(n)) s += 1;
+    return s - n.length * 0.001;
+  }
+  function dedupePlaces(arr) {
+    var best = {}, order = [];
+    arr.forEach(function (n) {
+      if (!n) return;
+      var k = placeKey(n);
+      if (!(k in best)) { best[k] = n; order.push(k); }
+      else if (placeScore(n) > placeScore(best[k])) best[k] = n;
+    });
+    return order.map(function (k) { return best[k]; });
+  }
+  function acNames() {
+    if (AC_NAMES) return AC_NAMES;
+    var out = [];
+    function add(n) { if (n) out.push(String(n)); }
+    Object.values(STOPS || {}).forEach(function (s) { if (s && s.name) add(s.name); });
+    if (typeof DATA !== 'undefined' && DATA && DATA.sn) DATA.sn.forEach(add);
+    Object.values(BUSES).forEach(function (b) { add(b.origin); add(b.destination); });
+    AC_NAMES = dedupePlaces(out);
+    return AC_NAMES;
+  }
+  function acFind(q) {
+    var t = (q || '').toLowerCase().trim();
+    if (!t) return [];
+    var t1 = [], t2 = [], t3 = [];
+    var names = acNames();
+    for (var i = 0; i < names.length; i++) {
+      var n = names[i], ln = n.toLowerCase();
+      if (ln.indexOf(t) === 0) t1.push(n);
+      else if (ln.indexOf(t) !== -1) t2.push(n);
+      else if (t.length >= 4 && placeMatches(n, t)) t3.push(n);
+    }
+    var rank = function (a, b) {
+      var la = a.toLowerCase(), lb = b.toLowerCase();
+      if (la === t && lb !== t) return -1;
+      if (lb === t && la !== t) return 1;
+      if (a.length !== b.length) return a.length - b.length;
+      return la < lb ? -1 : (la > lb ? 1 : 0);
+    };
+    var res = t1.sort(rank).concat(t2.sort(rank));
+    if (res.length < AC_LIMIT) res = res.concat(t3);
+    return res.slice(0, AC_LIMIT);
+  }
+  function acHtml(s) {
+    var A = String.fromCharCode(38);
+    var M = {};
+    M[A] = A + 'amp;';
+    M[String.fromCharCode(60)] = A + 'lt;';
+    M[String.fromCharCode(62)] = A + 'gt;';
+    M['"'] = A + 'quot;';
+    M["'"] = A + '#39;';
+    return String(s).replace(/[&<>"']/g, function (c) { return M[c]; });
+  }
+  function acHide() {
+    document.querySelectorAll('.ac-drop').forEach(function (d) { d.remove(); });
+  }
+  function acShow(input) {
+    acHide();
+    var m = acFind(input.value);
+    if (!m.length) return;
+    /* Anchor under the FIELD itself (not under the whole card). On a phone the
+       on-screen keyboard covers everything below the card, so a card-anchored
+       list was invisible while typing; field-anchored keeps the suggestions in
+       view above the keyboard. */
+    var field = input.closest('.search-field');
+    if (!field) return;
+    var d = document.createElement('div');
+    d.className = 'ac-drop';
+    d.innerHTML = m.map(function (n) {
+      return '<div class="ac-item">' + acHtml(n) + '</div>';
+    }).join('');
+    field.appendChild(d);
+  }
+  function acIsInput(el) {
+    return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));
+  }
+  var acTimer = null;
+  document.addEventListener('input', function (e) {
+    if (!acIsInput(e.target)) return;
+    if (acTimer) clearTimeout(acTimer);
+    acTimer = setTimeout(function () { acShow(e.target); }, 160);
+  });
+  document.addEventListener('click', function (e) {
+    var item = e.target.closest ? e.target.closest('.ac-item') : null;
+    if (item) {
+      var field = item.closest('.search-field');
+      var input = field && field.querySelector('input');
+      if (input) {
+        input.value = item.textContent;
+        acHide();
+        input.focus();
+      }
+      return;
+    }
+    if (acIsInput(e.target)) { acShow(e.target); return; }
+    acHide();
+  });
+
+  renderSearch = async function (el) {
+      rebuildCompactStops();
+      function looksLikeTime(q) {
+        q = String(q || '').trim().toLowerCase();
+        return /^\d{1,2}:\d{2}\s*(am|pm)?$/.test(q) || /^\d{1,2}\s*(am|pm)$/.test(q);
+      }
+      function parseClock(q) {
+        q = String(q || '').trim().toLowerCase().replace(/\s+/g, '');
+        var m = /^(\d{1,2})(?::(\d{2}))?(am|pm)?$/.exec(q);
+        if (!m) return null;
+        var h = +m[1], mi = m[2] ? +m[2] : 0, ap = m[3];
+        if (mi > 59) return null;
+        if (ap) { if (h < 1 || h > 12) return null; h %= 12; if (ap === 'pm') h += 12; }
+        else if (h > 23) return null;
+        return h * 60 + mi;
+      }
+      window.__bjTimeQuery = null;
+      var params = new URLSearchParams(location.hash.split('?')[1] || '');
+      var from = (params.get('from') || '').toLowerCase().trim();
+      var to = (params.get('to') || '').toLowerCase().trim();
+      var stop = (params.get('stop') || '').toLowerCase().trim();
+      var opq = (params.get('op') || '').toLowerCase().trim();
+      var routeMode = !!(from && to);
+
+      var all = (FULL_BUSES && Object.keys(FULL_BUSES).length >= Object.keys(BUSES).length) ? Object.values(FULL_BUSES) : Object.values(BUSES);
+      var rows = [];
+
+      if (routeMode) {
+        /* compact index has full stop coverage — no 5MB download, instant results */
+        all = Object.values(BUSES);
+        all.forEach(function (b) {
+          var fi = bjPosIn(b, from), ti = bjPosIn(b, to);
+          if (fi < 0 || ti < 0 || fi === ti) return;
+          if (stop && bjPosIn(b, stop) < 0) return;
+          var fwd = fi < ti;
+          var depMin = fwd ? bjStopMin(b, fi, 'up') : bjStopMin(b, fi, 'down');
+          if (depMin == null && fwd) depMin = parseTime(b.departure_time);
+          rows.push({ b: b, fwd: fwd, depMin: depMin });
+        });
+      } else if (stop) {
+        var seenIds = {};
+        var nBuses = 0;
+        all.forEach(function (b) {
+          var mS = null;
+          (b.stoppages || []).forEach(function (s) {
+            if (!mS && placeMatches(s.name, stop)) mS = s;
+          });
+          var isO = placeMatches(b.origin, stop);
+          var isD = placeMatches(b.destination, stop);
+          if (!mS && !isO && !isD) return;
+          if (!seenIds[b.id]) { seenIds[b.id] = 1; nBuses++; }
+          var tU = mS ? bjFromStop(mS, 'up') : null;
+          var tD = mS ? bjFromStop(mS, 'down') : null;
+          if (isO) {
+            var dO = parseTime(b.departure_time);
+            if (dO != null) tU = dO;
+          }
+          if (tU != null) rows.push({ b: b, fwd: true, depMin: tU });
+          if (tD != null) rows.push({ b: b, fwd: false, depMin: tD });
+          if (tU == null && tD == null) rows.push({ b: b, fwd: true, depMin: null, untimed: true });
+        });
+        window.__bjStopCount = nBuses;
+        window.__bjDepCount = rows.filter(function (r) { return r.depMin != null; }).length;
+      } else if ((from || to) && looksLikeTime(from || to) && parseClock(from || to) != null) {
+        var q = from || to;
+        var target = parseClock(q);
+        function bjDist(t) { var d = Math.abs(t - target) % 1440; return Math.min(d, 1440 - d); }
+        rows = all.filter(function (b) { return parseTime(b.departure_time) != null && bjDist(parseTime(b.departure_time)) <= 90; });
+        rows.sort(function (x, y) { return bjDist(parseTime(x.b.departure_time)) - bjDist(parseTime(y.b.departure_time)); });
+        window.__bjTimeQuery = q;
+      } else {
+        var q = from || to;
+        rows = all.filter(function (b) {
+          return placeMatches(b.origin, q) || placeMatches(b.destination, q) ||
+                 (b.bus_name || '').toLowerCase().includes(q) ||
+                 (b.route || '').toLowerCase().includes(q) ||
+                 (b.stoppages || []).some(function (s) { return placeMatches(s.name, q); });
+        }).map(function (b) { return { b: b, fwd: true, depMin: parseTime(b.departure_time) }; });
+        if (!rows.length && q.length >= 3) {
+          var partial = q.slice(0, 5);
+          rows = Object.values(BUSES).filter(function (b) {
+            return (b.origin || '').toLowerCase().startsWith(partial) ||
+                   (b.destination || '').toLowerCase().startsWith(partial) ||
+                   (b.stoppages || []).some(function (s) { return (s.name || '').toLowerCase().startsWith(partial); });
+          }).map(function (b) { return { b: b, fwd: true, depMin: parseTime(b.departure_time) }; });
+        }
+      }
+
+      if (opq) {
+        rows = rows.filter(function (r) {
+          var bb = r.b || {};
+          if (opq === 'volvo-ac' || opq === 'ac') {
+            var bt = (bb.bus_type || '').toUpperCase();
+            return bt.indexOf('AC') > -1 && bt.indexOf('NON') === -1;
+          }
+          var hay = ((bb.operator || '') + ' ' + (bb.bus_name || '') + ' ' + (bb.bus_type || '') + ' ' + (bb.source || '')).toLowerCase();
+          return hay.indexOf(opq) > -1;
+        });
+      }
+      var now = minutesNow();
+      var rel = function (t) { return t == null ? Infinity : (t < now ? t + 1440 : t) - now; };
+      rows.sort(function (x, y) { return rel(x.depMin) - rel(y.depMin); });
+      var near = rows.filter(function (r) { return r.depMin != null && rel(r.depMin) <= 180; });
+
+      var emptyState = '<div class="empty-state">' + icon('bus') +
+        '<p><span class="label-en">No buses found for that route. Try a nearby town instead.</span><span class="label-bn">কোনো বাস পাওয়া যায়নি। কাছাকাছি কোনো শহর চেষ্টা করুন।</span></p>' +
+        '<div class="chip-row">' +
+        ['Bankura', 'Digha', 'Kolkata', 'Durgapur'].map(function (n) {
+          return '<span class="sugg-chip" onclick="quickSearch(' + String.fromCharCode(39) + n + String.fromCharCode(39) + ')">' + esc(n) + '</span>';
+        }).join('') + '</div></div>';
+
+      var titleTxt = routeMode ? canonName(from) + ' → ' + canonName(to)
+        : (stop ? canonName(stop) : (from || to || (opq ? opq.toUpperCase() : '')));
+      var viaHtml = '';
+      if (routeMode) {
+        var viaCount = {};
+        rows.forEach(function (r) {
+          var fi2 = bjPosIn(r.b, from), ti2 = bjPosIn(r.b, to);
+          if (fi2 < 0 || ti2 < 0) return;
+          var lo = Math.min(fi2, ti2), hi = Math.max(fi2, ti2);
+          var sts2 = r.b.stoppages || [];
+          for (var vi = 0; vi < sts2.length; vi++) {
+            if (vi + 1 > lo && vi + 1 < hi && sts2[vi].name) {
+              viaCount[sts2[vi].name] = (viaCount[sts2[vi].name] || 0) + 1;
+            }
+          }
+        });
+        var viaTop = Object.keys(viaCount).sort(function (a, b) { return viaCount[b] - viaCount[a]; })
+          .filter(function (n) { return slug(n) !== slug(from) && slug(n) !== slug(to); }).slice(0, 4);
+        if (viaTop.length) {
+          viaHtml = '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0"><span class="label-en">via </span><span class="label-bn">হয়ে </span>' + esc(viaTop.join(' · ')) + '</p>';
+        }
+      }
+      var timeHtml = window.__bjTimeQuery ? '<p style="text-align:center;font-size:12.5px;color:var(--amber);font-weight:600;margin:2px 0 10px">Buses departing around ' + esc(window.__bjTimeQuery) + ' (±90 min)</p>' : '';
+      window.bjOpChipClear = function () {
+        var h = location.hash.split('?');
+        var p = new URLSearchParams(h[1] || '');
+        p.delete('op');
+        location.hash = h[0] + (p.toString() ? '?' + p.toString() : '');
+      };
+      function rbSlug(s) { return String(s || '').toLowerCase().replace(new RegExp('[^a-z0-9]+', 'g'), '-').replace(new RegExp('^-+|-+$', 'g'), ''); }
+      var redbHtml = '';
+      var RB_CITY = {
+        'Kolkata': ['Kolkata', 'kolkata'], 'Kolkata A.C': ['Kolkata', 'kolkata'], 'Kolkata (Esplanade)': ['Kolkata', 'kolkata'],
+        'Garia': ['Kolkata', 'kolkata'], 'Garia A.C': ['Kolkata', 'kolkata'], 'Belghoria': ['Kolkata', 'kolkata'],
+        'Thakurpukur': ['Kolkata', 'kolkata'], 'Baruipur': ['Kolkata', 'kolkata'], 'Baruipur A.C': ['Kolkata', 'kolkata'], 'Dumdum': ['Kolkata', 'kolkata'],
+        'Digha': ['Digha', 'digha'], 'New Digha': ['Digha', 'digha'],
+        'Burdwan': ['Burdwan', 'burdwan'], 'Bardhaman': ['Burdwan', 'burdwan'],
+        'Karunamoyee': ['Haldia', 'haldia'], 'Haldia': ['Haldia', 'haldia'], 'Haldia Township': ['Haldia', 'haldia'], 'Haldia Via-Kolkata': ['Haldia', 'haldia'],
+        'Asansol': ['Asansol', 'asansol'], 'Asansol A.C.': ['Asansol', 'asansol'],
+        'Durgapur': ['Durgapur', 'durgapur'], 'Durgapur (City Center)': ['Durgapur', 'durgapur'], 'Durgapur City Centre': ['Durgapur', 'durgapur'], 'Durgapur (Station)': ['Durgapur', 'durgapur'],
+        'Midnapur': ['Midnapore', 'midnapore'], 'Midnapore': ['Midnapore', 'midnapore'], 'Medinipur': ['Midnapore', 'midnapore'],
+        'Bankura': ['Bankura', 'bankura'], 'Purulia': ['Purulia', 'purulia'], 'Arambag': ['Arambagh', 'arambagh'],
+        'Suri': ['Suri', 'suri'], 'Jhargram': ['Jhargram', 'jhargram'],
+        'Barasat': ['Barasat', 'barasat'], 'Barasat A.C': ['Barasat', 'barasat'], 'Habra': ['Habra', 'habra'], 'Naihati': ['Naihati', 'naihati'],
+        'Malda': ['Malda', 'malda'], 'Tatanagar': ['Jamshedpur', 'jamshedpur']
+      };
+      function bookChip(b, ro, rd, tmr) {
+        if (!b) return '';
+        var _op = String(b.operator || '').toUpperCase();
+        var _bt = String(b.bus_type || '').toUpperCase();
+        if (_op !== 'SBSTC' && _bt.indexOf('SBSTC') === -1 && String(b.bus_name || '').toUpperCase().indexOf('SBSTC') !== 0) return '';
+        var F = RB_CITY[ro], T = RB_CITY[rd];
+        if (!F || !T) return '';
+        var d = new Date();
+        if (tmr) d.setDate(d.getDate() + 1);
+        var MN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var onw = d.getDate() + '-' + MN[d.getMonth()] + '-' + d.getFullYear();
+        var u = 'https://www.redbus.in/bus-tickets/' + F[1] + '-to-' + T[1] + '?fromCityName=' + encodeURIComponent(F[0]) + '&toCityName=' + encodeURIComponent(T[0]) + '&onward=' + onw + '&srcCountry=IND&destCountry=IND';
+        return '<a href="' + u + '" target="_blank" rel="noopener nofollow" onclick="event.stopPropagation()" title="Check seat availability on redBus" style="position:absolute;right:14px;bottom:12px;background:var(--amber,#b8791f);color:#fffcf4;border-radius:999px;padding:6px 13px;font-size:11.5px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:5px">' + String.fromCharCode(127915) + ' <span class="label-en">Check Seat</span><span class="label-bn">' + '\u09b8\u09bf\u099f \u09a6\u09c7\u0996\u09c1\u09a8' + '</span></a>';
+      }
+      var opHtml = opq ? ('<p style="text-align:center;font-size:13px;margin:4px 0 12px"><span onclick="bjOpChipClear()" ' +
+        'style="display:inline-flex;align-items:center;gap:8px;background:var(--amber-soft,#f6e7c6);border:1.5px solid var(--amber,#b8791f);border-radius:999px;padding:8px 14px;font-weight:700;cursor:pointer">' +
+        icon('bus') + ' ' + esc(opq.toUpperCase()) + ' <span style="font-weight:800;color:var(--ink-dim,#665)">' + String.fromCharCode(10005) + '</span></span></p>') : '';
+      /* 2026-09-28: compact rows + See More (10 at a time) + origin-first
+           grouping, so the content below the list stays reachable. */
+      var RC_BATCH = 10;
+      function bnD(n) { return String(n).replace(/[0-9]/g, function (d) { return '০১২৩৪৫৬৭৮৯'[+d]; }); }
+      function rowCard(r, i) {
+          var b = r.b;
+          var isNear = r.depMin != null && rel(r.depMin) <= 180;
+          var isRet = (routeMode || (stop && !from && !to)) && !r.fwd;
+          var revBadge = isRet ? '<span class="rc-ret"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
+          var ro = isRet ? b.destination : b.origin;
+          var rd = isRet ? b.origin : b.destination;
+          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (r.depMin < now ? ' · <span class="label-en">tomorrow</span><span class="label-bn">আগামীকাল</span>' : '') + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:.55"><span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
+          return '<div class="result-item rc' + (isNear ? ' near' : '') + '" style="--i:' + (i % RC_BATCH) + ';position:relative" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
+            '<div class="ri-main">' +
+            '<div class="name">' + esc(b.bus_name) + ' ' + busTypeBadge(b.bus_type) + revBadge + '</div>' +
+            '<div class="route">' + esc(pn(dispName(ro, b.operator))) + ' <span class="rarr">→</span> ' + esc(pn(dispName(rd, b.operator))) + (b.operator ? ' · ' + esc(b.operator) : '') + '</div>' +
+            '</div>' + tPill + bookChip(b, ro, rd, r.depMin != null && r.depMin < now) + '</div>';
+      }
+      var cards = [];
+      if (routeMode) {
+          var fromCity = canonName(from);
+          var oRows = [], pRows = [];
+          rows.forEach(function (r) { (bjPosIn(r.b, from) === 0 ? oRows : pRows).push(r); });
+          if (oRows.length) {
+            cards.push('<div class="rc-glabel"><span class="label-en">Starting from ' + esc(fromCity) + '</span><span class="label-bn">' + esc(pn(fromCity)) + ' থেকে ছাড়ে</span></div>');
+            oRows.forEach(function (r, i) { cards.push(rowCard(r, i)); });
+          }
+          if (pRows.length) {
+            cards.push('<div class="rc-glabel"><span class="label-en">Passing through ' + esc(fromCity) + '</span><span class="label-bn">' + esc(pn(fromCity)) + ' হয়ে যায়</span></div>');
+            pRows.forEach(function (r, i) { cards.push(rowCard(r, i)); });
+          }
+      } else {
+          rows.forEach(function (r, i) { cards.push(rowCard(r, i)); });
+      }
+      var shownCount = Math.min(cards.length, RC_BATCH);
+      var listHtml = cards.slice(0, shownCount).join('');
+      if (cards.length > shownCount) {
+          window.__bjCards = cards;
+          window.__bjShown = shownCount;
+          window.bjSeeMore = function () {
+            var w = document.getElementById('bj-see-more-wrap');
+            if (!w || !window.__bjCards) return;
+            w.insertAdjacentHTML('beforebegin', window.__bjCards.slice(window.__bjShown, window.__bjShown + RC_BATCH).join(''));
+            window.__bjShown += RC_BATCH;
+            var left = window.__bjCards.length - window.__bjShown;
+            if (left <= 0) { w.parentNode.removeChild(w); return; }
+            var btn = document.getElementById('bj-see-more');
+            if (btn) btn.innerHTML = '<span class="label-en">See 10 more · ' + left + ' left</span><span class="label-bn">আরও ১০টি · ' + bnD(left) + ' বাকি</span>';
+          };
+          listHtml += '<div id="bj-see-more-wrap" style="text-align:center;margin:4px 0 12px"><button class="see-more-btn" id="bj-see-more" onclick="bjSeeMore()"><span class="label-en">See 10 more · ' + (cards.length - shownCount) + ' left</span><span class="label-bn">আরও ১০টি · ' + bnD(cards.length - shownCount) + ' বাকি</span></button></div>';
+      }
+      el.innerHTML =
+        '<div class="container" style="padding-top:22px;padding-bottom:40px">' +
+        '<div class="back-btn" onclick="location.hash=' + String.fromCharCode(39) + '#/' + String.fromCharCode(39) + '">' + icon('chevronLeft') + ' <span class="label-en">Back</span><span class="label-bn">পিছনে</span></div>' +
+        '<h2 class="page-title" style="text-align:center;margin-bottom:2px">' + esc(titleTxt) + ' <span style="color:var(--ink-dim);font-family:var(--font-mono);font-size:1rem">(' + rows.length + ')</span></h2>' +
+        viaHtml + timeHtml + opHtml + redbHtml +
+        (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:12px;color:var(--ink-dim);margin:2px 0 0">' + window.__bjStopCount + ' <span class="label-en">buses · </span><span class="label-bn">বাস · </span>' + window.__bjDepCount + ' <span class="label-en">with timings</span><span class="label-bn">সময় সহ</span></p>' : '') +
+        (stop && !from && !to && window.__bjStopCount ? '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:2px 0 10px"><span class="label-en">timed departures first · rest listed below</span><span class="label-bn">সময় সহ বাস আগে · বাকি নিচে</span></p>' : '') +
+        (near.length ? '<p class="near-label">' + icon('clock') + ' <span class="label-en">' + near.length + ' buses around current time</span><span class="label-bn">' + near.length + ' বাস বর্তমান সময়ের কাছাকাছি</span></p>' : '') +
+        (routeMode || (stop && !from && !to) ? '<p style="font-size:11.5px;color:var(--ink-dim);margin:0 0 10px"><b style="color:var(--amber)">⇗</b> <span class="label-en">outward · </span><span class="label-bn">যাত্রা · </span><b style="color:var(--maroon)">⇙</b> <span class="label-en">return service</span><span class="label-bn">ফেরার বাস</span></p>' : '') +
+        (cards.length ? listHtml : emptyState) +
+        '<p style="text-align:center;font-size:11px;color:var(--ink-dim);margin:18px 0 0;border-top:1px solid var(--line,rgba(33,28,22,.13));padding-top:10px"><span class="label-en">Data last refreshed: </span><span class="label-bn">শেষ হালনাগাদ: </span><strong>' + esc((DATA.meta || {}).last_updated || '—') + '</strong> · <span class="label-en">Schedules may change. Verify with the operator before travel.</span><span class="label-bn">সময়সূচি বদলাতে পারে। যাত্রার আগে যাচাই করে নিন।</span></p>' +
+        '</div>';
+    };
+})();
