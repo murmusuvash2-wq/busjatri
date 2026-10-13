@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: busjatri-main-push
+  cancel-in-progress: false
+
 jobs:
   places:
     runs-on: ubuntu-latest
@@ -27,4 +31,4 @@ jobs:
           if git diff --cached --quiet; then echo "no change"; exit 0; fi
           git commit -m "data(places): rebuild the place registry"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}" || true
-          git push || git push || git push
+          bash scripts/push_retry.sh

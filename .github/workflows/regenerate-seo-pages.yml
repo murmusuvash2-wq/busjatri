@@ -15,6 +15,10 @@ on:
       - 'scripts/build_client_data.py'
       - '.github/workflows/regenerate-seo-pages.yml'
 
+concurrency:
+  group: busjatri-main-push
+  cancel-in-progress: false
+
 jobs:
   regenerate:
     runs-on: ubuntu-latest
@@ -60,4 +64,4 @@ jobs:
           git add -A
           git diff --staged --quiet && echo "No changes to commit" && exit 0
           git commit -m "Auto: regenerate SEO pages — +single-bus routes, Time N/A, bn toggle [skip ci]"
-          git push
+          bash scripts/push_retry.sh

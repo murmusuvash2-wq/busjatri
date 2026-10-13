@@ -6,6 +6,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: busjatri-main-push
+  cancel-in-progress: false
+
 jobs:
   split:
     runs-on: ubuntu-latest
@@ -32,5 +36,5 @@ jobs:
           git add data/buses data/routes.json data/stops.json data/meta.json
           if git diff --cached --quiet; then echo "nothing to commit"; else
             git commit -m "data(step 6): materialise per-operator bus sources from the frozen file"
-            git push
+            bash scripts/push_retry.sh
           fi
