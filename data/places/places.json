@@ -22,59 +22,41 @@
  "Amlai": {},
  "Amlasuli": {},
  "Amta": {
+  "district": "Howrah",
   "lat": 22.58344,
-  "lon": 88.01039,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.01039
  },
  "Amtala": {},
  "Anandapur": {
+  "district": "Alipurduar",
   "lat": 26.36892,
-  "lon": 89.85923,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Alipurduar"
+  "lon": 89.85923
  },
  "Andul Station": {},
  "Aquatica": {},
  "Arambag": {},
  "Arambagh": {
+  "district": "Purba Bardhaman",
   "lat": 22.88333,
-  "lon": 87.78333,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.78333
  },
  "Aranghata": {},
  "Araria Bihar": {},
  "Argoal": {
+  "district": "Purba Medinipur",
   "lat": 21.96939,
-  "lon": 87.63398,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.63398
  },
  "Ariadaha": {},
  "Arsha": {
+  "district": "Purulia",
   "lat": 23.32663,
-  "lon": 86.17329,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.17329
  },
  "Asansol": {
+  "district": "Paschim Bardhaman",
   "lat": 23.68333,
-  "lon": 86.98333,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 86.98333
  },
  "Asansol A.C.": {},
  "Aurangabad Bihar": {},
@@ -85,124 +67,82 @@
  "BT College": {},
  "Babughat": {},
  "Babuijore": {
+  "district": "Birbhum",
   "lat": 23.79055,
-  "lon": 87.26908,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.26908
  },
  "Baburhat": {},
  "Badanganj": {
+  "district": "Purba Bardhaman",
   "lat": 22.9023,
-  "lon": 87.54214,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.54214
  },
  "Badartala": {},
  "Baduria": {},
  "Bagbazar": {},
  "Baghajatin": {},
  "Baghmundi": {
+  "district": "Purulia",
   "lat": 23.18982,
-  "lon": 86.05547,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.05547
  },
  "Bagnan": {
+  "district": "Hooghly",
   "lat": 22.93338,
-  "lon": 88.13856,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.13856
  },
  "Bagpota": {},
  "Baguiati": {},
  "Baharagora": {
   "lat": 22.27507,
-  "lon": 86.71826,
-  "confidence": "low",
-  "score": 32,
-  "source": "open-meteo"
+  "lon": 86.71826
  },
  "Baharampur": {
+  "district": "Murshidabad",
   "lat": 24.10473,
-  "lon": 88.25155,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.25155
  },
  "Baidyanathpur": {
+  "district": "Purba Medinipur",
   "lat": 22.42526,
-  "lon": 87.97528,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.97528
  },
  "Bainchi": {
+  "district": "Hooghly",
   "lat": 22.8622,
-  "lon": 88.2686,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.2686
  },
  "Baisnabghata": {},
  "Bajitpur": {
+  "district": "Hooghly",
   "lat": 22.88896,
-  "lon": 88.13488,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.13488
  },
  "Bajkul": {
   "lat": 22.024535,
-  "lon": 87.821415,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
+  "lon": 87.821415
  },
  "Bakkhali": {},
  "Bakshi": {},
  "Baksi": {
   "lat": 22.527917,
-  "lon": 88.347462,
-  "confidence": "medium",
-  "score": 43,
-  "source": "nominatim"
+  "lon": 88.347462
  },
  "Bakultala": {},
  "Balaipanda": {},
  "Balaka Housing (EcoPark)": {},
  "Balarampur": {
+  "district": "Purulia",
   "lat": 23.09714,
-  "lon": 86.22292,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.22292
  },
  "Balgona": {
   "lat": 23.45805,
-  "lon": 87.950456,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 87.950456
  },
  "Balichak": {
   "lat": 22.358186,
-  "lon": 87.553354,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 87.553354
  },
  "Ballygunge": {},
  "Ballygunge Station": {},
@@ -214,63 +154,42 @@
  "Bandowan": {},
  "Banduan": {},
  "Bandwan": {
+  "district": "Purulia",
   "lat": 22.78333,
-  "lon": 86.5,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.5
  },
  "Bangalore": {},
  "Bangaon": {
+  "district": "Hooghly",
   "lat": 23.04553,
-  "lon": 88.83084,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.83084
  },
  "Bangur Avenue": {},
  "Bankra Bazar": {},
  "Bankura": {
+  "district": "Bankura",
   "lat": 23.23241,
-  "lon": 87.0716,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.0716
  },
  "Bankura Bus Stand": {},
  "Bansdroni": {},
  "Banspahari": {
   "lat": 24.42478,
-  "lon": 87.53114,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
+  "lon": 87.53114
  },
  "Barabazar": {
+  "district": "Purulia",
   "lat": 23.0279,
-  "lon": 86.36069,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.36069
  },
  "Barakar": {
   "lat": 23.741683,
-  "lon": 86.818859,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 86.818859
  },
  "Barasat": {
+  "district": "North 24 Parganas",
   "lat": 22.72154,
-  "lon": 88.48198,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "North 24 Parganas"
+  "lon": 88.48198
  },
  "Barasat A.C": {},
  "Barasat Chapadali": {},
@@ -283,22 +202,16 @@
  "Barddhaman Nawabhat Bus Stand": {},
  "Barddhaman Tinkonia": {},
  "Bardhaman": {
+  "district": "Purba Bardhaman",
   "lat": 23.25572,
-  "lon": 87.85691,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.85691
  },
  "Bargachia": {},
  "Bargaria": {},
  "Barisha": {},
  "Barrackpore": {
   "lat": 22.761065,
-  "lon": 88.371428,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
+  "lon": 88.371428
  },
  "Barrackpore Chiria": {},
  "Barrackpore Court": {},
@@ -307,12 +220,9 @@
  "Barrackpur Court": {},
  "Barshal": {},
  "Baruipur": {
+  "district": "South 24 Parganas",
   "lat": 22.36544,
-  "lon": 88.4325,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "South 24 Parganas"
+  "lon": 88.4325
  },
  "Baruipur A.C": {},
  "Baruipur New Terminus": {},
@@ -334,27 +244,18 @@
  "Belgharia Station": {},
  "Belghoria": {},
  "Belpahari": {
+  "district": "Jhargram",
   "lat": 22.63207,
-  "lon": 86.76426,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 86.76426
  },
  "Belurmath": {},
  "Belut": {
   "lat": 23.216426,
-  "lon": 87.586585,
-  "confidence": "medium",
-  "score": 43,
-  "source": "nominatim"
+  "lon": 87.586585
  },
  "Benachity": {
   "lat": 23.561689,
-  "lon": 87.274961,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
+  "lon": 87.274961
  },
  "Beraberi": {},
  "Berachampa": {},
@@ -363,12 +264,9 @@
  "Berhampur": {},
  "Beri Gopalpur": {},
  "Bhagabanpur": {
+  "district": "Malda",
   "lat": 24.78772,
-  "lon": 88.01242,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Malda"
+  "lon": 88.01242
  },
  "Bhalukbasa": {},
  "Bhangore": {},
@@ -376,10 +274,7 @@
  "Bhebia Chowrasta": {},
  "Bhubaneswar": {
   "lat": 26.388205,
-  "lon": 89.494466,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
+  "lon": 89.494466
  },
  "Bhutsahar": {},
  "Bhutshahar": {},
@@ -391,12 +286,9 @@
  "Bijaygunge Bazar": {},
  "Bikash Bhawan": {},
  "Binpur": {
+  "district": "Jhargram",
   "lat": 22.58132,
-  "lon": 86.92072,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 86.92072
  },
  "Birati": {},
  "Birati Station": {},
@@ -405,37 +297,25 @@
  "Birshibpur": {},
  "Birsingha": {
   "lat": 23.19913,
-  "lon": 87.450527,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
+  "lon": 87.450527
  },
  "Bishnupur": {
+  "district": "Bankura",
   "lat": 23.0738,
-  "lon": 87.31991,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.31991
  },
  "Bisunupur": {},
  "Boalghata": {},
  "Boalia": {},
  "Boga": {
   "lat": 25.07756,
-  "lon": 87.68794,
-  "confidence": "medium",
-  "score": 60,
-  "source": "open-meteo"
+  "lon": 87.68794
  },
  "Bokaro": {},
  "Bolpur": {
+  "district": "Birbhum",
   "lat": 23.66278,
-  "lon": 87.69695,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.69695
  },
  "Bongaon": {},
  "Bongaon 1 No Railgate Petrol Pump": {},
@@ -443,12 +323,9 @@
  "Boyra": {},
  "Brahmandiha": {},
  "Budbud": {
+  "district": "Purba Bardhaman",
   "lat": 23.40131,
-  "lon": 87.53895,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.53895
  },
  "Buglidih": {},
  "Burdwan": {},
@@ -457,10 +334,7 @@
  "Chaital Ghat": {},
  "Chaitanyapur": {
   "lat": 22.136048,
-  "lon": 88.08323,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
+  "lon": 88.08323
  },
  "Chakla": {},
  "Chakta": {},
@@ -468,52 +342,34 @@
  "Chanchal": {},
  "Chandankyari": {},
  "Chandipur": {
+  "district": "South 24 Parganas",
   "lat": 22.35108,
-  "lon": 88.40054,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "South 24 Parganas"
+  "lon": 88.40054
  },
  "Chanditala": {
+  "district": "Howrah",
   "lat": 22.69316,
-  "lon": 88.25786,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.25786
  },
  "Chandrakona Road": {
+  "district": "Paschim Medinipur",
   "lat": 22.73523,
-  "lon": 87.33643,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.33643
  },
  "Chandrakona Town": {
   "lat": 22.729481,
-  "lon": 87.51424,
-  "confidence": "medium",
-  "score": 69,
-  "source": "nominatim"
+  "lon": 87.51424
  },
  "Chapadanga": {},
  "Chapra": {
+  "district": "Nadia",
   "lat": 23.52791,
-  "lon": 88.55429,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.55429
  },
  "Chelyama": {
+  "district": "Purulia",
   "lat": 23.61576,
-  "lon": 86.55245,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.55245
  },
  "Chendapathar": {},
  "Chetla": {},
@@ -521,86 +377,59 @@
  "Chhirudi": {},
  "Chichra": {
   "lat": 22.311758,
-  "lon": 86.883144,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim+open-meteo"
+  "lon": 86.883144
  },
  "China Mandir": {},
  "Chingrighata": {},
  "Chinsurah Court": {},
  "Chirkunda": {
   "lat": 23.74771,
-  "lon": 86.78804,
-  "confidence": "high",
-  "score": 81,
-  "source": "open-meteo"
+  "lon": 86.78804
  },
  "Chittaranjan": {
+  "district": "Paschim Bardhaman",
   "lat": 23.85681,
-  "lon": 86.90324,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 86.90324
  },
  "Choto Finga": {},
  "Chuchura": {
   "lat": 22.890191,
-  "lon": 88.3695,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 88.3695
  },
  "Chunakhali": {},
  "Chunavati": {},
  "Contai": {
+  "district": "Purba Medinipur",
   "lat": 21.77985,
-  "lon": 87.74892,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.74892
  },
  "Cooch Behar": {},
  "Coochbehar": {},
  "Cossipore": {},
  "Dahighat": {},
  "Dainhat": {
+  "district": "Nadia",
   "lat": 23.60518,
-  "lon": 88.17172,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.17172
  },
  "Dakghar": {},
  "Dakshineswar": {
+  "district": "Howrah",
   "lat": 22.65567,
-  "lon": 88.3672,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.3672
  },
  "Damda": {
+  "district": "South 24 Parganas",
   "lat": 22.34389,
-  "lon": 88.36528,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "South 24 Parganas"
+  "lon": 88.36528
  },
  "Danesh Shaikh Lane": {},
  "Dankuni Housing": {},
  "Danrikadoba": {},
  "Dantan": {
+  "district": "Paschim Medinipur",
   "lat": 21.94658,
-  "lon": 87.27678,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.27678
  },
  "Dantol": {},
  "Darbhanga Bihar": {},
@@ -610,50 +439,35 @@
  "Dasnagar": {},
  "Daspara": {},
  "Debra": {
+  "district": "Paschim Medinipur",
   "lat": 22.3952,
-  "lon": 87.56015,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.56015
  },
  "Delhi": {},
  "Derozio College": {},
  "Deulihat": {},
  "Dhabani": {},
  "Dhadka": {
+  "district": "Purulia",
   "lat": 22.78333,
-  "lon": 86.5,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.5
  },
  "Dhakuria": {},
  "Dhaldanga": {
   "lat": 23.204846,
-  "lon": 87.069666,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
+  "lon": 87.069666
  },
  "Dhamakhali": {},
  "Dhanara": {},
  "Dhanbad": {
   "lat": 23.790966,
-  "lon": 86.428956,
-  "confidence": "high",
-  "score": 110,
-  "source": "open-meteo+rail-soft"
+  "lon": 86.428956
  },
  "Dhanmath": {},
  "Dheko": {
+  "district": "Murshidabad",
   "lat": 24.47638,
-  "lon": 87.81591,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 87.81591
  },
  "Dhulagarh": {},
  "Dhuliyan": {},
@@ -661,32 +475,23 @@
  "Diamond": {},
  "Diamond Harbour": {},
  "Digha": {
+  "district": "Purba Medinipur",
   "lat": 21.62776,
-  "lon": 87.51965,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.51965
  },
  "Dihibhursut": {},
  "Dinanathpur": {},
  "Dinhata": {
+  "district": "Cooch Behar",
   "lat": 26.13526,
-  "lon": 89.46129,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Cooch Behar"
+  "lon": 89.46129
  },
  "Dobhi": {},
  "Domjur": {},
  "Domkal": {
+  "district": "Murshidabad",
   "lat": 24.12065,
-  "lon": 88.54393,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.54393
  },
  "Dostipur": {},
  "Dum Dum": {},
@@ -700,49 +505,34 @@
  "Dumurtore": {},
  "Dunlop": {
   "lat": 22.652496,
-  "lon": 88.3773,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
+  "lon": 88.3773
  },
  "Durgachak": {
+  "district": "Purba Medinipur",
   "lat": 22.07576,
-  "lon": 88.13747,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 88.13747
  },
  "Durgapur": {},
  "Durgapur (City Center)": {
   "lat": 23.495046,
-  "lon": 87.297902,
-  "confidence": "high",
-  "score": 115,
-  "source": "rail-soft"
+  "lon": 87.297902
  },
  "Durgapur Station": {},
  "Duttaphulia": {},
  "Ecospace": {},
  "Eden City": {},
  "Egra": {
+  "district": "Purba Medinipur",
   "lat": 21.89947,
-  "lon": 87.53794,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.53794
  },
  "Esplanade": {},
  "Falta": {},
  "Falta Sector 1": {},
  "Farakka": {
+  "district": "Malda",
   "lat": 24.81667,
-  "lon": 87.9,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Malda"
+  "lon": 87.9
  },
  "Fatikgachi": {},
  "Fishery Gate": {},
@@ -752,10 +542,7 @@
  "Furfura Sharif": {},
  "Gadiara": {
   "lat": 22.798157,
-  "lon": 88.280471,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
+  "lon": 88.280471
  },
  "Gadkhali": {},
  "Ganga Nagar": {},
@@ -766,29 +553,20 @@
  "Gangtok": {},
  "Garchakraberia": {
   "lat": 22.514668,
-  "lon": 88.249021,
-  "confidence": "high",
-  "score": 90,
-  "source": "rail-soft"
+  "lon": 88.249021
  },
  "Garerghat": {},
  "Garh Bhowanipore": {},
  "Garhbeta": {
+  "district": "Paschim Medinipur",
   "lat": 22.844562,
-  "lon": 87.320972,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.320972
  },
  "Garhbhowanipur": {},
  "Garia": {
+  "district": "South 24 Parganas",
   "lat": 22.46323,
-  "lon": 88.39788,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "South 24 Parganas"
+  "lon": 88.39788
  },
  "Garia A.C": {},
  "Garia Bus Stand": {},
@@ -799,35 +577,23 @@
  "Ghasbagan": {},
  "Ghatakpukur": {},
  "Ghatal": {
+  "district": "Purba Medinipur",
   "lat": 22.66244,
-  "lon": 87.73399,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.73399
  },
  "Goaltore": {
   "lat": 22.70989,
-  "lon": 87.169777,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
+  "lon": 87.169777
  },
  "Gobindapur": {
+  "district": "Howrah",
   "lat": 22.59306,
-  "lon": 88.09139,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.09139
  },
  "Godapiasal": {
+  "district": "Paschim Medinipur",
   "lat": 22.53641,
-  "lon": 87.32783,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.32783
  },
  "Gogra": {},
  "Golf Green": {},
@@ -835,20 +601,14 @@
  "Gomunda": {},
  "Gopalganj Bihar": {},
  "Gopalnagar": {
+  "district": "Hooghly",
   "lat": 22.83089,
-  "lon": 88.22493,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.22493
  },
  "Gopalpur": {
+  "district": "North 24 Parganas",
   "lat": 22.61845,
-  "lon": 88.75119,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "North 24 Parganas"
+  "lon": 88.75119
  },
  "Gopiballabpur": {},
  "Gopiganj": {},
@@ -860,10 +620,7 @@
  "Gurap": {},
  "Guskara": {
   "lat": 23.489998,
-  "lon": 87.733397,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
+  "lon": 87.733397
  },
  "HMG College": {},
  "Habra": {},
@@ -872,32 +629,23 @@
  "Habra WBTC Depot": {},
  "Hakimpur": {},
  "Haldia": {
+  "district": "Purba Medinipur",
   "lat": 22.06046,
-  "lon": 88.10975,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 88.10975
  },
  "Haldia Township": {},
  "Haldia Via-Kolkata": {},
  "Haludkanali": {
   "lat": 22.879806,
-  "lon": 86.878606,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
+  "lon": 86.878606
  },
  "Hantal": {},
  "Haridebpur": {},
  "Haridevpur": {},
  "Harinarayanpur": {
+  "district": "Howrah",
   "lat": 22.60028,
-  "lon": 88.1125,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.1125
  },
  "Harinavi": {},
  "Haripal Station": {},
@@ -911,18 +659,12 @@
  "Hazaribagh": {},
  "Hematpur": {
   "lat": 24.57969,
-  "lon": 85.22925,
-  "confidence": "low",
-  "score": 25,
-  "source": "open-meteo"
+  "lon": 85.22925
  },
  "Hemnagar": {},
  "Henria": {
   "lat": 21.968524,
-  "lon": 87.803593,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
+  "lon": 87.803593
  },
  "Hetia": {},
  "High Court": {},
@@ -930,55 +672,37 @@
  "Hili": {},
  "Hoomgarh": {
   "lat": 22.852862,
-  "lon": 87.34661,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
+  "lon": 87.34661
  },
  "Howrah": {
+  "district": "Howrah",
   "lat": 22.57688,
-  "lon": 88.31857,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.31857
  },
  "Howrah Fire Station": {},
  "Howrah Maidan": {},
  "Howrah Station": {},
  "Howrah Station to": {},
  "Hura": {
+  "district": "Purulia",
   "lat": 23.30337,
-  "lon": 86.65717,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.65717
  },
  "Illambazar": {
   "lat": 23.690296,
-  "lon": 87.512895,
-  "confidence": "medium",
-  "score": 65,
-  "source": "nominatim"
+  "lon": 87.512895
  },
  "Indas": {},
  "Indus": {
   "lat": 23.12951,
-  "lon": 87.61517,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
+  "lon": 87.61517
  },
  "Indus Via-Kolkata": {},
  "Irhpala": {},
  "Islampur": {
+  "district": "Jalpaiguri",
   "lat": 26.26541,
-  "lon": 88.18982,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jalpaiguri"
+  "lon": 88.18982
  },
  "Itaberia": {},
  "Jadavpore": {},
@@ -989,64 +713,43 @@
  "Jaigaon": {},
  "Jaleswar": {
   "lat": 21.79749,
-  "lon": 87.220491,
-  "confidence": "high",
-  "score": 150,
-  "source": "open-meteo+rail-snap"
+  "lon": 87.220491
  },
  "Jalpaiguri": {},
  "Jamirgachi": {},
  "Jamtora": {},
  "Jamtoria": {
   "lat": 22.903638,
-  "lon": 86.638829,
-  "confidence": "medium",
-  "score": 63,
-  "source": "nominatim"
+  "lon": 86.638829
  },
  "Jamuria": {},
  "Jangipara": {},
  "Jangipur": {
+  "district": "Murshidabad",
   "lat": 24.47001,
-  "lon": 88.07659,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.07659
  },
  "Japani Gate": {},
  "Jayrambati": {
   "lat": 22.92387,
-  "lon": 87.610545,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
+  "lon": 87.610545
  },
  "Jhalda": {},
  "Jhantipahari": {
   "lat": 23.353363,
-  "lon": 86.904491,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
+  "lon": 86.904491
  },
  "Jhargram": {
+  "district": "Jhargram",
   "lat": 22.45384,
-  "lon": 86.99497,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 86.99497
  },
  "Jharkhali": {},
  "Jhikira": {},
  "Jhilimili": {
+  "district": "Jhargram",
   "lat": 22.81392,
-  "lon": 86.64575,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 86.64575
  },
  "Jibantala": {},
  "Jirat": {},
@@ -1056,27 +759,18 @@
  "Joka Depot": {},
  "Jorda": {
   "lat": 23.168688,
-  "lon": 86.834018,
-  "confidence": "high",
-  "score": 76,
-  "source": "nominatim"
+  "lon": 86.834018
  },
  "Joydeb": {},
  "Joynagar": {},
  "Joypur": {
   "lat": 23.040584,
-  "lon": 87.456204,
-  "confidence": "high",
-  "score": 83,
-  "source": "nominatim"
+  "lon": 87.456204
  },
  "Joyrampur": {
+  "district": "Purba Bardhaman",
   "lat": 22.85984,
-  "lon": 87.82673,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.82673
  },
  "Julpia": {},
  "Jumainaskar Hat": {},
@@ -1089,58 +783,40 @@
  "Kaktiya": {},
  "Kalabani": {},
  "Kalna": {
+  "district": "Nadia",
   "lat": 23.21944,
-  "lon": 88.36295,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.36295
  },
  "Kalyani": {
+  "district": "Hooghly",
   "lat": 22.9757,
-  "lon": 88.4337,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.4337
  },
  "Kalyani Aiims": {},
  "Kalyani Ishwsar Gupta Setu": {},
  "Kamal Talkies": {},
  "Kamalgazi": {
   "lat": 22.449524,
-  "lon": 88.395539,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
+  "lon": 88.395539
  },
  "Kamalpur": {
+  "district": "Uttar Dinajpur",
   "lat": 25.92484,
-  "lon": 87.85641,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Uttar Dinajpur"
+  "lon": 87.85641
  },
  "Kamardanga": {},
  "Kamarhati": {},
  "Kamarpukur": {
+  "district": "South 24 Parganas",
   "lat": 22.23121,
-  "lon": 88.40108,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "South 24 Parganas"
+  "lon": 88.40108
  },
  "Kanchkol": {},
  "Kanchrapara": {},
  "Kandi": {
+  "district": "Murshidabad",
   "lat": 23.95946,
-  "lon": 88.04018,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.04018
  },
  "Kandra": {},
  "Kankardanga": {},
@@ -1150,76 +826,49 @@
  "Kantakhali": {},
  "Kantore": {},
  "Karimpur": {
+  "district": "Murshidabad",
   "lat": 23.97594,
-  "lon": 88.61917,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.61917
  },
  "Karunamoyee": {
   "lat": 22.58638,
-  "lon": 88.421531,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
+  "lon": 88.421531
  },
  "Kasba Rathtala": {},
  "Kashipur": {
+  "district": "Purulia",
   "lat": 23.43444,
-  "lon": 86.66723,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.66723
  },
  "Katwa": {
+  "district": "Nadia",
   "lat": 23.64558,
-  "lon": 88.13258,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.13258
  },
  "Kenjakura": {
   "lat": 23.271639,
-  "lon": 86.934038,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
+  "lon": 86.934038
  },
  "Keshargarh": {},
  "Keshpur": {
+  "district": "Paschim Medinipur",
   "lat": 22.55468,
-  "lon": 87.46109,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.46109
  },
  "Kestor": {},
  "Ketugram": {
+  "district": "Murshidabad",
   "lat": 23.70115,
-  "lon": 88.04532,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.04532
  },
  "Khagraghat": {
   "lat": 24.106842,
-  "lon": 88.226481,
-  "confidence": "high",
-  "score": 135,
-  "source": "nominatim+rail-soft"
+  "lon": 88.226481
  },
  "Kharagpur": {
+  "district": "Paschim Medinipur",
   "lat": 22.33971,
-  "lon": 87.32501,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.32501
  },
  "Khardaha": {},
  "Kharibari": {},
@@ -1228,114 +877,78 @@
  "Kharika Mathani": {},
  "Kharkushma": {},
  "Khatra": {
+  "district": "Bankura",
   "lat": 22.97617,
-  "lon": 86.85462,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 86.85462
  },
  "Khetua": {
   "lat": 24.04074,
-  "lon": 86.1222,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
+  "lon": 86.1222
  },
  "Khidderpur": {},
  "Khirpai": {
+  "district": "Paschim Medinipur",
   "lat": 22.70996,
-  "lon": 87.61768,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.61768
  },
  "Khudiram Park": {},
  "Khudiram Park (Sarsuna)": {},
  "Kidderpore": {},
  "Kirnahar": {
+  "district": "Birbhum",
   "lat": 23.75802,
-  "lon": 87.87404,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.87404
  },
  "Kishorimohonpur": {},
  "Kolkata": {
+  "district": "Kolkata",
   "lat": 22.56263,
-  "lon": 88.36304,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Kolkata"
+  "lon": 88.36304
  },
  "Kolkata (Chandpal)": {},
  "Kolkata (Dharmatala)": {},
  "Kolkata (Esplanade)": {
   "lat": 22.566793,
-  "lon": 88.375198,
-  "confidence": "high",
-  "score": 135,
-  "source": "nominatim+rail-soft"
+  "lon": 88.375198
  },
  "Kolkata (Karunamoyee)": {},
  "Kolkata A.C": {},
  "Kolkata Station": {},
  "Kona": {},
  "Kotshila": {
+  "district": "Purulia",
   "lat": 23.40207,
-  "lon": 86.07017,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.07017
  },
  "Kotulpur": {
+  "district": "Purba Bardhaman",
   "lat": 23.0119,
-  "lon": 87.59382,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.59382
  },
  "Krishnabati": {},
  "Krishnanagar": {
+  "district": "Nadia",
   "lat": 23.40576,
-  "lon": 88.49073,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.49073
  },
  "Krishnanagar High Road": {},
  "Kudghat": {},
  "Kuilapal": {},
  "Kukrahati": {
   "lat": 22.187065,
-  "lon": 88.119895,
-  "confidence": "high",
-  "score": 95,
-  "source": "nominatim"
+  "lon": 88.119895
  },
  "Kulgachia": {},
  "Kuli": {
+  "district": "Malda",
   "lat": 24.72489,
-  "lon": 87.93038,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Malda"
+  "lon": 87.93038
  },
  "Kulpi": {},
  "Kulti": {
+  "district": "Paschim Bardhaman",
   "lat": 23.73166,
-  "lon": 86.84372,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 86.84372
  },
  "Kultikri": {},
  "Kundghat": {},
@@ -1343,10 +956,7 @@
  "Kuthighat": {},
  "Kutni": {
   "lat": 25.01282,
-  "lon": 87.47037,
-  "confidence": "low",
-  "score": 25,
-  "source": "open-meteo"
+  "lon": 87.47037
  },
  "Labhpur": {},
  "Lachhipur": {},
@@ -1355,35 +965,23 @@
  "Lakshanpur": {},
  "Lakshmikantapur Station": {},
  "Lakshmisagar": {
+  "district": "Bankura",
   "lat": 22.92744,
-  "lon": 87.01375,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.01375
  },
  "Lalgarh": {
+  "district": "Jhargram",
   "lat": 22.58732,
-  "lon": 87.04968,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 87.04968
  },
  "Lalgola": {
+  "district": "Murshidabad",
   "lat": 24.42244,
-  "lon": 88.25238,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.25238
  },
  "Lalpur": {
   "lat": 24.747459,
-  "lon": 87.912243,
-  "confidence": "high",
-  "score": 108,
-  "source": "rail-soft"
+  "lon": 87.912243
  },
  "Langolpota": {},
  "Lauhati": {},
@@ -1394,136 +992,91 @@
  "Lucknow": {},
  "Madanmohanpur": {
   "lat": 24.488461,
-  "lon": 86.785648,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
+  "lon": 86.785648
  },
  "Madansole": {},
  "Madha Khali": {},
  "Madhyamgram": {
+  "district": "North 24 Parganas",
   "lat": 22.68944,
-  "lon": 88.44594,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "North 24 Parganas"
+  "lon": 88.44594
  },
  "Magra": {
+  "district": "Hooghly",
   "lat": 22.98809,
-  "lon": 88.37308,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.37308
  },
  "Mahamayatala": {},
  "Mahara": {
+  "district": "Malda",
   "lat": 24.81667,
-  "lon": 87.8,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Malda"
+  "lon": 87.8
  },
  "Maheshpur": {},
  "Mahishbathan": {},
  "Maipith": {},
  "Majhdia": {
   "lat": 23.414562,
-  "lon": 88.719031,
-  "confidence": "high",
-  "score": 115,
-  "source": "nominatim+rail-snap"
+  "lon": 88.719031
  },
  "Majuria": {},
  "Malancha": {},
  "Malbazar": {
+  "district": "Kalimpong",
   "lat": 26.85,
-  "lon": 88.75,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Kalimpong"
+  "lon": 88.75
  },
  "Malda": {
+  "district": "Malda",
   "lat": 25.00447,
-  "lon": 88.14573,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Malda"
+  "lon": 88.14573
  },
  "Maldanga": {},
  "Malipanchghara": {},
  "Manbazar": {
+  "district": "Purulia",
   "lat": 23.0591,
-  "lon": 86.66269,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.66269
  },
  "Mandarmani": {},
  "Mandirtala": {},
  "Mangrul": {},
  "Manihara": {
   "lat": 22.598809,
-  "lon": 88.377167,
-  "confidence": "low",
-  "score": -10,
-  "source": "nominatim"
+  "lon": 88.377167
  },
  "Matapara": {},
  "Mathabhanga": {
+  "district": "Cooch Behar",
   "lat": 26.34197,
-  "lon": 89.21555,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Cooch Behar"
+  "lon": 89.21555
  },
  "Mathpukur": {},
  "Mayapur": {
+  "district": "Purba Medinipur",
   "lat": 22.41667,
-  "lon": 88.11667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 88.11667
  },
  "Mayapur Hulor Ghat Bus Stand": {},
  "Maynaguri": {
   "lat": 26.578607,
-  "lon": 88.822868,
-  "confidence": "high",
-  "score": 85,
-  "source": "nominatim+rail-soft"
+  "lon": 88.822868
  },
  "Mayta": {},
  "Mecheda": {
   "lat": 22.414105,
-  "lon": 87.85883,
-  "confidence": "high",
-  "score": 145,
-  "source": "rail-snap"
+  "lon": 87.85883
  },
  "Mecheda Station": {},
  "Medinipur": {
+  "district": "Paschim Medinipur",
   "lat": 22.42114,
-  "lon": 87.32257,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.32257
  },
  "Memari": {
+  "district": "Purba Bardhaman",
   "lat": 23.17647,
-  "lon": 88.09749,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 88.09749
  },
  "Metiabruz": {},
  "Metiabruz Ssp Hospital": {},
@@ -1533,29 +1086,20 @@
  "Milan More": {},
  "Milk Colony": {},
  "Mirzapur": {
+  "district": "Murshidabad",
   "lat": 24.40574,
-  "lon": 88.06512,
-  "confidence": "high",
-  "score": 120,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.06512
  },
  "Mohanpur": {
+  "district": "Paschim Medinipur",
   "lat": 21.83888,
-  "lon": 87.42565,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.42565
  },
  "Mohar": {},
  "Mohishpota": {},
  "Molian": {
   "lat": 23.102678,
-  "lon": 86.805762,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
+  "lon": 86.805762
  },
  "Moonbeam": {},
  "Morebandh": {},
@@ -1563,21 +1107,15 @@
  "Mourigram": {},
  "Moyna": {
   "lat": 22.239382,
-  "lon": 87.754265,
-  "confidence": "high",
-  "score": 75,
-  "source": "nominatim"
+  "lon": 87.754265
  },
  "Moynaguri": {},
  "Moynapur": {},
  "Muchighata": {},
  "Mukundapur": {
+  "district": "Hooghly",
   "lat": 22.84166,
-  "lon": 88.43797,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.43797
  },
  "Mundumari": {},
  "Munshirhat": {},
@@ -1585,22 +1123,16 @@
  "NJP": {},
  "NJP-GB-MM": {},
  "Nabadwip": {
+  "district": "Nadia",
   "lat": 23.4067,
-  "lon": 88.36861,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.36861
  },
  "Nabadwip Railgate": {},
  "Nabanna": {},
  "Nabatkati": {},
  "Nadanghat": {
   "lat": 23.373418,
-  "lon": 88.253147,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
+  "lon": 88.253147
  },
  "Nadihi": {},
  "Nagar": {},
@@ -1611,30 +1143,21 @@
  "Nainan": {},
  "Namkhana": {},
  "Nandakumar": {
+  "district": "Purba Medinipur",
   "lat": 22.18982,
-  "lon": 87.91873,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.91873
  },
  "Nandi Bagan": {},
  "Nandigram": {
+  "district": "Purba Medinipur",
   "lat": 22.00176,
-  "lon": 87.95944,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.95944
  },
  "Nanur": {},
  "Napara": {
+  "district": "North 24 Parganas",
   "lat": 22.67278,
-  "lon": 88.46944,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "North 24 Parganas"
+  "lon": 88.46944
  },
  "Narit": {},
  "Natunhat": {},
@@ -1660,71 +1183,47 @@
  "Omarpur": {},
  "P More": {
   "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
+  "lon": 85.85676
  },
  "Paikpara": {},
  "Pailan": {},
  "Pairachali": {
   "lat": 23.082238,
-  "lon": 86.720583,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
+  "lon": 86.720583
  },
  "Palashipara": {},
  "Palbazar": {},
  "Pancharul": {},
  "Panchla": {},
  "Panchmura": {
+  "district": "Bankura",
   "lat": 22.96546,
-  "lon": 87.16135,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.16135
  },
  "Panchthupi": {
+  "district": "Murshidabad",
   "lat": 23.88847,
-  "lon": 87.98843,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 87.98843
  },
  "Pandaveswar": {
+  "district": "Paschim Bardhaman",
   "lat": 23.72793,
-  "lon": 87.27089,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 87.27089
  },
  "Pandua": {
+  "district": "Hooghly",
   "lat": 23.07492,
-  "lon": 88.28637,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.28637
  },
  "Panna": {
   "lat": 22.499211,
-  "lon": 88.317066,
-  "confidence": "low",
-  "score": 28,
-  "source": "nominatim"
+  "lon": 88.317066
  },
  "Panshkura": {},
  "Panskura": {
+  "district": "Purba Medinipur",
   "lat": 22.40418,
-  "lon": 87.71746,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.71746
  },
  "Parasidanga": {},
  "Pardankuni": {},
@@ -1738,78 +1237,54 @@
  "Patharghata": {},
  "Patharmora": {
   "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
+  "lon": 85.85676
  },
  "Patharpara": {},
  "Patharpratima": {},
  "Patrasayer": {
   "lat": 23.217327,
-  "lon": 87.536508,
-  "confidence": "high",
-  "score": 87,
-  "source": "nominatim"
+  "lon": 87.536508
  },
  "Patuli": {},
  "Phoolbagan": {},
  "Picnic Garden": {},
  "Polerhat": {},
  "Pratap Dighi": {
+  "district": "Purba Medinipur",
   "lat": 21.98123,
-  "lon": 87.60068,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.60068
  },
  "Purash": {},
  "Puri": {},
  "Purulia": {
+  "district": "Purulia",
   "lat": 23.33062,
-  "lon": 86.36303,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.36303
  },
  "Rabindra Nagar": {},
  "Rabindra Sadan": {},
  "Radhanagar": {
+  "district": "Bankura",
   "lat": 23.15462,
-  "lon": 87.32344,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.32344
  },
  "Raghunathpur": {
+  "district": "Paschim Bardhaman",
   "lat": 23.53878,
-  "lon": 86.6735,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 86.6735
  },
  "Rahara Bazar": {},
  "Raichak": {},
  "Raidighi": {},
  "Raiganj": {
+  "district": "Uttar Dinajpur",
   "lat": 25.61281,
-  "lon": 88.12449,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Uttar Dinajpur"
+  "lon": 88.12449
  },
  "Raipur": {
+  "district": "Jhargram",
   "lat": 22.79866,
-  "lon": 86.95145,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 86.95145
  },
  "Rajabazar": {},
  "Rajabazar Tram Depot": {},
@@ -1819,167 +1294,110 @@
  "Rajgram": {},
  "Ramganga": {},
  "Ramgarh": {
+  "district": "Jhargram",
   "lat": 22.69295,
-  "lon": 87.05872,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 87.05872
  },
  "Ramharipur": {},
  "Ramjibanpur": {
+  "district": "Purba Bardhaman",
   "lat": 22.82815,
-  "lon": 87.60888,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Bardhaman"
+  "lon": 87.60888
  },
  "Ramnagar": {
+  "district": "Hooghly",
   "lat": 22.77778,
-  "lon": 88.24639,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.24639
  },
  "Rampur": {
+  "district": "Purulia",
   "lat": 23.48441,
-  "lon": 86.56714,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purulia"
+  "lon": 86.56714
  },
  "Rampurhat": {
   "lat": 24.179797,
-  "lon": 87.782147,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 87.782147
  },
  "Ramrajatala": {},
  "Ramsagar": {
   "lat": 23.106248,
-  "lon": 87.277063,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 87.277063
  },
  "Ranaghat": {
+  "district": "Nadia",
   "lat": 23.17623,
-  "lon": 88.56667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Nadia"
+  "lon": 88.56667
  },
  "Ranchi": {},
  "Ranibandh": {
+  "district": "Bankura",
   "lat": 22.86453,
-  "lon": 86.78357,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 86.78357
  },
  "Ranichak": {
+  "district": "Purba Medinipur",
   "lat": 22.61546,
-  "lon": 87.81199,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.81199
  },
  "Raniganj": {
+  "district": "Paschim Bardhaman",
   "lat": 23.6164,
-  "lon": 87.13061,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 87.13061
  },
  "Ranihati": {},
  "Rashbehari": {},
  "Raskundu": {
   "lat": 22.839261,
-  "lon": 87.346336,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
+  "lon": 87.346336
  },
  "Rasulpur": {
+  "district": "Uttar Dinajpur",
   "lat": 25.40056,
-  "lon": 87.97454,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Uttar Dinajpur"
+  "lon": 87.97454
  },
  "Rathtala": {},
  "Rohini": {
+  "district": "Jhargram",
   "lat": 22.16404,
-  "lon": 87.09006,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 87.09006
  },
  "Ruby": {
   "lat": 22.513245,
-  "lon": 88.402565,
-  "confidence": "high",
-  "score": 90,
-  "source": "nominatim"
+  "lon": 88.402565
  },
  "Rudra": {
+  "district": "Howrah",
   "lat": 22.63028,
-  "lon": 88.17528,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.17528
  },
  "Ruiya Purbapara": {},
  "Runakuraghat": {},
  "Rupnarayanpur": {
+  "district": "Paschim Bardhaman",
   "lat": 23.81489,
-  "lon": 86.88646,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Bardhaman"
+  "lon": 86.88646
  },
  "SM Nagar": {},
  "Sabaldaha": {},
  "Sagarpara": {
+  "district": "Murshidabad",
   "lat": 24.24546,
-  "lon": 88.70052,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.70052
  },
  "Sahararhat": {},
  "Sainthia": {
+  "district": "Birbhum",
   "lat": 23.94826,
-  "lon": 87.68045,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.68045
  },
  "Saiyadpara": {},
  "Sajirhat": {},
  "Sakher Bazar": {},
  "Salap": {},
  "Salar": {
+  "district": "Murshidabad",
   "lat": 23.77082,
-  "lon": 88.10213,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.10213
  },
  "Salkia Chowrasta": {},
  "Salt Lake Depot Gate": {},
@@ -1990,46 +1408,31 @@
  "Salugara": {},
  "Saluka": {},
  "Samaspur": {
+  "district": "Uttar Dinajpur",
   "lat": 25.95192,
-  "lon": 87.97966,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Uttar Dinajpur"
+  "lon": 87.97966
  },
  "Samshernagar": {},
  "Sandhipur": {},
  "Sankrail": {},
  "Santaldih": {
   "lat": 23.596661,
-  "lon": 86.483123,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 86.483123
  },
  "Santasram": {
   "lat": 23.11446,
-  "lon": 87.571807,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
+  "lon": 87.571807
  },
  "Santragachi": {
+  "district": "Howrah",
   "lat": 22.58333,
-  "lon": 88.3,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Howrah"
+  "lon": 88.3
  },
  "Sapuipara": {},
  "Sarenga": {
+  "district": "Jhargram",
   "lat": 22.76193,
-  "lon": 87.02124,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 87.02124
  },
  "Sarsuna": {},
  "Sasaram": {},
@@ -2039,12 +1442,9 @@
  "Sautia": {},
  "Science City": {},
  "Sealdah": {
+  "district": "Kolkata",
   "lat": 22.56263,
-  "lon": 88.36304,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Kolkata"
+  "lon": 88.36304
  },
  "Sector V": {},
  "Sehara Bazar": {},
@@ -2059,12 +1459,9 @@
  "Shibrampur": {},
  "Shibtala Math": {},
  "Shikarpur": {
+  "district": "Murshidabad",
   "lat": 23.98082,
-  "lon": 88.71973,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Murshidabad"
+  "lon": 88.71973
  },
  "Shikharpur": {},
  "Shilpara": {},
@@ -2072,42 +1469,27 @@
  "Shirakole": {},
  "Shyambazar": {
   "lat": 22.601335,
-  "lon": 88.372497,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
+  "lon": 88.372497
  },
  "Shyamnagar": {
+  "district": "Hooghly",
   "lat": 22.83333,
-  "lon": 88.36667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Hooghly"
+  "lon": 88.36667
  },
  "Shyampur": {
   "lat": 22.279623,
-  "lon": 88.388263,
-  "confidence": "medium",
-  "score": 63,
-  "source": "nominatim"
+  "lon": 88.388263
  },
  "Shyamsundar": {},
  "Silda": {
+  "district": "Jhargram",
   "lat": 22.61667,
-  "lon": 86.81667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jhargram"
+  "lon": 86.81667
  },
  "Siliguri": {
+  "district": "Jalpaiguri",
   "lat": 26.71004,
-  "lon": 88.42851,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Jalpaiguri"
+  "lon": 88.42851
  },
  "Siliguri MM": {},
  "Siliguri NJP": {},
@@ -2115,12 +1497,9 @@
  "Siliguri-Hili": {},
  "Simlabandh": {},
  "Simlapal": {
+  "district": "Bankura",
   "lat": 22.91315,
-  "lon": 87.07183,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.07183
  },
  "Sindurpeti": {},
  "Sinthi": {},
@@ -2130,20 +1509,14 @@
  "Sohai Bazar": {},
  "Solpatta": {
   "lat": 21.830674,
-  "lon": 87.387559,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
+  "lon": 87.387559
  },
  "Sonachura": {},
  "Sonakhali": {},
  "Sonamukhi": {
+  "district": "Bankura",
   "lat": 23.30521,
-  "lon": 87.41336,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.41336
  },
  "Sonamukhi Bazar": {},
  "Sonaraithari": {},
@@ -2151,48 +1524,33 @@
  "Sonarpur Station": {},
  "Sonathali": {},
  "Srinagar": {
+  "district": "Paschim Medinipur",
   "lat": 22.80573,
-  "lon": 87.58283,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Paschim Medinipur"
+  "lon": 87.58283
  },
  "Sukanta Park": {},
  "Supa": {},
  "Suri": {
+  "district": "Birbhum",
   "lat": 23.90806,
-  "lon": 87.52773,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.52773
  },
  "Suryasen Nagar": {},
  "Susunia Hill": {
   "lat": 23.397599,
-  "lon": 86.984843,
-  "confidence": "high",
-  "score": 83,
-  "source": "nominatim"
+  "lon": 86.984843
  },
  "Tajpur": {},
  "Taki": {},
  "Taldangra": {
+  "district": "Bankura",
   "lat": 23.01756,
-  "lon": 87.10286,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Bankura"
+  "lon": 87.10286
  },
  "Tamluk": {
+  "district": "Purba Medinipur",
   "lat": 22.30083,
-  "lon": 87.92593,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Purba Medinipur"
+  "lon": 87.92593
  },
  "Tangra": {},
  "Tangrakhali": {},
@@ -2201,38 +1559,26 @@
  "Tarakeswar": {},
  "Taranipur": {},
  "Tarapith": {
+  "district": "Birbhum",
   "lat": 24.11197,
-  "lon": 87.7972,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.7972
  },
  "Taratala": {},
  "Tarkeshwar": {
   "lat": 22.882582,
-  "lon": 88.013437,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
+  "lon": 88.013437
  },
  "Tatanagar": {
   "lat": 22.768954,
-  "lon": 86.20056,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
+  "lon": 86.20056
  },
  "Tatarpur": {},
  "Technopolis": {},
  "Teghoria": {},
  "Tentulia": {
+  "district": "Birbhum",
   "lat": 24.02,
-  "lon": 87.59609,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "Birbhum"
+  "lon": 87.59609
  },
  "Thakurpukur": {},
  "Tikiapara": {},
@@ -2247,20 +1593,14 @@
  "Ukhra": {},
  "Ukhradihi": {
   "lat": 23.653692,
-  "lon": 87.232537,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
+  "lon": 87.232537
  },
  "Ultadanga": {},
  "Ultadanga - Salt Lake-Ultadanga": {},
  "Uluberia": {
+  "district": "South 24 Parganas",
   "lat": 22.4756,
-  "lon": 88.09898,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy",
-  "district": "South 24 Parganas"
+  "lon": 88.09898
  },
  "Unitech Gate 1": {},
  "Unitech Gate 2": {},
