@@ -1,58 +1,83 @@
 #!/usr/bin/env python3
-"""design/build.py - make every css file's :root match design/tokens.css.
+"""design/build.py - BusJatri design build.
 
-Idempotent. Safe by construction:
-  * only tokens a file ALREADY has are rewritten (never added -> no new rules)
-  * tokens whose value is a var() alias are left alone (keeps the link)
-  * seo-v2.css is excluded (it carries its own separate theme values)
-Run in the build so a colour change in design/tokens.css reaches every page.
+The design lives in design/ :
+  tokens.css      the colour / font / spacing variables
+  layout.css      shared LAYOUT rules (header, footer, container, grids, search shell)
+  components.css  shared COMPONENT rules (cards, chips, badges, buttons, tables)
+
+This script distributes them into the css/*.css files the pages load:
+  * :root            -> synced from design/tokens.css (existing tokens only)
+  * a shared selector -> its body is taken from design/layout.css or components.css
+Only selectors that are IDENTICAL in every file they appear in are in design/,
+so a page-type's own overrides are never touched. Idempotent.
 """
 import re, os, glob
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TOKENS = os.path.join(ROOT, "design", "tokens.css")
-EXCLUDE = {"seo-v2.css"}
+DESIGN = os.path.join(ROOT, "design")
+EXCLUDE = {"seo-v2.css"}   # carries its own separate theme
 
-def canon():
-    s = open(TOKENS, encoding="utf-8").read()
-    block = re.search(r":root\s*\{(.*?)\}", s, re.S).group(1)
+def parse_rules(text):
+    """yield (start, sel_start, sel_end, body_start, body_end, sel, body) for top-level rules"""
+    s = re.sub(r'/\*.*?\*/', '', text, flags=re.S)
+    out = []
+    i, n = 0, len(text)
+    while i < n:
+        j = text.find('{', i)
+        if j < 0: break
+        sel = text[i:j]
+        depth, k = 1, j + 1
+        while k < n and depth:
+            if text[k] == '{': depth += 1
+            elif text[k] == '}': depth -= 1
+            k += 1
+        clean = sel.strip()
+        if clean and not clean.startswith('@'):
+            out.append((clean, text[j+1:k-1], j+1, k-1))
+        i = k
+    return out
+
+def design_rules():
     d = {}
-    for part in block.split(";"):
-        if ":" in part:
-            k, v = part.split(":", 1)
-            d[k.strip()] = v.strip()
+    for fn in ("layout.css", "components.css"):
+        p = os.path.join(DESIGN, fn)
+        if not os.path.exists(p): continue
+        for sel, body, _, _ in parse_rules(open(p, encoding="utf-8").read()):
+            d[sel] = body.strip()
     return d
 
+def tokens():
+    s = open(os.path.join(DESIGN, "tokens.css"), encoding="utf-8").read()
+    return re.search(r":root\s*\{(.*?)\}", s, re.S).group(1).strip()
+
 def main():
-    c = canon()
-    n = 0
+    dr = design_rules(); tb = tokens(); updated = 0
     for f in sorted(glob.glob(os.path.join(ROOT, "css", "*.css"))):
-        if os.path.basename(f) in EXCLUDE:
-            continue
-        s = open(f, encoding="utf-8").read()
+        if os.path.basename(f) in EXCLUDE: continue
+        s = open(f, encoding="utf-8").read(); orig = s
+        # 1) tokens
         m = re.search(r":root\s*\{(.*?)\}", s, re.S)
-        if not m:
-            continue
-        out, changed = [], False
-        for part in m.group(1).split(";"):
-            if ":" not in part:
-                out.append(part); continue
-            k, v = part.split(":", 1)
-            k = k.strip()
-            if k in c and "var(" not in c[k]:
-                nv = c[k]
-                if v.strip() != nv:
-                    changed = True
-                out.append(f" {k}:{nv} ")
-            else:
-                out.append(part)
-        if not changed:
-            continue
-        s = s[:m.start(1)] + ";".join(out) + s[m.end(1):]
-        open(f, "w", encoding="utf-8").write(s)
-        n += 1
-        print("tokens synced ->", os.path.basename(f))
-    print(f"design/build.py: {n} file(s) updated")
+        if m:
+            keep = []
+            for part in m.group(1).split(";"):
+                if ":" not in part: continue
+                k, v = part.split(":", 1); k = k.strip()
+                cmap = dict(x.split(":", 1) for x in tb.split(";") if ":" in x)
+                if k in cmap:
+                    keep.append(f" {k}:{cmap[k].strip()} ")
+                else:
+                    keep.append(f" {k}:{v.strip()} ")
+            s = s[:m.start(1)] + ";".join(keep) + s[m.end(1):]
+        # 2) shared rules (rewrite bodies from design/ - last occurrence wins, do from the end)
+        rules = parse_rules(s)
+        for sel, body, bs, be in reversed(rules):
+            if sel in dr and re.sub(r'\s+', ' ', body.strip()) != re.sub(r'\s+', ' ', dr[sel]):
+                s = s[:bs] + dr[sel] + s[be:]
+        if s != orig:
+            open(f, "w", encoding="utf-8").write(s); updated += 1
+            print("design ->", os.path.basename(f))
+    print(f"design/build.py: {updated} file(s) updated")
 
 if __name__ == "__main__":
     main()
