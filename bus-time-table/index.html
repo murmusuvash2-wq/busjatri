@@ -352,7 +352,7 @@ function toggleLang(){
 }
 (function(){
   var nav=document.querySelector(".header-inner nav");
-  if(nav){
+  if(nav && !document.getElementById("langEn")){
     var b=document.createElement("button");
     b.id="langBtn";
     b.type="button";
