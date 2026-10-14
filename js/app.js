@@ -654,84 +654,17 @@ function renderHome(el) {
         </div>
       </div>
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
-      <div class="stats-inline bj-stats-strip">
-        <div class="bj-stat-pill">
-          ${icon('bus')}
-          <div class="bj-stat-data">
-            <span class="bj-stat-num">${(DATA?.meta?.total_buses || 4702).toLocaleString('en-IN')}+</span>
-            <span class="bj-stat-label"><span class="label-en">Buses</span><span class="label-bn">বাস</span></span>
-          </div>
-        </div>
-        <div class="bj-stat-pill">
-          ${icon('compass')}
-          <div class="bj-stat-data">
-            <span class="bj-stat-num">${(DATA?.meta?.total_routes || 2684).toLocaleString('en-IN')}+</span>
-            <span class="bj-stat-label"><span class="label-en">Routes</span><span class="label-bn">রুট</span></span>
-          </div>
-        </div>
-        <div class="bj-stat-pill">
-          ${icon('stops')}
-          <div class="bj-stat-data">
-            <span class="bj-stat-num">${(DATA?.meta?.total_stops || 30000).toLocaleString('en-IN')}+</span>
-            <span class="bj-stat-label"><span class="label-en">Stoppages</span><span class="label-bn">স্টপেজ</span></span>
-          </div>
-        </div>
-      </div>
+      <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stoppages</span><span class="label-bn">টি স্টপেজ</span></p>
   </div>
   </div>
-  <section data-keep="1" class="bj-operators-section">
-    <div class="bj-op-header">
-      <h2 class="bj-op-title">
-        ${icon('bus')}
-        <span class="label-en">Popular Operators</span><span class="label-bn">জনপ্রিয় অপারেটর ও সংস্থা</span>
-      </h2>
-      <a href="bus-time-table/" class="bj-op-all-link">
-        <span class="label-en">All Operators &rarr;</span><span class="label-bn">সকল সংস্থা &rarr;</span>
-      </a>
-    </div>
-    <div class="bj-op-grid">
-      <a href="bus-time-table/sbstc-buses" class="bj-op-tile">
-        <div class="bj-op-badge sbstc">SB</div>
-        <div class="bj-op-info">
-          <span class="bj-op-name">SBSTC</span>
-          <span class="bj-op-sub"><span class="label-en">South Bengal</span><span class="label-bn">দক্ষিণবঙ্গ</span></span>
-        </div>
-      </a>
-      <a href="bus-time-table/nbstc-buses" class="bj-op-tile">
-        <div class="bj-op-badge nbstc">NB</div>
-        <div class="bj-op-info">
-          <span class="bj-op-name">NBSTC</span>
-          <span class="bj-op-sub"><span class="label-en">North Bengal</span><span class="label-bn">উত্তরবঙ্গ</span></span>
-        </div>
-      </a>
-      <a href="bus-time-table/wbtc-buses" class="bj-op-tile">
-        <div class="bj-op-badge wbtc">WB</div>
-        <div class="bj-op-info">
-          <span class="bj-op-name">WBTC</span>
-          <span class="bj-op-sub"><span class="label-en">State Transport</span><span class="label-bn">পশ্চিমবঙ্গ রাজ্য</span></span>
-        </div>
-      </a>
-      <a href="kolkata-city-bus-timetable" class="bj-op-tile">
-        <div class="bj-op-badge city">KC</div>
-        <div class="bj-op-info">
-          <span class="bj-op-name"><span class="label-en">Kolkata City</span><span class="label-bn">কলকাতা বাস</span></span>
-          <span class="bj-op-sub"><span class="label-en">City Network</span><span class="label-bn">শহরের রুট</span></span>
-        </div>
-      </a>
-      <a href="bus-time-table/volvo-ac-buses" class="bj-op-tile">
-        <div class="bj-op-badge ac">AC</div>
-        <div class="bj-op-info">
-          <span class="bj-op-name"><span class="label-en">Volvo AC</span><span class="label-bn">ভলভো এসি</span></span>
-          <span class="bj-op-sub"><span class="label-en">AC Express</span><span class="label-bn">প্রিমিয়াম এসি</span></span>
-        </div>
-      </a>
-      <a href="bus-time-table/shyamoli-paribahan-buses" class="bj-op-tile">
-        <div class="bj-op-badge shyamoli">SP</div>
-        <div class="bj-op-info">
-          <span class="bj-op-name">Shyamoli</span>
-          <span class="bj-op-sub"><span class="label-en">Interstate</span><span class="label-bn">আন্তঃরাজ্য</span></span>
-        </div>
-      </a>
+    <section data-keep="1" style="max-width:720px;margin:0 auto 8px;padding:0 18px 18px">
+    <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin-bottom:10px">Popular Operators</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <a href="bus-time-table/sbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">SBSTC</a>
+      <a href="bus-time-table/nbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">NBSTC</a>
+      <a href="bus-time-table/wbtc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">WBTC</a>
+      <a href="kolkata-city-bus-timetable" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Kolkata City Bus</a>
+      <a href="bus-time-table/volvo-ac-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
     </div>
   </section>
   <div class="section">
