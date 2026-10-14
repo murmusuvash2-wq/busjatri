@@ -3,6 +3,31 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-14 — Bus Stand Departure Search Fix, Modern Stats Strip, Operators Grid & Multi-Column Footer
+- What: Fixed departure search and upgraded homepage UI into mobile-friendly modern components:
+  - **Departure Time Search Box Fix:**
+    - `js/stop-search-all.js`: Exposed `window.acFind = acFind;` globally.
+    - `js/ux-fixes.js`: Defined `findMatches(q)` with ranked prefix, substring, and alias matching (fixing runtime `ReferenceError: findMatches is not defined`). Added auto-seeding of `POPULAR_STANDS` on clicking the find button so suggestions display instantly before typing.
+  - **Modern Stats Strip (`.stats-inline.bj-stats-strip`):**
+    - Replaced plain text paragraph with a 3-pill card strip (4,702+ Buses, 2,684+ Routes, 30,000+ Stoppages) with monospace bold numbers, icons, and bilingual labels (EN/BN).
+    - Synchronized between `index.html` static hero and `js/app.js` `renderHome()`.
+  - **Balanced Popular Operators Grid (`.bj-operators-section`):**
+    - Replaced ragged inline pills with a structured 6-tile grid (SBSTC, NBSTC, WBTC, Kolkata City, Volvo AC, Shyamoli Paribahan).
+    - Added color-coded monogram badges (`SB`, `NB`, `WB`, `KC`, `AC`, `SP`), bold titles, and regional subtitles with 48px+ touch targets.
+  - **Structured Multi-Column Footer (`.footer.bj-footer`):**
+    - Replaced horizontal link dump with a modern 3-column responsive layout:
+      1. Brand & Contact (Logo, tagline, direct email `busjatri@zohomail.in`).
+      2. Timetables & Services (All Timetables, Kolkata City, SBSTC, NBSTC, WBTC, Blog).
+      3. Community & Legal (Add Bus Timing, About, Contact, Privacy, Terms, Disclaimer, Credits).
+      4. Footer Bottom: Civic non-affiliation disclaimer, crowdsource credit `#bjContrib`, and copyright notice.
+  - **Responsive CSS (`css/ux-fixes.css`):**
+    - Added clean CSS with CSS variable theming (light/dark mode compatible) and responsive breakpoints for screens under 480px and 768px.
+- Why: User requested fixing the non-working departure search box, organizing stats into a clean mobile-friendly design, organizing popular operators into a balanced grid, and modernizing the footer.
+- Files: `index.html`, `js/app.js`, `js/ux-fixes.js`, `js/stop-search-all.js`, `css/ux-fixes.css`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
 ## 2026-10-14 — Search Loading & Back Freeze Fix + Geo, Fare, Dedup & Content Engines
 - What: Fixed search loading and browser back-button freezing, and built the core modular engines for Route Maps, Fare/Distance estimation, Duplicate Detection, and Mobile-first Route Content:
   - **Back Button Freeze & Search Speed Fix:**

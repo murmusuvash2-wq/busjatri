@@ -157,6 +157,7 @@
     if (res.length < AC_LIMIT) res = res.concat(t3);
     return res.slice(0, AC_LIMIT);
   }
+  window.acFind = acFind;
   function acHtml(s) {
     var A = String.fromCharCode(38);
     var M = {};
