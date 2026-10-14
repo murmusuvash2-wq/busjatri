@@ -256,7 +256,9 @@ function doSearch() {
   if (from) q.set('from', from);
   if (to) q.set('to', to);
   if (stop) q.set('stop', stop);
-  location.hash = '#/search?' + q.toString();
+  const targetHash = '#/search?' + q.toString();
+  if (window.__BJ_SEARCH_CACHE) delete window.__BJ_SEARCH_CACHE[targetHash];
+  location.hash = targetHash;
 }
 
 function swapFromTo() {
@@ -597,8 +599,6 @@ const __BJ_SEO_SLUGS = new Set(['cooch-behar-to-siliguri', 'durgapur-to-karunamo
 const __BJ_VIA_SLUGS = new Set(['digha', 'mukutmanipur', 'bishnupur', 'jhargram', 'purulia', 'tarapith', 'mayapur', 'bolpur', 'kolkata', 'mandarmani', 'bankura', 'darjeeling']);
 function renderHome(el) {
   const placeCards = POPULAR_PLACES.map((p, i) => {
-    const stop = Object.values(STOPS).find(s => s.name.toLowerCase() === p.name.toLowerCase())
-      || Object.values(STOPS).find(s => s.name.toLowerCase().includes(p.name.toLowerCase()));
     const iconName = PLACE_ICONS[p.name] || 'pin';
     const featured = FEATURED_PLACES.includes(p.name) ? ' featured' : '';
     const vslug = String(p.name).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-');
@@ -652,7 +652,6 @@ function renderHome(el) {
           <button class="search-btn" onclick="doSearch()">${icon('search')} <span class="label-en">Search buses</span><span class="label-bn">খুঁজুন</span></button>
           <a class="browse-btn" href="bus-time-table/"><span class="label-en">Browse all timetables</span><span class="label-bn">সব টাইমটেবিল দেখুন</span> →</a>
         </div>
-        <datalist id="stopList">${[...new Set([...(SN && SN.length ? SN : Object.keys(STOPS)), ...Object.values(BUSES).flatMap(b => [b.origin, b.destination]).filter(Boolean)])].map(n => `<option value="${esc(n)}">`).join('')}</datalist>
       </div>
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
       <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stoppages</span><span class="label-bn">টি স্টপেজ</span></p>

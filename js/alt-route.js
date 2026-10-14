@@ -21,11 +21,29 @@
   if (typeof renderSearch !== 'function' || typeof BUSES === 'undefined') return;
   var prevRender = renderSearch;
   var hubCache = {}; /* slug(to) -> {deliverers, hubIndex}; 2026-09-30 perf */
+  window.__BJ_SEARCH_CACHE = window.__BJ_SEARCH_CACHE || {};
+  window.__BJ_SEARCH_SCROLL = window.__BJ_SEARCH_SCROLL || {};
 
   renderSearch = async function (el) {
+    var curHash = location.hash;
+    if (window.__BJ_SEARCH_CACHE[curHash]) {
+      el.innerHTML = window.__BJ_SEARCH_CACHE[curHash];
+      var savedY = window.__BJ_SEARCH_SCROLL[curHash] || 0;
+      setTimeout(function () { window.scrollTo(0, savedY); }, 10);
+      return;
+    }
     await prevRender(el);
     try { mount(el); } catch (e) { /* never break search */ }
+    window.__BJ_SEARCH_CACHE[curHash] = el.innerHTML;
   };
+
+  /* Save scroll position when clicking into a bus detail from search */
+  document.addEventListener('click', function (e) {
+    var card = e.target && e.target.closest && e.target.closest('.result-item, .bus-row, .rc, .bus-card');
+    if (card && location.hash.indexOf('#/search') === 0) {
+      window.__BJ_SEARCH_SCROLL[location.hash] = window.scrollY || window.pageYOffset || 0;
+    }
+  }, { capture: true, passive: true });
 
   /* ---- helpers (same semantics as stop-search-all.js closures) ---- */
   function posIn(b, q) {

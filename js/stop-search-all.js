@@ -21,7 +21,9 @@
   window.__bjSearchV3 = true;
 
   function rebuildCompactStops() {
+    if (window.__bjStopsRebuilt) return;
     if (typeof DATA === 'undefined' || !DATA || !DATA.buses || !DATA.sn) return;
+    window.__bjStopsRebuilt = true;
     DATA.buses.forEach(function (b) {
       if (b.sx && !b.stoppages) {
         b.stoppages = b.sx.map(function (i, k) {
@@ -432,6 +434,9 @@
             if (left <= 0) { w.parentNode.removeChild(w); return; }
             var btn = document.getElementById('bj-see-more');
             if (btn) btn.innerHTML = '<span class="label-en">See 10 more · ' + left + ' left</span><span class="label-bn">আরও ১০টি · ' + bnD(left) + ' বাকি</span>';
+            if (window.__BJ_SEARCH_CACHE && location.hash.indexOf('#/search') === 0 && el) {
+              window.__BJ_SEARCH_CACHE[location.hash] = el.innerHTML;
+            }
           };
           listHtml += '<div id="bj-see-more-wrap" style="text-align:center;margin:4px 0 12px"><button class="see-more-btn" id="bj-see-more" onclick="bjSeeMore()"><span class="label-en">See 10 more · ' + (cards.length - shownCount) + ' left</span><span class="label-bn">আরও ১০টি · ' + bnD(cards.length - shownCount) + ' বাকি</span></button></div>';
       }

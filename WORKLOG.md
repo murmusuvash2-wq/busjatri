@@ -3,6 +3,22 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-14 — Search Loading & Back Freeze Fix + Geo, Fare, Dedup & Content Engines
+- What: Fixed search loading and browser back-button freezing, and built the core modular engines for Route Maps, Fare/Distance estimation, Duplicate Detection, and Mobile-first Route Content:
+  - **Back Button Freeze & Search Speed Fix:**
+    - `js/app.js`: Removed dead 4,000-option `<datalist id="stopList">` which was causing a massive synchronous DOM-parse freeze on every homepage render; removed unused 24 full-array searches over thousands of stops in `POPULAR_PLACES.map`.
+    - `js/alt-route.js` & `js/stop-search-all.js`: Added `__BJ_SEARCH_CACHE` and `__BJ_SEARCH_SCROLL`. When navigating back from a bus details page to search, results and exact scroll position are restored in 0ms without re-running 138,000 stoppage regex checks and graph loops.
+    - `js/ux-fixes.js` & `js/stop-search-all.js`: Guarded `rebuildCompactStops()` with `window.__bjStopsRebuilt` to run only once per dataset rather than on every MutationObserver tick.
+  - **Route Geography, Polyline, Distance & Fare Engine (`scripts/geo/route_geo.py`):**
+    - Resolves stop coordinates from `stop_coords.json` and `places.json`, builds ordered `[lat, lon]` polylines, computes road km with winding factor (1.25), realistic travel duration, and West Bengal stage carriage fare slabs (Ordinary, Express, AC/Volvo).
+  - **Duplicate Detection & Merge Engine (`scripts/dedup/dedup_engine.py`):**
+    - Canonical multi-terminal hub clustering, fuzzy operator matching, departure time proximity (±15 min), and stoppage overlap verification. Non-destructive merging prioritizes richer stoppage lists and precise timings.
+  - **Mobile-First Content & Researched FAQ Engine (`scripts/content/route_content.py`):**
+    - Compact collapsible `<details>` "About Route" guide keeping mobile page heights short; research-backed FAQs with real road distance, fares, durations, and key highway junctions + Schema.org JSON-LD.
+- Why: User requested fixing search loading and back button freeze first, then establishing the route map system (geocoding, polyline, distance, fare), duplicate detection, data enrichment, and mobile-friendly compact content.
+- Files: `js/app.js`, `js/ux-fixes.js`, `js/stop-search-all.js`, `js/alt-route.js`, `scripts/geo/route_geo.py`, `scripts/dedup/dedup_engine.py`, `scripts/content/route_content.py`, `WORKLOG.md`.
+- Status: Verified & complete.
+
 ---
 
 ## 2026-10-08 — Proposed unified operator-hub design (demo)
