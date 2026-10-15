@@ -121,7 +121,9 @@
 
   /* ---- 5. Compact search completeness: rebuild stoppages from index ---- */
   function rebuildCompactStops() {
+    if (window.__bjStopsRebuilt) return;
     if (typeof DATA === 'undefined' || !DATA || !DATA.buses || !DATA.sn) return;
+    window.__bjStopsRebuilt = true;
     DATA.buses.forEach(function (b) {
       if (b.sx && !b.stoppages) {
         b.stoppages = b.sx.map(function (i, k) {
@@ -909,14 +911,46 @@
   }
 
   /* ---- 13b. Board stand bar: name + find button, dropdown search ---- */
+  var POPULAR_STANDS = ['Kolkata', 'Digha', 'Durgapur', 'Bankura', 'Burdwan', 'Siliguri', 'Purulia', 'Medinipur', 'Asansol', 'Bolpur', 'Barasat', 'Howrah'];
+  function findMatches(q) {
+    if (typeof window.acFind === 'function') {
+      try {
+        var m = window.acFind(q);
+        if (m && m.length) return m;
+      } catch (err) {}
+    }
+    var t = (q || '').toLowerCase().trim();
+    if (!t) return POPULAR_STANDS;
+    var pool = [];
+    if (typeof DATA !== 'undefined' && DATA && DATA.sn && DATA.sn.length) pool = DATA.sn;
+    else if (typeof STOPS !== 'undefined' && STOPS) pool = Object.keys(STOPS);
+    else pool = POPULAR_STANDS;
+    var t1 = [], t2 = [];
+    for (var i = 0; i < pool.length; i++) {
+      var s = String(pool[i] || '');
+      var ls = s.toLowerCase();
+      if (ls.indexOf(t) === 0) t1.push(s);
+      else if (ls.indexOf(t) > 0) t2.push(s);
+    }
+    return t1.concat(t2).slice(0, 8);
+  }
+
   document.addEventListener('input', function (e) {
     if (e.target.id !== 'lvSearchInput') return;
     var q = e.target.value;
     var dr = document.querySelector('.lv-mdrop');
     if (!dr) return;
-    dr.querySelectorAll('.lv-m-item').forEach(function (x) { x.remove(); });
-    if (!q.trim() || q.trim().length < 2) return;
-    var m = findMatches(q).slice(0, 6);
+    dr.querySelectorAll('.lv-m-item, .lv-m-head').forEach(function (x) { x.remove(); });
+    var m = findMatches(q).slice(0, 7);
+    if (!m.length) {
+      var none = document.createElement('div');
+      none.className = 'lv-m-item';
+      none.style.color = 'var(--ink-dim,#777)';
+      none.style.fontStyle = 'italic';
+      none.textContent = typeof LANG !== 'undefined' && LANG === 'bn' ? 'কোনো স্ট্যান্ড পাওয়া যায়নি' : 'No bus stands found';
+      dr.appendChild(none);
+      return;
+    }
     m.forEach(function (n) {
       var it = document.createElement('div');
       it.className = 'lv-m-item';
@@ -933,9 +967,14 @@
       if (bar) {
         var dr = document.createElement('div');
         dr.className = 'lv-mdrop';
+        var popItems = POPULAR_STANDS.slice(0, 6).map(function (n) {
+          return '<div class="lv-m-item">' + escHtml(n) + '</div>';
+        }).join('');
         dr.innerHTML = '<div class="lv-msearch"><input id="lvSearchInput" type="text" autocomplete="off" placeholder="' +
-          (typeof LANG !== 'undefined' && LANG === 'bn' ? 'বাস স্ট্যান্ড লিখুন…' : 'Type a bus stand…') +
-          '" aria-label="Search bus stand"></div>';
+          (typeof LANG !== 'undefined' && LANG === 'bn' ? 'বাস স্ট্যান্ড খুঁজুন…' : 'Search bus stand…') +
+          '" aria-label="Search bus stand"></div>' +
+          '<div class="lv-m-head" style="font-size:11px;font-weight:700;color:var(--ink-dim,#777);padding:6px 14px 2px;text-transform:uppercase;letter-spacing:.05em"><span class="label-en">Popular Bus Stands</span><span class="label-bn">জনপ্রিয় বাস স্ট্যান্ড</span></div>' +
+          popItems;
         bar.appendChild(dr);
         setTimeout(function () { var ip = dr.querySelector('input'); if (ip) ip.focus(); }, 30);
       }

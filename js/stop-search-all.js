@@ -280,8 +280,9 @@
         var q = from || to;
         var target = parseClock(q);
         function bjDist(t) { var d = Math.abs(t - target) % 1440; return Math.min(d, 1440 - d); }
-        rows = all.filter(function (b) { return parseTime(b.departure_time) != null && bjDist(parseTime(b.departure_time)) <= 90; });
-        rows.sort(function (x, y) { return bjDist(parseTime(x.b.departure_time)) - bjDist(parseTime(y.b.departure_time)); });
+        rows = all.filter(function (b) { return parseTime(b.departure_time) != null && bjDist(parseTime(b.departure_time)) <= 90; })
+          .map(function (b) { return { b: b, fwd: true, depMin: parseTime(b.departure_time) }; });
+        rows.sort(function (x, y) { return bjDist(x.depMin) - bjDist(y.depMin); });
         window.__bjTimeQuery = q;
       } else {
         var q = from || to;
@@ -295,8 +296,8 @@
           var partial = q.slice(0, 5);
           rows = Object.values(BUSES).filter(function (b) {
             return (b.origin || '').toLowerCase().startsWith(partial) ||
-                   (b.destination || '').toLowerCase().startsWith(partial) ||
-                   (b.stoppages || []).some(function (s) { return (s.name || '').toLowerCase().startsWith(partial); });
+                    (b.destination || '').toLowerCase().startsWith(partial) ||
+                    (b.stoppages || []).some(function (s) { return (s.name || '').toLowerCase().startsWith(partial); });
           }).map(function (b) { return { b: b, fwd: true, depMin: parseTime(b.departure_time) }; });
         }
       }
@@ -314,7 +315,9 @@
       }
       var now = minutesNow();
       var rel = function (t) { return t == null ? Infinity : (t < now ? t + 1440 : t) - now; };
-      rows.sort(function (x, y) { return rel(x.depMin) - rel(y.depMin); });
+      if (!window.__bjTimeQuery) {
+        rows.sort(function (x, y) { return rel(x.depMin) - rel(y.depMin); });
+      }
       var near = rows.filter(function (r) { return r.depMin != null && rel(r.depMin) <= 180; });
 
       var emptyState = '<div class="empty-state">' + icon('bus') +

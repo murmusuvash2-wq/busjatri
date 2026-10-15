@@ -3,6 +3,17 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-15 — Search Flow Verification & Time Query Sorting Fix
+- What: Audited and verified full search flow across route searches, stop searches, place searches, time queries, operator filtering, and alternative connecting routes:
+  - **Search Flow Verification:** Created and executed a comprehensive test suite (`scripts/test_search_flow.js`) checking 15 distinct search cases across direct routes (e.g. Bankura-Digha, Kolkata-Durgapur, Siliguri-Cooch Behar), stoppage queries (Kolaghat, Santuri), place queries, 1-change connecting routes (Khatra to Durgapur via Bankura), and autocomplete suggestions (`acFind`).
+  - **Time Query Bug Fix:** Fixed a TypeError in `js/stop-search-all.js` (and `app/search/stop-search-all.js`) where time-based queries (e.g. "8:00 AM", "8pm") produced raw bus arrays instead of structured row objects with `.depMin`, causing `x.b.departure_time` crash during sorting. Added proper `.map()` structure and preserved proximity sorting without getting overwritten by real-time clock ordering.
+  - **Front-End Source Sync (`app/` <-> `js/`):** Synchronized `app/search/stop-search-all.js`, `app/search/alt-route.js`, `app/search/app.js`, and `app/components/ux-fixes.js` with their runtime counterparts in `js/`, ensuring `app/build.py` maintains full parity without drift. Bumped `js/stop-search-all.js` cache-buster in `index.html`.
+- Why: User requested to verify the search flow and push using PAT token.
+- Files: `js/stop-search-all.js`, `app/search/stop-search-all.js`, `app/search/alt-route.js`, `app/search/app.js`, `app/components/ux-fixes.js`, `index.html`, `scripts/test_search_flow.js`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
 ## 2026-10-15 — Government Bus Scraping & Stoppage/Time Enrichment (SBSTC, NBSTC, WBTC)
 - What: Enriched official government bus timetables, intermediate stoppages, and calculated arrival times across West Bengal state transport corporations (SBSTC, NBSTC, WBTC) while strictly preserving all existing UI/UX designs:
   - **Specialized Government Bus Enrichment Pipeline (`scripts/enrich/enrich_govt_buses.py`):**
