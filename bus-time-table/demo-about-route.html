@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo: Route Page Layout & About Route Dropdown | BusJatri</title>
+<link rel="stylesheet" href="../css/seo.css?v=rt20260920">
+<link rel="stylesheet" href="../css/extras.css">
+<style>
+.demo-banner {
+  background: var(--surface-2, #efe6d3);
+  border: 1px solid var(--line-strong, rgba(33,28,22,.24));
+  border-radius: 14px;
+  padding: 16px 20px;
+  margin: 18px 0 24px;
+}
+.demo-badge {
+  display: inline-block;
+  background: var(--amber, #b8791f);
+  color: #fff9ee;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+.layout-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 8px;
+  margin: 14px 0 8px;
+}
+.layout-step {
+  background: var(--surface, #fffcf4);
+  border: 1px solid var(--line, rgba(33,28,22,.14));
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.layout-step strong {
+  color: var(--amber, #b8791f);
+  display: block;
+  font-size: 13px;
+}
+.layout-step.highlight {
+  border-color: var(--amber, #b8791f);
+  background: rgba(184,121,31,.09);
+}
+.demo-tabs {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0 16px;
+  flex-wrap: wrap;
+}
+.demo-tab-btn {
+  background: var(--surface, #fffcf4);
+  border: 1px solid var(--line, rgba(33,28,22,.18));
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--ink, #211c16);
+  transition: all .2s;
+}
+.demo-tab-btn.active {
+  background: var(--amber, #b8791f);
+  color: #fff;
+  border-color: var(--amber, #b8791f);
+}
+.demo-content-panel {
+  display: none;
+}
+.demo-content-panel.active {
+  display: block;
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="container header-inner" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px">
+    <a href="../" class="logo" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:8px">
+      <img class="brand-logo" src="/logo.png" alt="BusJatri" style="width:30px;height:30px;border-radius:50%;object-fit:contain">
+      Bus<span>Jatri</span>
+    </a>
+    <nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
+      <span class="bj-lang" style="display:flex;gap:4px;margin-left:2px">
+        <button type="button" id="langEn" class="bj-langbtn" style="background:var(--amber-soft,#f6e7c6);border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">EN</button>
+        <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
+      </span>
+      <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
+    </nav>
+  </div>
+</header>
+
+<main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
+  <div class="demo-banner">
+    <span class="demo-badge">1 to 7 Strict Serial Architecture</span>
+    <h2 style="font-size:1.3rem;margin:4px 0 8px;font-family:var(--font-display)">Route Page Section Architecture</h2>
+    <p style="font-size:13.5px;color:var(--ink-dim);line-height:1.5">
+      The complete 1 to 7 sequence is strictly applied across the page:
+    </p>
+    <div class="layout-steps">
+      <div class="layout-step"><strong>1. Hero</strong> Title &amp; chips</div>
+      <div class="layout-step"><strong>2. Timetable</strong> Departures &amp; Stops</div>
+      <div class="layout-step highlight"><strong>3. Return Route</strong> ↩ Reverse Service</div>
+      <div class="layout-step highlight"><strong>4. More Routes</strong> Related Corridors</div>
+      <div class="layout-step highlight"><strong>5. FAQ</strong> Search Intent Q&amp;A</div>
+      <div class="layout-step highlight"><strong>6. About Route</strong> Dropdown Accordion</div>
+      <div class="layout-step highlight"><strong>7. Footer</strong> Links &amp; Info</div>
+    </div>
+  </div>
+
+  <div class="demo-tabs">
+    <button class="demo-tab-btn active" onclick="showTab('kolkata-digha', this)">Demo 1: Kolkata → Digha</button>
+    <button class="demo-tab-btn" onclick="showTab('bankura-kolkata', this)">Demo 2: Bankura → Kolkata</button>
+    <button class="demo-tab-btn" onclick="showTab('siliguri-darjeeling', this)">Demo 3: Siliguri → Darjeeling</button>
+  </div>
+
+  <!-- DEMO 1: Kolkata -> Digha -->
+  <div id="kolkata-digha" class="demo-content-panel active">
+    <!-- 3 Return Route -->
+    <section class="seo-section">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 3: Return Route]</span>
+      <div style="margin-top:4px"><a class="rel-chip" href="digha-to-kolkata.html">↩ Digha → Kolkata (<span class="label-en">return</span><span class="label-bn">ফেরার বাস</span>)</a></div>
+    </section>
+
+    <!-- 4 More Routes -->
+    <section class="seo-section">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 4: More Routes]</span>
+      <h3 class="section-title" style="margin-top:4px"><span class="label-en">More Routes from Kolkata</span><span class="label-bn">কলকাতা থেকে আরও রুট</span></h3>
+      <div class="chip-row">
+        <a class="rel-chip" href="kolkata-to-haldia.html">Kolkata → Haldia</a>
+        <a class="rel-chip" href="kolkata-to-durgapur.html">Kolkata → Durgapur</a>
+        <a class="rel-chip" href="kolkata-to-asansol.html">Kolkata → Asansol</a>
+        <a class="rel-chip" href="kolkata-to-burdwan.html">Kolkata → Burdwan</a>
+      </div>
+    </section>
+
+    <!-- 5 FAQ -->
+    <section class="seo-section faq-v2">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 5: FAQ]</span>
+      <h3 class="section-title" style="margin-top:4px"><span class="label-en">Frequently Asked Questions</span><span class="label-bn">সাধারণ প্রশ্নোত্তর</span></h3>
+      <details class="faq only-en" open><summary>What is the first bus from Kolkata to Digha?</summary><div class="fa-body">The first listed service leaves around 4:30 AM (SBSTC / WBTC). Arrive early at Esplanade or Karunamoyee.</div></details>
+      <details class="faq only-en"><summary>What is the bus fare from Kolkata to Digha?</summary><div class="fa-body">Ordinary state carriage fare is approx. ₹140 – ₹180, and AC coaches range from ₹250 – ₹380.</div></details>
+      <details class="faq only-bn" open><summary>কলকাতা থেকে দীঘা প্রথম বাস কখন ছাড়ে?</summary><div class="fa-body">ভোর প্রায় ৪:৩০-এ প্রথম বাস (SBSTC / WBTC) ধর্মতলা বা করুণাময়ী থেকে ছাড়ে।</div></details>
+      <details class="faq only-bn"><summary>কলকাতা থেকে দীঘা বাসের ভাড়া কত?</summary><div class="fa-body">সাধারণ নন-এসি বাসের ভাড়া প্রায় ₹১৪০ – ₹১৮০ এবং এসি বাসের ক্ষেত্রে ₹২৫০ – ₹৩৮০ পর্যন্ত।</div></details>
+    </section>
+
+    <!-- 6 About Route Dropdown -->
+    <div style="margin-top:10px">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 6: About Route Dropdown]</span>
+      <section class="seo-section about-route" aria-label="About Route Guide">
+  <style>
+    .about-route-dropdown summary::-webkit-details-marker{display:none}
+    .about-route-dropdown[open] summary .ar-arrow{transform:rotate(180deg)}
+  </style>
+  <details class="about-route-dropdown" style="border:1px solid var(--line,rgba(33,28,22,.15));border-radius:14px;background:var(--surface,#fffdf7);overflow:hidden;margin:10px 0">
+    <summary style="padding:14px 18px;cursor:pointer;font-weight:700;font-size:14.5px;color:var(--ink,#211c16);display:flex;justify-content:space-between;align-items:center;list-style:none;-webkit-tap-highlight-color:transparent;user-select:none">
+      <span style="display:flex;align-items:center;gap:8px">
+        <span>ℹ️</span>
+        <span class="label-en">About Kolkata to Digha Bus Route Guide</span>
+        <span class="label-bn">কলকাতা থেকে দীঘা বাস রুট গাইড ও তথ্য</span>
+      </span>
+      <span class="ar-arrow" style="font-size:12px;color:var(--amber,#b8791f);font-weight:700;transition:transform .2s">▼</span>
+    </summary>
+    <div style="padding:14px 18px 18px;border-top:1px solid var(--line,rgba(33,28,22,.12))">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px">
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">📏 <span class="label-en">Distance</span><span class="label-bn">দূরত্ব</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">186.3 km</span><span class="label-bn">১৮৬.৩ কিমি</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">⏱ <span class="label-en">Travel Time</span><span class="label-bn">যাত্রার সময়</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">6h 4m</span><span class="label-bn">৬ ঘণ্টা ৪ মিনিট</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">💰 <span class="label-en">Estimated Fare</span><span class="label-bn">আনুমানিক ভাড়া</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">₹185 – ₹225</span><span class="label-bn">₹১৮৫ – ₹২২৫</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">🚌 <span class="label-en">Daily Buses</span><span class="label-bn">দৈনিক বাস</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">9 buses</span><span class="label-bn">৯টি বাস</span></div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.65;color:var(--ink-dim,#554)">
+        <p style="margin:0 0 10px">
+          <span class="label-en">The bus route connecting <strong>Kolkata</strong> and <strong>Digha</strong> is a major passenger corridor in West Bengal covering approximately <strong>186.3 km</strong> via NH-16, NH-116 &amp; NH-116B (Kona Expressway / Nandakumar-Digha Highway). Travel time is approximately <strong>6h 4m</strong>, depending on road conditions and stoppages.</span>
+          <span class="label-bn"><strong>কলকাতা</strong> থেকে <strong>দীঘা</strong> বাস রুটটি পশ্চিমবঙ্গের একটি গুরুত্বপূর্ণ পরিবহন করিডোর, যার আনুমানিক দূরত্ব প্রায় <strong>১৮৬.৩ কিমি</strong> (NH-16, NH-116 ও NH-116B (কোনা এক্সপ্রেসওয়ে ও নন্দকুমার-দীঘা হাইওয়ে))। যানবাহনের গতি ও স্টপেজের ওপর নির্ভর করে পৌঁছাতে আনুমানিক <strong>৬ ঘণ্টা ৪ মিনিট</strong> সময় লাগে।</span>
+        </p>
+        <p style="margin:0 0 10px">
+          <span class="label-en">Passengers have a choice of both government transport corporations (such as SBSTC, Shyamoli Paribahan, Santosh Bus Service) and regular private line buses. Both AC luxury and standard non-AC express buses run on this route.</span>
+          <span class="label-bn">এই রুটে সরকারি পরিবহন সংস্থা (SBSTC, Shyamoli Paribahan, Santosh Bus Service) সহ বেশ কিছু বেসরকারি লাইন বাস চলাচল করে। সাধারণ নন-এসি বাসের পাশাপাশি আরামদায়ক এসি বাসও পাওয়া যায়।</span>
+        </p>
+        
+        <div style="background:var(--surface-2,#f6f0e2);border-left:3px solid var(--amber,#b8791f);padding:10px 14px;border-radius:0 8px 8px 0;margin-top:12px;font-size:13px">
+          <strong>💡 <span class="label-en">Passenger Travel Tip:</span><span class="label-bn">যাত্রী পরামর্শ:</span></strong>
+          <span class="label-en">The earliest listed departure leaves around <strong>6:30 AM</strong> and the last service is at <strong>7:30 AM</strong>. During morning peak hours and weekends, arrive at the bus stand 15 minutes prior to departure to secure convenient seating.</span>
+          <span class="label-bn">দিনের প্রথম বাস সকাল প্রায় <strong>6:30 AM</strong>-এ ছাড়ে এবং শেষ বাস প্রায় <strong>7:30 AM</strong>-এ। সকালের ব্যস্ত সময়ে ও ছুটির দিনগুলোতে সুবিধাজনক আসন পেতে অন্তত ১৫ মিনিট আগে বাস স্ট্যান্ডে উপস্থিত হওয়া শ্রেয়।</span>
+        </div>
+      </div>
+    </div>
+  </details>
+</section>
+    </div>
+  </div>
+
+  <!-- DEMO 2: Bankura -> Kolkata -->
+  <div id="bankura-kolkata" class="demo-content-panel">
+    <!-- 3 Return Route -->
+    <section class="seo-section">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 3: Return Route]</span>
+      <div style="margin-top:4px"><a class="rel-chip" href="kolkata-to-bankura.html">↩ Kolkata → Bankura (<span class="label-en">return</span><span class="label-bn">ফেরার বাস</span>)</a></div>
+    </section>
+
+    <!-- 4 More Routes -->
+    <section class="seo-section">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 4: More Routes]</span>
+      <h3 class="section-title" style="margin-top:4px"><span class="label-en">More Routes from Bankura</span><span class="label-bn">বাঁকুড়া থেকে আরও রুট</span></h3>
+      <div class="chip-row">
+        <a class="rel-chip" href="bankura-to-durgapur.html">Bankura → Durgapur</a>
+        <a class="rel-chip" href="bankura-to-purulia.html">Bankura → Purulia</a>
+        <a class="rel-chip" href="bankura-to-digha.html">Bankura → Digha</a>
+      </div>
+    </section>
+
+    <!-- 5 FAQ -->
+    <section class="seo-section faq-v2">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 5: FAQ]</span>
+      <h3 class="section-title" style="margin-top:4px"><span class="label-en">Frequently Asked Questions</span><span class="label-bn">সাধারণ প্রশ্নোত্তর</span></h3>
+      <details class="faq only-en" open><summary>How long does the bus take from Bankura to Kolkata?</summary><div class="fa-body">The journey typically takes 4h 30m to 5h via Bishnupur, Arambagh, and Dankuni.</div></details>
+      <details class="faq only-bn" open><summary>বাঁকুড়া থেকে কলকাতা যেতে বাসে কত সময় লাগে?</summary><div class="fa-body">বিষ্ণুপুর, আরামবাগ ও ডানকুনি হয়ে বাসে পৌঁছাতে আনুমানিক ৪ ঘণ্টা ৩০ মিনিট থেকে ৫ ঘণ্টা সময় লাগে।</div></details>
+    </section>
+
+    <!-- 6 About Route Dropdown -->
+    <div style="margin-top:10px">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 6: About Route Dropdown]</span>
+      <section class="seo-section about-route" aria-label="About Route Guide">
+  <style>
+    .about-route-dropdown summary::-webkit-details-marker{display:none}
+    .about-route-dropdown[open] summary .ar-arrow{transform:rotate(180deg)}
+  </style>
+  <details class="about-route-dropdown" style="border:1px solid var(--line,rgba(33,28,22,.15));border-radius:14px;background:var(--surface,#fffdf7);overflow:hidden;margin:10px 0">
+    <summary style="padding:14px 18px;cursor:pointer;font-weight:700;font-size:14.5px;color:var(--ink,#211c16);display:flex;justify-content:space-between;align-items:center;list-style:none;-webkit-tap-highlight-color:transparent;user-select:none">
+      <span style="display:flex;align-items:center;gap:8px">
+        <span>ℹ️</span>
+        <span class="label-en">About Bankura to Kolkata Bus Route Guide</span>
+        <span class="label-bn">বাঁকুড়া থেকে কলকাতা বাস রুট গাইড ও তথ্য</span>
+      </span>
+      <span class="ar-arrow" style="font-size:12px;color:var(--amber,#b8791f);font-weight:700;transition:transform .2s">▼</span>
+    </summary>
+    <div style="padding:14px 18px 18px;border-top:1px solid var(--line,rgba(33,28,22,.12))">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px">
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">📏 <span class="label-en">Distance</span><span class="label-bn">দূরত্ব</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">250.6 km</span><span class="label-bn">২৫০.৬ কিমি</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">⏱ <span class="label-en">Travel Time</span><span class="label-bn">যাত্রার সময়</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">8h 5m</span><span class="label-bn">৮ ঘণ্টা ৫ মিনিট</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">💰 <span class="label-en">Estimated Fare</span><span class="label-bn">আনুমানিক ভাড়া</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">₹245 – ₹300</span><span class="label-bn">₹২৪৫ – ₹৩০০</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">🚌 <span class="label-en">Daily Buses</span><span class="label-bn">দৈনিক বাস</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">6 buses</span><span class="label-bn">৬টি বাস</span></div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.65;color:var(--ink-dim,#554)">
+        <p style="margin:0 0 10px">
+          <span class="label-en">The bus route connecting <strong>Bankura</strong> and <strong>Kolkata</strong> is a major passenger corridor in West Bengal covering approximately <strong>250.6 km</strong> via SH-2 &amp; NH-19 (via Bishnupur, Arambagh &amp; Dankuni). Travel time is approximately <strong>8h 5m</strong>, depending on road conditions and stoppages.</span>
+          <span class="label-bn"><strong>বাঁকুড়া</strong> থেকে <strong>কলকাতা</strong> বাস রুটটি পশ্চিমবঙ্গের একটি গুরুত্বপূর্ণ পরিবহন করিডোর, যার আনুমানিক দূরত্ব প্রায় <strong>২৫০.৬ কিমি</strong> (SH-2 ও NH-19 (বিষ্ণুপুর, আরামবাগ ও ডানকুনি হয়ে))। যানবাহনের গতি ও স্টপেজের ওপর নির্ভর করে পৌঁছাতে আনুমানিক <strong>৮ ঘণ্টা ৫ মিনিট</strong> সময় লাগে।</span>
+        </p>
+        <p style="margin:0 0 10px">
+          <span class="label-en">This corridor is served predominantly by state transport services (SBSTC, WBTC) offering reliable point-to-point travel.</span>
+          <span class="label-bn">এই রুটে মূলত সরকারি পরিবহন সংস্থা (SBSTC, WBTC) বিশ্বস্ত বাস পরিষেবা পরিচালনা করে।</span>
+        </p>
+        
+        <div style="background:var(--surface-2,#f6f0e2);border-left:3px solid var(--amber,#b8791f);padding:10px 14px;border-radius:0 8px 8px 0;margin-top:12px;font-size:13px">
+          <strong>💡 <span class="label-en">Passenger Travel Tip:</span><span class="label-bn">যাত্রী পরামর্শ:</span></strong>
+          <span class="label-en">The earliest listed departure leaves around <strong>6:00 AM</strong> and the last service is at <strong>2:45 PM</strong>. During morning peak hours and weekends, arrive at the bus stand 15 minutes prior to departure to secure convenient seating.</span>
+          <span class="label-bn">দিনের প্রথম বাস সকাল প্রায় <strong>6:00 AM</strong>-এ ছাড়ে এবং শেষ বাস প্রায় <strong>2:45 PM</strong>-এ। সকালের ব্যস্ত সময়ে ও ছুটির দিনগুলোতে সুবিধাজনক আসন পেতে অন্তত ১৫ মিনিট আগে বাস স্ট্যান্ডে উপস্থিত হওয়া শ্রেয়।</span>
+        </div>
+      </div>
+    </div>
+  </details>
+</section>
+    </div>
+  </div>
+
+  <!-- DEMO 3: Siliguri -> Darjeeling -->
+  <div id="siliguri-darjeeling" class="demo-content-panel">
+    <!-- 3 Return Route -->
+    <section class="seo-section">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 3: Return Route]</span>
+      <div style="margin-top:4px"><a class="rel-chip" href="darjeeling-to-siliguri.html">↩ Darjeeling → Siliguri (<span class="label-en">return</span><span class="label-bn">ফেরার বাস</span>)</a></div>
+    </section>
+
+    <!-- 4 More Routes -->
+    <section class="seo-section">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 4: More Routes]</span>
+      <h3 class="section-title" style="margin-top:4px"><span class="label-en">More Routes from Siliguri</span><span class="label-bn">শিলিগুড়ি থেকে আরও রুট</span></h3>
+      <div class="chip-row">
+        <a class="rel-chip" href="siliguri-to-kalimpong.html">Siliguri → Kalimpong</a>
+        <a class="rel-chip" href="siliguri-to-gangtok.html">Siliguri → Gangtok</a>
+        <a class="rel-chip" href="siliguri-to-cooch-behar.html">Siliguri → Cooch Behar</a>
+      </div>
+    </section>
+
+    <!-- 5 FAQ -->
+    <section class="seo-section faq-v2">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 5: FAQ]</span>
+      <h3 class="section-title" style="margin-top:4px"><span class="label-en">Frequently Asked Questions</span><span class="label-bn">সাধারণ প্রশ্নোত্তর</span></h3>
+      <details class="faq only-en" open><summary>What is the route from Siliguri to Darjeeling?</summary><div class="fa-body">Buses follow NH-110 (Hill Cart Road) via Sukna, Kurseong, and Ghum.</div></details>
+      <details class="faq only-bn" open><summary>শিলিগুড়ি থেকে দার্জিলিং বাস কোন পথে যায়?</summary><div class="fa-body">বাসগুলি সুকনা, কার্শিয়াং ও ঘুম হয়ে NH-110 (হিল কার্ট রোড) ধরে চলাচল করে।</div></details>
+    </section>
+
+    <!-- 6 About Route Dropdown -->
+    <div style="margin-top:10px">
+      <span style="font-size:11px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.05em">[Step 6: About Route Dropdown]</span>
+      <section class="seo-section about-route" aria-label="About Route Guide">
+  <style>
+    .about-route-dropdown summary::-webkit-details-marker{display:none}
+    .about-route-dropdown[open] summary .ar-arrow{transform:rotate(180deg)}
+  </style>
+  <details class="about-route-dropdown" style="border:1px solid var(--line,rgba(33,28,22,.15));border-radius:14px;background:var(--surface,#fffdf7);overflow:hidden;margin:10px 0">
+    <summary style="padding:14px 18px;cursor:pointer;font-weight:700;font-size:14.5px;color:var(--ink,#211c16);display:flex;justify-content:space-between;align-items:center;list-style:none;-webkit-tap-highlight-color:transparent;user-select:none">
+      <span style="display:flex;align-items:center;gap:8px">
+        <span>ℹ️</span>
+        <span class="label-en">About Siliguri to Darjeeling Bus Route Guide</span>
+        <span class="label-bn">শিলিগুড়ি থেকে দার্জিলিং বাস রুট গাইড ও তথ্য</span>
+      </span>
+      <span class="ar-arrow" style="font-size:12px;color:var(--amber,#b8791f);font-weight:700;transition:transform .2s">▼</span>
+    </summary>
+    <div style="padding:14px 18px 18px;border-top:1px solid var(--line,rgba(33,28,22,.12))">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px">
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">📏 <span class="label-en">Distance</span><span class="label-bn">দূরত্ব</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">51.6 km</span><span class="label-bn">৫১.৬ কিমি</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">⏱ <span class="label-en">Travel Time</span><span class="label-bn">যাত্রার সময়</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">1h 52m</span><span class="label-bn">১ ঘণ্টা ৫২ মিনিট</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">💰 <span class="label-en">Estimated Fare</span><span class="label-bn">আনুমানিক ভাড়া</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">₹55 – ₹70</span><span class="label-bn">₹৫৫ – ₹৭০</span></div>
+        </div>
+        <div style="background:rgba(184,121,31,.08);border:1px solid rgba(184,121,31,.18);padding:10px 12px;border-radius:10px">
+          <div style="font-size:11px;color:var(--ink-dim,#665);text-transform:uppercase;font-weight:600">🚌 <span class="label-en">Daily Buses</span><span class="label-bn">দৈনিক বাস</span></div>
+          <div style="font-size:15px;font-weight:700;color:var(--ink,#222);margin-top:2px"><span class="label-en">9 buses</span><span class="label-bn">৯টি বাস</span></div>
+        </div>
+      </div>
+      <div style="font-size:14px;line-height:1.65;color:var(--ink-dim,#554)">
+        <p style="margin:0 0 10px">
+          <span class="label-en">The bus route connecting <strong>Siliguri</strong> and <strong>Darjeeling</strong> is a major passenger corridor in West Bengal covering approximately <strong>51.6 km</strong> via NH-110 (Hill Cart Road via Kurseong &amp; Ghum). Travel time is approximately <strong>1h 52m</strong>, depending on road conditions and stoppages.</span>
+          <span class="label-bn"><strong>শিলিগুড়ি</strong> থেকে <strong>দার্জিলিং</strong> বাস রুটটি পশ্চিমবঙ্গের একটি গুরুত্বপূর্ণ পরিবহন করিডোর, যার আনুমানিক দূরত্ব প্রায় <strong>৫১.৬ কিমি</strong> (NH-110 (হিল কার্ট রোড, কার্শিয়াং ও ঘুম হয়ে))। যানবাহনের গতি ও স্টপেজের ওপর নির্ভর করে পৌঁছাতে আনুমানিক <strong>১ ঘণ্টা ৫২ মিনিট</strong> সময় লাগে।</span>
+        </p>
+        <p style="margin:0 0 10px">
+          <span class="label-en">This corridor is served predominantly by state transport services (NBSTC) offering reliable point-to-point travel.</span>
+          <span class="label-bn">এই রুটে মূলত সরকারি পরিবহন সংস্থা (NBSTC) বিশ্বস্ত বাস পরিষেবা পরিচালনা করে।</span>
+        </p>
+        
+        <div style="background:var(--surface-2,#f6f0e2);border-left:3px solid var(--amber,#b8791f);padding:10px 14px;border-radius:0 8px 8px 0;margin-top:12px;font-size:13px">
+          <strong>💡 <span class="label-en">Passenger Travel Tip:</span><span class="label-bn">যাত্রী পরামর্শ:</span></strong>
+          <span class="label-en">The earliest listed departure leaves around <strong>6:00 AM</strong> and the last service is at <strong>5:00 AM</strong>. During morning peak hours and weekends, arrive at the bus stand 15 minutes prior to departure to secure convenient seating.</span>
+          <span class="label-bn">দিনের প্রথম বাস সকাল প্রায় <strong>6:00 AM</strong>-এ ছাড়ে এবং শেষ বাস প্রায় <strong>5:00 AM</strong>-এ। সকালের ব্যস্ত সময়ে ও ছুটির দিনগুলোতে সুবিধাজনক আসন পেতে অন্তত ১৫ মিনিট আগে বাস স্ট্যান্ডে উপস্থিত হওয়া শ্রেয়।</span>
+        </div>
+      </div>
+    </div>
+  </details>
+</section>
+    </div>
+  </div>
+</main>
+
+<!-- 7 Footer -->
+<footer class="footer">
+  <div class="container">
+    <div style="text-align:center;font-size:11px;font-weight:700;color:var(--amber);margin-bottom:8px">[Step 7: Footer]</div>
+    <div class="footer-links">
+      <a href="../blog/"><span class="label-en">Blog</span><span class="label-bn">ব্লগ</span></a>
+      <a href="../about.html">About Us</a>
+      <a href="../contact.html">Contact Us</a>
+      <a href="../privacy-policy.html">Privacy Policy</a>
+      <a href="../contribute.html">Contribute a Bus</a>
+      <a href="./">All Bus Timetables</a>
+    </div>
+    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
+    Not affiliated with any transport corporation<br>
+    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
+  </div>
+</footer>
+
+<script>
+function showTab(id, btn) {
+  document.querySelectorAll(".demo-tab-btn").forEach(function(b) { b.classList.remove("active"); });
+  document.querySelectorAll(".demo-content-panel").forEach(function(p) { p.classList.remove("active"); });
+  btn.classList.add("active");
+  var p = document.getElementById(id);
+  if (p) p.classList.add("active");
+}
+
+// Language Switcher
+var btnEn = document.getElementById("langEn");
+var btnBn = document.getElementById("langBn");
+if (btnEn && btnBn) {
+  btnEn.addEventListener("click", function() {
+    document.body.classList.remove("lang-bn");
+    btnEn.style.background = "var(--amber-soft,#f6e7c6)";
+    btnBn.style.background = "transparent";
+  });
+  btnBn.addEventListener("click", function() {
+    document.body.classList.add("lang-bn");
+    btnBn.style.background = "var(--amber-soft,#f6e7c6)";
+    btnEn.style.background = "transparent";
+  });
+}
+
+// Theme Switcher
+var themeBtn = document.getElementById("themeBtn");
+if (themeBtn) {
+  themeBtn.addEventListener("click", function() {
+    document.body.classList.toggle("dark");
+  });
+}
+</script>
+</body>
+</html>

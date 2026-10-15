@@ -26,7 +26,11 @@ import os
 import sys
 import types
 
-os.environ.setdefault("SITE_BASE", "https://busjatri.in")
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if ROOT not in sys.path:
+    sys.path.insert(0, ROOT)
+
+from scripts.content.route_content import generate_about_route_html
 
 # Guarded load of gen_seo_pages: exec ONLY the safe head of the file
 # (constants, helpers, data load, route indexes). The module has NO
@@ -43,6 +47,7 @@ if _CUT not in _gen_src:
 _safe_src = _gen_src[: _gen_src.index(_CUT)]
 g = types.ModuleType("gseo_core")
 g.__dict__["__name__"] = "gseo_core"
+g.__dict__["__file__"] = _GEN_SRC_PATH
 exec(compile(_safe_src, _GEN_SRC_PATH, "exec"), g.__dict__)
 for _need in ("BUSES", "route_meta", "slug", "esc", "parse_time", "route_stats"):
     if not hasattr(g, _need):
@@ -1055,16 +1060,21 @@ def generate_route_page_v2(origin, destination, buses, alt_index):
     related_to = sorted(related_to, key=lambda p: -len(g.route_meta[p]))[:8]
     to_section = ""
     if related_to:
+        arrow = "→"
         links2 = "".join(
-            f'<a class="rel-chip" href="{g.slug(o)}-to-{g.slug(t)}.html">{g.esc(o)} \u2192 {g.esc(t)}</a>'
+            f'<a class="rel-chip" href="{g.slug(o)}-to-{g.slug(t)}.html">{g.esc(o)} {arrow} {g.esc(t)}</a>'
             for o, t in related_to
         )
+        to_title_en = "More Buses to " + g.esc(destination)
+        to_title_bn = g.esc(bnplace(destination)) + " যাওয়ার আরও বাস"
         to_section = f"""<section class="seo-section">
-  <h3 class="section-title">{L("More Buses to " + g.esc(destination), g.esc(bnplace(destination)) + " \u09af\u09be\u0993\u09af\u09bc\u09be\u09b0 \u0986\u09b0\u0993 \u09ac\u09be\u09b8")}</h3>
+  <h3 class="section-title">{L(to_title_en, to_title_bn)}</h3>
   <div class="chip-row">{links2}</div>
 </section>"""
 
-    body = hero + timetable + alt_section + major_section + faq_section + reverse_section + related_section + to_section
+    about_route_section = generate_about_route_html(origin, destination, buses, major_stops)
+
+    body = hero + timetable + alt_section + major_section + reverse_section + related_section + to_section + faq_section + about_route_section
 
     schema = (
         g.faq_schema(en + bn) + "\n"

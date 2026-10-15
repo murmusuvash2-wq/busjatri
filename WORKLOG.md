@@ -3,6 +3,29 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-15 — Route Page Section Reordering (1-7) & Dropdown About Route Guide Engine
+- What: Reordered route page sections into strict sequence requested by user and built mobile-first collapsible dropdown About Route engine:
+  - **Strict Section Ordering (1 to 7):**
+    1. Hero (crumbs, title, Bengali subtitle, stat chips)
+    2. Departures & Via Stoppages (Today's Departures, intermediate halts)
+    3. Return Route (`↩ Destination → Origin (return)`)
+    4. More Routes (`More Routes from Origin` & `More Buses to Destination`)
+    5. FAQ (Search-intent bilingual questions & answers)
+    6. About Route Guide (Collapsible dropdown accordion with distance, duration, fare slabs, operators, and travel tips)
+    7. Footer (Links, BusJatri details)
+  - **About Route Dropdown Engine (`scripts/content/route_content.py`):**
+    - Built bilingual (`.label-en` / `.label-bn`) `<details class="about-route-dropdown">` accordion preserving mobile compactness while ensuring full Googlebot DOM indexing.
+    - Integrated calibrated GPS road distance, travel duration, WB stage carriage fare calculations, major highway corridors (NH-16, NH-19, SH-2, NH-110, etc.), fleet breakdown (Govt SBSTC/NBSTC/WBTC vs Private), intermediate milestones, and passenger travel tips.
+    - Added support for human-curated overrides in `content/about-route/<slug>.json`.
+  - **Site-Wide Route Regeneration:**
+    - Updated `scripts/gen_seo_pages.py` and `scripts/gen_route_v2.py` to enforce the 1-to-7 sequence.
+    - Regenerated all 3,432 static pages (2,919 route pages, 411 place hubs, 101 via corridors) and updated `sitemap.xml`.
+- Why: User requested reordering route page sections (3 return, 4 more routes, 5 faq, 6 about route, 7 footer) with a collapsible dropdown About Route guide and pushed to production.
+- Files: `scripts/content/route_content.py`, `scripts/gen_seo_pages.py`, `scripts/gen_route_v2.py`, `bus-time-table/*.html`, `sitemap.xml`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
 ## 2026-10-15 — Search Flow Verification & Time Query Sorting Fix
 - What: Audited and verified full search flow across route searches, stop searches, place searches, time queries, operator filtering, and alternative connecting routes:
   - **Search Flow Verification:** Created and executed a comprehensive test suite (`scripts/test_search_flow.js`) checking 15 distinct search cases across direct routes (e.g. Bankura-Digha, Kolkata-Durgapur, Siliguri-Cooch Behar), stoppage queries (Kolaghat, Santuri), place queries, 1-change connecting routes (Khatra to Durgapur via Bankura), and autocomplete suggestions (`acFind`).

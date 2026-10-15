@@ -32,6 +32,7 @@ from scripts.geo.route_geo import (
     calculate_approx_time,
     format_duration,
 )
+from scripts.content.route_content import generate_about_route_html
 
 
 DATA = "data/busjatri_data.json"
@@ -976,7 +977,9 @@ def generate_route_page(origin, destination, buses):
   <a class="rel-chip" href="{rev_file}">↩ {esc(d_destination)} → {esc(d_origin)} (return)</a>
 </section>"""
 
-    body = hero + timetable + route_section + major_section + faq_section + reverse_section + related_section
+    about_route_section = generate_about_route_html(d_origin, d_destination, buses, all_stops)
+
+    body = hero + timetable + route_section + major_section + reverse_section + related_section + faq_section + about_route_section
 
     schema = (
         faq_schema(faqs) + "\n" +
