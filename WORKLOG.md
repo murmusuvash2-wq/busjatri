@@ -3,6 +3,26 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-15 — Website Chips Audit, Stat-Chips Distance Bug Fix & 16 New Private Buses Ingestion
+- What: Audited all 6 website chip types, fixed a critical distance calculation discrepancy in Hero Stat Chips, and ingested 16 new private line buses:
+  - **Hero Stat-Chips Discrepancy Fix (`scripts/gen_seo_pages.py`):**
+    - Resolved a bug where `dist_km` aggregated stops across multiple buses into an unordered pool (`all_stops`), causing zigzag road distance calculation (e.g. Kolkata to Digha showing 679.4 km instead of 186.3 km and ₹655–₹790 instead of ₹185–₹225).
+    - Synchronized distance calculation with `scripts/content/route_content.py` using single direct bus sequences and GPS `od_km` boundary sanity checks. Stat-Chips and About Route dropdown now display 100% unified, calibrated distances and fares.
+  - **Sitemap & Data Sanitization:**
+    - Purged empty junk record `nbstc-official-chanchal--1` (destination: empty) from `data/buses/nbstc.json`.
+    - Removed ghost page `bus-time-table/-to-.html` and cleaned `<loc>https://busjatri.in/bus-time-table/-to-</loc>` from `sitemap.xml`.
+  - **Private Bus Ingestion (+16 buses, now 4,710 total):**
+    - Merged 16 authentic private buses from `data-raw/wbbustime_scraped.json` (Subarna Paribahan Ranibandh-Siliguri, Shyamali Durgapur-Suri, RBN Travels Medinipur-Tatanagar, Bullet Purulia-Chandrakona, Ramkrishna, Rahul Travels, Tirupati, etc.) into `data/buses/private.json`.
+    - Rebuilt `data/busjatri_data.json` with `scripts/build_buses.py` (now 4,710 buses).
+    - Rebuilt client indexes with `scripts/build_client_data.py` (generated 4,710 per-bus files).
+    - Regenerated 3,433 static pages via `scripts/gen_seo_pages.py` and updated `sitemap.xml`.
+    - Verified search flow with `scripts/test_search_flow.js` (15/15 passed).
+- Why: User requested a full scaling plan to increase bus data and audited all website chips.
+- Files: `scripts/gen_seo_pages.py`, `data/buses/nbstc.json`, `data/buses/private.json`, `data/busjatri_data.json`, `bus-time-table/*.html`, `sitemap.xml`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
 ## 2026-10-15 — Route Page Section Reordering (1-7) & Dropdown About Route Guide Engine
 - What: Reordered route page sections into strict sequence requested by user and built mobile-first collapsible dropdown About Route engine:
   - **Strict Section Ordering (1 to 7):**

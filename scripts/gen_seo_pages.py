@@ -31,6 +31,8 @@ from scripts.geo.route_geo import (
     calculate_fare,
     calculate_approx_time,
     format_duration,
+    get_stop_coords,
+    haversine_km,
 )
 from scripts.content.route_content import generate_about_route_html
 
@@ -447,6 +449,8 @@ for origin, destination in sorted(groups):
         (origin, destination),
         (destination, origin),
     ):
+        if not o or not t or not slug(o) or not slug(t):
+            continue
         buses = buses_for(o, t)
 
         if buses:
@@ -874,14 +878,25 @@ def generate_route_page(origin, destination, buses):
     canonical = f"{BASE}/bus-time-table/{_clean_url(filename)}"
     major_stops = stoppage_summary(buses)
 
-    all_stops = []
-    for b in buses:
-        for s in (b.get("stoppages") or []):
-            st_name = s.get("name") if isinstance(s, dict) else str(s)
-            if st_name and st_name not in all_stops:
-                all_stops.append(st_name)
+    # Calibrated distance calculation matching route_content.py
+    co = get_stop_coords(origin)
+    cd = get_stop_coords(destination)
+    od_km = round(haversine_km(co[0], co[1], cd[0], cd[1]) * 1.25, 1) if (co and cd) else None
 
-    dist_km = calculate_route_distance(all_stops, origin, destination)
+    seq = None
+    for b in (buses or []):
+        st = b.get("stoppages") or []
+        if len(st) >= 2:
+            seq = [s.get("name") if isinstance(s, dict) else str(s) for s in st]
+            break
+
+    dist_km = calculate_route_distance(seq or [], origin, destination)
+    if od_km:
+        if not dist_km or dist_km > od_km * 1.6:
+            dist_km = round(od_km * 1.1, 1)
+        elif dist_km < od_km:
+            dist_km = od_km
+
     fare_info = calculate_fare(dist_km) if dist_km else None
 
     if (not duration or dur_text == "—") and dist_km:
@@ -977,7 +992,7 @@ def generate_route_page(origin, destination, buses):
   <a class="rel-chip" href="{rev_file}">↩ {esc(d_destination)} → {esc(d_origin)} (return)</a>
 </section>"""
 
-    about_route_section = generate_about_route_html(d_origin, d_destination, buses, all_stops)
+    about_route_section = generate_about_route_html(d_origin, d_destination, buses, seq)
 
     body = hero + timetable + route_section + major_section + reverse_section + related_section + faq_section + about_route_section
 

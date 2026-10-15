@@ -1,6 +1,6 @@
 {
  "operator": "PRIVATE",
- "count": 2562,
+ "count": 2578,
  "buses": [
   {
    "seq": 107,
@@ -271827,6 +271827,1822 @@
     "distance_km": null,
     "source": "wbbustime.in",
     "detail_url": "https://wbbustime.in/bus/barasat-to-digha-border-udaipur/"
+   }
+  },
+  {
+   "seq": 4622,
+   "bus": {
+    "id": "wbbustime-ramkrishna-panskura-station-burdwan",
+    "bus_name": "Ramkrishna",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Panskura Station",
+    "destination": "Burdwan",
+    "departure_time": "03:10 AM",
+    "arrival_time": "06:45 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Panskura Station - Burdwan",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Panskura Station",
+      "up_time": "03:10 AM",
+      "down_time": "02:25 PM"
+     },
+     {
+      "no": 2,
+      "name": "Ghatal",
+      "up_time": "04:20 AM",
+      "down_time": "01:10 PM"
+     },
+     {
+      "no": 3,
+      "name": "Arambagh",
+      "up_time": "05:25 AM",
+      "down_time": "12:05 PM"
+     },
+     {
+      "no": 4,
+      "name": "Burdwan",
+      "up_time": "06:45 AM",
+      "down_time": "10:45 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/panskura-station-to-burdwan/"
+   }
+  },
+  {
+   "seq": 4623,
+   "bus": {
+    "id": "wbbustime-rahul-travels-hetia-burdwan",
+    "bus_name": "Rahul Travels",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Hetia",
+    "destination": "Burdwan",
+    "departure_time": "05:50 AM",
+    "arrival_time": "08:50 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Hetia - Burdwan",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Hetia",
+      "up_time": "05:50 AM",
+      "down_time": "02:30 PM"
+     },
+     {
+      "no": 2,
+      "name": "Kotulpur",
+      "up_time": "06:40 AM",
+      "down_time": "01:50 PM"
+     },
+     {
+      "no": 3,
+      "name": "Arambagh",
+      "up_time": "07:35 AM",
+      "down_time": "01:10 PM"
+     },
+     {
+      "no": 4,
+      "name": "Burdwan",
+      "up_time": "08:50 AM",
+      "down_time": "11:40 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/hetia-to-burdwan/"
+   }
+  },
+  {
+   "seq": 4624,
+   "bus": {
+    "id": "wbbustime-madan-mohan-trip-1-bankura-bus-stand-durgapur-bus-stand",
+    "bus_name": "Madan Mohan (Trip 1",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Bankura Bus Stand",
+    "destination": "Durgapur Bus Stand",
+    "departure_time": "04:00 AM",
+    "arrival_time": "05:30 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Bankura Bus Stand - Durgapur Bus Stand",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Bankura Bus Stand",
+      "up_time": "04:00 AM",
+      "down_time": "07:45 AM"
+     },
+     {
+      "no": 2,
+      "name": "Bhairabsthan",
+      "up_time": "04:03 AM",
+      "down_time": "07:42 AM"
+     },
+     {
+      "no": 3,
+      "name": "Machantala",
+      "up_time": "04:06 AM",
+      "down_time": "07:39 AM"
+     },
+     {
+      "no": 4,
+      "name": "Satighat",
+      "up_time": "04:10 AM",
+      "down_time": "07:35 AM"
+     },
+     {
+      "no": 5,
+      "name": "Lakshya",
+      "up_time": "04:22 AM",
+      "down_time": "07:23 AM"
+     },
+     {
+      "no": 6,
+      "name": "Tora Bridge",
+      "up_time": "04:30 AM",
+      "down_time": "07:15 AM"
+     },
+     {
+      "no": 7,
+      "name": "Hebir More",
+      "up_time": "04:38 AM",
+      "down_time": "07:07 AM"
+     },
+     {
+      "no": 8,
+      "name": "Dhoni",
+      "up_time": "04:44 AM",
+      "down_time": "07:01 AM"
+     },
+     {
+      "no": 9,
+      "name": "Makurgram",
+      "up_time": "04:50 AM",
+      "down_time": "06:55 AM"
+     },
+     {
+      "no": 10,
+      "name": "Beliatore",
+      "up_time": "04:58 AM",
+      "down_time": "06:47 AM"
+     },
+     {
+      "no": 11,
+      "name": "Phulberia",
+      "up_time": "05:04 AM",
+      "down_time": "06:41 AM"
+     },
+     {
+      "no": 12,
+      "name": "Barjora",
+      "up_time": "05:12 AM",
+      "down_time": "06:33 AM"
+     },
+     {
+      "no": 13,
+      "name": "Durgapur Bus Stand",
+      "up_time": "05:30 AM",
+      "down_time": "06:15 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/bankura-bus-stand-to-durgapur-bus-stand/"
+   }
+  },
+  {
+   "seq": 4625,
+   "bus": {
+    "id": "wbbustime-tirupati-bankura-bus-stand-barakar",
+    "bus_name": "Tirupati",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Bankura Bus Stand",
+    "destination": "Barakar",
+    "departure_time": "07:00 AM",
+    "arrival_time": "10:35 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Bankura Bus Stand - Barakar",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Bankura Bus Stand",
+      "up_time": "07:00 AM",
+      "down_time": "04:50 PM"
+     },
+     {
+      "no": 2,
+      "name": "Beliatore Station",
+      "up_time": "07:45 AM",
+      "down_time": "04:05 PM"
+     },
+     {
+      "no": 3,
+      "name": "Barjora",
+      "up_time": "08:05 AM",
+      "down_time": "03:40 PM"
+     },
+     {
+      "no": 4,
+      "name": "Durgapur Station",
+      "up_time": "08:20 AM",
+      "down_time": "03:20 PM"
+     },
+     {
+      "no": 5,
+      "name": "City Center",
+      "up_time": "08:30 AM",
+      "down_time": "03:00 PM"
+     },
+     {
+      "no": 6,
+      "name": "Bhiringi More",
+      "up_time": "08:40 AM",
+      "down_time": "02:45 PM"
+     },
+     {
+      "no": 7,
+      "name": "Panjabi More",
+      "up_time": "08:52 AM",
+      "down_time": "02:30 PM"
+     },
+     {
+      "no": 8,
+      "name": "Andal",
+      "up_time": "09:05 AM",
+      "down_time": "02:15 PM"
+     },
+     {
+      "no": 9,
+      "name": "Raniganj",
+      "up_time": "09:18 AM",
+      "down_time": "01:55 PM"
+     },
+     {
+      "no": 10,
+      "name": "Asansol Bus Stand",
+      "up_time": "09:40 AM",
+      "down_time": "01:35 PM"
+     },
+     {
+      "no": 11,
+      "name": "Barakar",
+      "up_time": "10:35 AM",
+      "down_time": "12:40 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/bankura-bus-stand-to-barakar/"
+   }
+  },
+  {
+   "seq": 4626,
+   "bus": {
+    "id": "wbbustime-subarna-paribahan-ranibandh-siliguri",
+    "bus_name": "Subarna Paribahan",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Ranibandh",
+    "destination": "Siliguri",
+    "departure_time": "04:15 PM",
+    "arrival_time": "07:35 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Ranibandh - Siliguri",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Ranibandh",
+      "up_time": "04:15 PM",
+      "down_time": "09:05 AM"
+     },
+     {
+      "no": 2,
+      "name": "Khatra",
+      "up_time": "04:40 PM",
+      "down_time": "08:40 AM"
+     },
+     {
+      "no": 3,
+      "name": "Bangla",
+      "up_time": "05:25 PM",
+      "down_time": "08:00 AM"
+     },
+     {
+      "no": 4,
+      "name": "Bankura",
+      "up_time": "05:55 PM",
+      "down_time": "07:30 AM"
+     },
+     {
+      "no": 5,
+      "name": "Durgapur City Centre",
+      "up_time": "07:55 PM",
+      "down_time": "06:10 AM"
+     },
+     {
+      "no": 6,
+      "name": "Muchipara",
+      "up_time": "08:10 PM",
+      "down_time": "05:45 AM"
+     },
+     {
+      "no": 7,
+      "name": "Panagarh Bypass",
+      "up_time": "08:35 PM",
+      "down_time": "05:15 AM"
+     },
+     {
+      "no": 8,
+      "name": "Bolpur",
+      "up_time": "09:30 PM",
+      "down_time": "04:15 AM"
+     },
+     {
+      "no": 9,
+      "name": "Suri",
+      "up_time": "10:20 PM",
+      "down_time": "03:15 AM"
+     },
+     {
+      "no": 10,
+      "name": "Moregram",
+      "up_time": "11:20 PM",
+      "down_time": "01:15 AM"
+     },
+     {
+      "no": 11,
+      "name": "Omarpur",
+      "up_time": "11:50 PM",
+      "down_time": "01:00 AM"
+     },
+     {
+      "no": 12,
+      "name": "Rampurhat",
+      "up_time": "12:20 AM",
+      "down_time": "12:50 AM"
+     },
+     {
+      "no": 13,
+      "name": "Dhuliyan",
+      "up_time": "12:55 AM",
+      "down_time": "12:30 AM"
+     },
+     {
+      "no": 14,
+      "name": "Farakka",
+      "up_time": "01:20 AM",
+      "down_time": "12:10 AM"
+     },
+     {
+      "no": 15,
+      "name": "Kaliachak",
+      "up_time": "01:55 AM",
+      "down_time": "11:59 PM"
+     },
+     {
+      "no": 16,
+      "name": "Malda",
+      "up_time": "02:30 AM",
+      "down_time": "11:45 PM"
+     },
+     {
+      "no": 17,
+      "name": "Gazole",
+      "up_time": "02:50 AM",
+      "down_time": "10:30 PM"
+     },
+     {
+      "no": 18,
+      "name": "Raiganj",
+      "up_time": "04:00 AM",
+      "down_time": "09:20 PM"
+     },
+     {
+      "no": 19,
+      "name": "Islampur",
+      "up_time": "06:25 AM",
+      "down_time": "06:15 PM"
+     },
+     {
+      "no": 20,
+      "name": "Siliguri",
+      "up_time": "07:35 AM",
+      "down_time": "05:45 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/ranibandh-to-siliguri/"
+   }
+  },
+  {
+   "seq": 4627,
+   "bus": {
+    "id": "wbbustime-bhagyalaxmi-barabazar-bankura",
+    "bus_name": "Bhagyalaxmi",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Barabazar",
+    "destination": "Bankura",
+    "departure_time": "05:10 AM",
+    "arrival_time": "09:00 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Barabazar - Bankura",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Barabazar",
+      "up_time": "05:10 AM",
+      "down_time": "03:00 PM"
+     },
+     {
+      "no": 2,
+      "name": "Sindri",
+      "up_time": "05:50 AM",
+      "down_time": "02:15 PM"
+     },
+     {
+      "no": 3,
+      "name": "Manbazar",
+      "up_time": "06:20 AM",
+      "down_time": "01:40 PM"
+     },
+     {
+      "no": 4,
+      "name": "Budhpur",
+      "up_time": "06:40 AM",
+      "down_time": "01:20 PM"
+     },
+     {
+      "no": 5,
+      "name": "Puncha",
+      "up_time": "07:05 AM",
+      "down_time": "01:00 PM"
+     },
+     {
+      "no": 6,
+      "name": "Dhadki",
+      "up_time": "07:15 AM",
+      "down_time": "12:52 PM"
+     },
+     {
+      "no": 7,
+      "name": "Badra",
+      "up_time": "07:25 AM",
+      "down_time": "12:45 PM"
+     },
+     {
+      "no": 8,
+      "name": "Tusuguria More",
+      "up_time": "07:35 AM",
+      "down_time": "12:35 PM"
+     },
+     {
+      "no": 9,
+      "name": "Belut",
+      "up_time": "07:40 AM",
+      "down_time": "12:30 PM"
+     },
+     {
+      "no": 10,
+      "name": "Shaldiha",
+      "up_time": "07:55 AM",
+      "down_time": "12:20 PM"
+     },
+     {
+      "no": 11,
+      "name": "Jorda",
+      "up_time": "08:00 AM",
+      "down_time": "12:15 PM"
+     },
+     {
+      "no": 12,
+      "name": "Danga",
+      "up_time": "08:05 AM",
+      "down_time": "12:08 PM"
+     },
+     {
+      "no": 13,
+      "name": "Barobendya",
+      "up_time": "08:12 AM",
+      "down_time": "12:02 PM"
+     },
+     {
+      "no": 14,
+      "name": "Bangla",
+      "up_time": "08:20 AM",
+      "down_time": "11:55 AM"
+     },
+     {
+      "no": 15,
+      "name": "Sunukpahari",
+      "up_time": "08:30 AM",
+      "down_time": "11:45 AM"
+     },
+     {
+      "no": 16,
+      "name": "Puabagan",
+      "up_time": "08:40 AM",
+      "down_time": "11:35 AM"
+     },
+     {
+      "no": 17,
+      "name": "Rajgram",
+      "up_time": "08:50 AM",
+      "down_time": "11:20 AM"
+     },
+     {
+      "no": 18,
+      "name": "Bankura",
+      "up_time": "09:00 AM",
+      "down_time": "10:50 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/barabazar-to-bankura/"
+   }
+  },
+  {
+   "seq": 4628,
+   "bus": {
+    "id": "wbbustime-gobinda-majestic-medinipur-digha",
+    "bus_name": "GOBINDA (MAJESTIC",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Medinipur",
+    "destination": "Digha",
+    "departure_time": "08:45",
+    "arrival_time": "00:00",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Medinipur - Digha",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Medinipur",
+      "up_time": "08:45",
+      "down_time": "00:00"
+     },
+     {
+      "no": 2,
+      "name": "Keranichati",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 3,
+      "name": "Amtala",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 4,
+      "name": "Mohanpur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 5,
+      "name": "Kharagpur Chaurangee",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 6,
+      "name": "Makrampur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 7,
+      "name": "Narayangarh",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 8,
+      "name": "Bakhrabad",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 9,
+      "name": "Belda",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 10,
+      "name": "Khakurda",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 11,
+      "name": "Sauri",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 12,
+      "name": "Lalat",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 13,
+      "name": "Jahalda",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 14,
+      "name": "Egra",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 15,
+      "name": "Digha More",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 16,
+      "name": "Kudi",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 17,
+      "name": "Mirzapur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 18,
+      "name": "Negua",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 19,
+      "name": "Chorpalia",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 20,
+      "name": "Paniparul",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 21,
+      "name": "Depal",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 22,
+      "name": "Ramnagar",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 23,
+      "name": "Thikra",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 24,
+      "name": "Fatepur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 25,
+      "name": "Alankarpur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 26,
+      "name": "Digha",
+      "up_time": "00:00",
+      "down_time": "02:20 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/medinipur-to-digha/"
+   }
+  },
+  {
+   "seq": 4629,
+   "bus": {
+    "id": "wbbustime-sonali-ma-durga-manbazar-medinipur",
+    "bus_name": "SONALI (MA DURGA",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Manbazar",
+    "destination": "Medinipur",
+    "departure_time": "04:45",
+    "arrival_time": "00:00",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Manbazar - Medinipur",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Manbazar",
+      "up_time": "04:45",
+      "down_time": "00:00"
+     },
+     {
+      "no": 2,
+      "name": "Pairachali",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 3,
+      "name": "Hatirampur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 4,
+      "name": "Khatra",
+      "up_time": "06:00",
+      "down_time": "05:45 PM"
+     },
+     {
+      "no": 5,
+      "name": "Lakshmisagar",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 6,
+      "name": "Simlapal",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 7,
+      "name": "Nadighat",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 8,
+      "name": "Bikrampur",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 9,
+      "name": "P. More",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 10,
+      "name": "Sarenga",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 11,
+      "name": "Pingboni",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 12,
+      "name": "Goaltore",
+      "up_time": "08:45",
+      "down_time": "03:15 PM"
+     },
+     {
+      "no": 13,
+      "name": "Pirakata",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 14,
+      "name": "Satpati",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 15,
+      "name": "Maupal",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 16,
+      "name": "Patharkumkumi",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 17,
+      "name": "Bhadutala",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 18,
+      "name": "Keranichati",
+      "up_time": "00:00",
+      "down_time": "00:00"
+     },
+     {
+      "no": 19,
+      "name": "Medinipur",
+      "up_time": "00:00",
+      "down_time": "01:50 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/manbazar-to-medinipur/"
+   }
+  },
+  {
+   "seq": 4630,
+   "bus": {
+    "id": "wbbustime-maa-tara-alaka-travels-bishnupur-digha-border",
+    "bus_name": "MAA TARA (ALAKA TRAVELS",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Bishnupur",
+    "destination": "Digha Border",
+    "departure_time": "04:45 AM",
+    "arrival_time": "11:40 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Bishnupur - Digha Border",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Bishnupur",
+      "up_time": "04:45 AM",
+      "down_time": "07:45 PM"
+     },
+     {
+      "no": 2,
+      "name": "Kotulpur",
+      "up_time": "05:25 AM",
+      "down_time": "07:05 PM"
+     },
+     {
+      "no": 3,
+      "name": "Jairambati",
+      "up_time": "05:45 AM",
+      "down_time": "06:45 PM"
+     },
+     {
+      "no": 4,
+      "name": "Kamarpukur",
+      "up_time": "06:05 AM",
+      "down_time": "06:25 PM"
+     },
+     {
+      "no": 5,
+      "name": "Khirpai",
+      "up_time": "07:00 AM",
+      "down_time": "05:30 PM"
+     },
+     {
+      "no": 6,
+      "name": "Ghatal",
+      "up_time": "07:30 AM",
+      "down_time": "05:05 PM"
+     },
+     {
+      "no": 7,
+      "name": "Sultannagar",
+      "up_time": "07:50 AM",
+      "down_time": "04:35 PM"
+     },
+     {
+      "no": 8,
+      "name": "Gaura",
+      "up_time": "07:55 AM",
+      "down_time": "04:30 PM"
+     },
+     {
+      "no": 9,
+      "name": "Mechogram",
+      "up_time": "08:20 AM",
+      "down_time": "04:10 PM"
+     },
+     {
+      "no": 10,
+      "name": "Mecheda Station",
+      "up_time": "08:40 AM",
+      "down_time": "03:45 PM"
+     },
+     {
+      "no": 11,
+      "name": "Nandakumar",
+      "up_time": "09:05 AM",
+      "down_time": "03:10 PM"
+     },
+     {
+      "no": 12,
+      "name": "Heria",
+      "up_time": "09:35 AM",
+      "down_time": "02:25 PM"
+     },
+     {
+      "no": 13,
+      "name": "Contai",
+      "up_time": "10:40 AM",
+      "down_time": "01:55 PM"
+     },
+     {
+      "no": 14,
+      "name": "Digha Border",
+      "up_time": "11:40 AM",
+      "down_time": "12:55 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/bishnupur-to-digha-border/"
+   }
+  },
+  {
+   "seq": 4631,
+   "bus": {
+    "id": "wbbustime-shyamali-durgapur-station-suri",
+    "bus_name": "SHYAMALI",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Durgapur Station",
+    "destination": "Suri",
+    "departure_time": "06:40 AM",
+    "arrival_time": "10:15 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Durgapur Station - Suri",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Durgapur Station",
+      "up_time": "06:40 AM",
+      "down_time": "05:00 PM"
+     },
+     {
+      "no": 2,
+      "name": "DVC More",
+      "up_time": "06:50 AM",
+      "down_time": "(via DVC)"
+     },
+     {
+      "no": 3,
+      "name": "Muchipara",
+      "up_time": "07:05 AM",
+      "down_time": "04:50 PM"
+     },
+     {
+      "no": 4,
+      "name": "Rajbandh",
+      "up_time": "07:15 AM",
+      "down_time": "04:25 PM"
+     },
+     {
+      "no": 5,
+      "name": "Panagarh",
+      "up_time": "07:25 AM",
+      "down_time": "04:10 PM"
+     },
+     {
+      "no": 6,
+      "name": "Trilokchandrapur",
+      "up_time": "07:45 AM",
+      "down_time": "03:50 PM"
+     },
+     {
+      "no": 7,
+      "name": "Piyariganj",
+      "up_time": "08:00 AM",
+      "down_time": "03:35 PM"
+     },
+     {
+      "no": 8,
+      "name": "11 Mile",
+      "up_time": "08:15 AM",
+      "down_time": "03:20 PM"
+     },
+     {
+      "no": 9,
+      "name": "Illambazar",
+      "up_time": "08:35 AM",
+      "down_time": "03:05 PM"
+     },
+     {
+      "no": 10,
+      "name": "Bonvilla",
+      "up_time": "08:42 AM",
+      "down_time": "02:58 PM"
+     },
+     {
+      "no": 11,
+      "name": "Kamarpara",
+      "up_time": "08:48 AM",
+      "down_time": "02:54 PM"
+     },
+     {
+      "no": 12,
+      "name": "Shibtala",
+      "up_time": "08:52 AM",
+      "down_time": "02:51 PM"
+     },
+     {
+      "no": 13,
+      "name": "Kashipur",
+      "up_time": "08:56 AM",
+      "down_time": "02:49 PM"
+     },
+     {
+      "no": 14,
+      "name": "Jilipitola",
+      "up_time": "09:00 AM",
+      "down_time": "02:47 PM"
+     },
+     {
+      "no": 15,
+      "name": "Bolpur (Jamboni)",
+      "up_time": "09:05 AM",
+      "down_time": "02:45 PM"
+     },
+     {
+      "no": 16,
+      "name": "Sriniketan",
+      "up_time": "09:15 AM",
+      "down_time": "02:30 PM"
+     },
+     {
+      "no": 17,
+      "name": "Debgram",
+      "up_time": "09:25 AM",
+      "down_time": "02:20 PM"
+     },
+     {
+      "no": 18,
+      "name": "Parui",
+      "up_time": "09:40 AM",
+      "down_time": "02:05 PM"
+     },
+     {
+      "no": 19,
+      "name": "Purandarpur",
+      "up_time": "09:50 AM",
+      "down_time": "01:55 PM"
+     },
+     {
+      "no": 20,
+      "name": "Ekdala",
+      "up_time": "10:00 AM",
+      "down_time": "01:45 PM"
+     },
+     {
+      "no": 21,
+      "name": "Suri Railgate",
+      "up_time": "10:10 AM",
+      "down_time": "01:25 PM"
+     },
+     {
+      "no": 22,
+      "name": "Suri",
+      "up_time": "10:15 AM",
+      "down_time": "01:20 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/durgapur-station-to-suri/"
+   }
+  },
+  {
+   "seq": 4632,
+   "bus": {
+    "id": "wbbustime-bullet-purulia-chandrakona-road",
+    "bus_name": "BULLET",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Purulia",
+    "destination": "Chandrakona Road",
+    "departure_time": "05:55 AM",
+    "arrival_time": "10:30 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Purulia - Chandrakona Road",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Purulia",
+      "up_time": "05:55 AM",
+      "down_time": "04:45 PM"
+     },
+     {
+      "no": 2,
+      "name": "Lalpur",
+      "up_time": "06:20 AM",
+      "down_time": "04:20 PM"
+     },
+     {
+      "no": 3,
+      "name": "Hura",
+      "up_time": "06:40 AM",
+      "down_time": "04:00 PM"
+     },
+     {
+      "no": 4,
+      "name": "Bishpuria",
+      "up_time": "07:00 AM",
+      "down_time": "03:40 PM"
+     },
+     {
+      "no": 5,
+      "name": "Kamalpur",
+      "up_time": "07:15 AM",
+      "down_time": "03:25 PM"
+     },
+     {
+      "no": 6,
+      "name": "Chhatna",
+      "up_time": "07:30 AM",
+      "down_time": "03:10 PM"
+     },
+     {
+      "no": 7,
+      "name": "Bankura Danga",
+      "up_time": "07:55 AM",
+      "down_time": "02:40 PM"
+     },
+     {
+      "no": 8,
+      "name": "Dholdanga",
+      "up_time": "08:15 AM",
+      "down_time": "02:15 PM"
+     },
+     {
+      "no": 9,
+      "name": "Beduasol",
+      "up_time": "08:30 AM",
+      "down_time": "01:55 PM"
+     },
+     {
+      "no": 10,
+      "name": "Oanda",
+      "up_time": "08:45 AM",
+      "down_time": "01:35 PM"
+     },
+     {
+      "no": 11,
+      "name": "Ramsagar",
+      "up_time": "08:55 AM",
+      "down_time": "01:10 PM"
+     },
+     {
+      "no": 12,
+      "name": "Bishnupur",
+      "up_time": "09:10 AM",
+      "down_time": "12:25 PM"
+     },
+     {
+      "no": 13,
+      "name": "Bankadaha",
+      "up_time": "09:35 AM",
+      "down_time": "12:05 PM"
+     },
+     {
+      "no": 14,
+      "name": "Garhbeta",
+      "up_time": "10:10 AM",
+      "down_time": "11:30 AM"
+     },
+     {
+      "no": 15,
+      "name": "Chandrakona Road",
+      "up_time": "10:30 AM",
+      "down_time": "11:10 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/purulia-to-chandrakona-road/"
+   }
+  },
+  {
+   "seq": 4633,
+   "bus": {
+    "id": "wbbustime-maa-bhabani-kharagpur-burdwan",
+    "bus_name": "MAA BHABANI",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Kharagpur",
+    "destination": "Burdwan",
+    "departure_time": "05:40 AM",
+    "arrival_time": "00.00am",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Kharagpur - Burdwan",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Kharagpur",
+      "up_time": "05:40 AM",
+      "down_time": "00.00am"
+     },
+     {
+      "no": 2,
+      "name": "Medinipur",
+      "up_time": "06:20 AM",
+      "down_time": "00.00am"
+     },
+     {
+      "no": 3,
+      "name": "Keshpur",
+      "up_time": "00.00am",
+      "down_time": "00.00am"
+     },
+     {
+      "no": 4,
+      "name": "Jhakra",
+      "up_time": "00.00am",
+      "down_time": "00.00am"
+     },
+     {
+      "no": 5,
+      "name": "Khirpai",
+      "up_time": "00.00am",
+      "down_time": "03:50 PM"
+     },
+     {
+      "no": 6,
+      "name": "Kamarpukur",
+      "up_time": "00.00am",
+      "down_time": "00.00am"
+     },
+     {
+      "no": 7,
+      "name": "Arambagh",
+      "up_time": "09:30 AM",
+      "down_time": "02:30 PM"
+     },
+     {
+      "no": 8,
+      "name": "Seharabazar",
+      "up_time": "00.00am",
+      "down_time": "00.00am"
+     },
+     {
+      "no": 9,
+      "name": "Burdwan",
+      "up_time": "00.00am",
+      "down_time": "12:45 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/kharagpur-to-burdwan/"
+   }
+  },
+  {
+   "seq": 4634,
+   "bus": {
+    "id": "wbbustime-prashanna-kukrahati-bardhaman",
+    "bus_name": "PRASHANNA",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Kukrahati",
+    "destination": "Bardhaman",
+    "departure_time": "03:10 AM",
+    "arrival_time": "09:15 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Kukrahati - Bardhaman",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Kukrahati",
+      "up_time": "03:10 AM",
+      "down_time": "04:25 PM"
+     },
+     {
+      "no": 2,
+      "name": "Tamluk",
+      "up_time": "04:05 AM",
+      "down_time": "03:30 PM"
+     },
+     {
+      "no": 3,
+      "name": "Mecheda Station",
+      "up_time": "04:35 AM",
+      "down_time": "02:55 PM"
+     },
+     {
+      "no": 4,
+      "name": "Mechogram",
+      "up_time": "05:00 AM",
+      "down_time": "02:30 PM"
+     },
+     {
+      "no": 5,
+      "name": "Ghatal",
+      "up_time": "05:55 AM",
+      "down_time": "01:35 PM"
+     },
+     {
+      "no": 6,
+      "name": "Srinagar",
+      "up_time": "06:40 AM",
+      "down_time": "12:55 PM"
+     },
+     {
+      "no": 7,
+      "name": "Kamarpukur",
+      "up_time": "07:15 AM",
+      "down_time": "12:15 PM"
+     },
+     {
+      "no": 8,
+      "name": "Arambagh",
+      "up_time": "07:40 AM",
+      "down_time": "11:35 AM"
+     },
+     {
+      "no": 9,
+      "name": "Seharabazar",
+      "up_time": "08:30 AM",
+      "down_time": "10:45 AM"
+     },
+     {
+      "no": 10,
+      "name": "Bardhaman",
+      "up_time": "09:15 AM",
+      "down_time": "10:15 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/kukrahati-to-bardhaman/"
+   }
+  },
+  {
+   "seq": 4635,
+   "bus": {
+    "id": "wbbustime-moniraj-ramgarh-ramjibanpur",
+    "bus_name": "MONIRAJ",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Ramgarh",
+    "destination": "Ramjibanpur",
+    "departure_time": "06:50 AM",
+    "arrival_time": "00:00 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Ramgarh - Ramjibanpur",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Ramgarh",
+      "up_time": "06:50 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 2,
+      "name": "Mujithan",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 3,
+      "name": "Dasbandh",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 4,
+      "name": "Gobindpur",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 5,
+      "name": "Sitarampur",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 6,
+      "name": "Dangarpara Mor",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 7,
+      "name": "Chingra",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 8,
+      "name": "Asna Mor",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 9,
+      "name": "Keshia",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 10,
+      "name": "Sarenga",
+      "up_time": "07:25 AM",
+      "down_time": "05:50 PM"
+     },
+     {
+      "no": 11,
+      "name": "Khayerpahari",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 12,
+      "name": "Patharpara",
+      "up_time": "07:50 AM",
+      "down_time": "05:20 PM"
+     },
+     {
+      "no": 13,
+      "name": "Makli",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 14,
+      "name": "Teskona",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 15,
+      "name": "Amlashuli",
+      "up_time": "08:30 AM",
+      "down_time": "04:50 PM"
+     },
+     {
+      "no": 16,
+      "name": "Agarbandh",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 17,
+      "name": "Humgarh",
+      "up_time": "08:50 AM",
+      "down_time": "04:35 PM"
+     },
+     {
+      "no": 18,
+      "name": "Bogridihi",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 19,
+      "name": "Habla",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 20,
+      "name": "Fatesinghpur",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 21,
+      "name": "Gatebazar",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 22,
+      "name": "Radhanagar",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 23,
+      "name": "Amlagora",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 24,
+      "name": "Garbeta",
+      "up_time": "09:40 AM",
+      "down_time": "04:00 PM"
+     },
+     {
+      "no": 25,
+      "name": "Moldanga",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 26,
+      "name": "Dhadika",
+      "up_time": "10:00 AM",
+      "down_time": "03:40 PM"
+     },
+     {
+      "no": 27,
+      "name": "Bonkati",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 28,
+      "name": "Shyamnagar",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 29,
+      "name": "Phulberia",
+      "up_time": "10:20 AM",
+      "down_time": "03:20 PM"
+     },
+     {
+      "no": 30,
+      "name": "Bostom Mor",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 31,
+      "name": "Bhedua",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 32,
+      "name": "Master Mor",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 33,
+      "name": "Uttarbil",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 34,
+      "name": "Banshda",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 35,
+      "name": "Badambari",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 36,
+      "name": "Chamkaithala",
+      "up_time": "10:50 AM",
+      "down_time": "02:50 PM"
+     },
+     {
+      "no": 37,
+      "name": "Sandhipur",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 38,
+      "name": "Bhagabantapur",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 39,
+      "name": "Krishnapur",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 40,
+      "name": "Srinagar",
+      "up_time": "00:00 AM",
+      "down_time": "02:05 PM"
+     },
+     {
+      "no": 41,
+      "name": "Ramjibanpur",
+      "up_time": "00:00 AM",
+      "down_time": "01:50 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/ramgarh-to-ramjibanpur/"
+   }
+  },
+  {
+   "seq": 4636,
+   "bus": {
+    "id": "wbbustime-lalparul-bankura-bus-stand-durgapur",
+    "bus_name": "LALPARUL",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Bankura Bus Stand",
+    "destination": "Durgapur",
+    "departure_time": "04:00 AM",
+    "arrival_time": "00:00 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Bankura Bus Stand - Durgapur",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Bankura Bus Stand",
+      "up_time": "04:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 2,
+      "name": "Machantala",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 3,
+      "name": "Satighat",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 4,
+      "name": "Lakshyatoda Bridge",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 5,
+      "name": "Hebir Mor",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 6,
+      "name": "Makurgram",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 7,
+      "name": "Beliatore",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 8,
+      "name": "Barjora",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 9,
+      "name": "Toll Plaza",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 10,
+      "name": "Durgapur Barrage",
+      "up_time": "00:00 AM",
+      "down_time": "00:00 AM"
+     },
+     {
+      "no": 11,
+      "name": "Durgapur Station Bus Stand",
+      "up_time": "00:00 AM",
+      "down_time": "04:10 PM"
+     },
+     {
+      "no": 12,
+      "name": "Durgapur",
+      "up_time": "00:00 AM",
+      "down_time": "06:15 AM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/bankura-bus-stand-to-durgapur/"
+   }
+  },
+  {
+   "seq": 4637,
+   "bus": {
+    "id": "wbbustime-rbn-travels-medinipur-tatanagar",
+    "bus_name": "RBN TRAVELS",
+    "reg_no": "",
+    "operator": "—",
+    "bus_type": "Private - NON AC",
+    "origin": "Medinipur",
+    "destination": "Tatanagar",
+    "departure_time": "04:20 AM",
+    "arrival_time": "10:40 AM",
+    "contact_number": "Not Available !",
+    "depot_name": "",
+    "route": "Medinipur - Tatanagar",
+    "stoppages": [
+     {
+      "no": 1,
+      "name": "Medinipur",
+      "up_time": "04:20 AM",
+      "down_time": "07:55 PM"
+     },
+     {
+      "no": 2,
+      "name": "Kharagpur",
+      "up_time": "04:55 AM",
+      "down_time": "07:20 PM"
+     },
+     {
+      "no": 3,
+      "name": "Jhargram",
+      "up_time": "06:30 AM",
+      "down_time": "05:50 PM"
+     },
+     {
+      "no": 4,
+      "name": "Belpahari",
+      "up_time": "07:40 AM",
+      "down_time": "04:45 PM"
+     },
+     {
+      "no": 5,
+      "name": "Banduan",
+      "up_time": "09:15 AM",
+      "down_time": "03:15 PM"
+     },
+     {
+      "no": 6,
+      "name": "Tatanagar",
+      "up_time": "10:40 AM",
+      "down_time": "01:40 PM"
+     }
+    ],
+    "distance_km": null,
+    "source": "wbbustime.in",
+    "detail_url": "https://wbbustime.in/bus/medinipur-to-tatanagar/"
    }
   }
  ]
