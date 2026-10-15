@@ -2230,5 +2230,1881 @@
    "Babughat",
    "Burrabazar"
   ]
+ },
+ {
+  "route": "Burdwan - Kolkata (via Shaktigarh, Memari, Dankuni)",
+  "operator": "SBSTC / Private",
+  "origin": "Burdwan",
+  "destination": "Kolkata",
+  "via": "Shaktigarh, Memari, Dankuni",
+  "distance_km": 113,
+  "source": "SBSTC Route Timetable & Bengal Highway Corridor Guide",
+  "stops": [
+   "Burdwan",
+   "Nawabhat",
+   "Ullhas",
+   "Shaktigarh",
+   "Memari",
+   "Rasulpur",
+   "Palsit",
+   "Dankuni",
+   "Bally",
+   "Howrah",
+   "Kolkata"
+  ]
+ },
+ {
+  "route": "Barasat - Digha (via Airport, Esplanade, Mecheda, Contai)",
+  "operator": "WBTC / Private",
+  "origin": "Barasat",
+  "destination": "Digha",
+  "via": "Airport, Esplanade, Mecheda, Contai",
+  "distance_km": 196,
+  "source": "WBTC Long Distance Time Table & Digha Tourist Bus Syndicate",
+  "stops": [
+   "Barasat",
+   "Madhyamgram",
+   "Airport Gate 1",
+   "Ultadanga",
+   "Kolkata",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Bajkul",
+   "Contai",
+   "Ramnagar",
+   "Digha"
+  ]
+ },
+ {
+  "route": "Siliguri - Cooch Behar (via Jalpaiguri, Mainaguri, Dhupguri, Falakata)",
+  "operator": "NBSTC",
+  "origin": "Siliguri",
+  "destination": "Cooch Behar",
+  "via": "Jalpaiguri, Dhupguri, Falakata",
+  "distance_km": 138,
+  "source": "NBSTC Official Depot Route Board (Siliguri - Cooch Behar)",
+  "stops": [
+   "Siliguri",
+   "Jalpaiguri",
+   "Moynaguri Bypass",
+   "Dhupguri",
+   "Falakata",
+   "Pundibari",
+   "Khagrabari",
+   "Cooch Behar"
+  ]
+ },
+ {
+  "route": "Siliguri - Alipurduar (via Sevoke, Malbazar, Birpara, Hasimara)",
+  "operator": "NBSTC",
+  "origin": "Siliguri",
+  "destination": "Alipurduar",
+  "via": "Malbazar, Birpara, Hasimara",
+  "distance_km": 155,
+  "source": "NBSTC North Bengal Dooars Schedule Notice",
+  "stops": [
+   "Siliguri",
+   "Sevoke",
+   "Damdim",
+   "Malbazar",
+   "Chalsa",
+   "Nagrakata",
+   "Banarhat",
+   "Birpara",
+   "Madarihat",
+   "Hasimara",
+   "Hamiltonganj",
+   "Kalchini",
+   "Alipurduar"
+  ]
+ },
+ {
+  "origin": "Burdwan",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Burdwan",
+   "Saktigarh",
+   "Memari",
+   "Rasulpur",
+   "Palsit",
+   "Dankuni",
+   "Kona Express More",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 140,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Burdwan",
+  "destination": "Karunamoyee",
+  "stops": [
+   "Burdwan",
+   "Saktigarh",
+   "Memari",
+   "Rasulpur",
+   "Palsit",
+   "Dankuni",
+   "Kolkata Airport",
+   "Karunamoyee"
+  ],
+  "duration_min": 150,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Asansol",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Asansol",
+   "Raniganj",
+   "Andal",
+   "Durgapur (City Center)",
+   "Panagarh",
+   "Bardhaman",
+   "Dankuni",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Asansol",
+  "destination": "Karunamoyee",
+  "stops": [
+   "Asansol",
+   "Raniganj",
+   "Andal",
+   "Durgapur (City Center)",
+   "Panagarh",
+   "Bardhaman",
+   "Dankuni",
+   "Kolkata Airport",
+   "Karunamoyee"
+  ],
+  "duration_min": 280,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Durgapur (Station)",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Durgapur (Station)",
+   "Durgapur (City Center)",
+   "Muchipara",
+   "Panagarh",
+   "Bardhaman",
+   "Saktigarh",
+   "Dankuni",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 200,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Durgapur (Station)",
+  "destination": "Karunamoyee",
+  "stops": [
+   "Durgapur (Station)",
+   "Durgapur (City Center)",
+   "Muchipara",
+   "Panagarh",
+   "Bardhaman",
+   "Dankuni",
+   "Kolkata Airport",
+   "Karunamoyee"
+  ],
+  "duration_min": 210,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Bankura",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Bankura",
+   "Beliatore",
+   "Barjora",
+   "Durgapur (Station)",
+   "Panagarh",
+   "Bardhaman",
+   "Dankuni",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 260,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Bankura",
+  "destination": "Karunamoyee",
+  "stops": [
+   "Bankura",
+   "Beliatore",
+   "Barjora",
+   "Durgapur (Station)",
+   "Panagarh",
+   "Bardhaman",
+   "Dankuni",
+   "Karunamoyee"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Purulia",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Purulia",
+   "Hura",
+   "Bankura",
+   "Beliatore",
+   "Barjora",
+   "Durgapur",
+   "Panagarh",
+   "Bardhaman",
+   "Dankuni",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 360,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Haldia",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Santragachi",
+   "Dhulagarh",
+   "Kolaghat",
+   "Mecheda",
+   "Nimtouri",
+   "Nandakumar",
+   "Brajalalchak",
+   "Chaitanyapur",
+   "Haldia"
+  ],
+  "duration_min": 170,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Suri",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Dankuni",
+   "Bardhaman",
+   "Gushkara",
+   "Bhedia",
+   "Bolpur (Prantik)",
+   "Sainthia",
+   "Suri"
+  ],
+  "duration_min": 260,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Arambagh",
+  "destination": "Kolkata",
+  "stops": [
+   "Arambagh",
+   "Mayapur (Hooghly)",
+   "Pursurah",
+   "Champadanga",
+   "Tarakeswar",
+   "Haripal",
+   "Singur",
+   "Dankuni",
+   "Howrah",
+   "Kolkata"
+  ],
+  "duration_min": 150,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Midnapore",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Midnapore",
+   "Kharagpur",
+   "Debra",
+   "Mechogram",
+   "Kolaghat",
+   "Bagnan",
+   "Santragachi",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 170,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Midnapore",
+  "destination": "Karunamoyee",
+  "stops": [
+   "Midnapore",
+   "Kharagpur",
+   "Debra",
+   "Mechogram",
+   "Kolaghat",
+   "Bagnan",
+   "Santragachi",
+   "Kolkata Airport",
+   "Karunamoyee"
+  ],
+  "duration_min": 190,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Habra",
+  "destination": "Digha",
+  "stops": [
+   "Habra",
+   "Barasat",
+   "Kolkata Airport",
+   "Dunlop",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 310,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Garia",
+  "destination": "Digha",
+  "stops": [
+   "Garia",
+   "Jadavpur",
+   "Tollygunge",
+   "Taratala",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 260,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Belghoria",
+  "destination": "Digha",
+  "stops": [
+   "Belghoria",
+   "Dunlop",
+   "Dakshineswar",
+   "Bally Bridge",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Thakurpukur",
+  "destination": "Digha",
+  "stops": [
+   "Thakurpukur",
+   "Behala Chowrasta",
+   "Taratala",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 260,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Dumdum",
+  "destination": "Digha",
+  "stops": [
+   "Dumdum",
+   "Dunlop",
+   "Bally Bridge",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Karunamoyee",
+  "destination": "Digha",
+  "stops": [
+   "Karunamoyee",
+   "Baguihati",
+   "Kolkata Airport",
+   "Dunlop",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Digha",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Santragachi",
+   "Salap",
+   "Dhulagarh",
+   "Kolaghat",
+   "Mecheda",
+   "Panskura",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Asansol",
+  "destination": "Digha",
+  "stops": [
+   "Asansol",
+   "Raniganj",
+   "Durgapur",
+   "Barjora",
+   "Bankura",
+   "Bishnupur",
+   "Garhbeta",
+   "Midnapore",
+   "Kharagpur",
+   "Kolaghat",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 480,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Durgapur",
+  "destination": "Digha",
+  "stops": [
+   "Durgapur",
+   "Barjora",
+   "Bankura",
+   "Bishnupur",
+   "Garhbeta",
+   "Midnapore",
+   "Kharagpur",
+   "Kolaghat",
+   "Nandakumar",
+   "Henria",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 430,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Lalgola",
+  "destination": "Digha",
+  "stops": [
+   "Lalgola",
+   "Jiaganj",
+   "Murshidabad",
+   "Berhampore",
+   "Bethuadahari",
+   "Krishnanagar",
+   "Ranaghat",
+   "Barasat",
+   "Kolkata (Esplanade)",
+   "Santragachi",
+   "Kolaghat",
+   "Nandakumar",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 600,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kakdwip",
+  "destination": "Digha",
+  "stops": [
+   "Kakdwip",
+   "Kulpi",
+   "Diamond Harbour",
+   "Santragachi",
+   "Kolaghat",
+   "Nandakumar",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 320,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Baruipur",
+  "destination": "Digha",
+  "stops": [
+   "Baruipur",
+   "Garia",
+   "Santragachi",
+   "Kolaghat",
+   "Nandakumar",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 280,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Nandigram",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Santragachi",
+   "Kolaghat",
+   "Mecheda",
+   "Nandakumar",
+   "Chandipur",
+   "Reyapara",
+   "Nandigram"
+  ],
+  "duration_min": 200,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Nandigram",
+  "destination": "Digha",
+  "stops": [
+   "Nandigram",
+   "Reyapara",
+   "Chandipur",
+   "Henria",
+   "Contai (Kanthi)",
+   "Mandarmani",
+   "Ramnagar",
+   "Digha"
+  ],
+  "duration_min": 140,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Garh Bhowanipur",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Howrah",
+   "Domjur",
+   "Bargachia",
+   "Amta",
+   "Garh Bhowanipur"
+  ],
+  "duration_min": 120,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Gopiganj",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Santragachi",
+   "Bagnan",
+   "Kolaghat",
+   "Panskura",
+   "Daspur",
+   "Gopiganj"
+  ],
+  "duration_min": 150,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kalna",
+  "destination": "Kolkata",
+  "stops": [
+   "Kalna",
+   "Guptipara",
+   "Balagarh",
+   "Jirat",
+   "Mogra",
+   "Chinsurah",
+   "Dunlop",
+   "Kolkata"
+  ],
+  "duration_min": 180,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Asansol",
+  "destination": "Diamond Harbour",
+  "stops": [
+   "Asansol",
+   "Raniganj",
+   "Durgapur",
+   "Bardhaman",
+   "Dankuni",
+   "Kolkata",
+   "Diamond Harbour"
+  ],
+  "duration_min": 340,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Jamuria",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Dankuni",
+   "Bardhaman",
+   "Panagarh",
+   "Durgapur",
+   "Raniganj",
+   "Jamuria"
+  ],
+  "duration_min": 280,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Sonachura",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Kolaghat",
+   "Nandakumar",
+   "Chandipur",
+   "Nandigram",
+   "Sonachura"
+  ],
+  "duration_min": 220,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kolkata (Esplanade)",
+  "destination": "Belpahari",
+  "stops": [
+   "Kolkata (Esplanade)",
+   "Kolaghat",
+   "Kharagpur",
+   "Midnapore",
+   "Jhargram",
+   "Silda",
+   "Belpahari"
+  ],
+  "duration_min": 290,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Dhamakhali",
+  "destination": "Digha",
+  "stops": [
+   "Dhamakhali",
+   "Sandeshkhali",
+   "Malancha",
+   "Basirhat",
+   "Barasat",
+   "Dunlop",
+   "Kolaghat",
+   "Nandakumar",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 360,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Midnapore",
+  "destination": "Dhamakhali",
+  "stops": [
+   "Midnapore",
+   "Kharagpur",
+   "Debra",
+   "Kolaghat",
+   "Santragachi",
+   "Barasat",
+   "Basirhat",
+   "Dhamakhali"
+  ],
+  "duration_min": 300,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Midnapore",
+  "destination": "Namkhana",
+  "stops": [
+   "Midnapore",
+   "Kharagpur",
+   "Kolaghat",
+   "Santragachi",
+   "Diamond Harbour",
+   "Kakdwip",
+   "Namkhana"
+  ],
+  "duration_min": 310,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Midnapore",
+  "destination": "Malda Town",
+  "stops": [
+   "Midnapore",
+   "Kharagpur",
+   "Burdwan",
+   "Moregram",
+   "Farakka",
+   "Malda Town"
+  ],
+  "duration_min": 480,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Arambagh",
+  "destination": "Purulia",
+  "stops": [
+   "Arambagh",
+   "Kotulpur",
+   "Bishnupur",
+   "Onda",
+   "Bankura",
+   "Hura",
+   "Purulia"
+  ],
+  "duration_min": 240,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Bankura",
+  "destination": "Asansol",
+  "stops": [
+   "Bankura",
+   "Beliatore",
+   "Barjora",
+   "Durgapur",
+   "Raniganj",
+   "Asansol"
+  ],
+  "duration_min": 150,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Bardhaman",
+  "destination": "Purulia",
+  "stops": [
+   "Bardhaman",
+   "Panagarh",
+   "Durgapur",
+   "Bankura",
+   "Hura",
+   "Purulia"
+  ],
+  "duration_min": 240,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Purulia",
+  "destination": "Ajodhya Hills",
+  "stops": [
+   "Purulia",
+   "Tamna",
+   "Sirkabad",
+   "Baghmundi",
+   "Ajodhya Hills"
+  ],
+  "duration_min": 90,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Baghmundi",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Baghmundi",
+   "Sirkabad",
+   "Purulia",
+   "Bankura",
+   "Durgapur",
+   "Bardhaman",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 420,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Karunamoyee",
+  "destination": "Bandwan",
+  "stops": [
+   "Karunamoyee",
+   "Dankuni",
+   "Bardhaman",
+   "Durgapur",
+   "Bankura",
+   "Khatra",
+   "Jhilimili",
+   "Bandwan"
+  ],
+  "duration_min": 380,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Manbazar",
+  "destination": "Durgapur (City Center)",
+  "stops": [
+   "Manbazar",
+   "Puncha",
+   "Hura",
+   "Bankura",
+   "Barjora",
+   "Durgapur (City Center)"
+  ],
+  "duration_min": 180,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Bardhaman",
+  "destination": "Manbazar",
+  "stops": [
+   "Bardhaman",
+   "Panagarh",
+   "Durgapur",
+   "Bankura",
+   "Puncha",
+   "Manbazar"
+  ],
+  "duration_min": 220,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Nabadwip",
+  "destination": "Manbazar",
+  "stops": [
+   "Nabadwip",
+   "Burdwan",
+   "Panagarh",
+   "Durgapur",
+   "Bankura",
+   "Puncha",
+   "Manbazar"
+  ],
+  "duration_min": 320,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Gayespur",
+  "destination": "Digha",
+  "stops": [
+   "Gayespur",
+   "Kalyani",
+   "Barasat",
+   "Dunlop",
+   "Kolaghat",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 320,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Naihati",
+  "destination": "Digha",
+  "stops": [
+   "Naihati",
+   "Barrackpore",
+   "Dunlop",
+   "Kolaghat",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 310,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Kirnahar",
+  "destination": "Digha",
+  "stops": [
+   "Kirnahar",
+   "Bolpur (Prantik)",
+   "Gushkara",
+   "Burdwan",
+   "Kolaghat",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 450,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Salar",
+  "destination": "Digha",
+  "stops": [
+   "Salar",
+   "Katwa",
+   "Burdwan",
+   "Kolaghat",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 470,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Nagar",
+  "destination": "Digha",
+  "stops": [
+   "Nagar",
+   "Kandi",
+   "Katwa",
+   "Burdwan",
+   "Kolaghat",
+   "Contai (Kanthi)",
+   "Digha"
+  ],
+  "duration_min": 500,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Jalpaiguri (Super Bus Stand)",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Phansidewa More",
+   "Fulbari",
+   "Fatapukur",
+   "Rajganj",
+   "Raninagar",
+   "Jalpaiguri (Super Bus Stand)"
+  ],
+  "duration_min": 80,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Balurghat",
+  "stops": [
+   "Raiganj",
+   "Hemtabad",
+   "Kaliyaganj",
+   "Kushmandi",
+   "Buniadpur",
+   "Gangarampur",
+   "Balurghat"
+  ],
+  "duration_min": 150,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Balurghat",
+  "destination": "Malda Town",
+  "stops": [
+   "Balurghat",
+   "Gangarampur",
+   "Buniadpur",
+   "Gazole",
+   "Old Malda",
+   "Malda Town"
+  ],
+  "duration_min": 160,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Islampur",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Bagdogra",
+   "Ghoshpukur",
+   "Bidhannagar",
+   "Chopra",
+   "Islampur"
+  ],
+  "duration_min": 110,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri",
+  "destination": "Darjeeling",
+  "stops": [
+   "Siliguri",
+   "Sukna",
+   "Rangbull",
+   "Tindharia",
+   "Kurseong",
+   "Sonada",
+   "Ghum",
+   "Darjeeling"
+  ],
+  "duration_min": 160,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Jalpaiguri",
+  "destination": "Malbazar",
+  "stops": [
+   "Jalpaiguri",
+   "Maynaguri",
+   "Lataguri",
+   "Chalsa",
+   "Malbazar"
+  ],
+  "duration_min": 80,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Jalpaiguri",
+  "destination": "Haldibari",
+  "stops": [
+   "Jalpaiguri",
+   "Mandalghat",
+   "Haldibari"
+  ],
+  "duration_min": 50,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Berhampore",
+  "destination": "Siliguri (Tenzing Norgay)",
+  "stops": [
+   "Berhampore",
+   "Dhulian",
+   "Farakka",
+   "Malda Town",
+   "Gazole",
+   "Raiganj",
+   "Dalkhola",
+   "Kishanganj",
+   "Islampur",
+   "Siliguri (Tenzing Norgay)"
+  ],
+  "duration_min": 500,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Balurghat",
+  "destination": "Farakka",
+  "stops": [
+   "Balurghat",
+   "Gangarampur",
+   "Buniadpur",
+   "Gazole",
+   "Malda Town",
+   "Kaliachak",
+   "Dhulian",
+   "Farakka"
+  ],
+  "duration_min": 210,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Malda Town",
+  "destination": "Raiganj",
+  "stops": [
+   "Malda Town",
+   "Old Malda",
+   "Gazole",
+   "Itahar",
+   "Raiganj"
+  ],
+  "duration_min": 105,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Malda Town",
+  "destination": "Hili",
+  "stops": [
+   "Malda Town",
+   "Gazole",
+   "Buniadpur",
+   "Gangarampur",
+   "Balurghat",
+   "Hili"
+  ],
+  "duration_min": 200,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Alipurduar",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Sevoke",
+   "Malbazar",
+   "Chalsa",
+   "Nagrakata",
+   "Birpara",
+   "Madarihat",
+   "Hasimara",
+   "Alipurduar"
+  ],
+  "duration_min": 240,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Cooch Behar",
+  "destination": "Siliguri (Tenzing Norgay)",
+  "stops": [
+   "Cooch Behar",
+   "Pundibari",
+   "Falakata",
+   "Dhupguri",
+   "Maynaguri",
+   "Jalpaiguri",
+   "Siliguri (Tenzing Norgay)"
+  ],
+  "duration_min": 240,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Mathabhanga",
+  "destination": "Siliguri (Tenzing Norgay)",
+  "stops": [
+   "Mathabhanga",
+   "Changrabandha",
+   "Maynaguri",
+   "Jalpaiguri",
+   "Siliguri (Tenzing Norgay)"
+  ],
+  "duration_min": 210,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Dinhata",
+  "destination": "Cooch Behar",
+  "stops": [
+   "Dinhata",
+   "Dewanhat",
+   "Guriahati",
+   "Cooch Behar"
+  ],
+  "duration_min": 50,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Krishnanagar",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Farakka",
+   "Berhampore",
+   "Bethuadahari",
+   "Krishnanagar"
+  ],
+  "duration_min": 560,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Sitai",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Jalpaiguri",
+   "Maynaguri",
+   "Mathabhanga",
+   "Sitalkuchi",
+   "Sitai"
+  ],
+  "duration_min": 250,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Siliguri (Tenzing Norgay)",
+  "stops": [
+   "Raiganj",
+   "Dalkhola",
+   "Kishanganj",
+   "Islampur",
+   "Chopra",
+   "Bidhannagar",
+   "Bagdogra",
+   "Siliguri (Tenzing Norgay)"
+  ],
+  "duration_min": 200,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Raiganj",
+   "Malda Town",
+   "Farakka",
+   "Berhampore",
+   "Krishnanagar",
+   "Barasat",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 540,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Berhampore",
+  "stops": [
+   "Raiganj",
+   "Gazole",
+   "Malda Town",
+   "Farakka",
+   "Dhulian",
+   "Jangipur",
+   "Berhampore"
+  ],
+  "duration_min": 270,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Malda Town",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Malda Town",
+   "Farakka",
+   "Dhulian",
+   "Berhampore",
+   "Krishnanagar",
+   "Ranaghat",
+   "Barasat",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 450,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri",
+  "destination": "Kalimpong",
+  "stops": [
+   "Siliguri",
+   "Sevoke",
+   "Teesta Bazaar",
+   "Chitray",
+   "Kalimpong"
+  ],
+  "duration_min": 150,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri",
+  "destination": "Gangtok",
+  "stops": [
+   "Siliguri",
+   "Sevoke",
+   "Teesta Bazaar",
+   "Melli",
+   "Rangpo",
+   "Singtam",
+   "Ranipool",
+   "Gangtok"
+  ],
+  "duration_min": 240,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri",
+  "destination": "Bindu",
+  "stops": [
+   "Siliguri",
+   "Malbazar",
+   "Chalsa",
+   "Meteli",
+   "Samsing",
+   "Jhalong",
+   "Bindu"
+  ],
+  "duration_min": 200,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Farakka",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Farakka"
+  ],
+  "duration_min": 340,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Dinhata",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Jalpaiguri",
+   "Maynaguri",
+   "Dhupguri",
+   "Falakata",
+   "Cooch Behar",
+   "Dinhata"
+  ],
+  "duration_min": 280,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Jalpaiguri",
+  "destination": "Malda Town",
+  "stops": [
+   "Jalpaiguri",
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Gazole",
+   "Malda Town"
+  ],
+  "duration_min": 320,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Jalpaiguri",
+  "destination": "Cooch Behar",
+  "stops": [
+   "Jalpaiguri",
+   "Maynaguri",
+   "Dhupguri",
+   "Falakata",
+   "Pundibari",
+   "Cooch Behar"
+  ],
+  "duration_min": 160,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Maynaguri",
+  "destination": "Cooch Behar",
+  "stops": [
+   "Maynaguri",
+   "Dhupguri",
+   "Falakata",
+   "Pundibari",
+   "Cooch Behar"
+  ],
+  "duration_min": 130,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Maynaguri",
+  "destination": "Farakka",
+  "stops": [
+   "Maynaguri",
+   "Jalpaiguri",
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Farakka"
+  ],
+  "duration_min": 400,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Islampur",
+  "destination": "Balurghat",
+  "stops": [
+   "Islampur",
+   "Raiganj",
+   "Gazole",
+   "Buniadpur",
+   "Gangarampur",
+   "Balurghat"
+  ],
+  "duration_min": 240,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Dhupguri",
+  "stops": [
+   "Raiganj",
+   "Islampur",
+   "Siliguri (Tenzing Norgay)",
+   "Jalpaiguri",
+   "Maynaguri",
+   "Dhupguri"
+  ],
+  "duration_min": 280,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Hili",
+  "stops": [
+   "Raiganj",
+   "Kaliyaganj",
+   "Buniadpur",
+   "Gangarampur",
+   "Balurghat",
+   "Hili"
+  ],
+  "duration_min": 180,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Chanchal",
+  "stops": [
+   "Raiganj",
+   "Harischandrapur",
+   "Chanchal"
+  ],
+  "duration_min": 90,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Suri",
+  "destination": "Balurghat",
+  "stops": [
+   "Suri",
+   "Sainthia",
+   "Rampurhat",
+   "Nalhati",
+   "Moregram",
+   "Farakka",
+   "Malda Town",
+   "Gazole",
+   "Buniadpur",
+   "Balurghat"
+  ],
+  "duration_min": 390,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Milan More",
+  "destination": "NJP Station",
+  "stops": [
+   "Milan More",
+   "Champasari",
+   "Pradhan Nagar",
+   "Siliguri Junction",
+   "Court More",
+   "Tinbatti More",
+   "NJP Station"
+  ],
+  "duration_min": 45,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Salugara",
+  "destination": "NJP Station",
+  "stops": [
+   "Salugara",
+   "Sevoke Road",
+   "Siliguri Junction",
+   "Venus More",
+   "Tinbatti More",
+   "NJP Station"
+  ],
+  "duration_min": 45,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Cooch Behar",
+  "destination": "Alipurduar",
+  "stops": [
+   "Cooch Behar",
+   "Baneshwar",
+   "Alipurduar"
+  ],
+  "duration_min": 60,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Jalpaiguri",
+  "destination": "Chaulhati",
+  "stops": [
+   "Jalpaiguri",
+   "Paharpur",
+   "Chaulhati"
+  ],
+  "duration_min": 45,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Malda Town",
+  "destination": "Siliguri (Tenzing Norgay)",
+  "stops": [
+   "Malda Town",
+   "Old Malda",
+   "Gazole",
+   "Raiganj",
+   "Dalkhola",
+   "Kishanganj",
+   "Islampur",
+   "Siliguri (Tenzing Norgay)"
+  ],
+  "duration_min": 340,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Balurghat",
+  "destination": "Kolkata (Esplanade)",
+  "stops": [
+   "Balurghat",
+   "Gangarampur",
+   "Buniadpur",
+   "Gazole",
+   "Malda Town",
+   "Farakka",
+   "Berhampore",
+   "Krishnanagar",
+   "Barasat",
+   "Kolkata (Esplanade)"
+  ],
+  "duration_min": 600,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Balurghat",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Bagdogra",
+   "Islampur",
+   "Raiganj",
+   "Gazole",
+   "Buniadpur",
+   "Gangarampur",
+   "Balurghat"
+  ],
+  "duration_min": 360,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Malda Town",
+  "destination": "Berhampore",
+  "stops": [
+   "Malda Town",
+   "Kaliachak",
+   "Dhulian",
+   "Farakka",
+   "Jangipur",
+   "Berhampore"
+  ],
+  "duration_min": 180,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Berhampore",
+  "destination": "Islampur",
+  "stops": [
+   "Berhampore",
+   "Dhulian",
+   "Farakka",
+   "Malda Town",
+   "Gazole",
+   "Raiganj",
+   "Dalkhola",
+   "Islampur"
+  ],
+  "duration_min": 360,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Omarpur",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Farakka",
+   "Dhulian",
+   "Omarpur"
+  ],
+  "duration_min": 380,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Beldanga",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Farakka",
+   "Berhampore",
+   "Beldanga"
+  ],
+  "duration_min": 480,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Suri",
+  "destination": "Siliguri (Tenzing Norgay)",
+  "stops": [
+   "Suri",
+   "Sainthia",
+   "Rampurhat",
+   "Nalhati",
+   "Moregram",
+   "Farakka",
+   "Malda Town",
+   "Raiganj",
+   "Islampur",
+   "Siliguri (Tenzing Norgay)"
+  ],
+  "duration_min": 480,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Ultadanga",
+  "destination": "Malda Town",
+  "stops": [
+   "Ultadanga",
+   "Barasat",
+   "Krishnanagar",
+   "Berhampore",
+   "Dhulian",
+   "Farakka",
+   "Malda Town"
+  ],
+  "duration_min": 420,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Kalyani",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Berhampore",
+   "Krishnanagar",
+   "Ranaghat",
+   "Kalyani"
+  ],
+  "duration_min": 540,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri (Tenzing Norgay)",
+  "destination": "Jiaganj",
+  "stops": [
+   "Siliguri (Tenzing Norgay)",
+   "Islampur",
+   "Raiganj",
+   "Malda Town",
+   "Farakka",
+   "Jangipur",
+   "Jiaganj"
+  ],
+  "duration_min": 400,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri",
+  "destination": "Bagdogra",
+  "stops": [
+   "Siliguri",
+   "Matigara",
+   "Shivmandir",
+   "Bagdogra"
+  ],
+  "duration_min": 30,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Rasakhawa",
+  "stops": [
+   "Raiganj",
+   "Hemtabad",
+   "Karandighi",
+   "Rasakhawa"
+  ],
+  "duration_min": 90,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Berhampore",
+  "destination": "Rasakhawa",
+  "stops": [
+   "Berhampore",
+   "Farakka",
+   "Malda Town",
+   "Raiganj",
+   "Rasakhawa"
+  ],
+  "duration_min": 320,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Raiganj",
+  "destination": "Bharatpur",
+  "stops": [
+   "Raiganj",
+   "Malda Town",
+   "Farakka",
+   "Jangipur",
+   "Kandi",
+   "Bharatpur"
+  ],
+  "duration_min": 300,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri Court More",
+  "destination": "Panitanki",
+  "stops": [
+   "Siliguri Court More",
+   "Venus More",
+   "Pradhan Nagar",
+   "Matigara",
+   "Bagdogra",
+   "Naxalbari",
+   "Batasi",
+   "Panitanki"
+  ],
+  "duration_min": 75,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri Court More",
+  "destination": "Sukna",
+  "stops": [
+   "Siliguri Court More",
+   "Pradhan Nagar",
+   "Champasari",
+   "Sukna"
+  ],
+  "duration_min": 35,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri Court More",
+  "destination": "Bagdogra Airport",
+  "stops": [
+   "Siliguri Court More",
+   "Venus More",
+   "Matigara",
+   "Shivmandir",
+   "Bagdogra Airport"
+  ],
+  "duration_min": 40,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri Court More",
+  "destination": "Panighata",
+  "stops": [
+   "Siliguri Court More",
+   "Matigara",
+   "Bagdogra",
+   "Naxalbari",
+   "Panighata"
+  ],
+  "duration_min": 80,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri Court More",
+  "destination": "Bijanbari",
+  "stops": [
+   "Siliguri Court More",
+   "Sukna",
+   "Kurseong",
+   "Ghum",
+   "Bijanbari"
+  ],
+  "duration_min": 180,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Siliguri",
+  "destination": "Kharibari",
+  "stops": [
+   "Siliguri",
+   "Matigara",
+   "Bagdogra",
+   "Naxalbari",
+   "Kharibari"
+  ],
+  "duration_min": 80,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Balurghat",
+  "destination": "Cooch Behar",
+  "stops": [
+   "Balurghat",
+   "Gangarampur",
+   "Buniadpur",
+   "Gazole",
+   "Raiganj",
+   "Islampur",
+   "Siliguri",
+   "Jalpaiguri",
+   "Maynaguri",
+   "Dhupguri",
+   "Falakata",
+   "Cooch Behar"
+  ],
+  "duration_min": 480,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Balurghat",
+  "destination": "Jalpaiguri",
+  "stops": [
+   "Balurghat",
+   "Gangarampur",
+   "Buniadpur",
+   "Gazole",
+   "Raiganj",
+   "Islampur",
+   "Siliguri",
+   "Fulbari",
+   "Jalpaiguri"
+  ],
+  "duration_min": 360,
+  "source": "WB State Transport Corporation Official Operative Corridor"
+ },
+ {
+  "origin": "Balurghat",
+  "destination": "Ranaghat",
+  "stops": [
+   "Balurghat",
+   "Gangarampur",
+   "Buniadpur",
+   "Gazole",
+   "Malda Town",
+   "Farakka",
+   "Berhampore",
+   "Krishnanagar",
+   "Ranaghat"
+  ],
+  "duration_min": 480,
+  "source": "WB State Transport Corporation Official Operative Corridor"
  }
 ]

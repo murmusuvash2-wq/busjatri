@@ -19,6 +19,19 @@ import os
 import html
 from collections import Counter, defaultdict
 from datetime import datetime
+from pathlib import Path
+import sys
+
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+from scripts.geo.route_geo import (
+    calculate_route_distance,
+    calculate_fare,
+    calculate_approx_time,
+    format_duration,
+)
 
 
 DATA = "data/busjatri_data.json"
@@ -860,6 +873,21 @@ def generate_route_page(origin, destination, buses):
     canonical = f"{BASE}/bus-time-table/{_clean_url(filename)}"
     major_stops = stoppage_summary(buses)
 
+    all_stops = []
+    for b in buses:
+        for s in (b.get("stoppages") or []):
+            st_name = s.get("name") if isinstance(s, dict) else str(s)
+            if st_name and st_name not in all_stops:
+                all_stops.append(st_name)
+
+    dist_km = calculate_route_distance(all_stops, origin, destination)
+    fare_info = calculate_fare(dist_km) if dist_km else None
+
+    if (not duration or dur_text == "—") and dist_km:
+        est_mins = calculate_approx_time(dist_km)
+        if est_mins:
+            dur_text = fmt_duration(est_mins)
+
     faqs = [
         (f"What is the first bus from {d_origin} to {d_destination}?",
          f"The first bus departs at {first}." if stats["first"] is not None else "Check the timetable above."),
@@ -868,6 +896,30 @@ def generate_route_page(origin, destination, buses):
         (f"How many buses run from {d_origin} to {d_destination}?",
          f"{count} bus " + ('service is' if count == 1 else 'services are') + " listed on this route."),
     ]
+    if dist_km:
+        faqs.append((
+            f"What is the distance from {d_origin} to {d_destination} by bus?",
+            f"The road distance from {d_origin} to {d_destination} is approximately {dist_km} km."
+        ))
+    if fare_info:
+        faqs.append((
+            f"What is the bus fare from {d_origin} to {d_destination}?",
+            f"The estimated bus fare from {d_origin} to {d_destination} is {fare_info['label_en']} (Ordinary/Express stage carriage)."
+        ))
+
+    schips = [f'<span class="schip">🚌 {count} bus{"es" if count != 1 else ""}</span>']
+    if stats["first"] is not None:
+        schips.append(f'<span class="schip hot">⏰ First {esc(first)}</span>')
+    if stats["last"] is not None:
+        schips.append(f'<span class="schip">⏰ Last {esc(last)}</span>')
+    if dur_text and dur_text != "—":
+        schips.append(f'<span class="schip">⏱ ~{esc(dur_text)}</span>')
+    if dist_km:
+        schips.append(f'<span class="schip">📏 ~{dist_km} km</span>')
+    if fare_info:
+        schips.append(f'<span class="schip">💰 {esc(fare_info["label_en"])}</span>')
+
+    schips_html = "\n    ".join(schips)
 
     bn_sub = f'<p class="bn-sub">{esc(route_bn)} বাসের সময়সূচী</p>' if route_bn else ""
     hero = f"""<div class="crumbs"><a href="../">Home</a> › <a href="./">Bus Timetable</a> › <span>{esc(d_origin)} → {esc(d_destination)}</span></div>
@@ -875,10 +927,7 @@ def generate_route_page(origin, destination, buses):
   <h1>{esc(d_origin)} <span class="arr">→</span> {esc(d_destination)}</h1>
   {bn_sub}
   <div class="stat-chips">
-    <span class="schip">🚌 {count} bus{'es' if count != 1 else ''}</span>
-    <span class="schip hot">⏰ First {esc(first)}</span>
-    <span class="schip">⏰ Last {esc(last)}</span>
-    <span class="schip">⏱ ~{esc(dur_text)}</span>
+    {schips_html}
   </div>
 </div>"""
 
@@ -1417,12 +1466,13 @@ for letter in _az_letters:
             if len(place_buses.get(p, [])) >= PLACE_PAGE_MIN_BUSES
             else f'<span class="pr-name">{esc(p)}</span>'
         )
+        _routes_s = "s" if len(rs) != 1 else ""
         _az_groups_html.append(
             f'<div class="place-row" data-place="{esc(p)}">'
             f'<div class="pr-head" onclick="togglePlace(this,event)">'
             f'<span class="pr-dots"></span>'
             f'{_name_html}'
-            f'<span class="pr-n">{len(rs)} route{'s' if len(rs) != 1 else ''}</span>'
+            f'<span class="pr-n">{len(rs)} route{_routes_s}</span>'
             f'<svg class="pr-chev" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>'
             f'</div><div class="pr-body"><div class="pr-inner"></div></div></div>'
         )

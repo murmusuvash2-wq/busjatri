@@ -1,0 +1,2 @@
+feed_publisher_name,feed_publisher_url,feed_lang,default_lang,feed_start_date,feed_end_date,feed_version
+BusJatri Open Transit Initiative,https://busjatri.in,en,bn,20260101,20261231,2026.10

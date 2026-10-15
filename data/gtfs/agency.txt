@@ -1,0 +1,6 @@
+agency_id,agency_name,agency_url,agency_timezone,agency_lang,agency_phone
+SBSTC,South Bengal State Transport Corporation,https://online.sbstc.com,Asia/Kolkata,bn,0343-2556442
+WBTC,West Bengal Transport Corporation,https://wbtc.co.in,Asia/Kolkata,bn,033-22361916
+NBSTC,North Bengal State Transport Corporation,https://nbstc.in,Asia/Kolkata,bn,03582-222479
+CSTC,Calcutta State Transport Corporation,https://wbtc.co.in,Asia/Kolkata,bn,033-22361916
+PRIVATE,Private Stage Carriage Operators,https://busjatri.in,Asia/Kolkata,bn,busjatri@zohomail.in

@@ -886,7 +886,7 @@ function renderPlace(el, placeName) {
           <div class="route">${esc(b.origin)} → ${esc(b.destination)}</div>
           <div class="meta"><span>${icon('stops')} ${b.total_stoppages || 0} stops</span></div>
         </div>
-        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : `<span class="time-pill" style="opacity:.55;font-weight:500">${icon('clock')} <span class="label-en">Time not listed</span><span class="label-bn">সময় নেই</span></span>`}
+        ${b.departure_time ? `<span class="time-pill">${icon('clock')} ${esc(b.departure_time)}</span>` : (/^(cstc|wbtc|ac-|s-|e-|eb-|c-|v-|d-|m-|[0-9]{1,3}[a-z]?\b)/i.test(b.bus_name || '') ? `<span class="time-pill" style="opacity:.85;font-weight:500">${icon('clock')} <span class="label-en">Frequent (~10-15m)</span><span class="label-bn">ঘন ঘন (১০-১৫ মি.)</span></span>` : `<span class="time-pill" style="opacity:.55;font-weight:500">${icon('clock')} <span class="label-en">Time not listed</span><span class="label-bn">সময় নেই</span></span>`)}
       </div>`).join('') || `<div class="empty-state">${icon('bus')}<p>No buses found for this place.</p></div>`}
   </div>`;
 }

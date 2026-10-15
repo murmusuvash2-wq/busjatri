@@ -6,7 +6,11 @@
  "Ahiritola": {},
  "Airport": {},
  "Airport Domestic Terminus": {},
- "Airport Gate 1": {},
+ "Airport Gate 1": {
+  "lat": 22.647,
+  "lon": 88.441,
+  "source": "ktr"
+ },
  "Airport Gate 3": {},
  "Airport Gate No. 1": {},
  "Airport Terminal": {},
@@ -16,8 +20,17 @@
  "Akra Rabindra Nagar": {},
  "Alampur": {},
  "Aliah University": {},
- "Alipore Zoo": {},
- "Alipurduar": {},
+ "Alipore Zoo": {
+  "lat": 22.536,
+  "lon": 88.332,
+  "source": "ktr"
+ },
+ "Alipurduar": {
+  "lat": 26.4919,
+  "lon": 89.5271,
+  "district": "Alipurduar",
+  "source": "wb_hubs"
+ },
  "Amity University": {},
  "Amlai": {},
  "Amlasuli": {},
@@ -34,7 +47,12 @@
  },
  "Andul Station": {},
  "Aquatica": {},
- "Arambag": {},
+ "Arambag": {
+  "lat": 22.8833,
+  "lon": 87.7833,
+  "district": "Hooghly",
+  "source": "wb_hubs"
+ },
  "Arambagh": {
   "district": "Purba Bardhaman",
   "lat": 22.88333,
@@ -62,7 +80,11 @@
  "Aurangabad Bihar": {},
  "Aushbali": {},
  "B Garden": {},
- "BBD Bag": {},
+ "BBD Bag": {
+  "lat": 22.5697,
+  "lon": 88.3486,
+  "source": "ktr"
+ },
  "BNR Hospital": {},
  "BT College": {},
  "Babughat": {},
@@ -79,8 +101,16 @@
  },
  "Badartala": {},
  "Baduria": {},
- "Bagbazar": {},
- "Baghajatin": {},
+ "Bagbazar": {
+  "lat": 22.601,
+  "lon": 88.365,
+  "source": "ktr"
+ },
+ "Baghajatin": {
+  "lat": 22.479,
+  "lon": 88.387,
+  "source": "ktr"
+ },
  "Baghmundi": {
   "district": "Purulia",
   "lat": 23.18982,
@@ -92,7 +122,11 @@
   "lon": 88.13856
  },
  "Bagpota": {},
- "Baguiati": {},
+ "Baguiati": {
+  "lat": 22.613,
+  "lon": 88.431,
+  "source": "ktr"
+ },
  "Baharagora": {
   "lat": 22.27507,
   "lon": 86.71826
@@ -145,11 +179,20 @@
   "lon": 87.553354
  },
  "Ballygunge": {},
- "Ballygunge Station": {},
+ "Ballygunge Station": {
+  "lat": 22.529,
+  "lon": 88.365,
+  "source": "ktr"
+ },
  "Ballyhalt": {},
  "Ballykhal": {},
  "Baluhati": {},
- "Balurghat": {},
+ "Balurghat": {
+  "lat": 25.2216,
+  "lon": 88.7644,
+  "district": "Dakshin Dinajpur",
+  "source": "wb_hubs"
+ },
  "Bandha Ghat": {},
  "Bandowan": {},
  "Banduan": {},
@@ -164,7 +207,11 @@
   "lat": 23.04553,
   "lon": 88.83084
  },
- "Bangur Avenue": {},
+ "Bangur Avenue": {
+  "lat": 22.616,
+  "lon": 88.406,
+  "source": "ktr"
+ },
  "Bankra Bazar": {},
  "Bankura": {
   "district": "Bankura",
@@ -172,7 +219,11 @@
   "lon": 87.0716
  },
  "Bankura Bus Stand": {},
- "Bansdroni": {},
+ "Bansdroni": {
+  "lat": 22.48,
+  "lon": 88.365,
+  "source": "ktr"
+ },
  "Banspahari": {
   "lat": 24.42478,
   "lon": 87.53114
@@ -227,18 +278,35 @@
  "Baruipur A.C": {},
  "Baruipur New Terminus": {},
  "Basanti": {},
- "Basirhat": {},
+ "Basirhat": {
+  "lat": 22.6574,
+  "lon": 88.8914,
+  "district": "North 24 Parganas",
+  "source": "wb_hubs"
+ },
  "Basubati Darbar Sharif": {},
  "Batanagar": {},
  "Begunkodor": {},
  "Behala": {},
- "Behala 14 No": {},
+ "Behala 14 No": {
+  "lat": 22.506,
+  "lon": 88.317,
+  "source": "ktr"
+ },
  "Behala Airport": {},
- "Behala Chowrasta": {},
+ "Behala Chowrasta": {
+  "lat": 22.498,
+  "lon": 88.311,
+  "source": "ktr"
+ },
  "Behala Chowrastha": {},
  "Bejra": {},
  "Beleghata Building": {},
- "Belgachia": {},
+ "Belgachia": {
+  "lat": 22.601,
+  "lon": 88.385,
+  "source": "ktr"
+ },
  "Belgharia": {},
  "Belgharia Rathtala": {},
  "Belgharia Station": {},
@@ -260,7 +328,12 @@
  "Beraberi": {},
  "Berachampa": {},
  "Berada": {},
- "Berhampore": {},
+ "Berhampore": {
+  "lat": 24.0988,
+  "lon": 88.268,
+  "district": "Murshidabad",
+  "source": "wb_hubs"
+ },
  "Berhampur": {},
  "Beri Gopalpur": {},
  "Bhagabanpur": {
@@ -317,9 +390,18 @@
   "lat": 23.66278,
   "lon": 87.69695
  },
- "Bongaon": {},
+ "Bongaon": {
+  "lat": 23.0437,
+  "lon": 88.8266,
+  "district": "North 24 Parganas",
+  "source": "wb_hubs"
+ },
  "Bongaon 1 No Railgate Petrol Pump": {},
- "Bonhooghly": {},
+ "Bonhooghly": {
+  "lat": 22.636,
+  "lon": 88.382,
+  "source": "ktr"
+ },
  "Boyra": {},
  "Brahmandiha": {},
  "Budbud": {
@@ -328,9 +410,19 @@
   "lon": 87.53895
  },
  "Buglidih": {},
- "Burdwan": {},
+ "Burdwan": {
+  "lat": 23.2324,
+  "lon": 87.8615,
+  "district": "Purba Bardhaman",
+  "source": "wb_hubs"
+ },
  "Burul": {},
- "Canning": {},
+ "Canning": {
+  "lat": 22.3094,
+  "lon": 88.6575,
+  "district": "South 24 Parganas",
+  "source": "wb_hubs"
+ },
  "Chaital Ghat": {},
  "Chaitanyapur": {
   "lat": 22.136048,
@@ -380,7 +472,11 @@
   "lon": 86.883144
  },
  "China Mandir": {},
- "Chingrighata": {},
+ "Chingrighata": {
+  "lat": 22.578,
+  "lon": 88.415,
+  "source": "ktr"
+ },
  "Chinsurah Court": {},
  "Chirkunda": {
   "lat": 23.74771,
@@ -403,9 +499,23 @@
   "lat": 21.77985,
   "lon": 87.74892
  },
- "Cooch Behar": {},
- "Coochbehar": {},
- "Cossipore": {},
+ "Cooch Behar": {
+  "lat": 26.3239,
+  "lon": 89.4511,
+  "district": "Cooch Behar",
+  "source": "wb_hubs"
+ },
+ "Coochbehar": {
+  "lat": 26.3239,
+  "lon": 89.4511,
+  "district": "Cooch Behar",
+  "source": "wb_hubs"
+ },
+ "Cossipore": {
+  "lat": 22.615,
+  "lon": 88.368,
+  "source": "ktr"
+ },
  "Dahighat": {},
  "Dainhat": {
   "district": "Nadia",
@@ -433,7 +543,12 @@
  },
  "Dantol": {},
  "Darbhanga Bihar": {},
- "Darjeeling": {},
+ "Darjeeling": {
+  "lat": 27.041,
+  "lon": 88.2663,
+  "district": "Darjeeling",
+  "source": "wb_hubs"
+ },
  "Daroka": {},
  "Dasghara": {},
  "Dasnagar": {},
@@ -452,7 +567,11 @@
   "lat": 22.78333,
   "lon": 86.5
  },
- "Dhakuria": {},
+ "Dhakuria": {
+  "lat": 22.504,
+  "lon": 88.368,
+  "source": "ktr"
+ },
  "Dhaldanga": {
   "lat": 23.204846,
   "lon": 87.069666
@@ -473,7 +592,12 @@
  "Dhuliyan": {},
  "Dhumsai": {},
  "Diamond": {},
- "Diamond Harbour": {},
+ "Diamond Harbour": {
+  "lat": 22.1912,
+  "lon": 88.1903,
+  "district": "South 24 Parganas",
+  "source": "wb_hubs"
+ },
  "Digha": {
   "district": "Purba Medinipur",
   "lat": 21.62776,
@@ -496,7 +620,11 @@
  "Dostipur": {},
  "Dum Dum": {},
  "Dum Dum 11A Stand": {},
- "Dumdum": {},
+ "Dumdum": {
+  "lat": 22.642,
+  "lon": 88.431,
+  "source": "ktr"
+ },
  "Dumdum Canton": {},
  "Dumdum Cantonment": {},
  "Dumdum Station": {},
@@ -512,7 +640,12 @@
   "lat": 22.07576,
   "lon": 88.13747
  },
- "Durgapur": {},
+ "Durgapur": {
+  "lat": 23.5204,
+  "lon": 87.3119,
+  "district": "Paschim Bardhaman",
+  "source": "wb_hubs"
+ },
  "Durgapur (City Center)": {
   "lat": 23.495046,
   "lon": 87.297902
@@ -526,7 +659,11 @@
   "lat": 21.89947,
   "lon": 87.53794
  },
- "Esplanade": {},
+ "Esplanade": {
+  "lat": 22.5645,
+  "lon": 88.351,
+  "source": "ktr"
+ },
  "Falta": {},
  "Falta Sector 1": {},
  "Farakka": {
@@ -570,7 +707,11 @@
  },
  "Garia A.C": {},
  "Garia Bus Stand": {},
- "Garia Metro": {},
+ "Garia Metro": {
+  "lat": 22.468,
+  "lon": 88.397,
+  "source": "ktr"
+ },
  "Garia Station": {},
  "Gayeshpur": {},
  "Gazole": {},
@@ -597,7 +738,11 @@
  },
  "Gogra": {},
  "Golf Green": {},
- "Golpark": {},
+ "Golpark": {
+  "lat": 22.513,
+  "lon": 88.365,
+  "source": "ktr"
+ },
  "Gomunda": {},
  "Gopalganj Bihar": {},
  "Gopalnagar": {
@@ -680,8 +825,16 @@
   "lon": 88.31857
  },
  "Howrah Fire Station": {},
- "Howrah Maidan": {},
- "Howrah Station": {},
+ "Howrah Maidan": {
+  "lat": 22.589,
+  "lon": 88.334,
+  "source": "ktr"
+ },
+ "Howrah Station": {
+  "lat": 22.5838,
+  "lon": 88.3426,
+  "source": "ktr"
+ },
  "Howrah Station to": {},
  "Hura": {
   "district": "Purulia",
@@ -706,7 +859,11 @@
  },
  "Itaberia": {},
  "Jadavpore": {},
- "Jadavpur 8B": {},
+ "Jadavpur 8B": {
+  "lat": 22.497,
+  "lon": 88.371,
+  "source": "ktr"
+ },
  "Jagardanga": {},
  "Jagatballavpur": {},
  "Jaguli": {},
@@ -715,7 +872,12 @@
   "lat": 21.79749,
   "lon": 87.220491
  },
- "Jalpaiguri": {},
+ "Jalpaiguri": {
+  "lat": 26.5414,
+  "lon": 88.7196,
+  "district": "Jalpaiguri",
+  "source": "wb_hubs"
+ },
  "Jamirgachi": {},
  "Jamtora": {},
  "Jamtoria": {
@@ -753,7 +915,11 @@
  },
  "Jibantala": {},
  "Jirat": {},
- "Jodhpur Park": {},
+ "Jodhpur Park": {
+  "lat": 22.5055,
+  "lon": 88.3635,
+  "source": "ktr"
+ },
  "Joka": {},
  "Joka Bridge": {},
  "Joka Depot": {},
@@ -805,7 +971,11 @@
   "lon": 87.85641
  },
  "Kamardanga": {},
- "Kamarhati": {},
+ "Kamarhati": {
+  "lat": 22.672,
+  "lon": 88.376,
+  "source": "ktr"
+ },
  "Kamarpukur": {
   "district": "South 24 Parganas",
   "lat": 22.23121,
@@ -821,7 +991,11 @@
  "Kandra": {},
  "Kankardanga": {},
  "Kankrajhore": {},
- "Kankurgachi": {},
+ "Kankurgachi": {
+  "lat": 22.58,
+  "lon": 88.396,
+  "source": "ktr"
+ },
  "Kanmari Bazar": {},
  "Kantakhali": {},
  "Kantore": {},
@@ -893,7 +1067,11 @@
  },
  "Khudiram Park": {},
  "Khudiram Park (Sarsuna)": {},
- "Kidderpore": {},
+ "Kidderpore": {
+  "lat": 22.538,
+  "lon": 88.332,
+  "source": "ktr"
+ },
  "Kirnahar": {
   "district": "Birbhum",
   "lat": 23.75802,
@@ -1080,7 +1258,12 @@
  },
  "Metiabruz": {},
  "Metiabruz Ssp Hospital": {},
- "Midnapore": {},
+ "Midnapore": {
+  "lat": 22.4257,
+  "lon": 87.3199,
+  "district": "Paschim Medinipur",
+  "source": "wb_hubs"
+ },
  "Midnapore Town": {},
  "Midnapur": {},
  "Milan More": {},
@@ -1136,7 +1319,11 @@
  },
  "Nadihi": {},
  "Nagar": {},
- "Nager Bazar": {},
+ "Nager Bazar": {
+  "lat": 22.63,
+  "lon": 88.42,
+  "source": "ktr"
+ },
  "Nahata": {},
  "Naihati": {},
  "Naihati Station": {},
@@ -1166,12 +1353,24 @@
  "Nazipur": {},
  "Neilgunj": {},
  "Neradeul": {},
- "Netaji Nagar": {},
- "New Alipore": {},
+ "Netaji Nagar": {
+  "lat": 22.483,
+  "lon": 88.362,
+  "source": "ktr"
+ },
+ "New Alipore": {
+  "lat": 22.504,
+  "lon": 88.332,
+  "source": "ktr"
+ },
  "New Barrackpore": {},
  "New Town": {},
  "New Town (Sapoorji)": {},
- "Newtown": {},
+ "Newtown": {
+  "lat": 22.581,
+  "lon": 88.464,
+  "source": "ktr"
+ },
  "Newtown Bus Stand": {},
  "Nilgunge": {},
  "Nimpith": {},
@@ -1227,8 +1426,16 @@
  },
  "Parasidanga": {},
  "Pardankuni": {},
- "Park Circus": {},
- "Park Street": {},
+ "Park Circus": {
+  "lat": 22.539,
+  "lon": 88.367,
+  "source": "ktr"
+ },
+ "Park Street": {
+  "lat": 22.553,
+  "lon": 88.352,
+  "source": "ktr"
+ },
  "Parnashree": {},
  "Parnashri": {},
  "Parnasree": {},
@@ -1245,8 +1452,16 @@
   "lat": 23.217327,
   "lon": 87.536508
  },
- "Patuli": {},
- "Phoolbagan": {},
+ "Patuli": {
+  "lat": 22.472,
+  "lon": 88.394,
+  "source": "ktr"
+ },
+ "Phoolbagan": {
+  "lat": 22.576,
+  "lon": 88.392,
+  "source": "ktr"
+ },
  "Picnic Garden": {},
  "Polerhat": {},
  "Pratap Dighi": {
@@ -1262,7 +1477,11 @@
   "lon": 86.36303
  },
  "Rabindra Nagar": {},
- "Rabindra Sadan": {},
+ "Rabindra Sadan": {
+  "lat": 22.544,
+  "lon": 88.347,
+  "source": "ktr"
+ },
  "Radhanagar": {
   "district": "Bankura",
   "lat": 23.15462,
@@ -1286,7 +1505,11 @@
   "lat": 22.79866,
   "lon": 86.95145
  },
- "Rajabazar": {},
+ "Rajabazar": {
+  "lat": 22.579,
+  "lon": 88.376,
+  "source": "ktr"
+ },
  "Rajabazar Tram Depot": {},
  "Rajarhat": {},
  "Rajbalhat": {},
@@ -1345,7 +1568,11 @@
   "lon": 87.13061
  },
  "Ranihati": {},
- "Rashbehari": {},
+ "Rashbehari": {
+  "lat": 22.514,
+  "lon": 88.353,
+  "source": "ktr"
+ },
  "Raskundu": {
   "lat": 22.839261,
   "lon": 87.346336
@@ -1392,7 +1619,11 @@
  },
  "Saiyadpara": {},
  "Sajirhat": {},
- "Sakher Bazar": {},
+ "Sakher Bazar": {
+  "lat": 22.486,
+  "lon": 88.309,
+  "source": "ktr"
+ },
  "Salap": {},
  "Salar": {
   "district": "Murshidabad",
@@ -1404,7 +1635,11 @@
  "Saltlake": {},
  "Saltlake 206": {},
  "Saltlake Karunamoyee": {},
- "Saltlake Stadium": {},
+ "Saltlake Stadium": {
+  "lat": 22.57,
+  "lon": 88.405,
+  "source": "ktr"
+ },
  "Salugara": {},
  "Saluka": {},
  "Samaspur": {
@@ -1440,13 +1675,21 @@
  "Sasthir More": {},
  "Satyabala": {},
  "Sautia": {},
- "Science City": {},
+ "Science City": {
+  "lat": 22.54,
+  "lon": 88.395,
+  "source": "ktr"
+ },
  "Sealdah": {
   "district": "Kolkata",
   "lat": 22.56263,
   "lon": 88.36304
  },
- "Sector V": {},
+ "Sector V": {
+  "lat": 22.576,
+  "lon": 88.432,
+  "source": "ktr"
+ },
  "Sehara Bazar": {},
  "Serampore": {},
  "Shakuntala Park": {},
@@ -1502,7 +1745,11 @@
   "lon": 87.07183
  },
  "Sindurpeti": {},
- "Sinthi": {},
+ "Sinthi": {
+  "lat": 22.623,
+  "lon": 88.387,
+  "source": "ktr"
+ },
  "Sishu Mangal": {},
  "Sitalia": {},
  "Sodepur Girja": {},
@@ -1556,14 +1803,23 @@
  "Tangrakhali": {},
  "Tapan": {},
  "Tarakeshwar": {},
- "Tarakeswar": {},
+ "Tarakeswar": {
+  "lat": 22.8869,
+  "lon": 88.0203,
+  "district": "Hooghly",
+  "source": "wb_hubs"
+ },
  "Taranipur": {},
  "Tarapith": {
   "district": "Birbhum",
   "lat": 24.11197,
   "lon": 87.7972
  },
- "Taratala": {},
+ "Taratala": {
+  "lat": 22.516,
+  "lon": 88.312,
+  "source": "ktr"
+ },
  "Tarkeshwar": {
   "lat": 22.882582,
   "lon": 88.013437
@@ -1580,9 +1836,17 @@
   "lat": 24.02,
   "lon": 87.59609
  },
- "Thakurpukur": {},
+ "Thakurpukur": {
+  "lat": 22.467,
+  "lon": 88.305,
+  "source": "ktr"
+ },
  "Tikiapara": {},
- "Tollygunge": {},
+ "Tollygunge": {
+  "lat": 22.501,
+  "lon": 88.346,
+  "source": "ktr"
+ },
  "Tollygunge Metro": {},
  "Topsia": {},
  "Trilochanpur": {},
@@ -1595,7 +1859,11 @@
   "lat": 23.653692,
   "lon": 87.232537
  },
- "Ultadanga": {},
+ "Ultadanga": {
+  "lat": 22.591,
+  "lon": 88.399,
+  "source": "ktr"
+ },
  "Ultadanga - Salt Lake-Ultadanga": {},
  "Uluberia": {
   "district": "South 24 Parganas",

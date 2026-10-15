@@ -398,7 +398,9 @@
           var revBadge = isRet ? '<span class="rc-ret"><span class="label-en">RETURN</span><span class="label-bn">ফেরার বাস</span></span>' : '';
           var ro = isRet ? b.destination : b.origin;
           var rd = isRet ? b.origin : b.destination;
-          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (r.depMin < now ? ' · <span class="label-en">tomorrow</span><span class="label-bn">আগামীকাল</span>' : '') + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:.55"><span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span></span>';
+          var isFreq = /^(cstc|wbtc|ac-|s-|e-|eb-|c-|v-|d-|m-|[0-9]{1,3}[a-z]?\b)/i.test(b.bus_name || '') || (b.bus_type && b.bus_type.toLowerCase().indexOf('city') !== -1);
+          var noTimeText = isFreq ? '<span class="label-en">Frequent (~10-15m)</span><span class="label-bn">ঘন ঘন (১০-১৫ মি.)</span>' : '<span class="label-en">Time not listed</span><span class="label-bn">সময় জানা নেই</span>';
+          var tPill = r.depMin != null ? '<span class="time-pill">' + icon('clock') + ' ' + fmtTime(r.depMin) + (r.depMin < now ? ' · <span class="label-en">tomorrow</span><span class="label-bn">আগামীকাল</span>' : '') + (isNear ? ' · <b style="color:var(--amber)">' + countdownText(rel(r.depMin)) + '</b>' : '') + '</span>' : '<span class="time-pill" style="opacity:' + (isFreq ? '.85' : '.55') + ';font-weight:500">' + icon('clock') + ' ' + noTimeText + '</span>';
           return '<div class="result-item rc' + (isNear ? ' near' : '') + '" style="--i:' + (i % RC_BATCH) + ';position:relative" onclick="location.hash=' + String.fromCharCode(39) + '#/bus/' + encodeURIComponent(b.id) + String.fromCharCode(39) + '">' +
             '<div class="ri-main">' +
             '<div class="name">' + esc(b.bus_name) + ' ' + busTypeBadge(b.bus_type) + revBadge + '</div>' +

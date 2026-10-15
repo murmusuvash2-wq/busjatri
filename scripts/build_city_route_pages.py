@@ -204,8 +204,12 @@ def private_page(o, d, buses, others):
     desc = (f'{o} to {d} {rn} Kolkata city bus route — route stops and timetable status. '
             f'{n} stoppages listed. English and Bengali route details on BusJatri.')[:300]
     canonical = f'{BASE}/bus-time-table/{slug(o)}-to-{slug(d)}'
-    li = ''.join(f'<li class="{"end" if i in (0, n-1) else ""}"><span class="dot"></span><span class="sn">{esc(s)}</span>'
-                 f'{f"<span class=\'bn\'>{esc(bn(s))}</span>" if bn(s) else ""}</li>' for i, s in enumerate(stops))
+    items = []
+    for i, s in enumerate(stops):
+        cls_end = ' class="end"' if i in (0, n - 1) else ''
+        bn_str = f"<span class='bn'>{esc(bn(s))}</span>" if bn(s) else ""
+        items.append(f'<li{cls_end}><span class="dot"></span><span class="sn">{esc(s)}</span>{bn_str}</li>')
+    li = ''.join(items)
     body = (f'<div class="crumb"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / <span>{esc(rn)}</span></div>'
             f'<section class="hero"><span class="eyebrow">Kolkata city bus</span>'
             f'<h1><span class="rcode">{esc(rn)}</span>{esc(o)} <span class="bi">⇄</span> {esc(d)}</h1>'

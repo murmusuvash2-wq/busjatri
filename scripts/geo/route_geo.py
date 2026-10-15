@@ -83,9 +83,18 @@ ALIASES = {
     "sealdah": "kolkata",
     "contai": "kanthi",
     "berhampore": "baharampur",
+    "berhampur": "baharampur",
     "burdwan": "bardhaman",
     "burdwan-nawabhat": "bardhaman",
+    "barddhaman": "bardhaman",
+    "midnapore": "medinipur",
+    "midnapur": "medinipur",
+    "coochbehar": "cooch-behar",
+    "koch-bihar": "cooch-behar",
+    "siliguri-tenzing-norgay": "siliguri",
+    "siliguri-junction": "siliguri",
     "tarakeshwar": "tarakeswar",
+    "arambagh": "arambag",
 }
 
 
@@ -140,29 +149,41 @@ def calculate_route_distance(stoppages, origin=None, destination=None):
     """Estimates road distance in km for a sequence of stops.
 
     Applies road tortuosity/winding factor (1.25) over geographic points.
-    Falls back to origin-destination distance if intermediate coords are sparse.
+    Filters out outlier geocodes that stray far outside the origin-destination corridor.
+    Guarantees consistency against origin-destination baseline.
     """
     pts = calculate_route_polyline(stoppages)
 
-    # If intermediate stops had few coords, ensure origin and destination are counted
-    if origin and destination and (len(pts) < 2):
-        co = get_stop_coords(origin)
-        cd = get_stop_coords(destination)
-        if co and cd:
-            pts = [[co[0], co[1]], [cd[0], cd[1]]]
+    co = get_stop_coords(origin) if origin else None
+    cd = get_stop_coords(destination) if destination else None
+    od_road_km = None
+    if co and cd:
+        od_road_km = round(haversine_km(co[0], co[1], cd[0], cd[1]) * 1.25, 1)
+
+    # Filter out outlier intermediate points that lie far outside the origin-destination corridor
+    if co and cd:
+        min_lat = min(co[0], cd[0]) - 0.4
+        max_lat = max(co[0], cd[0]) + 0.4
+        min_lon = min(co[1], cd[1]) - 0.4
+        max_lon = max(co[1], cd[1]) + 0.4
+        pts = [p for p in pts if min_lat <= p[0] <= max_lat and min_lon <= p[1] <= max_lon]
+        # Anchor endpoints
+        pts = [[co[0], co[1]]] + [p for p in pts if p != [co[0], co[1]] and p != [cd[0], cd[1]]] + [[cd[0], cd[1]]]
 
     if len(pts) < 2:
-        return None
+        return od_road_km
 
     total_km = 0.0
     for i in range(len(pts) - 1):
         d = haversine_km(pts[i][0], pts[i][1], pts[i + 1][0], pts[i + 1][1])
         # Ignore spurious jumps > 150km for single local stop hops
-        if d < 200:
+        if d < 120:
             total_km += d
 
-    # Road distance is typically 20-30% longer than straight line in Bengal plains
     road_km = round(total_km * 1.25, 1)
+    if od_road_km:
+        road_km = max(road_km, od_road_km)
+
     return road_km if road_km >= 3.0 else None
 
 

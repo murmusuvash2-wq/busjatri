@@ -1,0 +1,616 @@
+stop_id,stop_name,stop_lat,stop_lon,zone_id
+adra,Adra,23.49668,86.68363,adra
+ahmadpur,Ahmadpur,23.83009,87.68661,ahmadpur
+akui,Akui,23.109134,87.729221,akui
+amarkanan,Amarkanan,23.394528,87.110195,amarkanan
+ambika-nagar,Ambika Nagar,22.515408,88.36407,ambika-nagar
+amdiha,Amdiha,25.09396,87.18869,amdiha
+amlagora,Amlagora,22.84616,87.33559,amlagora
+amta,Amta,22.58344,88.01039,amta
+anandapur,Anandapur,26.36892,89.85923,anandapur
+anara,Anara,23.481082,86.559763,anara
+andal,Andal,23.58013,87.1832,andal
+arambagh,Arambagh,22.88333,87.78333,arambagh
+argoal,Argoal,21.96939,87.63398,argoal
+arrah,Arrah,23.524431,87.371206,arrah
+arsha,Arsha,23.32663,86.17329,arsha
+asansol,Asansol,23.68333,86.98333,asansol
+babuijore,Babuijore,23.79055,87.26908,babuijore
+badanganj,Badanganj,22.9023,87.54214,badanganj
+bagda,Bagda,23.19706,86.68703,bagda
+baghmundi,Baghmundi,23.18982,86.05547,baghmundi
+bagnan,Bagnan,22.93338,88.13856,bagnan
+bagula,Bagula,23.33664,88.64109,bagula
+baharagora,Baharagora,22.27507,86.71826,baharagora
+baharampur,Baharampur,24.10473,88.25155,baharampur
+baidyabati,Baidyabati,22.78498,88.32586,baidyabati
+baidyanathpur,Baidyanathpur,22.42526,87.97528,baidyanathpur
+bainchi,Bainchi,22.8622,88.2686,bainchi
+bajitpur,Bajitpur,22.88896,88.13488,bajitpur
+bajkul,Bajkul,22.024535,87.821415,bajkul
+baksi,Baksi,22.527917,88.347462,baksi
+balarampur,Balarampur,23.09714,86.22292,balarampur
+baleshwar,Baleshwar,21.49266,86.93348,baleshwar
+balgona,Balgona,23.45805,87.950456,balgona
+balichak,Balichak,22.358186,87.553354,balichak
+bally,Bally,22.64859,88.34115,bally
+balsi,Balsi,23.15454,87.524861,balsi
+bamundiha,Bamundiha,23.11765,86.36607,bamundiha
+bandwan,Bandwan,22.78333,86.5,bandwan
+bangaon,Bangaon,23.04553,88.83084,bangaon
+bangla,Bangla,22.273126,88.172396,bangla
+bankadaha,Bankadaha,22.97927,87.35787,bankadaha
+bankati,Bankati,23.771835,87.279725,bankati
+bankura,Bankura,23.23241,87.0716,bankura
+banspahari,Banspahari,24.42478,87.53114,banspahari
+bara-andulia,Bara Andulia,22.575169,88.239643,bara-andulia
+barabazar,Barabazar,23.0279,86.36069,barabazar
+barakar,Barakar,23.741683,86.818859,barakar
+barasat,Barasat,22.72154,88.48198,barasat
+bardhaman,Bardhaman,23.25572,87.85691,bardhaman
+barikul,Barikul,22.765733,86.799454,barikul
+baripada,Baripada,21.922741,86.73709,baripada
+barjora,Barjora,23.42754,87.29037,barjora
+barrackpore,Barrackpore,22.761065,88.371428,barrackpore
+baruipur,Baruipur,22.36544,88.4325,baruipur
+basudebpur,Basudebpur,21.82014,87.62916,basudebpur
+belatikri,Belatikri,24.97843,84.981353,belatikri
+belda,Belda,22.08427,87.35204,belda
+beldanga,Beldanga,23.93428,88.26018,beldanga
+beliatore,Beliatore,23.32052,87.22081,beliatore
+belpahari,Belpahari,22.63207,86.76426,belpahari
+belut,Belut,23.216426,87.586585,belut
+benachity,Benachity,23.561689,87.274961,benachity
+bengai,Bengai,22.936991,87.669869,bengai
+beta,Beta,22.92074,88.23425,beta
+bethuadahari,Bethuadahari,23.610275,88.384597,bethuadahari
+bhadrak,Bhadrak,21.091746,86.516231,bhadrak
+bhadreswar,Bhadreswar,22.82449,88.33841,bhadreswar
+bhadutala,Bhadutala,22.485657,87.3208,bhadutala
+bhagabanpur,Bhagabanpur,24.78772,88.01242,bhagabanpur
+bhairabdanga,Bhairabdanga,24.74574,87.87515,bhairabdanga
+bhatar,Bhatar,23.41251,87.91529,bhatar
+bhimpur,Bhimpur,24.50988,87.92536,bhimpur
+bhubaneswar,Bhubaneswar,26.388205,89.494466,bhubaneswar
+bibarda,Bibarda,22.152958,88.08753,bibarda
+bibhishanpur,Bibhishanpur,22.084895,87.689616,bibhishanpur
+bikrampur,Bikrampur,22.73455,87.006304,bikrampur
+binpur,Binpur,22.58132,86.92072,binpur
+birhata,Birhata,23.235237,87.866129,birhata
+birsingha,Birsingha,23.19913,87.450527,birsingha
+bishnupur,Bishnupur,23.0738,87.31991,bishnupur
+boga,Boga,25.07756,87.68794,boga
+bolpur,Bolpur,23.66278,87.69695,bolpur
+budbud,Budbud,23.40131,87.53895,budbud
+chaitanyapur,Chaitanyapur,22.136048,88.08323,chaitanyapur
+chakulia,Chakulia,22.478149,86.721161,chakulia
+chalsa,Chalsa,26.88413,88.79068,chalsa
+champadanga,Champadanga,22.83771,87.97575,champadanga
+chandannagar,Chandannagar,22.86225,88.36796,chandannagar
+chandil,Chandil,22.956014,86.072109,chandil
+chandipur,Chandipur,22.35108,88.40054,chandipur
+chanditala,Chanditala,22.69316,88.25786,chanditala
+chandra,Chandra,22.46175,87.14845,chandra
+chandrakona-road,Chandrakona Road,22.73523,87.33643,chandrakona-road
+chandrakona-town,Chandrakona Town,22.729481,87.51424,chandrakona-town
+changrabandha,Changrabandha,26.41564,88.91871,changrabandha
+chapra,Chapra,23.52791,88.55429,chapra
+charkalgram,Charkalgram,23.664651,87.841873,charkalgram
+chas,Chas,24.27624,87.78677,chas
+chatumadar,Chatumadar,23.257795,86.599244,chatumadar
+chelyama,Chelyama,23.61576,86.55245,chelyama
+chhandar,Chhandar,23.303182,87.250559,chhandar
+chhatna,Chhatna,23.30566,86.97174,chhatna
+chichra,Chichra,22.311758,86.883144,chichra
+chingra,Chingra,22.731618,87.028014,chingra
+chirkunda,Chirkunda,23.74771,86.78804,chirkunda
+chittaranjan,Chittaranjan,23.85681,86.90324,chittaranjan
+chuchura,Chuchura,22.890191,88.3695,chuchura
+chunait,Chunait,22.777021,87.860198,chunait
+contai,Contai,21.77985,87.74892,contai
+dahijuri,Dahijuri,22.50219,86.99109,dahijuri
+dainhat,Dainhat,23.60518,88.17172,dainhat
+dakshineswar,Dakshineswar,22.65567,88.3672,dakshineswar
+daldali,Daldali,26.53956,89.80907,daldali
+damda,Damda,22.34389,88.36528,damda
+damdim,Damdim,26.859243,88.671333,damdim
+dankuni,Dankuni,22.677422,88.291491,dankuni
+dantan,Dantan,21.94658,87.27678,dantan
+darda,Darda,22.96983,85.86612,darda
+dasagram,Dasagram,22.1762,87.6063,dasagram
+daspur,Daspur,22.60691,87.72331,daspur
+debagram,Debagram,23.68832,88.30083,debagram
+debra,Debra,22.3952,87.56015,debra
+dhaban,Dhaban,23.466182,86.901265,dhaban
+dhadka,Dhadka,22.78333,86.5,dhadka
+dhadki,Dhadki,23.67161,85.9806,dhadki
+dhalbhumgarh,Dhalbhumgarh,22.50751,86.55587,dhalbhumgarh
+dhaldanga,Dhaldanga,23.204846,87.069666,dhaldanga
+dhanbad,Dhanbad,23.790966,86.428956,dhanbad
+dhansimla,Dhansimla,23.26734,87.465916,dhansimla
+dheko,Dheko,24.47638,87.81591,dheko
+dherua,Dherua,22.465013,87.004502,dherua
+dhubulia,Dhubulia,23.483546,88.441145,dhubulia
+digha,Digha,21.62776,87.51965,digha
+dignagar,Dignagar,23.43242,87.68324,dignagar
+dinhata,Dinhata,26.13526,89.46129,dinhata
+dishergarh,Dishergarh,23.69064,86.82735,dishergarh
+domkal,Domkal,24.12065,88.54393,domkal
+dubra,Dubra,23.54332,86.52102,dubra
+dubrajpur,Dubrajpur,23.7902,87.37648,dubrajpur
+dum-dum-airport,Dum Dum Airport,22.621717,88.392835,dum-dum-airport
+dunlop,Dunlop,22.652496,88.3773,dunlop
+durgachak,Durgachak,22.07576,88.13747,durgachak
+durgapur-city-center,Durgapur (City Center),23.495046,87.297902,durgapur-city-center
+durgapur-muchipara,Durgapur (Muchipara),23.495046,87.297902,durgapur-muchipara
+durgapur-station,Durgapur (Station),23.495046,87.297902,durgapur-station
+durlavpur,Durlavpur,22.14227,88.35914,durlavpur
+duttapulia,Duttapulia,23.240131,88.705827,duttapulia
+egra,Egra,21.89947,87.53794,egra
+exide-more,Exide More,25.430345,85.85676,exide-more
+farakka,Farakka,24.81667,87.9,farakka
+fatapukur,Fatapukur,26.570857,88.538758,fatapukur
+fatehpur,Fatehpur,24.08095,87.73092,fatehpur
+fulbari,Fulbari,26.649573,88.417741,fulbari
+gadiara,Gadiara,22.798157,88.280471,gadiara
+galsi,Galsi,23.33928,87.68926,galsi
+galudi,Galudi,22.648872,86.410494,galudi
+gangajalghati,Gangajalghati,23.4224,87.11411,gangajalghati
+garchakraberia,Garchakraberia,22.514668,88.249021,garchakraberia
+garhbeta,Garhbeta,22.844562,87.320972,garhbeta
+garia,Garia,22.46323,88.39788,garia
+ghatal,Ghatal,22.66244,87.73399,ghatal
+ghatsila,Ghatsila,22.58616,86.479768,ghatsila
+ghughumari,Ghughumari,26.333888,89.326136,ghughumari
+gidhni,Gidhni,22.48449,86.85498,gidhni
+goaltore,Goaltore,22.70989,87.169777,goaltore
+gobindapur,Gobindapur,22.59306,88.09139,gobindapur
+godapiasal,Godapiasal,22.53641,87.32783,godapiasal
+goghat,Goghat,22.889309,87.706238,goghat
+gokarna,Gokarna,24.04234,88.11468,gokarna
+golapbag,Golapbag,23.251908,87.849808,golapbag
+gopalnagar,Gopalnagar,22.83089,88.22493,gopalnagar
+gopalpur,Gopalpur,22.61845,88.75119,gopalpur
+gopinathpur,Gopinathpur,22.81172,88.06486,gopinathpur
+goura,Goura,26.30457,88.73581,goura
+guptamoni,Guptamoni,26.448121,92.919609,guptamoni
+guskara,Guskara,23.489998,87.733397,guskara
+haldia,Haldia,22.06046,88.10975,haldia
+haludkanali,Haludkanali,22.879806,86.878606,haludkanali
+hanskhali,Hanskhali,23.356657,88.609607,hanskhali
+harda,Harda,25.34856,87.86762,harda
+harinarayanpur,Harinarayanpur,22.60028,88.1125,harinarayanpur
+harmasra,Harmasra,23.034095,87.002865,harmasra
+hatirampur,Hatirampur,23.061996,86.878598,hatirampur
+hazipur,Hazipur,24.03998,87.82764,hazipur
+helencha,Helencha,23.18921,88.8635,helencha
+hematpur,Hematpur,24.57969,85.22925,hematpur
+henria,Henria,21.968524,87.803593,henria
+hoomgarh,Hoomgarh,22.852862,87.34661,hoomgarh
+howrah,Howrah,22.57688,88.31857,howrah
+hura,Hura,23.30337,86.65717,hura
+illambazar,Illambazar,23.690296,87.512895,illambazar
+indpur,Indpur,23.16667,86.93333,indpur
+indus,Indus,23.12951,87.61517,indus
+islampur,Islampur,26.26541,88.18982,islampur
+jadavpur,Jadavpur,22.48794,88.37873,jadavpur
+jalangi,Jalangi,24.12799,88.68989,jalangi
+jalchak,Jalchak,22.238766,87.671054,jalchak
+jaleswar,Jaleswar,21.79749,87.220491,jaleswar
+jamalpur,Jamalpur,23.06664,87.99181,jamalpur
+jambani,Jambani,22.518761,86.843748,jambani
+jamtoria,Jamtoria,22.903638,86.638829,jamtoria
+jangipur,Jangipur,24.47001,88.07659,jangipur
+jayrambati,Jayrambati,22.92387,87.610545,jayrambati
+jhakra,Jhakra,22.514668,88.249021,jhakra
+jhanka,Jhanka,26.29731,87.13098,jhanka
+jhantipahari,Jhantipahari,23.353363,86.904491,jhantipahari
+jhargram,Jhargram,22.45384,86.99497,jhargram
+jhilimili,Jhilimili,22.81392,86.64575,jhilimili
+jhitka,Jhitka,22.6325,88.84389,jhitka
+jorda,Jorda,23.168688,86.834018,jorda
+jorehira,Jorehira,23.428865,86.888028,jorehira
+joykrishnapur,Joykrishnapur,23.12438,87.31404,joykrishnapur
+joypur,Joypur,23.040584,87.456204,joypur
+joyrampur,Joyrampur,22.85984,87.82673,joyrampur
+kalaikunda,Kalaikunda,22.3393,87.22637,kalaikunda
+kaliachak,Kaliachak,24.86371,88.02207,kaliachak
+kalikapur,Kalikapur,22.05538,88.33856,kalikapur
+kalimati,Kalimati,23.23423,85.92242,kalimati
+kalna,Kalna,23.21944,88.36295,kalna
+kalyani,Kalyani,22.9757,88.4337,kalyani
+kamalgazi,Kamalgazi,22.449524,88.395539,kamalgazi
+kamalpur,Kamalpur,25.92484,87.85641,kamalpur
+kamarpukur,Kamarpukur,22.23121,88.40108,kamarpukur
+kanchanpur,Kanchanpur,23.31164,87.09426,kanchanpur
+kandi,Kandi,23.95946,88.04018,kandi
+kantapahari,Kantapahari,24.343,87.78763,kantapahari
+karimpur,Karimpur,23.97594,88.61917,karimpur
+karunamoyee,Karunamoyee,22.58638,88.421531,karunamoyee
+kashipur,Kashipur,23.43444,86.66723,kashipur
+katin,Katin,26.465652,94.002692,katin
+katwa,Katwa,23.64558,88.13258,katwa
+kenda,Kenda,23.1959,86.51499,kenda
+kenjakura,Kenjakura,23.271639,86.934038,kenjakura
+keshabpur,Keshabpur,22.61232,88.20047,keshabpur
+keshiary,Keshiary,22.11674,87.23446,keshiary
+keshpur,Keshpur,22.55468,87.46109,keshpur
+ketugram,Ketugram,23.70115,88.04532,ketugram
+khagraghat,Khagraghat,24.106842,88.226481,khagraghat
+khakurda,Khakurda,22.26402,88.46104,khakurda
+khanakul,Khanakul,22.70891,87.85016,khanakul
+khandaghosh,Khandaghosh,23.20807,87.69406,khandaghosh
+kharagpur,Kharagpur,22.33971,87.32501,kharagpur
+kharar,Kharar,22.72211,87.67824,kharar
+kharbona,Kharbona,24.15596,87.74261,kharbona
+kharikamathani,Kharikamathani,25.388883,87.014958,kharikamathani
+khatra,Khatra,22.97617,86.85462,khatra
+khatul,Khatul,22.972479,87.649053,khatul
+khetua,Khetua,24.04074,86.1222,khetua
+khirpai,Khirpai,22.70996,87.61768,khirpai
+khujutipara,Khujutipara,23.609846,87.895689,khujutipara
+kirnahar,Kirnahar,23.75802,87.87404,kirnahar
+kolaghat,Kolaghat,22.43252,87.85938,kolaghat
+kolkata,Kolkata,22.56263,88.36304,kolkata
+kolkata-esplanade,Kolkata (Esplanade),22.566793,88.375198,kolkata-esplanade
+komarpur,Komarpur,23.734366,87.997046,komarpur
+kona-express-more,Kona Express More,25.430345,85.85676,kona-express-more
+kotshila,Kotshila,23.40207,86.07017,kotshila
+kotulpur,Kotulpur,23.0119,87.59382,kotulpur
+krishnaganj,Krishnaganj,23.443462,88.706812,krishnaganj
+krishnanagar,Krishnanagar,23.40576,88.49073,krishnanagar
+kukrahati,Kukrahati,22.187065,88.119895,kukrahati
+kulgachhi,Kulgachhi,24.35863,87.840757,kulgachhi
+kuli,Kuli,24.72489,87.93038,kuli
+kulti,Kulti,23.73166,86.84372,kulti
+kumidya,Kumidya,23.21693,86.966042,kumidya
+kusumgram,Kusumgram,23.389846,88.127861,kusumgram
+kutni,Kutni,25.01282,87.47037,kutni
+labpur,Labpur,23.81699,87.80427,labpur
+ladhurka,Ladhurka,23.35456,86.53415,ladhurka
+lakshmisagar,Lakshmisagar,22.92744,87.01375,lakshmisagar
+lalgarh,Lalgarh,22.58732,87.04968,lalgarh
+lalgola,Lalgola,24.42244,88.25238,lalgola
+lalpur,Lalpur,24.747459,87.912243,lalpur
+lara-more,Lara More,25.430345,85.85676,lara-more
+lodhasuli,Lodhasuli,22.33628,87.04924,lodhasuli
+lowada,Lowada,22.44874,87.61588,lowada
+madanmohanpur,Madanmohanpur,24.488461,86.785648,madanmohanpur
+madhukunda,Madhukunda,23.62663,86.869091,madhukunda
+madhyamgram,Madhyamgram,22.68944,88.44594,madhyamgram
+madpur,Madpur,22.38041,87.43886,madpur
+magra,Magra,22.98809,88.37308,magra
+mahara,Mahara,24.81667,87.8,mahara
+mahish-bathan,Mahish Bathan,23.937349,88.618727,mahish-bathan
+mahishadal,Mahishadal,22.18616,87.98072,mahishadal
+majhdia,Majhdia,23.414562,88.719031,majhdia
+makurgram,Makurgram,23.28094,87.144595,makurgram
+malbazar,Malbazar,26.85,88.75,malbazar
+malda,Malda,25.00447,88.14573,malda
+maliara,Maliara,23.47555,87.22482,maliara
+mallarpur,Mallarpur,24.07908,87.70919,mallarpur
+manbazar,Manbazar,23.0591,86.66269,manbazar
+manglamaro,Manglamaro,22.082214,87.638479,manglamaro
+manguria,Manguria,23.344519,86.344157,manguria
+manihara,Manihara,22.598809,88.377167,manihara
+maniktala,Maniktala,22.58809,88.385283,maniktala
+mankanali,Mankanali,23.328395,87.043296,mankanali
+matgoda,Matgoda,22.775632,86.897809,matgoda
+mathabhanga,Mathabhanga,26.34197,89.21555,mathabhanga
+mayapur,Mayapur,22.41667,88.11667,mayapur
+maynaguri,Maynaguri,26.578607,88.822868,maynaguri
+mecheda,Mecheda,22.414105,87.85883,mecheda
+medinipur,Medinipur,22.42114,87.32257,medinipur
+mejia,Mejia,23.56728,87.10803,mejia
+memari,Memari,23.17647,88.09749,memari
+mirzapur,Mirzapur,24.40574,88.06512,mirzapur
+mogra,Mogra,22.988257,88.373269,mogra
+mohammad-bazar,Mohammad Bazar,24.03624,87.591121,mohammad-bazar
+mohanpur,Mohanpur,21.83888,87.42565,mohanpur
+molian,Molian,23.102678,86.805762,molian
+mosat,Mosat,22.2616,88.23141,mosat
+moyna,Moyna,22.239382,87.754265,moyna
+mukundapur,Mukundapur,22.84166,88.43797,mukundapur
+mukutmanipur,Mukutmanipur,22.962559,86.787522,mukutmanipur
+nabadwip,Nabadwip,23.4067,88.36861,nabadwip
+nadanghat,Nadanghat,23.373418,88.253147,nadanghat
+nadia,Nadia,23.484737,88.556707,nadia
+nadiha,Nadiha,23.495621,86.404079,nadiha
+nalhati,Nalhati,24.29704,87.82899,nalhati
+nandakumar,Nandakumar,22.18982,87.91873,nandakumar
+nandanpur,Nandanpur,22.04626,88.328809,nandanpur
+nandigram,Nandigram,22.00176,87.95944,nandigram
+nanoor,Nanoor,23.704138,87.867227,nanoor
+napara,Napara,22.67278,88.46944,napara
+narajole,Narajole,22.56667,87.61667,narajole
+narrah,Narrah,23.261796,87.137323,narrah
+narsingpur,Narsingpur,23.949944,87.57268,narsingpur
+neamatpur,Neamatpur,25.96537,87.87293,neamatpur
+nikunjapur,Nikunjapur,23.204602,87.201765,nikunjapur
+nimpura,Nimpura,22.332403,87.264686,nimpura
+nischintapur,Nischintapur,24.04973,87.5756,nischintapur
+onda,Onda,23.13874,87.20265,onda
+oodlabari,Oodlabari,26.866793,88.624639,oodlabari
+p-more,P More,25.430345,85.85676,p-more
+pabra,Pabra,25.95377,86.0806,pabra
+pairachali,Pairachali,23.082238,86.720583,pairachali
+pakhanna,Pakhanna,23.408504,87.377473,pakhanna
+palasi,Palasi,24.816902,87.909948,palasi
+panagarh,Panagarh,23.45606,87.44718,panagarh
+panchal,Panchal,23.22789,87.28808,panchal
+panchet,Panchet,23.62085,86.77755,panchet
+panchgachia,Panchgachia,25.969294,86.598221,panchgachia
+panchgram,Panchgram,24.20231,88.00814,panchgram
+panchmura,Panchmura,22.96546,87.16135,panchmura
+panchthupi,Panchthupi,23.88847,87.98843,panchthupi
+pandaveswar,Pandaveswar,23.72793,87.27089,pandaveswar
+pandua,Pandua,23.07492,88.28637,pandua
+paniparul,Paniparul,21.74949,87.53621,paniparul
+panna,Panna,22.499211,88.317066,panna
+panrui,Panrui,23.781923,87.607377,panrui
+panskura,Panskura,22.40418,87.71746,panskura
+parihati,Parihati,22.51978,86.84851,parihati
+parulia,Parulia,22.21277,88.17515,parulia
+patamda,Patamda,22.90612,86.38643,patamda
+patashpur,Patashpur,22.026788,87.547001,patashpur
+patharmora,Patharmora,25.430345,85.85676,patharmora
+patrasayer,Patrasayer,23.217327,87.536508,patrasayer
+phulia,Phulia,23.229897,88.49634,phulia
+piardoba,Piardoba,22.956881,87.322164,piardoba
+pingla,Pingla,22.28315,87.58654,pingla
+pirakata,Pirakata,22.56491,87.17945,pirakata
+piyariganj,Piyariganj,26.644544,85.425711,piyariganj
+poradih,Poradih,23.6144,86.45817,poradih
+pratap-dighi,Pratap Dighi,21.98123,87.60068,pratap-dighi
+puabagan,Puabagan,23.20613,87.020932,puabagan
+puncha,Puncha,23.15921,86.6484,puncha
+purandarpur,Purandarpur,23.85534,87.5827,purandarpur
+purulia,Purulia,23.33062,86.36303,purulia
+radhanagar,Radhanagar,23.15462,87.32344,radhanagar
+raghunathpur,Raghunathpur,23.53878,86.6735,raghunathpur
+raiganj,Raiganj,25.61281,88.12449,raiganj
+raipur,Raipur,22.79866,86.95145,raipur
+rajhati,Rajhati,22.781549,88.017512,rajhati
+ramdiha,Ramdiha,25.2653,85.51065,ramdiha
+ramgarh,Ramgarh,22.69295,87.05872,ramgarh
+ramjibanpur,Ramjibanpur,22.82815,87.60888,ramjibanpur
+ramnagar,Ramnagar,22.77778,88.24639,ramnagar
+rampur,Rampur,23.48441,86.56714,rampur
+rampurhat,Rampurhat,24.179797,87.782147,rampurhat
+ramsagar,Ramsagar,23.106248,87.277063,ramsagar
+ranaghat,Ranaghat,23.17623,88.56667,ranaghat
+rangamati,Rangamati,26.80759,89.45724,rangamati
+ranibandh,Ranibandh,22.86453,86.78357,ranibandh
+ranichak,Ranichak,22.61546,87.81199,ranichak
+raniganj,Raniganj,23.6164,87.13061,raniganj
+rasgovindpur,Rasgovindpur,21.78816,87.04609,rasgovindpur
+raskundu,Raskundu,22.839261,87.346336,raskundu
+rasulpur,Rasulpur,25.40056,87.97454,rasulpur
+ratanpur,Ratanpur,23.10635,87.06991,ratanpur
+rejinagar,Rejinagar,23.85009,88.259255,rejinagar
+rohini,Rohini,22.16404,87.09006,rohini
+ruby,Ruby,22.513245,88.402565,ruby
+rudra,Rudra,22.63028,88.17528,rudra
+rupnarayanpur,Rupnarayanpur,23.81489,86.88646,rupnarayanpur
+sabang,Sabang,22.17768,87.59879,sabang
+sagarpara,Sagarpara,24.24546,88.70052,sagarpara
+sagrai,Sagrai,23.156429,87.816107,sagrai
+sahapur,Sahapur,22.52444,88.16694,sahapur
+sahaspur,Sahaspur,23.132529,87.676011,sahaspur
+sainthia,Sainthia,23.94826,87.68045,sainthia
+saktigarh,Saktigarh,23.20898,87.97337,saktigarh
+salanpur,Salanpur,23.76702,86.87492,salanpur
+salar,Salar,23.77082,88.10213,salar
+salboni,Salboni,22.5545,87.46115,salboni
+saldiha,Saldiha,23.170675,86.811812,saldiha
+saltora,Saltora,23.52274,86.936,saltora
+samaspur,Samaspur,25.95192,87.97966,samaspur
+samudragarh,Samudragarh,23.335767,88.324967,samudragarh
+sanka,Sanka,22.84839,88.45126,sanka
+santaldih,Santaldih,23.596661,86.483123,santaldih
+santasram,Santasram,23.11446,87.571807,santasram
+santipur,Santipur,23.24723,88.43302,santipur
+santragachi,Santragachi,22.58333,88.3,santragachi
+santuri,Santuri,23.5272,86.85709,santuri
+sarbori-more,Sarbori More,25.430345,85.85676,sarbori-more
+sarenga,Sarenga,22.76193,87.02124,sarenga
+satgachia,Satgachia,23.27186,88.12691,satgachia
+sealdah,Sealdah,22.56263,88.36304,sealdah
+sevoke,Sevoke,26.879722,88.470803,sevoke
+shikarpur,Shikarpur,23.98082,88.71973,shikarpur
+shyambazar,Shyambazar,22.601335,88.372497,shyambazar
+shyamnagar,Shyamnagar,22.83333,88.36667,shyamnagar
+shyampur,Shyampur,22.279623,88.388263,shyampur
+silda,Silda,22.61667,86.81667,silda
+siliguri,Siliguri,26.71004,88.42851,siliguri
+simlapal,Simlapal,22.91315,87.07183,simlapal
+simulia,Simulia,22.35778,88.19222,simulia
+sindri,Sindri,23.40215,86.23022,sindri
+singur,Singur,22.80917,88.22944,singur
+sirkabad,Sirkabad,23.27519,86.19833,sirkabad
+sodepur,Sodepur,22.697175,88.380563,sodepur
+solpatta,Solpatta,21.830674,87.387559,solpatta
+sonadaha,Sonadaha,26.960337,88.273323,sonadaha
+sonamukhi,Sonamukhi,23.30521,87.41336,sonamukhi
+srikhanda,Srikhanda,23.60219,88.07715,srikhanda
+srinagar,Srinagar,22.80573,87.58283,srinagar
+suisa,Suisa,23.19351,85.90227,suisa
+sultannagar,Sultannagar,25.44714,87.86009,sultannagar
+sundarpur,Sundarpur,24.59962,87.97955,sundarpur
+suri,Suri,23.90806,87.52773,suri
+surulia,Surulia,23.33215,86.39595,surulia
+susunia-hill,Susunia Hill,23.397599,86.984843,susunia-hill
+syamnagar,Syamnagar,22.01127,88.56023,syamnagar
+talajuri,Talajuri,23.43188,86.771111,talajuri
+taldangra,Taldangra,23.01756,87.10286,taldangra
+tamluk,Tamluk,22.30083,87.92593,tamluk
+tarapith,Tarapith,24.11197,87.7972,tarapith
+tarkeshwar,Tarkeshwar,22.882582,88.013437,tarkeshwar
+tatanagar,Tatanagar,22.768954,86.20056,tatanagar
+teghori,Teghori,22.69761,88.57332,teghori
+tehatta,Tehatta,23.733906,88.533358,tehatta
+telipukur,Telipukur,23.222457,87.85381,telipukur
+tentulia,Tentulia,24.02,87.59609,tentulia
+tilabani,Tilabani,24.04869,86.82474,tilabani
+tiluri,Tiluri,23.57658,86.903206,tiluri
+tulin,Tulin,23.38073,85.89035,tulin
+uchalan,Uchalan,23.03592,87.77485,uchalan
+ukhradihi,Ukhradihi,23.653692,87.232537,ukhradihi
+uluberia,Uluberia,22.4756,88.09898,uluberia
+umarpur,Umarpur,24.44802,88.03266,umarpur
+urma,Urma,23.43022,85.98897,urma
+alipurduar,Alipurduar,26.4919,89.5271,alipurduar
+bankura-gobindanagar,Bankura Gobindanagar,23.2355,87.0682,bankura-gobindanagar
+cooch-behar,Cooch Behar,26.3239,89.4511,cooch-behar
+coochbehar,Coochbehar,26.3239,89.4511,coochbehar
+darjeeling,Darjeeling,27.041,88.2663,darjeeling
+jalpaiguri,Jalpaiguri,26.5414,88.7196,jalpaiguri
+kalimpong,Kalimpong,27.0594,88.4695,kalimpong
+balurghat,Balurghat,25.2216,88.7644,balurghat
+english-bazar,English Bazar,25.0044,88.1458,english-bazar
+berhampore,Berhampore,24.0988,88.268,berhampore
+burdwan,Burdwan,23.2324,87.8615,burdwan
+durgapur,Durgapur,23.5204,87.3119,durgapur
+midnapore,Midnapore,22.4257,87.3199,midnapore
+kanthi,Kanthi,21.7781,87.7517,kanthi
+basirhat,Basirhat,22.6574,88.8914,basirhat
+bongaon,Bongaon,23.0437,88.8266,bongaon
+diamond-harbour,Diamond Harbour,22.1912,88.1903,diamond-harbour
+canning,Canning,22.3094,88.6575,canning
+chinsurah,Chinsurah,22.9031,88.3968,chinsurah
+tarakeswar,Tarakeswar,22.8869,88.0203,tarakeswar
+arambag,Arambag,22.8833,87.7833,arambag
+esplanade,Esplanade,22.5645,88.351,esplanade
+howrah-station,Howrah Station,22.5838,88.3426,howrah-station
+rabindra-sadan,Rabindra Sadan,22.544,88.347,rabindra-sadan
+bbd-bag,BBD Bag,22.5697,88.3486,bbd-bag
+ultadanga,Ultadanga,22.591,88.399,ultadanga
+science-city,Science City,22.54,88.395,science-city
+moulali,Moulali,22.561,88.368,moulali
+airport-gate-1,Airport Gate 1,22.647,88.441,airport-gate-1
+chingrighata,Chingrighata,22.578,88.415,chingrighata
+rashbehari,Rashbehari,22.514,88.353,rashbehari
+park-street,Park Street,22.553,88.352,park-street
+chandni-chowk,Chandni Chowk,22.567,88.352,chandni-chowk
+college-more,College More,22.577,88.429,college-more
+maidan,Maidan,22.553,88.346,maidan
+kaikhali,Kaikhali,22.632,88.437,kaikhali
+newtown,Newtown,22.581,88.464,newtown
+mg-road,MG Road,22.582,88.357,mg-road
+wellington,Wellington,22.563,88.359,wellington
+baguiati,Baguiati,22.613,88.431,baguiati
+behala-chowrasta,Behala Chowrasta,22.498,88.311,behala-chowrasta
+behala-14-no,Behala 14 No,22.506,88.317,behala-14-no
+dumdum-park,Dumdum Park,22.609,88.414,dumdum-park
+gariahat,Gariahat,22.517,88.366,gariahat
+majherhat,Majherhat,22.523,88.321,majherhat
+kestopur,Kestopur,22.601,88.428,kestopur
+kalighat,Kalighat,22.518,88.343,kalighat
+mominpore,Mominpore,22.531,88.327,mominpore
+girish-park,Girish Park,22.587,88.362,girish-park
+khanna-cinema,Khanna Cinema,22.595,88.383,khanna-cinema
+sakher-bazar,Sakher Bazar,22.486,88.309,sakher-bazar
+rajabazar,Rajabazar,22.579,88.376,rajabazar
+taratala,Taratala,22.516,88.312,taratala
+thakurpukur,Thakurpukur,22.467,88.305,thakurpukur
+hastings,Hastings,22.547,88.334,hastings
+sinthi,Sinthi,22.623,88.387,sinthi
+beleghata,Beleghata,22.564,88.406,beleghata
+kidderpore,Kidderpore,22.538,88.332,kidderpore
+bonhooghly,Bonhooghly,22.636,88.382,bonhooghly
+park-circus,Park Circus,22.539,88.367,park-circus
+central,Central,22.573,88.354,central
+howrah-maidan,Howrah Maidan,22.589,88.334,howrah-maidan
+fort-william,Fort William,22.554,88.341,fort-william
+ballygunge-station,Ballygunge Station,22.529,88.365,ballygunge-station
+ekbalpur,Ekbalpur,22.535,88.328,ekbalpur
+kankurgachi,Kankurgachi,22.58,88.396,kankurgachi
+alipore-zoo,Alipore Zoo,22.536,88.332,alipore-zoo
+dhakuria,Dhakuria,22.504,88.368,dhakuria
+golpark,Golpark,22.513,88.365,golpark
+patuli,Patuli,22.472,88.394,patuli
+jadavpur-8b,Jadavpur 8B,22.497,88.371,jadavpur-8b
+belgachia,Belgachia,22.601,88.385,belgachia
+rg-kar,RG Kar,22.606,88.377,rg-kar
+nager-bazar,Nager Bazar,22.63,88.42,nager-bazar
+college-street,College Street,22.575,88.364,college-street
+kamarhati,Kamarhati,22.672,88.376,kamarhati
+jadavpur-ps,Jadavpur PS,22.496,88.369,jadavpur-ps
+new-alipore,New Alipore,22.504,88.332,new-alipore
+tollygunge-phari,Tollygunge Phari,22.502,88.35,tollygunge-phari
+patipukur,Patipukur,22.615,88.396,patipukur
+bangur-avenue,Bangur Avenue,22.616,88.406,bangur-avenue
+exide,Exide,22.543,88.352,exide
+lake-gardens,Lake Gardens,22.5053,88.3548,lake-gardens
+hatibagan,Hatibagan,22.5945,88.372,hatibagan
+south-city,South City,22.5017,88.3617,south-city
+diamond-plaza,Diamond Plaza,22.628,88.415,diamond-plaza
+bansdroni,Bansdroni,22.48,88.365,bansdroni
+netaji-nagar,Netaji Nagar,22.483,88.362,netaji-nagar
+naktala,Naktala,22.476,88.376,naktala
+anwar-shah-road,Anwar Shah Road,22.502,88.3495,anwar-shah-road
+baghajatin,Baghajatin,22.479,88.387,baghajatin
+garia-metro,Garia Metro,22.468,88.397,garia-metro
+phoolbagan,Phoolbagan,22.576,88.392,phoolbagan
+saltlake-stadium,Saltlake Stadium,22.57,88.405,saltlake-stadium
+sector-v,Sector V,22.576,88.432,sector-v
+bagbazar,Bagbazar,22.601,88.365,bagbazar
+tollygunge,Tollygunge,22.501,88.346,tollygunge
+jodhpur-park,Jodhpur Park,22.5055,88.3635,jodhpur-park
+cossipore,Cossipore,22.615,88.368,cossipore
+kasba,Kasba,22.516,88.387,kasba
+dumdum,Dumdum,22.642,88.431,dumdum
+palsit,Palsit,23.2,88.0,palsit
+kolkata-airport,Kolkata Airport,22.6547,88.4467,kolkata-airport
+airport,Airport,22.6547,88.4467,airport
+bolpur-prantik,Bolpur (Prantik),23.685,87.685,bolpur-prantik
+malda-town,Malda Town,25.00447,88.14573,malda-town
+falakata,Falakata,26.5167,89.2,falakata
+dhupguri,Dhupguri,26.5981,89.0142,dhupguri
+buniadpur,Buniadpur,25.385,88.384,buniadpur
+gangarampur,Gangarampur,25.4,88.52,gangarampur
+kaliyaganj,Kaliyaganj,25.63,88.32,kaliyaganj
+itahar,Itahar,25.45,88.17,itahar
+hili,Hili,25.285,88.995,hili
+sitai,Sitai,26.15,89.31,sitai
+sitalkuchi,Sitalkuchi,26.17,89.18,sitalkuchi
+guriahati,Guriahati,26.31,89.46,guriahati
+sukna,Sukna,26.79,88.36,sukna
+tindharia,Tindharia,26.85,88.33,tindharia
+sonada,Sonada,26.96,88.27,sonada
+ghum,Ghum,27.01,88.26,ghum
+nagrakata,Nagrakata,26.89,88.91,nagrakata
+birpara,Birpara,26.71,89.12,birpara
+madarihat,Madarihat,26.7,89.28,madarihat
+hasimara,Hasimara,26.75,89.35,hasimara
+mandalghat,Mandalghat,26.47,88.75,mandalghat
+old-malda,Old Malda,25.04,88.14,old-malda
+garh-bhowanipur,Garh Bhowanipur,22.58,87.98,garh-bhowanipur
+gopiganj,Gopiganj,22.6,87.72,gopiganj
+mayapur-hooghly,Mayapur (Hooghly),22.88,87.89,mayapur-hooghly
+pursurah,Pursurah,22.84,87.96,pursurah
+haripal,Haripal,22.83,88.11,haripal
+guptipara,Guptipara,23.19,88.42,guptipara
+balagarh,Balagarh,23.12,88.46,balagarh
+jirat,Jirat,23.09,88.46,jirat
+jamuria,Jamuria,23.7,87.08,jamuria
+sonachura,Sonachura,21.9,87.97,sonachura
+ajodhya-hills,Ajodhya Hills,23.19,86.13,ajodhya-hills
+gayespur,Gayespur,22.96,88.49,gayespur
+nagar,Nagar,23.98,88.08,nagar
+reyapara,Reyapara,21.97,87.96,reyapara
+panitanki,Panitanki,26.65,88.15,panitanki
+naxalbari,Naxalbari,26.68,88.22,naxalbari
+batasi,Batasi,26.64,88.19,batasi
+siliguri-court-more,Siliguri Court More,26.717,88.428,siliguri-court-more
+venus-more,Venus More,26.715,88.427,venus-more
+pradhan-nagar,Pradhan Nagar,26.723,88.423,pradhan-nagar
+shivmandir,Shivmandir,26.7,88.35,shivmandir
+bagdogra-airport,Bagdogra Airport,26.6812,88.3286,bagdogra-airport
+bijanbari,Bijanbari,27.06,88.19,bijanbari
+kharibari,Kharibari,26.57,88.19,kharibari
+panighata,Panighata,26.78,88.24,panighata
+omarpur,Omarpur,24.41,88.02,omarpur
+jiaganj,Jiaganj,24.24,88.27,jiaganj
+rasakhawa,Rasakhawa,25.86,88.05,rasakhawa
+bharatpur,Bharatpur,23.88,88.08,bharatpur

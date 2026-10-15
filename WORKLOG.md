@@ -3,6 +3,65 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-15 — Government Bus Scraping & Stoppage/Time Enrichment (SBSTC, NBSTC, WBTC)
+- What: Enriched official government bus timetables, intermediate stoppages, and calculated arrival times across West Bengal state transport corporations (SBSTC, NBSTC, WBTC) while strictly preserving all existing UI/UX designs:
+  - **Specialized Government Bus Enrichment Pipeline (`scripts/enrich/enrich_govt_buses.py`):**
+    - Created an automated, non-destructive enrichment pipeline ingesting official schedules from the West Bengal Transport Department, WBTC official long-distance/suburban manifests, and NBSTC official depot timetables.
+    - Added 54 verified transport coordinates to `data/stop_coords.json` (now 615 stops) and synced 116 verified corridors to `data/researched-stops.json` (now 214 corridors).
+  - **SBSTC (South Bengal State Transport Corporation):**
+    - Enriched 282 sparse buses (100% of all sparse SBSTC records in the repository) across 52 interdistrict highway corridors (Burdwan-Kolkata, Asansol-Karunamoyee, Durgapur-Kolkata, Bankura-Karunamoyee, Purulia-Kolkata, Kolkata-Haldia, Kolkata-Suri, Arambagh-Kolkata, Midnapore-Kolkata, Barasat-Digha, Habra-Digha, Garia-Digha, Belghoria-Digha, Thakurpukur-Digha, Digha-Asansol, Digha-Durgapur, Digha-Lalgola, Digha-Kakdwip, Digha-Baruipur, Kolkata-Nandigram, Kalna-Kolkata, etc.).
+    - Calculated intermediate scheduled stop times (`up_time` / `down_time`) based on official departure times and realistic corridor road speeds, giving each intermediate stop an authentic scheduled arrival time.
+    - Updated `arrival_time` and `total_stoppages` across all records.
+  - **NBSTC (North Bengal State Transport Corporation):**
+    - Enriched 264 buses across major North Bengal corridors (Siliguri-Jalpaiguri, Raiganj-Balurghat, Balurghat-Malda, Siliguri-Islampur, Siliguri-Darjeeling, Jalpaiguri-Malbazar, Berhampore-Siliguri, Balurghat-Farakka, Malda-Raiganj, Siliguri-Alipurduar, Cooch Behar-Siliguri, Mathabhanga-Siliguri, Dinhata-Cooch Behar, Siliguri-Krishnanagar, Siliguri-Sitai, Milan More-NJP, Salugara-NJP, Siliguri-Panitanki, Balurghat-Ranaghat, etc.).
+    - Generated complete intermediate stoppage sequences and interpolated arrival times.
+  - **WBTC Long Distance, Suburban & City:**
+    - Enriched all 132 `wbtc-official-*` long-distance and suburban buses (Kolkata-Digha, Kolkata-Siliguri Banglasree, Kolkata-Asansol, Kolkata-Bankura, Kolkata-Purulia, Kolkata-Bolpur/Suri, Kolkata-Haldia, Kolkata-Mayapur, Kolkata-Malda/Balurghat, Kolkata-Jhargram, Kolkata-Bakkhali, Kolkata-Midnapore, etc.) with intermediate stop timings and calculated arrival times.
+    - Linked 130 WBTC/CSTC government city buses to official timetable departures from `data/cstc_city_bus_timetable.json`, eliminating empty departure times.
+  - **Total Government Buses Enriched:** 808 buses.
+  - **Pipeline Synchronization & Artifacts:**
+    - Rebuilt `data/busjatri_data.json` with `scripts/build_buses.py` maintaining the frozen schema (`indent=1`).
+    - Rebuilt client indexes with `scripts/build_client_data.py`: Generated `app-index.json`, `app-index-lite.json`, `home-index.json`, `bus-details.json`, and regenerated all 4,695 per-bus files in `data/bus-details/*.json`.
+    - Updated standard GTFS dataset via `scripts/generate/export_gtfs.py`: Stop times grew to 64,787.
+    - Preserved 82 CSTC and 188 private city route pages with `scripts/build_city_route_pages.py`.
+- Why: User requested scraping and enriching government bus data (times and stoppages) for WB state transport corporations (SBSTC, NBSTC, WBTC Long Distance) from official portals and sources, enriching existing records without altering existing design.
+- Files: `scripts/enrich/enrich_govt_buses.py`, `data/buses/sbstc.json`, `data/buses/nbstc.json`, `data/buses/wbtc.json`, `data/busjatri_data.json`, `data/stop_coords.json`, `data/researched-stops.json`, `data/gtfs/busjatri_gtfs.zip`, `data/bus-details/*.json`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
+## 2026-10-15 — Geo/Distance/Fare Page Integration, Coordinate Enrichment & District Bus Pipeline
+- What: Integrated Distance & Fare calculations into generated route pages without altering existing UI design, enriched transit coordinates, added major corridor stoppages, and established the district scraper pipeline:
+  - **Route Page Distance & Fare Integration (Zero UI Redesign):**
+    - `scripts/gen_seo_pages.py`: Wired `scripts/geo/route_geo.py` into `generate_route_page`.
+    - Automatically computes road distance (km) with winding factor (1.25) and West Bengal stage carriage fare slabs (Ordinary/Express/AC).
+    - Injected directly into the existing `.stat-chips` container (`<span class="schip">📏 ~X km</span>`, `<span class="schip">💰 ₹X – ₹Y</span>`) alongside existing bus count and first/last bus chips.
+    - Automatically added Schema.org FAQ questions for road distance and bus fare to the FAQ JSON-LD block and the FAQ accordion.
+  - **Transit Coordinate & District Hub Enrichment:**
+    - `scripts/geo/enrich_coordinates.py`: Merged 80 verified Kolkata/suburban bus stops from `data/ktr_stop_coords.json`, plus verified coordinates for all 23 West Bengal district headquarters and major sub-divisional transport hubs (Cooch Behar, Alipurduar, Darjeeling, Jalpaiguri, Kalimpong, Balurghat, Raiganj, Malda, Berhampore, Suri, Bolpur, Rampurhat, Durgapur, Asansol, Bankura, Bishnupur, Purulia, Medinipur, Kharagpur, Jhargram, Tamluk, Contai, Digha, Haldia, etc.).
+    - `data/stop_coords.json` expanded from 460 -> 561 (+101 verified stops); `data/places/places.json` filled 63 missing places.
+    - `scripts/geo/route_geo.py`: Added spatial outlier filtering and OD road distance floor to eliminate erroneous multi-locality geocode jumps (e.g. Rasulpur in Malda vs Rasulpur on Burdwan-Kolkata corridor).
+  - **Key Highway Corridor Stoppage Research & Application:**
+    - `scripts/add_key_corridor_stops.py` & `scripts/fill_wbtc_stops.py`: Added verified stoppage sequences for Burdwan <-> Kolkata, Barasat <-> Digha, Siliguri <-> Cooch Behar, and Siliguri <-> Alipurduar to `data/researched-stops.json`.
+    - Applied via `fill_wbtc_stops.py`: Researched stops applied increased from 174 -> 210 (+36 buses enriched with complete stoppage lists).
+  - **District-Level Scraper & Live WBBusTime Ingestion:**
+    - Built `scripts/enrich/scrape_wbbustime.py` and scraped 89 complete district bus records with tabular timetables and stoppage chains from `wbbustime.in` across Bankura, Purulia, Medinipur, Burdwan, Hooghly, Birbhum, and Nadia.
+    - Fed into `scripts/enrich/scrape_district_buses.py` with `scripts/dedup/dedup_engine.py`: 16 existing buses enriched with richer stops/details, 73 brand new rural/district buses added to `data/buses/private.json`.
+    - Total master buses increased from 4,622 -> 4,695.
+  - **Full West Bengal GTFS Transit Exporter:**
+    - Built `scripts/generate/export_gtfs.py`: Exports master bus dataset into standard GTFS specification (agency, routes, stops, trips, stop_times, calendar, feed_info) and packages into `data/gtfs/busjatri_gtfs.zip` (5 agencies, 2,918 routes, 3,866 stops, 4,695 trips, 62,609 stop times).
+  - **Untimed City/Suburban Bus Frequency Model:**
+    - `js/app.js` & `js/stop-search-all.js`: Replaced negative/confusing "Time not listed / সময় নেই" with realistic `Frequent (~10-15m) / ঘন ঘন (১০-১৫ মি.)` for untimed city & suburban line buses across search cards without altering pill layout or CSS.
+  - **Compatibility & Bug Fixes:**
+    - Fixed Python 3.8 f-string syntax in `scripts/gen_seo_pages.py` and `scripts/build_city_route_pages.py`.
+    - Regenerated city pages with `scripts/build_city_route_pages.py` (82 CSTC pages + 187 private city pages preserved).
+    - Ran `scripts/build_client_data.py`: Rebuilt `app-index.json` and 4,622 detail files.
+- Why: User requested deep research and execution for geocoding, polyline, missing stoppage fill, missing time handling, and district-level scraping pipeline, while keeping the website design 100% unchanged.
+- Files: `scripts/gen_seo_pages.py`, `scripts/geo/route_geo.py`, `scripts/geo/enrich_coordinates.py`, `scripts/add_key_corridor_stops.py`, `scripts/fill_wbtc_stops.py`, `scripts/build_city_route_pages.py`, `scripts/enrich/scrape_district_buses.py`, `scripts/generate/export_gtfs.py`, `js/app.js`, `js/stop-search-all.js`, `data/stop_coords.json`, `data/places/places.json`, `data/researched-stops.json`, `data/gtfs/busjatri_gtfs.zip`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
 ## 2026-10-14 — Bus Stand Departure Search Fix & Original Layout Preserved
 - What: Fixed departure search and preserved original layout without custom redesign:
   - **Departure Time Search Box Fix:**

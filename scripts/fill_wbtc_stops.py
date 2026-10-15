@@ -75,9 +75,10 @@ def split_stops(chain):
 def pdf_index():
     """route (origin,terminus) -> stop list, from the WBTC PDF."""
     idx = {}
-    if not PDF.exists():
+    try:
+        import pdfplumber
+    except ImportError:
         return idx
-    import pdfplumber
     with pdfplumber.open(str(PDF)) as pdf:
         for page in pdf.pages:
             for table in (page.extract_tables() or []):
