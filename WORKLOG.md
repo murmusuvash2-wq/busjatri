@@ -3,6 +3,19 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-16 — Replaced Horizontal Scrolling Stoppages with Mobile Vertical Route Timeline Dropdown (Option 1)
+- What: Replaced the horizontal scrolling stoppage chips (`<div class="chip-row hscroll">`) on all route pages with a mobile-optimized, collapsible transit timeline dropdown (`<details class="via-dropdown">`):
+  - **Zero JS, Accessible `<details>` Dropdown:** Native HTML `<details class="via-dropdown">` with animated chevron toggle (`▼`), keeping the initial page view clean and free of clumsy horizontal scroll bars and accidental gesture navigation triggers.
+  - **Sequential Timeline (`<ol class="via-timeline">`):** Displays stops in true travel order from Origin (🟢 green badge) through ordered intermediate halts (⚪ dot) to Destination (🔴 red badge).
+  - **Adaptive Fallback & Trimming:** Uses single direct bus stoppage sequences (`seq`) trimmed precisely between origin and destination via `_hit()`, with fallback to `major_stops` when needed.
+  - **Dark Mode & Styling:** Added responsive styling in `css/seo.css` with smooth scrollable viewport (`max-height: 420px; overflow-y: auto`) for corridors with 15+ stops.
+  - **Page Generation:** Updated `scripts/gen_seo_pages.py` and regenerated all 2,792 route pages. Verified 0 pages retain the old horizontal scroll for via stoppages; restored city route pages with `scripts/build_city_route_pages.py`.
+- Why: User requested to replace horizontal scrolling stoppages with a dropdown (Option 1) to improve mobile UX and stop navigation gesture clashes.
+- Files: `css/seo.css`, `scripts/gen_seo_pages.py`, `bus-time-table/*.html`, `WORKLOG.md`.
+- Status: Verified & complete (2,792 route pages updated, 0 broken).
+
+---
+
 ## 2026-10-15 — Website Chips Audit, Stat-Chips Distance Bug Fix & 16 New Private Buses Ingestion
 - What: Audited all 6 website chip types, fixed a critical distance calculation discrepancy in Hero Stat Chips, and ingested 16 new private line buses:
   - **Hero Stat-Chips Discrepancy Fix (`scripts/gen_seo_pages.py`):**

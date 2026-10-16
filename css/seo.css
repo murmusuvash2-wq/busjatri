@@ -400,3 +400,19 @@ details{margin-top:6px}
 .private-stop.first,.private-stop.last{color:var(--ink);border-color:var(--line-strong)}
 .private-stop-arrow{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim)}
 /* ===== end private city route no-schedule rail ===== */
+
+/* ===== Via Stoppages Timeline Dropdown (Option 1) ===== */
+.via-dropdown{background:var(--surface);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:12px 0;transition:border-color .2s}
+.via-dropdown[open]{border-color:color-mix(in srgb,var(--amber) 45%,var(--line))}
+.via-summary{padding:13px 16px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;list-style:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.via-summary::-webkit-details-marker{display:none}
+.via-summary-left{display:flex;align-items:center;gap:10px;font-weight:700;font-size:14.5px;color:var(--ink)}
+.via-arrow{font-size:11px;color:var(--amber);font-weight:700;transition:transform .25s ease}
+.via-dropdown[open] .via-arrow{transform:rotate(180deg)}
+.via-body{padding:14px 18px 18px;border-top:1px solid var(--line);background:var(--surface);max-height:420px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.via-timeline{list-style:none;margin:0;padding:4px 0 4px 14px;border-left:2px dashed color-mix(in srgb,var(--amber) 50%,transparent)}
+.via-timeline li{position:relative;padding:6px 0 6px 14px;display:flex;align-items:center;font-size:13.5px;font-weight:600;color:var(--ink)}
+.via-timeline .t-dot{position:absolute;left:-20px;width:9px;height:9px;border-radius:50%;background:var(--surface);border:2px solid var(--amber)}
+.via-timeline li.start .t-dot{background:#16a34a;border-color:#16a34a}
+.via-timeline li.end .t-dot{background:#dc2626;border-color:#dc2626}
+.via-timeline .t-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;background:var(--amber-soft);color:var(--amber-ink);margin-left:8px;text-transform:uppercase}

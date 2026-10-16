@@ -181,6 +181,20 @@ def esc(value):
     return html.escape(str(value or ""), quote=True)
 
 
+BN_DIGITS = str.maketrans("0123456789", "০১২৩৪৫৬৭৮৯")
+
+
+def bn_num(n):
+    return str(n).translate(BN_DIGITS)
+
+
+def _hit(stop, place):
+    if not stop or not place:
+        return False
+    a, b = slug(stop), slug(place)
+    return a == b or b in a or a in b
+
+
 def _clean_url(name):
     """Served URL form. Cloudflare 301s /x.html -> /x and Google indexes the
     clean URL as canonical, so canonicals and sitemap entries must be clean.
@@ -956,11 +970,59 @@ def generate_route_page(origin, destination, buses):
     route_section = ""  # horizontal "Route Map" removed (2026-10-07) - stoppages are listed below
 
     major_section = ""
-    if major_stops:
-        chips = "".join(f'<span class="via-chip">{esc(s)}</span>' for s in major_stops)
-        major_section = f"""<section class="seo-section">
-  <h3 class="section-title">Via Stoppages</h3>
-  <div class="chip-row hscroll">{chips}</div>
+    # Option 1: Vertical Route Timeline Dropdown
+    timeline_stops = None
+    if seq and len(seq) >= 2:
+        oi, di = None, None
+        for i, stp in enumerate(seq):
+            if _hit(stp, origin):
+                oi = i
+                break
+        for i in range(len(seq) - 1, -1, -1):
+            if _hit(seq[i], destination):
+                di = i
+                break
+        if oi is not None and di is not None and di > oi:
+            timeline_stops = seq[oi:di + 1]
+        else:
+            timeline_stops = seq
+    elif major_stops:
+        clean_maj = [s for s in major_stops if s and not _hit(s, origin) and not _hit(s, destination)]
+        if clean_maj:
+            timeline_stops = [d_origin] + clean_maj + [d_destination]
+
+    if timeline_stops and len(timeline_stops) >= 2:
+        st_count = len(timeline_stops)
+        bn_st_count = bn_num(st_count)
+        items = []
+        for idx, stp in enumerate(timeline_stops):
+            s_esc = esc(stp)
+            if idx == 0:
+                items.append(f'<li class="start"><span class="t-dot"></span><span class="t-name">{s_esc}</span><span class="t-badge">Origin</span></li>')
+            elif idx == st_count - 1:
+                items.append(f'<li class="end"><span class="t-dot"></span><span class="t-name">{s_esc}</span><span class="t-badge">Destination</span></li>')
+            else:
+                items.append(f'<li><span class="t-dot"></span><span class="t-name">{s_esc}</span></li>')
+
+        timeline_li = "\n        ".join(items)
+        major_section = f"""<section class="seo-section via-section">
+  <details class="via-dropdown">
+    <summary class="via-summary">
+      <div class="via-summary-left">
+        <span class="via-icon">🚏</span>
+        <div class="via-title-wrap">
+          <span class="label-en">Via Stoppages ({st_count} stops)</span>
+          <span class="label-bn">ভায়া স্টপেজসমূহ ({bn_st_count}টি স্টপ)</span>
+        </div>
+      </div>
+      <span class="via-arrow">▼</span>
+    </summary>
+    <div class="via-body">
+      <ol class="via-timeline">
+        {timeline_li}
+      </ol>
+    </div>
+  </details>
 </section>"""
 
     faq_html = "".join(
