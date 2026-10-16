@@ -1054,7 +1054,9 @@ def generate_route_page(origin, destination, buses):
   <a class="rel-chip" href="{rev_file}">↩ {esc(d_destination)} → {esc(d_origin)} (return)</a>
 </section>"""
 
-    about_route_section = generate_about_route_html(d_origin, d_destination, buses, seq)
+    about_route_section = generate_about_route_html(
+        d_origin, d_destination, buses, seq, fare_info=fare_info, dist_km=dist_km, dur_text=dur_text
+    )
 
     body = hero + timetable + route_section + major_section + reverse_section + related_section + faq_section + about_route_section
 

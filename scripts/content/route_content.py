@@ -179,7 +179,7 @@ def bn_place(name):
     return BN_PLACES.get(clean, name)
 
 
-def generate_about_route_html(origin, destination, buses, stoppages=None):
+def generate_about_route_html(origin, destination, buses, stoppages=None, fare_info=None, dist_km=None, dur_text=None):
     """Generates a comprehensive, mobile-first 'About Route' section.
 
     Checks content/about-route/<origin-slug>-to-<dest-slug>.json for human-curated overrides,
@@ -198,29 +198,34 @@ def generate_about_route_html(origin, destination, buses, stoppages=None):
         except Exception:
             pass
 
-    # Core statistics
-    co = get_stop_coords(origin)
-    cd = get_stop_coords(destination)
-    od_km = round(haversine_km(co[0], co[1], cd[0], cd[1]) * 1.25, 1) if (co and cd) else None
+    # Core statistics — use caller-provided unified values when available
+    if dist_km is None:
+        co = get_stop_coords(origin)
+        cd = get_stop_coords(destination)
+        od_km = round(haversine_km(co[0], co[1], cd[0], cd[1]) * 1.25, 1) if (co and cd) else None
 
-    # Pick an ordered stoppage sequence from a direct bus
-    seq = None
-    for b in (buses or []):
-        st = b.get("stoppages") or []
-        if len(st) >= 2:
-            seq = [s.get("name") if isinstance(s, dict) else str(s) for s in st]
-            break
+        seq = None
+        for b in (buses or []):
+            st = b.get("stoppages") or []
+            if len(st) >= 2:
+                seq = [s.get("name") if isinstance(s, dict) else str(s) for s in st]
+                break
 
-    dist_km = calculate_route_distance(seq or [], origin, destination)
-    if od_km:
-        if not dist_km or dist_km > od_km * 1.6:
-            dist_km = round(od_km * 1.1, 1)
-        elif dist_km < od_km:
-            dist_km = od_km
+        dist_km = calculate_route_distance(seq or stoppages or [], origin, destination)
+        if od_km:
+            if not dist_km or dist_km > od_km * 1.6:
+                dist_km = round(od_km * 1.1, 1)
+            elif dist_km < od_km:
+                dist_km = od_km
 
-    dur_min = calculate_approx_time(dist_km)
-    dur_fmt = format_duration(dur_min)
-    fare = calculate_fare(dist_km)
+    if fare_info is None and dist_km:
+        fare_info = calculate_fare(dist_km)
+
+    if dur_text:
+        dur_fmt = {"en": str(dur_text), "bn": str(dur_text)}
+    else:
+        dur_min = calculate_approx_time(dist_km)
+        dur_fmt = format_duration(dur_min)
 
     bn_orig = bn_place(origin)
     bn_dest = bn_place(destination)
@@ -229,10 +234,15 @@ def generate_about_route_html(origin, destination, buses, stoppages=None):
     bn_count = bn_num(count)
     bus_word = "bus" if count == 1 else "buses"
 
-    fare_en = fare["label_en"] if fare else "₹35 – ₹60"
-    fare_bn = fare["label_bn"] if fare else "₹৩৫ – ₹৬০"
-    dist_txt_en = f"{dist_km} km" if dist_km else "approx. 45–55 km"
-    dist_txt_bn = f"{bn_num(dist_km)} কিমি" if dist_km else "প্রায় ৪৫–৫৫ কিমি"
+    if fare_info:
+        fare_en = fare_info["label_en"]
+        fare_bn = fare_info["label_bn"]
+    else:
+        fare_en = "Confirm at bus stand"
+        fare_bn = "কাউন্টারে নিশ্চিত করুন"
+
+    dist_txt_en = f"{dist_km} km" if dist_km else "Distance not listed"
+    dist_txt_bn = f"{bn_num(dist_km)} কিমি" if dist_km else "দূরত্ব নির্ধারিত নয়"
 
     # Departures
     deps = [b.get("departure_time") for b in buses if b.get("departure_time")]

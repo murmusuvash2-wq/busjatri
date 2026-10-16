@@ -1,4307 +1,4427 @@
 {
- "Adra": {
-  "lat": 23.49668,
-  "lon": 86.68363,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ahmadpur": {
-  "lat": 23.83009,
-  "lon": 87.68661,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Akui": {
-  "lat": 23.109134,
-  "lon": 87.729221,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
- },
- "Amarkanan": {
-  "lat": 23.394528,
-  "lon": 87.110195,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Ambika Nagar": {
-  "lat": 22.515408,
-  "lon": 88.36407,
-  "confidence": "medium",
-  "score": 44,
-  "source": "nominatim"
- },
- "Amdiha": {
-  "lat": 25.09396,
-  "lon": 87.18869,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
- },
- "Amlagora": {
-  "lat": 22.84616,
-  "lon": 87.33559,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Amta": {
-  "lat": 22.58344,
-  "lon": 88.01039,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Anandapur": {
-  "lat": 26.36892,
-  "lon": 89.85923,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Anara": {
-  "lat": 23.481082,
-  "lon": 86.559763,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Andal": {
-  "lat": 23.58013,
-  "lon": 87.1832,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Arambagh": {
-  "lat": 22.88333,
-  "lon": 87.78333,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Argoal": {
-  "lat": 21.96939,
-  "lon": 87.63398,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Arrah": {
-  "lat": 23.524431,
-  "lon": 87.371206,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Arsha": {
-  "lat": 23.32663,
-  "lon": 86.17329,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Asansol": {
-  "lat": 23.68333,
-  "lon": 86.98333,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Babuijore": {
-  "lat": 23.79055,
-  "lon": 87.26908,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Badanganj": {
-  "lat": 22.9023,
-  "lon": 87.54214,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bagda": {
-  "lat": 23.19706,
-  "lon": 86.68703,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Baghmundi": {
-  "lat": 23.18982,
-  "lon": 86.05547,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bagnan": {
-  "lat": 22.93338,
-  "lon": 88.13856,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bagula": {
-  "lat": 23.33664,
-  "lon": 88.64109,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Baharagora": {
-  "lat": 22.27507,
-  "lon": 86.71826,
-  "confidence": "low",
-  "score": 32,
-  "source": "open-meteo"
- },
- "Baharampur": {
-  "lat": 24.10473,
-  "lon": 88.25155,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Baidyabati": {
-  "lat": 22.78498,
-  "lon": 88.32586,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Baidyanathpur": {
-  "lat": 22.42526,
-  "lon": 87.97528,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bainchi": {
-  "lat": 22.8622,
-  "lon": 88.2686,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bajitpur": {
-  "lat": 22.88896,
-  "lon": 88.13488,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bajkul": {
-  "lat": 22.024535,
-  "lon": 87.821415,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Baksi": {
-  "lat": 22.527917,
-  "lon": 88.347462,
-  "confidence": "medium",
-  "score": 43,
-  "source": "nominatim"
- },
- "Balarampur": {
-  "lat": 23.09714,
-  "lon": 86.22292,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Baleshwar": {
-  "lat": 21.49266,
-  "lon": 86.93348,
-  "confidence": "low",
-  "score": 16,
-  "source": "open-meteo"
- },
- "Balgona": {
-  "lat": 23.45805,
-  "lon": 87.950456,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Balichak": {
-  "lat": 22.358186,
-  "lon": 87.553354,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Bally": {
-  "lat": 22.64859,
-  "lon": 88.34115,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Balsi": {
-  "lat": 23.15454,
-  "lon": 87.524861,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
- },
- "Bamundiha": {
-  "lat": 23.11765,
-  "lon": 86.36607,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bandwan": {
-  "lat": 22.78333,
-  "lon": 86.5,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bangaon": {
-  "lat": 23.04553,
-  "lon": 88.83084,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bangla": {
-  "lat": 22.273126,
-  "lon": 88.172396,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Bankadaha": {
-  "lat": 22.97927,
-  "lon": 87.35787,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bankati": {
-  "lat": 23.771835,
-  "lon": 87.279725,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Bankura": {
-  "lat": 23.23241,
-  "lon": 87.0716,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Banspahari": {
-  "lat": 24.42478,
-  "lon": 87.53114,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
- },
- "Bara Andulia": {
-  "lat": 22.575169,
-  "lon": 88.239643,
-  "confidence": "high",
-  "score": 108,
-  "source": "rail-soft"
- },
- "Barabazar": {
-  "lat": 23.0279,
-  "lon": 86.36069,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Barakar": {
-  "lat": 23.741683,
-  "lon": 86.818859,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Barasat": {
-  "lat": 22.72154,
-  "lon": 88.48198,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bardhaman": {
-  "lat": 23.25572,
-  "lon": 87.85691,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Barikul": {
-  "lat": 22.765733,
-  "lon": 86.799454,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Baripada": {
-  "lat": 21.922741,
-  "lon": 86.73709,
-  "confidence": "high",
-  "score": 150,
-  "source": "open-meteo+rail-snap"
- },
- "Barjora": {
-  "lat": 23.42754,
-  "lon": 87.29037,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Barrackpore": {
-  "lat": 22.761065,
-  "lon": 88.371428,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Baruipur": {
-  "lat": 22.36544,
-  "lon": 88.4325,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Basudebpur": {
-  "lat": 21.82014,
-  "lon": 87.62916,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Belatikri": {
-  "lat": 24.97843,
-  "lon": 84.981353,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Belda": {
-  "lat": 22.08427,
-  "lon": 87.35204,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Beldanga": {
-  "lat": 23.93428,
-  "lon": 88.26018,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Beliatore": {
-  "lat": 23.32052,
-  "lon": 87.22081,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Belpahari": {
-  "lat": 22.63207,
-  "lon": 86.76426,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Belut": {
-  "lat": 23.216426,
-  "lon": 87.586585,
-  "confidence": "medium",
-  "score": 43,
-  "source": "nominatim"
- },
- "Benachity": {
-  "lat": 23.561689,
-  "lon": 87.274961,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Bengai": {
-  "lat": 22.936991,
-  "lon": 87.669869,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Beta": {
-  "lat": 22.92074,
-  "lon": 88.23425,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bethuadahari": {
-  "lat": 23.610275,
-  "lon": 88.384597,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Bhadrak": {
-  "lat": 21.091746,
-  "lon": 86.516231,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Bhadreswar": {
-  "lat": 22.82449,
-  "lon": 88.33841,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bhadutala": {
-  "lat": 22.485657,
-  "lon": 87.3208,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Bhagabanpur": {
-  "lat": 24.78772,
-  "lon": 88.01242,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bhairabdanga": {
-  "lat": 24.74574,
-  "lon": 87.87515,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Bhatar": {
-  "lat": 23.41251,
-  "lon": 87.91529,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bhimpur": {
-  "lat": 24.50988,
-  "lon": 87.92536,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Bhubaneswar": {
-  "lat": 26.388205,
-  "lon": 89.494466,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Bibarda": {
-  "lat": 22.152958,
-  "lon": 88.08753,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
- },
- "Bibhishanpur": {
-  "lat": 22.084895,
-  "lon": 87.689616,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
- },
- "Bikrampur": {
-  "lat": 22.73455,
-  "lon": 87.006304,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Binpur": {
-  "lat": 22.58132,
-  "lon": 86.92072,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Birhata": {
-  "lat": 23.235237,
-  "lon": 87.866129,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
- },
- "Birsingha": {
-  "lat": 23.19913,
-  "lon": 87.450527,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Bishnupur": {
-  "lat": 23.0738,
-  "lon": 87.31991,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Boga": {
-  "lat": 25.07756,
-  "lon": 87.68794,
-  "confidence": "medium",
-  "score": 60,
-  "source": "open-meteo"
- },
- "Bolpur": {
-  "lat": 23.66278,
-  "lon": 87.69695,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Budbud": {
-  "lat": 23.40131,
-  "lon": 87.53895,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chaitanyapur": {
-  "lat": 22.136048,
-  "lon": 88.08323,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
- },
- "Chakulia": {
-  "lat": 22.478149,
-  "lon": 86.721161,
-  "confidence": "high",
-  "score": 158,
-  "source": "open-meteo+rail-snap"
- },
- "Chalsa": {
-  "lat": 26.88413,
-  "lon": 88.79068,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Champadanga": {
-  "lat": 22.83771,
-  "lon": 87.97575,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chandannagar": {
-  "lat": 22.86225,
-  "lon": 88.36796,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chandil": {
-  "lat": 22.956014,
-  "lon": 86.072109,
-  "confidence": "high",
-  "score": 120,
-  "source": "open-meteo+rail-soft"
- },
- "Chandipur": {
-  "lat": 22.35108,
-  "lon": 88.40054,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chanditala": {
-  "lat": 22.69316,
-  "lon": 88.25786,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chandra": {
-  "lat": 22.46175,
-  "lon": 87.14845,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chandrakona Road": {
-  "lat": 22.73523,
-  "lon": 87.33643,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chandrakona Town": {
-  "lat": 22.729481,
-  "lon": 87.51424,
-  "confidence": "medium",
-  "score": 69,
-  "source": "nominatim"
- },
- "Changrabandha": {
-  "lat": 26.41564,
-  "lon": 88.91871,
-  "confidence": "high",
-  "score": 80,
-  "source": "legacy"
- },
- "Chapra": {
-  "lat": 23.52791,
-  "lon": 88.55429,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Charkalgram": {
-  "lat": 23.664651,
-  "lon": 87.841873,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Chas": {
-  "lat": 24.27624,
-  "lon": 87.78677,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Chatumadar": {
-  "lat": 23.257795,
-  "lon": 86.599244,
-  "confidence": "medium",
-  "score": 43,
-  "source": "nominatim"
- },
- "Chelyama": {
-  "lat": 23.61576,
-  "lon": 86.55245,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chhandar": {
-  "lat": 23.303182,
-  "lon": 87.250559,
-  "confidence": "high",
-  "score": 92,
-  "source": "nominatim"
- },
- "Chhatna": {
-  "lat": 23.30566,
-  "lon": 86.97174,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chichra": {
-  "lat": 22.311758,
-  "lon": 86.883144,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim+open-meteo"
- },
- "Chingra": {
-  "lat": 22.731618,
-  "lon": 87.028014,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Chirkunda": {
-  "lat": 23.74771,
-  "lon": 86.78804,
-  "confidence": "high",
-  "score": 81,
-  "source": "open-meteo"
- },
- "Chittaranjan": {
-  "lat": 23.85681,
-  "lon": 86.90324,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Chuchura": {
-  "lat": 22.890191,
-  "lon": 88.3695,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Chunait": {
-  "lat": 22.777021,
-  "lon": 87.860198,
-  "confidence": "high",
-  "score": 80,
-  "source": "nominatim"
- },
- "Contai": {
-  "lat": 21.77985,
-  "lon": 87.74892,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dahijuri": {
-  "lat": 22.50219,
-  "lon": 86.99109,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dainhat": {
-  "lat": 23.60518,
-  "lon": 88.17172,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dakshineswar": {
-  "lat": 22.65567,
-  "lon": 88.3672,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Daldali": {
-  "lat": 26.53956,
-  "lon": 89.80907,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Damda": {
-  "lat": 22.34389,
-  "lon": 88.36528,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Damdim": {
-  "lat": 26.859243,
-  "lon": 88.671333,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Dankuni": {
-  "lat": 22.677422,
-  "lon": 88.291491,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Dantan": {
-  "lat": 21.94658,
-  "lon": 87.27678,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Darda": {
-  "lat": 22.96983,
-  "lon": 85.86612,
-  "confidence": "medium",
-  "score": 50,
-  "source": "open-meteo"
- },
- "Dasagram": {
-  "lat": 22.1762,
-  "lon": 87.6063,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Daspur": {
-  "lat": 22.60691,
-  "lon": 87.72331,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Debagram": {
-  "lat": 23.68832,
-  "lon": 88.30083,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Debra": {
-  "lat": 22.3952,
-  "lon": 87.56015,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dhaban": {
-  "lat": 23.466182,
-  "lon": 86.901265,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Dhadka": {
-  "lat": 22.78333,
-  "lon": 86.5,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dhadki": {
-  "lat": 23.67161,
-  "lon": 85.9806,
-  "confidence": "low",
-  "score": 38,
-  "source": "open-meteo"
- },
- "Dhalbhumgarh": {
-  "lat": 22.50751,
-  "lon": 86.55587,
-  "confidence": "medium",
-  "score": 60,
-  "source": "open-meteo"
- },
- "Dhaldanga": {
-  "lat": 23.204846,
-  "lon": 87.069666,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
- },
- "Dhanbad": {
-  "lat": 23.790966,
-  "lon": 86.428956,
-  "confidence": "high",
-  "score": 110,
-  "source": "open-meteo+rail-soft"
- },
- "Dhansimla": {
-  "lat": 23.26734,
-  "lon": 87.465916,
-  "confidence": "high",
-  "score": 92,
-  "source": "nominatim"
- },
- "Dheko": {
-  "lat": 24.47638,
-  "lon": 87.81591,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dherua": {
-  "lat": 22.465013,
-  "lon": 87.004502,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
- },
- "Dhubulia": {
-  "lat": 23.483546,
-  "lon": 88.441145,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Digha": {
-  "lat": 21.62776,
-  "lon": 87.51965,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dignagar": {
-  "lat": 23.43242,
-  "lon": 87.68324,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dinhata": {
-  "lat": 26.13526,
-  "lon": 89.46129,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dishergarh": {
-  "lat": 23.69064,
-  "lon": 86.82735,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Domkal": {
-  "lat": 24.12065,
-  "lon": 88.54393,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dubra": {
-  "lat": 23.54332,
-  "lon": 86.52102,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dubrajpur": {
-  "lat": 23.7902,
-  "lon": 87.37648,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Dum Dum Airport": {
-  "lat": 22.621717,
-  "lon": 88.392835,
-  "confidence": "high",
-  "score": 115,
-  "source": "rail-soft"
- },
- "Dunlop": {
-  "lat": 22.652496,
-  "lon": 88.3773,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
- },
- "Durgachak": {
-  "lat": 22.07576,
-  "lon": 88.13747,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Durgapur (City Center)": {
-  "lat": 23.495046,
-  "lon": 87.297902,
-  "confidence": "high",
-  "score": 115,
-  "source": "rail-soft"
- },
- "Durgapur (Muchipara)": {
-  "lat": 23.495046,
-  "lon": 87.297902,
-  "confidence": "high",
-  "score": 115,
-  "source": "rail-soft"
- },
- "Durgapur (Station)": {
-  "lat": 23.495046,
-  "lon": 87.297902,
-  "confidence": "high",
-  "score": 135,
-  "source": "nominatim+rail-soft"
- },
- "Durlavpur": {
-  "lat": 22.14227,
-  "lon": 88.35914,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Duttapulia": {
-  "lat": 23.240131,
-  "lon": 88.705827,
-  "confidence": "medium",
-  "score": 69,
-  "source": "nominatim"
- },
- "Egra": {
-  "lat": 21.89947,
-  "lon": 87.53794,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Exide More": {
-  "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "high",
-  "score": 115,
-  "source": "rail-soft"
- },
- "Farakka": {
-  "lat": 24.81667,
-  "lon": 87.9,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Fatapukur": {
-  "lat": 26.570857,
-  "lon": 88.538758,
-  "confidence": "high",
-  "score": 77,
-  "source": "nominatim"
- },
- "Fatehpur": {
-  "lat": 24.08095,
-  "lon": 87.73092,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Fulbari": {
-  "lat": 26.649573,
-  "lon": 88.417741,
-  "confidence": "medium",
-  "score": 48,
-  "source": "nominatim"
- },
- "Gadiara": {
-  "lat": 22.798157,
-  "lon": 88.280471,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
- },
- "Galsi": {
-  "lat": 23.33928,
-  "lon": 87.68926,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Galudi": {
-  "lat": 22.648872,
-  "lon": 86.410494,
-  "confidence": "high",
-  "score": 108,
-  "source": "rail-soft"
- },
- "Gangajalghati": {
-  "lat": 23.4224,
-  "lon": 87.11411,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Garchakraberia": {
-  "lat": 22.514668,
-  "lon": 88.249021,
-  "confidence": "high",
-  "score": 90,
-  "source": "rail-soft"
- },
- "Garhbeta": {
-  "lat": 22.844562,
-  "lon": 87.320972,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Garia": {
-  "lat": 22.46323,
-  "lon": 88.39788,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ghatal": {
-  "lat": 22.66244,
-  "lon": 87.73399,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ghatsila": {
-  "lat": 22.58616,
-  "lon": 86.479768,
-  "confidence": "high",
-  "score": 158,
-  "source": "open-meteo+rail-snap"
- },
- "Ghughumari": {
-  "lat": 26.333888,
-  "lon": 89.326136,
-  "confidence": "medium",
-  "score": 53,
-  "source": "nominatim"
- },
- "Gidhni": {
-  "lat": 22.48449,
-  "lon": 86.85498,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Goaltore": {
-  "lat": 22.70989,
-  "lon": 87.169777,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Gobindapur": {
-  "lat": 22.59306,
-  "lon": 88.09139,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Godapiasal": {
-  "lat": 22.53641,
-  "lon": 87.32783,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Goghat": {
-  "lat": 22.889309,
-  "lon": 87.706238,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Gokarna": {
-  "lat": 24.04234,
-  "lon": 88.11468,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Golapbag": {
-  "lat": 23.251908,
-  "lon": 87.849808,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
- },
- "Gopalnagar": {
-  "lat": 22.83089,
-  "lon": 88.22493,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Gopalpur": {
-  "lat": 22.61845,
-  "lon": 88.75119,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Gopinathpur": {
-  "lat": 22.81172,
-  "lon": 88.06486,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Goura": {
-  "lat": 26.30457,
-  "lon": 88.73581,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Guptamoni": {
-  "lat": 26.448121,
-  "lon": 92.919609,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Guskara": {
-  "lat": 23.489998,
-  "lon": 87.733397,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Haldia": {
-  "lat": 22.06046,
-  "lon": 88.10975,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Haludkanali": {
-  "lat": 22.879806,
-  "lon": 86.878606,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Hanskhali": {
-  "lat": 23.356657,
-  "lon": 88.609607,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Harda": {
-  "lat": 25.34856,
-  "lon": 87.86762,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Harinarayanpur": {
-  "lat": 22.60028,
-  "lon": 88.1125,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Harmasra": {
-  "lat": 23.034095,
-  "lon": 87.002865,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Hatirampur": {
-  "lat": 23.061996,
-  "lon": 86.878598,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Hazipur": {
-  "lat": 24.03998,
-  "lon": 87.82764,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Helencha": {
-  "lat": 23.18921,
-  "lon": 88.8635,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Hematpur": {
-  "lat": 24.57969,
-  "lon": 85.22925,
-  "confidence": "low",
-  "score": 25,
-  "source": "open-meteo"
- },
- "Henria": {
-  "lat": 21.968524,
-  "lon": 87.803593,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Hoomgarh": {
-  "lat": 22.852862,
-  "lon": 87.34661,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
- },
- "Howrah": {
-  "lat": 22.57688,
-  "lon": 88.31857,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Hura": {
-  "lat": 23.30337,
-  "lon": 86.65717,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Illambazar": {
-  "lat": 23.690296,
-  "lon": 87.512895,
-  "confidence": "medium",
-  "score": 65,
-  "source": "nominatim"
- },
- "Indpur": {
-  "lat": 23.16667,
-  "lon": 86.93333,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Indus": {
-  "lat": 23.12951,
-  "lon": 87.61517,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Islampur": {
-  "lat": 26.26541,
-  "lon": 88.18982,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Jadavpur": {
-  "lat": 22.48794,
-  "lon": 88.37873,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Jalangi": {
-  "lat": 24.12799,
-  "lon": 88.68989,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Jalchak": {
-  "lat": 22.238766,
-  "lon": 87.671054,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Jaleswar": {
-  "lat": 21.79749,
-  "lon": 87.220491,
-  "confidence": "high",
-  "score": 150,
-  "source": "open-meteo+rail-snap"
- },
- "Jamalpur": {
-  "lat": 23.06664,
-  "lon": 87.99181,
-  "confidence": "high",
-  "score": 120,
-  "source": "legacy"
- },
- "Jambani": {
-  "lat": 22.518761,
-  "lon": 86.843748,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Jamtoria": {
-  "lat": 22.903638,
-  "lon": 86.638829,
-  "confidence": "medium",
-  "score": 63,
-  "source": "nominatim"
- },
- "Jangipur": {
-  "lat": 24.47001,
-  "lon": 88.07659,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Jayrambati": {
-  "lat": 22.92387,
-  "lon": 87.610545,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Jhakra": {
-  "lat": 22.514668,
-  "lon": 88.249021,
-  "confidence": "high",
-  "score": 90,
-  "source": "rail-soft"
- },
- "Jhanka": {
-  "lat": 26.29731,
-  "lon": 87.13098,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
- },
- "Jhantipahari": {
-  "lat": 23.353363,
-  "lon": 86.904491,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Jhargram": {
-  "lat": 22.45384,
-  "lon": 86.99497,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Jhilimili": {
-  "lat": 22.81392,
-  "lon": 86.64575,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Jhitka": {
-  "lat": 22.6325,
-  "lon": 88.84389,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Jorda": {
-  "lat": 23.168688,
-  "lon": 86.834018,
-  "confidence": "high",
-  "score": 76,
-  "source": "nominatim"
- },
- "Jorehira": {
-  "lat": 23.428865,
-  "lon": 86.888028,
-  "confidence": "high",
-  "score": 71,
-  "source": "nominatim"
- },
- "Joykrishnapur": {
-  "lat": 23.12438,
-  "lon": 87.31404,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Joypur": {
-  "lat": 23.040584,
-  "lon": 87.456204,
-  "confidence": "high",
-  "score": 83,
-  "source": "nominatim"
- },
- "Joyrampur": {
-  "lat": 22.85984,
-  "lon": 87.82673,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kalaikunda": {
-  "lat": 22.3393,
-  "lon": 87.22637,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kaliachak": {
-  "lat": 24.86371,
-  "lon": 88.02207,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kalikapur": {
-  "lat": 22.05538,
-  "lon": 88.33856,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kalimati": {
-  "lat": 23.23423,
-  "lon": 85.92242,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kalna": {
-  "lat": 23.21944,
-  "lon": 88.36295,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kalyani": {
-  "lat": 22.9757,
-  "lon": 88.4337,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kamalgazi": {
-  "lat": 22.449524,
-  "lon": 88.395539,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Kamalpur": {
-  "lat": 25.92484,
-  "lon": 87.85641,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kamarpukur": {
-  "lat": 22.23121,
-  "lon": 88.40108,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kanchanpur": {
-  "lat": 23.31164,
-  "lon": 87.09426,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kandi": {
-  "lat": 23.95946,
-  "lon": 88.04018,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kantapahari": {
-  "lat": 24.343,
-  "lon": 87.78763,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Karimpur": {
-  "lat": 23.97594,
-  "lon": 88.61917,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Karunamoyee": {
-  "lat": 22.58638,
-  "lon": 88.421531,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
- },
- "Kashipur": {
-  "lat": 23.43444,
-  "lon": 86.66723,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Katin": {
-  "lat": 26.465652,
-  "lon": 94.002692,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Katwa": {
-  "lat": 23.64558,
-  "lon": 88.13258,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kenda": {
-  "lat": 23.1959,
-  "lon": 86.51499,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kenjakura": {
-  "lat": 23.271639,
-  "lon": 86.934038,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Keshabpur": {
-  "lat": 22.61232,
-  "lon": 88.20047,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Keshiary": {
-  "lat": 22.11674,
-  "lon": 87.23446,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Keshpur": {
-  "lat": 22.55468,
-  "lon": 87.46109,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ketugram": {
-  "lat": 23.70115,
-  "lon": 88.04532,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Khagraghat": {
-  "lat": 24.106842,
-  "lon": 88.226481,
-  "confidence": "high",
-  "score": 135,
-  "source": "nominatim+rail-soft"
- },
- "Khakurda": {
-  "lat": 22.26402,
-  "lon": 88.46104,
-  "confidence": "high",
-  "score": 120,
-  "source": "legacy"
- },
- "Khanakul": {
-  "lat": 22.70891,
-  "lon": 87.85016,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Khandaghosh": {
-  "lat": 23.20807,
-  "lon": 87.69406,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kharagpur": {
-  "lat": 22.33971,
-  "lon": 87.32501,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kharar": {
-  "lat": 22.72211,
-  "lon": 87.67824,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kharbona": {
-  "lat": 24.15596,
-  "lon": 87.74261,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Kharikamathani": {
-  "lat": 25.388883,
-  "lon": 87.014958,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Khatra": {
-  "lat": 22.97617,
-  "lon": 86.85462,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Khatul": {
-  "lat": 22.972479,
-  "lon": 87.649053,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Khetua": {
-  "lat": 24.04074,
-  "lon": 86.1222,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
- },
- "Khirpai": {
-  "lat": 22.70996,
-  "lon": 87.61768,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Khujutipara": {
-  "lat": 23.609846,
-  "lon": 87.895689,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Kirnahar": {
-  "lat": 23.75802,
-  "lon": 87.87404,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kolaghat": {
-  "lat": 22.43252,
-  "lon": 87.85938,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kolkata": {
-  "lat": 22.56263,
-  "lon": 88.36304,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kolkata (Esplanade)": {
-  "lat": 22.566793,
-  "lon": 88.375198,
-  "confidence": "high",
-  "score": 135,
-  "source": "nominatim+rail-soft"
- },
- "Komarpur": {
-  "lat": 23.734366,
-  "lon": 87.997046,
-  "confidence": "high",
-  "score": 85,
-  "source": "nominatim"
- },
- "Kona Express More": {
-  "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Kotshila": {
-  "lat": 23.40207,
-  "lon": 86.07017,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kotulpur": {
-  "lat": 23.0119,
-  "lon": 87.59382,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Krishnaganj": {
-  "lat": 23.443462,
-  "lon": 88.706812,
-  "confidence": "high",
-  "score": 80,
-  "source": "nominatim"
- },
- "Krishnanagar": {
-  "lat": 23.40576,
-  "lon": 88.49073,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kukrahati": {
-  "lat": 22.187065,
-  "lon": 88.119895,
-  "confidence": "high",
-  "score": 95,
-  "source": "nominatim"
- },
- "Kulgachhi": {
-  "lat": 24.35863,
-  "lon": 87.840757,
-  "confidence": "medium",
-  "score": 63,
-  "source": "nominatim"
- },
- "Kuli": {
-  "lat": 24.72489,
-  "lon": 87.93038,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kulti": {
-  "lat": 23.73166,
-  "lon": 86.84372,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Kumidya": {
-  "lat": 23.21693,
-  "lon": 86.966042,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Kusumgram": {
-  "lat": 23.389846,
-  "lon": 88.127861,
-  "confidence": "high",
-  "score": 91,
-  "source": "nominatim"
- },
- "Kutni": {
-  "lat": 25.01282,
-  "lon": 87.47037,
-  "confidence": "low",
-  "score": 25,
-  "source": "open-meteo"
- },
- "Labpur": {
-  "lat": 23.81699,
-  "lon": 87.80427,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ladhurka": {
-  "lat": 23.35456,
-  "lon": 86.53415,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Lakshmisagar": {
-  "lat": 22.92744,
-  "lon": 87.01375,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Lalgarh": {
-  "lat": 22.58732,
-  "lon": 87.04968,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Lalgola": {
-  "lat": 24.42244,
-  "lon": 88.25238,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Lalpur": {
-  "lat": 24.747459,
-  "lon": 87.912243,
-  "confidence": "high",
-  "score": 108,
-  "source": "rail-soft"
- },
- "Lara More": {
-  "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Lodhasuli": {
-  "lat": 22.33628,
-  "lon": 87.04924,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Lowada": {
-  "lat": 22.44874,
-  "lon": 87.61588,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Madanmohanpur": {
-  "lat": 24.488461,
-  "lon": 86.785648,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Madhukunda": {
-  "lat": 23.62663,
-  "lon": 86.869091,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Madhyamgram": {
-  "lat": 22.68944,
-  "lon": 88.44594,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Madpur": {
-  "lat": 22.38041,
-  "lon": 87.43886,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Magra": {
-  "lat": 22.98809,
-  "lon": 88.37308,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mahara": {
-  "lat": 24.81667,
-  "lon": 87.8,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mahish Bathan": {
-  "lat": 23.937349,
-  "lon": 88.618727,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Mahishadal": {
-  "lat": 22.18616,
-  "lon": 87.98072,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Majhdia": {
-  "lat": 23.414562,
-  "lon": 88.719031,
-  "confidence": "high",
-  "score": 115,
-  "source": "nominatim+rail-snap"
- },
- "Makurgram": {
-  "lat": 23.28094,
-  "lon": 87.144595,
-  "confidence": "high",
-  "score": 91,
-  "source": "nominatim"
- },
- "Malbazar": {
-  "lat": 26.85,
-  "lon": 88.75,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Malda": {
-  "lat": 25.00447,
-  "lon": 88.14573,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Maliara": {
-  "lat": 23.47555,
-  "lon": 87.22482,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mallarpur": {
-  "lat": 24.07908,
-  "lon": 87.70919,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Manbazar": {
-  "lat": 23.0591,
-  "lon": 86.66269,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Manglamaro": {
-  "lat": 22.082214,
-  "lon": 87.638479,
-  "confidence": "high",
-  "score": 95,
-  "source": "nominatim"
- },
- "Manguria": {
-  "lat": 23.344519,
-  "lon": 86.344157,
-  "confidence": "medium",
-  "score": 53,
-  "source": "nominatim"
- },
- "Manihara": {
-  "lat": 22.598809,
-  "lon": 88.377167,
-  "confidence": "low",
-  "score": -10,
-  "source": "nominatim"
- },
- "Maniktala": {
-  "lat": 22.58809,
-  "lon": 88.385283,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Mankanali": {
-  "lat": 23.328395,
-  "lon": 87.043296,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Matgoda": {
-  "lat": 22.775632,
-  "lon": 86.897809,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Mathabhanga": {
-  "lat": 26.34197,
-  "lon": 89.21555,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mayapur": {
-  "lat": 22.41667,
-  "lon": 88.11667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Maynaguri": {
-  "lat": 26.578607,
-  "lon": 88.822868,
-  "confidence": "high",
-  "score": 85,
-  "source": "nominatim+rail-soft"
- },
- "Mecheda": {
-  "lat": 22.414105,
-  "lon": 87.85883,
-  "confidence": "high",
-  "score": 145,
-  "source": "rail-snap"
- },
- "Medinipur": {
-  "lat": 22.42114,
-  "lon": 87.32257,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mejia": {
-  "lat": 23.56728,
-  "lon": 87.10803,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Memari": {
-  "lat": 23.17647,
-  "lon": 88.09749,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mirzapur": {
-  "lat": 24.40574,
-  "lon": 88.06512,
-  "confidence": "high",
-  "score": 120,
-  "source": "legacy"
- },
- "Mogra": {
-  "lat": 22.988257,
-  "lon": 88.373269,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Mohammad Bazar": {
-  "lat": 24.03624,
-  "lon": 87.591121,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Mohanpur": {
-  "lat": 21.83888,
-  "lon": 87.42565,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Molian": {
-  "lat": 23.102678,
-  "lon": 86.805762,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
- },
- "Mosat": {
-  "lat": 22.2616,
-  "lon": 88.23141,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Moyna": {
-  "lat": 22.239382,
-  "lon": 87.754265,
-  "confidence": "high",
-  "score": 75,
-  "source": "nominatim"
- },
- "Mukundapur": {
-  "lat": 22.84166,
-  "lon": 88.43797,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Mukutmanipur": {
-  "lat": 22.962559,
-  "lon": 86.787522,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
- },
- "Nabadwip": {
-  "lat": 23.4067,
-  "lon": 88.36861,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Nadanghat": {
-  "lat": 23.373418,
-  "lon": 88.253147,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Nadia": {
-  "lat": 23.484737,
-  "lon": 88.556707,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Nadiha": {
-  "lat": 23.495621,
-  "lon": 86.404079,
-  "confidence": "medium",
-  "score": 53,
-  "source": "nominatim"
- },
- "Nalhati": {
-  "lat": 24.29704,
-  "lon": 87.82899,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Nandakumar": {
-  "lat": 22.18982,
-  "lon": 87.91873,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Nandanpur": {
-  "lat": 22.04626,
-  "lon": 88.328809,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Nandigram": {
-  "lat": 22.00176,
-  "lon": 87.95944,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Nanoor": {
-  "lat": 23.704138,
-  "lon": 87.867227,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Napara": {
-  "lat": 22.67278,
-  "lon": 88.46944,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Narajole": {
-  "lat": 22.56667,
-  "lon": 87.61667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Narrah": {
-  "lat": 23.261796,
-  "lon": 87.137323,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Narsingpur": {
-  "lat": 23.949944,
-  "lon": 87.57268,
-  "confidence": "low",
-  "score": 38,
-  "source": "nominatim"
- },
- "Neamatpur": {
-  "lat": 25.96537,
-  "lon": 87.87293,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Nikunjapur": {
-  "lat": 23.204602,
-  "lon": 87.201765,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Nimpura": {
-  "lat": 22.332403,
-  "lon": 87.264686,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Nischintapur": {
-  "lat": 24.04973,
-  "lon": 87.5756,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Onda": {
-  "lat": 23.13874,
-  "lon": 87.20265,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Oodlabari": {
-  "lat": 26.866793,
-  "lon": 88.624639,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "P More": {
-  "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Pabra": {
-  "lat": 25.95377,
-  "lon": 86.0806,
-  "confidence": "low",
-  "score": 25,
-  "source": "open-meteo"
- },
- "Pairachali": {
-  "lat": 23.082238,
-  "lon": 86.720583,
-  "confidence": "medium",
-  "score": 68,
-  "source": "nominatim"
- },
- "Pakhanna": {
-  "lat": 23.408504,
-  "lon": 87.377473,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Palasi": {
-  "lat": 24.816902,
-  "lon": 87.909948,
-  "confidence": "low",
-  "score": 33,
-  "source": "nominatim"
- },
- "Panagarh": {
-  "lat": 23.45606,
-  "lon": 87.44718,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Panchal": {
-  "lat": 23.22789,
-  "lon": 87.28808,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Panchet": {
-  "lat": 23.62085,
-  "lon": 86.77755,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Panchgachia": {
-  "lat": 25.969294,
-  "lon": 86.598221,
-  "confidence": "high",
-  "score": 95,
-  "source": "rail-snap"
- },
- "Panchgram": {
-  "lat": 24.20231,
-  "lon": 88.00814,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Panchmura": {
-  "lat": 22.96546,
-  "lon": 87.16135,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Panchthupi": {
-  "lat": 23.88847,
-  "lon": 87.98843,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Pandaveswar": {
-  "lat": 23.72793,
-  "lon": 87.27089,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Pandua": {
-  "lat": 23.07492,
-  "lon": 88.28637,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Paniparul": {
-  "lat": 21.74949,
-  "lon": 87.53621,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Panna": {
-  "lat": 22.499211,
-  "lon": 88.317066,
-  "confidence": "low",
-  "score": 28,
-  "source": "nominatim"
- },
- "Panrui": {
-  "lat": 23.781923,
-  "lon": 87.607377,
-  "confidence": "medium",
-  "score": 61,
-  "source": "nominatim"
- },
- "Panskura": {
-  "lat": 22.40418,
-  "lon": 87.71746,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Parihati": {
-  "lat": 22.51978,
-  "lon": 86.84851,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Parulia": {
-  "lat": 22.21277,
-  "lon": 88.17515,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Patamda": {
-  "lat": 22.90612,
-  "lon": 86.38643,
-  "confidence": "medium",
-  "score": 68,
-  "source": "open-meteo"
- },
- "Patashpur": {
-  "lat": 22.026788,
-  "lon": 87.547001,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Patharmora": {
-  "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Patrasayer": {
-  "lat": 23.217327,
-  "lon": 87.536508,
-  "confidence": "high",
-  "score": 87,
-  "source": "nominatim"
- },
- "Phulia": {
-  "lat": 23.229897,
-  "lon": 88.49634,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Piardoba": {
-  "lat": 22.956881,
-  "lon": 87.322164,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Pingla": {
-  "lat": 22.28315,
-  "lon": 87.58654,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Pirakata": {
-  "lat": 22.56491,
-  "lon": 87.17945,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Piyariganj": {
-  "lat": 26.644544,
-  "lon": 85.425711,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Poradih": {
-  "lat": 23.6144,
-  "lon": 86.45817,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Pratap Dighi": {
-  "lat": 21.98123,
-  "lon": 87.60068,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Puabagan": {
-  "lat": 23.20613,
-  "lon": 87.020932,
-  "confidence": "high",
-  "score": 98,
-  "source": "nominatim"
- },
- "Puncha": {
-  "lat": 23.15921,
-  "lon": 86.6484,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Purandarpur": {
-  "lat": 23.85534,
-  "lon": 87.5827,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Purulia": {
-  "lat": 23.33062,
-  "lon": 86.36303,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Radhanagar": {
-  "lat": 23.15462,
-  "lon": 87.32344,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Raghunathpur": {
-  "lat": 23.53878,
-  "lon": 86.6735,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Raiganj": {
-  "lat": 25.61281,
-  "lon": 88.12449,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Raipur": {
-  "lat": 22.79866,
-  "lon": 86.95145,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rajhati": {
-  "lat": 22.781549,
-  "lon": 88.017512,
-  "confidence": "medium",
-  "score": 53,
-  "source": "nominatim"
- },
- "Ramdiha": {
-  "lat": 25.2653,
-  "lon": 85.51065,
-  "confidence": "low",
-  "score": -15,
-  "source": "open-meteo"
- },
- "Ramgarh": {
-  "lat": 22.69295,
-  "lon": 87.05872,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ramjibanpur": {
-  "lat": 22.82815,
-  "lon": 87.60888,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ramnagar": {
-  "lat": 22.77778,
-  "lon": 88.24639,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rampur": {
-  "lat": 23.48441,
-  "lon": 86.56714,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rampurhat": {
-  "lat": 24.179797,
-  "lon": 87.782147,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Ramsagar": {
-  "lat": 23.106248,
-  "lon": 87.277063,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Ranaghat": {
-  "lat": 23.17623,
-  "lon": 88.56667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rangamati": {
-  "lat": 26.80759,
-  "lon": 89.45724,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Ranibandh": {
-  "lat": 22.86453,
-  "lon": 86.78357,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ranichak": {
-  "lat": 22.61546,
-  "lon": 87.81199,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Raniganj": {
-  "lat": 23.6164,
-  "lon": 87.13061,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rasgovindpur": {
-  "lat": 21.78816,
-  "lon": 87.04609,
-  "confidence": "medium",
-  "score": 60,
-  "source": "open-meteo"
- },
- "Raskundu": {
-  "lat": 22.839261,
-  "lon": 87.346336,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Rasulpur": {
-  "lat": 25.40056,
-  "lon": 87.97454,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ratanpur": {
-  "lat": 23.10635,
-  "lon": 87.06991,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rejinagar": {
-  "lat": 23.85009,
-  "lon": 88.259255,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Rohini": {
-  "lat": 22.16404,
-  "lon": 87.09006,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ruby": {
-  "lat": 22.513245,
-  "lon": 88.402565,
-  "confidence": "high",
-  "score": 90,
-  "source": "nominatim"
- },
- "Rudra": {
-  "lat": 22.63028,
-  "lon": 88.17528,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Rupnarayanpur": {
-  "lat": 23.81489,
-  "lon": 86.88646,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sabang": {
-  "lat": 22.17768,
-  "lon": 87.59879,
-  "confidence": "medium",
-  "score": 50,
-  "source": "legacy"
- },
- "Sagarpara": {
-  "lat": 24.24546,
-  "lon": 88.70052,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sagrai": {
-  "lat": 23.156429,
-  "lon": 87.816107,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Sahapur": {
-  "lat": 22.52444,
-  "lon": 88.16694,
-  "confidence": "medium",
-  "score": 55,
-  "source": "legacy"
- },
- "Sahaspur": {
-  "lat": 23.132529,
-  "lon": 87.676011,
-  "confidence": "high",
-  "score": 80,
-  "source": "nominatim"
- },
- "Sainthia": {
-  "lat": 23.94826,
-  "lon": 87.68045,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Saktigarh": {
-  "lat": 23.20898,
-  "lon": 87.97337,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Salanpur": {
-  "lat": 23.76702,
-  "lon": 86.87492,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Salar": {
-  "lat": 23.77082,
-  "lon": 88.10213,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Salboni": {
-  "lat": 22.5545,
-  "lon": 87.46115,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Saldiha": {
-  "lat": 23.170675,
-  "lon": 86.811812,
-  "confidence": "high",
-  "score": 81,
-  "source": "nominatim"
- },
- "Saltora": {
-  "lat": 23.52274,
-  "lon": 86.936,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Samaspur": {
-  "lat": 25.95192,
-  "lon": 87.97966,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Samudragarh": {
-  "lat": 23.335767,
-  "lon": 88.324967,
-  "confidence": "high",
-  "score": 158,
-  "source": "nominatim+rail-snap"
- },
- "Sanka": {
-  "lat": 22.84839,
-  "lon": 88.45126,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Santaldih": {
-  "lat": 23.596661,
-  "lon": 86.483123,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Santasram": {
-  "lat": 23.11446,
-  "lon": 87.571807,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Santipur": {
-  "lat": 23.24723,
-  "lon": 88.43302,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Santragachi": {
-  "lat": 22.58333,
-  "lon": 88.3,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Santuri": {
-  "lat": 23.5272,
-  "lon": 86.85709,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sarbori More": {
-  "lat": 25.430345,
-  "lon": 85.85676,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Sarenga": {
-  "lat": 22.76193,
-  "lon": 87.02124,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Satgachia": {
-  "lat": 23.27186,
-  "lon": 88.12691,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sealdah": {
-  "lat": 22.56263,
-  "lon": 88.36304,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sevoke": {
-  "lat": 26.879722,
-  "lon": 88.470803,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Shikarpur": {
-  "lat": 23.98082,
-  "lon": 88.71973,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Shyambazar": {
-  "lat": 22.601335,
-  "lon": 88.372497,
-  "confidence": "high",
-  "score": 102,
-  "source": "nominatim"
- },
- "Shyamnagar": {
-  "lat": 22.83333,
-  "lon": 88.36667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Shyampur": {
-  "lat": 22.279623,
-  "lon": 88.388263,
-  "confidence": "medium",
-  "score": 63,
-  "source": "nominatim"
- },
- "Silda": {
-  "lat": 22.61667,
-  "lon": 86.81667,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Siliguri": {
-  "lat": 26.71004,
-  "lon": 88.42851,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Simlapal": {
-  "lat": 22.91315,
-  "lon": 87.07183,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Simulia": {
-  "lat": 22.35778,
-  "lon": 88.19222,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sindri": {
-  "lat": 23.40215,
-  "lon": 86.23022,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Singur": {
-  "lat": 22.80917,
-  "lon": 88.22944,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sirkabad": {
-  "lat": 23.27519,
-  "lon": 86.19833,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sodepur": {
-  "lat": 22.697175,
-  "lon": 88.380563,
-  "confidence": "high",
-  "score": 88,
-  "source": "nominatim"
- },
- "Solpatta": {
-  "lat": 21.830674,
-  "lon": 87.387559,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Sonadaha": {
-  "lat": 26.960337,
-  "lon": 88.273323,
-  "confidence": "medium",
-  "score": 65,
-  "source": "rail-soft"
- },
- "Sonamukhi": {
-  "lat": 23.30521,
-  "lon": 87.41336,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Srikhanda": {
-  "lat": 23.60219,
-  "lon": 88.07715,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Srinagar": {
-  "lat": 22.80573,
-  "lon": 87.58283,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Suisa": {
-  "lat": 23.19351,
-  "lon": 85.90227,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Sultannagar": {
-  "lat": 25.44714,
-  "lon": 87.86009,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Sundarpur": {
-  "lat": 24.59962,
-  "lon": 87.97955,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Suri": {
-  "lat": 23.90806,
-  "lon": 87.52773,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Surulia": {
-  "lat": 23.33215,
-  "lon": 86.39595,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Susunia Hill": {
-  "lat": 23.397599,
-  "lon": 86.984843,
-  "confidence": "high",
-  "score": 83,
-  "source": "nominatim"
- },
- "Syamnagar": {
-  "lat": 22.01127,
-  "lon": 88.56023,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Talajuri": {
-  "lat": 23.43188,
-  "lon": 86.771111,
-  "confidence": "high",
-  "score": 71,
-  "source": "nominatim"
- },
- "Taldangra": {
-  "lat": 23.01756,
-  "lon": 87.10286,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Tamluk": {
-  "lat": 22.30083,
-  "lon": 87.92593,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Tarapith": {
-  "lat": 24.11197,
-  "lon": 87.7972,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Tarkeshwar": {
-  "lat": 22.882582,
-  "lon": 88.013437,
-  "confidence": "high",
-  "score": 165,
-  "source": "nominatim+rail-snap"
- },
- "Tatanagar": {
-  "lat": 22.768954,
-  "lon": 86.20056,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
- },
- "Teghori": {
-  "lat": 22.69761,
-  "lon": 88.57332,
-  "confidence": "low",
-  "score": -70,
-  "source": "legacy"
- },
- "Tehatta": {
-  "lat": 23.733906,
-  "lon": 88.533358,
-  "confidence": "high",
-  "score": 73,
-  "source": "nominatim"
- },
- "Telipukur": {
-  "lat": 23.222457,
-  "lon": 87.85381,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Tentulia": {
-  "lat": 24.02,
-  "lon": 87.59609,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Tilabani": {
-  "lat": 24.04869,
-  "lon": 86.82474,
-  "confidence": "low",
-  "score": 25,
-  "source": "open-meteo"
- },
- "Tiluri": {
-  "lat": 23.57658,
-  "lon": 86.903206,
-  "confidence": "high",
-  "score": 78,
-  "source": "nominatim"
- },
- "Tulin": {
-  "lat": 23.38073,
-  "lon": 85.89035,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Uchalan": {
-  "lat": 23.03592,
-  "lon": 87.77485,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Ukhradihi": {
-  "lat": 23.653692,
-  "lon": 87.232537,
-  "confidence": "high",
-  "score": 100,
-  "source": "rail-soft"
- },
- "Uluberia": {
-  "lat": 22.4756,
-  "lon": 88.09898,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Umarpur": {
-  "lat": 24.44802,
-  "lon": 88.03266,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Urma": {
-  "lat": 23.43022,
-  "lon": 85.98897,
-  "confidence": "high",
-  "score": 130,
-  "source": "legacy"
- },
- "Alipurduar": {
-  "lat": 26.4919,
-  "lon": 89.5271,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Bankura Gobindanagar": {
-  "lat": 23.2355,
-  "lon": 87.0682,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Cooch Behar": {
-  "lat": 26.3239,
-  "lon": 89.4511,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Coochbehar": {
-  "lat": 26.3239,
-  "lon": 89.4511,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Darjeeling": {
-  "lat": 27.041,
-  "lon": 88.2663,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Jalpaiguri": {
-  "lat": 26.5414,
-  "lon": 88.7196,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Kalimpong": {
-  "lat": 27.0594,
-  "lon": 88.4695,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Balurghat": {
-  "lat": 25.2216,
-  "lon": 88.7644,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "English Bazar": {
-  "lat": 25.0044,
-  "lon": 88.1458,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Berhampore": {
-  "lat": 24.0988,
-  "lon": 88.268,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Burdwan": {
-  "lat": 23.2324,
-  "lon": 87.8615,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Durgapur": {
-  "lat": 23.5204,
-  "lon": 87.3119,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Midnapore": {
-  "lat": 22.4257,
-  "lon": 87.3199,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Kanthi": {
-  "lat": 21.7781,
-  "lon": 87.7517,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Basirhat": {
-  "lat": 22.6574,
-  "lon": 88.8914,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Bongaon": {
-  "lat": 23.0437,
-  "lon": 88.8266,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Diamond Harbour": {
-  "lat": 22.1912,
-  "lon": 88.1903,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Canning": {
-  "lat": 22.3094,
-  "lon": 88.6575,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Chinsurah": {
-  "lat": 22.9031,
-  "lon": 88.3968,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Tarakeswar": {
-  "lat": 22.8869,
-  "lon": 88.0203,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Arambag": {
-  "lat": 22.8833,
-  "lon": 87.7833,
-  "confidence": "high",
-  "score": 100,
-  "source": "wb_hubs"
- },
- "Esplanade": {
-  "lat": 22.5645,
-  "lon": 88.351,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Howrah Station": {
-  "lat": 22.5838,
-  "lon": 88.3426,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Rabindra Sadan": {
-  "lat": 22.544,
-  "lon": 88.347,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "BBD Bag": {
-  "lat": 22.5697,
-  "lon": 88.3486,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Ultadanga": {
-  "lat": 22.591,
-  "lon": 88.399,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Science City": {
-  "lat": 22.54,
-  "lon": 88.395,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Moulali": {
-  "lat": 22.561,
-  "lon": 88.368,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Airport Gate 1": {
-  "lat": 22.647,
-  "lon": 88.441,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Chingrighata": {
-  "lat": 22.578,
-  "lon": 88.415,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Rashbehari": {
-  "lat": 22.514,
-  "lon": 88.353,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Park Street": {
-  "lat": 22.553,
-  "lon": 88.352,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Chandni Chowk": {
-  "lat": 22.567,
-  "lon": 88.352,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "College More": {
-  "lat": 22.577,
-  "lon": 88.429,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Maidan": {
-  "lat": 22.553,
-  "lon": 88.346,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kaikhali": {
-  "lat": 22.632,
-  "lon": 88.437,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Newtown": {
-  "lat": 22.581,
-  "lon": 88.464,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "MG Road": {
-  "lat": 22.582,
-  "lon": 88.357,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Wellington": {
-  "lat": 22.563,
-  "lon": 88.359,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Baguiati": {
-  "lat": 22.613,
-  "lon": 88.431,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Behala Chowrasta": {
-  "lat": 22.498,
-  "lon": 88.311,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Behala 14 No": {
-  "lat": 22.506,
-  "lon": 88.317,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Dumdum Park": {
-  "lat": 22.609,
-  "lon": 88.414,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Gariahat": {
-  "lat": 22.517,
-  "lon": 88.366,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Majherhat": {
-  "lat": 22.523,
-  "lon": 88.321,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kestopur": {
-  "lat": 22.601,
-  "lon": 88.428,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kalighat": {
-  "lat": 22.518,
-  "lon": 88.343,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Mominpore": {
-  "lat": 22.531,
-  "lon": 88.327,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Girish Park": {
-  "lat": 22.587,
-  "lon": 88.362,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Khanna Cinema": {
-  "lat": 22.595,
-  "lon": 88.383,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Sakher Bazar": {
-  "lat": 22.486,
-  "lon": 88.309,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Rajabazar": {
-  "lat": 22.579,
-  "lon": 88.376,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Taratala": {
-  "lat": 22.516,
-  "lon": 88.312,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Thakurpukur": {
-  "lat": 22.467,
-  "lon": 88.305,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Hastings": {
-  "lat": 22.547,
-  "lon": 88.334,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Sinthi": {
-  "lat": 22.623,
-  "lon": 88.387,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Beleghata": {
-  "lat": 22.564,
-  "lon": 88.406,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kidderpore": {
-  "lat": 22.538,
-  "lon": 88.332,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Bonhooghly": {
-  "lat": 22.636,
-  "lon": 88.382,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Park Circus": {
-  "lat": 22.539,
-  "lon": 88.367,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Central": {
-  "lat": 22.573,
-  "lon": 88.354,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Howrah Maidan": {
-  "lat": 22.589,
-  "lon": 88.334,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Fort William": {
-  "lat": 22.554,
-  "lon": 88.341,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Ballygunge Station": {
-  "lat": 22.529,
-  "lon": 88.365,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Ekbalpur": {
-  "lat": 22.535,
-  "lon": 88.328,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kankurgachi": {
-  "lat": 22.58,
-  "lon": 88.396,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Alipore Zoo": {
-  "lat": 22.536,
-  "lon": 88.332,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Dhakuria": {
-  "lat": 22.504,
-  "lon": 88.368,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Golpark": {
-  "lat": 22.513,
-  "lon": 88.365,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Patuli": {
-  "lat": 22.472,
-  "lon": 88.394,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Jadavpur 8B": {
-  "lat": 22.497,
-  "lon": 88.371,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Belgachia": {
-  "lat": 22.601,
-  "lon": 88.385,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "RG Kar": {
-  "lat": 22.606,
-  "lon": 88.377,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Nager Bazar": {
-  "lat": 22.63,
-  "lon": 88.42,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "College Street": {
-  "lat": 22.575,
-  "lon": 88.364,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kamarhati": {
-  "lat": 22.672,
-  "lon": 88.376,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Jadavpur PS": {
-  "lat": 22.496,
-  "lon": 88.369,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "New Alipore": {
-  "lat": 22.504,
-  "lon": 88.332,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Tollygunge Phari": {
-  "lat": 22.502,
-  "lon": 88.35,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Patipukur": {
-  "lat": 22.615,
-  "lon": 88.396,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Bangur Avenue": {
-  "lat": 22.616,
-  "lon": 88.406,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Exide": {
-  "lat": 22.543,
-  "lon": 88.352,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Lake Gardens": {
-  "lat": 22.5053,
-  "lon": 88.3548,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Hatibagan": {
-  "lat": 22.5945,
-  "lon": 88.372,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "South City": {
-  "lat": 22.5017,
-  "lon": 88.3617,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Diamond Plaza": {
-  "lat": 22.628,
-  "lon": 88.415,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Bansdroni": {
-  "lat": 22.48,
-  "lon": 88.365,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Netaji Nagar": {
-  "lat": 22.483,
-  "lon": 88.362,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Naktala": {
-  "lat": 22.476,
-  "lon": 88.376,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Anwar Shah Road": {
-  "lat": 22.502,
-  "lon": 88.3495,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Baghajatin": {
-  "lat": 22.479,
-  "lon": 88.387,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Garia Metro": {
-  "lat": 22.468,
-  "lon": 88.397,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Phoolbagan": {
-  "lat": 22.576,
-  "lon": 88.392,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Saltlake Stadium": {
-  "lat": 22.57,
-  "lon": 88.405,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Sector V": {
-  "lat": 22.576,
-  "lon": 88.432,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Bagbazar": {
-  "lat": 22.601,
-  "lon": 88.365,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Tollygunge": {
-  "lat": 22.501,
-  "lon": 88.346,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Jodhpur Park": {
-  "lat": 22.5055,
-  "lon": 88.3635,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Cossipore": {
-  "lat": 22.615,
-  "lon": 88.368,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Kasba": {
-  "lat": 22.516,
-  "lon": 88.387,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Dumdum": {
-  "lat": 22.642,
-  "lon": 88.431,
-  "confidence": "high",
-  "score": 95,
-  "source": "ktr"
- },
- "Palsit": {
-  "lat": 23.2,
-  "lon": 88.0,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Kolkata Airport": {
-  "lat": 22.6547,
-  "lon": 88.4467,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Airport": {
-  "lat": 22.6547,
-  "lon": 88.4467,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Bolpur (Prantik)": {
-  "lat": 23.685,
-  "lon": 87.685,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Malda Town": {
-  "lat": 25.00447,
-  "lon": 88.14573,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Falakata": {
-  "lat": 26.5167,
-  "lon": 89.2,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Dhupguri": {
-  "lat": 26.5981,
-  "lon": 89.0142,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Buniadpur": {
-  "lat": 25.385,
-  "lon": 88.384,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Gangarampur": {
-  "lat": 25.4,
-  "lon": 88.52,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Kaliyaganj": {
-  "lat": 25.63,
-  "lon": 88.32,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Itahar": {
-  "lat": 25.45,
-  "lon": 88.17,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Hili": {
-  "lat": 25.285,
-  "lon": 88.995,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Sitai": {
-  "lat": 26.15,
-  "lon": 89.31,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Sitalkuchi": {
-  "lat": 26.17,
-  "lon": 89.18,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Guriahati": {
-  "lat": 26.31,
-  "lon": 89.46,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Sukna": {
-  "lat": 26.79,
-  "lon": 88.36,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Tindharia": {
-  "lat": 26.85,
-  "lon": 88.33,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Sonada": {
-  "lat": 26.96,
-  "lon": 88.27,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Ghum": {
-  "lat": 27.01,
-  "lon": 88.26,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Nagrakata": {
-  "lat": 26.89,
-  "lon": 88.91,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Birpara": {
-  "lat": 26.71,
-  "lon": 89.12,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Madarihat": {
-  "lat": 26.7,
-  "lon": 89.28,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Hasimara": {
-  "lat": 26.75,
-  "lon": 89.35,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Mandalghat": {
-  "lat": 26.47,
-  "lon": 88.75,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Old Malda": {
-  "lat": 25.04,
-  "lon": 88.14,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Garh Bhowanipur": {
-  "lat": 22.58,
-  "lon": 87.98,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Gopiganj": {
-  "lat": 22.6,
-  "lon": 87.72,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Mayapur (Hooghly)": {
-  "lat": 22.88,
-  "lon": 87.89,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Pursurah": {
-  "lat": 22.84,
-  "lon": 87.96,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Haripal": {
-  "lat": 22.83,
-  "lon": 88.11,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Guptipara": {
-  "lat": 23.19,
-  "lon": 88.42,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Balagarh": {
-  "lat": 23.12,
-  "lon": 88.46,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Jirat": {
-  "lat": 23.09,
-  "lon": 88.46,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Jamuria": {
-  "lat": 23.7,
-  "lon": 87.08,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Sonachura": {
-  "lat": 21.9,
-  "lon": 87.97,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Ajodhya Hills": {
-  "lat": 23.19,
-  "lon": 86.13,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Gayespur": {
-  "lat": 22.96,
-  "lon": 88.49,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Nagar": {
-  "lat": 23.98,
-  "lon": 88.08,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Reyapara": {
-  "lat": 21.97,
-  "lon": 87.96,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Panitanki": {
-  "lat": 26.65,
-  "lon": 88.15,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Naxalbari": {
-  "lat": 26.68,
-  "lon": 88.22,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Batasi": {
-  "lat": 26.64,
-  "lon": 88.19,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Siliguri Court More": {
-  "lat": 26.717,
-  "lon": 88.428,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Venus More": {
-  "lat": 26.715,
-  "lon": 88.427,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Pradhan Nagar": {
-  "lat": 26.723,
-  "lon": 88.423,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Shivmandir": {
-  "lat": 26.7,
-  "lon": 88.35,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Bagdogra Airport": {
-  "lat": 26.6812,
-  "lon": 88.3286,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Bijanbari": {
-  "lat": 27.06,
-  "lon": 88.19,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Kharibari": {
-  "lat": 26.57,
-  "lon": 88.19,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Panighata": {
-  "lat": 26.78,
-  "lon": 88.24,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Omarpur": {
-  "lat": 24.41,
-  "lon": 88.02,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Jiaganj": {
-  "lat": 24.24,
-  "lon": 88.27,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Rasakhawa": {
-  "lat": 25.86,
-  "lon": 88.05,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- },
- "Bharatpur": {
-  "lat": 23.88,
-  "lon": 88.08,
-  "confidence": "high",
-  "score": 100,
-  "source": "verified-district"
- }
+  "Adra": {
+    "lat": 23.49668,
+    "lon": 86.68363,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ahmadpur": {
+    "lat": 23.83009,
+    "lon": 87.68661,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Akui": {
+    "lat": 23.109134,
+    "lon": 87.729221,
+    "confidence": "medium",
+    "score": 68,
+    "source": "nominatim"
+  },
+  "Amarkanan": {
+    "lat": 23.394528,
+    "lon": 87.110195,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Ambika Nagar": {
+    "lat": 22.515408,
+    "lon": 88.36407,
+    "confidence": "medium",
+    "score": 44,
+    "source": "nominatim"
+  },
+  "Amdiha": {
+    "lat": 25.09396,
+    "lon": 87.18869,
+    "confidence": "low",
+    "score": -15,
+    "source": "open-meteo"
+  },
+  "Amlagora": {
+    "lat": 22.84616,
+    "lon": 87.33559,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Amta": {
+    "lat": 22.58344,
+    "lon": 88.01039,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Anandapur": {
+    "lat": 26.36892,
+    "lon": 89.85923,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Anara": {
+    "lat": 23.481082,
+    "lon": 86.559763,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Andal": {
+    "lat": 23.58013,
+    "lon": 87.1832,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Arambagh": {
+    "lat": 22.88333,
+    "lon": 87.78333,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Argoal": {
+    "lat": 21.96939,
+    "lon": 87.63398,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Arrah": {
+    "lat": 23.524431,
+    "lon": 87.371206,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Arsha": {
+    "lat": 23.32663,
+    "lon": 86.17329,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Asansol": {
+    "lat": 23.68333,
+    "lon": 86.98333,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Babuijore": {
+    "lat": 23.79055,
+    "lon": 87.26908,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Badanganj": {
+    "lat": 22.9023,
+    "lon": 87.54214,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bagda": {
+    "lat": 23.19706,
+    "lon": 86.68703,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Baghmundi": {
+    "lat": 23.18982,
+    "lon": 86.05547,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bagnan": {
+    "lat": 22.93338,
+    "lon": 88.13856,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bagula": {
+    "lat": 23.33664,
+    "lon": 88.64109,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Baharagora": {
+    "lat": 22.27507,
+    "lon": 86.71826,
+    "confidence": "low",
+    "score": 32,
+    "source": "open-meteo"
+  },
+  "Baharampur": {
+    "lat": 24.10473,
+    "lon": 88.25155,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Baidyabati": {
+    "lat": 22.78498,
+    "lon": 88.32586,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Baidyanathpur": {
+    "lat": 22.42526,
+    "lon": 87.97528,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bainchi": {
+    "lat": 22.8622,
+    "lon": 88.2686,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bajitpur": {
+    "lat": 22.88896,
+    "lon": 88.13488,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bajkul": {
+    "lat": 22.024535,
+    "lon": 87.821415,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Baksi": {
+    "lat": 22.527917,
+    "lon": 88.347462,
+    "confidence": "medium",
+    "score": 43,
+    "source": "nominatim"
+  },
+  "Balarampur": {
+    "lat": 23.09714,
+    "lon": 86.22292,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Baleshwar": {
+    "lat": 21.49266,
+    "lon": 86.93348,
+    "confidence": "low",
+    "score": 16,
+    "source": "open-meteo"
+  },
+  "Balgona": {
+    "lat": 23.45805,
+    "lon": 87.950456,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Balichak": {
+    "lat": 22.358186,
+    "lon": 87.553354,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Bally": {
+    "lat": 22.64859,
+    "lon": 88.34115,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Balsi": {
+    "lat": 23.15454,
+    "lon": 87.524861,
+    "confidence": "medium",
+    "score": 68,
+    "source": "nominatim"
+  },
+  "Bamundiha": {
+    "lat": 23.11765,
+    "lon": 86.36607,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bandwan": {
+    "lat": 22.78333,
+    "lon": 86.5,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bangaon": {
+    "lat": 23.04553,
+    "lon": 88.83084,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bangla": {
+    "lat": 22.273126,
+    "lon": 88.172396,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Bankadaha": {
+    "lat": 22.97927,
+    "lon": 87.35787,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bankati": {
+    "lat": 23.771835,
+    "lon": 87.279725,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Bankura": {
+    "lat": 23.23241,
+    "lon": 87.0716,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Banspahari": {
+    "lat": 24.42478,
+    "lon": 87.53114,
+    "confidence": "low",
+    "score": -15,
+    "source": "open-meteo"
+  },
+  "Bara Andulia": {
+    "lat": 22.575169,
+    "lon": 88.239643,
+    "confidence": "high",
+    "score": 108,
+    "source": "rail-soft"
+  },
+  "Barabazar": {
+    "lat": 23.0279,
+    "lon": 86.36069,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Barakar": {
+    "lat": 23.741683,
+    "lon": 86.818859,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Barasat": {
+    "lat": 22.72154,
+    "lon": 88.48198,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bardhaman": {
+    "lat": 23.25572,
+    "lon": 87.85691,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Barikul": {
+    "lat": 22.765733,
+    "lon": 86.799454,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Baripada": {
+    "lat": 21.922741,
+    "lon": 86.73709,
+    "confidence": "high",
+    "score": 150,
+    "source": "open-meteo+rail-snap"
+  },
+  "Barjora": {
+    "lat": 23.42754,
+    "lon": 87.29037,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Barrackpore": {
+    "lat": 22.761065,
+    "lon": 88.371428,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Baruipur": {
+    "lat": 22.36544,
+    "lon": 88.4325,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Basudebpur": {
+    "lat": 21.82014,
+    "lon": 87.62916,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Belatikri": {
+    "lat": 24.97843,
+    "lon": 84.981353,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Belda": {
+    "lat": 22.08427,
+    "lon": 87.35204,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Beldanga": {
+    "lat": 23.93428,
+    "lon": 88.26018,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Beliatore": {
+    "lat": 23.32052,
+    "lon": 87.22081,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Belpahari": {
+    "lat": 22.63207,
+    "lon": 86.76426,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Belut": {
+    "lat": 23.216426,
+    "lon": 87.586585,
+    "confidence": "medium",
+    "score": 43,
+    "source": "nominatim"
+  },
+  "Benachity": {
+    "lat": 23.561689,
+    "lon": 87.274961,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Bengai": {
+    "lat": 22.936991,
+    "lon": 87.669869,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Beta": {
+    "lat": 22.92074,
+    "lon": 88.23425,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bethuadahari": {
+    "lat": 23.610275,
+    "lon": 88.384597,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Bhadrak": {
+    "lat": 21.091746,
+    "lon": 86.516231,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Bhadreswar": {
+    "lat": 22.82449,
+    "lon": 88.33841,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bhadutala": {
+    "lat": 22.485657,
+    "lon": 87.3208,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Bhagabanpur": {
+    "lat": 24.78772,
+    "lon": 88.01242,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bhairabdanga": {
+    "lat": 24.74574,
+    "lon": 87.87515,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Bhatar": {
+    "lat": 23.41251,
+    "lon": 87.91529,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bhimpur": {
+    "lat": 24.50988,
+    "lon": 87.92536,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Bhubaneswar": {
+    "lat": 26.388205,
+    "lon": 89.494466,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Bibarda": {
+    "lat": 22.152958,
+    "lon": 88.08753,
+    "confidence": "high",
+    "score": 100,
+    "source": "rail-soft"
+  },
+  "Bibhishanpur": {
+    "lat": 22.084895,
+    "lon": 87.689616,
+    "confidence": "high",
+    "score": 102,
+    "source": "nominatim"
+  },
+  "Bikrampur": {
+    "lat": 22.73455,
+    "lon": 87.006304,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Binpur": {
+    "lat": 22.58132,
+    "lon": 86.92072,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Birhata": {
+    "lat": 23.235237,
+    "lon": 87.866129,
+    "confidence": "high",
+    "score": 98,
+    "source": "nominatim"
+  },
+  "Birsingha": {
+    "lat": 23.19913,
+    "lon": 87.450527,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Bishnupur": {
+    "lat": 23.0738,
+    "lon": 87.31991,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Boga": {
+    "lat": 25.07756,
+    "lon": 87.68794,
+    "confidence": "medium",
+    "score": 60,
+    "source": "open-meteo"
+  },
+  "Bolpur": {
+    "lat": 23.66278,
+    "lon": 87.69695,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Budbud": {
+    "lat": 23.40131,
+    "lon": 87.53895,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chaitanyapur": {
+    "lat": 22.136048,
+    "lon": 88.08323,
+    "confidence": "high",
+    "score": 102,
+    "source": "nominatim"
+  },
+  "Chakulia": {
+    "lat": 22.478149,
+    "lon": 86.721161,
+    "confidence": "high",
+    "score": 158,
+    "source": "open-meteo+rail-snap"
+  },
+  "Chalsa": {
+    "lat": 26.88413,
+    "lon": 88.79068,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Champadanga": {
+    "lat": 22.83771,
+    "lon": 87.97575,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chandannagar": {
+    "lat": 22.86225,
+    "lon": 88.36796,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chandil": {
+    "lat": 22.956014,
+    "lon": 86.072109,
+    "confidence": "high",
+    "score": 120,
+    "source": "open-meteo+rail-soft"
+  },
+  "Chandipur": {
+    "lat": 22.35108,
+    "lon": 88.40054,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chanditala": {
+    "lat": 22.69316,
+    "lon": 88.25786,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chandra": {
+    "lat": 22.46175,
+    "lon": 87.14845,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chandrakona Road": {
+    "lat": 22.73523,
+    "lon": 87.33643,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chandrakona Town": {
+    "lat": 22.729481,
+    "lon": 87.51424,
+    "confidence": "medium",
+    "score": 69,
+    "source": "nominatim"
+  },
+  "Changrabandha": {
+    "lat": 26.41564,
+    "lon": 88.91871,
+    "confidence": "high",
+    "score": 80,
+    "source": "legacy"
+  },
+  "Chapra": {
+    "lat": 23.52791,
+    "lon": 88.55429,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Charkalgram": {
+    "lat": 23.664651,
+    "lon": 87.841873,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Chas": {
+    "lat": 24.27624,
+    "lon": 87.78677,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Chatumadar": {
+    "lat": 23.257795,
+    "lon": 86.599244,
+    "confidence": "medium",
+    "score": 43,
+    "source": "nominatim"
+  },
+  "Chelyama": {
+    "lat": 23.61576,
+    "lon": 86.55245,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chhandar": {
+    "lat": 23.303182,
+    "lon": 87.250559,
+    "confidence": "high",
+    "score": 92,
+    "source": "nominatim"
+  },
+  "Chhatna": {
+    "lat": 23.30566,
+    "lon": 86.97174,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chichra": {
+    "lat": 22.311758,
+    "lon": 86.883144,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim+open-meteo"
+  },
+  "Chingra": {
+    "lat": 22.731618,
+    "lon": 87.028014,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Chirkunda": {
+    "lat": 23.74771,
+    "lon": 86.78804,
+    "confidence": "high",
+    "score": 81,
+    "source": "open-meteo"
+  },
+  "Chittaranjan": {
+    "lat": 23.85681,
+    "lon": 86.90324,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Chuchura": {
+    "lat": 22.890191,
+    "lon": 88.3695,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Chunait": {
+    "lat": 22.777021,
+    "lon": 87.860198,
+    "confidence": "high",
+    "score": 80,
+    "source": "nominatim"
+  },
+  "Contai": {
+    "lat": 21.77985,
+    "lon": 87.74892,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dahijuri": {
+    "lat": 22.50219,
+    "lon": 86.99109,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dainhat": {
+    "lat": 23.60518,
+    "lon": 88.17172,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dakshineswar": {
+    "lat": 22.65567,
+    "lon": 88.3672,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Daldali": {
+    "lat": 26.53956,
+    "lon": 89.80907,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Damda": {
+    "lat": 22.34389,
+    "lon": 88.36528,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Damdim": {
+    "lat": 26.859243,
+    "lon": 88.671333,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Dankuni": {
+    "lat": 22.677422,
+    "lon": 88.291491,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Dantan": {
+    "lat": 21.94658,
+    "lon": 87.27678,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Darda": {
+    "lat": 22.96983,
+    "lon": 85.86612,
+    "confidence": "medium",
+    "score": 50,
+    "source": "open-meteo"
+  },
+  "Dasagram": {
+    "lat": 22.1762,
+    "lon": 87.6063,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Daspur": {
+    "lat": 22.60691,
+    "lon": 87.72331,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Debagram": {
+    "lat": 23.68832,
+    "lon": 88.30083,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Debra": {
+    "lat": 22.3952,
+    "lon": 87.56015,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dhaban": {
+    "lat": 23.466182,
+    "lon": 86.901265,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Dhadka": {
+    "lat": 22.78333,
+    "lon": 86.5,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dhadki": {
+    "lat": 23.67161,
+    "lon": 85.9806,
+    "confidence": "low",
+    "score": 38,
+    "source": "open-meteo"
+  },
+  "Dhalbhumgarh": {
+    "lat": 22.50751,
+    "lon": 86.55587,
+    "confidence": "medium",
+    "score": 60,
+    "source": "open-meteo"
+  },
+  "Dhaldanga": {
+    "lat": 23.204846,
+    "lon": 87.069666,
+    "confidence": "high",
+    "score": 98,
+    "source": "nominatim"
+  },
+  "Dhanbad": {
+    "lat": 23.790966,
+    "lon": 86.428956,
+    "confidence": "high",
+    "score": 110,
+    "source": "open-meteo+rail-soft"
+  },
+  "Dhansimla": {
+    "lat": 23.26734,
+    "lon": 87.465916,
+    "confidence": "high",
+    "score": 92,
+    "source": "nominatim"
+  },
+  "Dheko": {
+    "lat": 24.47638,
+    "lon": 87.81591,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dherua": {
+    "lat": 22.465013,
+    "lon": 87.004502,
+    "confidence": "medium",
+    "score": 68,
+    "source": "nominatim"
+  },
+  "Dhubulia": {
+    "lat": 23.483546,
+    "lon": 88.441145,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Digha": {
+    "lat": 21.62776,
+    "lon": 87.51965,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dignagar": {
+    "lat": 23.43242,
+    "lon": 87.68324,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dinhata": {
+    "lat": 26.13526,
+    "lon": 89.46129,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dishergarh": {
+    "lat": 23.69064,
+    "lon": 86.82735,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Domkal": {
+    "lat": 24.12065,
+    "lon": 88.54393,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dubra": {
+    "lat": 23.54332,
+    "lon": 86.52102,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dubrajpur": {
+    "lat": 23.7902,
+    "lon": 87.37648,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Dum Dum Airport": {
+    "lat": 22.621717,
+    "lon": 88.392835,
+    "confidence": "high",
+    "score": 115,
+    "source": "rail-soft"
+  },
+  "Dunlop": {
+    "lat": 22.652496,
+    "lon": 88.3773,
+    "confidence": "high",
+    "score": 98,
+    "source": "nominatim"
+  },
+  "Durgachak": {
+    "lat": 22.07576,
+    "lon": 88.13747,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Durgapur (City Center)": {
+    "lat": 23.495046,
+    "lon": 87.297902,
+    "confidence": "high",
+    "score": 115,
+    "source": "rail-soft"
+  },
+  "Durgapur (Muchipara)": {
+    "lat": 23.495046,
+    "lon": 87.297902,
+    "confidence": "high",
+    "score": 115,
+    "source": "rail-soft"
+  },
+  "Durgapur (Station)": {
+    "lat": 23.495046,
+    "lon": 87.297902,
+    "confidence": "high",
+    "score": 135,
+    "source": "nominatim+rail-soft"
+  },
+  "Durlavpur": {
+    "lat": 22.14227,
+    "lon": 88.35914,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Duttapulia": {
+    "lat": 23.240131,
+    "lon": 88.705827,
+    "confidence": "medium",
+    "score": 69,
+    "source": "nominatim"
+  },
+  "Egra": {
+    "lat": 21.89947,
+    "lon": 87.53794,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Exide More": {
+    "lat": 25.430345,
+    "lon": 85.85676,
+    "confidence": "high",
+    "score": 115,
+    "source": "rail-soft"
+  },
+  "Farakka": {
+    "lat": 24.81667,
+    "lon": 87.9,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Fatapukur": {
+    "lat": 26.570857,
+    "lon": 88.538758,
+    "confidence": "high",
+    "score": 77,
+    "source": "nominatim"
+  },
+  "Fatehpur": {
+    "lat": 24.08095,
+    "lon": 87.73092,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Fulbari": {
+    "lat": 26.649573,
+    "lon": 88.417741,
+    "confidence": "medium",
+    "score": 48,
+    "source": "nominatim"
+  },
+  "Gadiara": {
+    "lat": 22.798157,
+    "lon": 88.280471,
+    "confidence": "high",
+    "score": 100,
+    "source": "rail-soft"
+  },
+  "Galsi": {
+    "lat": 23.33928,
+    "lon": 87.68926,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Galudi": {
+    "lat": 22.648872,
+    "lon": 86.410494,
+    "confidence": "high",
+    "score": 108,
+    "source": "rail-soft"
+  },
+  "Gangajalghati": {
+    "lat": 23.4224,
+    "lon": 87.11411,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Garchakraberia": {
+    "lat": 22.514668,
+    "lon": 88.249021,
+    "confidence": "high",
+    "score": 90,
+    "source": "rail-soft"
+  },
+  "Garhbeta": {
+    "lat": 22.844562,
+    "lon": 87.320972,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Garia": {
+    "lat": 22.46323,
+    "lon": 88.39788,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ghatal": {
+    "lat": 22.66244,
+    "lon": 87.73399,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ghatsila": {
+    "lat": 22.58616,
+    "lon": 86.479768,
+    "confidence": "high",
+    "score": 158,
+    "source": "open-meteo+rail-snap"
+  },
+  "Ghughumari": {
+    "lat": 26.333888,
+    "lon": 89.326136,
+    "confidence": "medium",
+    "score": 53,
+    "source": "nominatim"
+  },
+  "Gidhni": {
+    "lat": 22.48449,
+    "lon": 86.85498,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Goaltore": {
+    "lat": 22.70989,
+    "lon": 87.169777,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Gobindapur": {
+    "lat": 22.59306,
+    "lon": 88.09139,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Godapiasal": {
+    "lat": 22.53641,
+    "lon": 87.32783,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Goghat": {
+    "lat": 22.889309,
+    "lon": 87.706238,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Gokarna": {
+    "lat": 24.04234,
+    "lon": 88.11468,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Golapbag": {
+    "lat": 23.251908,
+    "lon": 87.849808,
+    "confidence": "high",
+    "score": 98,
+    "source": "nominatim"
+  },
+  "Gopalnagar": {
+    "lat": 22.83089,
+    "lon": 88.22493,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Gopalpur": {
+    "lat": 22.61845,
+    "lon": 88.75119,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Gopinathpur": {
+    "lat": 22.81172,
+    "lon": 88.06486,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Goura": {
+    "lat": 26.30457,
+    "lon": 88.73581,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Guptamoni": {
+    "lat": 26.448121,
+    "lon": 92.919609,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Guskara": {
+    "lat": 23.489998,
+    "lon": 87.733397,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Haldia": {
+    "lat": 22.06046,
+    "lon": 88.10975,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Haludkanali": {
+    "lat": 22.879806,
+    "lon": 86.878606,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Hanskhali": {
+    "lat": 23.356657,
+    "lon": 88.609607,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Harda": {
+    "lat": 25.34856,
+    "lon": 87.86762,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Harinarayanpur": {
+    "lat": 22.60028,
+    "lon": 88.1125,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Harmasra": {
+    "lat": 23.034095,
+    "lon": 87.002865,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Hatirampur": {
+    "lat": 23.061996,
+    "lon": 86.878598,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Hazipur": {
+    "lat": 24.03998,
+    "lon": 87.82764,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Helencha": {
+    "lat": 23.18921,
+    "lon": 88.8635,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Hematpur": {
+    "lat": 24.57969,
+    "lon": 85.22925,
+    "confidence": "low",
+    "score": 25,
+    "source": "open-meteo"
+  },
+  "Henria": {
+    "lat": 21.968524,
+    "lon": 87.803593,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Hoomgarh": {
+    "lat": 22.852862,
+    "lon": 87.34661,
+    "confidence": "medium",
+    "score": 68,
+    "source": "nominatim"
+  },
+  "Howrah": {
+    "lat": 22.57688,
+    "lon": 88.31857,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Hura": {
+    "lat": 23.30337,
+    "lon": 86.65717,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Illambazar": {
+    "lat": 23.690296,
+    "lon": 87.512895,
+    "confidence": "medium",
+    "score": 65,
+    "source": "nominatim"
+  },
+  "Indpur": {
+    "lat": 23.16667,
+    "lon": 86.93333,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Indus": {
+    "lat": 23.12951,
+    "lon": 87.61517,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Islampur": {
+    "lat": 26.26541,
+    "lon": 88.18982,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Jadavpur": {
+    "lat": 22.48794,
+    "lon": 88.37873,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Jalangi": {
+    "lat": 24.12799,
+    "lon": 88.68989,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Jalchak": {
+    "lat": 22.238766,
+    "lon": 87.671054,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Jaleswar": {
+    "lat": 21.79749,
+    "lon": 87.220491,
+    "confidence": "high",
+    "score": 150,
+    "source": "open-meteo+rail-snap"
+  },
+  "Jamalpur": {
+    "lat": 23.06664,
+    "lon": 87.99181,
+    "confidence": "high",
+    "score": 120,
+    "source": "legacy"
+  },
+  "Jambani": {
+    "lat": 22.518761,
+    "lon": 86.843748,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Jamtoria": {
+    "lat": 22.903638,
+    "lon": 86.638829,
+    "confidence": "medium",
+    "score": 63,
+    "source": "nominatim"
+  },
+  "Jangipur": {
+    "lat": 24.47001,
+    "lon": 88.07659,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Jayrambati": {
+    "lat": 22.92387,
+    "lon": 87.610545,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Jhakra": {
+    "lat": 22.514668,
+    "lon": 88.249021,
+    "confidence": "high",
+    "score": 90,
+    "source": "rail-soft"
+  },
+  "Jhanka": {
+    "lat": 26.29731,
+    "lon": 87.13098,
+    "confidence": "low",
+    "score": -15,
+    "source": "open-meteo"
+  },
+  "Jhantipahari": {
+    "lat": 23.353363,
+    "lon": 86.904491,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Jhargram": {
+    "lat": 22.45384,
+    "lon": 86.99497,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Jhilimili": {
+    "lat": 22.81392,
+    "lon": 86.64575,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Jhitka": {
+    "lat": 22.6325,
+    "lon": 88.84389,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Jorda": {
+    "lat": 23.168688,
+    "lon": 86.834018,
+    "confidence": "high",
+    "score": 76,
+    "source": "nominatim"
+  },
+  "Jorehira": {
+    "lat": 23.428865,
+    "lon": 86.888028,
+    "confidence": "high",
+    "score": 71,
+    "source": "nominatim"
+  },
+  "Joykrishnapur": {
+    "lat": 23.12438,
+    "lon": 87.31404,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Joypur": {
+    "lat": 23.040584,
+    "lon": 87.456204,
+    "confidence": "high",
+    "score": 83,
+    "source": "nominatim"
+  },
+  "Joyrampur": {
+    "lat": 22.85984,
+    "lon": 87.82673,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kalaikunda": {
+    "lat": 22.3393,
+    "lon": 87.22637,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kaliachak": {
+    "lat": 24.86371,
+    "lon": 88.02207,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kalikapur": {
+    "lat": 22.05538,
+    "lon": 88.33856,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kalimati": {
+    "lat": 23.23423,
+    "lon": 85.92242,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kalna": {
+    "lat": 23.21944,
+    "lon": 88.36295,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kalyani": {
+    "lat": 22.9757,
+    "lon": 88.4337,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kamalgazi": {
+    "lat": 22.449524,
+    "lon": 88.395539,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Kamalpur": {
+    "lat": 25.92484,
+    "lon": 87.85641,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kamarpukur": {
+    "lat": 22.23121,
+    "lon": 88.40108,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kanchanpur": {
+    "lat": 23.31164,
+    "lon": 87.09426,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kandi": {
+    "lat": 23.95946,
+    "lon": 88.04018,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kantapahari": {
+    "lat": 24.343,
+    "lon": 87.78763,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Karimpur": {
+    "lat": 23.97594,
+    "lon": 88.61917,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Karunamoyee": {
+    "lat": 22.58638,
+    "lon": 88.421531,
+    "confidence": "high",
+    "score": 102,
+    "source": "nominatim"
+  },
+  "Kashipur": {
+    "lat": 23.43444,
+    "lon": 86.66723,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Katin": {
+    "lat": 26.465652,
+    "lon": 94.002692,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Katwa": {
+    "lat": 23.64558,
+    "lon": 88.13258,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kenda": {
+    "lat": 23.1959,
+    "lon": 86.51499,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kenjakura": {
+    "lat": 23.271639,
+    "lon": 86.934038,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Keshabpur": {
+    "lat": 22.61232,
+    "lon": 88.20047,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Keshiary": {
+    "lat": 22.11674,
+    "lon": 87.23446,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Keshpur": {
+    "lat": 22.55468,
+    "lon": 87.46109,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ketugram": {
+    "lat": 23.70115,
+    "lon": 88.04532,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Khagraghat": {
+    "lat": 24.106842,
+    "lon": 88.226481,
+    "confidence": "high",
+    "score": 135,
+    "source": "nominatim+rail-soft"
+  },
+  "Khakurda": {
+    "lat": 22.26402,
+    "lon": 88.46104,
+    "confidence": "high",
+    "score": 120,
+    "source": "legacy"
+  },
+  "Khanakul": {
+    "lat": 22.70891,
+    "lon": 87.85016,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Khandaghosh": {
+    "lat": 23.20807,
+    "lon": 87.69406,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kharagpur": {
+    "lat": 22.33971,
+    "lon": 87.32501,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kharar": {
+    "lat": 22.72211,
+    "lon": 87.67824,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kharbona": {
+    "lat": 24.15596,
+    "lon": 87.74261,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Kharikamathani": {
+    "lat": 25.388883,
+    "lon": 87.014958,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Khatra": {
+    "lat": 22.97617,
+    "lon": 86.85462,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Khatul": {
+    "lat": 22.972479,
+    "lon": 87.649053,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Khetua": {
+    "lat": 24.04074,
+    "lon": 86.1222,
+    "confidence": "low",
+    "score": -15,
+    "source": "open-meteo"
+  },
+  "Khirpai": {
+    "lat": 22.70996,
+    "lon": 87.61768,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Khujutipara": {
+    "lat": 23.609846,
+    "lon": 87.895689,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Kirnahar": {
+    "lat": 23.75802,
+    "lon": 87.87404,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kolaghat": {
+    "lat": 22.43252,
+    "lon": 87.85938,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kolkata": {
+    "lat": 22.56263,
+    "lon": 88.36304,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kolkata (Esplanade)": {
+    "lat": 22.566793,
+    "lon": 88.375198,
+    "confidence": "high",
+    "score": 135,
+    "source": "nominatim+rail-soft"
+  },
+  "Komarpur": {
+    "lat": 23.734366,
+    "lon": 87.997046,
+    "confidence": "high",
+    "score": 85,
+    "source": "nominatim"
+  },
+  "Kona Express More": {
+    "lat": 25.430345,
+    "lon": 85.85676,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Kotshila": {
+    "lat": 23.40207,
+    "lon": 86.07017,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kotulpur": {
+    "lat": 23.0119,
+    "lon": 87.59382,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Krishnaganj": {
+    "lat": 23.443462,
+    "lon": 88.706812,
+    "confidence": "high",
+    "score": 80,
+    "source": "nominatim"
+  },
+  "Krishnanagar": {
+    "lat": 23.40576,
+    "lon": 88.49073,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kukrahati": {
+    "lat": 22.187065,
+    "lon": 88.119895,
+    "confidence": "high",
+    "score": 95,
+    "source": "nominatim"
+  },
+  "Kulgachhi": {
+    "lat": 24.35863,
+    "lon": 87.840757,
+    "confidence": "medium",
+    "score": 63,
+    "source": "nominatim"
+  },
+  "Kuli": {
+    "lat": 24.72489,
+    "lon": 87.93038,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kulti": {
+    "lat": 23.73166,
+    "lon": 86.84372,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Kumidya": {
+    "lat": 23.21693,
+    "lon": 86.966042,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Kusumgram": {
+    "lat": 23.389846,
+    "lon": 88.127861,
+    "confidence": "high",
+    "score": 91,
+    "source": "nominatim"
+  },
+  "Kutni": {
+    "lat": 25.01282,
+    "lon": 87.47037,
+    "confidence": "low",
+    "score": 25,
+    "source": "open-meteo"
+  },
+  "Labpur": {
+    "lat": 23.81699,
+    "lon": 87.80427,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ladhurka": {
+    "lat": 23.35456,
+    "lon": 86.53415,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Lakshmisagar": {
+    "lat": 22.92744,
+    "lon": 87.01375,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Lalgarh": {
+    "lat": 22.58732,
+    "lon": 87.04968,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Lalgola": {
+    "lat": 24.42244,
+    "lon": 88.25238,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Lalpur": {
+    "lat": 24.747459,
+    "lon": 87.912243,
+    "confidence": "high",
+    "score": 108,
+    "source": "rail-soft"
+  },
+  "Lara More": {
+    "lat": 25.430345,
+    "lon": 85.85676,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Lodhasuli": {
+    "lat": 22.33628,
+    "lon": 87.04924,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Lowada": {
+    "lat": 22.44874,
+    "lon": 87.61588,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Madanmohanpur": {
+    "lat": 24.488461,
+    "lon": 86.785648,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Madhukunda": {
+    "lat": 23.62663,
+    "lon": 86.869091,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Madhyamgram": {
+    "lat": 22.68944,
+    "lon": 88.44594,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Madpur": {
+    "lat": 22.38041,
+    "lon": 87.43886,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Magra": {
+    "lat": 22.98809,
+    "lon": 88.37308,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mahara": {
+    "lat": 24.81667,
+    "lon": 87.8,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mahish Bathan": {
+    "lat": 23.937349,
+    "lon": 88.618727,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Mahishadal": {
+    "lat": 22.18616,
+    "lon": 87.98072,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Majhdia": {
+    "lat": 23.414562,
+    "lon": 88.719031,
+    "confidence": "high",
+    "score": 115,
+    "source": "nominatim+rail-snap"
+  },
+  "Makurgram": {
+    "lat": 23.28094,
+    "lon": 87.144595,
+    "confidence": "high",
+    "score": 91,
+    "source": "nominatim"
+  },
+  "Malbazar": {
+    "lat": 26.85,
+    "lon": 88.75,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Malda": {
+    "lat": 25.00447,
+    "lon": 88.14573,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Maliara": {
+    "lat": 23.47555,
+    "lon": 87.22482,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mallarpur": {
+    "lat": 24.07908,
+    "lon": 87.70919,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Manbazar": {
+    "lat": 23.0591,
+    "lon": 86.66269,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Manglamaro": {
+    "lat": 22.082214,
+    "lon": 87.638479,
+    "confidence": "high",
+    "score": 95,
+    "source": "nominatim"
+  },
+  "Manguria": {
+    "lat": 23.344519,
+    "lon": 86.344157,
+    "confidence": "medium",
+    "score": 53,
+    "source": "nominatim"
+  },
+  "Manihara": {
+    "lat": 22.598809,
+    "lon": 88.377167,
+    "confidence": "low",
+    "score": -10,
+    "source": "nominatim"
+  },
+  "Maniktala": {
+    "lat": 22.58809,
+    "lon": 88.385283,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Mankanali": {
+    "lat": 23.328395,
+    "lon": 87.043296,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Matgoda": {
+    "lat": 22.775632,
+    "lon": 86.897809,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Mathabhanga": {
+    "lat": 26.34197,
+    "lon": 89.21555,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mayapur": {
+    "lat": 22.41667,
+    "lon": 88.11667,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Maynaguri": {
+    "lat": 26.578607,
+    "lon": 88.822868,
+    "confidence": "high",
+    "score": 85,
+    "source": "nominatim+rail-soft"
+  },
+  "Mecheda": {
+    "lat": 22.414105,
+    "lon": 87.85883,
+    "confidence": "high",
+    "score": 145,
+    "source": "rail-snap"
+  },
+  "Medinipur": {
+    "lat": 22.42114,
+    "lon": 87.32257,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mejia": {
+    "lat": 23.56728,
+    "lon": 87.10803,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Memari": {
+    "lat": 23.17647,
+    "lon": 88.09749,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mirzapur": {
+    "lat": 24.40574,
+    "lon": 88.06512,
+    "confidence": "high",
+    "score": 120,
+    "source": "legacy"
+  },
+  "Mogra": {
+    "lat": 22.988257,
+    "lon": 88.373269,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Mohammad Bazar": {
+    "lat": 24.03624,
+    "lon": 87.591121,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Mohanpur": {
+    "lat": 21.83888,
+    "lon": 87.42565,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Molian": {
+    "lat": 23.102678,
+    "lon": 86.805762,
+    "confidence": "medium",
+    "score": 68,
+    "source": "nominatim"
+  },
+  "Mosat": {
+    "lat": 22.2616,
+    "lon": 88.23141,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Moyna": {
+    "lat": 22.239382,
+    "lon": 87.754265,
+    "confidence": "high",
+    "score": 75,
+    "source": "nominatim"
+  },
+  "Mukundapur": {
+    "lat": 22.84166,
+    "lon": 88.43797,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Mukutmanipur": {
+    "lat": 22.962559,
+    "lon": 86.787522,
+    "confidence": "high",
+    "score": 98,
+    "source": "nominatim"
+  },
+  "Nabadwip": {
+    "lat": 23.4067,
+    "lon": 88.36861,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Nadanghat": {
+    "lat": 23.373418,
+    "lon": 88.253147,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Nadia": {
+    "lat": 23.484737,
+    "lon": 88.556707,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Nadiha": {
+    "lat": 23.495621,
+    "lon": 86.404079,
+    "confidence": "medium",
+    "score": 53,
+    "source": "nominatim"
+  },
+  "Nalhati": {
+    "lat": 24.29704,
+    "lon": 87.82899,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Nandakumar": {
+    "lat": 22.18982,
+    "lon": 87.91873,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Nandanpur": {
+    "lat": 22.04626,
+    "lon": 88.328809,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Nandigram": {
+    "lat": 22.00176,
+    "lon": 87.95944,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Nanoor": {
+    "lat": 23.704138,
+    "lon": 87.867227,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Napara": {
+    "lat": 22.67278,
+    "lon": 88.46944,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Narajole": {
+    "lat": 22.56667,
+    "lon": 87.61667,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Narrah": {
+    "lat": 23.261796,
+    "lon": 87.137323,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Narsingpur": {
+    "lat": 23.949944,
+    "lon": 87.57268,
+    "confidence": "low",
+    "score": 38,
+    "source": "nominatim"
+  },
+  "Neamatpur": {
+    "lat": 25.96537,
+    "lon": 87.87293,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Nikunjapur": {
+    "lat": 23.204602,
+    "lon": 87.201765,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Nimpura": {
+    "lat": 22.332403,
+    "lon": 87.264686,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Nischintapur": {
+    "lat": 24.04973,
+    "lon": 87.5756,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Onda": {
+    "lat": 23.13874,
+    "lon": 87.20265,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Oodlabari": {
+    "lat": 26.866793,
+    "lon": 88.624639,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "P More": {
+    "lat": 25.430345,
+    "lon": 85.85676,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Pabra": {
+    "lat": 25.95377,
+    "lon": 86.0806,
+    "confidence": "low",
+    "score": 25,
+    "source": "open-meteo"
+  },
+  "Pairachali": {
+    "lat": 23.082238,
+    "lon": 86.720583,
+    "confidence": "medium",
+    "score": 68,
+    "source": "nominatim"
+  },
+  "Pakhanna": {
+    "lat": 23.408504,
+    "lon": 87.377473,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Palasi": {
+    "lat": 24.816902,
+    "lon": 87.909948,
+    "confidence": "low",
+    "score": 33,
+    "source": "nominatim"
+  },
+  "Panagarh": {
+    "lat": 23.45606,
+    "lon": 87.44718,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Panchal": {
+    "lat": 23.22789,
+    "lon": 87.28808,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Panchet": {
+    "lat": 23.62085,
+    "lon": 86.77755,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Panchgachia": {
+    "lat": 25.969294,
+    "lon": 86.598221,
+    "confidence": "high",
+    "score": 95,
+    "source": "rail-snap"
+  },
+  "Panchgram": {
+    "lat": 24.20231,
+    "lon": 88.00814,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Panchmura": {
+    "lat": 22.96546,
+    "lon": 87.16135,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Panchthupi": {
+    "lat": 23.88847,
+    "lon": 87.98843,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Pandaveswar": {
+    "lat": 23.72793,
+    "lon": 87.27089,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Pandua": {
+    "lat": 23.07492,
+    "lon": 88.28637,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Paniparul": {
+    "lat": 21.74949,
+    "lon": 87.53621,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Panna": {
+    "lat": 22.499211,
+    "lon": 88.317066,
+    "confidence": "low",
+    "score": 28,
+    "source": "nominatim"
+  },
+  "Panrui": {
+    "lat": 23.781923,
+    "lon": 87.607377,
+    "confidence": "medium",
+    "score": 61,
+    "source": "nominatim"
+  },
+  "Panskura": {
+    "lat": 22.40418,
+    "lon": 87.71746,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Parihati": {
+    "lat": 22.51978,
+    "lon": 86.84851,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Parulia": {
+    "lat": 22.21277,
+    "lon": 88.17515,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Patamda": {
+    "lat": 22.90612,
+    "lon": 86.38643,
+    "confidence": "medium",
+    "score": 68,
+    "source": "open-meteo"
+  },
+  "Patashpur": {
+    "lat": 22.026788,
+    "lon": 87.547001,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Patharmora": {
+    "lat": 25.430345,
+    "lon": 85.85676,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Patrasayer": {
+    "lat": 23.217327,
+    "lon": 87.536508,
+    "confidence": "high",
+    "score": 87,
+    "source": "nominatim"
+  },
+  "Phulia": {
+    "lat": 23.229897,
+    "lon": 88.49634,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Piardoba": {
+    "lat": 22.956881,
+    "lon": 87.322164,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Pingla": {
+    "lat": 22.28315,
+    "lon": 87.58654,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Pirakata": {
+    "lat": 22.56491,
+    "lon": 87.17945,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Piyariganj": {
+    "lat": 26.644544,
+    "lon": 85.425711,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Poradih": {
+    "lat": 23.6144,
+    "lon": 86.45817,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Pratap Dighi": {
+    "lat": 21.98123,
+    "lon": 87.60068,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Puabagan": {
+    "lat": 23.20613,
+    "lon": 87.020932,
+    "confidence": "high",
+    "score": 98,
+    "source": "nominatim"
+  },
+  "Puncha": {
+    "lat": 23.15921,
+    "lon": 86.6484,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Purandarpur": {
+    "lat": 23.85534,
+    "lon": 87.5827,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Purulia": {
+    "lat": 23.33062,
+    "lon": 86.36303,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Radhanagar": {
+    "lat": 23.15462,
+    "lon": 87.32344,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Raghunathpur": {
+    "lat": 23.53878,
+    "lon": 86.6735,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Raiganj": {
+    "lat": 25.61281,
+    "lon": 88.12449,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Raipur": {
+    "lat": 22.79866,
+    "lon": 86.95145,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rajhati": {
+    "lat": 22.781549,
+    "lon": 88.017512,
+    "confidence": "medium",
+    "score": 53,
+    "source": "nominatim"
+  },
+  "Ramdiha": {
+    "lat": 25.2653,
+    "lon": 85.51065,
+    "confidence": "low",
+    "score": -15,
+    "source": "open-meteo"
+  },
+  "Ramgarh": {
+    "lat": 22.69295,
+    "lon": 87.05872,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ramjibanpur": {
+    "lat": 22.82815,
+    "lon": 87.60888,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ramnagar": {
+    "lat": 22.77778,
+    "lon": 88.24639,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rampur": {
+    "lat": 23.48441,
+    "lon": 86.56714,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rampurhat": {
+    "lat": 24.179797,
+    "lon": 87.782147,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Ramsagar": {
+    "lat": 23.106248,
+    "lon": 87.277063,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Ranaghat": {
+    "lat": 23.17623,
+    "lon": 88.56667,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rangamati": {
+    "lat": 26.80759,
+    "lon": 89.45724,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Ranibandh": {
+    "lat": 22.86453,
+    "lon": 86.78357,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ranichak": {
+    "lat": 22.61546,
+    "lon": 87.81199,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Raniganj": {
+    "lat": 23.6164,
+    "lon": 87.13061,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rasgovindpur": {
+    "lat": 21.78816,
+    "lon": 87.04609,
+    "confidence": "medium",
+    "score": 60,
+    "source": "open-meteo"
+  },
+  "Raskundu": {
+    "lat": 22.839261,
+    "lon": 87.346336,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Rasulpur": {
+    "lat": 25.40056,
+    "lon": 87.97454,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ratanpur": {
+    "lat": 23.10635,
+    "lon": 87.06991,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rejinagar": {
+    "lat": 23.85009,
+    "lon": 88.259255,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Rohini": {
+    "lat": 22.16404,
+    "lon": 87.09006,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ruby": {
+    "lat": 22.513245,
+    "lon": 88.402565,
+    "confidence": "high",
+    "score": 90,
+    "source": "nominatim"
+  },
+  "Rudra": {
+    "lat": 22.63028,
+    "lon": 88.17528,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Rupnarayanpur": {
+    "lat": 23.81489,
+    "lon": 86.88646,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sabang": {
+    "lat": 22.17768,
+    "lon": 87.59879,
+    "confidence": "medium",
+    "score": 50,
+    "source": "legacy"
+  },
+  "Sagarpara": {
+    "lat": 24.24546,
+    "lon": 88.70052,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sagrai": {
+    "lat": 23.156429,
+    "lon": 87.816107,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Sahapur": {
+    "lat": 22.52444,
+    "lon": 88.16694,
+    "confidence": "medium",
+    "score": 55,
+    "source": "legacy"
+  },
+  "Sahaspur": {
+    "lat": 23.132529,
+    "lon": 87.676011,
+    "confidence": "high",
+    "score": 80,
+    "source": "nominatim"
+  },
+  "Sainthia": {
+    "lat": 23.94826,
+    "lon": 87.68045,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Saktigarh": {
+    "lat": 23.20898,
+    "lon": 87.97337,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Salanpur": {
+    "lat": 23.76702,
+    "lon": 86.87492,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Salar": {
+    "lat": 23.77082,
+    "lon": 88.10213,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Salboni": {
+    "lat": 22.5545,
+    "lon": 87.46115,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Saldiha": {
+    "lat": 23.170675,
+    "lon": 86.811812,
+    "confidence": "high",
+    "score": 81,
+    "source": "nominatim"
+  },
+  "Saltora": {
+    "lat": 23.52274,
+    "lon": 86.936,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Samaspur": {
+    "lat": 25.95192,
+    "lon": 87.97966,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Samudragarh": {
+    "lat": 23.335767,
+    "lon": 88.324967,
+    "confidence": "high",
+    "score": 158,
+    "source": "nominatim+rail-snap"
+  },
+  "Sanka": {
+    "lat": 22.84839,
+    "lon": 88.45126,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Santaldih": {
+    "lat": 23.596661,
+    "lon": 86.483123,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Santasram": {
+    "lat": 23.11446,
+    "lon": 87.571807,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Santipur": {
+    "lat": 23.24723,
+    "lon": 88.43302,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Santragachi": {
+    "lat": 22.58333,
+    "lon": 88.3,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Santuri": {
+    "lat": 23.5272,
+    "lon": 86.85709,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sarbori More": {
+    "lat": 25.430345,
+    "lon": 85.85676,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Sarenga": {
+    "lat": 22.76193,
+    "lon": 87.02124,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Satgachia": {
+    "lat": 23.27186,
+    "lon": 88.12691,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sealdah": {
+    "lat": 22.56263,
+    "lon": 88.36304,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sevoke": {
+    "lat": 26.879722,
+    "lon": 88.470803,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Shikarpur": {
+    "lat": 23.98082,
+    "lon": 88.71973,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Shyambazar": {
+    "lat": 22.601335,
+    "lon": 88.372497,
+    "confidence": "high",
+    "score": 102,
+    "source": "nominatim"
+  },
+  "Shyamnagar": {
+    "lat": 22.83333,
+    "lon": 88.36667,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Shyampur": {
+    "lat": 22.279623,
+    "lon": 88.388263,
+    "confidence": "medium",
+    "score": 63,
+    "source": "nominatim"
+  },
+  "Silda": {
+    "lat": 22.61667,
+    "lon": 86.81667,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Siliguri": {
+    "lat": 26.71004,
+    "lon": 88.42851,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Simlapal": {
+    "lat": 22.91315,
+    "lon": 87.07183,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Simulia": {
+    "lat": 22.35778,
+    "lon": 88.19222,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sindri": {
+    "lat": 23.40215,
+    "lon": 86.23022,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Singur": {
+    "lat": 22.80917,
+    "lon": 88.22944,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sirkabad": {
+    "lat": 23.27519,
+    "lon": 86.19833,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sodepur": {
+    "lat": 22.697175,
+    "lon": 88.380563,
+    "confidence": "high",
+    "score": 88,
+    "source": "nominatim"
+  },
+  "Solpatta": {
+    "lat": 21.830674,
+    "lon": 87.387559,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Sonadaha": {
+    "lat": 26.960337,
+    "lon": 88.273323,
+    "confidence": "medium",
+    "score": 65,
+    "source": "rail-soft"
+  },
+  "Sonamukhi": {
+    "lat": 23.30521,
+    "lon": 87.41336,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Srikhanda": {
+    "lat": 23.60219,
+    "lon": 88.07715,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Srinagar": {
+    "lat": 22.80573,
+    "lon": 87.58283,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Suisa": {
+    "lat": 23.19351,
+    "lon": 85.90227,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Sultannagar": {
+    "lat": 25.44714,
+    "lon": 87.86009,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Sundarpur": {
+    "lat": 24.59962,
+    "lon": 87.97955,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Suri": {
+    "lat": 23.90806,
+    "lon": 87.52773,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Surulia": {
+    "lat": 23.33215,
+    "lon": 86.39595,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Susunia Hill": {
+    "lat": 23.397599,
+    "lon": 86.984843,
+    "confidence": "high",
+    "score": 83,
+    "source": "nominatim"
+  },
+  "Syamnagar": {
+    "lat": 22.01127,
+    "lon": 88.56023,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Talajuri": {
+    "lat": 23.43188,
+    "lon": 86.771111,
+    "confidence": "high",
+    "score": 71,
+    "source": "nominatim"
+  },
+  "Taldangra": {
+    "lat": 23.01756,
+    "lon": 87.10286,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Tamluk": {
+    "lat": 22.30083,
+    "lon": 87.92593,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Tarapith": {
+    "lat": 24.11197,
+    "lon": 87.7972,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Tarkeshwar": {
+    "lat": 22.882582,
+    "lon": 88.013437,
+    "confidence": "high",
+    "score": 165,
+    "source": "nominatim+rail-snap"
+  },
+  "Tatanagar": {
+    "lat": 22.768954,
+    "lon": 86.20056,
+    "confidence": "high",
+    "score": 100,
+    "source": "rail-soft"
+  },
+  "Teghori": {
+    "lat": 22.69761,
+    "lon": 88.57332,
+    "confidence": "low",
+    "score": -70,
+    "source": "legacy"
+  },
+  "Tehatta": {
+    "lat": 23.733906,
+    "lon": 88.533358,
+    "confidence": "high",
+    "score": 73,
+    "source": "nominatim"
+  },
+  "Telipukur": {
+    "lat": 23.222457,
+    "lon": 87.85381,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Tentulia": {
+    "lat": 24.02,
+    "lon": 87.59609,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Tilabani": {
+    "lat": 24.04869,
+    "lon": 86.82474,
+    "confidence": "low",
+    "score": 25,
+    "source": "open-meteo"
+  },
+  "Tiluri": {
+    "lat": 23.57658,
+    "lon": 86.903206,
+    "confidence": "high",
+    "score": 78,
+    "source": "nominatim"
+  },
+  "Tulin": {
+    "lat": 23.38073,
+    "lon": 85.89035,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Uchalan": {
+    "lat": 23.03592,
+    "lon": 87.77485,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Ukhradihi": {
+    "lat": 23.653692,
+    "lon": 87.232537,
+    "confidence": "high",
+    "score": 100,
+    "source": "rail-soft"
+  },
+  "Uluberia": {
+    "lat": 22.4756,
+    "lon": 88.09898,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Umarpur": {
+    "lat": 24.44802,
+    "lon": 88.03266,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Urma": {
+    "lat": 23.43022,
+    "lon": 85.98897,
+    "confidence": "high",
+    "score": 130,
+    "source": "legacy"
+  },
+  "Alipurduar": {
+    "lat": 26.4919,
+    "lon": 89.5271,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Bankura Gobindanagar": {
+    "lat": 23.2355,
+    "lon": 87.0682,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Cooch Behar": {
+    "lat": 26.3239,
+    "lon": 89.4511,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Coochbehar": {
+    "lat": 26.3239,
+    "lon": 89.4511,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Darjeeling": {
+    "lat": 27.041,
+    "lon": 88.2663,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Jalpaiguri": {
+    "lat": 26.5414,
+    "lon": 88.7196,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Kalimpong": {
+    "lat": 27.0594,
+    "lon": 88.4695,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Balurghat": {
+    "lat": 25.2216,
+    "lon": 88.7644,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "English Bazar": {
+    "lat": 25.0044,
+    "lon": 88.1458,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Berhampore": {
+    "lat": 24.0988,
+    "lon": 88.268,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Burdwan": {
+    "lat": 23.2324,
+    "lon": 87.8615,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Durgapur": {
+    "lat": 23.5204,
+    "lon": 87.3119,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Midnapore": {
+    "lat": 22.4257,
+    "lon": 87.3199,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Kanthi": {
+    "lat": 21.7781,
+    "lon": 87.7517,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Basirhat": {
+    "lat": 22.6574,
+    "lon": 88.8914,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Bongaon": {
+    "lat": 23.0437,
+    "lon": 88.8266,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Diamond Harbour": {
+    "lat": 22.1912,
+    "lon": 88.1903,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Canning": {
+    "lat": 22.3094,
+    "lon": 88.6575,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Chinsurah": {
+    "lat": 22.9031,
+    "lon": 88.3968,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Tarakeswar": {
+    "lat": 22.8869,
+    "lon": 88.0203,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Arambag": {
+    "lat": 22.8833,
+    "lon": 87.7833,
+    "confidence": "high",
+    "score": 100,
+    "source": "wb_hubs"
+  },
+  "Esplanade": {
+    "lat": 22.5645,
+    "lon": 88.351,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Howrah Station": {
+    "lat": 22.5838,
+    "lon": 88.3426,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Rabindra Sadan": {
+    "lat": 22.544,
+    "lon": 88.347,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "BBD Bag": {
+    "lat": 22.5697,
+    "lon": 88.3486,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Ultadanga": {
+    "lat": 22.591,
+    "lon": 88.399,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Science City": {
+    "lat": 22.54,
+    "lon": 88.395,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Moulali": {
+    "lat": 22.561,
+    "lon": 88.368,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Airport Gate 1": {
+    "lat": 22.647,
+    "lon": 88.441,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Chingrighata": {
+    "lat": 22.578,
+    "lon": 88.415,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Rashbehari": {
+    "lat": 22.514,
+    "lon": 88.353,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Park Street": {
+    "lat": 22.553,
+    "lon": 88.352,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Chandni Chowk": {
+    "lat": 22.567,
+    "lon": 88.352,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "College More": {
+    "lat": 22.577,
+    "lon": 88.429,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Maidan": {
+    "lat": 22.553,
+    "lon": 88.346,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kaikhali": {
+    "lat": 22.632,
+    "lon": 88.437,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Newtown": {
+    "lat": 22.581,
+    "lon": 88.464,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "MG Road": {
+    "lat": 22.582,
+    "lon": 88.357,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Wellington": {
+    "lat": 22.563,
+    "lon": 88.359,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Baguiati": {
+    "lat": 22.613,
+    "lon": 88.431,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Behala Chowrasta": {
+    "lat": 22.498,
+    "lon": 88.311,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Behala 14 No": {
+    "lat": 22.506,
+    "lon": 88.317,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Dumdum Park": {
+    "lat": 22.609,
+    "lon": 88.414,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Gariahat": {
+    "lat": 22.517,
+    "lon": 88.366,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Majherhat": {
+    "lat": 22.523,
+    "lon": 88.321,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kestopur": {
+    "lat": 22.601,
+    "lon": 88.428,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kalighat": {
+    "lat": 22.518,
+    "lon": 88.343,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Mominpore": {
+    "lat": 22.531,
+    "lon": 88.327,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Girish Park": {
+    "lat": 22.587,
+    "lon": 88.362,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Khanna Cinema": {
+    "lat": 22.595,
+    "lon": 88.383,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Sakher Bazar": {
+    "lat": 22.486,
+    "lon": 88.309,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Rajabazar": {
+    "lat": 22.579,
+    "lon": 88.376,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Taratala": {
+    "lat": 22.516,
+    "lon": 88.312,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Thakurpukur": {
+    "lat": 22.467,
+    "lon": 88.305,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Hastings": {
+    "lat": 22.547,
+    "lon": 88.334,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Sinthi": {
+    "lat": 22.623,
+    "lon": 88.387,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Beleghata": {
+    "lat": 22.564,
+    "lon": 88.406,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kidderpore": {
+    "lat": 22.538,
+    "lon": 88.332,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Bonhooghly": {
+    "lat": 22.636,
+    "lon": 88.382,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Park Circus": {
+    "lat": 22.539,
+    "lon": 88.367,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Central": {
+    "lat": 22.573,
+    "lon": 88.354,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Howrah Maidan": {
+    "lat": 22.589,
+    "lon": 88.334,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Fort William": {
+    "lat": 22.554,
+    "lon": 88.341,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Ballygunge Station": {
+    "lat": 22.529,
+    "lon": 88.365,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Ekbalpur": {
+    "lat": 22.535,
+    "lon": 88.328,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kankurgachi": {
+    "lat": 22.58,
+    "lon": 88.396,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Alipore Zoo": {
+    "lat": 22.536,
+    "lon": 88.332,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Dhakuria": {
+    "lat": 22.504,
+    "lon": 88.368,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Golpark": {
+    "lat": 22.513,
+    "lon": 88.365,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Patuli": {
+    "lat": 22.472,
+    "lon": 88.394,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Jadavpur 8B": {
+    "lat": 22.497,
+    "lon": 88.371,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Belgachia": {
+    "lat": 22.601,
+    "lon": 88.385,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "RG Kar": {
+    "lat": 22.606,
+    "lon": 88.377,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Nager Bazar": {
+    "lat": 22.63,
+    "lon": 88.42,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "College Street": {
+    "lat": 22.575,
+    "lon": 88.364,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kamarhati": {
+    "lat": 22.672,
+    "lon": 88.376,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Jadavpur PS": {
+    "lat": 22.496,
+    "lon": 88.369,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "New Alipore": {
+    "lat": 22.504,
+    "lon": 88.332,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Tollygunge Phari": {
+    "lat": 22.502,
+    "lon": 88.35,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Patipukur": {
+    "lat": 22.615,
+    "lon": 88.396,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Bangur Avenue": {
+    "lat": 22.616,
+    "lon": 88.406,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Exide": {
+    "lat": 22.543,
+    "lon": 88.352,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Lake Gardens": {
+    "lat": 22.5053,
+    "lon": 88.3548,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Hatibagan": {
+    "lat": 22.5945,
+    "lon": 88.372,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "South City": {
+    "lat": 22.5017,
+    "lon": 88.3617,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Diamond Plaza": {
+    "lat": 22.628,
+    "lon": 88.415,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Bansdroni": {
+    "lat": 22.48,
+    "lon": 88.365,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Netaji Nagar": {
+    "lat": 22.483,
+    "lon": 88.362,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Naktala": {
+    "lat": 22.476,
+    "lon": 88.376,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Anwar Shah Road": {
+    "lat": 22.502,
+    "lon": 88.3495,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Baghajatin": {
+    "lat": 22.479,
+    "lon": 88.387,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Garia Metro": {
+    "lat": 22.468,
+    "lon": 88.397,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Phoolbagan": {
+    "lat": 22.576,
+    "lon": 88.392,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Saltlake Stadium": {
+    "lat": 22.57,
+    "lon": 88.405,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Sector V": {
+    "lat": 22.576,
+    "lon": 88.432,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Bagbazar": {
+    "lat": 22.601,
+    "lon": 88.365,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Tollygunge": {
+    "lat": 22.501,
+    "lon": 88.346,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Jodhpur Park": {
+    "lat": 22.5055,
+    "lon": 88.3635,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Cossipore": {
+    "lat": 22.615,
+    "lon": 88.368,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Kasba": {
+    "lat": 22.516,
+    "lon": 88.387,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Dumdum": {
+    "lat": 22.642,
+    "lon": 88.431,
+    "confidence": "high",
+    "score": 95,
+    "source": "ktr"
+  },
+  "Palsit": {
+    "lat": 23.2,
+    "lon": 88.0,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Kolkata Airport": {
+    "lat": 22.6547,
+    "lon": 88.4467,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Airport": {
+    "lat": 22.6547,
+    "lon": 88.4467,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Bolpur (Prantik)": {
+    "lat": 23.685,
+    "lon": 87.685,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Malda Town": {
+    "lat": 25.00447,
+    "lon": 88.14573,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Falakata": {
+    "lat": 26.5167,
+    "lon": 89.2,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Dhupguri": {
+    "lat": 26.5981,
+    "lon": 89.0142,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Buniadpur": {
+    "lat": 25.385,
+    "lon": 88.384,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Gangarampur": {
+    "lat": 25.4,
+    "lon": 88.52,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Kaliyaganj": {
+    "lat": 25.63,
+    "lon": 88.32,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Itahar": {
+    "lat": 25.45,
+    "lon": 88.17,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Hili": {
+    "lat": 25.285,
+    "lon": 88.995,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Sitai": {
+    "lat": 26.15,
+    "lon": 89.31,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Sitalkuchi": {
+    "lat": 26.17,
+    "lon": 89.18,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Guriahati": {
+    "lat": 26.31,
+    "lon": 89.46,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Sukna": {
+    "lat": 26.79,
+    "lon": 88.36,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Tindharia": {
+    "lat": 26.85,
+    "lon": 88.33,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Sonada": {
+    "lat": 26.96,
+    "lon": 88.27,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Ghum": {
+    "lat": 27.01,
+    "lon": 88.26,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Nagrakata": {
+    "lat": 26.89,
+    "lon": 88.91,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Birpara": {
+    "lat": 26.71,
+    "lon": 89.12,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Madarihat": {
+    "lat": 26.7,
+    "lon": 89.28,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Hasimara": {
+    "lat": 26.75,
+    "lon": 89.35,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Mandalghat": {
+    "lat": 26.47,
+    "lon": 88.75,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Old Malda": {
+    "lat": 25.04,
+    "lon": 88.14,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Garh Bhowanipur": {
+    "lat": 22.58,
+    "lon": 87.98,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Gopiganj": {
+    "lat": 22.6,
+    "lon": 87.72,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Mayapur (Hooghly)": {
+    "lat": 22.88,
+    "lon": 87.89,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Pursurah": {
+    "lat": 22.84,
+    "lon": 87.96,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Haripal": {
+    "lat": 22.83,
+    "lon": 88.11,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Guptipara": {
+    "lat": 23.19,
+    "lon": 88.42,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Balagarh": {
+    "lat": 23.12,
+    "lon": 88.46,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Jirat": {
+    "lat": 23.09,
+    "lon": 88.46,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Jamuria": {
+    "lat": 23.7,
+    "lon": 87.08,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Sonachura": {
+    "lat": 21.9,
+    "lon": 87.97,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Ajodhya Hills": {
+    "lat": 23.19,
+    "lon": 86.13,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Gayespur": {
+    "lat": 22.96,
+    "lon": 88.49,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Nagar": {
+    "lat": 23.98,
+    "lon": 88.08,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Reyapara": {
+    "lat": 21.97,
+    "lon": 87.96,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Panitanki": {
+    "lat": 26.65,
+    "lon": 88.15,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Naxalbari": {
+    "lat": 26.68,
+    "lon": 88.22,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Batasi": {
+    "lat": 26.64,
+    "lon": 88.19,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Siliguri Court More": {
+    "lat": 26.717,
+    "lon": 88.428,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Venus More": {
+    "lat": 26.715,
+    "lon": 88.427,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Pradhan Nagar": {
+    "lat": 26.723,
+    "lon": 88.423,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Shivmandir": {
+    "lat": 26.7,
+    "lon": 88.35,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Bagdogra Airport": {
+    "lat": 26.6812,
+    "lon": 88.3286,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Bijanbari": {
+    "lat": 27.06,
+    "lon": 88.19,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Kharibari": {
+    "lat": 26.57,
+    "lon": 88.19,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Panighata": {
+    "lat": 26.78,
+    "lon": 88.24,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Omarpur": {
+    "lat": 24.41,
+    "lon": 88.02,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Jiaganj": {
+    "lat": 24.24,
+    "lon": 88.27,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Rasakhawa": {
+    "lat": 25.86,
+    "lon": 88.05,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "Bharatpur": {
+    "lat": 23.88,
+    "lon": 88.08,
+    "confidence": "high",
+    "score": 100,
+    "source": "verified-district"
+  },
+  "habra": {
+    "lat": 22.8436,
+    "lon": 88.6322
+  },
+  "nabanna": {
+    "lat": 22.5562,
+    "lon": 88.3241
+  },
+  "dhamakhali": {
+    "lat": 22.3619,
+    "lon": 88.8687
+  },
+  "shapoorji": {
+    "lat": 22.5855,
+    "lon": 88.4833
+  },
+  "amtala": {
+    "lat": 22.3789,
+    "lon": 88.2711
+  },
+  "fulkusma": {
+    "lat": 22.9511,
+    "lon": 86.9112
+  },
+  "parnasree": {
+    "lat": 22.4962,
+    "lon": 88.3051
+  },
+  "ghatakpukur": {
+    "lat": 22.5081,
+    "lon": 88.5832
+  },
+  "amity-university": {
+    "lat": 22.5855,
+    "lon": 88.4833
+  },
+  "ahiritola": {
+    "lat": 22.5931,
+    "lon": 88.3582
+  },
+  "unitech-gate-1": {
+    "lat": 22.5855,
+    "lon": 88.4833
+  },
+  "dhulagarh": {
+    "lat": 22.5539,
+    "lon": 88.1961
+  },
+  "chanchal": {
+    "lat": 25.3891,
+    "lon": 87.9942
+  },
+  "delhi": {
+    "lat": 28.6139,
+    "lon": 77.209
+  },
+  "golf-green": {
+    "lat": 22.4891,
+    "lon": 88.3612
+  },
+  "bakkhali": {
+    "lat": 21.5631,
+    "lon": 88.2571
+  },
+  "dhumsai": {
+    "lat": 22.1121,
+    "lon": 87.2141
+  },
+  "mandarmani": {
+    "lat": 21.6661,
+    "lon": 87.7011
+  },
+  "aurangabad-bihar": {
+    "lat": 24.7539,
+    "lon": 84.3742
+  },
+  "sasaram": {
+    "lat": 24.9511,
+    "lon": 84.0312
+  },
+  "dobhi": {
+    "lat": 24.5821,
+    "lon": 84.9712
+  },
+  "dhanbad": {
+    "lat": 23.7957,
+    "lon": 86.4304
+  },
+  "bongaigaon": {
+    "lat": 26.5036,
+    "lon": 90.5401
+  },
+  "dhubri": {
+    "lat": 26.0207,
+    "lon": 89.9744
+  },
+  "fatikgachi": {
+    "lat": 22.6841,
+    "lon": 88.1972
+  },
+  "ranihati": {
+    "lat": 22.5691,
+    "lon": 88.1882
+  },
+  "sankrail": {
+    "lat": 22.5671,
+    "lon": 88.2412
+  },
+  "araria-bihar": {
+    "lat": 26.1511,
+    "lon": 87.5181
+  },
+  "adra": {
+    "lat": 23.4981,
+    "lon": 86.6874
+  },
+  "khatra": {
+    "lat": 22.9841,
+    "lon": 86.8528
+  }
 }
