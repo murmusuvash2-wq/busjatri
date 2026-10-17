@@ -369,5 +369,33 @@
   "rows": 12,
   "sha256": "15e0fb09e7c5b6cb",
   "changed": true
+ },
+ {
+  "ts": "2026-10-15T23:44:18+00:00",
+  "source": "bihar/bsrtc",
+  "rows": 323,
+  "sha256": "55cb39784fcf4510",
+  "changed": true
+ },
+ {
+  "ts": "2026-10-15T23:44:18+00:00",
+  "source": "jharkhand/jantabus",
+  "rows": 12,
+  "sha256": "d6dd72351727d9ae",
+  "changed": true
+ },
+ {
+  "ts": "2026-10-16T23:44:24+00:00",
+  "source": "bihar/bsrtc",
+  "rows": 323,
+  "sha256": "94edc9c84ee92618",
+  "changed": true
+ },
+ {
+  "ts": "2026-10-16T23:44:24+00:00",
+  "source": "jharkhand/jantabus",
+  "rows": 12,
+  "sha256": "76225c1829f91266",
+  "changed": true
  }
 ]
