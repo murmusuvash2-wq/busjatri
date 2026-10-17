@@ -210,6 +210,11 @@ PLACE_ALIAS = {
     # merge spelling variants of the same place so route pages and the
     # sitemap never carry duplicate URLs for the same real route
     "Durgapur (Station)": "Durgapur Station",
+    "Kolkata (Esplanade)": "Esplanade",
+    "Esplanade (Kolkata)": "Esplanade",
+    "Kolkata (Dharmatala)": "Dharmatala",
+    "Dharmatala (Kolkata)": "Dharmatala",
+    "Kolkata (Karunamoyee)": "Karunamoyee",
 }
 
 
