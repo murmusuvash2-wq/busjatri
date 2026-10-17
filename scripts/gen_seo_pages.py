@@ -69,33 +69,108 @@ BN = {
     "Digha": "দীঘা",
     "Kolkata": "কলকাতা",
     "Medinipur": "মেদিনীপুর",
+    "Midnapore": "মেদিনীপুর",
+    "Midnapur": "মেদিনীপুর",
     "Bardhaman": "বর্ধমান",
     "Burdwan": "বর্ধমান",
     "Kharagpur": "খড়্গপুর",
     "Siliguri": "শিলিগুড়ি",
+    "Jalpaiguri": "জলপাইগুড়ি",
+    "Jalpaiguri Bypass": "জলপাইগুড়ি বাইপাস",
+    "Sitai": "সিতাই",
+    "Silda": "শিলদা",
+    "Barjora": "বড়জোড়া",
+    "Beliatore": "বেলিয়াতোড়",
+    "Adra": "আদ্রা",
+    "Arsha": "আর্শা",
+    "Baghmundi": "বাঘমুন্ডি",
+    "Belda": "বেলদা",
+    "Binpur": "বিনপুর",
+    "Budbud": "বুদবুদ",
+    "Chhatna": "ছাতনা",
+    "Chittaranjan": "চিত্তরঞ্জন",
+    "Dainhat": "দাঁইহাট",
+    "Dantan": "দাঁতন",
+    "Debra": "দেবরা",
+    "Andal": "অন্ডাল",
+    "Darjeeling": "দার্জিলিং",
+    "Kalimpong": "কালিম্পং",
+    "Kurseong": "কার্শিয়াং",
+    "Islampur": "ইসলামপুর",
+    "Panitanki": "পানিট্যাঙ্কি",
     "Cooch Behar": "কোচবিহার",
+    "Coach Behar": "কোচবিহার",
+    "Coochbehar": "কোচবিহার",
+    "Koch Bihar": "কোচবিহার",
+    "Mainaguri": "ময়নাগুড়ি",
+    "Moynaguri": "ময়নাগুড়ি",
+    "Dhupguri": "ধূপগুড়ি",
+    "Falakata": "ফালাকাটা",
+    "Alipurduar": "আলিপুরদুয়ার",
+    "Bagdogra": "বাগডোগরা",
+    "Fulbari": "ফুলবাড়ি",
+    "Fatapukur": "ফাটাপুকুর",
+    "Salugara": "সালুগাড়া",
+    "Sevoke": "সেবক",
+    "Coronation Bridge": "করোনেশন ব্রিজ",
+    "Bagrakot": "বাগরাকোট",
+    "Oodlabari": "ওদলাবাড়ি",
+    "Odlabari": "ওদলাবাড়ি",
+    "Damdim": "ডামডিম",
+    "Malbazar": "মালবাজার",
+    "Kishanganj": "কিশনগঞ্জ",
+    "Dalkhola": "ডালখোলা",
+    "Itahar": "ইটাহার",
+    "Gangarampur": "গঙ্গারামপুর",
+    "Buniadpur": "বুনিয়াদপুর",
+    "Tapan": "তপন",
+    "Samsi": "সামসি",
+    "Chanchal": "চাঁচল",
+    "Dhubulia": "ধুবুলিয়া",
+    "Phulia": "ফুলিয়া",
+    "Shantipur": "শান্তিপুর",
+    "Beldanga": "বেলডাঙা",
+    "Farakka": "ফারাক্কা",
+    "Gazole": "গাজোল",
+    "Kaliachak": "কালিয়াচক",
+    "Sujapur": "সুজাপুর",
+    "Baharampur": "বহরমপুর",
+    "Berhampore": "বহরমপুর",
+    "Berhampur": "বহরমপুর",
+    "Madhyamgram": "মধ্যমগ্রাম",
+    "Amdanga": "আমডাঙা",
+    "Sheikhdighi": "শেখদিঘি",
+    "Ahiran": "আহিরণ",
+    "Chander": "চাঁদর",
     "Asansol": "আসানসোল",
     "Durgapur": "দুর্গাপুর",
     "Purulia": "পুরুলিয়া",
     "Jhargram": "ঝাড়গ্রাম",
     "Contai": "কাঁথি",
+    "Kanthi": "কাঁথি",
     "Tamluk": "তমলুক",
     "Bishnupur": "বিষ্ণুপুর",
     "Khatra": "খাতড়া",
-    "Alipurduar": "আলিপুরদুয়ার",
     "Dinhata": "দিনহাটা",
     "Mathabhanga": "মাথাভাঙ্গা",
     "Ghatal": "ঘাটাল",
     "Nabadwip": "নবদ্বীপ",
+    "Nabadwip Dham": "নবদ্বীপ ধাম",
     "Arambagh": "আরামবাগ",
+    "Arambag": "আরামবাগ",
     "Manbazar": "মানবাজার",
     "Tarkeshwar": "তারকেশ্বর",
     "Tarakeswar": "তারকেশ্বর",
+    "Tarakeshwar": "তারকেশ্বর",
     "Mecheda": "মেছেদা",
     "Haldia": "হলদিয়া",
     "Baruipur": "বারুইপুর",
     "Esplanade": "এসপ্ল্যানেড",
     "Howrah": "হাওড়া",
+    "Howrah Station": "হাওড়া স্টেশন",
+    "Howrah Stn": "হাওড়া স্টেশন",
+    "Howrah Maidan": "হাওড়া ময়দান",
+    "Howrah Bridge East": "হাওড়া ব্রিজ পূর্ব",
     "Ranaghat": "রানাঘাট",
     "Krishnanagar": "কৃষ্ণনগর",
     "Malda": "মালদা",
@@ -103,6 +178,7 @@ BN = {
     "Balurghat": "বালুরঘাট",
     "Suri": "সিউড়ি",
     "Sainthia": "সাঁইথিয়া",
+    "Sainthia Town": "সাঁইথিয়া টাউন",
     "Bolpur": "বোলপুর",
     "Kalna": "কালনা",
     "Guskara": "গুসকরা",
@@ -111,61 +187,180 @@ BN = {
     "Chandannagar": "চন্দননগর",
     "Kalyani": "কল্যাণী",
     "Barasat": "বারাসাত",
+    "Barasat Chapadali": "বারাসাত চাপাড়ালি",
     "Barrackpore": "ব্যারাকপুর",
+    "Barrackpore Court": "ব্যারাকপুর কোর্ট",
     "Dunlop": "ডানলপ",
     "Garia": "গড়িয়া",
+    "Garia Depot": "গড়িয়া ডিপো",
+    "Garia Bus Stand": "গড়িয়া বাস স্ট্যান্ড",
     "Jangipur": "জঙ্গীপুর",
-    "Berhampore": "বহরমপুর",
-    "Berhampur": "বহরমপুর",
     "Salar": "সালার",
     "Kirnahar": "কীর্ণাহার",
     "Ilam Bazar": "ইলাম বাজার",
+    "Ilambazar": "ইলাম বাজার",
     "Amtala": "আমতলা",
     "BBD Bag": "বিবিডি বাগ",
+    "Bbd Bag": "বিবিডি বাগ",
+    "Bbd.bag": "বিবিডি বাগ",
     "Babughat": "বাবুঘাট",
     "Bagnan": "বাগনান",
     "Bandwan": "বান্দোয়ান",
     "Barabazar": "বড়বাজার",
-    "Barasat Chapadali": "বারাসাত চাপাড়ালি",
+    "Burra Bazar": "বড়বাজার",
     "Barddhaman Alisha Bus Stand": "বর্ধমান আলিশা বাস স্ট্যান্ড",
     "Barddhaman Nawabhat Bus Stand": "বর্ধমান নবাহাট বাস স্ট্যান্ড",
+    "Bardhaman (Alisha Bus Stand)": "বর্ধমান (আলিশা বাস স্ট্যান্ড)",
+    "Bardhaman (Nawabhat Bus Stand)": "বর্ধমান (নবাহাট বাস স্ট্যান্ড)",
     "Basirhat": "বসিরহাট",
     "Benachity": "বেনাচিটি",
     "Boga": "বোগা",
-    "Chandrakona Road": "চন্দ্রকোণা রোড",
-    "Chittaranjan": "চিত্তরঞ্জন",
+    "Chandrakona Road": "চন্দ্রকোনা রোড",
+    "Chandrakona Town": "চন্দ্রকোনা টাউন",
     "Dakshineswar": "দক্ষিণেশ্বর",
     "Dhamakhali": "ধামাখালি",
     "Dhanbad": "ধানবাদ",
     "Durgapur Station": "দুর্গাপুর স্টেশন",
+    "Durgapur (Station)": "দুর্গাপুর (স্টেশন)",
+    "Durgapur (City Center)": "দুর্গাপুর (সিটি সেন্টার)",
+    "Durgapur City Centre": "দুর্গাপুর সিটি সেন্টার",
+    "Durgapur (Bus Stand)": "দুর্গাপুর (বাস স্ট্যান্ড)",
+    "Durgapur (Expressway)": "দুর্গাপুর (এক্সপ্রেসওয়ে)",
     "Egra": "এগরা",
     "Fulkusma": "ফুলকুসমা",
-    "Garia Bus Stand": "গড়িয়া বাস স্ট্যান্ড",
     "Habra": "হাবড়া",
     "Habra Depot": "হাবড়া ডিপো",
     "Habra Station": "হাবড়া স্টেশন",
-    "Howrah Maidan": "হাওড়া ময়দান",
-    "Howrah Station": "হাওড়া স্টেশন",
+    "Jadavpur": "যাদবপুর",
     "Jadavpur 8B": "যাদবপুর ৮বি",
+    "Jadavpore": "যাদবপুর",
     "Karimpur": "করিমপুর",
+    "Karunamoyee": "করুণাময়ী",
     "Kolkata (Karunamoyee)": "কলকাতা (করুণাময়ী)",
+    "Kolkata (Esplanade)": "কলকাতা (এসপ্ল্যানেড)",
+    "Kolkata (Dharmatala)": "কলকাতা (ধর্মতলা)",
+    "Kolkata (Babughat)": "কলকাতা (বাবুঘাট)",
     "Kolkata (Santragachi)": "কলকাতা (সাঁতরাগাছি)",
-    "Midnapur": "মেদিনীপুর",
+    "Kolkata Stn": "কলকাতা স্টেশন",
+    "Kolkata Station": "কলকাতা স্টেশন",
+    "Dharmatala": "ধর্মতলা",
+    "Santragachi": "সাঁতরাগাছি",
     "Nabanna": "নবান্ন",
     "Newtown": "নিউটাউন",
+    "New Town": "নিউ টাউন",
     "Raipur": "রাইপুর",
     "Rajabazar": "রাজাবাজার",
     "Sealdah": "শিয়ালদহ",
+    "Sealdah-Rajabazar": "শিয়ালদহ-রাজাবাজার",
     "Sector V": "সেক্টর ফাইভ",
     "Shapoorji": "শাপুরজি",
     "Shyambazar": "শ্যামবাজার",
-    "Tarakeshwar": "তারকেশ্বর",
     "Tatanagar": "টাটানগর",
     "Thakurpukur": "ঠাকুরপুকুর",
     "Ultadanga": "উল্টোডাঙ্গা",
-    "Kolkata (Esplanade)": "কলকাতা (এসপ্ল্যানেড)",
-    "Bardhaman (Alisha Bus Stand)": "বর্ধমান (আলিশা বাস স্ট্যান্ড)",
-    "Bardhaman (Nawabhat Bus Stand)": "বর্ধমান (নবাহাট বাস স্ট্যান্ড)",
+    "Dum Dum": "ডামডাম",
+    "Dumdum": "ডামডাম",
+    "Dum Dum Stn": "ডামডাম স্টেশন",
+    "Airport": "এয়ারপোর্ট",
+    "Airport Gate": "এয়ারপোর্ট গেট",
+    "Airport Gate-1": "এয়ারপোর্ট গেট",
+    "Airport Gate 1": "এয়ারপোর্ট গেট ১",
+    "Airport Gate No-3": "এয়ারপোর্ট গেট নং ৩",
+    "Airport Gate 3": "এয়ারপোর্ট গেট ৩",
+    "Airport Terminal": "এয়ারপোর্ট টার্মিনাল",
+    "Ballygunge": "বালিগঞ্জ",
+    "Ballygunge Stn": "বালিগঞ্জ স্টেশন",
+    "Ballygunge Station": "বালিগঞ্জ স্টেশন",
+    "Gariahat": "গড়িয়াহাট",
+    "Park Street": "পার্ক স্ট্রিট",
+    "Park St": "পার্ক স্ট্রিট",
+    "Behala": "বেহালা",
+    "Behala Chowrastha": "বেহালা চৌরাস্তা",
+    "Behala Chowrasta": "বেহালা চৌরাস্তা",
+    "Behala 14 No": "বেহালা ১৪ নম্বর",
+    "Joka": "জোকা",
+    "Bagbazar": "বাগবাজার",
+    "Hazra": "হাজরা",
+    "Rashbehari Ave": "রাসবিহারী অ্যাভিনিউ",
+    "EM ByPass": "ইএম বাইপাস",
+    "Science City": "সায়েন্স সিটি",
+    "Ecospace": "ইকোস্পেস",
+    "Eco Space": "ইকোস্পেস",
+    "Eco space": "ইকোস্পেস",
+    "Salt Lake": "সল্টলেক",
+    "Saltlake": "সল্টলেক",
+    "Saltlake Karunamoyee": "সল্টলেক করুণাময়ী",
+    "Naktala": "নাকতলা",
+    "Regent Park": "রিজেন্ট পার্ক",
+    "Ranikuthi": "রানিকুঠি",
+    "Tollygunge": "টালিগঞ্জ",
+    "Tollygunge Metro": "টালিগঞ্জ মেট্রো",
+    "Sinthi More": "সিন্থি মোড়",
+    "Chiria More": "চিড়িয়ামোড়",
+    "Paikpara": "পাইকপাড়া",
+    "Central Jail": "সেন্ট্রাল জেল",
+    "Nager Bazar": "নগরবাজার",
+    "Bally Khal": "বালি খাল",
+    "Bally": "বালি",
+    "Bally Halt": "বালি হল্ট",
+    "Ballyhalt": "বালি হল্ট",
+    "Belghoria": "বেলঘরিয়া",
+    "Baguiati": "বাগুইআটি",
+    "Taratala": "তারাতলা",
+    "Rajarhat": "রাজারহাট",
+    "Bhowanipore": "ভবানীপুর",
+    "Malancha": "মালঞ্চ",
+    "Kolaghat": "কোলাঘাট",
+    "Garhbeta": "গড়বেতা",
+    "Nandigram": "নন্দীগ্রাম",
+    "Jamuria": "জামুড়িয়া",
+    "Sonachura": "সোনাচুড়া",
+    "Gopiganj": "গোপীগঞ্জ",
+    "Garhbhowanipur": "গড়ভবানীপুর",
+    "Barakar": "বরাকর",
+    "Tarapith": "তারাপীঠ",
+    "Rampurhat": "রামপুরহাট",
+    "Kandi": "কান্দি",
+    "Memari": "মেমারি",
+    "Burdwan Tinkonia": "বর্ধমান তিনকোণিয়া",
+    "Barddhaman Tinkonia": "বর্ধমান তিনকোণিয়া",
+    "Batanagar": "বাটানগর",
+    "Gopiballabpur": "গোপীবল্লভপুর",
+    "Mohar": "মোহর",
+    "Lalgola": "লালগোলা",
+    "Kandra": "কান্দ্রা",
+    "Naihati": "নৈহাটি",
+    "Dankuni": "ডানকুনি",
+    "Rishra": "রিষড়া",
+    "Serampore": "শ্রীরামপুর",
+    "Bankura (Bypass)": "বাঁকুড়া (বাইপাস)",
+    "Bankura (Bus Stand)": "বাঁকুড়া (বাস স্ট্যান্ড)",
+    "Bankura (Station)": "বাঁকুড়া (স্টেশন)",
+    "Bankura (Pump More)": "বাঁকুড়া (পাম্প মোড়)",
+    "Bankura (More)": "বাঁকুড়া (মোড়)",
+    "Bankura (Satighat Bridge)": "বাঁকুড়া (সতীঘাট ব্রিজ)",
+    "Bishnupur (Bankura)": "বিষ্ণুপুর (বাঁকুড়া)",
+    "Kharagpur (Town)": "খড়্গপুর (টাউন)",
+    "Kharagpur Station": "খড়্গপুর স্টেশন",
+    "Midnapur Central Bus Stand": "মেদিনীপুর সেন্ট্রাল বাস স্ট্যান্ড",
+    "Durgachak": "দূর্গাচক",
+    "Durgachak Central Bus Stand": "দূর্গাচক সেন্ট্রাল বাস স্ট্যান্ড",
+    "Contai Central": "কাঁথি সেন্ট্রাল",
+    "Contai Central Bus Stand": "কাঁথি সেন্ট্রাল বাস স্ট্যান্ড",
+    "Chetla": "চেতলা",
+    "Milk Colony": "মিল্ক কলোনি",
+    "Joka Tram Depot": "জোকা ট্রাম ডিপো",
+    "Bakshi": "বক্সি",
+    "Napara": "নাপাড়া",
+    "Sahararhat": "সাহারারহাট",
+    "Kaijuri Bazar": "কৈজুরী বাজার",
+    "Argoal": "আরগোয়াল",
+    "Ramganj": "রামগঞ্জ",
+    "Kabilepur": "কবিলেপুর",
+    "Balrampur": "বলরামপুর",
+    "Ajodhya Hills": "অযোধ্যা পাহাড়",
+    "Diamond": "ডায়মন্ড হারবার",
+    "Haldia Township": "হলদিয়া টাউনশিপ",
 }
 
 
@@ -277,14 +472,83 @@ def disp_place(name, other):
     return name
 
 
+SUB_TERMS = {
+    "station": "স্টেশন", "stn": "স্টেশন", "bus stand": "বাস স্ট্যান্ড", "bus-stand": "বাস স্ট্যান্ড",
+    "bustand": "বাস স্ট্যান্ড", "stand": "স্ট্যান্ড", "bypass": "বাইপাস", "more": "মোড়",
+    "chowrasta": "চৌরাস্তা", "chowmatha": "চৌমাথা", "depot": "ডিপো", "court": "কোর্ট",
+    "town": "টাউন", "city center": "সিটি সেন্টার", "city centre": "সিটি সেন্টার", "expressway": "এক্সপ্রেসওয়ে",
+    "airport": "এয়ারপোর্ট", "terminal": "টার্মিনাল", "gate": "গেট", "bridge": "ব্রিজ",
+    "ghat": "ঘাট", "bazar": "বাজার", "pump more": "পাম্প মোড়", "satighat bridge": "সতীঘাট ব্রিজ",
+    "alisha bus stand": "আলিশা বাস স্ট্যান্ড", "nawabhat bus stand": "নবাহাট বাস স্ট্যান্ড",
+    "chapadali": "চাপাড়ালি", "colony": "কলোনি", "8b": "৮বি", "maidan": "ময়দান",
+    "dham": "ধাম", "junction": "জংশন", "jn": "জংশন",
+}
+
+
+def bn_place(name):
+    if not name:
+        return ""
+    n = clean_text(name)
+    if n in BN:
+        return BN[n]
+    m = re.match(r"^(.+?)\s*\((.+?)\)$", n)
+    if m:
+        base, sub = m.group(1).strip(), m.group(2).strip()
+        b_base = bn_place(base)
+        b_sub = SUB_TERMS.get(sub.lower(), bn_place(sub))
+        return f"{b_base} ({b_sub})"
+    for term, bn_term in sorted(SUB_TERMS.items(), key=lambda x: -len(x[0])):
+        if n.lower().endswith(" " + term):
+            base = n[:-len(term)-1].strip()
+            return f"{bn_place(base)} {bn_term}"
+    for k, v in BN.items():
+        if k.lower() == n.lower():
+            return v
+    return n
+
+
 def bn(name):
-    return BN.get(clean_text(name))
+    return bn_place(name)
 
 
 def bn_route(origin, destination):
-    bo = bn(origin)
-    bt = bn(destination)
+    bo = bn_place(origin)
+    bt = bn_place(destination)
     return f"{bo} থেকে {bt}" if bo and bt else None
+
+
+def bn_time(t_str):
+    if not t_str or t_str == "—":
+        return "—"
+    m = re.match(r"^(\d{1,2}):(\d{2})\s*(AM|PM)?", str(t_str).strip(), re.I)
+    if not m:
+        return bn_num(t_str)
+    h = int(m.group(1))
+    mn = m.group(2)
+    suf = (m.group(3) or "").upper()
+    if not suf:
+        return f"{bn_num(h)}:{bn_num(mn)}"
+    if suf == "AM":
+        p = "রাত" if (h == 12 or h < 4) else ("ভোর" if h < 6 else "সকাল")
+    else:
+        p = "দুপুর" if (h == 12 or h < 4) else ("বিকেল" if h < 7 else "রাত")
+    return f"{p} {bn_num(h)}:{bn_num(mn)}"
+
+
+def bn_duration(dur_str):
+    if not dur_str or dur_str == "—":
+        return "—"
+    s = str(dur_str)
+    hm = re.match(r"^(?:(\d+)\s*h)?\s*(?:(\d+)\s*m)?$", s.strip())
+    if hm:
+        h, m = hm.group(1), hm.group(2)
+        parts = []
+        if h:
+            parts.append(f"{bn_num(h)} ঘণ্টা")
+        if m:
+            parts.append(f"{bn_num(m)} মিনিট")
+        return " ".join(parts) if parts else bn_num(s)
+    return bn_num(s)
 
 
 def parse_time(value):
@@ -581,6 +845,7 @@ def shell(title, description, canonical, body, schema=""):
 {body}
 </main>
 {footer_html()}
+<script defer src="../js/lang.js?v=lang20261005c"></script>
 <script defer src="../js/hdr.js?v=hdrunify20261002"></script>
 <script defer src="../js/route-slider.js"></script>
 </body>
@@ -796,40 +1061,40 @@ def bus_card(bus):
     bid = bus.get("id") or ""
     bt_raw = (bus.get("bus_type") or "").lower()
     if "gov" in bt_raw or "sbstc" in bt_raw or "nbstc" in bt_raw or "wbtc" in bt_raw:
-        badge = '<span class="badge badge-govt">Govt</span>'
+        badge = '<span class="badge badge-govt"><span class="label-en">Govt</span><span class="label-bn">সরকারি</span></span>'
     elif "ac" in bt_raw and "non" not in bt_raw:
         badge = '<span class="badge badge-ac">AC</span>'
     else:
-        badge = '<span class="badge badge-priv">Private</span>'
+        badge = '<span class="badge badge-priv"><span class="label-en">Private</span><span class="label-bn">বেসরকারি</span></span>'
     op_line = esc(name)
     if operator:
         op_line += f' · {esc(operator)}'
     clock = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>'
     if dep == "—":
-        # Kolkata city / suburban buses run to frequency — no published
-        # departure times exist for them, so "Time N/A" is wrong here.
         _src = (bus.get("source") or "").lower()
         _city = ("kolkata-travel-router" in _src or "kolbusopedia" in _src
                  or "wbbustime" in _src)
-        _label = "Runs to frequency" if _city else "Time N/A"
-        dep_html = f"{clock}<span class=\"no-time\">{_label}</span>"
+        _label_en = "Runs to frequency" if _city else "Time N/A"
+        _label_bn = "নির্দিষ্ট ব্যবধানে চলাচল" if _city else "সময় জানা নেই"
+        dep_html = f'{clock}<span class="no-time"><span class="label-en">{_label_en}</span><span class="label-bn">{_label_bn}</span></span>'
     else:
-        small = f"<small>{esc(arr)} arr</small>" if arr != "—" else ""
-        dep_html = f"{clock}<div class=\"depcol\"><span class=\"dep-t\">{esc(dep)}</span>{small}</div>"
+        small = f'<small><span class="label-en">{esc(arr)} arr</span><span class="label-bn">{bn_time(arr)} পৌঁছাবে</span></small>' if arr != "—" else ""
+        dep_html = f'{clock}<div class="depcol"><span class="dep-t"><span class="label-en">{esc(dep)}</span><span class="label-bn">{bn_time(dep)}</span></span>{small}</div>'
     meta_bits = []
     if fare != "—":
-        meta_bits.append(f'<span class="fare">{esc(fare)}</span>')
-    meta_bits.append(f"⏱ ~{esc(dur_text)}")
-    meta_bits.append(f"🚏 {stops or 0} stops")
+        meta_bits.append(f'<span class="fare"><span class="label-en">{esc(fare)}</span><span class="label-bn">{bn_num(fare)}</span></span>')
+    if dur_text and dur_text != "—":
+        meta_bits.append(f'⏱ ~<span class="label-en">{esc(dur_text)}</span><span class="label-bn">{bn_duration(dur_text)}</span>')
+    meta_bits.append(f'🚏 <span class="label-en">{stops or 0} stops</span><span class="label-bn">{bn_num(stops or 0)}টি স্টপ</span>')
     link = ""
     row_attr = ""
     if bid:
-        link = f'<a class="bd-link" href="../#/bus/{esc(bid)}" aria-label="View full timetable for {esc(name)}">Details ›</a>'
+        link = f'<a class="bd-link" href="../#/bus/{esc(bid)}" aria-label="View full timetable for {esc(name)}"><span class="label-en">Details ›</span><span class="label-bn">বিস্তারিত ›</span></a>'
         row_attr = f' onclick="location.href=\'../#/bus/{esc(bid)}\'" style="cursor:pointer"'
     return f"""<div class="bus-row"{row_attr}>
   <div class="dep">{dep_html}</div>
   <div class="bmid">
-    <div class="op">{op_line}</div>
+    <div class="op" data-lang-static="en">{op_line}</div>
     <div class="mrow">{' · '.join(meta_bits)}</div>
   </div>
   <div class="bright">{badge}{link}</div>
@@ -865,7 +1130,9 @@ def generate_route_page(origin, destination, buses):
     # display-only labels (URL above stays on the raw slug)
     d_origin = disp_place(origin, destination)
     d_destination = disp_place(destination, origin)
-    route_bn = bn_route(origin, destination)
+    bn_orig = bn_place(d_origin)
+    bn_dest = bn_place(d_destination)
+    route_bn = f"{bn_orig} থেকে {bn_dest}"
     stats = route_stats(buses)
     first = format_time(stats["first"])
     last = format_time(stats["last"])
@@ -924,43 +1191,58 @@ def generate_route_page(origin, destination, buses):
             dur_text = fmt_duration(est_mins)
 
     faqs = [
-        (f"What is the first bus from {d_origin} to {d_destination}?",
-         f"The first bus departs at {first}." if stats["first"] is not None else "Check the timetable above."),
-        (f"What is the last bus from {d_origin} to {d_destination}?",
-         f"The last bus departs at {last}." if stats["last"] is not None else "Check the timetable above."),
-        (f"How many buses run from {d_origin} to {d_destination}?",
-         f"{count} bus " + ('service is' if count == 1 else 'services are') + " listed on this route."),
+        (
+            f"What is the first bus from {d_origin} to {d_destination}?",
+            f"The first bus departs at {first}." if stats["first"] is not None else "Check the timetable above.",
+            f"{bn_orig} থেকে {bn_dest} যাওয়ার প্রথম বাস কখন ছাড়ে?",
+            f"{bn_orig} থেকে প্রথম বাস {bn_time(first)}-এ ছাড়ে।" if stats["first"] is not None else "উপরের সময়সূচী দেখুন।",
+        ),
+        (
+            f"What is the last bus from {d_origin} to {d_destination}?",
+            f"The last bus departs at {last}." if stats["last"] is not None else "Check the timetable above.",
+            f"{bn_orig} থেকে {bn_dest} যাওয়ার শেষ বাস কখন ছাড়ে?",
+            f"{bn_orig} থেকে শেষ বাস {bn_time(last)}-এ ছাড়ে।" if stats["last"] is not None else "উপরের সময়সূচী দেখুন।",
+        ),
+        (
+            f"How many buses run from {d_origin} to {d_destination}?",
+            f"{count} bus " + ('service is' if count == 1 else 'services are') + " listed on this route.",
+            f"{bn_orig} থেকে {bn_dest} মোট কতগুলো বাস চলে?",
+            f"এই রুটে মোট {bn_num(count)}টি বাসের সময়সূচী তালিকাভুক্ত রয়েছে।",
+        ),
     ]
     if dist_km:
         faqs.append((
             f"What is the distance from {d_origin} to {d_destination} by bus?",
-            f"The road distance from {d_origin} to {d_destination} is approximately {dist_km} km."
+            f"The road distance from {d_origin} to {d_destination} is approximately {dist_km} km.",
+            f"বাসে {bn_orig} থেকে {bn_dest}-এর দূরত্ব কত?",
+            f"{bn_orig} থেকে {bn_dest}-এর আনুমানিক সড়ক দূরত্ব প্রায় {bn_num(dist_km)} কিমি।",
         ))
     if fare_info:
         faqs.append((
             f"What is the bus fare from {d_origin} to {d_destination}?",
-            f"The estimated bus fare from {d_origin} to {d_destination} is {fare_info['label_en']} (Ordinary/Express stage carriage)."
+            f"The estimated bus fare from {d_origin} to {d_destination} is {fare_info['label_en']} (Ordinary/Express stage carriage).",
+            f"{bn_orig} থেকে {bn_dest} বাসের ভাড়া কত?",
+            f"{bn_orig} থেকে {bn_dest} বাসের আনুমানিক ভাড়া {fare_info['label_bn']} (সাধারণ/এক্সপ্রেস বাস)।",
         ))
 
-    schips = [f'<span class="schip">🚌 {count} bus{"es" if count != 1 else ""}</span>']
+    schips = [f'<span class="schip">🚌 <span class="label-en">{count} bus{"es" if count != 1 else ""}</span><span class="label-bn">{bn_num(count)}টি বাস</span></span>']
     if stats["first"] is not None:
-        schips.append(f'<span class="schip hot">⏰ First {esc(first)}</span>')
+        schips.append(f'<span class="schip hot">⏰ <span class="label-en">First {esc(first)}</span><span class="label-bn">প্রথম {bn_time(first)}</span></span>')
     if stats["last"] is not None:
-        schips.append(f'<span class="schip">⏰ Last {esc(last)}</span>')
+        schips.append(f'<span class="schip">⏰ <span class="label-en">Last {esc(last)}</span><span class="label-bn">শেষ {bn_time(last)}</span></span>')
     if dur_text and dur_text != "—":
-        schips.append(f'<span class="schip">⏱ ~{esc(dur_text)}</span>')
+        schips.append(f'<span class="schip">⏱ ~<span class="label-en">{esc(dur_text)}</span><span class="label-bn">{bn_duration(dur_text)}</span></span>')
     if dist_km:
-        schips.append(f'<span class="schip">📏 ~{dist_km} km</span>')
+        schips.append(f'<span class="schip">📏 ~<span class="label-en">{dist_km} km</span><span class="label-bn">{bn_num(dist_km)} কিমি</span></span>')
     if fare_info:
-        schips.append(f'<span class="schip">💰 {esc(fare_info["label_en"])}</span>')
+        schips.append(f'<span class="schip">💰 <span class="label-en">{esc(fare_info["label_en"])}</span><span class="label-bn">{esc(fare_info["label_bn"])}</span></span>')
 
     schips_html = "\n    ".join(schips)
 
-    bn_sub = f'<p class="bn-sub">{esc(route_bn)} বাসের সময়সূচী</p>' if route_bn else ""
-    hero = f"""<div class="crumbs"><a href="../">Home</a> › <a href="./">Bus Timetable</a> › <span>{esc(d_origin)} → {esc(d_destination)}</span></div>
+    hero = f"""<div class="crumbs"><a href="../"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> › <a href="./"><span class="label-en">Bus Timetable</span><span class="label-bn">বাস সময়সূচী</span></a> › <span><span class="label-en">{esc(d_origin)} → {esc(d_destination)}</span><span class="label-bn">{esc(bn_orig)} → {esc(bn_dest)}</span></span></div>
 <div class="seo-hero">
-  <h1>{esc(d_origin)} <span class="arr">→</span> {esc(d_destination)}</h1>
-  {bn_sub}
+  <h1><span class="label-en">{esc(d_origin)} <span class="arr">→</span> {esc(d_destination)}</span><span class="label-bn">{esc(bn_orig)} <span class="arr">→</span> {esc(bn_dest)}</span></h1>
+  <p class="bn-sub"><span class="label-en">{esc(d_origin)} to {esc(d_destination)} bus timings, first &amp; last bus</span><span class="label-bn">{esc(route_bn)} বাসের সময়সূচী ও সমস্ত স্টপেজ</span></p>
   <div class="stat-chips">
     {schips_html}
   </div>
@@ -968,7 +1250,7 @@ def generate_route_page(origin, destination, buses):
 
     sorted_buses = sorted(buses, key=lambda b: parse_time(b.get("departure_time")) or 9999)
     timetable = f"""<section class="seo-section">
-  <h3 class="section-title">Today's Departures</h3>
+  <h3 class="section-title"><span class="label-en">Today's Departures</span><span class="label-bn">আজকের বাস সময়সূচী</span></h3>
   {''.join(bus_card(b) for b in sorted_buses)}
 </section>"""
 
@@ -1002,12 +1284,13 @@ def generate_route_page(origin, destination, buses):
         items = []
         for idx, stp in enumerate(timeline_stops):
             s_esc = esc(stp)
+            s_bn = esc(bn_place(stp))
             if idx == 0:
-                items.append(f'<li class="start"><span class="t-dot"></span><span class="t-name">{s_esc}</span><span class="t-badge">Origin</span></li>')
+                items.append(f'<li class="start"><span class="t-dot"></span><span class="t-name"><span class="label-en">{s_esc}</span><span class="label-bn">{s_bn}</span></span><span class="t-badge"><span class="label-en">Origin</span><span class="label-bn">প্রস্থান</span></span></li>')
             elif idx == st_count - 1:
-                items.append(f'<li class="end"><span class="t-dot"></span><span class="t-name">{s_esc}</span><span class="t-badge">Destination</span></li>')
+                items.append(f'<li class="end"><span class="t-dot"></span><span class="t-name"><span class="label-en">{s_esc}</span><span class="label-bn">{s_bn}</span></span><span class="t-badge"><span class="label-en">Destination</span><span class="label-bn">গন্তব্য</span></span></li>')
             else:
-                items.append(f'<li><span class="t-dot"></span><span class="t-name">{s_esc}</span></li>')
+                items.append(f'<li><span class="t-dot"></span><span class="t-name"><span class="label-en">{s_esc}</span><span class="label-bn">{s_bn}</span></span></li>')
 
         timeline_li = "\n        ".join(items)
         major_section = f"""<section class="seo-section via-section">
@@ -1031,11 +1314,11 @@ def generate_route_page(origin, destination, buses):
 </section>"""
 
     faq_html = "".join(
-        f'<details{" open" if i==0 else ""}><summary>{esc(q)}</summary><div class="fa-body">{esc(a)}</div></details>'
-        for i, (q, a) in enumerate(faqs)
+        f'<details{" open" if i==0 else ""}><summary><span class="label-en">{esc(q_en)}</span><span class="label-bn">{esc(q_bn)}</span></summary><div class="fa-body"><span class="label-en">{esc(a_en)}</span><span class="label-bn">{esc(a_bn)}</span></div></details>'
+        for i, (q_en, a_en, q_bn, a_bn) in enumerate(faqs)
     )
     faq_section = f"""<section class="seo-section">
-  <h3 class="section-title">FAQ</h3>
+  <h3 class="section-title"><span class="label-en">Frequently Asked Questions</span><span class="label-bn">সাধারণ প্রশ্নোত্তর (FAQ)</span></h3>
   {faq_html}
 </section>"""
 
@@ -1044,11 +1327,11 @@ def generate_route_page(origin, destination, buses):
     related_section = ""
     if related:
         links = "".join(
-            f'<a class="rel-chip" href="{slug(o)}-to-{slug(t)}.html">{esc(o)} → {esc(t)}</a>'
+            f'<a class="rel-chip" href="{slug(o)}-to-{slug(t)}.html"><span class="label-en">{esc(o)} → {esc(t)}</span><span class="label-bn">{esc(bn_place(o))} → {esc(bn_place(t))}</span></a>'
             for o, t in related
         )
         related_section = f"""<section class="seo-section">
-  <h3 class="section-title">More Routes from {esc(d_origin)}</h3>
+  <h3 class="section-title"><span class="label-en">More Routes from {esc(d_origin)}</span><span class="label-bn">{esc(bn_orig)} থেকে অন্যান্য রুট</span></h3>
   <div class="chip-row">{links}</div>
 </section>"""
 
@@ -1056,7 +1339,7 @@ def generate_route_page(origin, destination, buses):
     if (destination, origin) in route_meta:
         rev_file = f"{slug(destination)}-to-{slug(origin)}.html"
         reverse_section = f"""<section class="seo-section">
-  <a class="rel-chip" href="{rev_file}">↩ {esc(d_destination)} → {esc(d_origin)} (return)</a>
+  <a class="rel-chip" href="{rev_file}">↩ <span class="label-en">{esc(d_destination)} → {esc(d_origin)} (return)</span><span class="label-bn">{esc(bn_dest)} → {esc(bn_orig)} (ফেরার বাস)</span></a>
 </section>"""
 
     about_route_section = generate_about_route_html(
@@ -1066,7 +1349,7 @@ def generate_route_page(origin, destination, buses):
     body = hero + timetable + route_section + major_section + reverse_section + related_section + faq_section + about_route_section
 
     schema = (
-        faq_schema(faqs) + "\n" +
+        faq_schema([(q_en, a_en) for q_en, a_en, _, _ in faqs]) + "\n" +
         breadcrumb_schema([("Home", "/"), ("Bus Timetable", "/bus-time-table/"), (f"{d_origin} to {d_destination}", f"/bus-time-table/{filename}")])
     )
     return filename, shell(title, description, canonical, body, schema)
@@ -1074,7 +1357,7 @@ def generate_route_page(origin, destination, buses):
 
 def generate_place_page(place, buses):
     count = len(buses)
-    bengali = bn(place)
+    bengali = bn_place(place)
 
     destinations = Counter(
         clean_text(bus.get("destination"))
@@ -1099,15 +1382,6 @@ def generate_place_page(place, buses):
         f"{BASE}/bus-time-table/{_clean_url(filename)}"
     )
 
-    bengali_line = ""
-
-    if bengali:
-        bengali_line = f"""
-<div style="color:var(--ink-dim);margin-top:6px">
-  {esc(bengali)} থেকে বাস
-</div>
-"""
-
     route_links = []
 
     for destination, number in top_destinations:
@@ -1122,22 +1396,26 @@ def generate_place_page(place, buses):
 
         route_links.append(
             f'<a href="{href}" class="op-card">'
-            f'<span class="rt">{esc(place)} <span class="arr">→</span> {esc(destination)}</span>'
-            f'<span class="meta">🚌 {number} bus{"es" if number != 1 else ""}</span>'
-            f'<span class="go">View Schedule ›</span>'
+            f'<span class="rt"><span class="label-en">{esc(place)} <span class="arr">→</span> {esc(destination)}</span><span class="label-bn">{esc(bengali)} <span class="arr">→</span> {esc(bn_place(destination))}</span></span>'
+            f'<span class="meta">🚌 <span class="label-en">{number} bus{"es" if number != 1 else ""}</span><span class="label-bn">{bn_num(number)}টি বাস</span></span>'
+            f'<span class="go"><span class="label-en">View Schedule ›</span><span class="label-bn">সময়সূচী দেখুন ›</span></span>'
             f'</a>'
         )
-
 
     if not route_links:
         route_links = [
             """
 <p style="padding:14px;color:var(--ink-dim)">
-  Route pages are not currently available for the
-  destinations listed in this dataset.
+  <span class="label-en">Route pages are not currently available for the destinations listed in this dataset.</span>
+  <span class="label-bn">এই স্থানের জন্য বিস্তারিত রুট পাতা এখনও তৈরি হয়নি।</span>
 </p>
 """
         ]
+
+    dest_spans = [
+        f'<span class="label-en">{esc(destination)} ({number})</span><span class="label-bn">{esc(bn_place(destination))} ({bn_num(number)})</span>'
+        for destination, number in destinations.most_common()
+    ]
 
     body = f"""
 <section class="op-hero">
@@ -1147,11 +1425,11 @@ def generate_place_page(place, buses):
     color:var(--ink-dim);
     margin-bottom:14px;
   ">
-    <a href="../">Home</a>
+    <a href="../"><span class="label-en">Home</span><span class="label-bn">হোম</span></a>
     <span style="margin:0 5px">›</span>
-    <a href="./">Bus Timetable</a>
+    <a href="./"><span class="label-en">Bus Timetable</span><span class="label-bn">বাস সময়সূচী</span></a>
     <span style="margin:0 5px">›</span>
-    Buses from {esc(place)}
+    <span class="label-en">Buses from {esc(place)}</span><span class="label-bn">{esc(bengali)} থেকে বাস</span>
   </div>
 
   <h1 style="
@@ -1159,33 +1437,31 @@ def generate_place_page(place, buses):
     line-height:1.2;
     margin:0;
   ">
-    Buses from {esc(place)}
+    <span class="label-en">Buses from {esc(place)}</span><span class="label-bn">{esc(bengali)} থেকে বাস</span>
   </h1>
 
-  {bengali_line}
-
-  <p style="
+  <p class="bn-sub" style="
     color:var(--ink-dim);
     line-height:1.7;
     max-width:700px;
+    margin-top:8px;
     margin-bottom:0;
   ">
-    Explore listed bus services departing from
-    {esc(place)}, including destinations, operators
-    and available timetable information.
+    <span class="label-en">Explore listed bus services departing from {esc(place)}, including destinations, operators and available timetable information.</span>
+    <span class="label-bn">{esc(bengali)} থেকে সমস্ত বাস পরিষেবা, গন্তব্য, অপারেটর ও উপলব্ধ সময়সূচী দেখুন।</span>
   </p>
 
 </section>
 
 <section class="op-stats">
-  <div class="op-stat"><div class="lbl">🚌 Listed services</div><div class="val">{count}</div></div>
-  <div class="op-stat"><div class="lbl">📍 Destinations</div><div class="val">{len(destinations)}</div></div>
+  <div class="op-stat"><div class="lbl">🚌 <span class="label-en">Listed services</span><span class="label-bn">তালিকাভুক্ত বাস</span></div><div class="val"><span class="label-en">{count}</span><span class="label-bn">{bn_num(count)}</span></div></div>
+  <div class="op-stat"><div class="lbl">📍 <span class="label-en">Destinations</span><span class="label-bn">গন্তব্য</span></div><div class="val"><span class="label-en">{len(destinations)}</span><span class="label-bn">{bn_num(len(destinations))}</span></div></div>
 </section>
 
 <section>
 
   <h2 class="op-h2">
-    Popular Bus Routes from {esc(place)}
+    <span class="label-en">Popular Bus Routes from {esc(place)}</span><span class="label-bn">{esc(bengali)} থেকে জনপ্রিয় বাস রুট</span>
   </h2>
 
   <div class="op-grid">
@@ -1197,17 +1473,14 @@ def generate_place_page(place, buses):
 <section style="margin-top:34px">
 
   <h2 class="op-h2">
-    All Destinations from {esc(place)}
+    <span class="label-en">All Destinations from {esc(place)}</span><span class="label-bn">{esc(bengali)} থেকে সমস্ত গন্তব্য</span>
   </h2>
 
   <p style="
     line-height:1.9;
     color:var(--ink-dim);
   ">
-    {" · ".join(
-        f"{esc(destination)} ({number})"
-        for destination, number in destinations.most_common()
-    )}
+    {" · ".join(dest_spans)}
   </p>
 
 </section>
@@ -1234,112 +1507,6 @@ def generate_place_page(place, buses):
 # ------------------------------------------------------------
 # OUTPUT
 # ------------------------------------------------------------
-
-def generate_via_page(origin, destination, via_stop, buses):
-    filename = f'{slug(origin)}-to-{slug(destination)}-via-{slug(via_stop)}.html'
-    via_bn = bn(via_stop)
-    route_bn = bn_route(origin, destination)
-    rows = []
-    seen = set()
-    for b in buses:
-        seq = [x for x in [clean_text(b.get('origin'))] + [clean_text(s.get('name')) for s in (b.get('stoppages') or [])] + [clean_text(b.get('destination'))] if x and x != '—']
-        try:
-            io = seq.index(origin)
-            ic = seq.index(via_stop, io + 1)
-            it = seq.index(destination, ic + 1)
-        except ValueError:
-            continue
-        # --- FIX: filter garbage buses (no dep/arr) ---
-        dep_raw = b.get('departure_time', '')
-        arr_raw = b.get('arrival_time', '')
-        dep_min = _t2m(dep_raw)
-        arr_min = _t2m(arr_raw)
-        if dep_min is None or arr_min is None:
-            continue
-        op = operator_name(b)
-        key = (op or '').lower()
-        if key in seen:
-            continue
-        seen.add(key)
-        st = next((s for s in (b.get('stoppages') or []) if clean_text(s.get('name')) == via_stop), {})
-        # --- FIX: pick correct via time (not always up_time) ---
-        up_min = _t2m(st.get('up_time', ''))
-        down_min = _t2m(st.get('down_time', ''))
-        via_min = _pick_via_time(dep_min, arr_min, up_min, down_min)
-        via_str = _m2t(via_min) if via_min is not None else '—'
-        rows.append({'operator': op or '—', 'dep': parse_time(dep_raw), 'via': via_str, 'arr': parse_time(arr_raw), 'stops': total_stops(b), 'bus_type': bus_type_label(b.get('bus_type') or '')})
-    rows.sort(key=lambda r: r['dep'] if r['dep'] is not None else 9999)
-    n = len(rows)
-    if n < 2:
-        return None, None
-    dep_times = [r['dep'] for r in rows if r['dep'] is not None]
-    via_times_raw = [r['via'] for r in rows if r['via'] != '—']
-    first = format_time(min(dep_times)) if dep_times else '—'
-    last = format_time(max(dep_times)) if dep_times else '—'
-    ntot = len(buses)
-    title = f'{origin} to {destination} via {via_stop} Bus Time Table'
-    if route_bn:
-        title += f' | {route_bn}'
-    if via_bn:
-        title += f' ({via_bn} হযে)'
-    description = f'{origin} to {destination} buses via {via_stop}: {n} of {ntot} buses pass through {via_stop}. First bus {first}, last bus {last}.'
-    canonical = f'{BASE}/bus-time-table/{_clean_url(filename)}'
-    trows = ''
-    for r in rows:
-        dep_f = format_time(r['dep'])
-        via_f = r['via']
-        arr_f = format_time(r['arr'])
-        type_html = ''
-        if r['bus_type']:
-            type_html = '<span style="font-size:12px;color:var(--ink-dim)">' + esc(r['bus_type']) + '</span>'
-        trows += '<tr><td style="padding:10px 12px;border-bottom:1px solid var(--border)">' + esc(r['operator']) + '<br>' + type_html + '</td>'
-        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap">' + dep_f + '</td>'
-        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap;color:var(--amber)">' + via_f + '</td>'
-        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap">' + arr_f + '</td>'
-        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);text-align:center">' + str(r['stops']) + '</td></tr>'
-    faqs = [
-        ('How many buses run from ' + origin + ' to ' + destination + ' via ' + via_stop + '?', str(n) + ' of the ' + str(ntot) + ' buses on the ' + origin + ' to ' + destination + ' route pass through ' + via_stop + '.'),
-        ('What is the first bus from ' + origin + ' to ' + destination + ' via ' + via_stop + '?', 'The first bus passing through ' + via_stop + ' departs ' + origin + ' at ' + first + '.' if dep_times else 'No reliable departure time available.'),
-        ('What is the last bus from ' + origin + ' to ' + destination + ' via ' + via_stop + '?', 'The last bus passing through ' + via_stop + ' departs ' + origin + ' at ' + last + '.' if dep_times else 'No reliable departure time available.'),
-        ('Do I have to change buses at ' + via_stop + '?', 'No, these are through-buses. They pass through ' + via_stop + ' on the way from ' + origin + ' to ' + destination + '.'),
-    ]
-    if via_times_raw:
-        faq_html_inner = '<details style="border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">' + esc('When do buses reach ' + via_stop + ' from ' + origin + '?') + '</summary><p style="margin:8px 0 0;color:var(--ink-dim);font-size:14px">' + esc('Buses reach ' + via_stop + ' between ' + via_times_raw[0] + ' and ' + via_times_raw[-1] + ' depending on departure time.') + '</p></details>'
-    else:
-        faq_html_inner = ''
-    faq_html = ''
-    for q, a in faqs:
-        faq_html += '<details style="border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">' + esc(q) + '</summary><p style="margin:8px 0 0;color:var(--ink-dim);font-size:14px">' + esc(a) + '</p></details>'
-    faq_html += faq_html_inner
-    related_links = '<a href="' + slug(origin) + '-to-' + slug(destination) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none">Direct ' + esc(origin) + ' to ' + esc(destination) + ' route <span style="float:right;color:var(--ink-dim);font-size:13px">' + str(ntot) + ' buses</span></a>'
-    if (origin, via_stop) in route_meta:
-        related_links += '<a href="' + slug(origin) + '-to-' + slug(via_stop) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none">' + esc(origin) + ' to ' + esc(via_stop) + ' <span style="float:right;color:var(--ink-dim);font-size:13px">' + str(len(route_meta[(origin, via_stop)])) + ' buses</span></a>'
-    if (via_stop, destination) in route_meta:
-        related_links += '<a href="' + slug(via_stop) + '-to-' + slug(destination) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none">' + esc(via_stop) + ' to ' + esc(destination) + ' <span style="float:right;color:var(--ink-dim);font-size:13px">' + str(len(route_meta[(via_stop, destination)])) + ' buses</span></a>'
-    for c2 in VIA.get((origin, destination), []):
-        if c2 != via_stop:
-            related_links += '<a href="' + slug(origin) + '-to-' + slug(destination) + '-via-' + slug(c2) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none">via ' + esc(c2) + '</a>'
-    via_label = ''
-    if via_bn:
-        via_label = ' | ' + via_bn + ' হযে'
-    body = '<section style="max-width:760px;margin:0 auto;padding:28px 16px 40px">'
-    body += '<div style="font-size:13px;color:var(--ink-dim);margin-bottom:8px"><a href="../" style="color:var(--amber);text-decoration:none">Home</a> / <a href="index.html" style="color:var(--amber);text-decoration:none">Bus Timetable</a> / ' + esc(origin) + ' to ' + esc(destination) + ' via ' + esc(via_stop) + '</div>'
-    body += '<h1 style="font-size:1.8rem;margin:0 0 6px">' + esc(origin) + ' to ' + esc(destination) + ' Bus Time Table</h1>'
-    body += '<p style="color:var(--amber);font-weight:600;margin:0 0 4px">via ' + esc(via_stop) + via_label + '</p>'
-    body += '<p style="color:var(--ink-dim);font-size:13px;margin:0 0 20px">Updated ' + LASTMOD + ' - ' + str(n) + ' of ' + str(ntot) + ' buses pass through ' + esc(via_stop) + '</p>'
-    body += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:28px;font-size:13px">'
-    body += '<div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center"><div style="font-size:1.4rem;font-weight:700">' + str(n) + '</div><div style="color:var(--ink-dim)">Buses via ' + esc(via_stop) + '</div></div>'
-    body += '<div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center"><div style="font-size:1.4rem;font-weight:700">' + first + '</div><div style="color:var(--ink-dim)">First bus</div></div>'
-    body += '<div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center"><div style="font-size:1.4rem;font-weight:700">' + last + '</div><div style="color:var(--ink-dim)">Last bus</div></div>'
-    body += '</div>'
-    body += '<h2 style="font-size:1.35rem;margin:28px 0 12px">' + esc(origin) + ' to ' + esc(destination) + ' - via ' + esc(via_stop) + ' Timings</h2>'
-    body += '<div style="overflow-x:auto;border:1px solid var(--border);border-radius:12px"><table style="width:100%;border-collapse:collapse;font-size:14px"><thead><tr style="background:var(--panel);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px"><th style="padding:10px 12px;text-align:left">Bus</th><th style="padding:10px 12px;text-align:left">Departure</th><th style="padding:10px 12px;text-align:left">At ' + esc(via_stop) + '</th><th style="padding:10px 12px;text-align:left">Arrival</th><th style="padding:10px 12px;text-align:center">Stops</th></tr></thead><tbody>' + trows + '</tbody></table></div>'
-    body += '<h2 style="font-size:1.35rem;margin:36px 0 12px">FAQ</h2>' + faq_html
-    body += '<h2 style="font-size:1.35rem;margin:36px 0 12px">Related Routes</h2><div style="background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden">' + related_links + '</div>'
-    body += '</section>'
-    schema = faq_schema(faqs) + chr(10) + breadcrumb_schema([('Home', '/'), ('Bus Timetable', '/bus-time-table/'), (origin + ' to ' + destination + ' via ' + via_stop, '/bus-time-table/' + filename)])
-    return filename, shell(title, description, canonical, body, schema)
-
 
 # --- time helpers ---
 import re as _re
@@ -1385,6 +1552,143 @@ def _pick_via_time(dep_min, arr_min, up_min, down_min):
         t_adj = t + 24 * 60 if t < dep_min else t
         if dep_min <= t_adj <= end:
             return t
+    return None
+
+def is_valid_via(origin, destination, via_stop, buses):
+    seen = set()
+    valid_count = 0
+    for b in buses:
+        seq = [x for x in [clean_text(b.get('origin'))] + [clean_text(s.get('name')) for s in (b.get('stoppages') or [])] + [clean_text(b.get('destination'))] if x and x != '—']
+        try:
+            io = seq.index(origin)
+            ic = seq.index(via_stop, io + 1)
+            it = seq.index(destination, ic + 1)
+        except ValueError:
+            continue
+        dep_raw = b.get('departure_time', '')
+        arr_raw = b.get('arrival_time', '')
+        if _t2m(dep_raw) is None or _t2m(arr_raw) is None:
+            continue
+        op = operator_name(b)
+        key = (op or '').lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        valid_count += 1
+        if valid_count >= 2:
+            return True
+    return False
+
+VALID_VIA = {
+    (o, d, v)
+    for (o, d), vv_ in VIA.items()
+    for v in vv_
+    if is_valid_via(o, d, v, route_meta.get((o, d), []))
+}
+
+def generate_via_page(origin, destination, via_stop, buses):
+    filename = f'{slug(origin)}-to-{slug(destination)}-via-{slug(via_stop)}.html'
+    via_bn = bn_place(via_stop)
+    bn_orig = bn_place(origin)
+    bn_dest = bn_place(destination)
+    route_bn = f"{bn_orig} থেকে {bn_dest}"
+    rows = []
+    seen = set()
+    for b in buses:
+        seq = [x for x in [clean_text(b.get('origin'))] + [clean_text(s.get('name')) for s in (b.get('stoppages') or [])] + [clean_text(b.get('destination'))] if x and x != '—']
+        try:
+            io = seq.index(origin)
+            ic = seq.index(via_stop, io + 1)
+            it = seq.index(destination, ic + 1)
+        except ValueError:
+            continue
+        # --- FIX: filter garbage buses (no dep/arr) ---
+        dep_raw = b.get('departure_time', '')
+        arr_raw = b.get('arrival_time', '')
+        dep_min = _t2m(dep_raw)
+        arr_min = _t2m(arr_raw)
+        if dep_min is None or arr_min is None:
+            continue
+        op = operator_name(b)
+        key = (op or '').lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        st = next((s for s in (b.get('stoppages') or []) if clean_text(s.get('name')) == via_stop), {})
+        # --- FIX: pick correct via time (not always up_time) ---
+        up_min = _t2m(st.get('up_time', ''))
+        down_min = _t2m(st.get('down_time', ''))
+        via_min = _pick_via_time(dep_min, arr_min, up_min, down_min)
+        via_str = _m2t(via_min) if via_min is not None else '—'
+        rows.append({'operator': op or '—', 'dep': parse_time(dep_raw), 'via': via_str, 'arr': parse_time(arr_raw), 'stops': total_stops(b), 'bus_type': bus_type_label(b.get('bus_type') or '')})
+    rows.sort(key=lambda r: r['dep'] if r['dep'] is not None else 9999)
+    n = len(rows)
+    if n < 2:
+        return None, None
+    dep_times = [r['dep'] for r in rows if r['dep'] is not None]
+    via_times_raw = [r['via'] for r in rows if r['via'] != '—']
+    first = format_time(min(dep_times)) if dep_times else '—'
+    last = format_time(max(dep_times)) if dep_times else '—'
+    ntot = len(buses)
+    title = f'{origin} to {destination} via {via_stop} Bus Time Table'
+    if route_bn:
+        title += f' | {route_bn}'
+    if via_bn:
+        title += f' ({via_bn} হয়ে)'
+    description = f'{origin} to {destination} buses via {via_stop}: {n} of {ntot} buses pass through {via_stop}. First bus {first}, last bus {last}.'
+    canonical = f'{BASE}/bus-time-table/{_clean_url(filename)}'
+    trows = ''
+    for r in rows:
+        dep_f = format_time(r['dep'])
+        via_f = r['via']
+        arr_f = format_time(r['arr'])
+        type_html = ''
+        if r['bus_type']:
+            type_html = '<span style="font-size:12px;color:var(--ink-dim)">' + esc(r['bus_type']) + '</span>'
+        trows += '<tr><td style="padding:10px 12px;border-bottom:1px solid var(--border)"><span class="op" data-lang-static="en">' + esc(r['operator']) + '</span><br>' + type_html + '</td>'
+        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap"><span class="label-en">' + dep_f + '</span><span class="label-bn">' + bn_time(dep_f) + '</span></td>'
+        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap;color:var(--amber)"><span class="label-en">' + via_f + '</span><span class="label-bn">' + bn_time(via_f) + '</span></td>'
+        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);white-space:nowrap"><span class="label-en">' + arr_f + '</span><span class="label-bn">' + bn_time(arr_f) + '</span></td>'
+        trows += '<td style="padding:10px 12px;border-bottom:1px solid var(--border);text-align:center"><span class="label-en">' + str(r['stops']) + '</span><span class="label-bn">' + bn_num(r['stops']) + '</span></td></tr>'
+    faqs = [
+        ('How many buses run from ' + origin + ' to ' + destination + ' via ' + via_stop + '?', str(n) + ' of the ' + str(ntot) + ' buses on the ' + origin + ' to ' + destination + ' route pass through ' + via_stop + '.'),
+        ('What is the first bus from ' + origin + ' to ' + destination + ' via ' + via_stop + '?', 'The first bus passing through ' + via_stop + ' departs ' + origin + ' at ' + first + '.' if dep_times else 'No reliable departure time available.'),
+        ('What is the last bus from ' + origin + ' to ' + destination + ' via ' + via_stop + '?', 'The last bus passing through ' + via_stop + ' departs ' + origin + ' at ' + last + '.' if dep_times else 'No reliable departure time available.'),
+        ('Do I have to change buses at ' + via_stop + '?', 'No, these are through-buses. They pass through ' + via_stop + ' on the way from ' + origin + ' to ' + destination + '.'),
+    ]
+    if via_times_raw:
+        faq_html_inner = '<details style="border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">' + esc('When do buses reach ' + via_stop + ' from ' + origin + '?') + '</summary><p style="margin:8px 0 0;color:var(--ink-dim);font-size:14px">' + esc('Buses reach ' + via_stop + ' between ' + via_times_raw[0] + ' and ' + via_times_raw[-1] + ' depending on departure time.') + '</p></details>'
+    else:
+        faq_html_inner = ''
+    faq_html = ''
+    for q, a in faqs:
+        faq_html += '<details style="border:1px solid var(--border);border-radius:10px;padding:12px 16px;margin-bottom:10px"><summary style="cursor:pointer;font-weight:600">' + esc(q) + '</summary><p style="margin:8px 0 0;color:var(--ink-dim);font-size:14px">' + esc(a) + '</p></details>'
+    faq_html += faq_html_inner
+    related_links = '<a href="' + slug(origin) + '-to-' + slug(destination) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none"><span class="label-en">Direct ' + esc(origin) + ' to ' + esc(destination) + ' route</span><span class="label-bn">' + esc(bn_orig) + ' থেকে ' + esc(bn_dest) + ' সরাসরি রুট</span> <span style="float:right;color:var(--ink-dim);font-size:13px"><span class="label-en">' + str(ntot) + ' buses</span><span class="label-bn">' + bn_num(ntot) + 'টি বাস</span></span></a>'
+    if (origin, via_stop) in route_meta:
+        related_links += '<a href="' + slug(origin) + '-to-' + slug(via_stop) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none"><span class="label-en">' + esc(origin) + ' to ' + esc(via_stop) + '</span><span class="label-bn">' + esc(bn_orig) + ' থেকে ' + esc(via_bn) + '</span> <span style="float:right;color:var(--ink-dim);font-size:13px"><span class="label-en">' + str(len(route_meta[(origin, via_stop)])) + ' buses</span><span class="label-bn">' + bn_num(len(route_meta[(origin, via_stop)])) + 'টি বাস</span></span></a>'
+    if (via_stop, destination) in route_meta:
+        related_links += '<a href="' + slug(via_stop) + '-to-' + slug(destination) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none"><span class="label-en">' + esc(via_stop) + ' to ' + esc(destination) + '</span><span class="label-bn">' + esc(via_bn) + ' থেকে ' + esc(bn_dest) + '</span> <span style="float:right;color:var(--ink-dim);font-size:13px"><span class="label-en">' + str(len(route_meta[(via_stop, destination)])) + ' buses</span><span class="label-bn">' + bn_num(len(route_meta[(via_stop, destination)])) + 'টি বাস</span></span></a>'
+    for c2 in VIA.get((origin, destination), []):
+        if c2 != via_stop and (origin, destination, c2) in VALID_VIA:
+            related_links += '<a href="' + slug(origin) + '-to-' + slug(destination) + '-via-' + slug(c2) + '.html" style="display:block;padding:12px 14px;border-bottom:1px solid var(--border);text-decoration:none"><span class="label-en">via ' + esc(c2) + '</span><span class="label-bn">' + esc(bn_place(c2)) + ' হয়ে</span></a>'
+    body = '<section style="max-width:760px;margin:0 auto;padding:28px 16px 40px">'
+    body += '<div style="font-size:13px;color:var(--ink-dim);margin-bottom:8px"><a href="../" style="color:var(--amber);text-decoration:none"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> / <a href="index.html" style="color:var(--amber);text-decoration:none"><span class="label-en">Bus Timetable</span><span class="label-bn">বাস সময়সূচী</span></a> / <span class="label-en">' + esc(origin) + ' to ' + esc(destination) + ' via ' + esc(via_stop) + '</span><span class="label-bn">' + esc(bn_orig) + ' থেকে ' + esc(bn_dest) + ' (' + esc(via_bn) + ' হয়ে)</span></div>'
+    body += '<h1 style="font-size:1.8rem;margin:0 0 6px"><span class="label-en">' + esc(origin) + ' to ' + esc(destination) + ' Bus Time Table</span><span class="label-bn">' + esc(bn_orig) + ' থেকে ' + esc(bn_dest) + ' বাসের সময়সূচী</span></h1>'
+    body += '<p style="color:var(--amber);font-weight:600;margin:0 0 4px"><span class="label-en">via ' + esc(via_stop) + '</span><span class="label-bn">' + esc(via_bn) + ' হয়ে</span></p>'
+    body += '<p style="color:var(--ink-dim);font-size:13px;margin:0 0 20px"><span class="label-en">Updated ' + LASTMOD + ' - ' + str(n) + ' of ' + str(ntot) + ' buses pass through ' + esc(via_stop) + '</span><span class="label-bn">আপডেট: ' + LASTMOD + ' — ' + bn_num(ntot) + 'টি বাসের মধ্যে ' + bn_num(n) + 'টি বাস ' + esc(via_bn) + ' হয়ে চলাচল করে</span></p>'
+    body += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:28px;font-size:13px">'
+    body += '<div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center"><div style="font-size:1.4rem;font-weight:700"><span class="label-en">' + str(n) + '</span><span class="label-bn">' + bn_num(n) + '</span></div><div style="color:var(--ink-dim)"><span class="label-en">Buses via ' + esc(via_stop) + '</span><span class="label-bn">' + esc(via_bn) + ' হয়ে বাস</span></div></div>'
+    body += '<div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center"><div style="font-size:1.4rem;font-weight:700"><span class="label-en">' + first + '</span><span class="label-bn">' + bn_time(first) + '</span></div><div style="color:var(--ink-dim)"><span class="label-en">First bus</span><span class="label-bn">প্রথম বাস</span></div></div>'
+    body += '<div style="background:var(--panel);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center"><div style="font-size:1.4rem;font-weight:700"><span class="label-en">' + last + '</span><span class="label-bn">' + bn_time(last) + '</span></div><div style="color:var(--ink-dim)"><span class="label-en">Last bus</span><span class="label-bn">শেষ বাস</span></div></div>'
+    body += '</div>'
+    body += '<h2 style="font-size:1.35rem;margin:28px 0 12px"><span class="label-en">' + esc(origin) + ' to ' + esc(destination) + ' - via ' + esc(via_stop) + ' Timings</span><span class="label-bn">' + esc(bn_orig) + ' থেকে ' + esc(bn_dest) + ' (' + esc(via_bn) + ' হয়ে) সময়সূচী</span></h2>'
+    body += '<div style="overflow-x:auto;border:1px solid var(--border);border-radius:12px"><table style="width:100%;border-collapse:collapse;font-size:14px"><thead><tr style="background:var(--panel);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.5px"><th style="padding:10px 12px;text-align:left"><span class="label-en">Bus</span><span class="label-bn">বাস</span></th><th style="padding:10px 12px;text-align:left"><span class="label-en">Departure</span><span class="label-bn">ছাড়ার সময়</span></th><th style="padding:10px 12px;text-align:left"><span class="label-en">At ' + esc(via_stop) + '</span><span class="label-bn">' + esc(via_bn) + '-এ</span></th><th style="padding:10px 12px;text-align:left"><span class="label-en">Arrival</span><span class="label-bn">পৌঁছানোর সময়</span></th><th style="padding:10px 12px;text-align:center"><span class="label-en">Stops</span><span class="label-bn">স্টপ</span></th></tr></thead><tbody>' + trows + '</tbody></table></div>'
+    body += '<h2 style="font-size:1.35rem;margin:36px 0 12px"><span class="label-en">FAQ</span><span class="label-bn">সাধারণ প্রশ্ন (FAQ)</span></h2>' + faq_html
+    body += '<h2 style="font-size:1.35rem;margin:36px 0 12px"><span class="label-en">Related Routes</span><span class="label-bn">সম্পর্কিত রুট</span></h2><div style="background:var(--panel);border:1px solid var(--border);border-radius:16px;overflow:hidden">' + related_links + '</div>'
+    body += '</section>'
+    schema = faq_schema(faqs) + chr(10) + breadcrumb_schema([('Home', '/'), ('Bus Timetable', '/bus-time-table/'), (origin + ' to ' + destination + ' via ' + via_stop, '/bus-time-table/' + filename)])
+    return filename, shell(title, description, canonical, body, schema)
     return None
 
 os.makedirs(OUT, exist_ok=True)
