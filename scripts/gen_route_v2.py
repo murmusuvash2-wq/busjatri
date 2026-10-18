@@ -748,22 +748,11 @@ def header_html_v2():
 
 
 def footer_html_v2():
-    return """<footer class="footer">
-  <div class="container">
-    <div class="footer-links">
-      <a href="../index.html">Home</a>
-      <a href="./">All Bus Timetables</a>
-      <a href="../blog/index.html">Blog</a>
-      <a href="../contribute.html">Contribute a Bus</a>
-      <a href="../about.html">About Us</a>
-      <a href="../contact.html">Contact Us</a>
-      <a href="../privacy-policy.html">Privacy Policy</a>
-    </div>
-    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
-    Not affiliated with any transport corporation<br>
-    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
-  </div>
-</footer>"""
+    """Footer comes from ONE place — scripts/components/footer.py (one writer)."""
+    import sys as _sys, os as _os
+    _sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+    from components.footer import footer_html
+    return footer_html("../")
 
 
 def shell_v2(title, description, canonical, body, schema=""):

@@ -33,21 +33,7 @@ NEW_HEADER = '''def header_html():
 # ============================================================
 # 2. NEW FOOTER (all links + email)
 # ============================================================
-NEW_FOOTER = '''def footer_html():
-    return """<footer class="footer">
-  <div class="container">
-    <div class="footer-links">
-      <a href="../about.html">About Us</a>
-      <a href="../contact.html">Contact Us</a>
-      <a href="../privacy-policy.html">Privacy Policy</a>
-      <a href="../about.html#credits">Credits</a>
-      <a href="./">All Bus Timetables</a>
-    </div>
-    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
-    Not affiliated with any transport corporation<br>
-    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
-  </div>
-</footer>"""'''
+# footer_html now lives in scripts/components/footer.py — this patch is retired.
 
 # ============================================================
 # 3. NEW SHELL (links seo.css + extras.css, 720px max-width)
@@ -257,7 +243,7 @@ def replace_func(src, func_name, new_def):
 print("Patching gen_seo_pages.py with SEO redesign templates...")
 before = len(src)
 src = replace_func(src, 'header_html', NEW_HEADER)
-src = replace_func(src, 'footer_html', NEW_FOOTER)
+# footer_html is provided by scripts/components/footer.py — no patch needed
 src = replace_func(src, 'shell', NEW_SHELL)
 src = replace_func(src, 'bus_card', NEW_BUS_CARD)
 src = replace_func(src, 'route_stops_html', NEW_ROUTE_STOPS)
