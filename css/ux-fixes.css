@@ -25,10 +25,14 @@
 .weather-card .val{font-size:.85rem;margin-top:0}
 .via-line{font-size:12px;color:var(--ink-dim);margin-top:4px;line-height:1.45}
 .return-journey{margin-top:10px;padding:8px 10px;font-size:12px}
-.schedule-head{grid-template-columns:minmax(0,1fr) 66px 66px;padding:8px 12px;gap:8px}
-.schedule-table .stop-row{grid-template-columns:15px minmax(0,1fr) auto;gap:8px;padding:8px 0}
-.schedule-table .stop-times{display:flex;gap:8px;font-size:11px;white-space:nowrap;justify-content:flex-end}
+.schedule-head{grid-template-columns:minmax(0,1fr) 72px 72px;padding:8px 12px;gap:10px}
+.schedule-head span:not(:first-child){text-align:center}
+.schedule-table .stop-list{padding-left:12px;padding-right:12px}
+.schedule-table .stop-row{grid-template-columns:15px minmax(0,1fr) 154px;gap:10px;padding:8px 0}
+.schedule-table .stop-times{display:grid;grid-template-columns:72px 72px;gap:10px;font-size:11px;white-space:nowrap;align-items:center}
+.schedule-table .stop-times .time-out,.schedule-table .stop-times .time-in{display:inline-flex;justify-content:center;align-items:center;text-align:center;width:72px;min-width:0}
 .schedule-table .stop-times span{min-width:0}
+.schedule-table .stop-times .community-time{display:inline-flex;flex-direction:column;align-items:center;text-align:center}
 .stop-row .stop-name{font-size:13px;min-width:0;overflow-wrap:anywhere}
 .stop-row .rail{font-size:10px;white-space:normal}
 .add-time-btn{width:24px;height:24px;min-width:24px;padding:0;font:700 15px/1 var(--font-body);border-radius:7px;display:inline-flex;align-items:center;justify-content:center}

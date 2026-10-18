@@ -3,6 +3,19 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-18 — Bus Detail Page: Outbound & Return Timetable Columns Centered & Spaced
+- What: Resolved alignment and cramped spacing issue between Outbound and Return stoppage times in the Route Timetable table:
+  - **Column Centering:** Changed `.schedule-head span:not(:first-child)` from `text-align: right` to `text-align: center`, aligning headers directly over their column content.
+  - **Independent Grid Columns for Times:** Replaced the unconstrained flex container in `.schedule-table .stop-times` with an exact `display: grid; grid-template-columns: 72px 72px; gap: 10px;`.
+  - **Fixed 21px Right Shift:** `.time-out` and `.time-in` cells are now centered (`display: inline-flex; justify-content: center; width: 72px;`), preventing the Outbound time from drifting 21px to the right and encroaching into the Return column.
+  - **Clean 22px+ Text Separation:** Text-to-text gap between Outbound and Return expanded from 7px–8px to ~22px–27px without changing overall theme, colors, or fonts.
+  - **Cache Version Bump:** Updated CSS hash versions in `index.html` (`bus-page.css?v=afd70042`, `ux-fixes.css?v=4f8d5586`).
+- Why: User reported Outbound and Return stoppage times being too close together and suspected Outbound time was off-center.
+- Files: `css/ux-fixes.css`, `css/bus-page.css`, `index.html`, `WORKLOG.md`.
+- Status: Verified with `scripts/render_test.js` & live pushed to main.
+
+---
+
 ## 2026-10-16 — Replaced Horizontal Scrolling Stoppages with Mobile Vertical Route Timeline Dropdown (Option 1)
 - What: Replaced the horizontal scrolling stoppage chips (`<div class="chip-row hscroll">`) on all route pages with a mobile-optimized, collapsible transit timeline dropdown (`<details class="via-dropdown">`):
   - **Zero JS, Accessible `<details>` Dropdown:** Native HTML `<details class="via-dropdown">` with animated chevron toggle (`▼`), keeping the initial page view clean and free of clumsy horizontal scroll bars and accidental gesture navigation triggers.
