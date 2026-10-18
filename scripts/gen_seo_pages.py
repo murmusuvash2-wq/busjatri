@@ -795,23 +795,11 @@ def header_html():
   </div>
 </header>"""
 
-def footer_html():
-    return """<footer class="footer">
-  <div class="container">
-    <div class="footer-links">
-      <a href="../blog/"><span class="label-en">Blog</span><span class="label-bn">ব্লগ</span></a>
-      <a href="../about">About Us</a>
-      <a href="../contact">Contact Us</a>
-      <a href="../privacy-policy">Privacy Policy</a>
-      <a href="../about#credits">Credits</a>
-      <a href="../contribute"><span class="label-en">Bus Contribution</span><span class="label-bn">বাস তথ্য যোগ করুন</span></a>
-      <a href="./">All Bus Timetables</a>
-    </div>
-    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
-    Not affiliated with any transport corporation<br>
-    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
-  </div>
-</footer>"""
+# Footer markup lives in ONE place — scripts/components/footer.py (one writer).
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from components.footer import footer_html  # noqa: E402
+
 
 
 def shell(title, description, canonical, body, schema=""):

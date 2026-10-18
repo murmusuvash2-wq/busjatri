@@ -8,6 +8,9 @@ page); update_tti() now strips it if present.
 Run with no arguments (called from finalize_pages.py).
 """
 import json, re
+import sys as _sys, os as _os
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from components.footer import footer_html
 from pathlib import Path
 from collections import Counter
 
@@ -154,22 +157,7 @@ ROW_T = '''<a href="{href}" class="op-card">
   <span class="go"><span class="label-en">View Schedule ›</span><span class="label-bn">সময়সূচি দেখুন ›</span></span>
 </a>'''
 
-FOOT = '''<footer class="footer">
-  <div class="container">
-    <div class="footer-links">
-      <a href="../blog/"><span class="label-en">Blog</span><span class="label-bn">ব্লগ</span></a>
-      <a href="../about">About Us</a>
-      <a href="../contact">Contact Us</a>
-      <a href="../privacy-policy">Privacy Policy</a>
-      <a href="../about#credits">Credits</a>
-      <a href="../contribute"><span class="label-en">Bus Contribution</span><span class="label-bn">বাস তথ্য যোগ করুন</span></a>
-      <a href="./">All Bus Timetables</a>
-    </div>
-    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
-    Not affiliated with any transport corporation<br>
-    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
-  </div>
-</footer>
+FOOT = footer_html("../") + '''
 <style>.bj-pop-row{transition:background .15s}.bj-pop-row:hover{background:var(--amber-soft)}.bj-pop-row span:first-child{font-weight:600}.bj-pop-row:last-of-type{border-bottom-color:transparent}</style>
 <script src="../js/hdr.js?v=hdrunify20261005d"></script>
 </body>
