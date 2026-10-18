@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Demo: Route Page Layout & About Route Dropdown | BusJatri</title>
-<link rel="stylesheet" href="../css/seo.css?v=rt20260920">
-<link rel="stylesheet" href="../css/extras.css">
+<link rel="stylesheet" href="../css/seo.css?v=a0db8d0a">
+<link rel="stylesheet" href="../css/extras.css?v=5cad36ed">
 <style>
 .demo-banner {
   background: var(--surface-2, #efe6d3);
@@ -78,6 +78,19 @@
   display: block;
 }
 </style>
+<style id="busjatri-ux-polish">
+.trust-note{margin:12px 0;padding:10px 14px;border:1px solid color-mix(in srgb,var(--accent,#b8791f) 35%,transparent);border-radius:12px;background:color-mix(in srgb,var(--accent,#b8791f) 8%,transparent);color:var(--ink-dim,#665);font-size:.82rem;line-height:1.5}.trust-note strong{color:var(--ink,#222)}
+.no-results,.empty-state{display:none}.bus-card{transition:transform .18s ease,box-shadow .18s ease}.bus-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(50,35,10,.10)}.bus-card .dep{font-variant-numeric:tabular-nums;white-space:nowrap}.missing-data{color:var(--ink-dim,#777);font-style:italic}
+@media(min-width:760px){.bus-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.bus-card{height:fit-content}.search-panel,.search-box{position:sticky;top:10px;z-index:4}.letter-nav{position:sticky;top:0;z-index:3;background:var(--paper,#fbf7ee);padding:8px 0}}
+@media(max-width:759px){.bus-card{border-radius:14px}.trust-note{font-size:.76rem}.letter-nav{overflow-x:auto;white-space:nowrap}}
+</style><!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L4E3D1YX9X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L4E3D1YX9X');
+</script>
 </head>
 <body>
 <header class="header">
@@ -92,7 +105,8 @@
         <button type="button" id="langBn" class="bj-langbtn" style="background:transparent;border:1px solid var(--line,#d8cfc0);border-radius:999px;padding:3px 10px;font-weight:700;font-size:12px;cursor:pointer;color:var(--ink,#2b2118);font-family:inherit;line-height:1.2;white-space:nowrap;flex:0 0 auto">বাংলা</button>
       </span>
       <button type="button" id="themeBtn" class="bj-themebtn" aria-label="Toggle dark mode" title="Toggle dark mode" style="width:30px;height:30px;border-radius:50%;border:1px solid var(--line,#d8cfc0);background:transparent;color:var(--ink,#2b2118);display:inline-flex;align-items:center;justify-content:center;cursor:pointer;padding:0;flex:0 0 auto"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.5A8.5 8.5 0 1 1 9.5 3.5a7 7 0 0 0 11 11z"/></svg></button>
-    </nav>
+    
+</nav>
   </div>
 </header>
 
@@ -388,6 +402,8 @@
       <a href="../about">About Us</a>
       <a href="../contact">Contact Us</a>
       <a href="../privacy-policy">Privacy Policy</a>
+      <a href="../disclaimer">Disclaimer</a>
+      <a href="../terms">Terms of Use</a>
       <a href="../contribute">Contribute a Bus</a>
       <a href="./">All Bus Timetables</a>
     </div>
@@ -430,5 +446,7 @@ if (themeBtn) {
   });
 }
 </script>
+<script>(function(){try{var b=document.getElementById("bjThemeBtn");if(!b)return;if(localStorage.getItem("seo-theme")==="dark"){document.body.classList.add("dark");b.textContent="\u2600";}b.addEventListener("click",function(){var d=document.body.classList.toggle("dark");localStorage.setItem("seo-theme",d?"dark":"light");b.textContent=d?"\u2600":"\u25d0";});}catch(e){}})();</script>
+<script defer src="/js/cookie-consent.js?v=9788dec7"></script>
 </body>
 </html>
