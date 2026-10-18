@@ -1441,7 +1441,7 @@ def generate_stand_page_v2(stand):
 <div class="note">📍 {note}</div>
 {guide}
 {faq}
-<footer>{disp} · {n} listed buses · {d} destinations (alias-merged) · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
+<footer>{disp} · {n} listed buses · {d} destinations (alias-merged) · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>{js}</script>
 <script src="../js/lang.js?v=lang20261005c"></script>

@@ -164,7 +164,7 @@ PAGE_TMPL = """<!DOCTYPE html>
 <div class="note">📍 <span class="label-en"><b>Stop page = every bus that halts at @@STOP@@.</b> Times shown are at this stop, in both directions. Times can change — verify with the operator.</span><span class="label-bn"><b>স্টপ পেজ = এই স্টপে থামা সব বাস।</b> সময়গুলি এই স্টপে, দুই দিকেরই। সময় বদলাতে পারে।</span></div>
 <div class="sec"><h3>FAQ</h3></div>
 @@FAQ@@
-<footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
+<footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>@@JS@@</script>
 <script src="../js/lang.js?v=lang20261005c"></script>
@@ -326,7 +326,7 @@ INDEX_TMPL = """<!DOCTYPE html>
   <div class="chips"><span class="schip">🚏 @@N@@ <span class="label-en">stops</span><span class="label-bn">টি স্টপ</span></span></div>
 </div>
 @@LIST@@
-<footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
+<footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>@@JS@@</script>
 </body></html>"""

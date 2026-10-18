@@ -13,7 +13,6 @@ Credits is merged into the Company group (no lone Credits column).
 GROUPS = [
     ("Explore", [
         ("All Bus Timetables", "{p}bus-time-table/", True),
-        ("Blog",               "{p}blog/",           True),
         ("Bus Contribution",   "{p}contribute",      True),
     ]),
     ("Company", [
@@ -36,14 +35,14 @@ BN = {
 }
 
 
-def footer_html(prefix: str = "") -> str:
+def footer_html(prefix: str = "", groups=None) -> str:
     """Return the shared footer markup.
 
     prefix: ""   on the homepage (root)
             "../" on any sub-page (route, operator, hub, via, blog)
     """
     cols = []
-    for title, links in GROUPS:
+    for title, links in (groups or GROUPS):
         items = []
         for name, href, bilingual in links:
             h = href.format(p=prefix)

@@ -233,7 +233,7 @@ PAGE_TMPL = """<!DOCTYPE html>
 <div class="note">📍 <span class="label-en"><b>Via page = buses that stop at @@V@@.</b> For the full @@O@@ → @@T@@ route, open the direct route page. Times can change — verify with the operator.</span><span class="label-bn"><b>ভায়া পেজ = @@VBN@@ থামা বাস।</b> পুরো @@OBN@@ → @@TBN@@ রুটের জন্য সরাসরি রুট পেজ খুলুন। সময় বদলাতে পারে।</span></div>
 <div class="sec"><h3>FAQ</h3></div>
 @@FAQ@@
-<footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
+<footer><a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script src="../js/lang.js?v=lang20261005c"></script>
 <script src="../js/hdr.js?v=hdrunify20261005d"></script>

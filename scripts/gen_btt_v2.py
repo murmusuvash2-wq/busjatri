@@ -461,7 +461,7 @@ def generate_btt_page():
 <div class="note">📍 {note}</div>
 <div class="sec"><h3>{faq_h}</h3></div>
 {faq}
-<footer>{n} bus stands · {r:,} routes · {b:,} buses · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../blog/">Blog</a><a href="../privacy-policy.html">Privacy</a></footer>
+<footer>{n} bus stands · {r:,} routes · {b:,} buses · <a href="../about.html">About</a><a href="../contribute.html">Contribute</a><a href="../privacy-policy.html">Privacy</a></footer>
 </div>
 <script>{js}</script>
 <script src="../js/lang.js?v=lang20261005c"></script>

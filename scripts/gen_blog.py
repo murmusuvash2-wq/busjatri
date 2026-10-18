@@ -48,7 +48,6 @@ HEADER = """<header class="header">
 FOOTER = """<footer class="footer">
   <div class="container">
     <div style="display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;justify-content:center;font-size:13px">
-      <a href="../blog/">Blog</a>
       <a href="../about.html">About Us</a>
       <a href="../contact.html">Contact Us</a>
       <a href="../privacy-policy.html">Privacy Policy</a>
@@ -90,6 +89,7 @@ def article_page(a):
 <title>{a["title"]} | BusJatri</title>
 <meta name="description" content="{a["desc"]}">
 <link rel="canonical" href="{BASE}/blog/{a["slug"]}">
+<meta name="robots" content="noindex,follow">
 <meta property="og:title" content="{a["title"]} | BusJatri">
 <meta property="og:description" content="{a["desc"]}">
 <meta property="og:type" content="article">
@@ -172,6 +172,7 @@ def index_page():
 <title>Blog — Bus Travel Guides & Stories | BusJatri</title>
 <meta name="description" content="West Bengal bus travel guides and bus-journey stories: route timetables, first and last bus timings, operators and travel tips from BusJatri.">
 <link rel="canonical" href="{BASE}/blog/">
+<meta name="robots" content="noindex,follow">
 <meta property="og:title" content="Blog — Bus Travel Guides & Stories | BusJatri">
 <meta property="og:description" content="West Bengal bus travel guides and bus-journey stories: route timetables, operators and travel tips from BusJatri.">
 <meta property="og:type" content="website">
@@ -213,15 +214,7 @@ def main():
         (bdir / "index.html").write_text(index_page(), encoding="utf-8")
         print(f"blog: {len(ARTICLES)} articles + index written")
 
-        # homepage footer: blog link (idempotent)
-        hp = ROOT / "index.html"
-        s = hp.read_text(encoding='utf-8')
-        if 'href="blog/"' not in s:
-            anchor = '<a href="about.html">About Us</a>'
-            if anchor in s:
-                s = s.replace(anchor, '<a href="blog/">Blog</a>\n      ' + anchor, 1)
-                hp.write_text(s, encoding="utf-8")
-                print("homepage: blog link added to footer")
+        # blog is HIDDEN (owner: timetable site) — no link injected into the homepage
 
         # sitemap: blog urls (idempotent)
         sm = ROOT / "sitemap.xml"
