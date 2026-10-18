@@ -3,6 +3,15 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-18 — Cloudflare Auto-Deploy: Fixed 355MB Git Pack Upload Failure (.assetsignore)
+- What: Fixed failing automatic Cloudflare deployment caused by static asset size limit violations:
+  - **Root Cause:** `wrangler.jsonc` sets `assets.directory: "./"`, directing Wrangler to upload the repository root. `.assetsignore` only contained `/data-raw/`, leaving `.git/` included. A 355 MB Git pack file (`.git/objects/pack/...`) exceeded Cloudflare's strict 25 MiB single-file limit, causing all automatic deploys on push to fail.
+  - **Fix:** Updated `.assetsignore` to exclude `.git/`, `.github/`, internal build/script directories (`app/`, `content/`, `data-raw/`, `design/`, `parts/`, `scripts/`), configs, and docs.
+  - **Result:** Largest uploadable asset reduced to `data/busjatri_data.json` (~10.85 MB, well below the 25 MiB ceiling); file count bounded to 12,066 (under the 20,000 file free limit). Website front-end HTML/CSS/JS/data files completely unchanged.
+- Why: User reported automatic Cloudflare deploy was failing and asked to diagnose and fix.
+- Files: `.assetsignore`, `WORKLOG.md`.
+- Status: Fixed, committed (ffda15020c), and pushed live to origin main.
+
 ## 2026-10-18 — Bus Detail Page: Outbound & Return Timetable Columns Centered & Spaced
 - What: Resolved alignment and cramped spacing issue between Outbound and Return stoppage times in the Route Timetable table:
   - **Column Centering:** Changed `.schedule-head span:not(:first-child)` from `text-align: right` to `text-align: center`, aligning headers directly over their column content.
