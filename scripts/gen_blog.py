@@ -216,16 +216,12 @@ def main():
 
         # blog is HIDDEN (owner: timetable site) — no link injected into the homepage
 
-        # sitemap: blog urls (idempotent)
+        # sitemap: blog is HIDDEN — strip any blog urls, never add them
         sm = ROOT / "sitemap.xml"
         s = sm.read_text(encoding="utf-8")
-        s = re.sub(r"<url><loc>" + re.escape(BASE) + r"/blog/[^<]*</loc>.*?</url>\n?", "", s)
-        add = f"<url><loc>{BASE}/blog/</loc><lastmod>{TODAY}</lastmod><priority>0.8</priority></url>\n"
-        for a in manifest_articles() + ARTICLES:
-            add += f"<url><loc>{BASE}/blog/{a['slug']}</loc><lastmod>{TODAY}</lastmod><priority>0.7</priority></url>\n"
-        s = s.replace("</urlset>", add + "</urlset>")
+        s, _n = re.subn(r"<url><loc>[^<]*/blog/[^<]*</loc>.*?</url>\n?", "", s, flags=re.S)
         sm.write_text(s, encoding="utf-8")
-        print("sitemap: blog urls added")
+        print(f"sitemap: {_n} blog url(s) removed (blog hidden)")
 
 
 if __name__ == "__main__":
