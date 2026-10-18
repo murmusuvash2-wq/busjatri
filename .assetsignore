@@ -1,1 +1,21 @@
+# Git & CI
+.git/
+.github/
+
+# Internal source & generation directories
+/app/
+/content/
 /data-raw/
+/design/
+/parts/
+/scripts/
+
+# Docs, configs, and temporary reports
+.assetsignore
+.gitignore
+wrangler.jsonc
+vercel.json
+ARCHITECTURE.md
+README.md
+WORKLOG.md
+data-time-fix-report.csv
