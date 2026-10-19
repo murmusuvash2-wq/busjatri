@@ -37,6 +37,14 @@ def slug(s):
 
 
 def h1_route(page_html):
+    # First check for bilingual <span class="label-en">
+    m_en = re.search(r'<h1[^>]*>.*?<span class="label-en">(.*?)(?:<span class="arr"[^>]*>.*?</span>|&rarr;|→)(.*?)</span>', page_html, re.S)
+    if m_en:
+        a = re.sub(r'<[^>]+>', '', m_en.group(1)).strip()
+        b = re.sub(r'<[^>]+>', '', m_en.group(2)).strip()
+        if a and b:
+            return (html.unescape(a), html.unescape(b))
+
     m = H1.search(page_html)
     if not m:
         return None

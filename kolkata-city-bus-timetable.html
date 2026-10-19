@@ -930,7 +930,7 @@ details.full-list .bus-row{margin-top:8px}
 .seo-hero .hero-badge{font-size:.6em!important;padding:4px 12px!important;border-radius:11px!important;letter-spacing:.055em!important}
 .seo-hero .only-en,.seo-hero .only-bn{font-size:12.5px!important;margin-top:6px!important;line-height:1.4!important}
 .stat-chips{display:grid!important;grid-template-columns:1fr 1fr!important;gap:6px!important;margin-bottom:10px!important}
-.stat-chips .schip{font-size:11px!important;padding:6px 10px!important;justify-content:flex-start!important;width:auto!important;min-width:0!important;white-space:nowrap!important;overflow:hidden!important;text-overflow:ellipsis!important}
+.stat-chips .schip{font-size:11px!important;padding:6px 10px!important;justify-content:flex-start!important;width:auto!important;min-width:0!important;white-space:normal!important;overflow:visible!important;line-height:1.25!important}
 .hub-search{padding:14px 13px!important;margin-top:10px!important}
 </style>
 <nav class="bj-nav" style="display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;font-size:13px;margin-left:auto;justify-content:flex-end">
@@ -1001,8 +1001,12 @@ details.full-list .bus-row{margin-top:8px}
   <section class="seo-section">
     <h3 class="section-title"><span class="label-en">Which bus goes where?</span><span class="label-bn">কোন বাস কোথায় যায়?</span></h3>
     <div class="pl-grid">
-      <span class="label-en"><button class="pl-chip" onclick="q('Howrah Stn')"><span class="pl-n">📍 Howrah Station</span><span class="pl-c">26 routes</span></button><button class="pl-chip" onclick="q('Garia')"><span class="pl-n">📍 Garia</span><span class="pl-c">11 routes</span></button><button class="pl-chip" onclick="q('Karunamayee')"><span class="pl-n">📍 Karunamoyee (New Town)</span><span class="pl-c">10 routes</span></button><button class="pl-chip" onclick="q('airport')"><span class="pl-n">📍 Dum Dum Airport</span><span class="pl-c">6 routes</span></button><button class="pl-chip" onclick="q('Jadavpur')"><span class="pl-n">📍 Jadavpur</span><span class="pl-c">8 routes</span></button><button class="pl-chip" onclick="q('Ecospace')"><span class="pl-n">📍 Ecospace / New Town</span><span class="pl-c">5 routes</span></button></span>
-      <span class="label-bn"><button class="pl-chip" onclick="q('হাওড়া')"><span class="pl-n">📍 হাওড়া স্টেশন</span><span class="pl-c">২৬ রুট</span></button><button class="pl-chip" onclick="q('গড়িয়া')"><span class="pl-n">📍 গড়িয়া</span><span class="pl-c">১১ রুট</span></button><button class="pl-chip" onclick="q('করুণাময়ী')"><span class="pl-n">📍 করুণাময়ী (নিউ টাউন)</span><span class="pl-c">১০ রুট</span></button><button class="pl-chip" onclick="q('এয়ারপোর্ট')"><span class="pl-n">📍 দমদম এয়ারপোর্ট</span><span class="pl-c">৬ রুট</span></button><button class="pl-chip" onclick="q('যাদবপুর')"><span class="pl-n">📍 যাদবপুর</span><span class="pl-c">৮ রুট</span></button><button class="pl-chip" onclick="q('ইকোস্পেস')"><span class="pl-n">📍 ইকোস্পেস / নিউ টাউন</span><span class="pl-c">৫ রুট</span></button></span>
+      <button class="pl-chip" onclick="q(document.body.classList.contains('lang-bn')?'হাওড়া':'Howrah Stn')"><span class="pl-n">📍 <span class="label-en">Howrah Station</span><span class="label-bn">হাওড়া স্টেশন</span></span><span class="pl-c"><span class="label-en">26 routes</span><span class="label-bn">২৬ রুট</span></span></button>
+      <button class="pl-chip" onclick="q(document.body.classList.contains('lang-bn')?'গড়িয়া':'Garia')"><span class="pl-n">📍 <span class="label-en">Garia</span><span class="label-bn">গড়িয়া</span></span><span class="pl-c"><span class="label-en">11 routes</span><span class="label-bn">১১ রুট</span></span></button>
+      <button class="pl-chip" onclick="q(document.body.classList.contains('lang-bn')?'করুণাময়ী':'Karunamayee')"><span class="pl-n">📍 <span class="label-en">Karunamoyee (New Town)</span><span class="label-bn">করুণাময়ী (নিউ টাউন)</span></span><span class="pl-c"><span class="label-en">10 routes</span><span class="label-bn">১০ রুট</span></span></button>
+      <button class="pl-chip" onclick="q(document.body.classList.contains('lang-bn')?'এয়ারপোর্ট':'airport')"><span class="pl-n">📍 <span class="label-en">Dum Dum Airport</span><span class="label-bn">দমদম এয়ারপোর্ট</span></span><span class="pl-c"><span class="label-en">6 routes</span><span class="label-bn">৬ রুট</span></span></button>
+      <button class="pl-chip" onclick="q(document.body.classList.contains('lang-bn')?'যাদবপুর':'Jadavpur')"><span class="pl-n">📍 <span class="label-en">Jadavpur</span><span class="label-bn">যাদবপুর</span></span><span class="pl-c"><span class="label-en">8 routes</span><span class="label-bn">৮ রুট</span></span></button>
+      <button class="pl-chip" onclick="q(document.body.classList.contains('lang-bn')?'ইকোস্পেস':'Ecospace')"><span class="pl-n">📍 <span class="label-en">Ecospace / New Town</span><span class="label-bn">ইকোস্পেস / নিউ টাউন</span></span><span class="pl-c"><span class="label-en">5 routes</span><span class="label-bn">৫ রুট</span></span></button>
     </div>
   </section>
 
@@ -1101,19 +1105,10 @@ details.full-list .bus-row{margin-top:8px}
 </main>
 <footer class="footer">
   <div class="container">
-    <div class="footer-links">
-      <a href="./">Home</a>
-      <a href="bus-time-table/">All Bus Timetables</a>
-      <a href="contribute">Contribute a Bus</a>
-      <a href="about">About Us</a>
-      <a href="contact">Contact Us</a>
-      <a href="privacy-policy">Privacy Policy</a>
-      <a href="disclaimer">Disclaimer</a>
-      <a href="terms">Terms of Use</a>
-    </div>
-    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>
-    Not affiliated with any transport corporation<br>
-    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
+    <div class="footer-cols"><div class="fcol"><h4><span class="label-en">Explore</span><span class="label-bn">এক্সপ্লোর</span></h4><div class="fcol-links"><a href="bus-time-table/"><span class="label-en">All Bus Timetables</span><span class="label-bn">সব বাস টাইমটেবিল</span></a><a href="contribute"><span class="label-en">Bus Contribution</span><span class="label-bn">বাস তথ্য যোগ করুন</span></a></div></div><div class="fcol"><h4><span class="label-en">Company</span><span class="label-bn">কোম্পানি</span></h4><div class="fcol-links"><a href="about"><span class="label-en">About Us</span><span class="label-bn">আমাদের সম্পর্কে</span></a><a href="contact"><span class="label-en">Contact Us</span><span class="label-bn">যোগাযোগ</span></a><a href="about#credits"><span class="label-en">Credits</span><span class="label-bn">কৃতজ্ঞতা</span></a></div></div><div class="fcol"><h4><span class="label-en">Legal</span><span class="label-bn">আইনি তথ্য</span></h4><div class="fcol-links"><a href="privacy-policy"><span class="label-en">Privacy Policy</span><span class="label-bn">গোপনীয়তা নীতি</span></a><a href="disclaimer"><span class="label-en">Disclaimer</span><span class="label-bn">দাবিত্যাগ</span></a><a href="terms"><span class="label-en">Terms of Use</span><span class="label-bn">ব্যবহারের শর্তাবলী</span></a></div></div></div>
+    <p><strong>BusJatri</strong> — <span class="label-en">West Bengal Bus Timetable</span><span class="label-bn">পশ্চিমবঙ্গ বাস টাইমটেবিল</span><br>
+    <span class="label-en">Not affiliated with any transport corporation</span><span class="label-bn">কোনও পরিবহন সংস্থার সঙ্গে অনুমোদিত সম্পর্ক নেই</span><br>
+    <span class="label-en">Contact:</span><span class="label-bn">যোগাযোগ:</span> <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>
   </div>
 </footer>
 <script src="js/lang.js?v=lang20261005c"></script>

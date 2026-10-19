@@ -52,7 +52,7 @@
     'Kolkata (Babughat)':'কলকাতা (বাবুঘাট)',
     /* Common Kolkata-city stop/landmark names. */
     'Howrah Stn':'হাওড়া স্টেশন','Howrah Station':'হাওড়া স্টেশন','Kolkata Stn':'কলকাতা স্টেশন',
-    'Kolkata Station':'কলকাতা স্টেশন','Dum Dum':'ডামডাম','Dum Dum Stn':'ডামডাম স্টেশন',
+    'Kolkata Station':'কলকাতা স্টেশন','Dum Dum':'দমদম','Dum Dum Stn':'দমদম স্টেশন',
     'Nabanna':'নবান্ন','New Town':'নিউ টাউন','Airport':'এয়ারপোর্ট','Airport Gate':'এয়ারপোর্ট গেট',
     'Airport Gate-1':'এয়ারপোর্ট গেট','Airport Gate No-3':'এয়ারপোর্ট গেট',
     'Garia Depot':'গড়িয়া ডিপো','Jadavpur':'যাদবপুর','Ballygunge':'বালিগঞ্জ',
@@ -112,6 +112,23 @@
       bn.style.fontWeight=bnOn?'800':'700';
     }
     try { localStorage.setItem('bj-lang',next); localStorage.setItem('seo-lang',next); } catch(e){}
+    try {
+      var isB = next === 'bn';
+      var fi = d.getElementById('fromInput');
+      var ti = d.getElementById('toInput');
+      var si = d.getElementById('stopInput');
+      var cr = d.getElementById('crSearch');
+      var fq = d.getElementById('fromQ');
+      var tq = d.getElementById('toQ');
+      var rq = d.getElementById('routeQ');
+      if (fi) fi.placeholder = isB ? 'যেমন: বাঁকুড়া' : 'e.g. Bankura';
+      if (ti) ti.placeholder = isB ? 'যেমন: দীঘা' : 'e.g. Digha';
+      if (si) si.placeholder = isB ? 'যেমন: কোলাঘাট' : 'e.g. Kolaghat';
+      if (cr) cr.placeholder = isB ? 'রুট নম্বর বা স্টপ খুঁজুন…' : 'Search route number or stop…';
+      if (fq) fq.placeholder = isB ? 'হাওড়া, ডানলপ, S9A…' : 'Howrah, Dunlop, S9A…';
+      if (tq) tq.placeholder = isB ? 'এয়ারপোর্ট, বালিগঞ্জ…' : 'Airport, Ballygunge…';
+      if (rq) rq.placeholder = isB ? 'S9A, AC-39, 31…' : 'S9A, AC-39, 31…';
+    } catch(e) {}
     translateDom(d.body);
     if (emit) {
       try { d.dispatchEvent(new CustomEvent('bj:langchange',{detail:{lang:next}})); } catch(e){}

@@ -16,22 +16,34 @@ GROUPS = [
         ("Bus Contribution",   "{p}contribute",      True),
     ]),
     ("Company", [
-        ("About Us",   "{p}about",          False),
-        ("Contact Us", "{p}contact",        False),
-        ("Credits",    "{p}about#credits",  False),
+        ("About Us",   "{p}about",          True),
+        ("Contact Us", "{p}contact",        True),
+        ("Credits",    "{p}about#credits",  True),
     ]),
     ("Legal", [
-        ("Privacy Policy", "{p}privacy-policy", False),
-        ("Disclaimer",     "{p}disclaimer",     False),
-        ("Terms of Use",   "{p}terms",          False),
+        ("Privacy Policy", "{p}privacy-policy", True),
+        ("Disclaimer",     "{p}disclaimer",     True),
+        ("Terms of Use",   "{p}terms",          True),
     ]),
 ]
 
-# Bengali labels, only for the links that were bilingual before
+BN_TITLES = {
+    "Explore": "এক্সপ্লোর",
+    "Company": "কোম্পানি",
+    "Legal": "আইনি তথ্য",
+}
+
+# Bengali labels for footer links
 BN = {
     "All Bus Timetables": "সব বাস টাইমটেবিল",
     "Blog": "ব্লগ",
     "Bus Contribution": "বাস তথ্য যোগ করুন",
+    "About Us": "আমাদের সম্পর্কে",
+    "Contact Us": "যোগাযোগ",
+    "Credits": "কৃতজ্ঞতা",
+    "Privacy Policy": "গোপনীয়তা নীতি",
+    "Disclaimer": "দাবিত্যাগ",
+    "Terms of Use": "ব্যবহারের শর্তাবলী",
 }
 
 
@@ -52,8 +64,10 @@ def footer_html(prefix: str = "", groups=None) -> str:
             else:
                 label = name
             items.append(f'<a href="{h}">{label}</a>')
+        bn_title = BN_TITLES.get(title, title)
+        h4_content = f'<span class="label-en">{title}</span><span class="label-bn">{bn_title}</span>'
         cols.append(
-            f'<div class="fcol"><h4>{title}</h4>'
+            f'<div class="fcol"><h4>{h4_content}</h4>'
             f'<div class="fcol-links">{"".join(items)}</div></div>'
         )
 
@@ -61,27 +75,28 @@ def footer_html(prefix: str = "", groups=None) -> str:
         '<footer class="footer">\n'
         '  <div class="container">\n'
         f'    <div class="footer-cols">{"".join(cols)}</div>\n'
-        '    <p><strong>BusJatri</strong> — West Bengal Bus Timetable<br>\n'
-        '    Not affiliated with any transport corporation<br>\n'
-        '    Contact: <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>\n'
+        '    <p><strong>BusJatri</strong> — <span class="label-en">West Bengal Bus Timetable</span><span class="label-bn">পশ্চিমবঙ্গ বাস টাইমটেবিল</span><br>\n'
+        '    <span class="label-en">Not affiliated with any transport corporation</span><span class="label-bn">কোনও পরিবহন সংস্থার সঙ্গে অনুমোদিত সম্পর্ক নেই</span><br>\n'
+        '    <span class="label-en">Contact:</span><span class="label-bn">যোগাযোগ:</span> <a href="mailto:busjatri@zohomail.in">busjatri@zohomail.in</a></p>\n'
         '  </div>\n'
         '</footer>'
     )
 
 
 if __name__ == "__main__":
-    # quick self-check: 3 groups, 9 links, no lone Credits column
+    # quick self-check: 3 groups, 8 links, no lone Credits column
     import re
     root = footer_html("")
     sub = footer_html("../")
-    groups = re.findall(r'<h4>([^<]+)</h4>', root)
+    groups = re.findall(r'<h4><span class="label-en">([^<]+)</span>', root)
     links = [u for u in re.findall(r'<a href="([^"]+)"', root) if not u.startswith("mailto:")]
     print("groups :", groups)
     print("links  :", len(links))
     for u in links:
         print("   ", u)
     assert groups == ["Explore", "Company", "Legal"], groups
-    assert len(links) == 9, len(links)
+    assert len(links) == 8, len(links)
     assert "fcol" in root and "footer-cols" in root
     assert 'href="../about"' in sub and 'href="about"' in root
     print("OK")
+

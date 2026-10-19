@@ -7,6 +7,7 @@ click-drop-down (times) OR stops-only list (no time). Dark toggle, breadcrumb
 Idempotent; run AFTER gen_seo_pages.py.
 """
 from city_route_lib import *
+from components.footer import footer_html
 import json, os, re, html
 
 def header():
@@ -41,7 +42,7 @@ def shell(title, desc, canonical, body, jsonld):
 <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}"><meta name="twitter:description" content="{esc(desc)}"><meta name="theme-color" content="#b8791f">
 <link rel="icon" href="../favicon.svg"><link rel="stylesheet" href="../css/seo.css?v=city20261006"><link rel="stylesheet" href="../css/extras.css"><link rel="stylesheet" href="../css/cstc-city.css?v=city20261006">
 {CSS}{ld}</head><body>{header()}<main class="container seo-main">{body}</main>
-<footer class="footer"><div class="container"><p><strong>BusJatri</strong> — West Bengal bus timetable<br>Not affiliated with any transport corporation</p></div></footer>
+{footer_html("../")}
 <script defer src="../js/hdr.js?v=hdrunify20261005d"></script><script defer src="../js/lang.js?v=lang20261005c"></script>
 <script>function bjTheme(){{var d=document.body.classList.toggle('dark');try{{localStorage.setItem('seo-theme',d?'dark':'light')}}catch(e){{}}document.getElementById('themeBtn').textContent=d?'☀':'☾'}}
 try{{if(localStorage.getItem('seo-theme')==='dark')document.body.classList.add('dark')}}catch(e){{}}
@@ -52,14 +53,14 @@ function pick(el){{var o=el.classList.contains('open');document.querySelectorAll
 def popular_html(others):
     if not others: return ''
     chips = ''.join(f'<a class="pchip" href="{esc(href)}"><span class="rn">{esc(rn)}</span>{esc(name)}</a>' for rn, name, href in others)
-    return f'<section class="sec"><h2>Popular Kolkata city bus routes</h2><div class="pchips">{chips}</div></section>'
+    return f'<section class="sec"><h2><span class="label-en">Popular Kolkata city bus routes</span><span class="label-bn">জনপ্রিয় কলকাতা শহরের বাস রুট</span></h2><div class="pchips">{chips}</div></section>'
 
 def faq_html(faqs):
     items = ''.join(f'<details><summary>{esc(q)}</summary><div class="a">{esc(a)}</div></details>' for q, a in faqs)
-    return f'<section class="sec faq"><h2>Frequently asked questions</h2>{items}</section>'
+    return f'<section class="sec faq"><h2><span class="label-en">Frequently asked questions</span><span class="label-bn">সাধারণ প্রশ্ন উত্তর</span></h2>{items}</section>'
 
 def about_html(txt):
-    return f'<section class="sec"><h2>About this route</h2><div class="about">{txt}</div></section>'
+    return f'<section class="sec"><h2><span class="label-en">About this route</span><span class="label-bn">এই রুটের বিবরণ</span></h2><div class="about">{txt}</div></section>'
 
 def short_ends(t):
     """'DUDUM STATION -> HOWRAH STN.' -> ('Dum Dum Stn', 'Howrah Stn')"""
@@ -87,18 +88,18 @@ def cstc_stops_page(route, obj, dirs, a0, b0, others):
         btns.append(f'<button class="{"on" if di==0 else ""}" onclick="sw({di},this)">{esc(x)} <span class="ar">→</span> {esc(y)}</button>')
         lis = ''.join(f'<li><span class="cstc-stop-dot"></span>{esc(s)}</li>' for s in stops)
         panels.append(f'<div class="dpanel{" on" if di==0 else ""}" data-dir="{di}">'
-                      f'<div class="meta">{len(stops)} stops · runs to frequency</div>'
+                      f'<div class="meta">{len(stops)} <span class="label-en">stops · runs to frequency</span><span class="label-bn">স্টপ · ফ্রিকোয়েন্সি অনুযায়ী চলে</span></div>'
                       f'<section class="cstc-stops" style="margin-top:0"><div class="cstc-stops-head">'
-                      f'<strong>Stop list</strong><span>{len(stops)} stops</span></div><ol>{lis}</ol></section></div>')
+                      f'<strong><span class="label-en">Stop list</span><span class="label-bn">স্টপ তালিকা</span></strong><span>{len(stops)} <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div><ol>{lis}</ol></section></div>')
     stops0 = dirs[0].get('stoppages') or []
-    body = (f'<div class="crumb"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / <span>{esc(route)}</span></div>'
-            f'<section class="hero"><span class="eyebrow">WBTC city route</span>'
+    body = (f'<div class="crumb"><a href="../"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> / <a href="../kolkata-city-bus-timetable"><span class="label-en">Kolkata City Bus</span><span class="label-bn">কলকাতা শহরের বাস</span></a> / <span>{esc(route)}</span></div>'
+            f'<section class="hero"><span class="eyebrow"><span class="label-en">WBTC city route</span><span class="label-bn">WBTC সিটি রুট</span></span>'
             f'<h1><span class="rcode">{esc(route)}</span>{esc(a0)} <span class="bi">⇄</span> {esc(b0)}</h1>'
-            f'<div class="stats"><span class="stat"><b>{len(stops0)}</b> stops</span>'
-            f'<span class="stat">Runs to <b>frequency</b></span></div>'
+            f'<div class="stats"><span class="stat"><b>{len(stops0)}</b> <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span>'
+            f'<span class="stat"><span class="label-en">Runs to <b>frequency</b></span><span class="label-bn"><b>ফ্রিকোয়েন্সি</b> অনুযায়ী চলে</span></span></div>'
             f'<p class="note" style="margin:10px 0 0;color:var(--ink-dim,#665);font-size:13.5px">'
-            f'City buses on this route have no fixed departure times — they run to frequency. '
-            f'Times shown elsewhere are not published by the operator; confirm at the stand.</p></section>'
+            f'<span class="label-en">City buses on this route have no fixed departure times — they run to frequency. Times shown elsewhere are not published by the operator; confirm at the stand.</span>'
+            f'<span class="label-bn">এই রুটে সিটি বাসগুলি নির্দিষ্ট সময়সূচি ছাড়া ফ্রিকোয়েন্সি অনুযায়ী চলে। স্ট্যান্ড থেকে সময় যাচাই করে নিন।</span></p></section>'
             f'<div class="dswitch" role="tablist">{"".join(btns)}</div>{"".join(panels)}')
     faqs = [(f'Does route {route} have a timetable?',
              f'No — {route} is a Kolkata city bus route and runs to frequency, so there are no fixed departure times. The route and its {len(stops0)} stoppages are listed here.'),
@@ -151,11 +152,11 @@ def cstc_page(route, obj, others):
             rows.append(f'<button class="trip" onclick="pick(this)"><span class="v dep">{esc(dp)}</span>'
                         f'<span class="mid"><span class="ride">{esc(rd) or "—"}</span><span class="chev">▾</span></span>'
                         f'<span class="v arr">{esc(ar)}</span>'
-                        f'<span class="dd"><span class="dd-in"><span class="dd-h">{len(stops)} stoppages</span><ol>{sh}</ol>'
-                        f'<span class="dd-note">Stop times estimated from the trip departure + route length. Verify before travel.</span></span></span></button>')
+                        f'<span class="dd"><span class="dd-in"><span class="dd-h">{len(stops)} <span class="label-en">stoppages</span><span class="label-bn">স্টপেজ</span></span><ol>{sh}</ol>'
+                        f'<span class="dd-note"><span class="label-en">Stop times estimated from the trip departure + route length. Verify before travel.</span><span class="label-bn">স্টপের সময়গুলি আনুমানিক। ভ্রমণের আগে যাচাই করে নিন।</span></span></span></span></button>')
         panels.append(f'<div class="dpanel{" on" if di==0 else ""}" data-dir="{di}">'
-                      f'<div class="meta">{len(deps)} trips · first {esc(f12(deps[0]) if deps else "—")} · last {esc(f12(deps[-1]) if deps else "—")} · {len(stops)} stops</div>'
-                      f'<div class="thead"><span>Departure</span><span class="m">ride · stops</span><span class="r">Arrival</span></div>'
+                      f'<div class="meta">{len(deps)} <span class="label-en">trips · first</span><span class="label-bn">ট্রিপ · প্রথম</span> {esc(f12(deps[0]) if deps else "—")} <span class="label-en">· last</span><span class="label-bn">· শেষ</span> {esc(f12(deps[-1]) if deps else "—")} · {len(stops)} <span class="label-en">stops</span><span class="label-bn">স্টপ</span></div>'
+                      f'<div class="thead"><span><span class="label-en">Departure</span><span class="label-bn">ছাড়ার সময়</span></span><span class="m"><span class="label-en">ride · stops</span><span class="label-bn">সময় · স্টপ</span></span><span class="r"><span class="label-en">Arrival</span><span class="label-bn">পৌঁছানোর সময়</span></span></div>'
                       f'<div class="trips">{"".join(rows)}</div></div>')
     first_all = min((d.get('departures') or ['zz'])[0] for d in dirs if d.get('departures')) if any(d.get('departures') for d in dirs) else '—'
     last_all = max((d.get('departures') or ['00'])[-1] for d in dirs if d.get('departures')) if any(d.get('departures') for d in dirs) else '—'
@@ -163,15 +164,15 @@ def cstc_page(route, obj, others):
     if stops0:
         lis = ''.join(f'<li><span class="cstc-stop-dot"></span>{esc(s)}</li>' for s in stops0)
         stops_html = (f'<section class="cstc-stops" style="margin-top:0">'
-                      f'<div class="cstc-stops-head"><strong>Stop list</strong><span>{len(stops0)} stops</span></div>'
+                      f'<div class="cstc-stops-head"><strong><span class="label-en">Stop list</span><span class="label-bn">স্টপ তালিকা</span></strong><span>{len(stops0)} <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div>'
                       f'<ol>{lis}</ol></section>')
 
-    body = (f'<div class="crumb"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / <span>{esc(route)}</span></div>'
-            f'<section class="hero"><span class="eyebrow">Official CSTC schedule</span>'
+    body = (f'<div class="crumb"><a href="../"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> / <a href="../kolkata-city-bus-timetable"><span class="label-en">Kolkata City Bus</span><span class="label-bn">কলকাতা শহরের বাস</span></a> / <span>{esc(route)}</span></div>'
+            f'<section class="hero"><span class="eyebrow"><span class="label-en">Official CSTC schedule</span><span class="label-bn">অফিসিয়াল CSTC সময়সূচি</span></span>'
             f'<h1><span class="rcode">{esc(route)}</span>{esc(a0)} <span class="bi">⇄</span> {esc(b0)}</h1>'
-            f'<div class="stats"><span class="stat"><b>{total}</b> trips/day</span>'
-            f'<span class="stat">First <b>{esc(f12(first_all))}</b></span><span class="stat">Last <b>{esc(f12(last_all))}</b></span>'
-            f'<span class="stat"><b>{len(stops0)}</b> stops</span></div></section>'
+            f'<div class="stats"><span class="stat"><b>{total}</b> <span class="label-en">trips/day</span><span class="label-bn">ট্রিপ/দিন</span></span>'
+            f'<span class="stat"><span class="label-en">First</span><span class="label-bn">প্রথম</span> <b>{esc(f12(first_all))}</b></span><span class="stat"><span class="label-en">Last</span><span class="label-bn">শেষ</span> <b>{esc(f12(last_all))}</b></span>'
+            f'<span class="stat"><b>{len(stops0)}</b> <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span></div></section>'
             f'<div class="dswitch" role="tablist">{"".join(btns)}</div>{"".join(panels)}'
             f'{stops_html}')
     faqs = [(f'What is the first {route} bus?', f'The first {route} bus departs at {f12(first_all)}.'),
@@ -205,15 +206,16 @@ def private_page(o, d, buses, others):
         bn_str = f"<span class='bn'>{esc(bn(s))}</span>" if bn(s) else ""
         items.append(f'<li{cls_end}><span class="dot"></span><span class="sn">{esc(s)}</span>{bn_str}</li>')
     li = ''.join(items)
-    body = (f'<div class="crumb"><a href="../">Home</a> / <a href="../kolkata-city-bus-timetable">Kolkata City Bus</a> / <span>{esc(rn)}</span></div>'
-            f'<section class="hero"><span class="eyebrow">Kolkata city bus</span>'
+    body = (f'<div class="crumb"><a href="../"><span class="label-en">Home</span><span class="label-bn">হোম</span></a> / <a href="../kolkata-city-bus-timetable"><span class="label-en">Kolkata City Bus</span><span class="label-bn">কলকাতা শহরের বাস</span></a> / <span>{esc(rn)}</span></div>'
+            f'<section class="hero"><span class="eyebrow"><span class="label-en">Kolkata city bus</span><span class="label-bn">কলকাতা শহরের বাস</span></span>'
             f'<h1><span class="rcode">{esc(rn)}</span>{esc(o)} <span class="bi">⇄</span> {esc(d)}</h1>'
-            f'<div class="stats"><span class="stat"><b>{n}</b> stops</span><span class="stat">{esc(op)}</span>'
-            f'<span class="stat">Time <b>not listed</b></span></div></section>'
-            f'<div class="meta">{n} route stops · {esc(o)} ⇄ {esc(d)}</div>'
+            f'<div class="stats"><span class="stat"><b>{n}</b> <span class="label-en">stops</span><span class="label-bn">স্টপ</span></span><span class="stat">{esc(op)}</span>'
+            f'<span class="stat"><span class="label-en">Time <b>not listed</b></span><span class="label-bn">সময় <b>তালিকাভুক্ত নয়</b></span></span></div></section>'
+            f'<div class="meta">{n} <span class="label-en">route stops ·</span><span class="label-bn">রুট স্টপ ·</span> {esc(o)} ⇄ {esc(d)}</div>'
             f'<ol class="stoplist">{li}</ol>'
-            f'<div class="notime-note">This route\u2019s departure/arrival times are not published yet. The full stop chain is shown above. '
-            f'Know the timing? <a href="../contact">Report it</a> — it will be added here in the same layout.</div>')
+            f'<div class="notime-note"><span class="label-en">This route\u2019s departure/arrival times are not published yet. The full stop chain is shown above. '
+            f'Know the timing? <a href="../contact">Report it</a> — it will be added here in the same layout.</span>'
+            f'<span class="label-bn">এই রুটের সময়সূচি এখনও প্রকাশিত হয়নি। স্টপ তালিকা উপরে দেওয়া হলো। সঠিক সময় জানা থাকলে <a href="../contact">আমাদের জানান</a>।</span></div>')
     faqs = [(f'Which stops does the {rn} bus cover?', f'It runs {o} ⇄ {d} via {n} stops: {", ".join(stops[:8])}.'),
             (f'What are the {o} to {d} bus timings?', 'The published timetable for this route is not listed yet.'),
             (f'Is {rn} a Kolkata city bus?', f'Yes — {rn} is a Kolkata city bus route ({o} ⇄ {d}).'),
