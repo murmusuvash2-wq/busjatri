@@ -68,7 +68,7 @@ def footer_html(prefix: str = "", groups=None) -> str:
         h4_content = f'<span class="label-en">{title}</span><span class="label-bn">{bn_title}</span>'
         cols.append(
             f'<div class="fcol"><h4>{h4_content}</h4>'
-            f'<div class="fcol-links">{"".join(items)}</div></div>'
+            f'<div class="fcol-links">{" ".join(items)}</div></div>'
         )
 
     return (
