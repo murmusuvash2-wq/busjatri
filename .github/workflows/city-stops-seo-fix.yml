@@ -1,10 +1,6 @@
 name: Kolkata city bus stops + SEO interlinking + bilingual fixes
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'scripts/patch_city_stops_seo.py'
-      - 'kolkata-city-bus-timetable.html'
 
 permissions:
   contents: write
