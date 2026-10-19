@@ -111,26 +111,31 @@ def main():
         h = h[: ml.start(2)] + json.dumps(new_links, ensure_ascii=False, separators=(",", ":")) + h[ml.end(2):]
         changed = True
 
-    # ---- 2. hardcoded hrefs (clean OR legacy .html) ------------------------
-    slugs = sorted((slug(n) for n in city), key=len, reverse=True)
-
-    def repl(m):
+    # ---- 2. hardcoded hrefs on bus-row cards (clean URLs) ------------------
+    def repl_card(m):
         nonlocal changed
-        url = m.group(1)  # without optional .html
-        if url == FALLBACK or (BASE / url).exists() or (BASE / (url + ".html")).exists():
-            return m.group(0)
-        inner = url[len("bus-time-table/"):]
-        rn = next((s for s in slugs if inner == s or inner.startswith(s + "-")), None)
-        newurl = None
-        if rn:
-            n = next(n for n in city if slug(n) == rn)
-            newurl = target[n]
-        if newurl and newurl != url:
+        card = m.group(0)
+        bm = re.search(r'<div class="bnum">([^<]+)', card)
+        if not bm:
+            return card
+        rn = bm.group(1).strip()
+        correct = target.get(rn)
+        if not correct or correct == FALLBACK:
+            return card
+        new_card = re.sub(r'href="[^"]*"', f'href="{correct}"', card, count=1)
+        if new_card != card:
             changed = True
-            return 'href="' + newurl + '"'
-        return m.group(0)
+            return new_card
+        return card
 
-    h = re.sub(r'href="(bus-time-table/[^"#]+?)(?:\.html)?"', repl, h)
+    h = re.sub(r'<a class="bus-row[^"]*"[^>]*>.*?</a>', repl_card, h, flags=re.S)
+
+    # ---- 3. JS querySelector on client-side --------------------------------
+    old_js_query = "document.querySelectorAll('#popGrid a.bus-row')"
+    new_js_query = "document.querySelectorAll('a.bus-row')"
+    if old_js_query in h:
+        h = h.replace(old_js_query, new_js_query, 1)
+        changed = True
 
     if not changed:
         print("already correct - nothing to do")

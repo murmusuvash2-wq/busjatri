@@ -62,11 +62,12 @@ def about_html(txt):
     return f'<section class="sec"><h2>About this route</h2><div class="about">{txt}</div></section>'
 
 def short_ends(t):
-    """'DUDUM STATION -> HOWRAH STN.' -> ('Dudum Stn', 'Howrah Stn')"""
+    """'DUDUM STATION -> HOWRAH STN.' -> ('Dum Dum Stn', 'Howrah Stn')"""
     p = (t or '').replace('->', '|').split('|')
     def fix(x):
         x = re.sub(r'\s+', ' ', x).strip(' .')
         x = re.sub(r'STATION|STN\.?|STN', 'Stn', x, flags=re.I)
+        x = re.sub(r'\bDudum\b', 'Dum Dum', x, flags=re.I)
         return x.title()
     return (fix(p[0]), fix(p[1])) if len(p) == 2 else (fix(t or ''), '')
 
@@ -108,7 +109,7 @@ def cstc_stops_page(route, obj, dirs, a0, b0, others):
             (f'Who runs route {route}?', f'Route {route} is a WBTC (West Bengal Transport Corporation) Kolkata city route.')]
     about = (f'<p>Route <b>{route}</b> is a Kolkata city bus route connecting <b>{esc(a0)}</b> and <b>{esc(b0)}</b> '
              f'in both directions, with {len(stops0)} stoppages. City buses run to frequency — there is no published timetable.</p>'
-             f'<p>Spotted a change? <a href="../contact.html">Tell us</a>.</p>')
+             f'<p>Spotted a change? <a href="../contact">Tell us</a>.</p>')
     jsonld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
     body += popular_html(others) + faq_html(faqs) + about_html(about)
@@ -118,13 +119,7 @@ def cstc_stops_page(route, obj, dirs, a0, b0, others):
 # ---------------- CSTC page (with times) ----------------
 def cstc_page(route, obj, others):
     dirs = obj.get('directions') or []
-    def short(t):
-        p = (t or '').replace('->', '|').split('|')
-        def fix(x):
-            x = re.sub(r'\s+', ' ', x).strip(' .'); x = re.sub(r'STATION|STN\.?|STN', 'Stn', x, flags=re.I)
-            return x.title()
-        return (fix(p[0]), fix(p[1])) if len(p) == 2 else (fix(t or ''), '')
-    a0, b0 = short(dirs[0]['direction']) if dirs else ('', '')
+    a0, b0 = short_ends(dirs[0]['direction']) if dirs else ('', '')
     total = sum(len(d.get('departures') or []) for d in dirs)
     stops0 = (dirs[0].get('stoppages') or []) if dirs else []
     if total == 0:
@@ -139,20 +134,20 @@ def cstc_page(route, obj, others):
     btns = []
     panels = []
     for di, d in enumerate(dirs):
-        x, y = short(d['direction']); deps = d.get('departures') or []; arrs = d.get('arrivals') or []
+        x, y = short_ends(d['direction']); deps = d.get('departures') or []; arrs = d.get('arrivals') or []
         btns.append(f'<button class="{"on" if di==0 else ""}" onclick="sw({di},this)">{esc(x)} <span class="ar">→</span> {esc(y)}</button>')
         stops = d.get('stoppages') or []
         n = max(len(deps), len(arrs))
-        t0 = mins(deps[0]) if deps else None; t1 = mins(arrs[0]) if arrs else None
-        def est(i, t0=t0, t1=t1, stops=stops):
-            if t0 is None or t1 is None or len(stops) < 2: return ''
-            m = t0 + round((t1 - t0) * i / (len(stops) - 1)); h, mi = divmod(m, 60)
-            ap = 'AM' if (h % 24) < 12 else 'PM'; h = h % 12 or 12; return f'{h}:{mi:02d} {ap}'
-        sh = ''.join(f'<li><span class="dot"></span><span class="sn">{esc(s)}</span><span class="st">{est(i)}</span></li>' for i, s in enumerate(stops))
         rows = []
         for i in range(n):
             dp = f12(deps[i]) if i < len(deps) else '—'; ar = f12(arrs[i]) if i < len(arrs) else '—'
             rd = dur(deps[i], arrs[i]) if i < len(deps) and i < len(arrs) else ''
+            t0 = mins(deps[i]) if i < len(deps) else None; t1 = mins(arrs[i]) if i < len(arrs) else None
+            def est(si, t0=t0, t1=t1, stops=stops):
+                if t0 is None or t1 is None or len(stops) < 2: return ''
+                m = t0 + round((t1 - t0) * si / (len(stops) - 1)); h, mi = divmod(m, 60)
+                ap = 'AM' if (h % 24) < 12 else 'PM'; h = h % 12 or 12; return f'{h}:{mi:02d} {ap}'
+            sh = ''.join(f'<li><span class="dot"></span><span class="sn">{esc(s)}</span><span class="st">{est(si)}</span></li>' for si, s in enumerate(stops))
             rows.append(f'<button class="trip" onclick="pick(this)"><span class="v dep">{esc(dp)}</span>'
                         f'<span class="mid"><span class="ride">{esc(rd) or "—"}</span><span class="chev">▾</span></span>'
                         f'<span class="v arr">{esc(ar)}</span>'
@@ -187,7 +182,7 @@ def cstc_page(route, obj, others):
     about = (f'<p>Route <b>{route}</b> is an official CSTC (Calcutta State Transport Corporation) Kolkata city bus route '
              f'connecting <b>{esc(a0)}</b> and <b>{esc(b0)}</b> in both directions, with {total} scheduled trips per day and {len(stops0)} stoppages.</p>'
              f'<p>Times are from the published West Bengal Transport Department / CSTC schedule. Timings can change — verify before travel. '
-             f'Spotted a change? <a href="../contact.html">Tell us</a>.</p>')
+             f'Spotted a change? <a href="../contact">Tell us</a>.</p>')
     jsonld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in faqs]}
     body += popular_html(others) + faq_html(faqs) + about_html(about)
@@ -218,7 +213,7 @@ def private_page(o, d, buses, others):
             f'<div class="meta">{n} route stops · {esc(o)} ⇄ {esc(d)}</div>'
             f'<ol class="stoplist">{li}</ol>'
             f'<div class="notime-note">This route\u2019s departure/arrival times are not published yet. The full stop chain is shown above. '
-            f'Know the timing? <a href="../contact.html">Report it</a> — it will be added here in the same layout.</div>')
+            f'Know the timing? <a href="../contact">Report it</a> — it will be added here in the same layout.</div>')
     faqs = [(f'Which stops does the {rn} bus cover?', f'It runs {o} ⇄ {d} via {n} stops: {", ".join(stops[:8])}.'),
             (f'What are the {o} to {d} bus timings?', 'The published timetable for this route is not listed yet.'),
             (f'Is {rn} a Kolkata city bus?', f'Yes — {rn} is a Kolkata city bus route ({o} ⇄ {d}).'),
@@ -239,11 +234,7 @@ def main():
     for route, obj in cstc.items():
         ds = obj.get('directions') or []
         if not ds: continue
-        def short(t):
-            p = (t or '').replace('->', '|').split('|')
-            def fix(x): return re.sub(r'STATION|STN\.?|STN', 'Stn', re.sub(r'\s+', ' ', x).strip(' .'), flags=re.I).title()
-            return (fix(p[0]), fix(p[1])) if len(p) == 2 else (fix(t or ''), '')
-        a, b = short(ds[0]['direction'])
+        a, b = short_ends(ds[0]['direction'])
         cstc_list.append((route, a, b, f'cstc-{slug(route)}'))
     # write CSTC pages
     n_cstc = 0

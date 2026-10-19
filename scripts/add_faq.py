@@ -215,6 +215,14 @@ def main():
         if p.name == 'index.html':
             continue
         s = p.read_text(encoding='utf-8')
+        if 'cstc-city.css' in s:
+            # Kolkata city route pages are managed by build_city_route_pages.py and have their own dedicated FAQ.
+            if '<section class="bj-faq"' in s:
+                s = FAQ_SECTION_RE.sub('', s)
+                s = s.replace(FAQ_CSS + '\n', '').replace(FAQ_CSS, '')
+                p.write_text(s, encoding='utf-8')
+            n_skip += 1
+            continue
         # route names: try ROUTES first, else from the h1
         key = p.stem
         r = ROUTES.get(key) or {}

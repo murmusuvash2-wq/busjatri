@@ -396,6 +396,17 @@ Newest entries first.
   - The city route pages + hub were previously HAND-AUTHORED (no generator) — this generator now makes them reproducible. **Caution:** `gen_seo_pages.py` (run by 5 regen workflows: regen-seo-pages, regenerate-seo-pages, deploy-data-v3, auto-update, expand-seo-generator) overwrites `bus-time-table/*.html` with the generic design. To keep the city design, add `python3 scripts/build_city_route_pages.py` as a step AFTER `gen_seo_pages.py` in those workflows (not yet done).
   - `build_cstc_city_seo.py` `update_hub()` is non-idempotent (replaces only the first MARK) — source of the 6 duplicates. Not run by any workflow.
 
+## 2026-10-19 — Kolkata city bus: Double FAQ fix + 5 related bug fixes
+- What:
+  1. **Double FAQ Fix:** Fixed 178 Kolkata private city route pages having two FAQ sections (route-specific `.sec.faq` and generic fallback `.bj-faq` stating "0 bus services are listed"). `scripts/add_faq.py` now recognizes city pages (`cstc-city.css` signature), skips them, and strips any injected `.bj-faq`.
+  2. **Trip Dropdown Stop Times Frozen Fix:** In `scripts/build_city_route_pages.py`, intermediate stoppage estimates (`est()` & `sh`) were computed once using first trip `deps[0]`. Now computed per trip `deps[i]`/`arrs[i]`, so selecting 2:36 PM, 8:31 PM, etc. properly shows realistic intermediate arrival times.
+  3. **"Dudum Stn" Typo Fix:** In `scripts/build_city_route_pages.py`, unified direction parsing to `short_ends()`, which cleans "DUDUM STATION" from raw data into "Dum Dum Stn" across titles, meta tags, FAQs, and popular route chips.
+  4. **Hub Bus Cards Broken Links (81 cards):** In `kolkata-city-bus-timetable.html`, 27 cards pointed to directory root `bus-time-table/` and 54 pointed to generic long-distance routes. Updated `scripts/fix_city_links.py` to match bus cards by route code (`.bnum`) and link directly to dedicated CSTC pages (`cstc-<slug>`). Also expanded client-side selector to all `a.bus-row`.
+  5. **Typo "EsplanadeANADE" Fix:** Fixed double suffix typo in `kolkata-city-routes.html` on AC-12D and AC-39.
+  6. **Dead Blog Links Cleanup:** Removed dead `<a href="blog/...">` footer links from `kolkata-city-bus-timetable.html` and `kolkata-city-routes.html` (matching site-wide retirement of blog links). Cleaned `../contact.html` to `../contact` on city route pages.
+- Verification: Comprehensive test suite passed (0 multi-FAQ pages across 4,104 routes, 0 typos, 81/81 hub rows accurately linked, dead blog links eliminated, and 32 unique trip stoppage estimations verified on CSTC routes).
+- Files: `scripts/add_faq.py`, `scripts/build_city_route_pages.py`, `scripts/fix_city_links.py`, `kolkata-city-bus-timetable.html`, `kolkata-city-routes.html`, `bus-time-table/*.html`.
+
 ## Next steps / backlog
 - [ ] Add `python3 scripts/build_city_route_pages.py` after `gen_seo_pages.py` in the 5 regen workflows (so city design survives regen)
 - [ ] Fix `build_cstc_city_seo.py` `update_hub()` idempotency (replace whole MARK..</section> region)
