@@ -1,0 +1,42 @@
+name: Language foundation guard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'js/lang.js'
+      - 'js/hdr.js'
+      - 'js/app.js'
+      - 'js/seo-page.js'
+      - 'scripts/gen_*.py'
+      - 'scripts/check_language_foundation.py'
+      - '**/*.html'
+      - '.github/workflows/language-foundation-guard.yml'
+  pull_request:
+    paths:
+      - 'js/lang.js'
+      - 'js/hdr.js'
+      - 'js/app.js'
+      - 'js/seo-page.js'
+      - 'scripts/gen_*.py'
+      - 'scripts/check_language_foundation.py'
+      - '**/*.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check language foundation
+        run: python3 scripts/check_language_foundation.py
+      - name: Block data changes in foundation PRs
+        if: github.event_name == 'pull_request'
+        run: |
+          if git diff --name-only "origin/${{ github.base_ref }}...HEAD" | grep -qE '^data/.*\.json$'; then
+            echo "Foundation-only changes must not modify data JSON."
+            exit 1
+          fi
