@@ -654,68 +654,50 @@ function renderHome(el) {
         </div>
       </div>
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
-      <div class="stats-inline">
-        <div class="stat-col">
+      <div class="stats-inline stats-strip" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.12));border-radius:12px;padding:9px 4px;margin:14px auto 0;max-width:460px;box-shadow:0 1px 4px rgba(0,0,0,.03);text-align:center;align-items:center">
+        <div class="stat-col" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 2px">
           <div class="stat-num">${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+</div>
-          <div class="stat-lbl"><span class="label-en">Buses</span><span class="label-bn">টি বাস</span></div>
+          <div class="stat-lbl" style="font-size:11px;color:var(--ink-dim,#6f6653);margin-top:2px;font-weight:600;white-space:nowrap;letter-spacing:.02em"><span class="label-en">Buses</span><span class="label-bn">টি বাস</span></div>
         </div>
-        <div class="stat-col">
+        <div class="stat-col" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 2px;border-left:1px solid var(--line,rgba(33,28,22,.15));border-right:1px solid var(--line,rgba(33,28,22,.15))">
           <div class="stat-num">${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+</div>
-          <div class="stat-lbl"><span class="label-en">Routes</span><span class="label-bn">টি রুট</span></div>
+          <div class="stat-lbl" style="font-size:11px;color:var(--ink-dim,#6f6653);margin-top:2px;font-weight:600;white-space:nowrap;letter-spacing:.02em"><span class="label-en">Routes</span><span class="label-bn">টি রুট</span></div>
         </div>
-        <div class="stat-col">
+        <div class="stat-col" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 2px">
           <div class="stat-num">${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+</div>
-          <div class="stat-lbl"><span class="label-en">Stoppages</span><span class="label-bn">টি স্টপেজ</span></div>
+          <div class="stat-lbl" style="font-size:11px;color:var(--ink-dim,#6f6653);margin-top:2px;font-weight:600;white-space:nowrap;letter-spacing:.02em"><span class="label-en">Stoppages</span><span class="label-bn">টি স্টপেজ</span></div>
         </div>
       </div>
   </div>
   </div>
-    <section class="home-ops" data-keep="1" style="max-width:720px;margin:4px auto 14px;padding:0 18px 18px">
-    <div class="home-ops-head">
-      <h2 style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin:0 0 10px"><span class="label-en">Popular Operators &amp; Services</span><span class="label-bn">জনপ্রিয় বাস ও পরিষেবা</span></h2>
+    <section class="home-ops" data-keep="1" style="max-width:720px;margin:10px auto 16px;padding:0 16px">
+    <div class="home-ops-head" style="text-align:center;margin-bottom:10px">
+      <h2 style="font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:700;margin:0;text-align:center"><span class="label-en">Popular Operators &amp; Services</span><span class="label-bn">জনপ্রিয় বাস ও পরিষেবা</span></h2>
     </div>
-    <div class="home-ops-grid">
-      <a href="bus-time-table/sbstc-buses" class="hop-card">
-        <div class="hop-icon hop-gov"><svg viewBox="0 0 24 24" class="icon"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></div>
-        <div class="hop-info">
-          <div class="hop-name">SBSTC</div>
-          <div class="hop-sub"><span class="label-en">South Bengal State</span><span class="label-bn">দক্ষিণবঙ্গ রাষ্ট্রীয় বাস</span></div>
-        </div>
+    <div class="op-chips-wrap" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;align-items:center">
+      <a href="bus-time-table/sbstc-buses" class="op-chip" style="background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.14));border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:38px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 1px 3px rgba(0,0,0,.03);white-space:nowrap">
+        <svg class="chip-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--govt,#35608a);flex-shrink:0"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg>
+        <span>SBSTC</span>
       </a>
-      <a href="bus-time-table/wbtc-buses" class="hop-card">
-        <div class="hop-icon hop-gov"><svg viewBox="0 0 24 24" class="icon"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></div>
-        <div class="hop-info">
-          <div class="hop-name">WBTC</div>
-          <div class="hop-sub"><span class="label-en">Kolkata &amp; Suburbs</span><span class="label-bn">কলকাতা ও শহরতলি</span></div>
-        </div>
+      <a href="bus-time-table/wbtc-buses" class="op-chip" style="background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.14));border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:38px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 1px 3px rgba(0,0,0,.03);white-space:nowrap">
+        <svg class="chip-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--govt,#35608a);flex-shrink:0"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg>
+        <span>WBTC</span>
       </a>
-      <a href="bus-time-table/nbstc-buses" class="hop-card">
-        <div class="hop-icon hop-gov"><svg viewBox="0 0 24 24" class="icon"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></div>
-        <div class="hop-info">
-          <div class="hop-name">NBSTC</div>
-          <div class="hop-sub"><span class="label-en">North Bengal State</span><span class="label-bn">উত্তরবঙ্গ রাষ্ট্রীয় বাস</span></div>
-        </div>
+      <a href="bus-time-table/nbstc-buses" class="op-chip" style="background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.14));border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:38px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 1px 3px rgba(0,0,0,.03);white-space:nowrap">
+        <svg class="chip-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--govt,#35608a);flex-shrink:0"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg>
+        <span>NBSTC</span>
       </a>
-      <a href="kolkata-city-bus-timetable" class="hop-card">
-        <div class="hop-icon hop-city"><svg viewBox="0 0 24 24" class="icon"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg></div>
-        <div class="hop-info">
-          <div class="hop-name"><span class="label-en">Kolkata City Bus</span><span class="label-bn">কলকাতা সিটি বাস</span></div>
-          <div class="hop-sub"><span class="label-en">73 CSTC Routes</span><span class="label-bn">৭৩টি অফিসিয়াল রুট</span></div>
-        </div>
+      <a href="kolkata-city-bus-timetable" class="op-chip" style="background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.14));border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:38px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 1px 3px rgba(0,0,0,.03);white-space:nowrap">
+        <svg class="chip-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--amber-ink,#6b4610);flex-shrink:0"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg>
+        <span class="label-en">Kolkata City Bus</span><span class="label-bn">কলকাতা সিটি বাস</span>
       </a>
-      <a href="bus-time-table/shyamoli-paribahan-buses" class="hop-card">
-        <div class="hop-icon hop-pvt"><svg viewBox="0 0 24 24" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
-        <div class="hop-info">
-          <div class="hop-name">Shyamoli</div>
-          <div class="hop-sub"><span class="label-en">Interstate Express</span><span class="label-bn">দূরপাল্লার এক্সপ্রেস</span></div>
-        </div>
+      <a href="bus-time-table/shyamoli-paribahan-buses" class="op-chip" style="background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.14));border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:38px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 1px 3px rgba(0,0,0,.03);white-space:nowrap">
+        <svg class="chip-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--maroon,#a13b2e);flex-shrink:0"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <span class="label-en">Shyamoli</span><span class="label-bn">শ্যামলী</span>
       </a>
-      <a href="bus-time-table/volvo-ac-buses" class="hop-card">
-        <div class="hop-icon hop-ac"><svg viewBox="0 0 24 24" class="icon"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg></div>
-        <div class="hop-info">
-          <div class="hop-name"><span class="label-en">Volvo AC</span><span class="label-bn">ভলভো এসি</span></div>
-          <div class="hop-sub"><span class="label-en">AC Express Buses</span><span class="label-bn">প্রিমিয়াম এসি বাস</span></div>
-        </div>
+      <a href="bus-time-table/volvo-ac-buses" class="op-chip" style="background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.14));border-radius:999px;padding:8px 15px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:38px;display:inline-flex;align-items:center;gap:7px;box-shadow:0 1px 3px rgba(0,0,0,.03);white-space:nowrap">
+        <svg class="chip-ic" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color:var(--green,#3f6b42);flex-shrink:0"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg>
+        <span class="label-en">Volvo AC</span><span class="label-bn">ভলভো এসি</span>
       </a>
     </div>
   </section>
