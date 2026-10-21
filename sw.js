@@ -5,8 +5,8 @@
                  in the background for next visit.
    HTML pages -> network-first, offline falls back to cached index.html.
    Cross-origin requests (analytics, fonts) are never intercepted. */
-var SHELL = 'bj-shell-20261007a';
-var DATA_CACHE = 'bj-data-20261007a';
+var SHELL = 'bj-shell-20261021a';
+var DATA_CACHE = 'bj-data-20261021a';
 
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(SHELL).then(function (c) {
