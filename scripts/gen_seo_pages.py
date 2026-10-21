@@ -1131,24 +1131,41 @@ def generate_route_page(origin, destination, buses):
 
     bus_word = "bus" if count == 1 else "buses"
     ops = [o for o in operators if o and o.strip() and o.strip() not in ("—", "-")][:3]
-    # 2026-10-09 SEO, driven by Search Console data: the queries that actually reach
-    # these pages are "<origin> to <destination> bus timetable / time table / timings /
-    # today", so the exact phrase leads the title and the year follows. English only —
-    # all 418 queries GSC reported for this site were romanised English.
-    title = f"{d_origin} to {d_destination} Bus Timetable 2026 — Timings, First & Last Bus | {SITE_NAME}"
-    if len(title) > 80:
+
+    # High-CTR SEO: exact search query leading, operator signal, and '(Today)' temporal trigger
+    op_lower = " ".join((b.get("operator") or "") + " " + (b.get("bus_name") or "") for b in buses).lower()
+    op_tag = ""
+    if "sbstc" in op_lower:
+        op_tag = "SBSTC & Private"
+    elif "nbstc" in op_lower:
+        op_tag = "NBSTC & Express"
+    elif "wbtc" in op_lower or "cstc" in op_lower:
+        op_tag = "WBTC & Private"
+    elif ops:
+        op_tag = f"{ops[0]} & Others" if len(ops) > 1 else ops[0]
+
+    if op_tag and len(f"{d_origin} to {d_destination} Bus Timetable (Today) — {op_tag} | {SITE_NAME}") <= 70:
+        title = f"{d_origin} to {d_destination} Bus Timetable (Today) — {op_tag} | {SITE_NAME}"
+    elif len(f"{d_origin} to {d_destination} Bus Timetable (Today) — Timings & Fare | {SITE_NAME}") <= 70:
+        title = f"{d_origin} to {d_destination} Bus Timetable (Today) — Timings & Fare | {SITE_NAME}"
+    elif len(f"{d_origin} to {d_destination} Bus Timetable (Today) — Timings | {SITE_NAME}") <= 70:
+        title = f"{d_origin} to {d_destination} Bus Timetable (Today) — Timings | {SITE_NAME}"
+    elif len(f"{d_origin} to {d_destination} Bus Timetable 2026 | {SITE_NAME}") <= 70:
         title = f"{d_origin} to {d_destination} Bus Timetable 2026 | {SITE_NAME}"
-    run_by = (" Run by " + ", ".join(ops) + ".") if ops else ""
-    if stats["first"] is None:
-        description = (f"{d_origin} to {d_destination} bus timetable 2026 — routes, stoppages "
-                       f"and operators listed on {SITE_NAME}.")[:300]
-    elif count == 1:
-        description = (f"{d_origin} to {d_destination} bus timetable 2026 — 1 bus listed, "
-                       f"departing {first}.{run_by} Timings and stoppages on {SITE_NAME}.")[:300]
     else:
-        description = (f"{d_origin} to {d_destination} bus timetable 2026 — {count} {bus_word} "
-                       f"listed, first {first}, last {last}.{run_by} Timings and stoppages "
-                       f"on {SITE_NAME}.")[:300]
+        title = f"{d_origin} to {d_destination} Bus Timetable | {SITE_NAME}"
+
+    op_str = f" run by {', '.join(ops[:2])}" if ops else ""
+    if stats["first"] is not None and stats["last"] is not None:
+        if count == 1:
+            description = (f"Check {d_origin} to {d_destination} bus timetable (today). 1 daily service departing {first}{op_str}. "
+                           f"View ticket fare, stops & return buses on {SITE_NAME}.")[:160]
+        else:
+            description = (f"Check {d_origin} to {d_destination} bus timetable (today). {count} daily buses{op_str} "
+                           f"(first {first}, last {last}). View ticket fare, stops & return buses on {SITE_NAME}.")[:160]
+    else:
+        description = (f"Check {d_origin} to {d_destination} bus timetable (today). Complete list of daily bus timings, "
+                       f"stoppages, operators & ticket fare on {SITE_NAME}.")[:160]
     canonical = f"{BASE}/bus-time-table/{_clean_url(filename)}"
     major_stops = stoppage_summary(buses)
 
@@ -1325,16 +1342,28 @@ def generate_route_page(origin, destination, buses):
 
     reverse_section = ""
     if (destination, origin) in route_meta:
+        rev_count = len(route_meta[(destination, origin)])
+        rev_bus_word = "bus" if rev_count == 1 else "buses"
         rev_file = f"{slug(destination)}-to-{slug(origin)}.html"
-        reverse_section = f"""<section class="seo-section">
-  <a class="rel-chip" href="{rev_file}">↩ <span class="label-en">{esc(d_destination)} → {esc(d_origin)} (return)</span><span class="label-bn">{esc(bn_dest)} → {esc(bn_orig)} (ফেরার বাস)</span></a>
+        reverse_section = f"""<section class="seo-section rev-hero-card">
+  <div class="rev-card-inner">
+    <div class="rev-card-text">
+      <span class="rev-badge">🔄 <span class="label-en">Return Journey</span><span class="label-bn">ফেরার বাস সময়সূচী</span></span>
+      <div class="rev-title"><span class="label-en">{esc(d_destination)} → {esc(d_origin)}</span><span class="label-bn">{esc(bn_dest)} → {esc(bn_orig)}</span></div>
+      <p class="rev-sub"><span class="label-en">{rev_count} return {rev_bus_word} listed with departure times &amp; stops</span><span class="label-bn">{bn_num(rev_count)}টি ফেরার বাসের সময়সূচী ও স্টপ তালিকা দেখুন</span></p>
+    </div>
+    <a class="rev-btn" href="{rev_file}">
+      <span class="label-en">View Return Timetable &rarr;</span>
+      <span class="label-bn">ফেরার সময়সূচী দেখুন &rarr;</span>
+    </a>
+  </div>
 </section>"""
 
     about_route_section = generate_about_route_html(
         d_origin, d_destination, buses, seq, fare_info=fare_info, dist_km=dist_km, dur_text=dur_text
     )
 
-    body = hero + timetable + route_section + major_section + reverse_section + related_section + faq_section + about_route_section
+    body = hero + reverse_section + timetable + route_section + major_section + related_section + faq_section + about_route_section
 
     schema = (
         faq_schema([(q_en, a_en) for q_en, a_en, _, _ in faqs]) + "\n" +

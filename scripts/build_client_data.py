@@ -45,7 +45,7 @@ def t2m(t):
         h = 0
     return (h % 24) * 60 + mi
 
-search_fields = ("id", "bus_name", "reg_no", "bus_type", "origin", "destination", "departure_time", "total_stoppages")
+search_fields = ("id", "bus_name", "reg_no", "bus_type", "origin", "destination", "departure_time", "arrival_time", "is_estimated_arrival", "total_stoppages")
 search_buses = []
 for bus in source["buses"]:
     b = {k: bus.get(k) for k in search_fields}

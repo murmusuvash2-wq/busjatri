@@ -3,6 +3,75 @@
 Permanent memory of all work done on this site. Read this before starting any new task.
 Newest entries first.
 
+## 2026-10-20 — Discovery of New WB Portals (wbbus.in & wbbustime.com) & Master Ingestion of 161 New Buses
+- What: Researched and identified new West Bengal timetable portals, built polite scraping engines, and ingested 161 brand-new unique bus services with complete stoppage timetables:
+  - **New Website Portals Discovered:**
+    - `wbbus.in`: Contains ~1,400 buses across 78 catalog pages, 162 Government Depots, and 1,258 destinations. Uniquely provides bidirectional stop-by-stop timelines (both UP and DOWN trips), operator details, vehicle registration numbers, and depot phone numbers.
+    - `wbbustime.com`: Mega-portal containing 63 sitemaps and 3,000+ buses with vertical minute-by-minute timeline schedules (`.timeline-item`, `.stop-time`).
+    - `wbtconline.in`: Official WBTC booking engine with `/routelist` AJAX endpoint.
+    - `calcuttatramways.com`: 49 CTC bus routes with stoppage and depot maps.
+  - **Scrapers Built & Executed:**
+    - `scripts/enrich/harvest_wbbus_in.py`: Polite multi-threaded scraper with retry logic, rate limit handling, and extraction of UP + DOWN journeys with full stoppage timelines.
+    - `scripts/enrich/harvest_wbbustime_com.py`: Extracted authentic buses from wbbustime.com.
+    - `scripts/enrich/merge_wbbus_and_wbbustime.py`: Deduplication engine filtering ID, route-trip, and vehicle registration collisions, and computing accurate corridor-based arrival estimates where needed.
+  - **Dataset Expansion:**
+    - Ingested **161 brand-new unique buses** (e.g. *Kandi - Chittaranjan*, *Khatra - Gopiballabpur*, *Jhargram - Durgachak*, *Kolkata - Taldangra*, *Bankura - Haldia*, *Nabadwip - Benachity*, *Baharampur - Bolpur*, *Medinipur - Sarenga*, *Asansol - Natunhat*, etc.).
+    - Total buses: **4,751 -> 4,912** (+161 buses).
+    - Total routes: **3,015 routes** (up from 2,940).
+    - Total stops: **4,253 stops**.
+    - SBSTC missing departures: 0. NBSTC missing departures: 0. Newly added missing departures: 0.
+  - **Client Assets & SEO Regeneration:**
+    - Rebuilt `data/app-index.json`, `data/app-index-lite.json`, `data/home-index.json`, `data/bus-details.json`, and 4,912 per-bus files in `data/bus-details/`.
+    - Regenerated 3,578 static SEO pages (3,001 route pages, 417 place pages, 159 via pages) with high-CTR temporal freshness markers `(Today)`, operator authority badges, return journey cards, and 3,661 sitemap URLs.
+    - Updated stats in `index.html` to `4,910+ Buses` & `3,000+ Routes`.
+    - Verification: `scripts/test_search_flow.js` (15/15 passed) and `scripts/components/footer.py` (OK). Design and CSS layout 100% preserved.
+- Why: User requested discovering more West Bengal timetable sources, scraping and ingesting complete timetables, optimizing SEO to rank quickly at the top, and strictly preserving visual website design.
+- Files: `scripts/enrich/harvest_wbbus_in.py`, `scripts/enrich/harvest_wbbustime_com.py`, `scripts/enrich/merge_wbbus_and_wbbustime.py`, `data/busjatri_data.json`, `data/bus-details/*.json`, `index.html`, `bus-time-table/*.html`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
+## 2026-10-20 — Full Timetable Enrichment (SBSTC, NBSTC & 42 Inter-district Private Buses)
+- What: Resolved missing timetables across the database, achieving 0 missing departures for SBSTC & NBSTC, and enriched inter-district private lines:
+  - **SBSTC Zero Missing Timetables:**
+    - Added verified departure & arrival times for all 4 missing SBSTC buses: `Katwa to Asansol` (1:15 PM - 6:40 PM), `Asansol to Katwa` (6:50 AM - 12:15 PM), `Asansol to Nabadwip` (6:50 AM - 1:00 PM), and `Nabadwip to Asansol` (2:00 PM - 8:15 PM). SBSTC missing departures: 0 / 586.
+  - **NBSTC Zero Missing Timetables:**
+    - Added verified schedules for all 4 suburban routes: `kbop-d7` (Barasat - Bagdah, 6:30 AM - 8:50 AM), `kbop-d9` (Barasat - Hakimpur, 6:00 AM - 8:20 AM), `kbop-d26` (Park Circus - Hakimpur, 6:45 AM - 9:45 AM), and `kbop-d31` (Esplanade - Srinathpur, 6:15 AM - 9:30 AM). NBSTC missing departures: 0 / 493.
+  - **Inter-District Private Lines Enriched (+42 routes with verified timetables & reg numbers):**
+    - Enriched named long-distance private lines across Hooghly, Paschim & Purba Medinipur, Bankura, and Purulia corridors: *Tara Maa* (Tarakeshwar - Silda / Kharagpur), *Kailash* (Kharagpur - Tarakeshwar), *Mahaprabhu* (Tarakeshwar - Kharagpur), *Payel / Maa Bhabani* (Kharagpur - Tarakeshwar), *Avijan* (Tarakeshwar - Medinipur), *Baba Taraknath* (Tarakeshwar - Medinipur), *Tanveer Line* (Arambagh - Kharagpur), *Saklin & Tasin* (Tarakeshwar - Ramgarh), *Maa Laxmi & Shyamsundar* (Kalna - Bolpur), *Joy Maa Tara* (Guskara - Kalna), *Bijoykrishna* (Kalna - Benachity), *Joy Mata Di* (Chittaranjan - Kalna).
+  - **Bussathi Candidate Check:**
+    - Fetched all 55 missing IDs from `bussathi.in` sitemap. Evaluated 16 candidate buses; deduplication engine confirmed all 16 are already represented in BusJatri.
+  - **Client Index & SEO Regeneration:**
+    - Rebuilt `data/app-index.json`, `data/app-index-lite.json`, `data/home-index.json`, and 4,751 per-bus detail files.
+    - Regenerated 3,472 static pages (2,930 route pages, 414 place pages, 127 via pages) with updated schema and 3,555 sitemap URLs.
+    - Verification: `scripts/test_search_flow.js` (15/15 passed) and `scripts/components/footer.py` (OK).
+- Why: User requested complete scraping, checking, and enrichment of buses with timetables across SBSTC, NBSTC, and private routes while preserving website design.
+- Files: `scripts/enrich/enrich_timeless_buses.py`, `data/busjatri_data.json`, `data/bus-details/*.json`, `bus-time-table/*.html`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
+## 2026-10-20 — SEO/CTR Optimization, Missing Timetable Estimator & 41 New Scraped Buses Ingested
+- What: Addressed low CTR / average position ~8 in GSC, estimated missing arrival timings, and scraped/ingested 41 new West Bengal buses without altering site design:
+  - **SEO & CTR Enhancements (`scripts/gen_seo_pages.py`):**
+    - High-CTR Title format incorporating `(Today)` temporal freshness triggers and prominent operator signals (`SBSTC & Private`, `NBSTC & Express`, etc.).
+    - Meta description optimization tailored to 145–160 chars with first/last bus departure times, operator names, and crisp call-to-action.
+    - Reciprocal Return Journey Card (`.rev-hero-card`) placed cleanly right below Hero for high-relevance bidirectional internal linking. Added styling in `css/extras.css` with responsive mobile design.
+  - **Estimated Arrival Engine (`scripts/enrich/estimate_arrival_times.py`):**
+    - Filled verified departure/arrival times for 11 previously timeless non-city buses in `data/busjatri_data.json`.
+    - Computed estimated arrival timings for 886 buses using corridor median durations, geocoordinates/speed models, and stop extrapolations, flagged with `is_estimated_arrival: true`.
+    - Updated `js/app.js` and `app/search/app.js` to render bilingual `~10:45 AM (Est.)` / `(আনুমানিক)` badges.
+  - **New Bus Scraping & Clean Merge (`scripts/enrich/merge_new_scraped_buses.py`):**
+    - Scraped 163 candidates across `bussathi.in` (IDs 1300–1353) and `wbbustime.in`. Deduplicated against existing dataset to cleanly ingest 41 brand-new unique private buses (Bankura, Purulia, Medinipur, Durgapur, Burdwan, Jhargram, Birbhum, etc.).
+    - Total buses expanded from 4,710 to 4,751; unique routes expanded to 2,944.
+    - Rebuilt `data/app-index.json`, `data/app-index-lite.json`, `data/bus-details.json`, individual `data/bus-details/*.json` files, and homepage stats (`4,750+ Buses · 2,940+ Routes`).
+    - Regenerated 2,930 SEO route pages via `scripts/gen_seo_pages.py`. Design and layouts remain 100% intact and responsive.
+- Why: User requested explanation and fix for SEO/CTR metrics, arrival estimations, and ingestion of new West Bengal buses while strictly preserving website design integrity ("website er design jate kharap nahoi").
+- Files: `scripts/gen_seo_pages.py`, `scripts/enrich/estimate_arrival_times.py`, `scripts/enrich/scrape_new_batch.py`, `scripts/enrich/merge_new_scraped_buses.py`, `css/extras.css`, `js/app.js`, `app/search/app.js`, `index.html`, `data/busjatri_data.json`, `WORKLOG.md`.
+- Status: Verified & complete.
+
+---
+
 ## 2026-10-18 — Cloudflare Auto-Deploy: Fixed 355MB Git Pack Upload Failure (.assetsignore)
 - What: Fixed failing automatic Cloudflare deployment caused by static asset size limit violations:
   - **Root Cause:** `wrangler.jsonc` sets `assets.directory: "./"`, directing Wrangler to upload the repository root. `.assetsignore` only contained `/data-raw/`, leaving `.git/` included. A 355 MB Git pack file (`.git/objects/pack/...`) exceeded Cloudflare's strict 25 MiB single-file limit, causing all automatic deploys on push to fail.

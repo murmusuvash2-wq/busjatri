@@ -229,14 +229,17 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
       <!-- BUS TIMES -->
       <section id="view-buses" class="view" style="display:none">
         <div class="card" id="busSearchCard">
-          <h3>🔍 Search Bus</h3>
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <h3 style="margin:0">🔍 Search Bus</h3>
+            <button class="btn btn-primary btn-sm" id="btnShowAddBus" type="button">+ Add New Bus</button>
+          </div>
           <div class="searchbar">
             <input id="busQ" placeholder="Bus name, registration number, ya route likhein… (jaise: BHARAT LAXMI / WB67C2286 / Manihara)">
           </div>
           <div class="scrollbox" style="display:none" id="busResultsBox">
             <table><thead><tr><th>Bus</th><th>Reg No</th><th>Route</th><th>Departs</th><th></th></tr></thead><tbody id="busResults"></tbody></table>
           </div>
-          <div class="empty" id="busSearchHint">4,000+ buses mein search karein — naam, number ya stoppage.</div>
+          <div class="empty" id="busSearchHint">4,900+ buses mein search karein — naam, number ya stoppage.</div>
         </div>
         <div class="card" id="busEditor" style="display:none;margin-top:18px">
           <div class="bus-head" id="busHead"></div>
@@ -247,6 +250,57 @@ body[data-theme="light"] .kbd{background:rgba(30,41,66,.07)}
             <button class="btn btn-ghost" id="backToSearch">← Back to Search</button>
           </div>
           <div class="hint">Save karne se sirf <span class="kbd">data/time-overrides.json</span> update hota hai — chhota safe commit. Site pe turant apply hota hai (runtime patch). Note: stop ka naam change karke row naya add ho jata hai; purana wala reh jata hai, isliye naam mat badlein.</div>
+        </div>
+        <div class="card" id="busCreator" style="display:none;margin-top:18px">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+            <h3 style="margin:0">🚌 Add Brand New Bus</h3>
+            <button class="btn btn-ghost btn-sm" id="btnCancelAddBus" type="button">✕ Cancel</button>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Bus Name *</label><input id="newBusName" placeholder="e.g. MAA TARA EXPRESS"></div>
+            <div class="field"><label>Operator *</label>
+              <select id="newBusOp">
+                <option value="Private">Private</option>
+                <option value="SBSTC">SBSTC (Government)</option>
+                <option value="NBSTC">NBSTC (Government)</option>
+                <option value="WBTC">WBTC (Government)</option>
+              </select>
+            </div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Bus Type</label>
+              <select id="newBusType">
+                <option value="Private - NON AC">Private - NON AC</option>
+                <option value="Private - AC">Private - AC</option>
+                <option value="Government - SBSTC">Government - SBSTC</option>
+                <option value="Government - NBSTC">Government - NBSTC</option>
+                <option value="Government - WBTC">Government - WBTC</option>
+              </select>
+            </div>
+            <div class="field"><label>Registration Number (WB...)</label><input id="newBusReg" placeholder="e.g. WB 39E 1234" class="mono"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Origin (From) *</label><input id="newBusFrom" placeholder="e.g. Bankura"></div>
+            <div class="field"><label>Destination (To) *</label><input id="newBusTo" placeholder="e.g. Durgapur"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Departure Time *</label><input id="newBusDep" placeholder="e.g. 7:30 AM" class="mono"></div>
+            <div class="field"><label>Arrival Time</label><input id="newBusArr" placeholder="e.g. 9:15 AM" class="mono"></div>
+          </div>
+          <div class="grid2">
+            <div class="field"><label>Contact Number / Helpline</label><input id="newBusContact" placeholder="e.g. 9876543210"></div>
+            <div class="field"><label>Depot Name</label><input id="newBusDepot" placeholder="e.g. Bankura Depot"></div>
+          </div>
+          <div class="field" style="margin-top:10px">
+            <label>Stoppages & Intermediate Timings (Semicolon separated)</label>
+            <textarea id="newBusStops" style="min-height:90px" placeholder="Bankura @ 7:30 AM; Beliatore @ 8:00 AM; Barjora @ 8:30 AM; Durgapur @ 9:15 AM"></textarea>
+            <div class="hint">Format: <b>Stop Name @ Time; Next Stop @ Time</b>. Agar intermediate time na pata ho to sirf stop names likhein (jaise: <b>Bankura; Beliatore; Barjora; Durgapur</b>).</div>
+          </div>
+          <div class="actions" style="margin-top:16px">
+            <button class="btn btn-primary" id="btnSaveNewBus" type="button">💾 Save & Add Bus</button>
+            <button class="btn btn-ghost" id="btnCancelAddBus2" type="button">Cancel</button>
+          </div>
+          <div class="hint">Save karne pe ye bus <span class="kbd">data/community_buses.json</span> mein add hogi aur auto-rebuild trigger ho jayega (3-5 min mein live).</div>
         </div>
       </section>
 
@@ -736,6 +790,113 @@ $('#saveTimes').onclick=async()=>{
   b.disabled=false;b.innerHTML='💾 Save Time Overrides';
 };
 
+/* ---------- add brand new bus ---------- */
+$('#btnShowAddBus').onclick=()=>{
+  $('#busEditor').style.display='none';
+  $('#busCreator').style.display='block';
+  $('#busCreator').scrollIntoView({behavior:'smooth'});
+};
+const hideAddBus=()=>{$('#busCreator').style.display='none'};
+$('#btnCancelAddBus').onclick=hideAddBus;
+$('#btnCancelAddBus2').onclick=hideAddBus;
+
+$('#btnSaveNewBus').onclick=async()=>{
+  const bname=$('#newBusName').value.trim();
+  const op=$('#newBusOp').value.trim();
+  const btype=$('#newBusType').value.trim();
+  const reg=$('#newBusReg').value.trim();
+  const from=$('#newBusFrom').value.trim();
+  const to=$('#newBusTo').value.trim();
+  const dep=$('#newBusDep').value.trim();
+  const arr=$('#newBusArr').value.trim();
+  const contact=$('#newBusContact').value.trim();
+  const depot=$('#newBusDepot').value.trim();
+  const rawStops=$('#newBusStops').value.trim();
+
+  if(!bname||!from||!to||!dep){
+    toast('✗ Please fill required fields: Bus Name, From, To, Departure Time','err');
+    return;
+  }
+  const timeRegex=/^\d{1,2}:\d{2}\s*(AM|PM)$/i;
+  if(!timeRegex.test(dep)){
+    toast('✗ Invalid departure time (e.g. "7:30 AM")','err');
+    return;
+  }
+  if(arr&&!timeRegex.test(arr)){
+    toast('✗ Invalid arrival time (e.g. "9:15 AM")','err');
+    return;
+  }
+
+  const stops=[];
+  if(rawStops){
+    const parts=rawStops.split(';').map(x=>x.trim()).filter(Boolean);
+    for(const p of parts){
+      const m=p.match(/^(.+?)\s*@\s*(.+)$/);
+      if(m)stops.push({name:m[1].trim(),up:m[2].trim(),down:''});
+      else stops.push({name:p,up:'',down:''});
+    }
+  }
+  if(!stops.length){
+    stops.push({name:from,up:dep,down:''});
+    if(arr)stops.push({name:to,up:arr,down:''});
+    else stops.push({name:to,up:'',down:''});
+  }
+
+  if(!await confirmBox('Add this bus to site?',`<b>${esc(bname)}</b> (${esc(from)} → ${esc(to)}) — community_buses.json mein add hoga aur rebuild trigger hoga.`))return;
+
+  const b=$('#btnSaveNewBus');
+  b.disabled=true;
+  b.innerHTML='<span class="spin"></span> Saving…';
+  try{
+    let sha=null,cb={add:[],enrich:[]};
+    try{
+      const cr=await gh('/repos/'+S.repo+'/contents/data/community_buses.json');
+      sha=cr.sha;
+      cb=JSON.parse(b64d(cr.content));
+    }catch(e){}
+    if(!cb.add)cb.add=[];
+    if(!cb.enrich)cb.enrich=[];
+
+    cb.add.push({
+      operator:op||'Private',
+      bus_name:bname,
+      bus_type:btype||'Private - NON AC',
+      reg_no:reg||'',
+      origin:from,
+      destination:to,
+      departure_time:dep,
+      arrival_time:arr||'',
+      contact_number:contact||'',
+      depot_name:depot||'',
+      route:`${from} - ${to}`,
+      source:'Admin Direct Entry',
+      detail_url:'',
+      stops:stops
+    });
+
+    await ghPut('data/community_buses.json',JSON.stringify(cb,null,2)+'\n',`Admin: Add new bus ${bname} (${from} -> ${to})`,sha);
+    try{
+      await gh(`/repos/${S.repo}/actions/workflows/apply-overrides.yml/dispatches`,{method:'POST',body:JSON.stringify({ref:'main'})});
+    }catch(e){}
+
+    toast('✓ Bus added successfully! Auto-rebuild triggered (3-5 min live)','ok');
+    hideAddBus();
+    $('#newBusName').value='';
+    $('#newBusReg').value='';
+    $('#newBusFrom').value='';
+    $('#newBusTo').value='';
+    $('#newBusDep').value='';
+    $('#newBusArr').value='';
+    $('#newBusContact').value='';
+    $('#newBusDepot').value='';
+    $('#newBusStops').value='';
+  }catch(e){
+    toast('✗ Add bus failed: '+e.message,'err');
+  }
+  b.disabled=false;
+  b.innerHTML='💾 Save & Add Bus';
+};
+
 /* ---------- blog ---------- */
 const BLOG_TMPL=(t,slug,excerpt,body)=>`<!DOCTYPE html>
 <html lang="en">
@@ -806,8 +967,8 @@ Live bus timings ke liye <a href="/">BusJatri.in</a> kholo — 4,000+ buses, poo
 <small>Times badal sakte hain; final update ke liye operator/conductor se confirm karein.</small>
 </footer>
 </div>
-<script src="js/hdr.js?v=b8a36609"></script>
-<script defer src="/js/cookie-consent.js?v=9788dec7"></script>
+<script src="js/hdr.js?v=b8a36609"><\/script>
+<script defer src="/js/cookie-consent.js?v=9788dec7"><\/script>
 </body>
 </html>
 `;

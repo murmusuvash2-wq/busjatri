@@ -654,17 +654,69 @@ function renderHome(el) {
         </div>
       </div>
       <div class="empty-search"><p>${icon('search')} <span class="label-en">Fill <strong>From</strong> + <strong>To</strong> for routes, or just a <strong>Stoppage</strong> to see every bus that halts there.</span><span class="label-bn"><strong>কোথা থেকে</strong> ও <strong>কোথায়</strong> লিখুন, অথবা শুধু একটি <strong>স্টপেজ</strong> লিখলে সেখানে থামা সব বাস দেখা যাবে।</span></p></div>
-      <p class="stats-inline">${icon('bus')} ${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+ <span class="label-en">buses</span><span class="label-bn">টি বাস</span> &middot; ${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+ <span class="label-en">routes</span><span class="label-bn">টি রুট</span> &middot; ${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+ <span class="label-en">stoppages</span><span class="label-bn">টি স্টপেজ</span></p>
+      <div class="stats-inline">
+        <div class="stat-col">
+          <div class="stat-num">${(DATA.meta.total_buses || 0).toLocaleString('en-IN')}+</div>
+          <div class="stat-lbl"><span class="label-en">Buses</span><span class="label-bn">টি বাস</span></div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num">${(DATA.meta.total_routes || 0).toLocaleString('en-IN')}+</div>
+          <div class="stat-lbl"><span class="label-en">Routes</span><span class="label-bn">টি রুট</span></div>
+        </div>
+        <div class="stat-col">
+          <div class="stat-num">${(DATA.meta.total_stops || 0).toLocaleString('en-IN')}+</div>
+          <div class="stat-lbl"><span class="label-en">Stoppages</span><span class="label-bn">টি স্টপেজ</span></div>
+        </div>
+      </div>
   </div>
   </div>
-    <section data-keep="1" style="max-width:720px;margin:0 auto 8px;padding:0 18px 18px">
-    <div style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin-bottom:10px">Popular Operators</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px">
-      <a href="bus-time-table/sbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">SBSTC</a>
-      <a href="bus-time-table/nbstc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">NBSTC</a>
-      <a href="bus-time-table/wbtc-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">WBTC</a>
-      <a href="kolkata-city-bus-timetable" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Kolkata City Bus</a>
-      <a href="bus-time-table/volvo-ac-buses" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:9px 16px;font-size:13px;font-weight:700;color:var(--ink,#211c16);text-decoration:none;min-height:40px;display:inline-flex;align-items:center">Volvo AC</a>
+    <section class="home-ops" data-keep="1" style="max-width:720px;margin:4px auto 14px;padding:0 18px 18px">
+    <div class="home-ops-head">
+      <h2 style="font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink,#6b4610);font-weight:600;margin:0 0 10px"><span class="label-en">Popular Operators &amp; Services</span><span class="label-bn">জনপ্রিয় বাস ও পরিষেবা</span></h2>
+    </div>
+    <div class="home-ops-grid">
+      <a href="bus-time-table/sbstc-buses" class="hop-card">
+        <div class="hop-icon hop-gov"><svg viewBox="0 0 24 24" class="icon"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></div>
+        <div class="hop-info">
+          <div class="hop-name">SBSTC</div>
+          <div class="hop-sub"><span class="label-en">South Bengal State</span><span class="label-bn">দক্ষিণবঙ্গ রাষ্ট্রীয় বাস</span></div>
+        </div>
+      </a>
+      <a href="bus-time-table/wbtc-buses" class="hop-card">
+        <div class="hop-icon hop-gov"><svg viewBox="0 0 24 24" class="icon"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></div>
+        <div class="hop-info">
+          <div class="hop-name">WBTC</div>
+          <div class="hop-sub"><span class="label-en">Kolkata &amp; Suburbs</span><span class="label-bn">কলকাতা ও শহরতলি</span></div>
+        </div>
+      </a>
+      <a href="bus-time-table/nbstc-buses" class="hop-card">
+        <div class="hop-icon hop-gov"><svg viewBox="0 0 24 24" class="icon"><path d="M4 10h16L12 4z"/><path d="M5 10v9M9 10v9M15 10v9M19 10v9"/><path d="M3 21h18"/></svg></div>
+        <div class="hop-info">
+          <div class="hop-name">NBSTC</div>
+          <div class="hop-sub"><span class="label-en">North Bengal State</span><span class="label-bn">উত্তরবঙ্গ রাষ্ট্রীয় বাস</span></div>
+        </div>
+      </a>
+      <a href="kolkata-city-bus-timetable" class="hop-card">
+        <div class="hop-icon hop-city"><svg viewBox="0 0 24 24" class="icon"><path d="M4 16V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10"/><path d="M4 16h16"/><path d="M4 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M17 16v2a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1v-2"/><path d="M6 10h12"/><circle cx="7.5" cy="16" r="0"/></svg></div>
+        <div class="hop-info">
+          <div class="hop-name"><span class="label-en">Kolkata City Bus</span><span class="label-bn">কলকাতা সিটি বাস</span></div>
+          <div class="hop-sub"><span class="label-en">73 CSTC Routes</span><span class="label-bn">৭৩টি অফিসিয়াল রুট</span></div>
+        </div>
+      </a>
+      <a href="bus-time-table/shyamoli-paribahan-buses" class="hop-card">
+        <div class="hop-icon hop-pvt"><svg viewBox="0 0 24 24" class="icon"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="hop-info">
+          <div class="hop-name">Shyamoli</div>
+          <div class="hop-sub"><span class="label-en">Interstate Express</span><span class="label-bn">দূরপাল্লার এক্সপ্রেস</span></div>
+        </div>
+      </a>
+      <a href="bus-time-table/volvo-ac-buses" class="hop-card">
+        <div class="hop-icon hop-ac"><svg viewBox="0 0 24 24" class="icon"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/><line x1="19.07" y1="4.93" x2="4.93" y2="19.07"/></svg></div>
+        <div class="hop-info">
+          <div class="hop-name"><span class="label-en">Volvo AC</span><span class="label-bn">ভলভো এসি</span></div>
+          <div class="hop-sub"><span class="label-en">AC Express Buses</span><span class="label-bn">প্রিমিয়াম এসি বাস</span></div>
+        </div>
+      </a>
     </div>
   </section>
   <div class="section">
@@ -980,13 +1032,13 @@ async function renderBus(el, id) {
       <h2>${esc(bnBusName(b.bus_name))} ${b.reg_no ? `<span style="font-size:14px;color:var(--ink-dim);font-weight:500;font-family:var(--font-mono)">${esc(b.reg_no)}</span>` : ''}</h2>
       <div class="route-line">${esc(pn(b.origin))} → ${esc(pn(b.destination))} ${busTypeBadge(b.bus_type)}</div>
       <div class="info-grid">
-        ${b.departure_time ? `<div class="info-item"><div class="lbl">Departure</div><div class="val">${esc(b.departure_time)}</div></div>` : ''}
-        ${b.arrival_time ? `<div class="info-item"><div class="lbl">Arrival</div><div class="val">${esc(b.arrival_time)}</div></div>` : ''}
-        ${b.operator ? `<div class="info-item"><div class="lbl">Operator</div><div class="val">${esc(b.operator)}</div></div>` : ''}
-        ${b.depot_name ? `<div class="info-item"><div class="lbl">Depot</div><div class="val">${esc(b.depot_name)}</div></div>` : ''}
-        ${b.contact_number && b.contact_number !== 'Not Available !' ? `<div class="info-item"><div class="lbl">Contact</div><div class="val"><a href="tel:${esc(b.contact_number)}">${esc(b.contact_number)}</a></div></div>` : ''}
-        <div class="info-item"><div class="lbl">Stops</div><div class="val">${stops.length || b.total_stoppages || 0}</div></div>
-        ${b.fare ? `<div class="info-item"><div class="lbl">Fare</div><div class="val">${esc(b.fare)}</div></div>` : ''}
+        ${b.departure_time ? `<div class="info-item"><div class="lbl"><span class="label-en">Departure</span><span class="label-bn">ছাড়ার সময়</span></div><div class="val">${esc(b.departure_time)}</div></div>` : ''}
+        ${b.arrival_time ? `<div class="info-item"><div class="lbl"><span class="label-en">Arrival</span><span class="label-bn">পৌঁছানোর সময়</span></div><div class="val">${b.is_estimated_arrival ? '~' : ''}${esc(b.arrival_time)} ${b.is_estimated_arrival ? '<span style="font-size:11px;color:var(--amber-ink);font-weight:600"><span class="label-en">(Est.)</span><span class="label-bn">(আনুমানিক)</span></span>' : ''}</div></div>` : ''}
+        ${b.operator ? `<div class="info-item"><div class="lbl"><span class="label-en">Operator</span><span class="label-bn">অপারেটর</span></div><div class="val">${esc(b.operator)}</div></div>` : ''}
+        ${b.depot_name ? `<div class="info-item"><div class="lbl"><span class="label-en">Depot</span><span class="label-bn">ডিপো</span></div><div class="val">${esc(b.depot_name)}</div></div>` : ''}
+        ${b.contact_number && b.contact_number !== 'Not Available !' ? `<div class="info-item"><div class="lbl"><span class="label-en">Contact</span><span class="label-bn">যোগাযোগ</span></div><div class="val"><a href="tel:${esc(b.contact_number)}">${esc(b.contact_number)}</a></div></div>` : ''}
+        <div class="info-item"><div class="lbl"><span class="label-en">Stops</span><span class="label-bn">স্টপ</span></div><div class="val">${stops.length || b.total_stoppages || 0}</div></div>
+        ${b.fare ? `<div class="info-item"><div class="lbl"><span class="label-en">Fare</span><span class="label-bn">ভাড়া</span></div><div class="val">${esc(b.fare)}</div></div>` : ''}
       </div>
       <p style="font-size:12px;color:var(--ink-dim);margin:10px 0 0">Data updated: ${esc(DATA.meta?.last_updated || '')}</p>
       ${mapUrl ? `<a class="map-btn" href="${mapUrl}" target="_blank" rel="noopener">${icon('map')} <span class="label-en">View route on Google Maps</span><span class="label-bn">গুগল ম্যাপে রুট দেখুন</span></a>` : ''}
