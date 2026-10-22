@@ -1630,6 +1630,56 @@
       "source": "/bus-time-table/dunlop-to-ballygunge-station.html",
       "destination": "/bus-time-table/dunlop-to-ballygunge",
       "permanent": true
+    },
+    {
+      "source": "/bus-time-table/coochbehar-bus-stand-to-dharmatala-government-bus",
+      "destination": "/bus-time-table/coochbehar-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/coochbehar-bus-stand-to-dharmatala-government-bus.html",
+      "destination": "/bus-time-table/coochbehar-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/digha-border-bus-stand-to-midnapore-central-bus-stand",
+      "destination": "/bus-time-table/digha-border-amp-bus-stand-to-midnapore-central-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/digha-border-bus-stand-to-midnapore-central-bus-stand.html",
+      "destination": "/bus-time-table/digha-border-amp-bus-stand-to-midnapore-central-bus-stand",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/asansol-to-esplanade",
+      "destination": "/bus-time-table/asansol-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/asansol-to-esplanade.html",
+      "destination": "/bus-time-table/asansol-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/dhuliyan-to-nababhat-bus-stand",
+      "destination": "/bus-time-table/langalhata-to-nababhat-mor",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/dhuliyan-to-nababhat-bus-stand.html",
+      "destination": "/bus-time-table/langalhata-to-nababhat-mor",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bankura-to-digha",
+      "destination": "/bus-time-table/bankura-to-kolkata",
+      "permanent": true
+    },
+    {
+      "source": "/bus-time-table/bankura-to-digha.html",
+      "destination": "/bus-time-table/bankura-to-kolkata",
+      "permanent": true
     }
   ]
 }
