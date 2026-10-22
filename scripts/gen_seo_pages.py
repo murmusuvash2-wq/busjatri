@@ -832,7 +832,7 @@ def shell(title, description, canonical, body, schema=""):
 <main class="container seo-main" style="padding-top:18px;padding-bottom:48px;max-width:860px">
 {body}
 </main>
-{footer_html()}
+{footer_html("../")}
 <script defer src="../js/lang.js?v=lang20261005c"></script>
 <script defer src="../js/hdr.js?v=hdrunify20261002"></script>
 <script defer src="../js/route-slider.js"></script>

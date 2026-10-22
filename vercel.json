@@ -498,12 +498,12 @@
     },
     {
       "source": "/bus-time-table/burdwan-to-manbazar-via-khandaghosh",
-      "destination": "/bus-time-table/bardhaman-to-manbazar-via-khandaghosh",
+      "destination": "/bus-time-table/bardhaman-to-manbazar",
       "permanent": true
     },
     {
       "source": "/bus-time-table/burdwan-to-manbazar-via-khandaghosh.html",
-      "destination": "/bus-time-table/bardhaman-to-manbazar-via-khandaghosh",
+      "destination": "/bus-time-table/bardhaman-to-manbazar",
       "permanent": true
     },
     {
@@ -918,12 +918,12 @@
     },
     {
       "source": "/bus-time-table/midnapur-to-digha-via-kharagpur",
-      "destination": "/bus-time-table/medinipur-to-digha-via-kharagpur",
+      "destination": "/bus-time-table/medinipur-to-digha",
       "permanent": true
     },
     {
       "source": "/bus-time-table/midnapur-to-digha-via-kharagpur.html",
-      "destination": "/bus-time-table/medinipur-to-digha-via-kharagpur",
+      "destination": "/bus-time-table/medinipur-to-digha",
       "permanent": true
     },
     {
