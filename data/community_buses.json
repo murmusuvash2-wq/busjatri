@@ -7930,6 +7930,192 @@
      "down": ""
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Bandwan-Kolkata",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39B 0024",
+   "origin": "Bandwan",
+   "destination": "Kolkata",
+   "departure_time": "6:10 AM",
+   "arrival_time": "3:30 PM",
+   "route": "Bandwan - Barabazar - Manbazar - Bankura - Durgapur - Bardhaman - Kolkata",
+   "source": "facebook (Bus Detailer)",
+   "detail_url": "",
+   "service_note": "Daily alternative-day service bus (SBSTC). Eicher 20.16 M BS-III.",
+   "stops": [
+    {
+     "name": "Bandwan",
+     "up": "6:10 AM",
+     "down": ""
+    },
+    {
+     "name": "Dhabani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Katina",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barabazar",
+     "up": "7:00 AM",
+     "down": ""
+    },
+    {
+     "name": "Sargo",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hijla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Banjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Keshya More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rajnowagarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Kenda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jamtal More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jabla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Gopalnagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Jitujuri",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Manbazar",
+     "up": "9:05 AM",
+     "down": "1:40 PM"
+    },
+    {
+     "name": "Payrachali",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up": "9:50 AM",
+     "down": ""
+    },
+    {
+     "name": "Bangla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Puyabagan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Keranibandh Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Makurgarm",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Beliatore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "10:40 AM",
+     "down": "12:10 PM"
+    },
+    {
+     "name": "Durgapur Station",
+     "up": "11:50 AM",
+     "down": "10:40 AM"
+    },
+    {
+     "name": "Durgapur City Centre",
+     "up": "12:30 PM",
+     "down": "10:20 AM"
+    },
+    {
+     "name": "Muchipara",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Panagarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Galsi",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Nawabhat Bypass",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Saktigarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dankuni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Esplanade",
+     "up": "3:30 PM",
+     "down": "6:40 AM"
+    }
+   ]
   }
  ],
  "enrich": [

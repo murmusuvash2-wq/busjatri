@@ -29,6 +29,10 @@ def norm_op(s):
     return re.sub(r"[^a-z0-9]+", "", (s or "").lower()).replace("s", "")
 
 
+def norm_route(s):
+    return " ".join((s or "").strip().lower().split())
+
+
 def slug(s):
     s = re.sub(r"[^a-z0-9]+", "-", (s or "").lower()).strip("-")
     return s or "x"
@@ -46,7 +50,7 @@ def main(write=False):
             ((b.get("origin") or "").strip().lower(),
              (b.get("destination") or "").strip().lower(),
              norm_op(b.get("operator")),
-             (b.get("departure_time") or "").strip().lower()), True
+             (b.get("departure_time") or "").strip().lower(), norm_route(b.get("route"))), True
         )
 
     with open(SRC, encoding="utf-8") as f:
@@ -57,7 +61,7 @@ def main(write=False):
         key = ((entry["origin"] or "").strip().lower(),
                (entry["destination"] or "").strip().lower(),
                norm_op(entry["operator"]),
-               (entry.get("departure_time") or "").strip().lower())
+               (entry.get("departure_time") or "").strip().lower(), norm_route(entry.get("route") or ("%s - %s" % (entry["origin"], entry["destination"]))))
         if existing_pairs.get(key):
             skipped += 1
             print("skip (already exists):", entry["operator"], entry["origin"], "->", entry["destination"])
