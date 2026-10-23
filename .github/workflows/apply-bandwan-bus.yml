@@ -1,0 +1,135 @@
+name: Apply Bandwan-Kolkata bus (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch dedup key + append community bus entry
+        run: |
+          python3 - <<'PY'
+          import json
+
+          # 1) make route part of the dedup identity in add_community_buses.py
+          sp = 'scripts/add_community_buses.py'
+          s = open(sp, encoding='utf-8').read()
+          if 'norm_route' not in s:
+              a = 'def norm_op(s):\n    return re.sub(r"[^a-z0-9]+", "", (s or "").lower()).replace("s", "")'
+              assert s.count(a) == 1, 'norm_op anchor not found'
+              s = s.replace(a, a + '\n\n\ndef norm_route(s):\n    return " ".join((s or "").strip().lower().split())')
+              b = '.strip().lower()), True'
+              assert s.count(b) == 1, 'existing_pairs anchor not found'
+              s = s.replace(b, '.strip().lower(), norm_route(b.get("route"))), True')
+              c = '(entry.get("departure_time") or "").strip().lower())'
+              assert s.count(c) == 1, 'entry key anchor not found'
+              s = s.replace(c, '(entry.get("departure_time") or "").strip().lower(), norm_route(entry.get("route") or ("%s - %s" % (entry["origin"], entry["destination"]))))')
+              open(sp, 'w', encoding='utf-8').write(s)
+              print('add_community_buses.py patched')
+          else:
+              print('add_community_buses.py already patched')
+
+          # 2) append the community bus entry (idempotent)
+          p = 'data/community_buses.json'
+          d = json.load(open(p, encoding='utf-8'))
+          entry = {
+              "operator": "SBSTC",
+              "bus_name": "SBSTC Bandwan-Kolkata",
+              "bus_type": "Government - SBSTC",
+              "reg_no": "WB 39B 0024",
+              "origin": "Bandwan",
+              "destination": "Kolkata",
+              "departure_time": "6:10 AM",
+              "arrival_time": "3:30 PM",
+              "route": "Bandwan - Barabazar - Manbazar - Bankura - Durgapur - Bardhaman - Kolkata",
+              "source": "facebook (Bus Detailer)",
+              "detail_url": "",
+              "service_note": "Daily alternative-day service bus (SBSTC). Eicher 20.16 M BS-III.",
+              "stops": [
+                  {"name": "Bandwan", "up": "6:10 AM", "down": ""},
+                  {"name": "Dhabani", "up": "", "down": ""},
+                  {"name": "Katina", "up": "", "down": ""},
+                  {"name": "Barabazar", "up": "7:00 AM", "down": ""},
+                  {"name": "Sargo", "up": "", "down": ""},
+                  {"name": "Hijla", "up": "", "down": ""},
+                  {"name": "Banjora", "up": "", "down": ""},
+                  {"name": "Keshya More", "up": "", "down": ""},
+                  {"name": "Rajnowagarh", "up": "", "down": ""},
+                  {"name": "Kenda", "up": "", "down": ""},
+                  {"name": "Jamtal More", "up": "", "down": ""},
+                  {"name": "Jabla", "up": "", "down": ""},
+                  {"name": "Gopalnagar", "up": "", "down": ""},
+                  {"name": "Jitujuri", "up": "", "down": ""},
+                  {"name": "Manbazar", "up": "9:05 AM", "down": "1:40 PM"},
+                  {"name": "Payrachali", "up": "", "down": ""},
+                  {"name": "Hatirampur", "up": "9:50 AM", "down": ""},
+                  {"name": "Bangla", "up": "", "down": ""},
+                  {"name": "Puyabagan", "up": "", "down": ""},
+                  {"name": "Dhaldanga", "up": "", "down": ""},
+                  {"name": "Keranibandh Bypass", "up": "", "down": ""},
+                  {"name": "Makurgarm", "up": "", "down": ""},
+                  {"name": "Beliatore", "up": "", "down": ""},
+                  {"name": "Barjora", "up": "", "down": ""},
+                  {"name": "Bankura Bypass", "up": "10:40 AM", "down": "12:10 PM"},
+                  {"name": "Durgapur Station", "up": "11:50 AM", "down": "10:40 AM"},
+                  {"name": "Durgapur City Centre", "up": "12:30 PM", "down": "10:20 AM"},
+                  {"name": "Muchipara", "up": "", "down": ""},
+                  {"name": "Panagarh", "up": "", "down": ""},
+                  {"name": "Galsi", "up": "", "down": ""},
+                  {"name": "Nawabhat Bypass", "up": "", "down": ""},
+                  {"name": "Saktigarh", "up": "", "down": ""},
+                  {"name": "Dankuni", "up": "", "down": ""},
+                  {"name": "Esplanade", "up": "3:30 PM", "down": "6:40 AM"}
+              ]
+          }
+          if any(e.get("reg_no") == "WB 39B 0024" and e.get("origin") == "Bandwan" for e in d["add"]):
+              print('entry already present')
+          else:
+              d["add"].append(entry)
+              json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+              print('entry appended')
+          PY
+
+      - name: Add community-reported buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n >= 3900, f'bus count dropped to {n} - aborting'
+          print(f'OK: {n} buses')
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Add community bus: SBSTC Bandwan-Kolkata (via Barabazar-Manbazar-Durgapur)"
+            git push
+          fi
