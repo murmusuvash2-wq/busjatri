@@ -10604,7 +10604,9 @@
      "no": 15
     }
    ],
-   "total_stoppages": 15
+   "total_stoppages": 15,
+   "source": "facebook (community report)",
+   "service_note": "S Travels. AL Lynx Strong BS6. Regular service (all seasons)."
   },
   {
    "target_id": "bussathi-sweety-807",
@@ -14779,6 +14781,97 @@
    "target_id": "bussathi-mitra-500",
    "source": "facebook (Route Mapper)",
    "service_note": "Mitra Travels Super Fast (Jumping NH-60). Alternate reg WB 31 A 0196 (sister bus). Contact 9547664043."
+  },
+  {
+   "target_id": "bussathi-kalika-313",
+   "source": "facebook (community report)",
+   "service_note": "Kalika. Replacement vehicle for WB 55A 1329 (new bus in service); listed reg is the older vehicle. Regular service, all seasons.",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Purulia",
+     "up_time": "5:00 AM",
+     "down_time": "5:40 PM"
+    },
+    {
+     "no": 2,
+     "name": "Simulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Chakaltore",
+     "up_time": "5:30 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "no": 4,
+     "name": "Kenda",
+     "up_time": "6:00 AM",
+     "down_time": "4:40 PM"
+    },
+    {
+     "no": 5,
+     "name": "Gopalnagar",
+     "up_time": "6:30 AM",
+     "down_time": "4:10 PM"
+    },
+    {
+     "no": 6,
+     "name": "Manbazar",
+     "up_time": "7:10 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "no": 7,
+     "name": "Pairachali",
+     "up_time": "7:30 AM",
+     "down_time": "2:45 PM"
+    },
+    {
+     "no": 8,
+     "name": "Hatirampur",
+     "up_time": "8:00 AM",
+     "down_time": "2:10 PM"
+    },
+    {
+     "no": 9,
+     "name": "Khatra",
+     "up_time": "8:20 AM",
+     "down_time": "1:50 PM"
+    },
+    {
+     "no": 10,
+     "name": "Ankhuta More",
+     "up_time": "8:40 AM",
+     "down_time": "1:30 PM"
+    },
+    {
+     "no": 11,
+     "name": "Haludkanali",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Raipur",
+     "up_time": "9:20 AM",
+     "down_time": "12:50 PM"
+    },
+    {
+     "no": 13,
+     "name": "P More",
+     "up_time": "9:40 AM",
+     "down_time": "12:30 PM"
+    },
+    {
+     "no": 14,
+     "name": "Sarenga",
+     "up_time": "10:10 AM",
+     "down_time": "12:00 PM"
+    }
+   ]
   }
  ]
 }
