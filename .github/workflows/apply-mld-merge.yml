@@ -1,0 +1,69 @@
+name: Merge Medinipur-Malda (remove superseded stub) — one-shot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append removal entry (idempotent)
+        run: |
+          python3 - <<'PY'
+          import json
+          P = 'data/bus_removals.json'
+          r = json.load(open(P, encoding='utf-8'))
+          entry = {
+              "id": "wbbus-in-sbstc-medinipur-malda-4311",
+              "reason": "Superseded stub of the Medinipur-Malda SBSTC service (wbbus.in scrape): bare operator, only 6 stops, and internally inconsistent - its stoppage list ends at Malda Town 12:30 PM while its arrival_time field says 5:00 PM. Replaced by sbstc-medinipur-malda-4916, added from the operator's Facebook post (reg WB 39B 3125, 26 stops via Bishnupur-Bankura-Durgapur-Siuri, arrival 5:00 PM). Identity match on origin/destination/departure (4:30 AM)/arrival (5:00 PM) = 86/100; the stub's intermediate stops (Kharagpur-Burdwan-Moregram) belong to a different corridor.",
+          }
+          if not any(x.get('id') == 'wbbus-in-sbstc-medinipur-malda-4311' for x in r):
+              r.append(entry)
+              print('removal appended')
+          else:
+              print('removal already present')
+          json.dump(r, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('removals:', len(r))
+          PY
+
+      - name: Apply removals
+        run: python3 scripts/patch_fb_zzz_remove_buses.py --write
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json, os
+          d = json.load(open('data/busjatri_data.json'))
+          ids = {b['id'] for b in d['buses']}
+          assert 'wbbus-in-sbstc-medinipur-malda-4311' not in ids, 'stub still present'
+          assert 'sbstc-medinipur-malda-4916' in ids, 'keeper missing'
+          assert len(ids) >= 3900, 'bus count dropped'
+          print(f'OK: {len(ids)} buses; stub removed, keeper kept')
+          EOF
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Merge Medinipur-Malda: remove superseded wbbus.in stub (keep post-based sbstc-medinipur-malda-4916)"
+            git push
+          fi
