@@ -1,0 +1,123 @@
+name: Add Gurunank ASKA bus + Mitra note (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append community entries (idempotent)
+        run: |
+          python3 - <<'PY'
+          import json
+          P = 'data/community_buses.json'
+          c = json.load(open(P, encoding='utf-8'))
+
+          def S(n, u="", dn=""):
+              return {"name": n, "up": u, "down": dn}
+
+          bus = {
+              "operator": "Gurunank Intercity",
+              "bus_name": "Gurunank Intercity Asansol-ASKA",
+              "bus_type": "Private - AC Volvo",
+              "reg_no": "WB 37E 6839",
+              "origin": "Asansol",
+              "destination": "ASKA",
+              "departure_time": "3:30 PM",
+              "arrival_time": "9:00 AM",
+              "route": "Asansol - Durgapur - Bankura - Bishnupur - Garhbeta - Medinipur - Kharagpur - Belda - Baleshwar - Bhadrak - Cuttack - Bhubaneswar - ASKA",
+              "contact_number": "8170058882",
+              "source": "facebook (Bus Detailer)",
+              "detail_url": "",
+              "service_note": "Gurunank Intercity 2/2 AC Premium Seater Volvo 9400 B8R BS-IV. Mineral water, charging point, chilled AC, reading light. Dinner stop: Pradha Hotel (Panikoili) / Highway Dhaba (Ramsagar). Dynamic fare; online booking RedBus/AbhiBus.",
+              "stops": [
+                  S("Asansol", "3:30 PM", "6:30 AM"),
+                  S("Raniganj", "4:20 PM", "6:10 AM"),
+                  S("Durgapur", "5:30 PM", "5:45 AM"),
+                  S("Bankura Bypass", "6:30 PM", "4:50 AM"),
+                  S("Bishnupur Bypass", "8:15 PM", "4:00 AM"),
+                  S("Garhbeta", "9:30 PM", "3:30 AM"),
+                  S("Salboni", "10:00 PM", "3:00 AM"),
+                  S("Medinipur", "10:30 PM", ""),
+                  S("Kharagpur", "10:50 PM", "2:15 AM"),
+                  S("Belda", "11:20 PM", ""),
+                  S("Jaleshwar", "", "11:15 PM"),
+                  S("Baleshwar", "12:30 AM", "10:15 PM"),
+                  S("Soro", "", "9:45 PM"),
+                  S("Bhadrak", "1:30 AM", "9:15 PM"),
+                  S("Panikoili", "2:45 AM", "8:45 PM"),
+                  S("Chandikhole", "", "8:00 PM"),
+                  S("Cuttack", "4:00 AM", "7:00 PM"),
+                  S("Bhubaneswar", "4:45 AM", "6:20 PM"),
+                  S("Khalikote", "6:30 AM", ""),
+                  S("ASKA", "9:00 AM", "12:30 PM"),
+              ],
+          }
+          if not any(e.get('reg_no') == 'WB 37E 6839' for e in c['add']):
+              c['add'].append(bus)
+              print('bus1 appended')
+          else:
+              print('bus1 already present')
+
+          e2 = {
+              "target_id": "bussathi-mitra-500",
+              "source": "facebook (Route Mapper)",
+              "service_note": "Mitra Travels Super Fast (Jumping NH-60). Alternate reg WB 31 A 0196 (sister bus). Contact 9547664043.",
+          }
+          if not any(x.get('target_id') == 'bussathi-mitra-500' for x in c['enrich']):
+              c['enrich'].append(e2)
+              print('mitra enrich appended')
+          else:
+              print('mitra enrich already present')
+
+          json.dump(c, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('add:', len(c['add']), 'enrich:', len(c['enrich']))
+          PY
+
+      - name: Add community-reported buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          ids = {b['id'] for b in d['buses']}
+          assert len(ids) >= 3900, 'bus count dropped'
+          hit = [i for i in ids if i.startswith('gurunank-intercity-asansol-aska')]
+          assert hit, 'new ASKA bus missing'
+          b = [x for x in d['buses'] if x['id'] == hit[0]][0]
+          assert b.get('reg_no') == 'WB 37E 6839' and len(b['stoppages']) == 20, 'ASKA bus data wrong'
+          print(f"OK: {len(ids)} buses; ASKA bus {hit[0]} with {len(b['stoppages'])} stops")
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Community buses: add Gurunank Intercity Asansol-ASKA (Volvo AC); note on Mitra Asansol-Kanthi"
+            git push
+          fi
