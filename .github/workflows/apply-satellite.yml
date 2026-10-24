@@ -1,0 +1,74 @@
+name: Enrich Satellite Sarenga-Asansol (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append enrich entry (idempotent)
+        run: |
+          python3 - <<'PY'
+          import json
+          P = 'data/community_buses.json'
+          c = json.load(open(P, encoding='utf-8'))
+          e = {
+              "target_id": "bussathi-satellite-697",
+              "reg_no": "WB 67H 5677",
+              "source": "facebook (Amar Sohor Asansol)",
+              "service_note": "Jungle Mahal Super Fast. Ashok Leyland Cheetah Lynx Strong Body BS6 (3/2 seat). Old reg WB 67B 1577. Only bus service between Asansol and Sarenga.",
+          }
+          if not any(x.get('target_id') == 'bussathi-satellite-697' for x in c['enrich']):
+              c['enrich'].append(e)
+              print('enrich appended')
+          else:
+              print('enrich already present')
+          json.dump(c, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('enrich entries:', len(c['enrich']))
+          PY
+
+      - name: Add community-reported buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n >= 3900, f'bus count dropped to {n} - aborting'
+          b = [x for x in d['buses'] if x['id'] == 'bussathi-satellite-697']
+          assert b and b[0].get('reg_no') == 'WB 67H 5677', 'enrich not applied'
+          print(f'OK: {n} buses; satellite reg = {b[0]["reg_no"]}')
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Enrich Satellite Sarenga-Asansol: reg WB 67H 5677 + Jungle Mahal Super Fast note"
+            git push
+          fi
