@@ -446,5 +446,9 @@
  {
   "id": "whereismybus-ariyan-wb41f5048-or-sahil-0",
   "reason": "empty stub: no departure time and no stoppages (source whereismybus.in)"
+ },
+ {
+  "id": "wbbus-in-sbstc-medinipur-malda-4311",
+  "reason": "Superseded stub of the Medinipur-Malda SBSTC service (wbbus.in scrape): bare operator, only 6 stops, and internally inconsistent - its stoppage list ends at Malda Town 12:30 PM while its arrival_time field says 5:00 PM. Replaced by sbstc-medinipur-malda-4916, added from the operator's Facebook post (reg WB 39B 3125, 26 stops via Bishnupur-Bankura-Durgapur-Siuri, arrival 5:00 PM). Identity match on origin/destination/departure (4:30 AM)/arrival (5:00 PM) = 86/100; the stub's intermediate stops (Kharagpur-Burdwan-Moregram) belong to a different corridor."
  }
 ]

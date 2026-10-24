@@ -426639,62 +426639,6 @@
    "arrival_estimate_method": "coord_distance"
   },
   {
-   "id": "wbbus-in-sbstc-medinipur-malda-4311",
-   "bus_name": "SBSTC",
-   "reg_no": "",
-   "operator": "—",
-   "bus_type": "Government - SBSTC",
-   "origin": "Medinipur",
-   "destination": "Malda",
-   "departure_time": "4:30 AM",
-   "arrival_time": "5:00 PM",
-   "contact_number": "Not Available !",
-   "depot_name": "Medinipur",
-   "route": "Medinipur - Malda",
-   "stoppages": [
-    {
-     "no": 1,
-     "name": "Midnapore",
-     "up_time": "4:30 AM",
-     "down_time": ""
-    },
-    {
-     "no": 2,
-     "name": "Kharagpur",
-     "up_time": "6:06 AM",
-     "down_time": ""
-    },
-    {
-     "no": 3,
-     "name": "Burdwan",
-     "up_time": "7:42 AM",
-     "down_time": ""
-    },
-    {
-     "no": 4,
-     "name": "Moregram",
-     "up_time": "9:18 AM",
-     "down_time": ""
-    },
-    {
-     "no": 5,
-     "name": "Farakka",
-     "up_time": "10:54 AM",
-     "down_time": ""
-    },
-    {
-     "no": 6,
-     "name": "Malda Town",
-     "up_time": "12:30 PM",
-     "down_time": ""
-    }
-   ],
-   "source": "wbbus.in",
-   "time_source": "wbbus.in",
-   "total_stoppages": 6,
-   "detail_url": "https://wbbus.in/bus/sbstc-medinipur-malda-408"
-  },
-  {
    "id": "wbbus-in-sbstc-durgapur-city-center-purulia-4312",
    "bus_name": "SBSTC Durgapur-Purulia",
    "reg_no": "WB 39B 4813",
@@ -615301,7 +615245,7 @@
   }
  },
  "meta": {
-  "total_buses": 4907,
+  "total_buses": 4906,
   "total_routes": 3015,
   "total_stops": 4253,
   "version": "3.0.0",
