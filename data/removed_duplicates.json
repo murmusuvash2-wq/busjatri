@@ -1,6 +1,6 @@
 [
  {
-  "id": "monika-travels-ramharipur-purulia-4908",
+  "id": "monika-travels-ramharipur-purulia-4907",
   "bus_name": "Monika Travels Ramharipur-Purulia",
   "route": "Ramharipur - Purulia",
   "time": "6:30 AM",
@@ -8,7 +8,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "promila-bolpur-barakar-4911",
+  "id": "promila-bolpur-barakar-4910",
   "bus_name": "Promila Bolpur-Barakar",
   "route": "Bolpur - Barakar",
   "time": "6:20 AM",
@@ -16,7 +16,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "rbn-travels-kharagpur-barabazar-4909",
+  "id": "rbn-travels-kharagpur-barabazar-4908",
   "bus_name": "RBN Travels Kharagpur-Barabazar",
   "route": "Kharagpur - Barabazar",
   "time": "4:40 AM",
@@ -24,7 +24,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "samrat-bolpur-dumka-4910",
+  "id": "samrat-bolpur-dumka-4909",
   "bus_name": "Samrat Bolpur-Suri-Dumka (Priti Coach)",
   "route": "Bolpur - Dumka",
   "time": "6:50 AM",
@@ -32,7 +32,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "swapnamay-travels-haldia-durgapur-city-center-4912",
+  "id": "swapnamay-travels-haldia-durgapur-city-center-4911",
   "bus_name": "Swapnamay Travels Haldia-Durgapur",
   "route": "Haldia - Durgapur (City Center)",
   "time": "12:05 AM",
@@ -40,7 +40,7 @@
   "reason": "same reg+route+time as kept copy"
  },
  {
-  "id": "sbstc-kolkata-rampurhat-4913",
+  "id": "sbstc-kolkata-rampurhat-4912",
   "bus_name": "SBSTC Kolkata-Rampurhat",
   "route": "Kolkata - Rampurhat",
   "time": "",
@@ -48,7 +48,7 @@
   "reason": "untimed copy of a timed service with same route+name"
  },
  {
-  "id": "sbstc-rampurhat-kolkata-4914",
+  "id": "sbstc-rampurhat-kolkata-4913",
   "bus_name": "SBSTC Rampurhat-Kolkata",
   "route": "Rampurhat - Kolkata",
   "time": "",
@@ -56,7 +56,7 @@
   "reason": "untimed copy of a timed service with same route+name"
  },
  {
-  "id": "sbstc-midnapur-digha-4915",
+  "id": "sbstc-midnapur-digha-4914",
   "bus_name": "SBSTC Midnapur-Digha via Kolkata",
   "route": "Midnapur - Digha",
   "time": "",
@@ -64,7 +64,7 @@
   "reason": "untimed copy of a timed service with same route+name"
  },
  {
-  "id": "sbstc-digha-midnapur-4916",
+  "id": "sbstc-digha-midnapur-4915",
   "bus_name": "SBSTC Digha-Digha via Kolkata",
   "route": "Digha - Midnapur",
   "time": "",
