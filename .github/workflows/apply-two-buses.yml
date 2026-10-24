@@ -1,0 +1,132 @@
+name: Add Kudghat-Manbazar enrich + Medinipur-Malda bus (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append community entries (idempotent)
+        run: |
+          python3 - <<'PY'
+          import json
+
+          P = 'data/community_buses.json'
+          c = json.load(open(P, encoding='utf-8'))
+
+          # --- Bus 1: enrich the existing SBSTC Kudghat-Manbazar record ---
+          D = json.load(open('data/busjatri_data.json', encoding='utf-8'))
+          b = [x for x in D['buses'] if x['id'] == 'sbstc-kudghat-manbazar-4427']
+          if b:
+              stops = []
+              for s in b[0]['stoppages']:
+                  n = s['name']; up = s.get('up_time', ''); dn = s.get('down_time', '')
+                  if n == 'Silda': up = '11:15 AM'
+                  if n == 'Bandwan': up = '12:30 PM'
+                  if n == 'Manbazar': up = '1:20 PM'
+                  stops.append({"no": s['no'], "name": n, "up_time": up, "down_time": dn})
+              enrich = {
+                  "target_id": "sbstc-kudghat-manbazar-4427",
+                  "reg_no": "WB 39E 9208",
+                  "arrival_time": "1:20 PM",
+                  "service_note": "Daily alternative-day service (SBSTC). AL Viking BS-VI. Only direct government bus from Kudghat to Manbazar (Purulia).",
+                  "source": "facebook (Bus Detailer)",
+                  "stoppages": stops,
+              }
+              if not any(e.get('target_id') == 'sbstc-kudghat-manbazar-4427' for e in c['enrich']):
+                  c['enrich'].append(enrich)
+                  print('enrich appended')
+              else:
+                  print('enrich already present')
+          else:
+              print('WARNING: target bus not found, skipping enrich')
+
+          # --- Bus 2: add SBSTC Medinipur-Malda via Bishnupur-Bankura-Durgapur ---
+          def S(n, u="", dn=""):
+              return {"name": n, "up": u, "down": dn}
+          bus2 = {
+              "operator": "SBSTC",
+              "bus_name": "SBSTC Medinipur-Malda (via Bishnupur-Bankura-Durgapur)",
+              "bus_type": "Government - SBSTC",
+              "reg_no": "WB 39B 3125",
+              "depot_name": "Medinipur",
+              "origin": "Medinipur",
+              "destination": "Malda",
+              "departure_time": "4:30 AM",
+              "arrival_time": "5:00 PM",
+              "route": "Medinipur - Bishnupur - Bankura - Durgapur - Siuri - Malda",
+              "source": "facebook (Bus Detailer)",
+              "detail_url": "",
+              "service_note": "SBSTC Medinipur depot. TATA LP 1512 BS-III. Via Bishnupur, Bankura bypass, Durgapur, Siuri, Rampurhat, Farakka.",
+              "stops": [
+                  S("Medinipur", "4:30 AM", "3:20 PM"),
+                  S("Chandrakona Road", "5:20 AM", "2:15 PM"),
+                  S("Garhbeta", "5:40 AM", "1:55 PM"),
+                  S("Vadutala"), S("Godapiasal"), S("Salboni"), S("Dhadika"), S("Bankadah"),
+                  S("Bishnupur", "6:30 AM", "1:20 PM"),
+                  S("Ramsagar"), S("Onda"), S("Dhaldanga"),
+                  S("Bankura Bypass", "7:40 AM", "12:15 PM"),
+                  S("Beliatore"), S("Barjora"),
+                  S("Durgapur", "9:10 AM", "11:15 AM"),
+                  S("Panagarh"), S("Ilambazar"),
+                  S("Siuri", "11:50 AM", "8:40 AM"),
+                  S("Mohammadbazar"), S("Mallarpur"),
+                  S("Rampurhat", "1:30 PM", "7:00 AM"),
+                  S("Nalhati"), S("Umrapur"),
+                  S("Farakka", "4:00 PM", "4:00 AM"),
+                  S("Malda", "5:00 PM", "3:00 AM"),
+              ],
+          }
+          if not any(e.get('reg_no') == 'WB 39B 3125' for e in c['add']):
+              c['add'].append(bus2)
+              print('bus2 appended')
+          else:
+              print('bus2 already present')
+
+          json.dump(c, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('add:', len(c['add']), 'enrich:', len(c['enrich']))
+          PY
+
+      - name: Add community-reported buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          n = len(d['buses'])
+          assert n >= 3900, f'bus count dropped to {n} - aborting'
+          print(f'OK: {n} buses')
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Community buses: enrich SBSTC Kudghat-Manbazar; add SBSTC Medinipur-Malda (via Bishnupur-Bankura-Durgapur)"
+            git push
+          fi
