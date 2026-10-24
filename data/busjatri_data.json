@@ -81013,7 +81013,7 @@
   {
    "id": "bussathi-satellite-697",
    "bus_name": "SATELLITE",
-   "reg_no": "WB67B1577",
+   "reg_no": "WB 67H 5677",
    "operator": "—",
    "bus_type": "Private - NON AC",
    "origin": "Sarenga",
@@ -81121,9 +81121,10 @@
      "down_time": "2:05 PM"
     }
    ],
-   "source": "bussathi.in",
+   "source": "facebook (Amar Sohor Asansol)",
    "total_stoppages": 16,
-   "detail_url": "https://bussathi.in/bus/1003"
+   "detail_url": "https://bussathi.in/bus/1003",
+   "service_note": "Jungle Mahal Super Fast. Ashok Leyland Cheetah Lynx Strong Body BS6 (3/2 seat). Old reg WB 67B 1577. Only bus service between Asansol and Sarenga."
   },
   {
    "id": "bussathi-sathi-698",
