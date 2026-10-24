@@ -8116,6 +8116,153 @@
      "down": "6:40 AM"
     }
    ]
+  },
+  {
+   "operator": "SBSTC",
+   "bus_name": "SBSTC Medinipur-Malda (via Bishnupur-Bankura-Durgapur)",
+   "bus_type": "Government - SBSTC",
+   "reg_no": "WB 39B 3125",
+   "depot_name": "Medinipur",
+   "origin": "Medinipur",
+   "destination": "Malda",
+   "departure_time": "4:30 AM",
+   "arrival_time": "5:00 PM",
+   "route": "Medinipur - Bishnupur - Bankura - Durgapur - Siuri - Malda",
+   "source": "facebook (Bus Detailer)",
+   "detail_url": "",
+   "service_note": "SBSTC Medinipur depot. TATA LP 1512 BS-III. Via Bishnupur, Bankura bypass, Durgapur, Siuri, Rampurhat, Farakka.",
+   "stops": [
+    {
+     "name": "Medinipur",
+     "up": "4:30 AM",
+     "down": "3:20 PM"
+    },
+    {
+     "name": "Chandrakona Road",
+     "up": "5:20 AM",
+     "down": "2:15 PM"
+    },
+    {
+     "name": "Garhbeta",
+     "up": "5:40 AM",
+     "down": "1:55 PM"
+    },
+    {
+     "name": "Vadutala",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Godapiasal",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Salboni",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhadika",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankadah",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up": "6:30 AM",
+     "down": "1:20 PM"
+    },
+    {
+     "name": "Ramsagar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Onda",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "7:40 AM",
+     "down": "12:15 PM"
+    },
+    {
+     "name": "Beliatore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Durgapur",
+     "up": "9:10 AM",
+     "down": "11:15 AM"
+    },
+    {
+     "name": "Panagarh",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Ilambazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Siuri",
+     "up": "11:50 AM",
+     "down": "8:40 AM"
+    },
+    {
+     "name": "Mohammadbazar",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Mallarpur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Rampurhat",
+     "up": "1:30 PM",
+     "down": "7:00 AM"
+    },
+    {
+     "name": "Nalhati",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Umrapur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Farakka",
+     "up": "4:00 PM",
+     "down": "4:00 AM"
+    },
+    {
+     "name": "Malda",
+     "up": "5:00 PM",
+     "down": "3:00 AM"
+    }
+   ]
   }
  ],
  "enrich": [
@@ -14337,6 +14484,171 @@
      "name": "Bishnupur",
      "up_time": "12:25 PM",
      "down_time": "2:35 PM"
+    }
+   ]
+  },
+  {
+   "target_id": "sbstc-kudghat-manbazar-4427",
+   "reg_no": "WB 39E 9208",
+   "arrival_time": "1:20 PM",
+   "service_note": "Daily alternative-day service (SBSTC). AL Viking BS-VI. Only direct government bus from Kudghat to Manbazar (Purulia).",
+   "source": "facebook (Bus Detailer)",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Kudghat",
+     "up_time": "5:20 AM",
+     "down_time": ""
+    },
+    {
+     "no": 2,
+     "name": "Tollygunge",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Rashbehari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Hazra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Esplanade",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Dharmatala",
+     "up_time": "6:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Dhulagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Ranihati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 10,
+     "name": "Bagnan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Kolaghat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Mechogram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Panskura Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Chourangi More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Kharagpur Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Kalaikunda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Guptamoni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 18,
+     "name": "Lodhasuli",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 19,
+     "name": "Jhargram",
+     "up_time": "10:25 AM",
+     "down_time": "2:40 PM"
+    },
+    {
+     "no": 20,
+     "name": "Binpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 21,
+     "name": "Silda",
+     "up_time": "11:15 AM",
+     "down_time": ""
+    },
+    {
+     "no": 22,
+     "name": "Belpahari",
+     "up_time": "11:30 AM",
+     "down_time": "1:20 PM"
+    },
+    {
+     "no": 23,
+     "name": "Paradi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 24,
+     "name": "Bandwan",
+     "up_time": "12:30 PM",
+     "down_time": "12:20 PM"
+    },
+    {
+     "no": 25,
+     "name": "Boro",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 26,
+     "name": "Manbazar",
+     "up_time": "1:20 PM",
+     "down_time": "11:20 AM"
     }
    ]
   }
