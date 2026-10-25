@@ -1,0 +1,123 @@
+name: Enrich SBSTC Bankura-Siliguri (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Upsert enrich entry (idempotent)
+        run: |
+          python3 - <<'PY'
+          import json
+          P = 'data/community_buses.json'
+          c = json.load(open(P, encoding='utf-8'))
+
+          def S(n, u="", dn=""):
+              return {"name": n, "up_time": u, "down_time": dn}
+
+          stops = [
+              S("Bankura", "3:00 PM", ""),
+              S("Beliatore"),
+              S("Barjora"),
+              S("Durgapur City Centre", "5:15 PM", ""),
+              S("Muchipara"),
+              S("Panagarh"),
+              S("Ilambazar"),
+              S("Bolpur"),
+              S("Siuri"),
+              S("Rampurhat"),
+              S("Nalhati"),
+              S("Morgram"),
+              S("Umrapur"),
+              S("Dhuliyan"),
+              S("Farakka"),
+              S("Malda"),
+              S("Gazole"),
+              S("Itahar"),
+              S("Raiganj"),
+              S("Dalkhola"),
+              S("Kishanganj"),
+              S("Islampur"),
+              S("Bagdogra"),
+              S("Siliguri", "", "4:00 PM"),
+          ]
+          for i, s in enumerate(stops):
+              s['no'] = i + 1
+
+          e = {
+              "target_id": "sbstc-fb-bankura-siliguri-500pm",
+              "reg_no": "WB 39E 9278",
+              "departure_time": "3:00 PM",
+              "depot_name": "Bankura",
+              "source": "facebook (community report)",
+              "service_note": "SBSTC Bankura depot. Ashok Leyland Viking BS-VI. Non AC. Daily service. Return from Siliguri Tenzing Norgay Terminus 4:00 PM.",
+              "stoppages": stops,
+              "total_stoppages": len(stops),
+          }
+          found = False
+          for x in c['enrich']:
+              if x.get('target_id') == e['target_id']:
+                  x.update(e)
+                  found = True
+                  print('updated existing enrich')
+          if not found:
+              c['enrich'].append(e)
+              print('appended enrich')
+
+          json.dump(c, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('enrich entries:', len(c['enrich']))
+          PY
+
+      - name: Add community-reported buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          ids = {b['id'] for b in d['buses']}
+          assert len(ids) >= 3900, 'bus count dropped'
+          b = [x for x in d['buses'] if x['id'] == 'sbstc-fb-bankura-siliguri-500pm']
+          assert b, 'target bus gone'
+          b = b[0]
+          assert b.get('reg_no') == 'WB 39E 9278', 'reg not applied'
+          assert b.get('departure_time') == '3:00 PM', 'departure not updated'
+          names = [s['name'] for s in b['stoppages']]
+          assert 'Durgapur City Centre' in names and 'Bagdogra' in names, 'stops not updated'
+          dg = b['stoppages'][names.index('Durgapur City Centre')]['up_time']
+          assert dg == '5:15 PM', 'Durgapur time wrong'
+          print(f"OK: {len(ids)} buses; Bankura-Siliguri reg={b['reg_no']} dep={b['departure_time']} stops={len(names)}")
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Enrich SBSTC Bankura-Siliguri: reg WB 39E 9278, 3:00 PM departure, 24-stop chain with times"
+            git push
+          fi
