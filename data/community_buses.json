@@ -15080,6 +15080,161 @@
      "down_time": "12:00 PM"
     }
    ]
+  },
+  {
+   "target_id": "sbstc-fb-bankura-siliguri-500pm",
+   "reg_no": "WB 39E 9278",
+   "departure_time": "3:00 PM",
+   "depot_name": "Bankura",
+   "source": "facebook (community report)",
+   "service_note": "SBSTC Bankura depot. Ashok Leyland Viking BS-VI. Non AC. Daily service. Return from Siliguri Tenzing Norgay Terminus 4:00 PM.",
+   "stoppages": [
+    {
+     "name": "Bankura",
+     "up_time": "3:00 PM",
+     "down_time": "",
+     "no": 1
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": "",
+     "no": 2
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": "",
+     "no": 3
+    },
+    {
+     "name": "Durgapur City Centre",
+     "up_time": "5:15 PM",
+     "down_time": "",
+     "no": 4
+    },
+    {
+     "name": "Muchipara",
+     "up_time": "",
+     "down_time": "",
+     "no": 5
+    },
+    {
+     "name": "Panagarh",
+     "up_time": "",
+     "down_time": "",
+     "no": 6
+    },
+    {
+     "name": "Ilambazar",
+     "up_time": "",
+     "down_time": "",
+     "no": 7
+    },
+    {
+     "name": "Bolpur",
+     "up_time": "",
+     "down_time": "",
+     "no": 8
+    },
+    {
+     "name": "Siuri",
+     "up_time": "",
+     "down_time": "",
+     "no": 9
+    },
+    {
+     "name": "Rampurhat",
+     "up_time": "",
+     "down_time": "",
+     "no": 10
+    },
+    {
+     "name": "Nalhati",
+     "up_time": "",
+     "down_time": "",
+     "no": 11
+    },
+    {
+     "name": "Morgram",
+     "up_time": "",
+     "down_time": "",
+     "no": 12
+    },
+    {
+     "name": "Umrapur",
+     "up_time": "",
+     "down_time": "",
+     "no": 13
+    },
+    {
+     "name": "Dhuliyan",
+     "up_time": "",
+     "down_time": "",
+     "no": 14
+    },
+    {
+     "name": "Farakka",
+     "up_time": "",
+     "down_time": "",
+     "no": 15
+    },
+    {
+     "name": "Malda",
+     "up_time": "",
+     "down_time": "",
+     "no": 16
+    },
+    {
+     "name": "Gazole",
+     "up_time": "",
+     "down_time": "",
+     "no": 17
+    },
+    {
+     "name": "Itahar",
+     "up_time": "",
+     "down_time": "",
+     "no": 18
+    },
+    {
+     "name": "Raiganj",
+     "up_time": "",
+     "down_time": "",
+     "no": 19
+    },
+    {
+     "name": "Dalkhola",
+     "up_time": "",
+     "down_time": "",
+     "no": 20
+    },
+    {
+     "name": "Kishanganj",
+     "up_time": "",
+     "down_time": "",
+     "no": 21
+    },
+    {
+     "name": "Islampur",
+     "up_time": "",
+     "down_time": "",
+     "no": 22
+    },
+    {
+     "name": "Bagdogra",
+     "up_time": "",
+     "down_time": "",
+     "no": 23
+    },
+    {
+     "name": "Siliguri",
+     "up_time": "",
+     "down_time": "4:00 PM",
+     "no": 24
+    }
+   ],
+   "total_stoppages": 24
   }
  ]
 }
