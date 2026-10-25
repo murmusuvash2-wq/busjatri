@@ -8380,6 +8380,214 @@
      "down": "12:30 PM"
     }
    ]
+  },
+  {
+   "operator": "Bhabani Travels",
+   "bus_name": "Bhabani Travels Digha-Durgapur",
+   "bus_type": "Private - AC",
+   "reg_no": "WB 33P 9836",
+   "origin": "Digha",
+   "destination": "Durgapur",
+   "departure_time": "12:10 AM",
+   "arrival_time": "9:20 AM",
+   "route": "Digha - Jhargram - Durgapur",
+   "contact_number": "9734810101",
+   "source": "facebook (Bus Detailer)",
+   "detail_url": "",
+   "service_note": "Bhabani Travels (Maa Tara). Eicher Skyline Pro 3011 BS-VI, 2/2 comfortable seats with charging point, AC coach. Regular service.",
+   "stops": [
+    {
+     "name": "Digha",
+     "up": "12:10 AM",
+     "down": "10:25 PM"
+    },
+    {
+     "name": "Ramnagar",
+     "up": "12:25 AM",
+     "down": "9:25 PM"
+    },
+    {
+     "name": "Egra",
+     "up": "1:10 AM",
+     "down": "8:25 PM"
+    },
+    {
+     "name": "Belda",
+     "up": "2:10 AM",
+     "down": "8:25 PM"
+    },
+    {
+     "name": "Kharagpur CBT",
+     "up": "3:10 AM",
+     "down": "7:25 PM"
+    },
+    {
+     "name": "Lodhashuli",
+     "up": "4:10 AM",
+     "down": "6:20 PM"
+    },
+    {
+     "name": "Jhargram",
+     "up": "4:50 AM",
+     "down": "4:50 PM"
+    },
+    {
+     "name": "Binpur",
+     "up": "5:15 AM",
+     "down": "3:55 PM"
+    },
+    {
+     "name": "Shilda",
+     "up": "5:35 AM",
+     "down": "3:37 PM"
+    },
+    {
+     "name": "Phulkusma",
+     "up": "5:55 AM",
+     "down": "3:05 PM"
+    },
+    {
+     "name": "Raipur Bypass",
+     "up": "6:15 AM",
+     "down": "2:40 PM"
+    },
+    {
+     "name": "P. More",
+     "up": "6:35 AM",
+     "down": "2:20 PM"
+    },
+    {
+     "name": "Simlapal",
+     "up": "6:55 AM",
+     "down": "2:00 PM"
+    },
+    {
+     "name": "Taldangra",
+     "up": "7:15 AM",
+     "down": "1:40 PM"
+    },
+    {
+     "name": "Bankura Bypass",
+     "up": "7:55 AM",
+     "down": "1:00 PM"
+    },
+    {
+     "name": "Beliatore",
+     "up": "8:20 AM",
+     "down": "12:35 PM"
+    },
+    {
+     "name": "Barjora",
+     "up": "8:45 AM",
+     "down": "12:15 PM"
+    },
+    {
+     "name": "Durgapur Station Bus Stand",
+     "up": "9:05 AM",
+     "down": "12:00 PM"
+    },
+    {
+     "name": "Durgapur City Centre",
+     "up": "9:20 AM",
+     "down": "11:50 AM"
+    }
+   ]
+  },
+  {
+   "operator": "Shiv Shakti",
+   "bus_name": "Shiv Shakti Tata-Durgapur",
+   "bus_type": "Private - NON AC",
+   "reg_no": "JH 05AU 9069",
+   "origin": "Tata",
+   "destination": "Durgapur",
+   "departure_time": "6:05 AM",
+   "arrival_time": "11:35 AM",
+   "route": "Tata - Bandwan - Khatra - Bankura - Durgapur",
+   "source": "facebook (Bus Detailer)",
+   "detail_url": "",
+   "service_note": "Shiv Shakti interstate service, restarted after a long gap. Tata Marcopolo Ultra BS-III. Departs from Tata Mango Bus Stand Gate 5.",
+   "stops": [
+    {
+     "name": "Tata",
+     "up": "6:05 AM",
+     "down": "6:25 PM"
+    },
+    {
+     "name": "Patmada",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Katina",
+     "up": "6:55 AM",
+     "down": "5:30 PM"
+    },
+    {
+     "name": "Dhabani",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bandwan",
+     "up": "7:25 AM",
+     "down": "5:10 PM"
+    },
+    {
+     "name": "Paradi More",
+     "up": "8:15 AM",
+     "down": "4:30 PM"
+    },
+    {
+     "name": "Ranibandh",
+     "up": "8:50 AM",
+     "down": "4:00 PM"
+    },
+    {
+     "name": "Ankhuta More",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Khatra",
+     "up": "9:05 AM",
+     "down": "3:45 PM"
+    },
+    {
+     "name": "Hatirampur",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bangla",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Puyabagan",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Bankura",
+     "up": "10:25 AM",
+     "down": "2:25 PM"
+    },
+    {
+     "name": "Beliatore",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Barjora",
+     "up": "",
+     "down": ""
+    },
+    {
+     "name": "Durgapur Station",
+     "up": "11:35 AM",
+     "down": "12:55 PM"
+    }
+   ]
   }
  ],
  "enrich": [

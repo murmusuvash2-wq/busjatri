@@ -501031,6 +501031,258 @@
    "total_stoppages": 20,
    "detail_url": "",
    "service_note": "Gurunank Intercity 2/2 AC Premium Seater Volvo 9400 B8R BS-IV. Mineral water, charging point, chilled AC, reading light. Dinner stop: Pradha Hotel (Panikoili) / Highway Dhaba (Ramsagar). Dynamic fare; online booking RedBus/AbhiBus."
+  },
+  {
+   "id": "bhabani-travels-digha-durgapur-4917",
+   "bus_name": "Bhabani Travels Digha-Durgapur",
+   "reg_no": "WB 33P 9836",
+   "operator": "Bhabani Travels",
+   "bus_type": "Private - AC",
+   "origin": "Digha",
+   "destination": "Durgapur",
+   "departure_time": "12:10 AM",
+   "arrival_time": "9:20 AM",
+   "contact_number": "9734810101",
+   "depot_name": "",
+   "route": "Digha - Jhargram - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Digha",
+     "up_time": "12:10 AM",
+     "down_time": "10:25 PM"
+    },
+    {
+     "no": 2,
+     "name": "Ramnagar",
+     "up_time": "12:25 AM",
+     "down_time": "9:25 PM"
+    },
+    {
+     "no": 3,
+     "name": "Egra",
+     "up_time": "1:10 AM",
+     "down_time": "8:25 PM"
+    },
+    {
+     "no": 4,
+     "name": "Belda",
+     "up_time": "2:10 AM",
+     "down_time": "8:25 PM"
+    },
+    {
+     "no": 5,
+     "name": "Kharagpur CBT",
+     "up_time": "3:10 AM",
+     "down_time": "7:25 PM"
+    },
+    {
+     "no": 6,
+     "name": "Lodhashuli",
+     "up_time": "4:10 AM",
+     "down_time": "6:20 PM"
+    },
+    {
+     "no": 7,
+     "name": "Jhargram",
+     "up_time": "4:50 AM",
+     "down_time": "4:50 PM"
+    },
+    {
+     "no": 8,
+     "name": "Binpur",
+     "up_time": "5:15 AM",
+     "down_time": "3:55 PM"
+    },
+    {
+     "no": 9,
+     "name": "Shilda",
+     "up_time": "5:35 AM",
+     "down_time": "3:37 PM"
+    },
+    {
+     "no": 10,
+     "name": "Phulkusma",
+     "up_time": "5:55 AM",
+     "down_time": "3:05 PM"
+    },
+    {
+     "no": 11,
+     "name": "Raipur Bypass",
+     "up_time": "6:15 AM",
+     "down_time": "2:40 PM"
+    },
+    {
+     "no": 12,
+     "name": "P. More",
+     "up_time": "6:35 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "no": 13,
+     "name": "Simlapal",
+     "up_time": "6:55 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "no": 14,
+     "name": "Taldangra",
+     "up_time": "7:15 AM",
+     "down_time": "1:40 PM"
+    },
+    {
+     "no": 15,
+     "name": "Bankura Bypass",
+     "up_time": "7:55 AM",
+     "down_time": "1:00 PM"
+    },
+    {
+     "no": 16,
+     "name": "Beliatore",
+     "up_time": "8:20 AM",
+     "down_time": "12:35 PM"
+    },
+    {
+     "no": 17,
+     "name": "Barjora",
+     "up_time": "8:45 AM",
+     "down_time": "12:15 PM"
+    },
+    {
+     "no": 18,
+     "name": "Durgapur Station Bus Stand",
+     "up_time": "9:05 AM",
+     "down_time": "12:00 PM"
+    },
+    {
+     "no": 19,
+     "name": "Durgapur City Centre",
+     "up_time": "9:20 AM",
+     "down_time": "11:50 AM"
+    }
+   ],
+   "source": "facebook (Bus Detailer)",
+   "time_source": "facebook (Bus Detailer)",
+   "total_stoppages": 19,
+   "detail_url": "",
+   "service_note": "Bhabani Travels (Maa Tara). Eicher Skyline Pro 3011 BS-VI, 2/2 comfortable seats with charging point, AC coach. Regular service."
+  },
+  {
+   "id": "shiv-shakti-tata-durgapur-4918",
+   "bus_name": "Shiv Shakti Tata-Durgapur",
+   "reg_no": "JH 05AU 9069",
+   "operator": "Shiv Shakti",
+   "bus_type": "Private - NON AC",
+   "origin": "Tata",
+   "destination": "Durgapur",
+   "departure_time": "6:05 AM",
+   "arrival_time": "11:35 AM",
+   "contact_number": "",
+   "depot_name": "",
+   "route": "Tata - Bandwan - Khatra - Bankura - Durgapur",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Tata",
+     "up_time": "6:05 AM",
+     "down_time": "6:25 PM"
+    },
+    {
+     "no": 2,
+     "name": "Patmada",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Katina",
+     "up_time": "6:55 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "no": 4,
+     "name": "Dhabani",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Bandwan",
+     "up_time": "7:25 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "no": 6,
+     "name": "Paradi More",
+     "up_time": "8:15 AM",
+     "down_time": "4:30 PM"
+    },
+    {
+     "no": 7,
+     "name": "Ranibandh",
+     "up_time": "8:50 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "no": 8,
+     "name": "Ankhuta More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Khatra",
+     "up_time": "9:05 AM",
+     "down_time": "3:45 PM"
+    },
+    {
+     "no": 10,
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Puyabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Bankura",
+     "up_time": "10:25 AM",
+     "down_time": "2:25 PM"
+    },
+    {
+     "no": 14,
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 15,
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Durgapur Station",
+     "up_time": "11:35 AM",
+     "down_time": "12:55 PM"
+    }
+   ],
+   "source": "facebook (Bus Detailer)",
+   "time_source": "facebook (Bus Detailer)",
+   "total_stoppages": 16,
+   "detail_url": "",
+   "service_note": "Shiv Shakti interstate service, restarted after a long gap. Tata Marcopolo Ultra BS-III. Departs from Tata Mango Bus Stand Gate 5."
   }
  ],
  "routes": {
@@ -615395,7 +615647,7 @@
   }
  },
  "meta": {
-  "total_buses": 4907,
+  "total_buses": 4909,
   "total_routes": 3015,
   "total_stops": 4253,
   "version": "3.0.0",
