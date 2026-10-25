@@ -1,0 +1,148 @@
+name: Add Bhabani Digha-Durgapur + Shiv Shakti Tata-Durgapur (one-shot)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Append community entries (idempotent)
+        run: |
+          python3 - <<'PY'
+          import json
+          P = 'data/community_buses.json'
+          c = json.load(open(P, encoding='utf-8'))
+
+          def S(n, u="", dn=""):
+              return {"name": n, "up": u, "down": dn}
+
+          b1 = {
+              "operator": "Bhabani Travels",
+              "bus_name": "Bhabani Travels Digha-Durgapur",
+              "bus_type": "Private - AC",
+              "reg_no": "WB 33P 9836",
+              "origin": "Digha",
+              "destination": "Durgapur",
+              "departure_time": "12:10 AM",
+              "arrival_time": "9:20 AM",
+              "route": "Digha - Jhargram - Durgapur",
+              "contact_number": "9734810101",
+              "source": "facebook (Bus Detailer)",
+              "detail_url": "",
+              "service_note": "Bhabani Travels (Maa Tara). Eicher Skyline Pro 3011 BS-VI, 2/2 comfortable seats with charging point, AC coach. Regular service.",
+              "stops": [
+                  S("Digha", "12:10 AM", "10:25 PM"),
+                  S("Ramnagar", "12:25 AM", "9:25 PM"),
+                  S("Egra", "1:10 AM", "8:25 PM"),
+                  S("Belda", "2:10 AM", "8:25 PM"),
+                  S("Kharagpur CBT", "3:10 AM", "7:25 PM"),
+                  S("Lodhashuli", "4:10 AM", "6:20 PM"),
+                  S("Jhargram", "4:50 AM", "4:50 PM"),
+                  S("Binpur", "5:15 AM", "3:55 PM"),
+                  S("Shilda", "5:35 AM", "3:37 PM"),
+                  S("Phulkusma", "5:55 AM", "3:05 PM"),
+                  S("Raipur Bypass", "6:15 AM", "2:40 PM"),
+                  S("P. More", "6:35 AM", "2:20 PM"),
+                  S("Simlapal", "6:55 AM", "2:00 PM"),
+                  S("Taldangra", "7:15 AM", "1:40 PM"),
+                  S("Bankura Bypass", "7:55 AM", "1:00 PM"),
+                  S("Beliatore", "8:20 AM", "12:35 PM"),
+                  S("Barjora", "8:45 AM", "12:15 PM"),
+                  S("Durgapur Station Bus Stand", "9:05 AM", "12:00 PM"),
+                  S("Durgapur City Centre", "9:20 AM", "11:50 AM"),
+              ],
+          }
+          b2 = {
+              "operator": "Shiv Shakti",
+              "bus_name": "Shiv Shakti Tata-Durgapur",
+              "bus_type": "Private - NON AC",
+              "reg_no": "JH 05AU 9069",
+              "origin": "Tata",
+              "destination": "Durgapur",
+              "departure_time": "6:05 AM",
+              "arrival_time": "11:35 AM",
+              "route": "Tata - Bandwan - Khatra - Bankura - Durgapur",
+              "source": "facebook (Bus Detailer)",
+              "detail_url": "",
+              "service_note": "Shiv Shakti interstate service, restarted after a long gap. Tata Marcopolo Ultra BS-III. Departs from Tata Mango Bus Stand Gate 5.",
+              "stops": [
+                  S("Tata", "6:05 AM", "6:25 PM"),
+                  S("Patmada", "", ""),
+                  S("Katina", "6:55 AM", "5:30 PM"),
+                  S("Dhabani", "", ""),
+                  S("Bandwan", "7:25 AM", "5:10 PM"),
+                  S("Paradi More", "8:15 AM", "4:30 PM"),
+                  S("Ranibandh", "8:50 AM", "4:00 PM"),
+                  S("Ankhuta More", "", ""),
+                  S("Khatra", "9:05 AM", "3:45 PM"),
+                  S("Hatirampur", "", ""),
+                  S("Bangla", "", ""),
+                  S("Puyabagan", "", ""),
+                  S("Bankura", "10:25 AM", "2:25 PM"),
+                  S("Beliatore", "", ""),
+                  S("Barjora", "", ""),
+                  S("Durgapur Station", "11:35 AM", "12:55 PM"),
+              ],
+          }
+
+          for b in (b1, b2):
+              if not any(e.get('reg_no') == b['reg_no'] for e in c['add']):
+                  c['add'].append(b)
+                  print('appended', b['reg_no'])
+              else:
+                  print('already present', b['reg_no'])
+
+          json.dump(c, open(P, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+          print('add:', len(c['add']), 'enrich:', len(c['enrich']))
+          PY
+
+      - name: Add community-reported buses
+        run: python3 scripts/add_community_buses.py --write
+
+      - name: Remove duplicates
+        run: python3 scripts/dedup_buses.py --write
+
+      - name: Validate
+        run: |
+          python3 - <<'EOF'
+          import json
+          d = json.load(open('data/busjatri_data.json'))
+          ids = {b['id'] for b in d['buses']}
+          assert len(ids) >= 3900, 'bus count dropped'
+          for prefix, reg, n in (('bhabani-travels-digha-durgapur', 'WB 33P 9836', 19),
+                                 ('shiv-shakti-tata-durgapur', 'JH 05AU 9069', 16)):
+              hit = [i for i in ids if i.startswith(prefix)]
+              assert hit, prefix + ' missing'
+              b = [x for x in d['buses'] if x['id'] == hit[0]][0]
+              assert b.get('reg_no') == reg, prefix + ' reg wrong'
+              assert len(b['stoppages']) == n, prefix + ' stop count wrong'
+          print(f'OK: {len(ids)} buses; both new buses added')
+          EOF
+
+      - name: Rebuild pages
+        env:
+          SITE_BASE: https://busjatri.in
+        run: |
+          python3 scripts/fix_am_pm.py
+          python3 scripts/gen_seo_pages.py
+          python3 scripts/build_client_data.py
+          python3 scripts/finalize_pages.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Community buses: add Bhabani Digha-Durgapur (AC) and Shiv Shakti Tata-Durgapur"
+            git push
+          fi
