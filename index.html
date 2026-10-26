@@ -34,7 +34,7 @@
   <link rel="stylesheet" href="css/style.css?v=a59e45a9" />
   <link rel="stylesheet" href="css/extras.css?v=5cad36ef" />
   <link rel="stylesheet" href="css/bus-page.css?v=afd70042" />
-  <link rel="stylesheet" href="css/ux-fixes.css?v=4f8d5586" />
+  <link rel="stylesheet" href="css/ux-fixes.css?v=a111b3c0" />
 <!-- Google tag (gtag.js) - GA4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L4E3D1YX9X"></script>
 <script>
@@ -63,7 +63,12 @@
 <style id="busjatri-ux-polish">
 .trust-note{margin:12px 0;padding:10px 14px;border:1px solid color-mix(in srgb,var(--accent,#b8791f) 35%,transparent);border-radius:12px;background:color-mix(in srgb,var(--accent,#b8791f) 8%,transparent);color:var(--ink-dim,#665);font-size:.82rem;line-height:1.5}.trust-note strong{color:var(--ink,#222)}
 .no-results,.empty-state{display:none}.bus-card{transition:transform .18s ease,box-shadow .18s ease}.bus-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(50,35,10,.10)}.bus-card .dep{font-variant-numeric:tabular-nums;white-space:nowrap}.missing-data{color:var(--ink-dim,#777);font-style:italic}
-.stats-inline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.12));border-radius:12px;padding:9px 4px;margin:14px auto 0;max-width:460px;box-shadow:0 1px 4px rgba(0,0,0,.03);text-align:center;align-items:center}
+.stats-inline{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;background:var(--surface,#fffcf4);border:1px solid var(--line,rgba(33,28,22,.12));border-radius:12px;padding:9px 4px;margin:14px auto 0;max-width:460px;box-shadow:0 1px 4px rgba(0,0,0,.03);text-align:center;align-items:center;transition:opacity .25s ease,filter .25s ease;will-change:opacity,filter}
+.search-box:focus-within ~ .stats-inline,body.has-ac-open .stats-inline{opacity:0.18;filter:blur(3px);pointer-events:none;user-select:none}
+.search-box{position:relative;z-index:30}
+.search-box:focus-within{z-index:60}
+.search-field{position:relative}
+.ac-drop{position:absolute;top:calc(100% - 6px);left:0;right:0;background:var(--surface,#fffcf4);border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 12px 32px rgba(60,40,10,.20),0 2px 8px rgba(0,0,0,.08);z-index:100;max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .stats-inline .stat-col{display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;min-width:0;padding:0 2px}
 .stats-inline .stat-col:not(:last-child)::after{content:"";position:absolute;right:0;top:15%;height:70%;width:1px;background:var(--line,rgba(33,28,22,.15))}
 .stats-inline .stat-num{font-family:var(--font-mono,monospace);font-size:15px;font-weight:700;color:var(--amber-ink,#6b4610);line-height:1.2;white-space:nowrap}
@@ -216,7 +221,7 @@
   <script defer src="js/bus-page.js?v=0ca213bb"></script>
   <script defer src="js/lang-persist.js?v=ca7b09d4"></script>
   <script defer src="js/ux-fixes.js?v=6bbe37af"></script>
-  <script defer src="js/stop-search-all.js?v=259c7a6d"></script>
+  <script defer src="js/stop-search-all.js?v=23fbb029"></script>
   <script defer src="js/alt-route.js?v=5329bc41"></script>
   <script>
     if ('serviceWorker' in navigator) {

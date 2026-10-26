@@ -170,6 +170,7 @@
   }
   function acHide() {
     document.querySelectorAll('.ac-drop').forEach(function (d) { d.remove(); });
+    if (document.body) document.body.classList.remove('has-ac-open');
   }
   function acShow(input) {
     acHide();
@@ -187,6 +188,7 @@
       return '<div class="ac-item">' + acHtml(n) + '</div>';
     }).join('');
     field.appendChild(d);
+    if (document.body) document.body.classList.add('has-ac-open');
   }
   function acIsInput(el) {
     return !!(el && (el.id === 'fromInput' || el.id === 'toInput' || el.id === 'stopInput'));

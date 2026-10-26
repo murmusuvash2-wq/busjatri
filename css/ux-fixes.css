@@ -1,10 +1,17 @@
 /* BusJatri UX fixes (2026-09-16) — custom stop autocomplete styles */
 /* Replaces the native datalist overlay that blocked fields below  */
+.search-box{position:relative;z-index:30}
+.search-box:focus-within{z-index:60}
 .search-field{position:relative}
-.ac-drop{position:absolute;top:calc(100% - 6px);left:10px;right:10px;background:var(--surface,#fffcf4);border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 10px 26px rgba(60,40,10,.16);z-index:40;max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch}
+.ac-drop{position:absolute;top:calc(100% - 6px);left:0;right:0;background:var(--surface,#fffcf4);border:1px solid var(--line-strong,rgba(33,28,22,.24));border-radius:12px;box-shadow:0 12px 32px rgba(60,40,10,.20),0 2px 8px rgba(0,0,0,.08);z-index:100;max-height:236px;overflow-y:auto;-webkit-overflow-scrolling:touch}
 .ac-item{padding:11px 14px;font-size:14px;cursor:pointer;border-bottom:1px solid var(--line,rgba(33,28,22,.13))}
 .ac-item:last-child{border-bottom:0}
 .ac-item:hover,.ac-item:active{background:rgba(184,121,31,.12)}
+
+/* Background stats strip softly fades & blurs while user types or suggestions are open */
+.stats-inline{transition:opacity .25s ease,filter .25s ease;will-change:opacity,filter}
+.search-box:focus-within ~ .stats-inline,
+body.has-ac-open .stats-inline{opacity:0.18;filter:blur(3px);pointer-events:none;user-select:none}
 
 /* Compact share row — Map / WhatsApp / X buttons (bus pages) */
 .wa-row{gap:8px;margin-top:10px}
