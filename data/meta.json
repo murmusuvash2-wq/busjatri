@@ -1,7 +1,7 @@
 {
- "total_buses": 4622,
- "total_routes": 2526,
- "total_stops": 2740,
+ "total_buses": 4909,
+ "total_routes": 3015,
+ "total_stops": 4253,
  "version": "3.0.0",
  "last_updated": "2026-09-18",
  "name": "BusJatri",

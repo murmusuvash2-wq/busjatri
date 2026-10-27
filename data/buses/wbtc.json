@@ -6660,7 +6660,7 @@
    }
   },
   {
-   "seq": 1461,
+   "seq": 1460,
    "bus": {
     "id": "ktr-government-c",
     "bus_name": "C",
@@ -6724,7 +6724,7 @@
    }
   },
   {
-   "seq": 1704,
+   "seq": 1703,
    "bus": {
     "id": "ktr-government-sd-3",
     "bus_name": "SD-3",
@@ -6902,7 +6902,7 @@
    }
   },
   {
-   "seq": 1705,
+   "seq": 1704,
    "bus": {
     "id": "ktr-government-sd-4",
     "bus_name": "SD-4",
@@ -7038,7 +7038,7 @@
    }
   },
   {
-   "seq": 1706,
+   "seq": 1705,
    "bus": {
     "id": "ktr-government-sd-5",
     "bus_name": "SD-5",
@@ -7222,7 +7222,7 @@
    }
   },
   {
-   "seq": 1707,
+   "seq": 1706,
    "bus": {
     "id": "ktr-government-sd-8",
     "bus_name": "SD-8",
@@ -7382,7 +7382,7 @@
    }
   },
   {
-   "seq": 1708,
+   "seq": 1707,
    "bus": {
     "id": "ktr-government-sd-9",
     "bus_name": "SD-9",
@@ -7542,7 +7542,7 @@
    }
   },
   {
-   "seq": 1709,
+   "seq": 1708,
    "bus": {
     "id": "ktr-government-sd-11",
     "bus_name": "SD-11",
@@ -7738,7 +7738,7 @@
    }
   },
   {
-   "seq": 1710,
+   "seq": 1709,
    "bus": {
     "id": "ktr-government-sd-11-1",
     "bus_name": "SD-11/1",
@@ -7994,7 +7994,7 @@
    }
   },
   {
-   "seq": 1711,
+   "seq": 1710,
    "bus": {
     "id": "ktr-government-sd-14",
     "bus_name": "SD-14",
@@ -8130,7 +8130,7 @@
    }
   },
   {
-   "seq": 1712,
+   "seq": 1711,
    "bus": {
     "id": "ktr-government-sd-16",
     "bus_name": "SD-16",
@@ -8314,7 +8314,7 @@
    }
   },
   {
-   "seq": 1713,
+   "seq": 1712,
    "bus": {
     "id": "ktr-government-sd-18",
     "bus_name": "SD-18",
@@ -8498,7 +8498,7 @@
    }
   },
   {
-   "seq": 1714,
+   "seq": 1713,
    "bus": {
     "id": "ktr-government-sd-19",
     "bus_name": "SD-19",
@@ -8802,7 +8802,7 @@
    }
   },
   {
-   "seq": 1715,
+   "seq": 1714,
    "bus": {
     "id": "ktr-government-sd-24",
     "bus_name": "SD-24",
@@ -9094,7 +9094,7 @@
    }
   },
   {
-   "seq": 1716,
+   "seq": 1715,
    "bus": {
     "id": "ktr-government-sd-26",
     "bus_name": "SD-26",
@@ -9266,7 +9266,7 @@
    }
   },
   {
-   "seq": 1717,
+   "seq": 1716,
    "bus": {
     "id": "ktr-government-sd-27",
     "bus_name": "SD-27",
@@ -9426,7 +9426,7 @@
    }
   },
   {
-   "seq": 1718,
+   "seq": 1717,
    "bus": {
     "id": "ktr-government-sd-29",
     "bus_name": "SD-29",
@@ -9520,7 +9520,7 @@
    }
   },
   {
-   "seq": 1719,
+   "seq": 1718,
    "bus": {
     "id": "ktr-government-sd-30",
     "bus_name": "SD-30",
@@ -9662,7 +9662,7 @@
    }
   },
   {
-   "seq": 1720,
+   "seq": 1719,
    "bus": {
     "id": "ktr-government-sd-33",
     "bus_name": "SD-33",
@@ -9864,7 +9864,7 @@
    }
   },
   {
-   "seq": 1721,
+   "seq": 1720,
    "bus": {
     "id": "ktr-government-sd-39",
     "bus_name": "SD-39",
@@ -10036,7 +10036,7 @@
    }
   },
   {
-   "seq": 1722,
+   "seq": 1721,
    "bus": {
     "id": "ktr-government-sd-50",
     "bus_name": "SD-50",
@@ -10184,7 +10184,7 @@
    }
   },
   {
-   "seq": 1723,
+   "seq": 1722,
    "bus": {
     "id": "ktr-government-sd-53",
     "bus_name": "SD-53",
@@ -10356,7 +10356,7 @@
    }
   },
   {
-   "seq": 1724,
+   "seq": 1723,
    "bus": {
     "id": "ktr-government-sd-63",
     "bus_name": "SD-63",
@@ -10534,7 +10534,7 @@
    }
   },
   {
-   "seq": 1725,
+   "seq": 1724,
    "bus": {
     "id": "ktr-government-sd-64",
     "bus_name": "SD-64",
@@ -10676,7 +10676,7 @@
    }
   },
   {
-   "seq": 1726,
+   "seq": 1725,
    "bus": {
     "id": "ktr-government-sd-69",
     "bus_name": "SD-69",
@@ -10734,7 +10734,7 @@
    }
   },
   {
-   "seq": 1727,
+   "seq": 1726,
    "bus": {
     "id": "ktr-government-sd-76",
     "bus_name": "SD-76",
@@ -10894,7 +10894,7 @@
    }
   },
   {
-   "seq": 1728,
+   "seq": 1727,
    "bus": {
     "id": "ktr-government-sd-85",
     "bus_name": "SD-85",
@@ -10988,7 +10988,7 @@
    }
   },
   {
-   "seq": 1729,
+   "seq": 1728,
    "bus": {
     "id": "ktr-government-sd-94",
     "bus_name": "SD-94",
@@ -11064,7 +11064,7 @@
    }
   },
   {
-   "seq": 1730,
+   "seq": 1729,
    "bus": {
     "id": "ktr-government-dn-2-1",
     "bus_name": "DN-2/1",
@@ -11212,7 +11212,7 @@
    }
   },
   {
-   "seq": 1731,
+   "seq": 1730,
    "bus": {
     "id": "ktr-government-dn-5",
     "bus_name": "DN-5",
@@ -11390,7 +11390,7 @@
    }
   },
   {
-   "seq": 1732,
+   "seq": 1731,
    "bus": {
     "id": "ktr-government-dn-8",
     "bus_name": "DN-8",
@@ -11544,7 +11544,7 @@
    }
   },
   {
-   "seq": 1733,
+   "seq": 1732,
    "bus": {
     "id": "ktr-government-dn-9-1",
     "bus_name": "DN-9/1",
@@ -11668,7 +11668,7 @@
    }
   },
   {
-   "seq": 1734,
+   "seq": 1733,
    "bus": {
     "id": "ktr-government-dn-12",
     "bus_name": "DN-12",
@@ -11846,7 +11846,7 @@
    }
   },
   {
-   "seq": 1735,
+   "seq": 1734,
    "bus": {
     "id": "ktr-government-dn-12-1",
     "bus_name": "DN-12/1",
@@ -12018,7 +12018,7 @@
    }
   },
   {
-   "seq": 1736,
+   "seq": 1735,
    "bus": {
     "id": "ktr-government-dn-13",
     "bus_name": "DN-13",
@@ -12202,7 +12202,7 @@
    }
   },
   {
-   "seq": 1737,
+   "seq": 1736,
    "bus": {
     "id": "ktr-government-dn-16-1",
     "bus_name": "DN-16/1",
@@ -12548,7 +12548,7 @@
    }
   },
   {
-   "seq": 1738,
+   "seq": 1737,
    "bus": {
     "id": "ktr-government-dn-17",
     "bus_name": "DN-17",
@@ -12786,7 +12786,7 @@
    }
   },
   {
-   "seq": 1739,
+   "seq": 1738,
    "bus": {
     "id": "ktr-government-dn-18",
     "bus_name": "DN-18",
@@ -12946,7 +12946,7 @@
    }
   },
   {
-   "seq": 1740,
+   "seq": 1739,
    "bus": {
     "id": "ktr-government-dn-28",
     "bus_name": "DN-28",
@@ -13046,7 +13046,7 @@
    }
   },
   {
-   "seq": 1741,
+   "seq": 1740,
    "bus": {
     "id": "ktr-government-dn-35",
     "bus_name": "DN-35",
@@ -13254,7 +13254,7 @@
    }
   },
   {
-   "seq": 1742,
+   "seq": 1741,
    "bus": {
     "id": "ktr-government-dn-38",
     "bus_name": "DN-38",
@@ -13360,7 +13360,7 @@
    }
   },
   {
-   "seq": 1743,
+   "seq": 1742,
    "bus": {
     "id": "ktr-government-dn-43",
     "bus_name": "DN-43",
@@ -13448,7 +13448,7 @@
    }
   },
   {
-   "seq": 1744,
+   "seq": 1743,
    "bus": {
     "id": "ktr-government-dn-44",
     "bus_name": "DN-44",
@@ -13704,7 +13704,7 @@
    }
   },
   {
-   "seq": 1745,
+   "seq": 1744,
    "bus": {
     "id": "ktr-government-dn-46",
     "bus_name": "DN-46",
@@ -13846,7 +13846,7 @@
    }
   },
   {
-   "seq": 1746,
+   "seq": 1745,
    "bus": {
     "id": "ktr-government-dn-47",
     "bus_name": "DN-47",
@@ -14012,7 +14012,7 @@
    }
   },
   {
-   "seq": 1747,
+   "seq": 1746,
    "bus": {
     "id": "ktr-government-k-1",
     "bus_name": "K-1",
@@ -14172,7 +14172,7 @@
    }
   },
   {
-   "seq": 1748,
+   "seq": 1747,
    "bus": {
     "id": "ktr-government-k-4",
     "bus_name": "K-4",
@@ -14344,7 +14344,7 @@
    }
   },
   {
-   "seq": 1749,
+   "seq": 1748,
    "bus": {
     "id": "ktr-government-k-11",
     "bus_name": "K-11",
@@ -14450,7 +14450,7 @@
    }
   },
   {
-   "seq": 1750,
+   "seq": 1749,
    "bus": {
     "id": "ktr-government-kb-12",
     "bus_name": "KB-12",
@@ -14634,7 +14634,7 @@
    }
   },
   {
-   "seq": 1751,
+   "seq": 1750,
    "bus": {
     "id": "ktr-government-kb-15",
     "bus_name": "KB-15",
@@ -14770,7 +14770,7 @@
    }
   },
   {
-   "seq": 1752,
+   "seq": 1751,
    "bus": {
     "id": "ktr-government-kb-16",
     "bus_name": "KB-16",
@@ -14990,7 +14990,7 @@
    }
   },
   {
-   "seq": 1753,
+   "seq": 1752,
    "bus": {
     "id": "ktr-government-kb-17",
     "bus_name": "KB-17",
@@ -15258,7 +15258,7 @@
    }
   },
   {
-   "seq": 1754,
+   "seq": 1753,
    "bus": {
     "id": "ktr-government-kb-21",
     "bus_name": "KB-21",
@@ -15496,7 +15496,7 @@
    }
   },
   {
-   "seq": 1755,
+   "seq": 1754,
    "bus": {
     "id": "ktr-government-kb-22",
     "bus_name": "KB-22",
@@ -15662,7 +15662,7 @@
    }
   },
   {
-   "seq": 1756,
+   "seq": 1755,
    "bus": {
     "id": "ktr-government-kb-24",
     "bus_name": "KB-24",
@@ -15810,7 +15810,7 @@
    }
   },
   {
-   "seq": 1762,
+   "seq": 1761,
    "bus": {
     "id": "ktr-government-e-43",
     "bus_name": "E-43",
@@ -15970,7 +15970,7 @@
    }
   },
   {
-   "seq": 1763,
+   "seq": 1762,
    "bus": {
     "id": "ktr-government-e-44",
     "bus_name": "E-44",
@@ -16082,7 +16082,7 @@
    }
   },
   {
-   "seq": 1764,
+   "seq": 1763,
    "bus": {
     "id": "ktr-government-e-53",
     "bus_name": "E-53",
@@ -16230,7 +16230,7 @@
    }
   },
   {
-   "seq": 1853,
+   "seq": 1852,
    "bus": {
     "id": "ktr-government-e-1",
     "bus_name": "E-1",
@@ -16348,7 +16348,7 @@
    }
   },
   {
-   "seq": 1854,
+   "seq": 1853,
    "bus": {
     "id": "ktr-government-ac-1",
     "bus_name": "AC-1",
@@ -16473,7 +16473,7 @@
    }
   },
   {
-   "seq": 1855,
+   "seq": 1854,
    "bus": {
     "id": "ktr-government-s-2",
     "bus_name": "S-2",
@@ -16580,7 +16580,7 @@
    }
   },
   {
-   "seq": 1856,
+   "seq": 1855,
    "bus": {
     "id": "ktr-government-ac-2",
     "bus_name": "AC-2",
@@ -16740,7 +16740,7 @@
    }
   },
   {
-   "seq": 1857,
+   "seq": 1856,
    "bus": {
     "id": "ktr-government-s-2n",
     "bus_name": "S-2N",
@@ -16828,7 +16828,7 @@
    }
   },
   {
-   "seq": 1858,
+   "seq": 1857,
    "bus": {
     "id": "ktr-government-s-3a",
     "bus_name": "S-3A",
@@ -16989,7 +16989,7 @@
    }
   },
   {
-   "seq": 1859,
+   "seq": 1858,
    "bus": {
     "id": "ktr-government-s-3b",
     "bus_name": "S-3B",
@@ -17132,7 +17132,7 @@
    }
   },
   {
-   "seq": 1860,
+   "seq": 1859,
    "bus": {
     "id": "ktr-government-s-3w",
     "bus_name": "S-3W",
@@ -17383,7 +17383,7 @@
    }
   },
   {
-   "seq": 1861,
+   "seq": 1860,
    "bus": {
     "id": "ktr-government-s-4",
     "bus_name": "S-4",
@@ -17580,7 +17580,7 @@
    }
   },
   {
-   "seq": 1862,
+   "seq": 1861,
    "bus": {
     "id": "ktr-government-s-4c",
     "bus_name": "S-4C",
@@ -17692,7 +17692,7 @@
    }
   },
   {
-   "seq": 1863,
+   "seq": 1862,
    "bus": {
     "id": "ktr-government-s-4d",
     "bus_name": "S-4D",
@@ -17876,7 +17876,7 @@
    }
   },
   {
-   "seq": 1864,
+   "seq": 1863,
    "bus": {
     "id": "ktr-government-e-4",
     "bus_name": "E-4",
@@ -17970,7 +17970,7 @@
    }
   },
   {
-   "seq": 1865,
+   "seq": 1864,
    "bus": {
     "id": "ktr-government-ac-4",
     "bus_name": "AC-4",
@@ -18083,7 +18083,7 @@
    }
   },
   {
-   "seq": 1866,
+   "seq": 1865,
    "bus": {
     "id": "ktr-government-ac-4a",
     "bus_name": "AC-4A",
@@ -18292,7 +18292,7 @@
    }
   },
   {
-   "seq": 1867,
+   "seq": 1866,
    "bus": {
     "id": "ktr-government-ac-4b",
     "bus_name": "AC-4B",
@@ -18476,7 +18476,7 @@
    }
   },
   {
-   "seq": 1868,
+   "seq": 1867,
    "bus": {
     "id": "ktr-government-s-5",
     "bus_name": "S-5",
@@ -18649,7 +18649,7 @@
    }
   },
   {
-   "seq": 1869,
+   "seq": 1868,
    "bus": {
     "id": "ktr-government-s-5a",
     "bus_name": "S-5A",
@@ -18761,7 +18761,7 @@
    }
   },
   {
-   "seq": 1870,
+   "seq": 1869,
    "bus": {
     "id": "ktr-government-s-5n",
     "bus_name": "S-5N",
@@ -18909,7 +18909,7 @@
    }
   },
   {
-   "seq": 1871,
+   "seq": 1870,
    "bus": {
     "id": "ktr-government-s-5c-n",
     "bus_name": "S-5C/N",
@@ -19057,7 +19057,7 @@
    }
   },
   {
-   "seq": 1872,
+   "seq": 1871,
    "bus": {
     "id": "ktr-government-ac-5",
     "bus_name": "AC-5",
@@ -19230,7 +19230,7 @@
    }
   },
   {
-   "seq": 1874,
+   "seq": 1873,
    "bus": {
     "id": "ktr-government-s-7",
     "bus_name": "S-7",
@@ -19373,7 +19373,7 @@
    }
   },
   {
-   "seq": 1875,
+   "seq": 1874,
    "bus": {
     "id": "ktr-government-s-7n",
     "bus_name": "S-7N",
@@ -19491,7 +19491,7 @@
    }
   },
   {
-   "seq": 1876,
+   "seq": 1875,
    "bus": {
     "id": "ktr-government-ac-6",
     "bus_name": "AC-6",
@@ -19634,7 +19634,7 @@
    }
   },
   {
-   "seq": 1877,
+   "seq": 1876,
    "bus": {
     "id": "ktr-government-s-8b-n",
     "bus_name": "S-8B/N",
@@ -19740,7 +19740,7 @@
    }
   },
   {
-   "seq": 1878,
+   "seq": 1877,
    "bus": {
     "id": "ktr-government-s-9",
     "bus_name": "S-9",
@@ -19859,7 +19859,7 @@
    }
   },
   {
-   "seq": 1879,
+   "seq": 1878,
    "bus": {
     "id": "ktr-government-ac-9",
     "bus_name": "AC-9",
@@ -19996,7 +19996,7 @@
    }
   },
   {
-   "seq": 1880,
+   "seq": 1879,
    "bus": {
     "id": "ktr-government-ac-9b",
     "bus_name": "AC-9B",
@@ -20174,7 +20174,7 @@
    }
   },
   {
-   "seq": 1881,
+   "seq": 1880,
    "bus": {
     "id": "ktr-government-s-9a",
     "bus_name": "S-9A",
@@ -20341,7 +20341,7 @@
    }
   },
   {
-   "seq": 1882,
+   "seq": 1881,
    "bus": {
     "id": "ktr-government-s-9a-n",
     "bus_name": "S-9A/N",
@@ -20477,7 +20477,7 @@
    }
   },
   {
-   "seq": 1883,
+   "seq": 1882,
    "bus": {
     "id": "ktr-government-s-9c",
     "bus_name": "S-9C",
@@ -20673,7 +20673,7 @@
    }
   },
   {
-   "seq": 1884,
+   "seq": 1883,
    "bus": {
     "id": "ktr-government-s-10",
     "bus_name": "S-10",
@@ -20846,7 +20846,7 @@
    }
   },
   {
-   "seq": 1885,
+   "seq": 1884,
    "bus": {
     "id": "ktr-government-s-10a-n",
     "bus_name": "S-10A/N",
@@ -20940,7 +20940,7 @@
    }
   },
   {
-   "seq": 1886,
+   "seq": 1885,
    "bus": {
     "id": "ktr-government-ac-10",
     "bus_name": "AC-10",
@@ -21191,7 +21191,7 @@
    }
   },
   {
-   "seq": 1887,
+   "seq": 1886,
    "bus": {
     "id": "ktr-government-s-10a",
     "bus_name": "S-10A",
@@ -21316,7 +21316,7 @@
    }
   },
   {
-   "seq": 1888,
+   "seq": 1887,
    "bus": {
     "id": "ktr-government-s-11",
     "bus_name": "S-11",
@@ -21495,7 +21495,7 @@
    }
   },
   {
-   "seq": 1889,
+   "seq": 1888,
    "bus": {
     "id": "ktr-government-s-11n",
     "bus_name": "S-11N",
@@ -21715,7 +21715,7 @@
    }
   },
   {
-   "seq": 1890,
+   "seq": 1889,
    "bus": {
     "id": "ktr-government-s-12",
     "bus_name": "S-12",
@@ -21846,7 +21846,7 @@
    }
   },
   {
-   "seq": 1891,
+   "seq": 1890,
    "bus": {
     "id": "ktr-government-s-12d",
     "bus_name": "S-12D",
@@ -21965,7 +21965,7 @@
    }
   },
   {
-   "seq": 1892,
+   "seq": 1891,
    "bus": {
     "id": "ktr-government-s-12e",
     "bus_name": "S-12E",
@@ -22132,7 +22132,7 @@
    }
   },
   {
-   "seq": 1893,
+   "seq": 1892,
    "bus": {
     "id": "ktr-government-s-12n",
     "bus_name": "S-12N",
@@ -22250,7 +22250,7 @@
    }
   },
   {
-   "seq": 1894,
+   "seq": 1893,
    "bus": {
     "id": "ktr-government-s-12n-a",
     "bus_name": "S-12N/A",
@@ -22362,7 +22362,7 @@
    }
   },
   {
-   "seq": 1895,
+   "seq": 1894,
    "bus": {
     "id": "ktr-government-ac-12",
     "bus_name": "AC-12",
@@ -22553,7 +22553,7 @@
    }
   },
   {
-   "seq": 1896,
+   "seq": 1895,
    "bus": {
     "id": "ktr-government-ac-12d",
     "bus_name": "AC-12D",
@@ -22690,7 +22690,7 @@
    }
   },
   {
-   "seq": 1897,
+   "seq": 1896,
    "bus": {
     "id": "ktr-government-s-14",
     "bus_name": "S-14",
@@ -22827,7 +22827,7 @@
    }
   },
   {
-   "seq": 1898,
+   "seq": 1897,
    "bus": {
     "id": "ktr-government-ac-14",
     "bus_name": "AC-14",
@@ -23048,7 +23048,7 @@
    }
   },
   {
-   "seq": 1899,
+   "seq": 1898,
    "bus": {
     "id": "ktr-government-s-16",
     "bus_name": "S-16",
@@ -23221,7 +23221,7 @@
    }
   },
   {
-   "seq": 1900,
+   "seq": 1899,
    "bus": {
     "id": "ktr-government-s-17a",
     "bus_name": "S-17A",
@@ -23364,7 +23364,7 @@
    }
   },
   {
-   "seq": 1901,
+   "seq": 1900,
    "bus": {
     "id": "ktr-government-s-19b",
     "bus_name": "S-19B",
@@ -23452,7 +23452,7 @@
    }
   },
   {
-   "seq": 1916,
+   "seq": 1915,
    "bus": {
     "id": "ktr-government-ac-20",
     "bus_name": "AC-20",
@@ -23643,7 +23643,7 @@
    }
   },
   {
-   "seq": 1917,
+   "seq": 1916,
    "bus": {
     "id": "ktr-government-s-21",
     "bus_name": "S-21",
@@ -23804,7 +23804,7 @@
    }
   },
   {
-   "seq": 1918,
+   "seq": 1917,
    "bus": {
     "id": "ktr-government-s-22",
     "bus_name": "S-22",
@@ -24007,7 +24007,7 @@
    }
   },
   {
-   "seq": 1919,
+   "seq": 1918,
    "bus": {
     "id": "ktr-government-s-23a",
     "bus_name": "S-23A",
@@ -24210,7 +24210,7 @@
    }
   },
   {
-   "seq": 1920,
+   "seq": 1919,
    "bus": {
     "id": "ktr-government-ac-23a",
     "bus_name": "AC-23A",
@@ -24412,7 +24412,7 @@
    }
   },
   {
-   "seq": 1921,
+   "seq": 1920,
    "bus": {
     "id": "ktr-government-s-24",
     "bus_name": "S-24",
@@ -24579,7 +24579,7 @@
    }
   },
   {
-   "seq": 1922,
+   "seq": 1921,
    "bus": {
     "id": "ktr-government-s-24n",
     "bus_name": "S-24N",
@@ -24757,7 +24757,7 @@
    }
   },
   {
-   "seq": 1923,
+   "seq": 1922,
    "bus": {
     "id": "ktr-government-ac-24",
     "bus_name": "AC-24",
@@ -24948,7 +24948,7 @@
    }
   },
   {
-   "seq": 1924,
+   "seq": 1923,
    "bus": {
     "id": "ktr-government-ac-24a",
     "bus_name": "AC-24A",
@@ -25156,7 +25156,7 @@
    }
   },
   {
-   "seq": 1925,
+   "seq": 1924,
    "bus": {
     "id": "ktr-government-s-30",
     "bus_name": "S-30",
@@ -25329,7 +25329,7 @@
    }
   },
   {
-   "seq": 1926,
+   "seq": 1925,
    "bus": {
     "id": "ktr-government-s-30a",
     "bus_name": "S-30A",
@@ -25441,7 +25441,7 @@
    }
   },
   {
-   "seq": 1927,
+   "seq": 1926,
    "bus": {
     "id": "ktr-government-ac-30",
     "bus_name": "AC-30",
@@ -25511,7 +25511,7 @@
    }
   },
   {
-   "seq": 1928,
+   "seq": 1927,
    "bus": {
     "id": "ktr-government-ac-30s",
     "bus_name": "AC-30S",
@@ -25683,7 +25683,7 @@
    }
   },
   {
-   "seq": 1929,
+   "seq": 1928,
    "bus": {
     "id": "ktr-government-s-31",
     "bus_name": "S-31",
@@ -25784,7 +25784,7 @@
    }
   },
   {
-   "seq": 1930,
+   "seq": 1929,
    "bus": {
     "id": "ktr-government-ac-31",
     "bus_name": "AC-31",
@@ -25884,7 +25884,7 @@
    }
   },
   {
-   "seq": 1931,
+   "seq": 1930,
    "bus": {
     "id": "ktr-government-e-32",
     "bus_name": "E-32",
@@ -26056,7 +26056,7 @@
    }
   },
   {
-   "seq": 1932,
+   "seq": 1931,
    "bus": {
     "id": "ktr-government-s-32",
     "bus_name": "S-32",
@@ -26187,7 +26187,7 @@
    }
   },
   {
-   "seq": 1933,
+   "seq": 1932,
    "bus": {
     "id": "ktr-government-s-32a",
     "bus_name": "S-32A",
@@ -26281,7 +26281,7 @@
    }
   },
   {
-   "seq": 1935,
+   "seq": 1934,
    "bus": {
     "id": "ktr-government-s-37",
     "bus_name": "S-37",
@@ -26525,7 +26525,7 @@
    }
   },
   {
-   "seq": 1936,
+   "seq": 1935,
    "bus": {
     "id": "ktr-government-ac-37",
     "bus_name": "AC-37",
@@ -26769,7 +26769,7 @@
    }
   },
   {
-   "seq": 1937,
+   "seq": 1936,
    "bus": {
     "id": "ktr-government-ac-37a",
     "bus_name": "AC-37A",
@@ -26996,7 +26996,7 @@
    }
   },
   {
-   "seq": 1938,
+   "seq": 1937,
    "bus": {
     "id": "ktr-government-ac-38",
     "bus_name": "AC-38",
@@ -27180,7 +27180,7 @@
    }
   },
   {
-   "seq": 1939,
+   "seq": 1938,
    "bus": {
     "id": "ktr-government-s-39a-n",
     "bus_name": "S-39A/N",
@@ -27244,7 +27244,7 @@
    }
   },
   {
-   "seq": 1940,
+   "seq": 1939,
    "bus": {
     "id": "ktr-government-ac-39",
     "bus_name": "AC-39",
@@ -27399,7 +27399,7 @@
    }
   },
   {
-   "seq": 1941,
+   "seq": 1940,
    "bus": {
     "id": "ktr-government-ac-40",
     "bus_name": "AC-40",
@@ -27529,7 +27529,7 @@
    }
   },
   {
-   "seq": 1942,
+   "seq": 1941,
    "bus": {
     "id": "ktr-government-ac-43",
     "bus_name": "AC-43",
@@ -27750,7 +27750,7 @@
    }
   },
   {
-   "seq": 1943,
+   "seq": 1942,
    "bus": {
     "id": "ktr-government-s-45",
     "bus_name": "S-45",
@@ -27910,7 +27910,7 @@
    }
   },
   {
-   "seq": 1944,
+   "seq": 1943,
    "bus": {
     "id": "ktr-government-s-46",
     "bus_name": "S-46",
@@ -28101,7 +28101,7 @@
    }
   },
   {
-   "seq": 1945,
+   "seq": 1944,
    "bus": {
     "id": "ktr-government-s-47",
     "bus_name": "S-47",
@@ -28262,7 +28262,7 @@
    }
   },
   {
-   "seq": 1946,
+   "seq": 1945,
    "bus": {
     "id": "ktr-government-s-47a",
     "bus_name": "S-47A",
@@ -28374,7 +28374,7 @@
    }
   },
   {
-   "seq": 1947,
+   "seq": 1946,
    "bus": {
     "id": "ktr-government-ac-47",
     "bus_name": "AC-47",
@@ -28589,7 +28589,7 @@
    }
   },
   {
-   "seq": 1948,
+   "seq": 1947,
    "bus": {
     "id": "ktr-government-ac-49",
     "bus_name": "AC-49",
@@ -28851,7 +28851,7 @@
    }
   },
   {
-   "seq": 1949,
+   "seq": 1948,
    "bus": {
     "id": "ktr-government-ac-50a",
     "bus_name": "AC-50A",
@@ -29107,7 +29107,7 @@
    }
   },
   {
-   "seq": 1950,
+   "seq": 1949,
    "bus": {
     "id": "ktr-government-ac-52",
     "bus_name": "AC-52",
@@ -29279,7 +29279,7 @@
    }
   },
   {
-   "seq": 1951,
+   "seq": 1950,
    "bus": {
     "id": "ktr-government-ac-54",
     "bus_name": "AC-54",
@@ -29379,7 +29379,7 @@
    }
   },
   {
-   "seq": 1952,
+   "seq": 1951,
    "bus": {
     "id": "ktr-government-ac-55",
     "bus_name": "AC-55",
@@ -29617,7 +29617,7 @@
    }
   },
   {
-   "seq": 1953,
+   "seq": 1952,
    "bus": {
     "id": "ktr-government-s-57",
     "bus_name": "S-57",
@@ -29753,7 +29753,7 @@
    }
   },
   {
-   "seq": 1954,
+   "seq": 1953,
    "bus": {
     "id": "ktr-government-s-58",
     "bus_name": "S-58",
@@ -29901,7 +29901,7 @@
    }
   },
   {
-   "seq": 1955,
+   "seq": 1954,
    "bus": {
     "id": "ktr-government-s-61",
     "bus_name": "S-61",
@@ -30055,7 +30055,7 @@
    }
   },
   {
-   "seq": 1956,
+   "seq": 1955,
    "bus": {
     "id": "ktr-government-s-62",
     "bus_name": "S-62",
@@ -30221,7 +30221,7 @@
    }
   },
   {
-   "seq": 1957,
+   "seq": 1956,
    "bus": {
     "id": "ktr-government-s-63",
     "bus_name": "S-63",
@@ -30291,7 +30291,7 @@
    }
   },
   {
-   "seq": 1958,
+   "seq": 1957,
    "bus": {
     "id": "ktr-government-s-64",
     "bus_name": "S-64",
@@ -30595,7 +30595,7 @@
    }
   },
   {
-   "seq": 1959,
+   "seq": 1958,
    "bus": {
     "id": "ktr-government-s-65",
     "bus_name": "S-65",
@@ -30755,7 +30755,7 @@
    }
   },
   {
-   "seq": 1960,
+   "seq": 1959,
    "bus": {
     "id": "ktr-government-s-66",
     "bus_name": "S-66",
@@ -30909,7 +30909,7 @@
    }
   },
   {
-   "seq": 1961,
+   "seq": 1960,
    "bus": {
     "id": "ktr-government-s-68",
     "bus_name": "S-68",
@@ -30985,7 +30985,7 @@
    }
   },
   {
-   "seq": 1964,
+   "seq": 1963,
    "bus": {
     "id": "ktr-government-vs-1",
     "bus_name": "VS-1",
@@ -31115,7 +31115,7 @@
    }
   },
   {
-   "seq": 1965,
+   "seq": 1964,
    "bus": {
     "id": "ktr-government-vs-2",
     "bus_name": "VS-2",
@@ -31239,7 +31239,7 @@
    }
   },
   {
-   "seq": 1966,
+   "seq": 1965,
    "bus": {
     "id": "ktr-government-vs-6",
     "bus_name": "VS-6",
@@ -31405,7 +31405,7 @@
    }
   },
   {
-   "seq": 1967,
+   "seq": 1966,
    "bus": {
     "id": "ktr-government-vs-10",
     "bus_name": "VS-10",
@@ -31607,7 +31607,7 @@
    }
   },
   {
-   "seq": 1968,
+   "seq": 1967,
    "bus": {
     "id": "ktr-government-vs-14a",
     "bus_name": "VS-14A",
@@ -31731,7 +31731,7 @@
    }
   },
   {
-   "seq": 1969,
+   "seq": 1968,
    "bus": {
     "id": "ktr-government-vs-15",
     "bus_name": "VS-15",
@@ -32029,7 +32029,7 @@
    }
   },
   {
-   "seq": 1970,
+   "seq": 1969,
    "bus": {
     "id": "ktr-government-vs-15a",
     "bus_name": "VS-15A",
@@ -32339,7 +32339,7 @@
    }
   },
   {
-   "seq": 1971,
+   "seq": 1970,
    "bus": {
     "id": "ktr-government-st-6",
     "bus_name": "ST-6",
@@ -32469,7 +32469,7 @@
    }
   },
   {
-   "seq": 1972,
+   "seq": 1971,
    "bus": {
     "id": "ktr-government-st-7",
     "bus_name": "ST-7",
@@ -32605,7 +32605,7 @@
    }
   },
   {
-   "seq": 1973,
+   "seq": 1972,
    "bus": {
     "id": "ktr-government-st-21",
     "bus_name": "ST-21",
@@ -32783,7 +32783,7 @@
    }
   },
   {
-   "seq": 1974,
+   "seq": 1973,
    "bus": {
     "id": "ktr-government-st-21a",
     "bus_name": "ST-21A",
@@ -32967,7 +32967,7 @@
    }
   },
   {
-   "seq": 1975,
+   "seq": 1974,
    "bus": {
     "id": "ktr-government-st-22",
     "bus_name": "ST-22",
@@ -33241,7 +33241,7 @@
    }
   },
   {
-   "seq": 1976,
+   "seq": 1975,
    "bus": {
     "id": "ktr-government-st-22a",
     "bus_name": "ST-22A",
@@ -33563,7 +33563,7 @@
    }
   },
   {
-   "seq": 1977,
+   "seq": 1976,
    "bus": {
     "id": "ktr-government-st-24",
     "bus_name": "ST-24",
@@ -33873,7 +33873,7 @@
    }
   },
   {
-   "seq": 1978,
+   "seq": 1977,
    "bus": {
     "id": "ktr-government-st-29",
     "bus_name": "ST-29",
@@ -34051,7 +34051,7 @@
    }
   },
   {
-   "seq": 1979,
+   "seq": 1978,
    "bus": {
     "id": "ktr-government-st-26",
     "bus_name": "ST-26",
@@ -34193,7 +34193,7 @@
    }
   },
   {
-   "seq": 1980,
+   "seq": 1979,
    "bus": {
     "id": "ktr-government-st-27",
     "bus_name": "ST-27",
@@ -34353,7 +34353,7 @@
    }
   },
   {
-   "seq": 1981,
+   "seq": 1980,
    "bus": {
     "id": "ktr-government-st-28",
     "bus_name": "ST-28",
@@ -34549,7 +34549,7 @@
    }
   },
   {
-   "seq": 1982,
+   "seq": 1981,
    "bus": {
     "id": "ktr-government-st-30",
     "bus_name": "ST-30",
@@ -34715,7 +34715,7 @@
    }
   },
   {
-   "seq": 1983,
+   "seq": 1982,
    "bus": {
     "id": "ktr-government-st-39",
     "bus_name": "ST-39",
@@ -34971,7 +34971,7 @@
    }
   },
   {
-   "seq": 1984,
+   "seq": 1983,
    "bus": {
     "id": "ktr-government-c-2a",
     "bus_name": "C-2A",
@@ -35131,7 +35131,7 @@
    }
   },
   {
-   "seq": 1985,
+   "seq": 1984,
    "bus": {
     "id": "ktr-government-c-7",
     "bus_name": "C-7",
@@ -35219,7 +35219,7 @@
    }
   },
   {
-   "seq": 1986,
+   "seq": 1985,
    "bus": {
     "id": "ktr-government-c-11",
     "bus_name": "C-11",
@@ -35343,7 +35343,7 @@
    }
   },
   {
-   "seq": 1987,
+   "seq": 1986,
    "bus": {
     "id": "ktr-government-c-11-1",
     "bus_name": "C-11/1",
@@ -35449,7 +35449,7 @@
    }
   },
   {
-   "seq": 1988,
+   "seq": 1987,
    "bus": {
     "id": "ktr-government-c-14-1",
     "bus_name": "C-14/1",
@@ -35669,7 +35669,7 @@
    }
   },
   {
-   "seq": 1989,
+   "seq": 1988,
    "bus": {
     "id": "ktr-government-c-20",
     "bus_name": "C-20",
@@ -35811,7 +35811,7 @@
    }
   },
   {
-   "seq": 1990,
+   "seq": 1989,
    "bus": {
     "id": "ktr-government-c-23",
     "bus_name": "C-23",
@@ -36013,7 +36013,7 @@
    }
   },
   {
-   "seq": 1991,
+   "seq": 1990,
    "bus": {
     "id": "ktr-government-c-23a",
     "bus_name": "C-23A",
@@ -36161,7 +36161,7 @@
    }
   },
   {
-   "seq": 1992,
+   "seq": 1991,
    "bus": {
     "id": "ktr-government-c-24",
     "bus_name": "C-24",
@@ -36231,7 +36231,7 @@
    }
   },
   {
-   "seq": 1993,
+   "seq": 1992,
    "bus": {
     "id": "ktr-government-c-26",
     "bus_name": "C-26",
@@ -36463,7 +36463,7 @@
    }
   },
   {
-   "seq": 1994,
+   "seq": 1993,
    "bus": {
     "id": "ktr-government-c-26a",
     "bus_name": "C-26A",
@@ -36635,7 +36635,7 @@
    }
   },
   {
-   "seq": 1995,
+   "seq": 1994,
    "bus": {
     "id": "ktr-government-c-28",
     "bus_name": "C-28",
@@ -36765,7 +36765,7 @@
    }
   },
   {
-   "seq": 1996,
+   "seq": 1995,
    "bus": {
     "id": "ktr-government-c-29",
     "bus_name": "C-29",
@@ -36883,7 +36883,7 @@
    }
   },
   {
-   "seq": 1997,
+   "seq": 1996,
    "bus": {
     "id": "ktr-government-c-37",
     "bus_name": "C-37",
@@ -37037,7 +37037,7 @@
    }
   },
   {
-   "seq": 1998,
+   "seq": 1997,
    "bus": {
     "id": "ktr-government-c-38",
     "bus_name": "C-38",
@@ -37167,7 +37167,7 @@
    }
   },
   {
-   "seq": 1999,
+   "seq": 1998,
    "bus": {
     "id": "ktr-government-c-39",
     "bus_name": "C-39",
@@ -37261,7 +37261,7 @@
    }
   },
   {
-   "seq": 2000,
+   "seq": 1999,
    "bus": {
     "id": "ktr-government-c-42",
     "bus_name": "C-42",
@@ -37415,7 +37415,7 @@
    }
   },
   {
-   "seq": 2001,
+   "seq": 2000,
    "bus": {
     "id": "ktr-government-c-48",
     "bus_name": "C-48",
@@ -37701,7 +37701,7 @@
    }
   },
   {
-   "seq": 2002,
+   "seq": 2001,
    "bus": {
     "id": "ktr-government-d-1a",
     "bus_name": "D-1A",
@@ -37921,7 +37921,7 @@
    }
   },
   {
-   "seq": 2003,
+   "seq": 2002,
    "bus": {
     "id": "ktr-government-d-2",
     "bus_name": "D-2",
@@ -38045,7 +38045,7 @@
    }
   },
   {
-   "seq": 2004,
+   "seq": 2003,
    "bus": {
     "id": "ktr-government-d-8",
     "bus_name": "D-8",
@@ -38139,7 +38139,7 @@
    }
   },
   {
-   "seq": 2005,
+   "seq": 2004,
    "bus": {
     "id": "ktr-government-d-10",
     "bus_name": "D-10",
@@ -38443,7 +38443,7 @@
    }
   },
   {
-   "seq": 2006,
+   "seq": 2005,
    "bus": {
     "id": "ktr-government-d-11",
     "bus_name": "D-11",
@@ -38645,7 +38645,7 @@
    }
   },
   {
-   "seq": 2007,
+   "seq": 2006,
    "bus": {
     "id": "ktr-government-d-20",
     "bus_name": "D-20",
@@ -38901,7 +38901,7 @@
    }
   },
   {
-   "seq": 2008,
+   "seq": 2007,
    "bus": {
     "id": "ktr-government-d-21",
     "bus_name": "D-21",
@@ -39115,7 +39115,7 @@
    }
   },
   {
-   "seq": 2009,
+   "seq": 2008,
    "bus": {
     "id": "ktr-government-d-23",
     "bus_name": "D-23",
@@ -39227,7 +39227,7 @@
    }
   },
   {
-   "seq": 2010,
+   "seq": 2009,
    "bus": {
     "id": "ktr-government-d-28",
     "bus_name": "D-28",
@@ -39441,7 +39441,7 @@
    }
   },
   {
-   "seq": 2011,
+   "seq": 2010,
    "bus": {
     "id": "ktr-government-d-32",
     "bus_name": "D-32",
@@ -39571,7 +39571,7 @@
    }
   },
   {
-   "seq": 2012,
+   "seq": 2011,
    "bus": {
     "id": "ktr-government-d-34",
     "bus_name": "D-34",
@@ -39695,7 +39695,7 @@
    }
   },
   {
-   "seq": 2013,
+   "seq": 2012,
    "bus": {
     "id": "ktr-government-d-35",
     "bus_name": "D-35",
@@ -39867,7 +39867,7 @@
    }
   },
   {
-   "seq": 2014,
+   "seq": 2013,
    "bus": {
     "id": "ktr-government-e-6",
     "bus_name": "E-6",
@@ -39937,7 +39937,7 @@
    }
   },
   {
-   "seq": 2015,
+   "seq": 2014,
    "bus": {
     "id": "ktr-government-e-7",
     "bus_name": "E-7",
@@ -40013,7 +40013,7 @@
    }
   },
   {
-   "seq": 2016,
+   "seq": 2015,
    "bus": {
     "id": "ktr-government-e-12",
     "bus_name": "E-12",
@@ -40095,7 +40095,7 @@
    }
   },
   {
-   "seq": 2017,
+   "seq": 2016,
    "bus": {
     "id": "ktr-government-e-13",
     "bus_name": "E-13",
@@ -40165,7 +40165,7 @@
    }
   },
   {
-   "seq": 2018,
+   "seq": 2017,
    "bus": {
     "id": "ktr-government-e-14",
     "bus_name": "E-14",
@@ -40253,7 +40253,7 @@
    }
   },
   {
-   "seq": 2019,
+   "seq": 2018,
    "bus": {
     "id": "ktr-government-e-15",
     "bus_name": "E-15",
@@ -40341,7 +40341,7 @@
    }
   },
   {
-   "seq": 2020,
+   "seq": 2019,
    "bus": {
     "id": "ktr-government-e-17",
     "bus_name": "E-17",
@@ -40501,7 +40501,7 @@
    }
   },
   {
-   "seq": 2021,
+   "seq": 2020,
    "bus": {
     "id": "ktr-government-e-17-1",
     "bus_name": "E-17/1",
@@ -40655,7 +40655,7 @@
    }
   },
   {
-   "seq": 2022,
+   "seq": 2021,
    "bus": {
     "id": "ktr-government-e-18",
     "bus_name": "E-18",
@@ -40845,7 +40845,7 @@
    }
   },
   {
-   "seq": 2023,
+   "seq": 2022,
    "bus": {
     "id": "ktr-government-e-19",
     "bus_name": "E-19",
@@ -41017,7 +41017,7 @@
    }
   },
   {
-   "seq": 2024,
+   "seq": 2023,
    "bus": {
     "id": "ktr-government-e-21",
     "bus_name": "E-21",
@@ -41105,7 +41105,7 @@
    }
   },
   {
-   "seq": 2025,
+   "seq": 2024,
    "bus": {
     "id": "ktr-government-e-22",
     "bus_name": "E-22",
@@ -41187,7 +41187,7 @@
    }
   },
   {
-   "seq": 2026,
+   "seq": 2025,
    "bus": {
     "id": "ktr-government-e-24",
     "bus_name": "E-24",
@@ -41275,7 +41275,7 @@
    }
   },
   {
-   "seq": 2027,
+   "seq": 2026,
    "bus": {
     "id": "ktr-government-e-28",
     "bus_name": "E-28",
@@ -41357,7 +41357,7 @@
    }
   },
   {
-   "seq": 2028,
+   "seq": 2027,
    "bus": {
     "id": "ktr-government-e-29",
     "bus_name": "E-29",
@@ -41415,7 +41415,7 @@
    }
   },
   {
-   "seq": 2029,
+   "seq": 2028,
    "bus": {
     "id": "ktr-government-e-31",
     "bus_name": "E-31",
@@ -41503,7 +41503,7 @@
    }
   },
   {
-   "seq": 2030,
+   "seq": 2029,
    "bus": {
     "id": "ktr-government-e-31-1",
     "bus_name": "E-31/1",
@@ -41615,7 +41615,7 @@
    }
   },
   {
-   "seq": 2031,
+   "seq": 2030,
    "bus": {
     "id": "ktr-government-e-32-1",
     "bus_name": "E-32",
@@ -41679,7 +41679,7 @@
    }
   },
   {
-   "seq": 2032,
+   "seq": 2031,
    "bus": {
     "id": "ktr-government-e-35",
     "bus_name": "E-35",
@@ -41755,7 +41755,7 @@
    }
   },
   {
-   "seq": 2033,
+   "seq": 2032,
    "bus": {
     "id": "ktr-government-e-36",
     "bus_name": "E-36",
@@ -41849,7 +41849,7 @@
    }
   },
   {
-   "seq": 2034,
+   "seq": 2033,
    "bus": {
     "id": "ktr-government-e-36-spl",
     "bus_name": "E-36 Spl",
@@ -42081,7 +42081,7 @@
    }
   },
   {
-   "seq": 2035,
+   "seq": 2034,
    "bus": {
     "id": "ktr-government-e-36a-shuttle",
     "bus_name": "E-36A Shuttle",
@@ -42289,7 +42289,7 @@
    }
   },
   {
-   "seq": 2036,
+   "seq": 2035,
    "bus": {
     "id": "ktr-government-e-36a-spl",
     "bus_name": "E-36A Spl",
@@ -42533,7 +42533,7 @@
    }
   },
   {
-   "seq": 2037,
+   "seq": 2036,
    "bus": {
     "id": "ktr-government-e-40b",
     "bus_name": "E-40B",
@@ -42705,7 +42705,7 @@
    }
   },
   {
-   "seq": 2038,
+   "seq": 2037,
    "bus": {
     "id": "ktr-government-e-41",
     "bus_name": "E-41",
@@ -42805,7 +42805,7 @@
    }
   },
   {
-   "seq": 2039,
+   "seq": 2038,
    "bus": {
     "id": "ktr-government-e-44-1",
     "bus_name": "E-44",
@@ -42875,7 +42875,7 @@
    }
   },
   {
-   "seq": 2040,
+   "seq": 2039,
    "bus": {
     "id": "ktr-government-e-45",
     "bus_name": "E-45",
@@ -43029,7 +43029,7 @@
    }
   },
   {
-   "seq": 2041,
+   "seq": 2040,
    "bus": {
     "id": "ktr-government-e-47",
     "bus_name": "E-47",
@@ -43291,7 +43291,7 @@
    }
   },
   {
-   "seq": 2042,
+   "seq": 2041,
    "bus": {
     "id": "ktr-government-e-51",
     "bus_name": "E-51",
@@ -43373,7 +43373,7 @@
    }
   },
   {
-   "seq": 2043,
+   "seq": 2042,
    "bus": {
     "id": "ktr-government-e-51a",
     "bus_name": "E-51A",
@@ -43467,7 +43467,7 @@
    }
   },
   {
-   "seq": 2044,
+   "seq": 2043,
    "bus": {
     "id": "ktr-government-e-54",
     "bus_name": "E-54",
@@ -43627,7 +43627,7 @@
    }
   },
   {
-   "seq": 2045,
+   "seq": 2044,
    "bus": {
     "id": "ktr-government-e-57",
     "bus_name": "E-57",
@@ -43763,7 +43763,7 @@
    }
   },
   {
-   "seq": 2046,
+   "seq": 2045,
    "bus": {
     "id": "ktr-government-e-59",
     "bus_name": "E-59",
@@ -43947,7 +43947,7 @@
    }
   },
   {
-   "seq": 2047,
+   "seq": 2046,
    "bus": {
     "id": "ktr-government-e-61",
     "bus_name": "E-61",
@@ -44221,7 +44221,7 @@
    }
   },
   {
-   "seq": 2048,
+   "seq": 2047,
    "bus": {
     "id": "ktr-government-e-61a",
     "bus_name": "E-61A",
@@ -44477,7 +44477,7 @@
    }
   },
   {
-   "seq": 2049,
+   "seq": 2048,
    "bus": {
     "id": "ktr-government-e-62",
     "bus_name": "E-62",
@@ -44595,7 +44595,7 @@
    }
   },
   {
-   "seq": 2050,
+   "seq": 2049,
    "bus": {
     "id": "ktr-government-e-66",
     "bus_name": "E-66",
@@ -44785,7 +44785,7 @@
    }
   },
   {
-   "seq": 2051,
+   "seq": 2050,
    "bus": {
     "id": "ktr-government-e-67",
     "bus_name": "E-67",
@@ -44981,7 +44981,7 @@
    }
   },
   {
-   "seq": 2052,
+   "seq": 2051,
    "bus": {
     "id": "ktr-government-e-67a",
     "bus_name": "E-67A",
@@ -45129,7 +45129,7 @@
    }
   },
   {
-   "seq": 2053,
+   "seq": 2052,
    "bus": {
     "id": "ktr-government-e-68",
     "bus_name": "E-68",
@@ -45319,7 +45319,7 @@
    }
   },
   {
-   "seq": 2054,
+   "seq": 2053,
    "bus": {
     "id": "ktr-government-e-70",
     "bus_name": "E-70",
@@ -45523,7 +45523,7 @@
    }
   },
   {
-   "seq": 2055,
+   "seq": 2054,
    "bus": {
     "id": "ktr-government-e-70a",
     "bus_name": "E-70A",
@@ -45695,7 +45695,7 @@
    }
   },
   {
-   "seq": 2056,
+   "seq": 2055,
    "bus": {
     "id": "ktr-government-e-71",
     "bus_name": "E-71",
@@ -45783,7 +45783,7 @@
    }
   },
   {
-   "seq": 2057,
+   "seq": 2056,
    "bus": {
     "id": "ktr-government-e-72",
     "bus_name": "E-72",
@@ -45859,7 +45859,7 @@
    }
   },
   {
-   "seq": 2058,
+   "seq": 2057,
    "bus": {
     "id": "ktr-government-e-73",
     "bus_name": "E-73",
@@ -45971,7 +45971,7 @@
    }
   },
   {
-   "seq": 2059,
+   "seq": 2058,
    "bus": {
     "id": "ktr-government-e-74",
     "bus_name": "E-74",
@@ -46089,7 +46089,7 @@
    }
   },
   {
-   "seq": 2060,
+   "seq": 2059,
    "bus": {
     "id": "ktr-government-e-75",
     "bus_name": "E-75",
@@ -46171,7 +46171,7 @@
    }
   },
   {
-   "seq": 2061,
+   "seq": 2060,
    "bus": {
     "id": "ktr-government-e-76",
     "bus_name": "E-76",
@@ -46247,7 +46247,7 @@
    }
   },
   {
-   "seq": 2062,
+   "seq": 2061,
    "bus": {
     "id": "ktr-government-e-77",
     "bus_name": "E-77",
@@ -46329,7 +46329,7 @@
    }
   },
   {
-   "seq": 2072,
+   "seq": 2071,
    "bus": {
     "id": "ktr-government-act-4",
     "bus_name": "ACT-4",
@@ -46471,7 +46471,7 @@
    }
   },
   {
-   "seq": 2073,
+   "seq": 2072,
    "bus": {
     "id": "ktr-government-act-5",
     "bus_name": "ACT-5",
@@ -46673,7 +46673,7 @@
    }
   },
   {
-   "seq": 2074,
+   "seq": 2073,
    "bus": {
     "id": "ktr-government-act-8",
     "bus_name": "ACT-8",
@@ -46929,7 +46929,7 @@
    }
   },
   {
-   "seq": 2075,
+   "seq": 2074,
    "bus": {
     "id": "ktr-government-act-10",
     "bus_name": "ACT-10",
@@ -47011,7 +47011,7 @@
    }
   },
   {
-   "seq": 2076,
+   "seq": 2075,
    "bus": {
     "id": "ktr-government-c-1",
     "bus_name": "C",
@@ -47069,7 +47069,7 @@
    }
   },
   {
-   "seq": 2316,
+   "seq": 2315,
    "bus": {
     "id": "ktr-government-sd-3-1",
     "bus_name": "SD-3",
@@ -47247,7 +47247,7 @@
    }
   },
   {
-   "seq": 2317,
+   "seq": 2316,
    "bus": {
     "id": "ktr-government-sd-4-1",
     "bus_name": "SD-4",
@@ -47383,7 +47383,7 @@
    }
   },
   {
-   "seq": 2318,
+   "seq": 2317,
    "bus": {
     "id": "ktr-government-sd-5-1",
     "bus_name": "SD-5",
@@ -47567,7 +47567,7 @@
    }
   },
   {
-   "seq": 2319,
+   "seq": 2318,
    "bus": {
     "id": "ktr-government-sd-8-1",
     "bus_name": "SD-8",
@@ -47727,7 +47727,7 @@
    }
   },
   {
-   "seq": 2320,
+   "seq": 2319,
    "bus": {
     "id": "ktr-government-sd-9-1",
     "bus_name": "SD-9",
@@ -47887,7 +47887,7 @@
    }
   },
   {
-   "seq": 2321,
+   "seq": 2320,
    "bus": {
     "id": "ktr-government-sd-11-2",
     "bus_name": "SD-11",
@@ -48083,7 +48083,7 @@
    }
   },
   {
-   "seq": 2322,
+   "seq": 2321,
    "bus": {
     "id": "ktr-government-sd-11-1-1",
     "bus_name": "SD-11/1",
@@ -48339,7 +48339,7 @@
    }
   },
   {
-   "seq": 2323,
+   "seq": 2322,
    "bus": {
     "id": "ktr-government-sd-14-1",
     "bus_name": "SD-14",
@@ -48475,7 +48475,7 @@
    }
   },
   {
-   "seq": 2324,
+   "seq": 2323,
    "bus": {
     "id": "ktr-government-sd-16-1",
     "bus_name": "SD-16",
@@ -48659,7 +48659,7 @@
    }
   },
   {
-   "seq": 2325,
+   "seq": 2324,
    "bus": {
     "id": "ktr-government-sd-18-1",
     "bus_name": "SD-18",
@@ -48843,7 +48843,7 @@
    }
   },
   {
-   "seq": 2326,
+   "seq": 2325,
    "bus": {
     "id": "ktr-government-sd-19-1",
     "bus_name": "SD-19",
@@ -49147,7 +49147,7 @@
    }
   },
   {
-   "seq": 2327,
+   "seq": 2326,
    "bus": {
     "id": "ktr-government-sd-24-1",
     "bus_name": "SD-24",
@@ -49439,7 +49439,7 @@
    }
   },
   {
-   "seq": 2328,
+   "seq": 2327,
    "bus": {
     "id": "ktr-government-sd-26-1",
     "bus_name": "SD-26",
@@ -49611,7 +49611,7 @@
    }
   },
   {
-   "seq": 2329,
+   "seq": 2328,
    "bus": {
     "id": "ktr-government-sd-27-1",
     "bus_name": "SD-27",
@@ -49771,7 +49771,7 @@
    }
   },
   {
-   "seq": 2330,
+   "seq": 2329,
    "bus": {
     "id": "ktr-government-sd-29-1",
     "bus_name": "SD-29",
@@ -49865,7 +49865,7 @@
    }
   },
   {
-   "seq": 2331,
+   "seq": 2330,
    "bus": {
     "id": "ktr-government-sd-30-1",
     "bus_name": "SD-30",
@@ -50007,7 +50007,7 @@
    }
   },
   {
-   "seq": 2332,
+   "seq": 2331,
    "bus": {
     "id": "ktr-government-sd-33-1",
     "bus_name": "SD-33",
@@ -50209,7 +50209,7 @@
    }
   },
   {
-   "seq": 2333,
+   "seq": 2332,
    "bus": {
     "id": "ktr-government-sd-39-1",
     "bus_name": "SD-39",
@@ -50381,7 +50381,7 @@
    }
   },
   {
-   "seq": 2334,
+   "seq": 2333,
    "bus": {
     "id": "ktr-government-sd-50-1",
     "bus_name": "SD-50",
@@ -50529,7 +50529,7 @@
    }
   },
   {
-   "seq": 2335,
+   "seq": 2334,
    "bus": {
     "id": "ktr-government-sd-53-1",
     "bus_name": "SD-53",
@@ -50701,7 +50701,7 @@
    }
   },
   {
-   "seq": 2336,
+   "seq": 2335,
    "bus": {
     "id": "ktr-government-sd-63-1",
     "bus_name": "SD-63",
@@ -50879,7 +50879,7 @@
    }
   },
   {
-   "seq": 2337,
+   "seq": 2336,
    "bus": {
     "id": "ktr-government-sd-64-1",
     "bus_name": "SD-64",
@@ -51021,7 +51021,7 @@
    }
   },
   {
-   "seq": 2338,
+   "seq": 2337,
    "bus": {
     "id": "ktr-government-sd-69-1",
     "bus_name": "SD-69",
@@ -51079,7 +51079,7 @@
    }
   },
   {
-   "seq": 2339,
+   "seq": 2338,
    "bus": {
     "id": "ktr-government-sd-76-1",
     "bus_name": "SD-76",
@@ -51239,7 +51239,7 @@
    }
   },
   {
-   "seq": 2340,
+   "seq": 2339,
    "bus": {
     "id": "ktr-government-sd-85-1",
     "bus_name": "SD-85",
@@ -51333,7 +51333,7 @@
    }
   },
   {
-   "seq": 2341,
+   "seq": 2340,
    "bus": {
     "id": "ktr-government-sd-94-1",
     "bus_name": "SD-94",
@@ -51409,7 +51409,7 @@
    }
   },
   {
-   "seq": 2342,
+   "seq": 2341,
    "bus": {
     "id": "ktr-government-dn-2-1-1",
     "bus_name": "DN-2/1",
@@ -51557,7 +51557,7 @@
    }
   },
   {
-   "seq": 2343,
+   "seq": 2342,
    "bus": {
     "id": "ktr-government-dn-5-1",
     "bus_name": "DN-5",
@@ -51735,7 +51735,7 @@
    }
   },
   {
-   "seq": 2344,
+   "seq": 2343,
    "bus": {
     "id": "ktr-government-dn-8-1",
     "bus_name": "DN-8",
@@ -51889,7 +51889,7 @@
    }
   },
   {
-   "seq": 2345,
+   "seq": 2344,
    "bus": {
     "id": "ktr-government-dn-9-1-1",
     "bus_name": "DN-9/1",
@@ -52013,7 +52013,7 @@
    }
   },
   {
-   "seq": 2346,
+   "seq": 2345,
    "bus": {
     "id": "ktr-government-dn-12-2",
     "bus_name": "DN-12",
@@ -52191,7 +52191,7 @@
    }
   },
   {
-   "seq": 2347,
+   "seq": 2346,
    "bus": {
     "id": "ktr-government-dn-12-1-1",
     "bus_name": "DN-12/1",
@@ -52363,7 +52363,7 @@
    }
   },
   {
-   "seq": 2348,
+   "seq": 2347,
    "bus": {
     "id": "ktr-government-dn-13-1",
     "bus_name": "DN-13",
@@ -52547,7 +52547,7 @@
    }
   },
   {
-   "seq": 2349,
+   "seq": 2348,
    "bus": {
     "id": "ktr-government-dn-16-1-1",
     "bus_name": "DN-16/1",
@@ -52893,7 +52893,7 @@
    }
   },
   {
-   "seq": 2350,
+   "seq": 2349,
    "bus": {
     "id": "ktr-government-dn-17-1",
     "bus_name": "DN-17",
@@ -53131,7 +53131,7 @@
    }
   },
   {
-   "seq": 2351,
+   "seq": 2350,
    "bus": {
     "id": "ktr-government-dn-18-1",
     "bus_name": "DN-18",
@@ -53291,7 +53291,7 @@
    }
   },
   {
-   "seq": 2352,
+   "seq": 2351,
    "bus": {
     "id": "ktr-government-dn-28-1",
     "bus_name": "DN-28",
@@ -53391,7 +53391,7 @@
    }
   },
   {
-   "seq": 2353,
+   "seq": 2352,
    "bus": {
     "id": "ktr-government-dn-35-1",
     "bus_name": "DN-35",
@@ -53599,7 +53599,7 @@
    }
   },
   {
-   "seq": 2354,
+   "seq": 2353,
    "bus": {
     "id": "ktr-government-dn-38-1",
     "bus_name": "DN-38",
@@ -53705,7 +53705,7 @@
    }
   },
   {
-   "seq": 2355,
+   "seq": 2354,
    "bus": {
     "id": "ktr-government-dn-43-1",
     "bus_name": "DN-43",
@@ -53793,7 +53793,7 @@
    }
   },
   {
-   "seq": 2356,
+   "seq": 2355,
    "bus": {
     "id": "ktr-government-dn-44-1",
     "bus_name": "DN-44",
@@ -54049,7 +54049,7 @@
    }
   },
   {
-   "seq": 2357,
+   "seq": 2356,
    "bus": {
     "id": "ktr-government-dn-46-1",
     "bus_name": "DN-46",
@@ -54191,7 +54191,7 @@
    }
   },
   {
-   "seq": 2358,
+   "seq": 2357,
    "bus": {
     "id": "ktr-government-dn-47-1",
     "bus_name": "DN-47",
@@ -54357,7 +54357,7 @@
    }
   },
   {
-   "seq": 2359,
+   "seq": 2358,
    "bus": {
     "id": "ktr-government-k-1-1",
     "bus_name": "K-1",
@@ -54517,7 +54517,7 @@
    }
   },
   {
-   "seq": 2360,
+   "seq": 2359,
    "bus": {
     "id": "ktr-government-k-4-1",
     "bus_name": "K-4",
@@ -54689,7 +54689,7 @@
    }
   },
   {
-   "seq": 2361,
+   "seq": 2360,
    "bus": {
     "id": "ktr-government-k-11-1",
     "bus_name": "K-11",
@@ -54795,7 +54795,7 @@
    }
   },
   {
-   "seq": 2362,
+   "seq": 2361,
    "bus": {
     "id": "ktr-government-kb-12-1",
     "bus_name": "KB-12",
@@ -54979,7 +54979,7 @@
    }
   },
   {
-   "seq": 2363,
+   "seq": 2362,
    "bus": {
     "id": "ktr-government-kb-15-1",
     "bus_name": "KB-15",
@@ -55115,7 +55115,7 @@
    }
   },
   {
-   "seq": 2364,
+   "seq": 2363,
    "bus": {
     "id": "ktr-government-kb-16-1",
     "bus_name": "KB-16",
@@ -55335,7 +55335,7 @@
    }
   },
   {
-   "seq": 2365,
+   "seq": 2364,
    "bus": {
     "id": "ktr-government-kb-17-1",
     "bus_name": "KB-17",
@@ -55603,7 +55603,7 @@
    }
   },
   {
-   "seq": 2366,
+   "seq": 2365,
    "bus": {
     "id": "ktr-government-kb-21-1",
     "bus_name": "KB-21",
@@ -55841,7 +55841,7 @@
    }
   },
   {
-   "seq": 2367,
+   "seq": 2366,
    "bus": {
     "id": "ktr-government-kb-22-1",
     "bus_name": "KB-22",
@@ -56007,7 +56007,7 @@
    }
   },
   {
-   "seq": 2368,
+   "seq": 2367,
    "bus": {
     "id": "ktr-government-kb-24-1",
     "bus_name": "KB-24",
@@ -56155,7 +56155,7 @@
    }
   },
   {
-   "seq": 2374,
+   "seq": 2373,
    "bus": {
     "id": "ktr-government-e-43-1",
     "bus_name": "E-43",
@@ -56333,7 +56333,7 @@
    }
   },
   {
-   "seq": 2375,
+   "seq": 2374,
    "bus": {
     "id": "ktr-government-e-44-2",
     "bus_name": "E-44",
@@ -56469,7 +56469,7 @@
    }
   },
   {
-   "seq": 2376,
+   "seq": 2375,
    "bus": {
     "id": "ktr-government-e-53-1",
     "bus_name": "E-53",
@@ -56635,7 +56635,7 @@
    }
   },
   {
-   "seq": 2465,
+   "seq": 2464,
    "bus": {
     "id": "ktr-government-e-1-1",
     "bus_name": "E-1",
@@ -56753,7 +56753,7 @@
    }
   },
   {
-   "seq": 2466,
+   "seq": 2465,
    "bus": {
     "id": "ktr-government-ac-1-1",
     "bus_name": "AC-1",
@@ -56878,7 +56878,7 @@
    }
   },
   {
-   "seq": 2467,
+   "seq": 2466,
    "bus": {
     "id": "ktr-government-s-2-1",
     "bus_name": "S-2",
@@ -56985,7 +56985,7 @@
    }
   },
   {
-   "seq": 2468,
+   "seq": 2467,
    "bus": {
     "id": "ktr-government-ac-2-1",
     "bus_name": "AC-2",
@@ -57145,7 +57145,7 @@
    }
   },
   {
-   "seq": 2469,
+   "seq": 2468,
    "bus": {
     "id": "ktr-government-s-2n-1",
     "bus_name": "S-2N",
@@ -57233,7 +57233,7 @@
    }
   },
   {
-   "seq": 2470,
+   "seq": 2469,
    "bus": {
     "id": "ktr-government-s-3a-1",
     "bus_name": "S-3A",
@@ -57370,7 +57370,7 @@
    }
   },
   {
-   "seq": 2471,
+   "seq": 2470,
    "bus": {
     "id": "ktr-government-s-3b-1",
     "bus_name": "S-3B",
@@ -57501,7 +57501,7 @@
    }
   },
   {
-   "seq": 2472,
+   "seq": 2471,
    "bus": {
     "id": "ktr-government-s-3w-1",
     "bus_name": "S-3W",
@@ -57752,7 +57752,7 @@
    }
   },
   {
-   "seq": 2473,
+   "seq": 2472,
    "bus": {
     "id": "ktr-government-s-4-1",
     "bus_name": "S-4",
@@ -57949,7 +57949,7 @@
    }
   },
   {
-   "seq": 2474,
+   "seq": 2473,
    "bus": {
     "id": "ktr-government-s-4c-1",
     "bus_name": "S-4C",
@@ -58061,7 +58061,7 @@
    }
   },
   {
-   "seq": 2475,
+   "seq": 2474,
    "bus": {
     "id": "ktr-government-s-4d-1",
     "bus_name": "S-4D",
@@ -58245,7 +58245,7 @@
    }
   },
   {
-   "seq": 2476,
+   "seq": 2475,
    "bus": {
     "id": "ktr-government-e-4-1",
     "bus_name": "E-4",
@@ -58339,7 +58339,7 @@
    }
   },
   {
-   "seq": 2477,
+   "seq": 2476,
    "bus": {
     "id": "ktr-government-ac-4-1",
     "bus_name": "AC-4",
@@ -58446,7 +58446,7 @@
    }
   },
   {
-   "seq": 2478,
+   "seq": 2477,
    "bus": {
     "id": "ktr-government-ac-4a-1",
     "bus_name": "AC-4A",
@@ -58655,7 +58655,7 @@
    }
   },
   {
-   "seq": 2479,
+   "seq": 2478,
    "bus": {
     "id": "ktr-government-ac-4b-1",
     "bus_name": "AC-4B",
@@ -58833,7 +58833,7 @@
    }
   },
   {
-   "seq": 2480,
+   "seq": 2479,
    "bus": {
     "id": "ktr-government-s-5-1",
     "bus_name": "S-5",
@@ -59006,7 +59006,7 @@
    }
   },
   {
-   "seq": 2481,
+   "seq": 2480,
    "bus": {
     "id": "ktr-government-s-5a-1",
     "bus_name": "S-5A",
@@ -59118,7 +59118,7 @@
    }
   },
   {
-   "seq": 2482,
+   "seq": 2481,
    "bus": {
     "id": "ktr-government-s-5n-1",
     "bus_name": "S-5N",
@@ -59266,7 +59266,7 @@
    }
   },
   {
-   "seq": 2483,
+   "seq": 2482,
    "bus": {
     "id": "ktr-government-s-5c-n-1",
     "bus_name": "S-5C/N",
@@ -59414,7 +59414,7 @@
    }
   },
   {
-   "seq": 2484,
+   "seq": 2483,
    "bus": {
     "id": "ktr-government-ac-5-1",
     "bus_name": "AC-5",
@@ -59587,7 +59587,7 @@
    }
   },
   {
-   "seq": 2486,
+   "seq": 2485,
    "bus": {
     "id": "ktr-government-s-7-1",
     "bus_name": "S-7",
@@ -59730,7 +59730,7 @@
    }
   },
   {
-   "seq": 2487,
+   "seq": 2486,
    "bus": {
     "id": "ktr-government-s-7n-1",
     "bus_name": "S-7N",
@@ -59848,7 +59848,7 @@
    }
   },
   {
-   "seq": 2488,
+   "seq": 2487,
    "bus": {
     "id": "ktr-government-s-8b-n-1",
     "bus_name": "S-8B/N",
@@ -59954,7 +59954,7 @@
    }
   },
   {
-   "seq": 2489,
+   "seq": 2488,
    "bus": {
     "id": "ktr-government-ac-6-1",
     "bus_name": "AC-6",
@@ -60097,7 +60097,7 @@
    }
   },
   {
-   "seq": 2490,
+   "seq": 2489,
    "bus": {
     "id": "ktr-government-s-9-1",
     "bus_name": "S-9",
@@ -60216,7 +60216,7 @@
    }
   },
   {
-   "seq": 2491,
+   "seq": 2490,
    "bus": {
     "id": "ktr-government-ac-9-1",
     "bus_name": "AC-9",
@@ -60353,7 +60353,7 @@
    }
   },
   {
-   "seq": 2492,
+   "seq": 2491,
    "bus": {
     "id": "ktr-government-ac-9b-1",
     "bus_name": "AC-9B",
@@ -60537,7 +60537,7 @@
    }
   },
   {
-   "seq": 2493,
+   "seq": 2492,
    "bus": {
     "id": "ktr-government-s-9a-1",
     "bus_name": "S-9A",
@@ -60704,7 +60704,7 @@
    }
   },
   {
-   "seq": 2494,
+   "seq": 2493,
    "bus": {
     "id": "ktr-government-s-9a-n-1",
     "bus_name": "S-9A/N",
@@ -60840,7 +60840,7 @@
    }
   },
   {
-   "seq": 2495,
+   "seq": 2494,
    "bus": {
     "id": "ktr-government-s-9c-1",
     "bus_name": "S-9C",
@@ -61036,7 +61036,7 @@
    }
   },
   {
-   "seq": 2496,
+   "seq": 2495,
    "bus": {
     "id": "ktr-government-s-10-1",
     "bus_name": "S-10",
@@ -61209,7 +61209,7 @@
    }
   },
   {
-   "seq": 2497,
+   "seq": 2496,
    "bus": {
     "id": "ktr-government-s-10a-n-1",
     "bus_name": "S-10A/N",
@@ -61303,7 +61303,7 @@
    }
   },
   {
-   "seq": 2498,
+   "seq": 2497,
    "bus": {
     "id": "ktr-government-ac-10-1",
     "bus_name": "AC-10",
@@ -61554,7 +61554,7 @@
    }
   },
   {
-   "seq": 2499,
+   "seq": 2498,
    "bus": {
     "id": "ktr-government-s-10a-1",
     "bus_name": "S-10A",
@@ -61679,7 +61679,7 @@
    }
   },
   {
-   "seq": 2500,
+   "seq": 2499,
    "bus": {
     "id": "ktr-government-s-11-1",
     "bus_name": "S-11",
@@ -61858,7 +61858,7 @@
    }
   },
   {
-   "seq": 2501,
+   "seq": 2500,
    "bus": {
     "id": "ktr-government-s-11n-1",
     "bus_name": "S-11N",
@@ -62078,7 +62078,7 @@
    }
   },
   {
-   "seq": 2502,
+   "seq": 2501,
    "bus": {
     "id": "ktr-government-s-12-1",
     "bus_name": "S-12",
@@ -62215,7 +62215,7 @@
    }
   },
   {
-   "seq": 2503,
+   "seq": 2502,
    "bus": {
     "id": "ktr-government-s-12d-1",
     "bus_name": "S-12D",
@@ -62334,7 +62334,7 @@
    }
   },
   {
-   "seq": 2504,
+   "seq": 2503,
    "bus": {
     "id": "ktr-government-s-12e-1",
     "bus_name": "S-12E",
@@ -62507,7 +62507,7 @@
    }
   },
   {
-   "seq": 2505,
+   "seq": 2504,
    "bus": {
     "id": "ktr-government-s-12n-1",
     "bus_name": "S-12N",
@@ -62625,7 +62625,7 @@
    }
   },
   {
-   "seq": 2506,
+   "seq": 2505,
    "bus": {
     "id": "ktr-government-s-12n-a-1",
     "bus_name": "S-12N/A",
@@ -62737,7 +62737,7 @@
    }
   },
   {
-   "seq": 2507,
+   "seq": 2506,
    "bus": {
     "id": "ktr-government-ac-12-1",
     "bus_name": "AC-12",
@@ -62934,7 +62934,7 @@
    }
   },
   {
-   "seq": 2508,
+   "seq": 2507,
    "bus": {
     "id": "ktr-government-ac-12d-1",
     "bus_name": "AC-12D",
@@ -63071,7 +63071,7 @@
    }
   },
   {
-   "seq": 2509,
+   "seq": 2508,
    "bus": {
     "id": "ktr-government-s-14-1",
     "bus_name": "S-14",
@@ -63208,7 +63208,7 @@
    }
   },
   {
-   "seq": 2510,
+   "seq": 2509,
    "bus": {
     "id": "ktr-government-ac-14-1",
     "bus_name": "AC-14",
@@ -63429,7 +63429,7 @@
    }
   },
   {
-   "seq": 2511,
+   "seq": 2510,
    "bus": {
     "id": "ktr-government-s-16-1",
     "bus_name": "S-16",
@@ -63602,7 +63602,7 @@
    }
   },
   {
-   "seq": 2512,
+   "seq": 2511,
    "bus": {
     "id": "ktr-government-s-17a-1",
     "bus_name": "S-17A",
@@ -63745,7 +63745,7 @@
    }
   },
   {
-   "seq": 2513,
+   "seq": 2512,
    "bus": {
     "id": "ktr-government-s-19b-1",
     "bus_name": "S-19B",
@@ -63833,7 +63833,7 @@
    }
   },
   {
-   "seq": 2528,
+   "seq": 2527,
    "bus": {
     "id": "ktr-government-ac-20-1",
     "bus_name": "AC-20",
@@ -64024,7 +64024,7 @@
    }
   },
   {
-   "seq": 2529,
+   "seq": 2528,
    "bus": {
     "id": "ktr-government-s-21-1",
     "bus_name": "S-21",
@@ -64185,7 +64185,7 @@
    }
   },
   {
-   "seq": 2530,
+   "seq": 2529,
    "bus": {
     "id": "ktr-government-s-22-1",
     "bus_name": "S-22",
@@ -64388,7 +64388,7 @@
    }
   },
   {
-   "seq": 2531,
+   "seq": 2530,
    "bus": {
     "id": "ktr-government-s-23a-1",
     "bus_name": "S-23A",
@@ -64591,7 +64591,7 @@
    }
   },
   {
-   "seq": 2532,
+   "seq": 2531,
    "bus": {
     "id": "ktr-government-ac-23a-1",
     "bus_name": "AC-23A",
@@ -64793,7 +64793,7 @@
    }
   },
   {
-   "seq": 2533,
+   "seq": 2532,
    "bus": {
     "id": "ktr-government-s-24-1",
     "bus_name": "S-24",
@@ -64960,7 +64960,7 @@
    }
   },
   {
-   "seq": 2534,
+   "seq": 2533,
    "bus": {
     "id": "ktr-government-s-24n-1",
     "bus_name": "S-24N",
@@ -65138,7 +65138,7 @@
    }
   },
   {
-   "seq": 2535,
+   "seq": 2534,
    "bus": {
     "id": "ktr-government-ac-24-1",
     "bus_name": "AC-24",
@@ -65329,7 +65329,7 @@
    }
   },
   {
-   "seq": 2536,
+   "seq": 2535,
    "bus": {
     "id": "ktr-government-ac-24a-1",
     "bus_name": "AC-24A",
@@ -65537,7 +65537,7 @@
    }
   },
   {
-   "seq": 2537,
+   "seq": 2536,
    "bus": {
     "id": "ktr-government-s-30-1",
     "bus_name": "S-30",
@@ -65710,7 +65710,7 @@
    }
   },
   {
-   "seq": 2538,
+   "seq": 2537,
    "bus": {
     "id": "ktr-government-ac-30-1",
     "bus_name": "AC-30",
@@ -65780,7 +65780,7 @@
    }
   },
   {
-   "seq": 2539,
+   "seq": 2538,
    "bus": {
     "id": "ktr-government-ac-30s-1",
     "bus_name": "AC-30S",
@@ -65952,7 +65952,7 @@
    }
   },
   {
-   "seq": 2540,
+   "seq": 2539,
    "bus": {
     "id": "ktr-government-s-31-1",
     "bus_name": "S-31",
@@ -66053,7 +66053,7 @@
    }
   },
   {
-   "seq": 2541,
+   "seq": 2540,
    "bus": {
     "id": "ktr-government-ac-31-1",
     "bus_name": "AC-31",
@@ -66153,7 +66153,7 @@
    }
   },
   {
-   "seq": 2542,
+   "seq": 2541,
    "bus": {
     "id": "ktr-government-e-32-2",
     "bus_name": "E-32",
@@ -66325,7 +66325,7 @@
    }
   },
   {
-   "seq": 2543,
+   "seq": 2542,
    "bus": {
     "id": "ktr-government-s-32-1",
     "bus_name": "S-32",
@@ -66456,7 +66456,7 @@
    }
   },
   {
-   "seq": 2544,
+   "seq": 2543,
    "bus": {
     "id": "ktr-government-s-32a-1",
     "bus_name": "S-32A",
@@ -66550,7 +66550,7 @@
    }
   },
   {
-   "seq": 2546,
+   "seq": 2545,
    "bus": {
     "id": "ktr-government-s-37-1",
     "bus_name": "S-37",
@@ -66794,7 +66794,7 @@
    }
   },
   {
-   "seq": 2547,
+   "seq": 2546,
    "bus": {
     "id": "ktr-government-ac-37-1",
     "bus_name": "AC-37",
@@ -67038,7 +67038,7 @@
    }
   },
   {
-   "seq": 2548,
+   "seq": 2547,
    "bus": {
     "id": "ktr-government-ac-37a-1",
     "bus_name": "AC-37A",
@@ -67265,7 +67265,7 @@
    }
   },
   {
-   "seq": 2549,
+   "seq": 2548,
    "bus": {
     "id": "ktr-government-ac-38-1",
     "bus_name": "AC-38",
@@ -67449,7 +67449,7 @@
    }
   },
   {
-   "seq": 2550,
+   "seq": 2549,
    "bus": {
     "id": "ktr-government-s-39a-n-1",
     "bus_name": "S-39A/N",
@@ -67513,7 +67513,7 @@
    }
   },
   {
-   "seq": 2551,
+   "seq": 2550,
    "bus": {
     "id": "ktr-government-ac-39-1",
     "bus_name": "AC-39",
@@ -67674,7 +67674,7 @@
    }
   },
   {
-   "seq": 2552,
+   "seq": 2551,
    "bus": {
     "id": "ktr-government-ac-40-1",
     "bus_name": "AC-40",
@@ -67804,7 +67804,7 @@
    }
   },
   {
-   "seq": 2553,
+   "seq": 2552,
    "bus": {
     "id": "ktr-government-ac-43-1",
     "bus_name": "AC-43",
@@ -68025,7 +68025,7 @@
    }
   },
   {
-   "seq": 2554,
+   "seq": 2553,
    "bus": {
     "id": "ktr-government-s-45-1",
     "bus_name": "S-45",
@@ -68185,7 +68185,7 @@
    }
   },
   {
-   "seq": 2555,
+   "seq": 2554,
    "bus": {
     "id": "ktr-government-s-46-1",
     "bus_name": "S-46",
@@ -68376,7 +68376,7 @@
    }
   },
   {
-   "seq": 2556,
+   "seq": 2555,
    "bus": {
     "id": "ktr-government-s-47-1",
     "bus_name": "S-47",
@@ -68537,7 +68537,7 @@
    }
   },
   {
-   "seq": 2557,
+   "seq": 2556,
    "bus": {
     "id": "ktr-government-ac-47-1",
     "bus_name": "AC-47",
@@ -68752,7 +68752,7 @@
    }
   },
   {
-   "seq": 2558,
+   "seq": 2557,
    "bus": {
     "id": "ktr-government-s-47a-1",
     "bus_name": "S-47A",
@@ -68864,7 +68864,7 @@
    }
   },
   {
-   "seq": 2559,
+   "seq": 2558,
    "bus": {
     "id": "ktr-government-ac-49-1",
     "bus_name": "AC-49",
@@ -69126,7 +69126,7 @@
    }
   },
   {
-   "seq": 2560,
+   "seq": 2559,
    "bus": {
     "id": "ktr-government-ac-50a-1",
     "bus_name": "AC-50A",
@@ -69382,7 +69382,7 @@
    }
   },
   {
-   "seq": 2561,
+   "seq": 2560,
    "bus": {
     "id": "ktr-government-ac-52-1",
     "bus_name": "AC-52",
@@ -69554,7 +69554,7 @@
    }
   },
   {
-   "seq": 2562,
+   "seq": 2561,
    "bus": {
     "id": "ktr-government-ac-54-1",
     "bus_name": "AC-54",
@@ -69654,7 +69654,7 @@
    }
   },
   {
-   "seq": 2563,
+   "seq": 2562,
    "bus": {
     "id": "ktr-government-ac-55-1",
     "bus_name": "AC-55",
@@ -69892,7 +69892,7 @@
    }
   },
   {
-   "seq": 2564,
+   "seq": 2563,
    "bus": {
     "id": "ktr-government-s-57-1",
     "bus_name": "S-57",
@@ -70028,7 +70028,7 @@
    }
   },
   {
-   "seq": 2565,
+   "seq": 2564,
    "bus": {
     "id": "ktr-government-s-58-1",
     "bus_name": "S-58",
@@ -70176,7 +70176,7 @@
    }
   },
   {
-   "seq": 2566,
+   "seq": 2565,
    "bus": {
     "id": "ktr-government-s-61-1",
     "bus_name": "S-61",
@@ -70330,7 +70330,7 @@
    }
   },
   {
-   "seq": 2567,
+   "seq": 2566,
    "bus": {
     "id": "ktr-government-s-62-1",
     "bus_name": "S-62",
@@ -70490,7 +70490,7 @@
    }
   },
   {
-   "seq": 2568,
+   "seq": 2567,
    "bus": {
     "id": "ktr-government-s-63-1",
     "bus_name": "S-63",
@@ -70560,7 +70560,7 @@
    }
   },
   {
-   "seq": 2569,
+   "seq": 2568,
    "bus": {
     "id": "ktr-government-s-64-1",
     "bus_name": "S-64",
@@ -70864,7 +70864,7 @@
    }
   },
   {
-   "seq": 2570,
+   "seq": 2569,
    "bus": {
     "id": "ktr-government-s-65-1",
     "bus_name": "S-65",
@@ -71024,7 +71024,7 @@
    }
   },
   {
-   "seq": 2571,
+   "seq": 2570,
    "bus": {
     "id": "ktr-government-s-66-1",
     "bus_name": "S-66",
@@ -71178,7 +71178,7 @@
    }
   },
   {
-   "seq": 2574,
+   "seq": 2573,
    "bus": {
     "id": "ktr-government-vs-1-1",
     "bus_name": "VS-1",
@@ -71308,7 +71308,7 @@
    }
   },
   {
-   "seq": 2575,
+   "seq": 2574,
    "bus": {
     "id": "ktr-government-vs-2-1",
     "bus_name": "VS-2",
@@ -71432,7 +71432,7 @@
    }
   },
   {
-   "seq": 2576,
+   "seq": 2575,
    "bus": {
     "id": "ktr-government-vs-6-1",
     "bus_name": "VS-6",
@@ -71598,7 +71598,7 @@
    }
   },
   {
-   "seq": 2577,
+   "seq": 2576,
    "bus": {
     "id": "ktr-government-vs-10-1",
     "bus_name": "VS-10",
@@ -71800,7 +71800,7 @@
    }
   },
   {
-   "seq": 2578,
+   "seq": 2577,
    "bus": {
     "id": "ktr-government-vs-14a-1",
     "bus_name": "VS-14A",
@@ -71924,7 +71924,7 @@
    }
   },
   {
-   "seq": 2579,
+   "seq": 2578,
    "bus": {
     "id": "ktr-government-vs-15-1",
     "bus_name": "VS-15",
@@ -72222,7 +72222,7 @@
    }
   },
   {
-   "seq": 2580,
+   "seq": 2579,
    "bus": {
     "id": "ktr-government-vs-15a-1",
     "bus_name": "VS-15A",
@@ -72532,7 +72532,7 @@
    }
   },
   {
-   "seq": 2581,
+   "seq": 2580,
    "bus": {
     "id": "ktr-government-st-6-1",
     "bus_name": "ST-6",
@@ -72662,7 +72662,7 @@
    }
   },
   {
-   "seq": 2582,
+   "seq": 2581,
    "bus": {
     "id": "ktr-government-st-7-1",
     "bus_name": "ST-7",
@@ -72798,7 +72798,7 @@
    }
   },
   {
-   "seq": 2583,
+   "seq": 2582,
    "bus": {
     "id": "ktr-government-st-21-1",
     "bus_name": "ST-21",
@@ -72976,7 +72976,7 @@
    }
   },
   {
-   "seq": 2584,
+   "seq": 2583,
    "bus": {
     "id": "ktr-government-st-21a-1",
     "bus_name": "ST-21A",
@@ -73160,7 +73160,7 @@
    }
   },
   {
-   "seq": 2585,
+   "seq": 2584,
    "bus": {
     "id": "ktr-government-st-22-1",
     "bus_name": "ST-22",
@@ -73434,7 +73434,7 @@
    }
   },
   {
-   "seq": 2586,
+   "seq": 2585,
    "bus": {
     "id": "ktr-government-st-22a-1",
     "bus_name": "ST-22A",
@@ -73756,7 +73756,7 @@
    }
   },
   {
-   "seq": 2587,
+   "seq": 2586,
    "bus": {
     "id": "ktr-government-st-24-1",
     "bus_name": "ST-24",
@@ -74066,7 +74066,7 @@
    }
   },
   {
-   "seq": 2588,
+   "seq": 2587,
    "bus": {
     "id": "ktr-government-st-29-1",
     "bus_name": "ST-29",
@@ -74244,7 +74244,7 @@
    }
   },
   {
-   "seq": 2589,
+   "seq": 2588,
    "bus": {
     "id": "ktr-government-st-26-1",
     "bus_name": "ST-26",
@@ -74386,7 +74386,7 @@
    }
   },
   {
-   "seq": 2590,
+   "seq": 2589,
    "bus": {
     "id": "ktr-government-st-27-1",
     "bus_name": "ST-27",
@@ -74546,7 +74546,7 @@
    }
   },
   {
-   "seq": 2591,
+   "seq": 2590,
    "bus": {
     "id": "ktr-government-st-28-1",
     "bus_name": "ST-28",
@@ -74742,7 +74742,7 @@
    }
   },
   {
-   "seq": 2592,
+   "seq": 2591,
    "bus": {
     "id": "ktr-government-st-30-1",
     "bus_name": "ST-30",
@@ -74908,7 +74908,7 @@
    }
   },
   {
-   "seq": 2593,
+   "seq": 2592,
    "bus": {
     "id": "ktr-government-st-31-1",
     "bus_name": "ST-31",
@@ -75062,7 +75062,7 @@
    }
   },
   {
-   "seq": 2594,
+   "seq": 2593,
    "bus": {
     "id": "ktr-government-st-32-1",
     "bus_name": "ST-32",
@@ -75246,7 +75246,7 @@
    }
   },
   {
-   "seq": 2595,
+   "seq": 2594,
    "bus": {
     "id": "ktr-government-st-39-1",
     "bus_name": "ST-39",
@@ -75502,7 +75502,7 @@
    }
   },
   {
-   "seq": 2596,
+   "seq": 2595,
    "bus": {
     "id": "ktr-government-c-2a-1",
     "bus_name": "C-2A",
@@ -75662,7 +75662,7 @@
    }
   },
   {
-   "seq": 2597,
+   "seq": 2596,
    "bus": {
     "id": "ktr-government-c-7-1",
     "bus_name": "C-7",
@@ -75762,7 +75762,7 @@
    }
   },
   {
-   "seq": 2598,
+   "seq": 2597,
    "bus": {
     "id": "ktr-government-c-11-2",
     "bus_name": "C-11",
@@ -75886,7 +75886,7 @@
    }
   },
   {
-   "seq": 2599,
+   "seq": 2598,
    "bus": {
     "id": "ktr-government-c-11-1-1",
     "bus_name": "C-11/1",
@@ -76016,7 +76016,7 @@
    }
   },
   {
-   "seq": 2600,
+   "seq": 2599,
    "bus": {
     "id": "ktr-government-c-14-1-1",
     "bus_name": "C-14/1",
@@ -76236,7 +76236,7 @@
    }
   },
   {
-   "seq": 2601,
+   "seq": 2600,
    "bus": {
     "id": "ktr-government-c-20-1",
     "bus_name": "C-20",
@@ -76378,7 +76378,7 @@
    }
   },
   {
-   "seq": 2602,
+   "seq": 2601,
    "bus": {
     "id": "ktr-government-c-23-1",
     "bus_name": "C-23",
@@ -76580,7 +76580,7 @@
    }
   },
   {
-   "seq": 2603,
+   "seq": 2602,
    "bus": {
     "id": "ktr-government-c-23a-1",
     "bus_name": "C-23A",
@@ -76728,7 +76728,7 @@
    }
   },
   {
-   "seq": 2604,
+   "seq": 2603,
    "bus": {
     "id": "ktr-government-c-24-1",
     "bus_name": "C-24",
@@ -76792,7 +76792,7 @@
    }
   },
   {
-   "seq": 2605,
+   "seq": 2604,
    "bus": {
     "id": "ktr-government-c-26-1",
     "bus_name": "C-26",
@@ -77024,7 +77024,7 @@
    }
   },
   {
-   "seq": 2606,
+   "seq": 2605,
    "bus": {
     "id": "ktr-government-c-26a-1",
     "bus_name": "C-26A",
@@ -77196,7 +77196,7 @@
    }
   },
   {
-   "seq": 2607,
+   "seq": 2606,
    "bus": {
     "id": "ktr-government-c-28-1",
     "bus_name": "C-28",
@@ -77326,7 +77326,7 @@
    }
   },
   {
-   "seq": 2608,
+   "seq": 2607,
    "bus": {
     "id": "ktr-government-c-29-1",
     "bus_name": "C-29",
@@ -77444,7 +77444,7 @@
    }
   },
   {
-   "seq": 2609,
+   "seq": 2608,
    "bus": {
     "id": "ktr-government-c-37-1",
     "bus_name": "C-37",
@@ -77598,7 +77598,7 @@
    }
   },
   {
-   "seq": 2610,
+   "seq": 2609,
    "bus": {
     "id": "ktr-government-c-38-1",
     "bus_name": "C-38",
@@ -77728,7 +77728,7 @@
    }
   },
   {
-   "seq": 2611,
+   "seq": 2610,
    "bus": {
     "id": "ktr-government-c-39-1",
     "bus_name": "C-39",
@@ -77822,7 +77822,7 @@
    }
   },
   {
-   "seq": 2612,
+   "seq": 2611,
    "bus": {
     "id": "ktr-government-c-42-1",
     "bus_name": "C-42",
@@ -77976,7 +77976,7 @@
    }
   },
   {
-   "seq": 2613,
+   "seq": 2612,
    "bus": {
     "id": "ktr-government-c-48-1",
     "bus_name": "C-48",
@@ -78262,7 +78262,7 @@
    }
   },
   {
-   "seq": 2614,
+   "seq": 2613,
    "bus": {
     "id": "ktr-government-d-1a-1",
     "bus_name": "D-1A",
@@ -78482,7 +78482,7 @@
    }
   },
   {
-   "seq": 2615,
+   "seq": 2614,
    "bus": {
     "id": "ktr-government-d-2-1",
     "bus_name": "D-2",
@@ -78606,7 +78606,7 @@
    }
   },
   {
-   "seq": 2616,
+   "seq": 2615,
    "bus": {
     "id": "ktr-government-d-8-1",
     "bus_name": "D-8",
@@ -78700,7 +78700,7 @@
    }
   },
   {
-   "seq": 2617,
+   "seq": 2616,
    "bus": {
     "id": "ktr-government-d-10-1",
     "bus_name": "D-10",
@@ -79004,7 +79004,7 @@
    }
   },
   {
-   "seq": 2618,
+   "seq": 2617,
    "bus": {
     "id": "ktr-government-d-11-1",
     "bus_name": "D-11",
@@ -79206,7 +79206,7 @@
    }
   },
   {
-   "seq": 2619,
+   "seq": 2618,
    "bus": {
     "id": "ktr-government-d-20-1",
     "bus_name": "D-20",
@@ -79462,7 +79462,7 @@
    }
   },
   {
-   "seq": 2620,
+   "seq": 2619,
    "bus": {
     "id": "ktr-government-d-21-1",
     "bus_name": "D-21",
@@ -79676,7 +79676,7 @@
    }
   },
   {
-   "seq": 2621,
+   "seq": 2620,
    "bus": {
     "id": "ktr-government-d-23-1",
     "bus_name": "D-23",
@@ -79788,7 +79788,7 @@
    }
   },
   {
-   "seq": 2622,
+   "seq": 2621,
    "bus": {
     "id": "ktr-government-d-28-1",
     "bus_name": "D-28",
@@ -80002,7 +80002,7 @@
    }
   },
   {
-   "seq": 2623,
+   "seq": 2622,
    "bus": {
     "id": "ktr-government-d-32-1",
     "bus_name": "D-32",
@@ -80132,7 +80132,7 @@
    }
   },
   {
-   "seq": 2624,
+   "seq": 2623,
    "bus": {
     "id": "ktr-government-d-34-1",
     "bus_name": "D-34",
@@ -80256,7 +80256,7 @@
    }
   },
   {
-   "seq": 2625,
+   "seq": 2624,
    "bus": {
     "id": "ktr-government-d-35-1",
     "bus_name": "D-35",
@@ -80428,7 +80428,7 @@
    }
   },
   {
-   "seq": 2626,
+   "seq": 2625,
    "bus": {
     "id": "ktr-government-e-6-1",
     "bus_name": "E-6",
@@ -80498,7 +80498,7 @@
    }
   },
   {
-   "seq": 2627,
+   "seq": 2626,
    "bus": {
     "id": "ktr-government-e-7-1",
     "bus_name": "E-7",
@@ -80574,7 +80574,7 @@
    }
   },
   {
-   "seq": 2628,
+   "seq": 2627,
    "bus": {
     "id": "ktr-government-e-12-1",
     "bus_name": "E-12",
@@ -80656,7 +80656,7 @@
    }
   },
   {
-   "seq": 2629,
+   "seq": 2628,
    "bus": {
     "id": "ktr-government-e-13-1",
     "bus_name": "E-13",
@@ -80726,7 +80726,7 @@
    }
   },
   {
-   "seq": 2630,
+   "seq": 2629,
    "bus": {
     "id": "ktr-government-e-14-1",
     "bus_name": "E-14",
@@ -80814,7 +80814,7 @@
    }
   },
   {
-   "seq": 2631,
+   "seq": 2630,
    "bus": {
     "id": "ktr-government-e-15-1",
     "bus_name": "E-15",
@@ -80902,7 +80902,7 @@
    }
   },
   {
-   "seq": 2632,
+   "seq": 2631,
    "bus": {
     "id": "ktr-government-e-17-2",
     "bus_name": "E-17",
@@ -81062,7 +81062,7 @@
    }
   },
   {
-   "seq": 2633,
+   "seq": 2632,
    "bus": {
     "id": "ktr-government-e-17-1-1",
     "bus_name": "E-17/1",
@@ -81216,7 +81216,7 @@
    }
   },
   {
-   "seq": 2634,
+   "seq": 2633,
    "bus": {
     "id": "ktr-government-e-18-1",
     "bus_name": "E-18",
@@ -81406,7 +81406,7 @@
    }
   },
   {
-   "seq": 2635,
+   "seq": 2634,
    "bus": {
     "id": "ktr-government-e-19-1",
     "bus_name": "E-19",
@@ -81578,7 +81578,7 @@
    }
   },
   {
-   "seq": 2636,
+   "seq": 2635,
    "bus": {
     "id": "ktr-government-e-21-1",
     "bus_name": "E-21",
@@ -81666,7 +81666,7 @@
    }
   },
   {
-   "seq": 2637,
+   "seq": 2636,
    "bus": {
     "id": "ktr-government-e-22-1",
     "bus_name": "E-22",
@@ -81748,7 +81748,7 @@
    }
   },
   {
-   "seq": 2638,
+   "seq": 2637,
    "bus": {
     "id": "ktr-government-e-24-1",
     "bus_name": "E-24",
@@ -81836,7 +81836,7 @@
    }
   },
   {
-   "seq": 2639,
+   "seq": 2638,
    "bus": {
     "id": "ktr-government-e-28-1",
     "bus_name": "E-28",
@@ -81918,7 +81918,7 @@
    }
   },
   {
-   "seq": 2640,
+   "seq": 2639,
    "bus": {
     "id": "ktr-government-e-29-1",
     "bus_name": "E-29",
@@ -81976,7 +81976,7 @@
    }
   },
   {
-   "seq": 2641,
+   "seq": 2640,
    "bus": {
     "id": "ktr-government-e-31-2",
     "bus_name": "E-31",
@@ -82064,7 +82064,7 @@
    }
   },
   {
-   "seq": 2642,
+   "seq": 2641,
    "bus": {
     "id": "ktr-government-e-31-1-1",
     "bus_name": "E-31/1",
@@ -82176,7 +82176,7 @@
    }
   },
   {
-   "seq": 2643,
+   "seq": 2642,
    "bus": {
     "id": "ktr-government-e-32-3",
     "bus_name": "E-32",
@@ -82240,7 +82240,7 @@
    }
   },
   {
-   "seq": 2644,
+   "seq": 2643,
    "bus": {
     "id": "ktr-government-e-35-1",
     "bus_name": "E-35",
@@ -82316,7 +82316,7 @@
    }
   },
   {
-   "seq": 2645,
+   "seq": 2644,
    "bus": {
     "id": "ktr-government-e-36-1",
     "bus_name": "E-36",
@@ -82410,7 +82410,7 @@
    }
   },
   {
-   "seq": 2646,
+   "seq": 2645,
    "bus": {
     "id": "ktr-government-e-36-spl-1",
     "bus_name": "E-36 Spl",
@@ -82642,7 +82642,7 @@
    }
   },
   {
-   "seq": 2647,
+   "seq": 2646,
    "bus": {
     "id": "ktr-government-e-36a-shuttle-1",
     "bus_name": "E-36A Shuttle",
@@ -82850,7 +82850,7 @@
    }
   },
   {
-   "seq": 2648,
+   "seq": 2647,
    "bus": {
     "id": "ktr-government-e-36a-spl-1",
     "bus_name": "E-36A Spl",
@@ -83094,7 +83094,7 @@
    }
   },
   {
-   "seq": 2649,
+   "seq": 2648,
    "bus": {
     "id": "ktr-government-e-38-1",
     "bus_name": "E-38",
@@ -83200,7 +83200,7 @@
    }
   },
   {
-   "seq": 2650,
+   "seq": 2649,
    "bus": {
     "id": "ktr-government-e-40-2",
     "bus_name": "E-40",
@@ -83336,7 +83336,7 @@
    }
   },
   {
-   "seq": 2651,
+   "seq": 2650,
    "bus": {
     "id": "ktr-government-e-40-1-1",
     "bus_name": "E-40/1",
@@ -83472,7 +83472,7 @@
    }
   },
   {
-   "seq": 2652,
+   "seq": 2651,
    "bus": {
     "id": "ktr-government-e-40b-1",
     "bus_name": "E-40B",
@@ -83644,7 +83644,7 @@
    }
   },
   {
-   "seq": 2653,
+   "seq": 2652,
    "bus": {
     "id": "ktr-government-e-41-1",
     "bus_name": "E-41",
@@ -83744,7 +83744,7 @@
    }
   },
   {
-   "seq": 2654,
+   "seq": 2653,
    "bus": {
     "id": "ktr-government-e-44-3",
     "bus_name": "E-44",
@@ -83814,7 +83814,7 @@
    }
   },
   {
-   "seq": 2655,
+   "seq": 2654,
    "bus": {
     "id": "ktr-government-e-45-1",
     "bus_name": "E-45",
@@ -83968,7 +83968,7 @@
    }
   },
   {
-   "seq": 2656,
+   "seq": 2655,
    "bus": {
     "id": "ktr-government-e-46-1",
     "bus_name": "E-46",
@@ -84122,7 +84122,7 @@
    }
   },
   {
-   "seq": 2657,
+   "seq": 2656,
    "bus": {
     "id": "ktr-government-e-47-1",
     "bus_name": "E-47",
@@ -84384,7 +84384,7 @@
    }
   },
   {
-   "seq": 2658,
+   "seq": 2657,
    "bus": {
     "id": "ktr-government-e-51-1",
     "bus_name": "E-51",
@@ -84466,7 +84466,7 @@
    }
   },
   {
-   "seq": 2659,
+   "seq": 2658,
    "bus": {
     "id": "ktr-government-e-51a-1",
     "bus_name": "E-51A",
@@ -84560,7 +84560,7 @@
    }
   },
   {
-   "seq": 2660,
+   "seq": 2659,
    "bus": {
     "id": "ktr-government-e-54-1",
     "bus_name": "E-54",
@@ -84720,7 +84720,7 @@
    }
   },
   {
-   "seq": 2661,
+   "seq": 2660,
    "bus": {
     "id": "ktr-government-e-55-1",
     "bus_name": "E-55",
@@ -84886,7 +84886,7 @@
    }
   },
   {
-   "seq": 2662,
+   "seq": 2661,
    "bus": {
     "id": "ktr-government-e-56-1",
     "bus_name": "E-56",
@@ -85088,7 +85088,7 @@
    }
   },
   {
-   "seq": 2663,
+   "seq": 2662,
    "bus": {
     "id": "ktr-government-e-57-1",
     "bus_name": "E-57",
@@ -85224,7 +85224,7 @@
    }
   },
   {
-   "seq": 2664,
+   "seq": 2663,
    "bus": {
     "id": "ktr-government-e-59-1",
     "bus_name": "E-59",
@@ -85408,7 +85408,7 @@
    }
   },
   {
-   "seq": 2665,
+   "seq": 2664,
    "bus": {
     "id": "ktr-government-e-61-1",
     "bus_name": "E-61",
@@ -85682,7 +85682,7 @@
    }
   },
   {
-   "seq": 2666,
+   "seq": 2665,
    "bus": {
     "id": "ktr-government-e-61a-1",
     "bus_name": "E-61A",
@@ -85938,7 +85938,7 @@
    }
   },
   {
-   "seq": 2667,
+   "seq": 2666,
    "bus": {
     "id": "ktr-government-e-62-1",
     "bus_name": "E-62",
@@ -86056,7 +86056,7 @@
    }
   },
   {
-   "seq": 2668,
+   "seq": 2667,
    "bus": {
     "id": "ktr-government-e-66-1",
     "bus_name": "E-66",
@@ -86246,7 +86246,7 @@
    }
   },
   {
-   "seq": 2669,
+   "seq": 2668,
    "bus": {
     "id": "ktr-government-e-67-1",
     "bus_name": "E-67",
@@ -86442,7 +86442,7 @@
    }
   },
   {
-   "seq": 2670,
+   "seq": 2669,
    "bus": {
     "id": "ktr-government-e-67a-1",
     "bus_name": "E-67A",
@@ -86590,7 +86590,7 @@
    }
   },
   {
-   "seq": 2671,
+   "seq": 2670,
    "bus": {
     "id": "ktr-government-e-68-1",
     "bus_name": "E-68",
@@ -86780,7 +86780,7 @@
    }
   },
   {
-   "seq": 2672,
+   "seq": 2671,
    "bus": {
     "id": "ktr-government-e-70-1",
     "bus_name": "E-70",
@@ -86984,7 +86984,7 @@
    }
   },
   {
-   "seq": 2673,
+   "seq": 2672,
    "bus": {
     "id": "ktr-government-e-70a-1",
     "bus_name": "E-70A",
@@ -87156,7 +87156,7 @@
    }
   },
   {
-   "seq": 2674,
+   "seq": 2673,
    "bus": {
     "id": "ktr-government-e-71-1",
     "bus_name": "E-71",
@@ -87244,7 +87244,7 @@
    }
   },
   {
-   "seq": 2675,
+   "seq": 2674,
    "bus": {
     "id": "ktr-government-e-72-1",
     "bus_name": "E-72",
@@ -87320,7 +87320,7 @@
    }
   },
   {
-   "seq": 2676,
+   "seq": 2675,
    "bus": {
     "id": "ktr-government-e-73-1",
     "bus_name": "E-73",
@@ -87432,7 +87432,7 @@
    }
   },
   {
-   "seq": 2677,
+   "seq": 2676,
    "bus": {
     "id": "ktr-government-e-74-1",
     "bus_name": "E-74",
@@ -87550,7 +87550,7 @@
    }
   },
   {
-   "seq": 2678,
+   "seq": 2677,
    "bus": {
     "id": "ktr-government-e-75-1",
     "bus_name": "E-75",
@@ -87632,7 +87632,7 @@
    }
   },
   {
-   "seq": 2679,
+   "seq": 2678,
    "bus": {
     "id": "ktr-government-e-76-1",
     "bus_name": "E-76",
@@ -87708,7 +87708,7 @@
    }
   },
   {
-   "seq": 2680,
+   "seq": 2679,
    "bus": {
     "id": "ktr-government-e-77-1",
     "bus_name": "E-77",
@@ -87790,7 +87790,7 @@
    }
   },
   {
-   "seq": 2690,
+   "seq": 2689,
    "bus": {
     "id": "ktr-government-act-4-1",
     "bus_name": "ACT-4",
@@ -87932,7 +87932,7 @@
    }
   },
   {
-   "seq": 2691,
+   "seq": 2690,
    "bus": {
     "id": "ktr-government-act-5-1",
     "bus_name": "ACT-5",
@@ -88134,7 +88134,7 @@
    }
   },
   {
-   "seq": 2692,
+   "seq": 2691,
    "bus": {
     "id": "ktr-government-act-6-1",
     "bus_name": "ACT-6",
@@ -88270,7 +88270,7 @@
    }
   },
   {
-   "seq": 2693,
+   "seq": 2692,
    "bus": {
     "id": "ktr-government-act-8-1",
     "bus_name": "ACT-8",
@@ -88526,7 +88526,7 @@
    }
   },
   {
-   "seq": 2694,
+   "seq": 2693,
    "bus": {
     "id": "ktr-government-act-10-1",
     "bus_name": "ACT-10",
@@ -88608,7 +88608,7 @@
    }
   },
   {
-   "seq": 2695,
+   "seq": 2694,
    "bus": {
     "id": "ktr-government-act-13-1",
     "bus_name": "ACT-13",
@@ -88714,7 +88714,7 @@
    }
   },
   {
-   "seq": 2696,
+   "seq": 2695,
    "bus": {
     "id": "ktr-government-act-15-1",
     "bus_name": "ACT-15",
@@ -89000,7 +89000,7 @@
    }
   },
   {
-   "seq": 2697,
+   "seq": 2696,
    "bus": {
     "id": "ktr-government-be-7-1",
     "bus_name": "BE-7",
@@ -89148,7 +89148,7 @@
    }
   },
   {
-   "seq": 2698,
+   "seq": 2697,
    "bus": {
     "id": "ktr-government-be-11-1",
     "bus_name": "BE-11",
@@ -89242,7 +89242,7 @@
    }
   },
   {
-   "seq": 2699,
+   "seq": 2698,
    "bus": {
     "id": "ktr-government-be-12-1",
     "bus_name": "BE-12",
@@ -89360,7 +89360,7 @@
    }
   },
   {
-   "seq": 2700,
+   "seq": 2699,
    "bus": {
     "id": "ktr-government-be-19-1",
     "bus_name": "BE-19",
@@ -89454,7 +89454,7 @@
    }
   },
   {
-   "seq": 2701,
+   "seq": 2700,
    "bus": {
     "id": "ktr-government-acs-3-1",
     "bus_name": "ACS-3",
@@ -89740,7 +89740,7 @@
    }
   },
   {
-   "seq": 2702,
+   "seq": 2701,
    "bus": {
     "id": "ktr-government-kolkata-to-omarpur",
     "bus_name": "Kolkata to Omarpur",
@@ -89888,7 +89888,7 @@
    }
   },
   {
-   "seq": 2703,
+   "seq": 2702,
    "bus": {
     "id": "ktr-government-kolkata-to-gazole",
     "bus_name": "Kolkata to Gazole",
@@ -90102,7 +90102,7 @@
    }
   },
   {
-   "seq": 2704,
+   "seq": 2703,
    "bus": {
     "id": "ktr-government-kolkata-to-chanchal",
     "bus_name": "Kolkata to Chanchal",
@@ -90244,7 +90244,7 @@
    }
   },
   {
-   "seq": 2705,
+   "seq": 2704,
    "bus": {
     "id": "ktr-government-kolkata-to-gangarampur",
     "bus_name": "Kolkata to Gangarampur",
@@ -90464,7 +90464,7 @@
    }
   },
   {
-   "seq": 2706,
+   "seq": 2705,
    "bus": {
     "id": "ktr-government-kolkata-to-tapan",
     "bus_name": "Kolkata to Tapan",
@@ -90648,7 +90648,7 @@
    }
   },
   {
-   "seq": 2707,
+   "seq": 2706,
    "bus": {
     "id": "ktr-government-kolkata-to-kandi",
     "bus_name": "Kolkata to Kandi",
@@ -90778,7 +90778,7 @@
    }
   },
   {
-   "seq": 2708,
+   "seq": 2707,
    "bus": {
     "id": "ktr-government-kolkata-to-sabaldaha",
     "bus_name": "Kolkata to Sabaldaha",
@@ -90884,7 +90884,7 @@
    }
   },
   {
-   "seq": 2709,
+   "seq": 2708,
    "bus": {
     "id": "ktr-government-kolkata-to-nagar",
     "bus_name": "Kolkata to Nagar",
@@ -91014,7 +91014,7 @@
    }
   },
   {
-   "seq": 2710,
+   "seq": 2709,
    "bus": {
     "id": "ktr-government-kolkata-to-berhampore",
     "bus_name": "Kolkata to Berhampore",
@@ -91162,7 +91162,7 @@
    }
   },
   {
-   "seq": 2711,
+   "seq": 2710,
    "bus": {
     "id": "ktr-government-kolkata-to-saiyadpara",
     "bus_name": "Kolkata to Saiyadpara",
@@ -91292,7 +91292,7 @@
    }
   },
   {
-   "seq": 2712,
+   "seq": 2711,
    "bus": {
     "id": "ktr-government-kolkata-to-malbazar",
     "bus_name": "Kolkata to Malbazar",
@@ -91524,7 +91524,7 @@
    }
   },
   {
-   "seq": 2713,
+   "seq": 2712,
    "bus": {
     "id": "ktr-government-kolkata-to-joypur",
     "bus_name": "Kolkata to Joypur",
@@ -91600,7 +91600,7 @@
    }
   },
   {
-   "seq": 2714,
+   "seq": 2713,
    "bus": {
     "id": "ktr-government-kolkata-to-moynaguri",
     "bus_name": "Kolkata to Moynaguri",
@@ -91796,7 +91796,7 @@
    }
   },
   {
-   "seq": 2715,
+   "seq": 2714,
    "bus": {
     "id": "ktr-government-kolkata-to-alipurduar",
     "bus_name": "Kolkata to Alipurduar",
@@ -91962,7 +91962,7 @@
    }
   },
   {
-   "seq": 2716,
+   "seq": 2715,
    "bus": {
     "id": "ktr-government-kolkata-to-dhuliyan",
     "bus_name": "Kolkata to Dhuliyan",
@@ -92116,7 +92116,7 @@
    }
   },
   {
-   "seq": 2717,
+   "seq": 2716,
    "bus": {
     "id": "ktr-government-kolkata-to-chakta",
     "bus_name": "Kolkata to Chakta",
@@ -92246,7 +92246,7 @@
    }
   },
   {
-   "seq": 2718,
+   "seq": 2717,
    "bus": {
     "id": "ktr-government-kolkata-to-suri-1",
     "bus_name": "Kolkata to Suri",
@@ -92322,7 +92322,7 @@
    }
   },
   {
-   "seq": 2719,
+   "seq": 2718,
    "bus": {
     "id": "ktr-government-kolkata-to-omarpur-1",
     "bus_name": "Kolkata to Omarpur",
@@ -92470,7 +92470,7 @@
    }
   },
   {
-   "seq": 2720,
+   "seq": 2719,
    "bus": {
     "id": "ktr-government-kolkata-to-malda-rocket-1",
     "bus_name": "Kolkata to Malda Rocket",
@@ -92582,7 +92582,7 @@
    }
   },
   {
-   "seq": 2721,
+   "seq": 2720,
    "bus": {
     "id": "ktr-government-kolkata-to-malda-ac-rocket-1",
     "bus_name": "Kolkata to Malda AC Rocket",
@@ -92724,7 +92724,7 @@
    }
   },
   {
-   "seq": 2722,
+   "seq": 2721,
    "bus": {
     "id": "ktr-government-kolkata-to-malda-ac-rocket-premium-1",
     "bus_name": "Kolkata to Malda AC Rocket Premium",
@@ -92866,7 +92866,7 @@
    }
   },
   {
-   "seq": 2723,
+   "seq": 2722,
    "bus": {
     "id": "ktr-government-kolkata-to-gazole-1",
     "bus_name": "Kolkata to Gazole",
@@ -93080,7 +93080,7 @@
    }
   },
   {
-   "seq": 2724,
+   "seq": 2723,
    "bus": {
     "id": "ktr-government-kolkata-to-chanchal-1",
     "bus_name": "Kolkata to Chanchal",
@@ -93222,7 +93222,7 @@
    }
   },
   {
-   "seq": 2725,
+   "seq": 2724,
    "bus": {
     "id": "ktr-government-kolkata-to-gangarampur-1",
     "bus_name": "Kolkata to Gangarampur",
@@ -93442,7 +93442,7 @@
    }
   },
   {
-   "seq": 2726,
+   "seq": 2725,
    "bus": {
     "id": "ktr-government-kolkata-to-tapan-1",
     "bus_name": "Kolkata to Tapan",
@@ -93626,7 +93626,7 @@
    }
   },
   {
-   "seq": 2727,
+   "seq": 2726,
    "bus": {
     "id": "ktr-government-kolkata-to-kandi-1",
     "bus_name": "Kolkata to Kandi",
@@ -93756,7 +93756,7 @@
    }
   },
   {
-   "seq": 2728,
+   "seq": 2727,
    "bus": {
     "id": "ktr-government-kolkata-to-raiganj-1",
     "bus_name": "Kolkata to Raiganj",
@@ -93862,7 +93862,7 @@
    }
   },
   {
-   "seq": 2729,
+   "seq": 2728,
    "bus": {
     "id": "ktr-government-kolkata-to-raiganj-rocket-1",
     "bus_name": "Kolkata to Raiganj Rocket",
@@ -93968,7 +93968,7 @@
    }
   },
   {
-   "seq": 2730,
+   "seq": 2729,
    "bus": {
     "id": "ktr-government-kolkata-to-balurghat-1",
     "bus_name": "Kolkata to Balurghat",
@@ -94122,7 +94122,7 @@
    }
   },
   {
-   "seq": 2731,
+   "seq": 2730,
    "bus": {
     "id": "ktr-government-kolkata-to-sabaldaha-1",
     "bus_name": "Kolkata to Sabaldaha",
@@ -94228,7 +94228,7 @@
    }
   },
   {
-   "seq": 2732,
+   "seq": 2731,
    "bus": {
     "id": "ktr-government-kolkata-to-nagar-1",
     "bus_name": "Kolkata to Nagar",
@@ -94358,7 +94358,7 @@
    }
   },
   {
-   "seq": 2733,
+   "seq": 2732,
    "bus": {
     "id": "ktr-government-kolkata-to-berhampore-1",
     "bus_name": "Kolkata to Berhampore",
@@ -94506,7 +94506,7 @@
    }
   },
   {
-   "seq": 2734,
+   "seq": 2733,
    "bus": {
     "id": "ktr-government-kolkata-to-saiyadpara-1",
     "bus_name": "Kolkata to Saiyadpara",
@@ -94636,7 +94636,7 @@
    }
   },
   {
-   "seq": 2735,
+   "seq": 2734,
    "bus": {
     "id": "ktr-government-kolkata-to-malbazar-1",
     "bus_name": "Kolkata to Malbazar",
@@ -94868,7 +94868,7 @@
    }
   },
   {
-   "seq": 2736,
+   "seq": 2735,
    "bus": {
     "id": "ktr-government-kolkata-to-joypur-1",
     "bus_name": "Kolkata to Joypur",
@@ -94944,7 +94944,7 @@
    }
   },
   {
-   "seq": 2737,
+   "seq": 2736,
    "bus": {
     "id": "ktr-government-kolkata-to-moynaguri-1",
     "bus_name": "Kolkata to Moynaguri",
@@ -95140,7 +95140,7 @@
    }
   },
   {
-   "seq": 2738,
+   "seq": 2737,
    "bus": {
     "id": "ktr-government-kolkata-to-cooch-behar-1",
     "bus_name": "Kolkata to Cooch Behar",
@@ -95366,7 +95366,7 @@
    }
   },
   {
-   "seq": 2739,
+   "seq": 2738,
    "bus": {
     "id": "ktr-government-kolkata-to-cooch-behar-rocket-service-1",
     "bus_name": "Kolkata to Cooch Behar Rocket Service",
@@ -95586,7 +95586,7 @@
    }
   },
   {
-   "seq": 2740,
+   "seq": 2739,
    "bus": {
     "id": "ktr-government-kolkata-to-alipurduar-1",
     "bus_name": "Kolkata to Alipurduar",
@@ -95752,7 +95752,7 @@
    }
   },
   {
-   "seq": 2741,
+   "seq": 2740,
    "bus": {
     "id": "ktr-government-kolkata-to-dhuliyan-1",
     "bus_name": "Kolkata to Dhuliyan",
@@ -95906,7 +95906,7 @@
    }
   },
   {
-   "seq": 2742,
+   "seq": 2741,
    "bus": {
     "id": "ktr-government-kolkata-to-chakta-1",
     "bus_name": "Kolkata to Chakta",
@@ -96036,7 +96036,7 @@
    }
   },
   {
-   "seq": 2743,
+   "seq": 2742,
    "bus": {
     "id": "ktr-government-kolkata-to-durgapur",
     "bus_name": "Kolkata to Durgapur",
@@ -96124,7 +96124,7 @@
    }
   },
   {
-   "seq": 2744,
+   "seq": 2743,
    "bus": {
     "id": "ktr-government-kolkata-to-durgapur-ac-premium",
     "bus_name": "Kolkata to Durgapur AC Premium",
@@ -96212,7 +96212,7 @@
    }
   },
   {
-   "seq": 2745,
+   "seq": 2744,
    "bus": {
     "id": "ktr-government-kolkata-to-barddhaman",
     "bus_name": "Kolkata to Barddhaman",
@@ -96276,7 +96276,7 @@
    }
   },
   {
-   "seq": 2746,
+   "seq": 2745,
    "bus": {
     "id": "ktr-government-kolkata-to-barddhaman-ac-premium",
     "bus_name": "Kolkata to Barddhaman AC Premium",
@@ -96340,7 +96340,7 @@
    }
   },
   {
-   "seq": 2748,
+   "seq": 2747,
    "bus": {
     "id": "ktr-government-kolkata-to-belpahari",
     "bus_name": "Kolkata to Belpahari",
@@ -96524,7 +96524,7 @@
    }
   },
   {
-   "seq": 2749,
+   "seq": 2748,
    "bus": {
     "id": "ktr-government-kolkata-to-bandowan",
     "bus_name": "Kolkata to Bandowan",
@@ -96642,7 +96642,7 @@
    }
   },
   {
-   "seq": 2750,
+   "seq": 2749,
    "bus": {
     "id": "ktr-government-kolkata-to-tarapith-2",
     "bus_name": "Kolkata to Tarapith",
@@ -96784,7 +96784,7 @@
    }
   },
   {
-   "seq": 2751,
+   "seq": 2750,
    "bus": {
     "id": "ktr-government-kolkata-to-shyamsundar",
     "bus_name": "Kolkata to Shyamsundar",
@@ -96860,7 +96860,7 @@
    }
   },
   {
-   "seq": 2752,
+   "seq": 2751,
    "bus": {
     "id": "ktr-government-kolkata-to-labhpur",
     "bus_name": "Kolkata to Labhpur",
@@ -97002,7 +97002,7 @@
    }
   },
   {
-   "seq": 2753,
+   "seq": 2752,
    "bus": {
     "id": "ktr-government-kolkata-to-shimuliyahat",
     "bus_name": "Kolkata to Shimuliyahat",
@@ -97168,7 +97168,7 @@
    }
   },
   {
-   "seq": 2754,
+   "seq": 2753,
    "bus": {
     "id": "ktr-government-kolkata-to-sainthia",
     "bus_name": "Kolkata to Sainthia",
@@ -97244,7 +97244,7 @@
    }
   },
   {
-   "seq": 2755,
+   "seq": 2754,
    "bus": {
     "id": "ktr-government-kolkata-to-nandigram",
     "bus_name": "Kolkata to Nandigram",
@@ -97362,7 +97362,7 @@
    }
   },
   {
-   "seq": 2756,
+   "seq": 2755,
    "bus": {
     "id": "ktr-government-kolkata-to-maldanga",
     "bus_name": "Kolkata to Maldanga",
@@ -97450,7 +97450,7 @@
    }
   },
   {
-   "seq": 2757,
+   "seq": 2756,
    "bus": {
     "id": "ktr-government-kolkata-to-kalna",
     "bus_name": "Kolkata to Kalna",
@@ -97538,7 +97538,7 @@
    }
   },
   {
-   "seq": 2758,
+   "seq": 2757,
    "bus": {
     "id": "ktr-government-kolkata-to-nanur",
     "bus_name": "Kolkata to Nanur",
@@ -97596,7 +97596,7 @@
    }
   },
   {
-   "seq": 2759,
+   "seq": 2758,
    "bus": {
     "id": "ktr-government-kolkata-to-ukhra",
     "bus_name": "Kolkata to Ukhra",
@@ -97714,7 +97714,7 @@
    }
   },
   {
-   "seq": 2760,
+   "seq": 2759,
    "bus": {
     "id": "ktr-government-kolkata-to-harishpur",
     "bus_name": "Kolkata to Harishpur",
@@ -97820,7 +97820,7 @@
    }
   },
   {
-   "seq": 2761,
+   "seq": 2760,
    "bus": {
     "id": "ktr-government-kolkata-to-kuli",
     "bus_name": "Kolkata to Kuli",
@@ -97932,7 +97932,7 @@
    }
   },
   {
-   "seq": 2762,
+   "seq": 2761,
    "bus": {
     "id": "ktr-government-kolkata-to-manbazar",
     "bus_name": "Kolkata to Manbazar",
@@ -98092,7 +98092,7 @@
    }
   },
   {
-   "seq": 2763,
+   "seq": 2762,
    "bus": {
     "id": "ktr-government-kolkata-to-kirnahar",
     "bus_name": "Kolkata to Kirnahar",
@@ -98156,7 +98156,7 @@
    }
   },
   {
-   "seq": 2764,
+   "seq": 2763,
    "bus": {
     "id": "ktr-government-kolkata-to-dinanathpur",
     "bus_name": "Kolkata to Dinanathpur",
@@ -98214,7 +98214,7 @@
    }
   },
   {
-   "seq": 2765,
+   "seq": 2764,
    "bus": {
     "id": "ktr-government-kolkata-to-daroka",
     "bus_name": "Kolkata to Daroka",
@@ -98296,7 +98296,7 @@
    }
   },
   {
-   "seq": 2766,
+   "seq": 2765,
    "bus": {
     "id": "ktr-government-kolkata-to-sonamukhi",
     "bus_name": "Kolkata to Sonamukhi",
@@ -98378,7 +98378,7 @@
    }
   },
   {
-   "seq": 2767,
+   "seq": 2766,
    "bus": {
     "id": "ktr-government-garia-to-digha-1",
     "bus_name": "Garia to Digha",
@@ -98646,7 +98646,7 @@
    }
   },
   {
-   "seq": 2768,
+   "seq": 2767,
    "bus": {
     "id": "ktr-government-garia-to-digha-ac-premium",
     "bus_name": "Garia to Digha AC Premium",
@@ -98776,7 +98776,7 @@
    }
   },
   {
-   "seq": 2769,
+   "seq": 2768,
    "bus": {
     "id": "ktr-government-garia-to-jhargram-1",
     "bus_name": "Garia to Jhargram",
@@ -98948,7 +98948,7 @@
    }
   },
   {
-   "seq": 2770,
+   "seq": 2769,
    "bus": {
     "id": "ktr-government-garia-to-rampurhat",
     "bus_name": "Garia to Rampurhat",
@@ -99048,7 +99048,7 @@
    }
   },
   {
-   "seq": 2771,
+   "seq": 2770,
    "bus": {
     "id": "ktr-government-baruipur-to-digha",
     "bus_name": "Baruipur to Digha",
@@ -99238,7 +99238,7 @@
    }
   },
   {
-   "seq": 2772,
+   "seq": 2771,
    "bus": {
     "id": "ktr-government-baruipur-to-digha-ac-premium",
     "bus_name": "Baruipur to Digha AC Premium",
@@ -99428,7 +99428,7 @@
    }
   },
   {
-   "seq": 2773,
+   "seq": 2772,
    "bus": {
     "id": "ktr-government-kudghat-to-tarapith",
     "bus_name": "Kudghat to Tarapith",
@@ -99570,7 +99570,7 @@
    }
   },
   {
-   "seq": 2774,
+   "seq": 2773,
    "bus": {
     "id": "ktr-government-nainan-to-esplanade",
     "bus_name": "Nainan to Esplanade",
@@ -99724,7 +99724,7 @@
    }
   },
   {
-   "seq": 2775,
+   "seq": 2774,
    "bus": {
     "id": "ktr-government-nainan-to-malda",
     "bus_name": "Nainan to Malda",
@@ -100148,7 +100148,7 @@
    }
   },
   {
-   "seq": 2776,
+   "seq": 2775,
    "bus": {
     "id": "ktr-government-digha-to-lagola",
     "bus_name": "Digha to Lagola",
@@ -100470,7 +100470,7 @@
    }
   },
   {
-   "seq": 2777,
+   "seq": 2776,
    "bus": {
     "id": "ktr-government-khirpai-to-digha",
     "bus_name": "Khirpai to Digha",
@@ -100690,7 +100690,7 @@
    }
   },
   {
-   "seq": 2778,
+   "seq": 2777,
    "bus": {
     "id": "ktr-government-digha-to-suri",
     "bus_name": "Digha to Suri",
@@ -100934,7 +100934,7 @@
    }
   },
   {
-   "seq": 2779,
+   "seq": 2778,
    "bus": {
     "id": "ktr-government-kolkata-to-kharika",
     "bus_name": "Kolkata to Kharika",
@@ -101064,7 +101064,7 @@
    }
   },
   {
-   "seq": 2780,
+   "seq": 2779,
    "bus": {
     "id": "ktr-government-haldia-to-asansol",
     "bus_name": "Haldia to Asansol",
@@ -101272,7 +101272,7 @@
    }
   },
   {
-   "seq": 2781,
+   "seq": 2780,
    "bus": {
     "id": "ktr-government-haldia-to-barakar",
     "bus_name": "Haldia to Barakar",
@@ -101504,7 +101504,7 @@
    }
   },
   {
-   "seq": 2782,
+   "seq": 2781,
    "bus": {
     "id": "ktr-government-haldia-to-tarapith",
     "bus_name": "Haldia to Tarapith",
@@ -101736,7 +101736,7 @@
    }
   },
   {
-   "seq": 2783,
+   "seq": 2782,
    "bus": {
     "id": "ktr-government-chittaranjan-to-haldia",
     "bus_name": "Chittaranjan to Haldia",
@@ -101980,7 +101980,7 @@
    }
   },
   {
-   "seq": 2784,
+   "seq": 2783,
    "bus": {
     "id": "ktr-government-tarapith-to-nainan",
     "bus_name": "Tarapith to Nainan",
@@ -102308,7 +102308,7 @@
    }
   },
   {
-   "seq": 2785,
+   "seq": 2784,
    "bus": {
     "id": "ktr-government-newtown-to-digha-ac-volvo",
     "bus_name": "Newtown to Digha AC Volvo",
@@ -102522,7 +102522,7 @@
    }
   },
   {
-   "seq": 2786,
+   "seq": 2785,
    "bus": {
     "id": "ktr-government-karunamoyee-to-bankura",
     "bus_name": "Karunamoyee to Bankura",
@@ -102640,7 +102640,7 @@
    }
   },
   {
-   "seq": 2787,
+   "seq": 2786,
    "bus": {
     "id": "ktr-government-karunamoyee-to-barddhaman",
     "bus_name": "Karunamoyee to Barddhaman",
@@ -102722,7 +102722,7 @@
    }
   },
   {
-   "seq": 2788,
+   "seq": 2787,
    "bus": {
     "id": "ktr-government-karunamoyee-to-midnapore",
     "bus_name": "Karunamoyee to Midnapore",
@@ -102846,7 +102846,7 @@
    }
   },
   {
-   "seq": 2789,
+   "seq": 2788,
    "bus": {
     "id": "ktr-government-karunamoyee-to-jhargram",
     "bus_name": "Karunamoyee to Jhargram",
@@ -102952,7 +102952,7 @@
    }
   },
   {
-   "seq": 2790,
+   "seq": 2789,
    "bus": {
     "id": "ktr-government-karunamoyee-to-bandowan",
     "bus_name": "Karunamoyee to Bandowan",
@@ -103106,7 +103106,7 @@
    }
   },
   {
-   "seq": 2791,
+   "seq": 2790,
    "bus": {
     "id": "ktr-government-karunamoyee-to-durgapur",
     "bus_name": "Karunamoyee to Durgapur",
@@ -103212,7 +103212,7 @@
    }
   },
   {
-   "seq": 2792,
+   "seq": 2791,
    "bus": {
     "id": "ktr-government-karunamoyee-to-kalna",
     "bus_name": "Karunamoyee to Kalna",
@@ -103324,7 +103324,7 @@
    }
   },
   {
-   "seq": 2793,
+   "seq": 2792,
    "bus": {
     "id": "ktr-government-karunamoyee-to-haldia-1",
     "bus_name": "Karunamoyee to Haldia",
@@ -103508,7 +103508,7 @@
    }
   },
   {
-   "seq": 2794,
+   "seq": 2793,
    "bus": {
     "id": "ktr-government-karunamoyee-to-haldia-ac-premium",
     "bus_name": "Karunamoyee to Haldia AC Premium",
@@ -103692,7 +103692,7 @@
    }
   },
   {
-   "seq": 2795,
+   "seq": 2794,
    "bus": {
     "id": "ktr-government-habra-to-suri",
     "bus_name": "Habra to Suri",
@@ -103762,7 +103762,7 @@
    }
   },
   {
-   "seq": 2796,
+   "seq": 2795,
    "bus": {
     "id": "ktr-government-habra-to-durgapur",
     "bus_name": "Habra to Durgapur",
@@ -103840,7 +103840,7 @@
    }
   },
   {
-   "seq": 2797,
+   "seq": 2796,
    "bus": {
     "id": "ktr-government-bongaon-to-asansol",
     "bus_name": "Bongaon to Asansol",
@@ -104036,7 +104036,7 @@
    }
   },
   {
-   "seq": 2798,
+   "seq": 2797,
    "bus": {
     "id": "ktr-government-barasat-to-durgapur",
     "bus_name": "Barasat to Durgapur",
@@ -104136,7 +104136,7 @@
    }
   },
   {
-   "seq": 2799,
+   "seq": 2798,
    "bus": {
     "id": "ktr-government-taki-to-digha",
     "bus_name": "Taki to Digha",
@@ -104326,7 +104326,7 @@
    }
   },
   {
-   "seq": 2800,
+   "seq": 2799,
    "bus": {
     "id": "ktr-government-kolkata-to-katwa",
     "bus_name": "Kolkata to Katwa",
@@ -104420,7 +104420,7 @@
    }
   },
   {
-   "seq": 2801,
+   "seq": 2800,
    "bus": {
     "id": "ktr-government-kolkata-to-chalta",
     "bus_name": "Kolkata to Chalta",
@@ -104532,7 +104532,7 @@
    }
   },
   {
-   "seq": 2802,
+   "seq": 2801,
    "bus": {
     "id": "ktr-government-karunamoyee-to-salboni",
     "bus_name": "Karunamoyee to Salboni",
@@ -104656,7 +104656,7 @@
    }
   },
   {
-   "seq": 2803,
+   "seq": 2802,
    "bus": {
     "id": "ktr-government-kolkata-to-bolpur",
     "bus_name": "Kolkata to Bolpur",
@@ -104744,7 +104744,7 @@
    }
   },
   {
-   "seq": 2804,
+   "seq": 2803,
    "bus": {
     "id": "ktr-government-kolkata-to-arambagh",
     "bus_name": "Kolkata to Arambagh",
@@ -104844,7 +104844,7 @@
    }
   },
   {
-   "seq": 2805,
+   "seq": 2804,
    "bus": {
     "id": "ktr-government-birati-to-digha",
     "bus_name": "Birati to Digha",
@@ -104968,7 +104968,7 @@
    }
   },
   {
-   "seq": 2806,
+   "seq": 2805,
    "bus": {
     "id": "ktr-government-khardah-to-digha",
     "bus_name": "Khardah to Digha",
@@ -105086,7 +105086,7 @@
    }
   },
   {
-   "seq": 2807,
+   "seq": 2806,
    "bus": {
     "id": "ktr-government-belgharia-badamtala-to-digha",
     "bus_name": "Belgharia Badamtala to Digha",
@@ -105204,7 +105204,7 @@
    }
   },
   {
-   "seq": 2808,
+   "seq": 2807,
    "bus": {
     "id": "ktr-government-digha-to-bagula",
     "bus_name": "Digha to Bagula",
@@ -105370,7 +105370,7 @@
    }
   },
   {
-   "seq": 2809,
+   "seq": 2808,
    "bus": {
     "id": "ktr-government-digha-to-dumdum-station",
     "bus_name": "Digha to Dumdum Station",
@@ -105500,7 +105500,7 @@
    }
   },
   {
-   "seq": 2810,
+   "seq": 2809,
    "bus": {
     "id": "ktr-government-digha-to-durgapur",
     "bus_name": "Digha to Durgapur",
@@ -105654,7 +105654,7 @@
    }
   },
   {
-   "seq": 2811,
+   "seq": 2810,
    "bus": {
     "id": "ktr-government-kolkata-to-rasulpur",
     "bus_name": "Kolkata to Rasulpur",
@@ -105784,7 +105784,7 @@
    }
   },
   {
-   "seq": 2812,
+   "seq": 2811,
    "bus": {
     "id": "ktr-government-kolkata-to-langalhata",
     "bus_name": "Kolkata to Langalhata",
@@ -105902,7 +105902,7 @@
    }
   },
   {
-   "seq": 2813,
+   "seq": 2812,
    "bus": {
     "id": "ktr-government-kolkata-to-berhampore-2",
     "bus_name": "Kolkata to Berhampore",
@@ -106062,7 +106062,7 @@
    }
   },
   {
-   "seq": 2814,
+   "seq": 2813,
    "bus": {
     "id": "ktr-government-digha-to-khatra",
     "bus_name": "Digha to Khatra",
@@ -106282,7 +106282,7 @@
    }
   },
   {
-   "seq": 2815,
+   "seq": 2814,
    "bus": {
     "id": "ktr-government-digha-to-sarsuna",
     "bus_name": "Digha to Sarsuna",
@@ -106382,7 +106382,7 @@
    }
   },
   {
-   "seq": 2816,
+   "seq": 2815,
    "bus": {
     "id": "ktr-government-digha-to-kudgha",
     "bus_name": "Digha to Kudgha",
@@ -106488,7 +106488,7 @@
    }
   },
   {
-   "seq": 2817,
+   "seq": 2816,
    "bus": {
     "id": "ktr-government-digha-to-thakurpukur",
     "bus_name": "Digha to Thakurpukur",
@@ -106588,7 +106588,7 @@
    }
   },
   {
-   "seq": 2818,
+   "seq": 2817,
    "bus": {
     "id": "ktr-government-kolkata-to-jamuria",
     "bus_name": "Kolkata to Jamuria",
@@ -106670,7 +106670,7 @@
    }
   },
   {
-   "seq": 2819,
+   "seq": 2818,
    "bus": {
     "id": "ktr-government-kolkata-to-balgona",
     "bus_name": "Kolkata to Balgona",
@@ -106752,7 +106752,7 @@
    }
   },
   {
-   "seq": 2820,
+   "seq": 2819,
    "bus": {
     "id": "ktr-government-jhargram-to-digha",
     "bus_name": "Jhargram to Digha",
@@ -106918,7 +106918,7 @@
    }
   },
   {
-   "seq": 2821,
+   "seq": 2820,
    "bus": {
     "id": "ktr-government-new-barrackpore-to-digha",
     "bus_name": "New Barrackpore to Digha",
@@ -107048,7 +107048,7 @@
    }
   },
   {
-   "seq": 2822,
+   "seq": 2821,
    "bus": {
     "id": "ktr-government-digha-to-nagar",
     "bus_name": "Digha to Nagar",
@@ -107154,7 +107154,7 @@
    }
   },
   {
-   "seq": 2823,
+   "seq": 2822,
    "bus": {
     "id": "ktr-government-kolkata-to-kantakhali",
     "bus_name": "Kolkata to Kantakhali",
@@ -107242,7 +107242,7 @@
    }
   },
   {
-   "seq": 2824,
+   "seq": 2823,
    "bus": {
     "id": "ktr-government-kolkata-to-gopiganj",
     "bus_name": "Kolkata to Gopiganj",
@@ -107324,7 +107324,7 @@
    }
   },
   {
-   "seq": 2825,
+   "seq": 2824,
    "bus": {
     "id": "ktr-government-kolkata-to-baghmundi",
     "bus_name": "Kolkata to Baghmundi",
@@ -107400,7 +107400,7 @@
    }
   },
   {
-   "seq": 2826,
+   "seq": 2825,
    "bus": {
     "id": "ktr-government-digha-to-kirnahar",
     "bus_name": "Digha to Kirnahar",
@@ -107560,7 +107560,7 @@
    }
   },
   {
-   "seq": 2827,
+   "seq": 2826,
    "bus": {
     "id": "ktr-government-kolkata-to-dhumsai",
     "bus_name": "Kolkata to Dhumsai",
@@ -107708,7 +107708,7 @@
    }
   },
   {
-   "seq": 2828,
+   "seq": 2827,
    "bus": {
     "id": "ktr-government-barrackpore-to-haldia",
     "bus_name": "Barrackpore to Haldia",
@@ -107796,7 +107796,7 @@
    }
   },
   {
-   "seq": 2829,
+   "seq": 2828,
    "bus": {
     "id": "ktr-government-karunamoyee-to-jhalda",
     "bus_name": "Karunamoyee to Jhalda",
@@ -107890,7 +107890,7 @@
    }
   },
   {
-   "seq": 2830,
+   "seq": 2829,
    "bus": {
     "id": "ktr-government-garia-to-midnapore",
     "bus_name": "Garia to Midnapore",
@@ -107990,7 +107990,7 @@
    }
   },
   {
-   "seq": 2831,
+   "seq": 2830,
    "bus": {
     "id": "ktr-government-rajbalhat-to-haldia",
     "bus_name": "Rajbalhat to Haldia",
@@ -108198,7 +108198,7 @@
    }
   },
   {
-   "seq": 2832,
+   "seq": 2831,
    "bus": {
     "id": "ktr-government-midnapore-to-omarpur",
     "bus_name": "Midnapore to Omarpur",
@@ -108334,7 +108334,7 @@
    }
   },
   {
-   "seq": 2833,
+   "seq": 2832,
    "bus": {
     "id": "ktr-government-kolkata-to-bakkhali-1",
     "bus_name": "Kolkata to Bakkhali",
@@ -108674,7 +108674,7 @@
    }
   },
   {
-   "seq": 2834,
+   "seq": 2833,
    "bus": {
     "id": "ktr-government-kolkata-to-digha-1",
     "bus_name": "Kolkata to Digha",
@@ -108840,7 +108840,7 @@
    }
   },
   {
-   "seq": 2835,
+   "seq": 2834,
    "bus": {
     "id": "ktr-government-kolkata-to-durgapur-1",
     "bus_name": "Kolkata to Durgapur",
@@ -108928,7 +108928,7 @@
    }
   },
   {
-   "seq": 2836,
+   "seq": 2835,
    "bus": {
     "id": "ktr-government-kolkata-to-durgapur-ac-premium-1",
     "bus_name": "Kolkata to Durgapur AC Premium",
@@ -109016,7 +109016,7 @@
    }
   },
   {
-   "seq": 2837,
+   "seq": 2836,
    "bus": {
     "id": "ktr-government-kolkata-to-barddhaman-1",
     "bus_name": "Kolkata to Barddhaman",
@@ -109080,7 +109080,7 @@
    }
   },
   {
-   "seq": 2838,
+   "seq": 2837,
    "bus": {
     "id": "ktr-government-kolkata-to-barddhaman-ac-premium-1",
     "bus_name": "Kolkata to Barddhaman AC Premium",
@@ -109144,7 +109144,7 @@
    }
   },
   {
-   "seq": 2840,
+   "seq": 2839,
    "bus": {
     "id": "ktr-government-kolkata-to-purulia-2",
     "bus_name": "Kolkata to Purulia",
@@ -109256,7 +109256,7 @@
    }
   },
   {
-   "seq": 2841,
+   "seq": 2840,
    "bus": {
     "id": "ktr-government-kolkata-to-jhargram-3",
     "bus_name": "Kolkata to Jhargram",
@@ -109404,7 +109404,7 @@
    }
   },
   {
-   "seq": 2842,
+   "seq": 2841,
    "bus": {
     "id": "ktr-government-kolkata-to-belpahari-1",
     "bus_name": "Kolkata to Belpahari",
@@ -109588,7 +109588,7 @@
    }
   },
   {
-   "seq": 2843,
+   "seq": 2842,
    "bus": {
     "id": "ktr-government-kolkata-to-bandowan-2",
     "bus_name": "Kolkata to Bandowan",
@@ -109706,7 +109706,7 @@
    }
   },
   {
-   "seq": 2844,
+   "seq": 2843,
    "bus": {
     "id": "ktr-government-kolkata-to-rampurhat-1",
     "bus_name": "Kolkata to Rampurhat",
@@ -109866,7 +109866,7 @@
    }
   },
   {
-   "seq": 2845,
+   "seq": 2844,
    "bus": {
     "id": "ktr-government-kolkata-to-tarapith-6",
     "bus_name": "Kolkata to Tarapith",
@@ -110008,7 +110008,7 @@
    }
   },
   {
-   "seq": 2846,
+   "seq": 2845,
    "bus": {
     "id": "ktr-government-kolkata-to-malda-5",
     "bus_name": "Kolkata to Malda",
@@ -110210,7 +110210,7 @@
    }
   },
   {
-   "seq": 2847,
+   "seq": 2846,
    "bus": {
     "id": "ktr-government-kolkata-to-shyamsundar-1",
     "bus_name": "Kolkata to Shyamsundar",
@@ -110286,7 +110286,7 @@
    }
   },
   {
-   "seq": 2848,
+   "seq": 2847,
    "bus": {
     "id": "ktr-government-kolkata-to-labhpur-1",
     "bus_name": "Kolkata to Labhpur",
@@ -110428,7 +110428,7 @@
    }
   },
   {
-   "seq": 2849,
+   "seq": 2848,
    "bus": {
     "id": "ktr-government-kolkata-to-shimuliyahat-1",
     "bus_name": "Kolkata to Shimuliyahat",
@@ -110594,7 +110594,7 @@
    }
   },
   {
-   "seq": 2850,
+   "seq": 2849,
    "bus": {
     "id": "ktr-government-kolkata-to-sainthia-1",
     "bus_name": "Kolkata to Sainthia",
@@ -110670,7 +110670,7 @@
    }
   },
   {
-   "seq": 2851,
+   "seq": 2850,
    "bus": {
     "id": "ktr-government-kolkata-to-nandigram-1",
     "bus_name": "Kolkata to Nandigram",
@@ -110788,7 +110788,7 @@
    }
   },
   {
-   "seq": 2852,
+   "seq": 2851,
    "bus": {
     "id": "ktr-government-kolkata-to-maldanga-1",
     "bus_name": "Kolkata to Maldanga",
@@ -110876,7 +110876,7 @@
    }
   },
   {
-   "seq": 2853,
+   "seq": 2852,
    "bus": {
     "id": "ktr-government-kolkata-to-kalna-1",
     "bus_name": "Kolkata to Kalna",
@@ -110964,7 +110964,7 @@
    }
   },
   {
-   "seq": 2854,
+   "seq": 2853,
    "bus": {
     "id": "ktr-government-kolkata-to-nanur-1",
     "bus_name": "Kolkata to Nanur",
@@ -111022,7 +111022,7 @@
    }
   },
   {
-   "seq": 2855,
+   "seq": 2854,
    "bus": {
     "id": "ktr-government-kolkata-to-ukhra-1",
     "bus_name": "Kolkata to Ukhra",
@@ -111140,7 +111140,7 @@
    }
   },
   {
-   "seq": 2856,
+   "seq": 2855,
    "bus": {
     "id": "ktr-government-kolkata-to-harishpur-1",
     "bus_name": "Kolkata to Harishpur",
@@ -111246,7 +111246,7 @@
    }
   },
   {
-   "seq": 2857,
+   "seq": 2856,
    "bus": {
     "id": "ktr-government-kolkata-to-kuli-1",
     "bus_name": "Kolkata to Kuli",
@@ -111358,7 +111358,7 @@
    }
   },
   {
-   "seq": 2858,
+   "seq": 2857,
    "bus": {
     "id": "ktr-government-kolkata-to-manbazar-1",
     "bus_name": "Kolkata to Manbazar",
@@ -111518,7 +111518,7 @@
    }
   },
   {
-   "seq": 2859,
+   "seq": 2858,
    "bus": {
     "id": "ktr-government-kolkata-to-kirnahar-1",
     "bus_name": "Kolkata to Kirnahar",
@@ -111582,7 +111582,7 @@
    }
   },
   {
-   "seq": 2860,
+   "seq": 2859,
    "bus": {
     "id": "ktr-government-kolkata-to-tarapith-7",
     "bus_name": "Kolkata to Tarapith",
@@ -111760,7 +111760,7 @@
    }
   },
   {
-   "seq": 2861,
+   "seq": 2860,
    "bus": {
     "id": "ktr-government-kolkata-to-dinanathpur-1",
     "bus_name": "Kolkata to Dinanathpur",
@@ -111818,7 +111818,7 @@
    }
   },
   {
-   "seq": 2862,
+   "seq": 2861,
    "bus": {
     "id": "ktr-government-kolkata-to-daroka-1",
     "bus_name": "Kolkata to Daroka",
@@ -111900,7 +111900,7 @@
    }
   },
   {
-   "seq": 2863,
+   "seq": 2862,
    "bus": {
     "id": "ktr-government-kolkata-to-sonamukhi-1",
     "bus_name": "Kolkata to Sonamukhi",
@@ -111982,7 +111982,7 @@
    }
   },
   {
-   "seq": 2864,
+   "seq": 2863,
    "bus": {
     "id": "ktr-government-kolkata-to-haldia-1",
     "bus_name": "Kolkata to Haldia",
@@ -112100,7 +112100,7 @@
    }
   },
   {
-   "seq": 2865,
+   "seq": 2864,
    "bus": {
     "id": "ktr-government-garia-to-digha-4",
     "bus_name": "Garia to Digha",
@@ -112362,7 +112362,7 @@
    }
   },
   {
-   "seq": 2866,
+   "seq": 2865,
    "bus": {
     "id": "ktr-government-garia-to-digha-ac-premium-1",
     "bus_name": "Garia to Digha AC Premium",
@@ -112486,7 +112486,7 @@
    }
   },
   {
-   "seq": 2867,
+   "seq": 2866,
    "bus": {
     "id": "ktr-government-garia-to-jhargram-3",
     "bus_name": "Garia to Jhargram",
@@ -112658,7 +112658,7 @@
    }
   },
   {
-   "seq": 2868,
+   "seq": 2867,
    "bus": {
     "id": "ktr-government-garia-to-rampurhat-1",
     "bus_name": "Garia to Rampurhat",
@@ -112758,7 +112758,7 @@
    }
   },
   {
-   "seq": 2869,
+   "seq": 2868,
    "bus": {
     "id": "ktr-government-baruipur-to-digha-1",
     "bus_name": "Baruipur to Digha",
@@ -112942,7 +112942,7 @@
    }
   },
   {
-   "seq": 2870,
+   "seq": 2869,
    "bus": {
     "id": "ktr-government-baruipur-to-digha-ac-premium-1",
     "bus_name": "Baruipur to Digha AC Premium",
@@ -113126,7 +113126,7 @@
    }
   },
   {
-   "seq": 2871,
+   "seq": 2870,
    "bus": {
     "id": "ktr-government-kudghat-to-tarapith-1",
     "bus_name": "Kudghat to Tarapith",
@@ -113268,7 +113268,7 @@
    }
   },
   {
-   "seq": 2872,
+   "seq": 2871,
    "bus": {
     "id": "ktr-government-nainan-to-esplanade-1",
     "bus_name": "Nainan to Esplanade",
@@ -113422,7 +113422,7 @@
    }
   },
   {
-   "seq": 2873,
+   "seq": 2872,
    "bus": {
     "id": "ktr-government-nainan-to-malda-1",
     "bus_name": "Nainan to Malda",
@@ -113846,7 +113846,7 @@
    }
   },
   {
-   "seq": 2874,
+   "seq": 2873,
    "bus": {
     "id": "ktr-government-digha-to-lalgola",
     "bus_name": "Digha to Lalgola",
@@ -114174,7 +114174,7 @@
    }
   },
   {
-   "seq": 2875,
+   "seq": 2874,
    "bus": {
     "id": "ktr-government-khirpai-to-digha-1",
     "bus_name": "Khirpai to Digha",
@@ -114388,7 +114388,7 @@
    }
   },
   {
-   "seq": 2876,
+   "seq": 2875,
    "bus": {
     "id": "ktr-government-digha-to-suri-1",
     "bus_name": "Digha to Suri",
@@ -114638,7 +114638,7 @@
    }
   },
   {
-   "seq": 2877,
+   "seq": 2876,
    "bus": {
     "id": "ktr-government-kolkata-to-kharika-1",
     "bus_name": "Kolkata to Kharika",
@@ -114768,7 +114768,7 @@
    }
   },
   {
-   "seq": 2878,
+   "seq": 2877,
    "bus": {
     "id": "ktr-government-haldia-to-asansol-1",
     "bus_name": "Haldia to Asansol",
@@ -114976,7 +114976,7 @@
    }
   },
   {
-   "seq": 2879,
+   "seq": 2878,
    "bus": {
     "id": "ktr-government-haldia-to-barakar-1",
     "bus_name": "Haldia to Barakar",
@@ -115208,7 +115208,7 @@
    }
   },
   {
-   "seq": 2880,
+   "seq": 2879,
    "bus": {
     "id": "ktr-government-haldia-to-tarapith-1",
     "bus_name": "Haldia to Tarapith",
@@ -115440,7 +115440,7 @@
    }
   },
   {
-   "seq": 2881,
+   "seq": 2880,
    "bus": {
     "id": "ktr-government-chittaranjan-to-haldia-1",
     "bus_name": "Chittaranjan to Haldia",
@@ -115684,7 +115684,7 @@
    }
   },
   {
-   "seq": 2882,
+   "seq": 2881,
    "bus": {
     "id": "ktr-government-tarapith-to-nainan-1",
     "bus_name": "Tarapith to Nainan",
@@ -116012,7 +116012,7 @@
    }
   },
   {
-   "seq": 2883,
+   "seq": 2882,
    "bus": {
     "id": "ktr-government-newtown-to-digha-ac-volvo-1",
     "bus_name": "Newtown to Digha AC Volvo",
@@ -116226,7 +116226,7 @@
    }
   },
   {
-   "seq": 2884,
+   "seq": 2883,
    "bus": {
     "id": "ktr-government-karunamoyee-to-digha-1",
     "bus_name": "Karunamoyee to Digha",
@@ -116338,7 +116338,7 @@
    }
   },
   {
-   "seq": 2885,
+   "seq": 2884,
    "bus": {
     "id": "ktr-government-karunamoyee-to-bankura-1",
     "bus_name": "Karunamoyee to Bankura",
@@ -116456,7 +116456,7 @@
    }
   },
   {
-   "seq": 2886,
+   "seq": 2885,
    "bus": {
     "id": "ktr-government-karunamoyee-to-barddhaman-1",
     "bus_name": "Karunamoyee to Barddhaman",
@@ -116538,7 +116538,7 @@
    }
   },
   {
-   "seq": 2887,
+   "seq": 2886,
    "bus": {
     "id": "ktr-government-karunamoyee-to-midnapore-2",
     "bus_name": "Karunamoyee to Midnapore",
@@ -116662,7 +116662,7 @@
    }
   },
   {
-   "seq": 2888,
+   "seq": 2887,
    "bus": {
     "id": "ktr-government-karunamoyee-to-jhargram-1",
     "bus_name": "Karunamoyee to Jhargram",
@@ -116768,7 +116768,7 @@
    }
   },
   {
-   "seq": 2889,
+   "seq": 2888,
    "bus": {
     "id": "ktr-government-karunamoyee-to-bandowan-1",
     "bus_name": "Karunamoyee to Bandowan",
@@ -116922,7 +116922,7 @@
    }
   },
   {
-   "seq": 2890,
+   "seq": 2889,
    "bus": {
     "id": "ktr-government-karunamoyee-to-durgapur-1",
     "bus_name": "Karunamoyee to Durgapur",
@@ -117029,7 +117029,7 @@
    }
   },
   {
-   "seq": 2891,
+   "seq": 2890,
    "bus": {
     "id": "ktr-government-karunamoyee-to-kalna-1",
     "bus_name": "Karunamoyee to Kalna",
@@ -117141,7 +117141,7 @@
    }
   },
   {
-   "seq": 2892,
+   "seq": 2891,
    "bus": {
     "id": "ktr-government-karunamoyee-to-suri-1",
     "bus_name": "Karunamoyee to Suri",
@@ -117247,7 +117247,7 @@
    }
   },
   {
-   "seq": 2893,
+   "seq": 2892,
    "bus": {
     "id": "ktr-government-karunamoyee-to-asansol-1",
     "bus_name": "Karunamoyee to Asansol",
@@ -117365,7 +117365,7 @@
    }
   },
   {
-   "seq": 2894,
+   "seq": 2893,
    "bus": {
     "id": "ktr-government-karunamoyee-to-asansol-ac-premium-1",
     "bus_name": "Karunamoyee to Asansol AC Premium",
@@ -117483,7 +117483,7 @@
    }
   },
   {
-   "seq": 2895,
+   "seq": 2894,
    "bus": {
     "id": "ktr-government-karunamoyee-to-haldia-3",
     "bus_name": "Karunamoyee to Haldia",
@@ -117667,7 +117667,7 @@
    }
   },
   {
-   "seq": 2896,
+   "seq": 2895,
    "bus": {
     "id": "ktr-government-karunamoyee-to-haldia-ac-premium-1",
     "bus_name": "Karunamoyee to Haldia AC Premium",
@@ -117851,7 +117851,7 @@
    }
   },
   {
-   "seq": 2897,
+   "seq": 2896,
    "bus": {
     "id": "ktr-government-habra-to-midnapore-1",
     "bus_name": "Habra to Midnapore",
@@ -117999,7 +117999,7 @@
    }
   },
   {
-   "seq": 2898,
+   "seq": 2897,
    "bus": {
     "id": "ktr-government-habra-to-suri-1",
     "bus_name": "Habra to Suri",
@@ -118069,7 +118069,7 @@
    }
   },
   {
-   "seq": 2899,
+   "seq": 2898,
    "bus": {
     "id": "ktr-government-habra-to-digha-1",
     "bus_name": "Habra to Digha",
@@ -118307,7 +118307,7 @@
    }
   },
   {
-   "seq": 2900,
+   "seq": 2899,
    "bus": {
     "id": "ktr-government-habra-to-durgapur-1",
     "bus_name": "Habra to Durgapur",
@@ -118383,7 +118383,7 @@
    }
   },
   {
-   "seq": 2901,
+   "seq": 2900,
    "bus": {
     "id": "ktr-government-habra-to-asansol-1",
     "bus_name": "Habra to Asansol",
@@ -118507,7 +118507,7 @@
    }
   },
   {
-   "seq": 2902,
+   "seq": 2901,
    "bus": {
     "id": "ktr-government-bongaon-to-asansol-1",
     "bus_name": "Bongaon to Asansol",
@@ -118703,7 +118703,7 @@
    }
   },
   {
-   "seq": 2903,
+   "seq": 2902,
    "bus": {
     "id": "ktr-government-barasat-to-digha-1",
     "bus_name": "Barasat to Digha",
@@ -118845,7 +118845,7 @@
    }
   },
   {
-   "seq": 2904,
+   "seq": 2903,
    "bus": {
     "id": "ktr-government-barasat-to-digha-ac-premium-1",
     "bus_name": "Barasat to Digha AC Premium",
@@ -118987,7 +118987,7 @@
    }
   },
   {
-   "seq": 2905,
+   "seq": 2904,
    "bus": {
     "id": "ktr-government-barasat-to-durgapur-1",
     "bus_name": "Barasat to Durgapur",
@@ -119087,7 +119087,7 @@
    }
   },
   {
-   "seq": 2906,
+   "seq": 2905,
    "bus": {
     "id": "ktr-government-barasat-to-suri-1",
     "bus_name": "Barasat to Suri",
@@ -119205,7 +119205,7 @@
    }
   },
   {
-   "seq": 2907,
+   "seq": 2906,
    "bus": {
     "id": "ktr-government-taki-to-digha-1",
     "bus_name": "Taki to Digha",
@@ -119389,7 +119389,7 @@
    }
   },
   {
-   "seq": 2908,
+   "seq": 2907,
    "bus": {
     "id": "ktr-government-kolkata-to-katwa-1",
     "bus_name": "Kolkata to Katwa",
@@ -119483,7 +119483,7 @@
    }
   },
   {
-   "seq": 2909,
+   "seq": 2908,
    "bus": {
     "id": "ktr-government-kolkata-to-chalta-1",
     "bus_name": "Kolkata to Chalta",
@@ -119595,7 +119595,7 @@
    }
   },
   {
-   "seq": 2910,
+   "seq": 2909,
    "bus": {
     "id": "ktr-government-karunamoyee-to-salboni-1",
     "bus_name": "Karunamoyee to Salboni",
@@ -119719,7 +119719,7 @@
    }
   },
   {
-   "seq": 2911,
+   "seq": 2910,
    "bus": {
     "id": "ktr-government-kolkata-to-bolpur-1",
     "bus_name": "Kolkata to Bolpur",
@@ -119807,7 +119807,7 @@
    }
   },
   {
-   "seq": 2912,
+   "seq": 2911,
    "bus": {
     "id": "ktr-government-kolkata-to-arambagh-2",
     "bus_name": "Kolkata to Arambagh",
@@ -119907,7 +119907,7 @@
    }
   },
   {
-   "seq": 2913,
+   "seq": 2912,
    "bus": {
     "id": "ktr-government-dunlop-to-digha-1",
     "bus_name": "Dunlop to Digha",
@@ -120013,7 +120013,7 @@
    }
   },
   {
-   "seq": 2914,
+   "seq": 2913,
    "bus": {
     "id": "ktr-government-birati-to-digha-1",
     "bus_name": "Birati to Digha",
@@ -120131,7 +120131,7 @@
    }
   },
   {
-   "seq": 2915,
+   "seq": 2914,
    "bus": {
     "id": "ktr-government-khardah-to-digha-1",
     "bus_name": "Khardah to Digha",
@@ -120243,7 +120243,7 @@
    }
   },
   {
-   "seq": 2916,
+   "seq": 2915,
    "bus": {
     "id": "ktr-government-belgharia-badamtala-to-digha-1",
     "bus_name": "Belgharia Badamtala to Digha",
@@ -120367,7 +120367,7 @@
    }
   },
   {
-   "seq": 2917,
+   "seq": 2916,
    "bus": {
     "id": "ktr-government-digha-to-bagula-1",
     "bus_name": "Digha to Bagula",
@@ -120539,7 +120539,7 @@
    }
   },
   {
-   "seq": 2918,
+   "seq": 2917,
    "bus": {
     "id": "ktr-government-digha-to-dumdum-station-1",
     "bus_name": "Digha to Dumdum Station",
@@ -120675,7 +120675,7 @@
    }
   },
   {
-   "seq": 2919,
+   "seq": 2918,
    "bus": {
     "id": "ktr-government-digha-to-durgapur-1",
     "bus_name": "Digha to Durgapur",
@@ -120835,7 +120835,7 @@
    }
   },
   {
-   "seq": 2920,
+   "seq": 2919,
    "bus": {
     "id": "ktr-government-kolkata-to-rasulpur-1",
     "bus_name": "Kolkata to Rasulpur",
@@ -120965,7 +120965,7 @@
    }
   },
   {
-   "seq": 2921,
+   "seq": 2920,
    "bus": {
     "id": "ktr-government-kolkata-to-langalhata-1",
     "bus_name": "Kolkata to Langalhata",
@@ -121083,7 +121083,7 @@
    }
   },
   {
-   "seq": 2922,
+   "seq": 2921,
    "bus": {
     "id": "ktr-government-kolkata-to-berhampore-3",
     "bus_name": "Kolkata to Berhampore",
@@ -121243,7 +121243,7 @@
    }
   },
   {
-   "seq": 2923,
+   "seq": 2922,
    "bus": {
     "id": "ktr-government-kolkata-to-bishnupur-1",
     "bus_name": "Kolkata to Bishnupur",
@@ -121355,7 +121355,7 @@
    }
   },
   {
-   "seq": 2924,
+   "seq": 2923,
    "bus": {
     "id": "ktr-government-kolkata-to-dantan-1",
     "bus_name": "Kolkata to Dantan",
@@ -121485,7 +121485,7 @@
    }
   },
   {
-   "seq": 2925,
+   "seq": 2924,
    "bus": {
     "id": "ktr-government-digha-to-khatra-1",
     "bus_name": "Digha to Khatra",
@@ -121711,7 +121711,7 @@
    }
   },
   {
-   "seq": 2926,
+   "seq": 2925,
    "bus": {
     "id": "ktr-government-digha-to-sarsuna-1",
     "bus_name": "Digha to Sarsuna",
@@ -121817,7 +121817,7 @@
    }
   },
   {
-   "seq": 2927,
+   "seq": 2926,
    "bus": {
     "id": "ktr-government-digha-to-kudghat",
     "bus_name": "Digha to Kudghat",
@@ -121929,7 +121929,7 @@
    }
   },
   {
-   "seq": 2928,
+   "seq": 2927,
    "bus": {
     "id": "ktr-government-digha-to-thakurpukur-1",
     "bus_name": "Digha to Thakurpukur",
@@ -122035,7 +122035,7 @@
    }
   },
   {
-   "seq": 2929,
+   "seq": 2928,
    "bus": {
     "id": "ktr-government-kolkata-to-jamuria-1",
     "bus_name": "Kolkata to Jamuria",
@@ -122117,7 +122117,7 @@
    }
   },
   {
-   "seq": 2930,
+   "seq": 2929,
    "bus": {
     "id": "ktr-government-kolkata-to-balgona-1",
     "bus_name": "Kolkata to Balgona",
@@ -122199,7 +122199,7 @@
    }
   },
   {
-   "seq": 2931,
+   "seq": 2930,
    "bus": {
     "id": "ktr-government-jhargram-to-digha-1",
     "bus_name": "Jhargram to Digha",
@@ -122359,7 +122359,7 @@
    }
   },
   {
-   "seq": 2932,
+   "seq": 2931,
    "bus": {
     "id": "ktr-government-new-barrackpore-to-digha-1",
     "bus_name": "New Barrackpore to Digha",
@@ -122483,7 +122483,7 @@
    }
   },
   {
-   "seq": 2933,
+   "seq": 2932,
    "bus": {
     "id": "ktr-government-digha-to-nagar-1",
     "bus_name": "Digha to Nagar",
@@ -122595,7 +122595,7 @@
    }
   },
   {
-   "seq": 2934,
+   "seq": 2933,
    "bus": {
     "id": "ktr-government-kolkata-to-kantakhali-1",
     "bus_name": "Kolkata to Kantakhali",
@@ -122683,7 +122683,7 @@
    }
   },
   {
-   "seq": 2935,
+   "seq": 2934,
    "bus": {
     "id": "ktr-government-kolkata-to-gopiganj-1",
     "bus_name": "Kolkata to Gopiganj",
@@ -122765,7 +122765,7 @@
    }
   },
   {
-   "seq": 2936,
+   "seq": 2935,
    "bus": {
     "id": "ktr-government-kolkata-to-baghmundi-1",
     "bus_name": "Kolkata to Baghmundi",
@@ -122841,7 +122841,7 @@
    }
   },
   {
-   "seq": 2937,
+   "seq": 2936,
    "bus": {
     "id": "ktr-government-digha-to-kirnahar-1",
     "bus_name": "Digha to Kirnahar",
@@ -123007,7 +123007,7 @@
    }
   },
   {
-   "seq": 2938,
+   "seq": 2937,
    "bus": {
     "id": "ktr-government-kolkata-to-dhumsai-1",
     "bus_name": "Kolkata to Dhumsai",
@@ -123155,7 +123155,7 @@
    }
   },
   {
-   "seq": 2939,
+   "seq": 2938,
    "bus": {
     "id": "ktr-government-barrackpore-to-haldia-1",
     "bus_name": "Barrackpore to Haldia",
@@ -123243,7 +123243,7 @@
    }
   },
   {
-   "seq": 2940,
+   "seq": 2939,
    "bus": {
     "id": "ktr-government-karunamoyee-to-jhalda-1",
     "bus_name": "Karunamoyee to Jhalda",
@@ -123337,7 +123337,7 @@
    }
   },
   {
-   "seq": 2941,
+   "seq": 2940,
    "bus": {
     "id": "ktr-government-garia-to-midnapore-1",
     "bus_name": "Garia to Midnapore",
@@ -123437,7 +123437,7 @@
    }
   },
   {
-   "seq": 2942,
+   "seq": 2941,
    "bus": {
     "id": "ktr-government-rajbalhat-to-haldia-1",
     "bus_name": "Rajbalhat to Haldia",
@@ -123645,7 +123645,7 @@
    }
   },
   {
-   "seq": 2943,
+   "seq": 2942,
    "bus": {
     "id": "ktr-government-midnapore-to-omarpur-1",
     "bus_name": "Midnapore to Omarpur",
@@ -123781,7 +123781,7 @@
    }
   },
   {
-   "seq": 3240,
+   "seq": 3239,
    "bus": {
     "id": "kbop-s12g",
     "bus_name": "S12G",
@@ -123911,7 +123911,7 @@
    }
   },
   {
-   "seq": 3241,
+   "seq": 3240,
    "bus": {
     "id": "kbop-s23",
     "bus_name": "S23",
@@ -124083,7 +124083,7 @@
    }
   },
   {
-   "seq": 3242,
+   "seq": 3241,
    "bus": {
     "id": "kbop-ac36",
     "bus_name": "AC36",
@@ -124279,7 +124279,7 @@
    }
   },
   {
-   "seq": 3243,
+   "seq": 3242,
    "bus": {
     "id": "kbop-s37a",
     "bus_name": "S37A",
@@ -124481,7 +124481,7 @@
    }
   },
   {
-   "seq": 3244,
+   "seq": 3243,
    "bus": {
     "id": "kbop-ac37c",
     "bus_name": "AC37C",
@@ -124683,7 +124683,7 @@
    }
   },
   {
-   "seq": 3245,
+   "seq": 3244,
    "bus": {
     "id": "kbop-ac41",
     "bus_name": "AC41",
@@ -124873,7 +124873,7 @@
    }
   },
   {
-   "seq": 3246,
+   "seq": 3245,
    "bus": {
     "id": "kbop-ac50",
     "bus_name": "AC50",
@@ -125129,7 +125129,7 @@
    }
   },
   {
-   "seq": 3247,
+   "seq": 3246,
    "bus": {
     "id": "kbop-s59",
     "bus_name": "S59",
@@ -125271,7 +125271,7 @@
    }
   },
   {
-   "seq": 3248,
+   "seq": 3247,
    "bus": {
     "id": "kbop-ac59",
     "bus_name": "AC59",
@@ -125365,7 +125365,7 @@
    }
   },
   {
-   "seq": 3249,
+   "seq": 3248,
    "bus": {
     "id": "kbop-vs12",
     "bus_name": "VS12",
@@ -125525,7 +125525,7 @@
    }
   },
   {
-   "seq": 3250,
+   "seq": 3249,
    "bus": {
     "id": "kbop-st10",
     "bus_name": "ST10",
@@ -125667,7 +125667,7 @@
    }
   },
   {
-   "seq": 3251,
+   "seq": 3250,
    "bus": {
     "id": "kbop-st12",
     "bus_name": "ST12",
@@ -125917,7 +125917,7 @@
    }
   },
   {
-   "seq": 3252,
+   "seq": 3251,
    "bus": {
     "id": "kbop-st16",
     "bus_name": "ST16",
@@ -126083,7 +126083,7 @@
    }
   },
   {
-   "seq": 3253,
+   "seq": 3252,
    "bus": {
     "id": "kbop-st25",
     "bus_name": "ST25",
@@ -126285,7 +126285,7 @@
    }
   },
   {
-   "seq": 3254,
+   "seq": 3253,
    "bus": {
     "id": "kbop-c8",
     "bus_name": "C8",
@@ -126565,7 +126565,7 @@
    }
   },
   {
-   "seq": 3255,
+   "seq": 3254,
    "bus": {
     "id": "kbop-c30",
     "bus_name": "C30",
@@ -126695,7 +126695,7 @@
    }
   },
   {
-   "seq": 3256,
+   "seq": 3255,
    "bus": {
     "id": "kbop-c36",
     "bus_name": "C36",
@@ -126807,7 +126807,7 @@
    }
   },
   {
-   "seq": 3257,
+   "seq": 3256,
    "bus": {
     "id": "kbop-c43",
     "bus_name": "C43",
@@ -127057,7 +127057,7 @@
    }
   },
   {
-   "seq": 4482,
+   "seq": 4551,
    "bus": {
     "id": "wbtc-kolkata-kalimpong-4621",
     "bus_name": "WBTC Banglashree Kolkata-Kalimpong",
@@ -127081,8 +127081,10 @@
      {
       "no": 2,
       "name": "Siliguri",
-      "up_time": "",
-      "down_time": ""
+      "up_time": "12:25 PM",
+      "down_time": "10:00 AM",
+      "is_est_up": true,
+      "is_est_down": true
      },
      {
       "no": 3,
@@ -127099,7 +127101,7 @@
    }
   },
   {
-   "seq": 4483,
+   "seq": 4552,
    "bus": {
     "id": "wbtc-kolkata-darjeeling-4622",
     "bus_name": "WBTC Banglashree Kolkata-Darjeeling",
@@ -127123,8 +127125,10 @@
      {
       "no": 2,
       "name": "Siliguri",
-      "up_time": "",
-      "down_time": ""
+      "up_time": "11:55 AM",
+      "down_time": "10:00 AM",
+      "is_est_up": true,
+      "is_est_down": true
      },
      {
       "no": 3,
@@ -127141,7 +127145,7 @@
    }
   },
   {
-   "seq": 4484,
+   "seq": 4553,
    "bus": {
     "id": "wbtc-kolkata-chinsurah-4623",
     "bus_name": "WBTC Banglashree Kolkata-Chinsurah",
@@ -127177,7 +127181,7 @@
    }
   },
   {
-   "seq": 4485,
+   "seq": 4554,
    "bus": {
     "id": "wbtc-official-esplanade-digha-1",
     "bus_name": "WBTC Esplanade-Digha",
@@ -127296,7 +127300,7 @@
    }
   },
   {
-   "seq": 4486,
+   "seq": 4555,
    "bus": {
     "id": "wbtc-official-esplanade-digha-2",
     "bus_name": "WBTC Esplanade-Digha",
@@ -127415,7 +127419,7 @@
    }
   },
   {
-   "seq": 4487,
+   "seq": 4556,
    "bus": {
     "id": "wbtc-official-esplanade-digha-3",
     "bus_name": "WBTC Esplanade-Digha",
@@ -127534,7 +127538,7 @@
    }
   },
   {
-   "seq": 4488,
+   "seq": 4557,
    "bus": {
     "id": "wbtc-official-esplanade-digha-4",
     "bus_name": "WBTC Esplanade-Digha",
@@ -127653,7 +127657,7 @@
    }
   },
   {
-   "seq": 4489,
+   "seq": 4558,
    "bus": {
     "id": "wbtc-official-esplanade-digha-5",
     "bus_name": "WBTC Esplanade-Digha",
@@ -127772,7 +127776,7 @@
    }
   },
   {
-   "seq": 4490,
+   "seq": 4559,
    "bus": {
     "id": "wbtc-official-esplanade-digha-6",
     "bus_name": "WBTC Esplanade-Digha",
@@ -127891,7 +127895,7 @@
    }
   },
   {
-   "seq": 4491,
+   "seq": 4560,
    "bus": {
     "id": "wbtc-official-esplanade-digha-7",
     "bus_name": "WBTC Esplanade-Digha",
@@ -128010,7 +128014,7 @@
    }
   },
   {
-   "seq": 4492,
+   "seq": 4561,
    "bus": {
     "id": "wbtc-official-esplanade-digha-8",
     "bus_name": "WBTC Esplanade-Digha",
@@ -128129,7 +128133,7 @@
    }
   },
   {
-   "seq": 4493,
+   "seq": 4562,
    "bus": {
     "id": "wbtc-official-esplanade-digha-9",
     "bus_name": "WBTC Esplanade-Digha",
@@ -128248,7 +128252,7 @@
    }
   },
   {
-   "seq": 4494,
+   "seq": 4563,
    "bus": {
     "id": "wbtc-official-esplanade-digha-10",
     "bus_name": "WBTC Esplanade-Digha",
@@ -128367,7 +128371,7 @@
    }
   },
   {
-   "seq": 4495,
+   "seq": 4564,
    "bus": {
     "id": "wbtc-official-barasat-digha-1",
     "bus_name": "WBTC Barasat-Digha",
@@ -128450,7 +128454,7 @@
    }
   },
   {
-   "seq": 4496,
+   "seq": 4565,
    "bus": {
     "id": "wbtc-official-barasat-digha-2",
     "bus_name": "WBTC Barasat-Digha",
@@ -128533,7 +128537,7 @@
    }
   },
   {
-   "seq": 4497,
+   "seq": 4566,
    "bus": {
     "id": "wbtc-official-barasat-digha-3",
     "bus_name": "WBTC Barasat-Digha",
@@ -128616,7 +128620,7 @@
    }
   },
   {
-   "seq": 4498,
+   "seq": 4567,
    "bus": {
     "id": "wbtc-official-barasat-digha-4",
     "bus_name": "WBTC Barasat-Digha",
@@ -128699,7 +128703,7 @@
    }
   },
   {
-   "seq": 4499,
+   "seq": 4568,
    "bus": {
     "id": "wbtc-official-habra-digha-1",
     "bus_name": "WBTC Habra-Digha",
@@ -128788,7 +128792,7 @@
    }
   },
   {
-   "seq": 4500,
+   "seq": 4569,
    "bus": {
     "id": "wbtc-official-habra-digha-2",
     "bus_name": "WBTC Habra-Digha",
@@ -128877,7 +128881,7 @@
    }
   },
   {
-   "seq": 4501,
+   "seq": 4570,
    "bus": {
     "id": "wbtc-official-habra-digha-3",
     "bus_name": "WBTC Habra-Digha",
@@ -128966,7 +128970,7 @@
    }
   },
   {
-   "seq": 4502,
+   "seq": 4571,
    "bus": {
     "id": "wbtc-official-habra-digha-4",
     "bus_name": "WBTC Habra-Digha",
@@ -129055,7 +129059,7 @@
    }
   },
   {
-   "seq": 4503,
+   "seq": 4572,
    "bus": {
     "id": "wbtc-official-habra-digha-5",
     "bus_name": "WBTC Habra-Digha",
@@ -129144,7 +129148,7 @@
    }
   },
   {
-   "seq": 4504,
+   "seq": 4573,
    "bus": {
     "id": "wbtc-official-habra-digha-6",
     "bus_name": "WBTC Habra-Digha",
@@ -129233,7 +129237,7 @@
    }
   },
   {
-   "seq": 4505,
+   "seq": 4574,
    "bus": {
     "id": "wbtc-official-habra-digha-7",
     "bus_name": "WBTC Habra-Digha",
@@ -129322,7 +129326,7 @@
    }
   },
   {
-   "seq": 4506,
+   "seq": 4575,
    "bus": {
     "id": "wbtc-official-habra-digha-8",
     "bus_name": "WBTC Habra-Digha",
@@ -129411,7 +129415,7 @@
    }
   },
   {
-   "seq": 4507,
+   "seq": 4576,
    "bus": {
     "id": "wbtc-official-karunamoyee-digha-1",
     "bus_name": "WBTC Karunamoyee-Digha",
@@ -129488,7 +129492,7 @@
    }
   },
   {
-   "seq": 4508,
+   "seq": 4577,
    "bus": {
     "id": "wbtc-official-karunamoyee-digha-2",
     "bus_name": "WBTC Karunamoyee-Digha",
@@ -129565,7 +129569,7 @@
    }
   },
   {
-   "seq": 4509,
+   "seq": 4578,
    "bus": {
     "id": "wbtc-official-esplanade-siliguri-1",
     "bus_name": "WBTC Esplanade-Siliguri",
@@ -129660,7 +129664,7 @@
    }
   },
   {
-   "seq": 4510,
+   "seq": 4579,
    "bus": {
     "id": "wbtc-official-esplanade-siliguri-2",
     "bus_name": "WBTC Esplanade-Siliguri",
@@ -129755,7 +129759,7 @@
    }
   },
   {
-   "seq": 4511,
+   "seq": 4580,
    "bus": {
     "id": "wbtc-official-siliguri-kolkata-1",
     "bus_name": "WBTC Siliguri-Kolkata",
@@ -129849,7 +129853,7 @@
    }
   },
   {
-   "seq": 4512,
+   "seq": 4581,
    "bus": {
     "id": "wbtc-official-siliguri-kolkata-2",
     "bus_name": "WBTC Siliguri-Kolkata",
@@ -129943,7 +129947,7 @@
    }
   },
   {
-   "seq": 4513,
+   "seq": 4582,
    "bus": {
     "id": "wbtc-official-esplanade-asansol-1",
     "bus_name": "WBTC Esplanade-Asansol",
@@ -130026,7 +130030,7 @@
    }
   },
   {
-   "seq": 4514,
+   "seq": 4583,
    "bus": {
     "id": "wbtc-official-esplanade-asansol-2",
     "bus_name": "WBTC Esplanade-Asansol",
@@ -130109,7 +130113,7 @@
    }
   },
   {
-   "seq": 4515,
+   "seq": 4584,
    "bus": {
     "id": "wbtc-official-esplanade-asansol-3",
     "bus_name": "WBTC Esplanade-Asansol",
@@ -130192,7 +130196,7 @@
    }
   },
   {
-   "seq": 4516,
+   "seq": 4585,
    "bus": {
     "id": "wbtc-official-esplanade-asansol-4",
     "bus_name": "WBTC Esplanade-Asansol",
@@ -130275,7 +130279,7 @@
    }
   },
   {
-   "seq": 4517,
+   "seq": 4586,
    "bus": {
     "id": "wbtc-official-esplanade-asansol-5",
     "bus_name": "WBTC Esplanade-Asansol",
@@ -130358,7 +130362,7 @@
    }
   },
   {
-   "seq": 4518,
+   "seq": 4587,
    "bus": {
     "id": "wbtc-official-asansol-kolkata-1",
     "bus_name": "WBTC Asansol-Kolkata",
@@ -130435,7 +130439,7 @@
    }
   },
   {
-   "seq": 4519,
+   "seq": 4588,
    "bus": {
     "id": "wbtc-official-asansol-kolkata-2",
     "bus_name": "WBTC Asansol-Kolkata",
@@ -130512,7 +130516,7 @@
    }
   },
   {
-   "seq": 4520,
+   "seq": 4589,
    "bus": {
     "id": "wbtc-official-asansol-kolkata-3",
     "bus_name": "WBTC Asansol-Kolkata",
@@ -130589,7 +130593,7 @@
    }
   },
   {
-   "seq": 4521,
+   "seq": 4590,
    "bus": {
     "id": "wbtc-official-esplanade-bankura-1",
     "bus_name": "WBTC Esplanade-Bankura",
@@ -130660,7 +130664,7 @@
    }
   },
   {
-   "seq": 4522,
+   "seq": 4591,
    "bus": {
     "id": "wbtc-official-esplanade-bankura-2",
     "bus_name": "WBTC Esplanade-Bankura",
@@ -130731,7 +130735,7 @@
    }
   },
   {
-   "seq": 4523,
+   "seq": 4592,
    "bus": {
     "id": "wbtc-official-bankura-kolkata-1",
     "bus_name": "WBTC Bankura-Kolkata",
@@ -130796,7 +130800,7 @@
    }
   },
   {
-   "seq": 4524,
+   "seq": 4593,
    "bus": {
     "id": "wbtc-official-bankura-kolkata-2",
     "bus_name": "WBTC Bankura-Kolkata",
@@ -130861,7 +130865,7 @@
    }
   },
   {
-   "seq": 4525,
+   "seq": 4594,
    "bus": {
     "id": "wbtc-official-esplanade-purulia-1",
     "bus_name": "WBTC Esplanade-Purulia",
@@ -130938,7 +130942,7 @@
    }
   },
   {
-   "seq": 4526,
+   "seq": 4595,
    "bus": {
     "id": "wbtc-official-esplanade-purulia-2",
     "bus_name": "WBTC Esplanade-Purulia",
@@ -131015,7 +131019,7 @@
    }
   },
   {
-   "seq": 4527,
+   "seq": 4596,
    "bus": {
     "id": "wbtc-official-esplanade-suri-1",
     "bus_name": "WBTC Esplanade-Suri",
@@ -131092,7 +131096,7 @@
    }
   },
   {
-   "seq": 4528,
+   "seq": 4597,
    "bus": {
     "id": "wbtc-official-esplanade-suri-2",
     "bus_name": "WBTC Esplanade-Suri",
@@ -131169,7 +131173,7 @@
    }
   },
   {
-   "seq": 4529,
+   "seq": 4598,
    "bus": {
     "id": "wbtc-official-esplanade-suri-3",
     "bus_name": "WBTC Esplanade-Suri",
@@ -131246,7 +131250,7 @@
    }
   },
   {
-   "seq": 4530,
+   "seq": 4599,
    "bus": {
     "id": "wbtc-official-esplanade-haldia-1",
     "bus_name": "WBTC Esplanade-Haldia",
@@ -131317,7 +131321,7 @@
    }
   },
   {
-   "seq": 4531,
+   "seq": 4600,
    "bus": {
     "id": "wbtc-official-esplanade-haldia-2",
     "bus_name": "WBTC Esplanade-Haldia",
@@ -131388,7 +131392,7 @@
    }
   },
   {
-   "seq": 4532,
+   "seq": 4601,
    "bus": {
     "id": "wbtc-official-esplanade-haldia-3",
     "bus_name": "WBTC Esplanade-Haldia",
@@ -131459,7 +131463,7 @@
    }
   },
   {
-   "seq": 4533,
+   "seq": 4602,
    "bus": {
     "id": "wbtc-official-esplanade-mayapur-1",
     "bus_name": "WBTC Esplanade-Mayapur",
@@ -131524,7 +131528,7 @@
    }
   },
   {
-   "seq": 4534,
+   "seq": 4603,
    "bus": {
     "id": "wbtc-official-esplanade-mayapur-2",
     "bus_name": "WBTC Esplanade-Mayapur",
@@ -131589,7 +131593,7 @@
    }
   },
   {
-   "seq": 4535,
+   "seq": 4604,
    "bus": {
     "id": "wbtc-official-esplanade-balurghat-1",
     "bus_name": "WBTC Esplanade-Balurghat",
@@ -131654,7 +131658,7 @@
    }
   },
   {
-   "seq": 4536,
+   "seq": 4605,
    "bus": {
     "id": "wbtc-official-esplanade-balurghat-2",
     "bus_name": "WBTC Esplanade-Balurghat",
@@ -131719,7 +131723,7 @@
    }
   },
   {
-   "seq": 4537,
+   "seq": 4606,
    "bus": {
     "id": "wbtc-official-esplanade-jhargram-1",
     "bus_name": "WBTC Esplanade-Jhargram",
@@ -131802,7 +131806,7 @@
    }
   },
   {
-   "seq": 4538,
+   "seq": 4607,
    "bus": {
     "id": "wbtc-official-esplanade-jhargram-2",
     "bus_name": "WBTC Esplanade-Jhargram",
@@ -131885,7 +131889,7 @@
    }
   },
   {
-   "seq": 4539,
+   "seq": 4608,
    "bus": {
     "id": "wbtc-official-esplanade-bakkhali-1",
     "bus_name": "WBTC Esplanade-Bakkhali",
@@ -131944,7 +131948,7 @@
    }
   },
   {
-   "seq": 4540,
+   "seq": 4609,
    "bus": {
     "id": "wbtc-official-esplanade-bakkhali-2",
     "bus_name": "WBTC Esplanade-Bakkhali",
@@ -132003,7 +132007,7 @@
    }
   },
   {
-   "seq": 4541,
+   "seq": 4610,
    "bus": {
     "id": "wbtc-official-esplanade-bakkhali-3",
     "bus_name": "WBTC Esplanade-Bakkhali",
@@ -132062,7 +132066,7 @@
    }
   },
   {
-   "seq": 4542,
+   "seq": 4611,
    "bus": {
     "id": "wbtc-official-esplanade-midnapore-1",
     "bus_name": "WBTC Esplanade-Midnapore",
@@ -132139,7 +132143,7 @@
    }
   },
   {
-   "seq": 4543,
+   "seq": 4612,
    "bus": {
     "id": "wbtc-official-esplanade-midnapore-2",
     "bus_name": "WBTC Esplanade-Midnapore",
@@ -132216,7 +132220,7 @@
    }
   },
   {
-   "seq": 4544,
+   "seq": 4613,
    "bus": {
     "id": "wbtc-official-esplanade-midnapore-3",
     "bus_name": "WBTC Esplanade-Midnapore",
@@ -132293,7 +132297,7 @@
    }
   },
   {
-   "seq": 4545,
+   "seq": 4614,
    "bus": {
     "id": "wbtc-official-esplanade-raiganj-1",
     "bus_name": "WBTC Esplanade-Raiganj",
@@ -132352,7 +132356,7 @@
    }
   },
   {
-   "seq": 4546,
+   "seq": 4615,
    "bus": {
     "id": "wbtc-official-esplanade-raiganj-2",
     "bus_name": "WBTC Esplanade-Raiganj",
@@ -132411,7 +132415,7 @@
    }
   },
   {
-   "seq": 4547,
+   "seq": 4616,
    "bus": {
     "id": "wbtc-official-esplanade-jalpaiguri-1",
     "bus_name": "WBTC Esplanade-Jalpaiguri",
@@ -132476,7 +132480,7 @@
    }
   },
   {
-   "seq": 4548,
+   "seq": 4617,
    "bus": {
     "id": "wbtc-official-esplanade-jalpaiguri-2",
     "bus_name": "WBTC Esplanade-Jalpaiguri",
@@ -132541,7 +132545,7 @@
    }
   },
   {
-   "seq": 4549,
+   "seq": 4618,
    "bus": {
     "id": "wbtc-official-esplanade-cooch-behar-1",
     "bus_name": "WBTC Esplanade-Cooch Behar",
@@ -132611,7 +132615,7 @@
    }
   },
   {
-   "seq": 4550,
+   "seq": 4619,
    "bus": {
     "id": "wbtc-official-esplanade-cooch-behar-2",
     "bus_name": "WBTC Esplanade-Cooch Behar",
@@ -132681,7 +132685,7 @@
    }
   },
   {
-   "seq": 4551,
+   "seq": 4620,
    "bus": {
     "id": "wbtc-official-esplanade-tarapith-1",
     "bus_name": "WBTC Esplanade-Tarapith",
@@ -132746,7 +132750,7 @@
    }
   },
   {
-   "seq": 4552,
+   "seq": 4621,
    "bus": {
     "id": "wbtc-official-esplanade-tarapith-2",
     "bus_name": "WBTC Esplanade-Tarapith",
@@ -132811,7 +132815,7 @@
    }
   },
   {
-   "seq": 4553,
+   "seq": 4622,
    "bus": {
     "id": "wbtc-official-esplanade-bishnupur-1",
     "bus_name": "WBTC Esplanade-Bishnupur",
@@ -132870,7 +132874,7 @@
    }
   },
   {
-   "seq": 4554,
+   "seq": 4623,
    "bus": {
     "id": "wbtc-official-esplanade-bishnupur-2",
     "bus_name": "WBTC Esplanade-Bishnupur",
@@ -132929,7 +132933,7 @@
    }
   },
   {
-   "seq": 4555,
+   "seq": 4624,
    "bus": {
     "id": "wbtc-official-esplanade-krishnanagar-1",
     "bus_name": "WBTC Esplanade-Krishnanagar",
@@ -132982,7 +132986,7 @@
    }
   },
   {
-   "seq": 4556,
+   "seq": 4625,
    "bus": {
     "id": "wbtc-official-esplanade-krishnanagar-2",
     "bus_name": "WBTC Esplanade-Krishnanagar",
@@ -133035,7 +133039,7 @@
    }
   },
   {
-   "seq": 4557,
+   "seq": 4626,
    "bus": {
     "id": "wbtc-official-esplanade-burdwan-1",
     "bus_name": "WBTC Esplanade-Burdwan",
@@ -133076,7 +133080,7 @@
    }
   },
   {
-   "seq": 4558,
+   "seq": 4627,
    "bus": {
     "id": "wbtc-official-esplanade-burdwan-2",
     "bus_name": "WBTC Esplanade-Burdwan",
@@ -133117,7 +133121,7 @@
    }
   },
   {
-   "seq": 4559,
+   "seq": 4628,
    "bus": {
     "id": "wbtc-official-esplanade-tamluk-1",
     "bus_name": "WBTC Esplanade-Tamluk",
@@ -133175,7 +133179,7 @@
    }
   },
   {
-   "seq": 4560,
+   "seq": 4629,
    "bus": {
     "id": "wbtc-official-esplanade-tamluk-2",
     "bus_name": "WBTC Esplanade-Tamluk",
@@ -133233,7 +133237,7 @@
    }
   },
   {
-   "seq": 4561,
+   "seq": 4630,
    "bus": {
     "id": "wbtc-official-esplanade-contai-1",
     "bus_name": "WBTC Esplanade-Contai",
@@ -133292,7 +133296,7 @@
    }
   },
   {
-   "seq": 4562,
+   "seq": 4631,
    "bus": {
     "id": "wbtc-official-esplanade-contai-2",
     "bus_name": "WBTC Esplanade-Contai",
@@ -133351,7 +133355,7 @@
    }
   },
   {
-   "seq": 4563,
+   "seq": 4632,
    "bus": {
     "id": "wbtc-official-esplanade-dantan-1",
     "bus_name": "WBTC Esplanade-Dantan",
@@ -133410,7 +133414,7 @@
    }
   },
   {
-   "seq": 4564,
+   "seq": 4633,
    "bus": {
     "id": "wbtc-official-esplanade-dantan-2",
     "bus_name": "WBTC Esplanade-Dantan",
@@ -133469,7 +133473,7 @@
    }
   },
   {
-   "seq": 4565,
+   "seq": 4634,
    "bus": {
     "id": "wbtc-official-esplanade-rampurhat-1",
     "bus_name": "WBTC Esplanade-Rampurhat",
@@ -133534,7 +133538,7 @@
    }
   },
   {
-   "seq": 4566,
+   "seq": 4635,
    "bus": {
     "id": "wbtc-official-esplanade-rampurhat-2",
     "bus_name": "WBTC Esplanade-Rampurhat",
@@ -133599,7 +133603,7 @@
    }
   },
   {
-   "seq": 4567,
+   "seq": 4636,
    "bus": {
     "id": "wbtc-official-baduria-digha-1",
     "bus_name": "WBTC Baduria-Digha",
@@ -133682,7 +133686,7 @@
    }
   },
   {
-   "seq": 4568,
+   "seq": 4637,
    "bus": {
     "id": "wbtc-official-baduria-digha-2",
     "bus_name": "WBTC Baduria-Digha",
@@ -133765,7 +133769,7 @@
    }
   },
   {
-   "seq": 4569,
+   "seq": 4638,
    "bus": {
     "id": "wbtc-official-barasat-asansol-1",
     "bus_name": "WBTC Barasat-Asansol",
@@ -133818,7 +133822,7 @@
    }
   },
   {
-   "seq": 4570,
+   "seq": 4639,
    "bus": {
     "id": "wbtc-official-barasat-asansol-2",
     "bus_name": "WBTC Barasat-Asansol",
@@ -133871,7 +133875,7 @@
    }
   },
   {
-   "seq": 4571,
+   "seq": 4640,
    "bus": {
     "id": "wbtc-official-barasat-midnapore-1",
     "bus_name": "WBTC Barasat-Midnapore",
@@ -133942,7 +133946,7 @@
    }
   },
   {
-   "seq": 4572,
+   "seq": 4641,
    "bus": {
     "id": "wbtc-official-barasat-midnapore-2",
     "bus_name": "WBTC Barasat-Midnapore",
@@ -134013,7 +134017,7 @@
    }
   },
   {
-   "seq": 4573,
+   "seq": 4642,
    "bus": {
     "id": "wbtc-official-barasat-suri-1",
     "bus_name": "WBTC Barasat-Suri",
@@ -134078,7 +134082,7 @@
    }
   },
   {
-   "seq": 4574,
+   "seq": 4643,
    "bus": {
     "id": "wbtc-official-barasat-suri-2",
     "bus_name": "WBTC Barasat-Suri",
@@ -134143,7 +134147,7 @@
    }
   },
   {
-   "seq": 4575,
+   "seq": 4644,
    "bus": {
     "id": "wbtc-official-baruipur-siliguri-1",
     "bus_name": "WBTC Baruipur-Siliguri",
@@ -134232,7 +134236,7 @@
    }
   },
   {
-   "seq": 4576,
+   "seq": 4645,
    "bus": {
     "id": "wbtc-official-baruipur-siliguri-2",
     "bus_name": "WBTC Baruipur-Siliguri",
@@ -134321,7 +134325,7 @@
    }
   },
   {
-   "seq": 4577,
+   "seq": 4646,
    "bus": {
     "id": "wbtc-official-baruipur-tarapith-1",
     "bus_name": "WBTC Baruipur-Tarapith",
@@ -134404,7 +134408,7 @@
    }
   },
   {
-   "seq": 4578,
+   "seq": 4647,
    "bus": {
     "id": "wbtc-official-baruipur-tarapith-2",
     "bus_name": "WBTC Baruipur-Tarapith",
@@ -134487,7 +134491,7 @@
    }
   },
   {
-   "seq": 4579,
+   "seq": 4648,
    "bus": {
     "id": "wbtc-official-habra-bakkhali-1",
     "bus_name": "WBTC Habra-Bakkhali",
@@ -134558,7 +134562,7 @@
    }
   },
   {
-   "seq": 4580,
+   "seq": 4649,
    "bus": {
     "id": "wbtc-official-habra-bakkhali-2",
     "bus_name": "WBTC Habra-Bakkhali",
@@ -134629,7 +134633,7 @@
    }
   },
   {
-   "seq": 4581,
+   "seq": 4650,
    "bus": {
     "id": "wbtc-official-habra-purulia-1",
     "bus_name": "WBTC Habra-Purulia",
@@ -134694,7 +134698,7 @@
    }
   },
   {
-   "seq": 4582,
+   "seq": 4651,
    "bus": {
     "id": "wbtc-official-habra-purulia-2",
     "bus_name": "WBTC Habra-Purulia",
@@ -134759,7 +134763,7 @@
    }
   },
   {
-   "seq": 4583,
+   "seq": 4652,
    "bus": {
     "id": "wbtc-official-habra-asansol-1",
     "bus_name": "WBTC Habra-Asansol",
@@ -134830,7 +134834,7 @@
    }
   },
   {
-   "seq": 4584,
+   "seq": 4653,
    "bus": {
     "id": "wbtc-official-habra-asansol-2",
     "bus_name": "WBTC Habra-Asansol",
@@ -134901,7 +134905,7 @@
    }
   },
   {
-   "seq": 4585,
+   "seq": 4654,
    "bus": {
     "id": "wbtc-official-habra-bishnupur-1",
     "bus_name": "WBTC Habra-Bishnupur",
@@ -134960,7 +134964,7 @@
    }
   },
   {
-   "seq": 4586,
+   "seq": 4655,
    "bus": {
     "id": "wbtc-official-habra-bishnupur-2",
     "bus_name": "WBTC Habra-Bishnupur",
@@ -135019,7 +135023,7 @@
    }
   },
   {
-   "seq": 4587,
+   "seq": 4656,
    "bus": {
     "id": "wbtc-official-habra-jhargram-1",
     "bus_name": "WBTC Habra-Jhargram",
@@ -135108,7 +135112,7 @@
    }
   },
   {
-   "seq": 4588,
+   "seq": 4657,
    "bus": {
     "id": "wbtc-official-habra-jhargram-2",
     "bus_name": "WBTC Habra-Jhargram",
@@ -135197,7 +135201,7 @@
    }
   },
   {
-   "seq": 4589,
+   "seq": 4658,
    "bus": {
     "id": "wbtc-official-habra-tarapith-1",
     "bus_name": "WBTC Habra-Tarapith",
@@ -135250,7 +135254,7 @@
    }
   },
   {
-   "seq": 4590,
+   "seq": 4659,
    "bus": {
     "id": "wbtc-official-habra-tarapith-2",
     "bus_name": "WBTC Habra-Tarapith",
@@ -135303,7 +135307,7 @@
    }
   },
   {
-   "seq": 4591,
+   "seq": 4660,
    "bus": {
     "id": "wbtc-official-habra-bankura-1",
     "bus_name": "WBTC Habra-Bankura",
@@ -135362,7 +135366,7 @@
    }
   },
   {
-   "seq": 4592,
+   "seq": 4661,
    "bus": {
     "id": "wbtc-official-habra-bankura-2",
     "bus_name": "WBTC Habra-Bankura",
@@ -135421,7 +135425,7 @@
    }
   },
   {
-   "seq": 4593,
+   "seq": 4662,
    "bus": {
     "id": "wbtc-official-habra-haldia-1",
     "bus_name": "WBTC Habra-Haldia",
@@ -135492,7 +135496,7 @@
    }
   },
   {
-   "seq": 4594,
+   "seq": 4663,
    "bus": {
     "id": "wbtc-official-habra-haldia-2",
     "bus_name": "WBTC Habra-Haldia",
@@ -135563,7 +135567,7 @@
    }
   },
   {
-   "seq": 4595,
+   "seq": 4664,
    "bus": {
     "id": "wbtc-official-habra-kharagpur-1",
     "bus_name": "WBTC Habra-Kharagpur",
@@ -135634,7 +135638,7 @@
    }
   },
   {
-   "seq": 4596,
+   "seq": 4665,
    "bus": {
     "id": "wbtc-official-habra-kharagpur-2",
     "bus_name": "WBTC Habra-Kharagpur",
@@ -135705,7 +135709,7 @@
    }
   },
   {
-   "seq": 4597,
+   "seq": 4666,
    "bus": {
     "id": "wbtc-official-habra-midnapore-1",
     "bus_name": "WBTC Habra-Midnapore",
@@ -135782,7 +135786,7 @@
    }
   },
   {
-   "seq": 4598,
+   "seq": 4667,
    "bus": {
     "id": "wbtc-official-habra-midnapore-2",
     "bus_name": "WBTC Habra-Midnapore",
@@ -135859,7 +135863,7 @@
    }
   },
   {
-   "seq": 4599,
+   "seq": 4668,
    "bus": {
     "id": "wbtc-official-habra-namkhana-1",
     "bus_name": "WBTC Habra-Namkhana",
@@ -135912,7 +135916,7 @@
    }
   },
   {
-   "seq": 4600,
+   "seq": 4669,
    "bus": {
     "id": "wbtc-official-habra-namkhana-2",
     "bus_name": "WBTC Habra-Namkhana",
@@ -135965,7 +135969,7 @@
    }
   },
   {
-   "seq": 4601,
+   "seq": 4670,
    "bus": {
     "id": "wbtc-official-joka-digha-1",
     "bus_name": "WBTC Joka-Digha",
@@ -136012,7 +136016,7 @@
    }
   },
   {
-   "seq": 4602,
+   "seq": 4671,
    "bus": {
     "id": "wbtc-official-joka-digha-2",
     "bus_name": "WBTC Joka-Digha",
@@ -136059,7 +136063,7 @@
    }
   },
   {
-   "seq": 4603,
+   "seq": 4672,
    "bus": {
     "id": "wbtc-official-karunamoyee-asansol-1",
     "bus_name": "WBTC Karunamoyee-Asansol",
@@ -136130,7 +136134,7 @@
    }
   },
   {
-   "seq": 4604,
+   "seq": 4673,
    "bus": {
     "id": "wbtc-official-karunamoyee-asansol-2",
     "bus_name": "WBTC Karunamoyee-Asansol",
@@ -136201,7 +136205,7 @@
    }
   },
   {
-   "seq": 4605,
+   "seq": 4674,
    "bus": {
     "id": "wbtc-official-karunamoyee-suri-1",
     "bus_name": "WBTC Karunamoyee-Suri",
@@ -136272,7 +136276,7 @@
    }
   },
   {
-   "seq": 4606,
+   "seq": 4675,
    "bus": {
     "id": "wbtc-official-karunamoyee-suri-2",
     "bus_name": "WBTC Karunamoyee-Suri",
@@ -136343,7 +136347,7 @@
    }
   },
   {
-   "seq": 4607,
+   "seq": 4676,
    "bus": {
     "id": "wbtc-official-khidderpur-digha-1",
     "bus_name": "WBTC Khidderpur-Digha",
@@ -136384,7 +136388,7 @@
    }
   },
   {
-   "seq": 4608,
+   "seq": 4677,
    "bus": {
     "id": "wbtc-official-khidderpur-digha-2",
     "bus_name": "WBTC Khidderpur-Digha",
@@ -136425,7 +136429,7 @@
    }
   },
   {
-   "seq": 4609,
+   "seq": 4678,
    "bus": {
     "id": "wbtc-official-kolkata-malda-1",
     "bus_name": "WBTC Kolkata-Malda",
@@ -136472,7 +136476,7 @@
    }
   },
   {
-   "seq": 4610,
+   "seq": 4679,
    "bus": {
     "id": "wbtc-official-kolkata-malda-2",
     "bus_name": "WBTC Kolkata-Malda",
@@ -136519,7 +136523,7 @@
    }
   },
   {
-   "seq": 4611,
+   "seq": 4680,
    "bus": {
     "id": "wbtc-official-madhyamgram-digha-1",
     "bus_name": "WBTC Madhyamgram-Digha",
@@ -136608,7 +136612,7 @@
    }
   },
   {
-   "seq": 4612,
+   "seq": 4681,
    "bus": {
     "id": "wbtc-official-madhyamgram-digha-2",
     "bus_name": "WBTC Madhyamgram-Digha",
@@ -136697,7 +136701,7 @@
    }
   },
   {
-   "seq": 4613,
+   "seq": 4682,
    "bus": {
     "id": "wbtc-official-belgachia-digha-1",
     "bus_name": "WBTC Belgachia-Digha",
@@ -136738,7 +136742,7 @@
    }
   },
   {
-   "seq": 4614,
+   "seq": 4683,
    "bus": {
     "id": "wbtc-official-belgachia-digha-2",
     "bus_name": "WBTC Belgachia-Digha",
@@ -136779,7 +136783,7 @@
    }
   },
   {
-   "seq": 4615,
+   "seq": 4684,
    "bus": {
     "id": "wbtc-official-tollygunge-digha-1",
     "bus_name": "WBTC Tollygunge-Digha",
@@ -136820,7 +136824,7 @@
    }
   },
   {
-   "seq": 4616,
+   "seq": 4685,
    "bus": {
     "id": "wbtc-official-tollygunge-digha-2",
     "bus_name": "WBTC Tollygunge-Digha",
