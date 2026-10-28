@@ -1,4 +1,4 @@
-name: Fix 11 sitemap 404s (howrah-station slugs) — one-shot
+name: Fix sitemap-city dead URLs — one-shot
 
 on:
   workflow_dispatch:
@@ -13,74 +13,106 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add 301 redirects + fix sitemap-city locs
+      - name: Auto-fix dead sitemap-city locs
         run: |
           python3 - <<'PY'
           import os, re
 
-          PAIRS = [
-              ("chetla-park-to-howrah", "chetla-park-to-howrah-station"),
-              ("howrah-to-chetla-park", "howrah-station-to-chetla-park"),
-              ("howrah-to-layalka", "howrah-station-to-layalka"),
-              ("howrah-to-pardankuni", "howrah-station-to-pardankuni"),
-              ("howrah-to-picnic-garden", "howrah-station-to-picnic-garden"),
-              ("howrah-to-sarsuna", "howrah-station-to-sarsuna"),
-              ("howrah-to-shibrampur", "howrah-station-to-shibrampur"),
-              ("layalka-to-howrah", "layalka-to-howrah-station"),
-              ("pardankuni-to-howrah", "pardankuni-to-howrah-station"),
-              ("picnic-garden-to-howrah", "picnic-garden-to-howrah-station"),
-              ("shibrampur-to-howrah", "shibrampur-to-howrah-station"),
-          ]
+          def exists(p):
+              return (os.path.exists(p + '.html') or os.path.exists(p + '/index.html')
+                      or os.path.exists(p) or p == '')
 
-          rp = '_redirects'
+          rp, sp = '_redirects', 'sitemap-city.xml'
           red = open(rp, encoding='utf-8').read()
-          added = 0
-          lines = []
-          for src, dst in PAIRS:
-              assert os.path.exists(f"bus-time-table/{dst}.html"), f"target missing: {dst}"
-              line = f"/bus-time-table/{src} /bus-time-table/{dst} 301"
-              if line not in red:
-                  lines.append(line)
-                  added += 1
-          if lines:
+          sm = open(sp, encoding='utf-8').read()
+
+          redir_src = set()
+          for line in red.splitlines():
+              line = line.strip()
+              if not line or line.startswith('#'):
+                  continue
+              parts = line.split()
+              if parts:
+                  redir_src.add(parts[0])
+
+          locs = re.findall(r'<loc>\s*(.*?)\s*</loc>', sm)
+          dead = []
+          for u in locs:
+              p = u.replace('https://busjatri.in/', '').split('?')[0].rstrip('/')
+              if exists(p):
+                  continue
+              if ('/' + p) in redir_src or ('/' + p + '.html') in redir_src:
+                  continue
+              dead.append((u, p))
+
+          print(f"locs={len(locs)}  dead={len(dead)}")
+
+          new_redirs, repointed, removed = [], 0, []
+          for u, p in dead:
+              d = os.path.dirname(p)
+              slug = p.rsplit('/', 1)[-1]
+              parts = slug.rsplit('-to-', 1)
+              cands = []
+              if len(parts) == 2:
+                  a, c = parts
+                  cands = [
+                      f"{a}-to-{c}-station", f"{a}-station-to-{c}",
+                      f"{a}-station-to-{c}-station", f"{a}-station-to-{c}-bus-stand",
+                      f"{a}-station-to-{c}-depot", f"{a}-to-{c}-bus-stand",
+                  ]
+              tgt = next((t for t in cands if os.path.exists(f"{d}/{t}.html")), None)
+
+              if tgt:
+                  src_url = f"/{d}/{slug}"
+                  dst_url = f"/{d}/{tgt}"
+                  line = f"{src_url} {dst_url} 301"
+                  if line not in red:
+                      new_redirs.append(line)
+                  before = sm
+                  sm = sm.replace(f"https://busjatri.in/{d}/{slug}</loc>",
+                                  f"https://busjatri.in/{d}/{tgt}</loc>")
+                  sm = sm.replace(f"https://busjatri.in/{d}/{slug}.html</loc>",
+                                  f"https://busjatri.in/{d}/{tgt}</loc>")
+                  if sm != before:
+                      repointed += 1
+                  print(f"  REDIRECT {slug} -> {tgt}")
+              else:
+                  before = sm
+                  sm = re.sub(rf"\s*<url>\s*<loc>{re.escape(u)}</loc>.*?</url>", "", sm, flags=re.S)
+                  if sm == before:
+                      sm = sm.replace(f"<loc>{u}</loc>", "")
+                  removed.append(slug)
+                  print(f"  REMOVE   {slug} (no matching page)")
+
+          if new_redirs:
               if not red.endswith("\n"):
                   red += "\n"
-              red += "# howrah-station slug fixes (dead /X-to-howrah aliases)\n" + "\n".join(lines) + "\n"
+              red += "# sitemap-city dead-URL fixes\n" + "\n".join(new_redirs) + "\n"
               open(rp, 'w', encoding='utf-8').write(red)
-          print(f"_redirects: {added} redirects added")
-
-          sp = 'sitemap-city.xml'
-          sm = open(sp, encoding='utf-8').read()
-          fixed = 0
-          for src, dst in PAIRS:
-              for pat in (f"https://busjatri.in/bus-time-table/{src}</loc>",
-                          f"https://busjatri.in/bus-time-table/{src}.html</loc>"):
-                  if pat in sm:
-                      sm = sm.replace(pat, f"https://busjatri.in/bus-time-table/{dst}</loc>")
-                      fixed += 1
           open(sp, 'w', encoding='utf-8').write(sm)
-          print(f"sitemap-city.xml: {fixed} loc entries repointed")
-
-          left = [s for s, _ in PAIRS if f"/bus-time-table/{s}</loc>" in sm or f"/bus-time-table/{s}.html</loc>" in sm]
-          assert not left, f"still in sitemap: {left}"
-          print("verify OK - no dead slugs left in sitemap-city.xml")
+          print(f"\nredirects added={len(new_redirs)}  locs repointed={repointed}  locs removed={len(removed)}")
           PY
 
-      - name: Validate
+      - name: Validate (no dead locs remain)
         run: |
           python3 - <<'EOF'
           import os, re
+          def exists(p):
+              return (os.path.exists(p + '.html') or os.path.exists(p + '/index.html')
+                      or os.path.exists(p) or p == '')
           sm = open('sitemap-city.xml', encoding='utf-8').read()
           red = open('_redirects', encoding='utf-8').read()
+          redir_src = {l.split()[0] for l in red.splitlines()
+                       if l.strip() and not l.startswith('#') and l.split()}
           locs = re.findall(r'<loc>\s*(.*?)\s*</loc>', sm)
           bad = []
           for u in locs:
               p = u.replace('https://busjatri.in/', '').split('?')[0].rstrip('/')
-              if not (os.path.exists(p + '.html') or os.path.exists(p + '/index.html') or os.path.exists(p) or p == ''):
-                  bad.append(u)
-          assert not bad, f"sitemap still has 404s: {bad[:5]}"
-          n = red.count(' 301')
-          print(f"OK: sitemap-city.xml has {len(locs)} locs, 0 dead | _redirects has {n} 301 rules")
+              if exists(p) or ('/' + p) in redir_src:
+                  continue
+              bad.append(u)
+          assert not bad, f"still dead: {bad[:8]}"
+          print(f"OK: {len(locs)} locs, 0 dead | _redirects 301 rules: {red.count(' 301')}")
           EOF
 
       - name: Commit and push if changed
@@ -91,6 +123,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Fix 11 sitemap-city 404s: 301 /X-to-howrah -> /X-to-howrah-station + repoint sitemap locs"
+            git commit -m "Fix dead sitemap-city URLs: 301 aliases to -station pages, drop unresolvable locs"
             git push
           fi
