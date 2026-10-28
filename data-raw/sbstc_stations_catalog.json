@@ -1,0 +1,632 @@
+[
+  {
+    "code": "ARR",
+    "name": "ALANKARPUR/RAMNAGAR",
+    "bn": "আলঙ্কারপুর/রামনগর"
+  },
+  {
+    "code": "ASA",
+    "name": "ASHARI",
+    "bn": "আশারি"
+  },
+  {
+    "code": "ASARI",
+    "name": "ASARI",
+    "bn": "আসারি"
+  },
+  {
+    "code": "BDC",
+    "name": "BARADACHAWKAN",
+    "bn": "বড়দাচওকান"
+  },
+  {
+    "code": "BELEG",
+    "name": "BELEGHATA",
+    "bn": "বেলেঘাটা"
+  },
+  {
+    "code": "BEL",
+    "name": "BELGHARIA DEPOT",
+    "bn": "বেলঘরিয়া ডিপো"
+  },
+  {
+    "code": "BKRA",
+    "name": "BANKRA",
+    "bn": "বাঁকড়া"
+  },
+  {
+    "code": "BKRS",
+    "name": "BAKRESHWAR",
+    "bn": "বক্রেশ্বর"
+  },
+  {
+    "code": "BKRTPS",
+    "name": "BAKRESWAR THERMAL POWER STN",
+    "bn": "বক্রেশ্বর তাপবিদ্যুৎ কেন্দ্র"
+  },
+  {
+    "code": "BOLG",
+    "name": "BOLGONA",
+    "bn": "বলগোনা"
+  },
+  {
+    "code": "BOROP",
+    "name": "BOROPARA",
+    "bn": "বড়পাড়া"
+  },
+  {
+    "code": "BRW",
+    "name": "BARWA",
+    "bn": "বারওয়া"
+  },
+  {
+    "code": "BSN",
+    "name": "BASANTAPUR",
+    "bn": "বাসন্তপুর"
+  },
+  {
+    "code": "BTPBTP",
+    "name": "BAKRESWAR T.P.S.",
+    "bn": "বক্রেশ্বর টি.পি.এস."
+  },
+  {
+    "code": "BTPK",
+    "name": "BAKRESWAR TP/ KACHOJORE",
+    "bn": "বক্রেশ্বর টিপি / কাঁচোজোড়"
+  },
+  {
+    "code": "CHMH",
+    "name": "CHOWRINGEE/MOHAPUR",
+    "bn": "চৌরঙ্গী/মহাপুর"
+  },
+  {
+    "code": "DCD",
+    "name": "DEYPARA/CHANDRA",
+    "bn": "দেয়পাড়া/চন্দ্র"
+  },
+  {
+    "code": "DCSTN",
+    "name": "DURGAPUR C.C/STATION",
+    "bn": "দুর্গাপুর সিটি সেন্টার/স্টেশন"
+  },
+  {
+    "code": "DGF",
+    "name": "DASKOLGRAM / FHUTISANKO",
+    "bn": "দাসকলগ্রাম / ফুঁটিসাঁকো"
+  },
+  {
+    "code": "DGP",
+    "name": "DURGAPUR STN",
+    "bn": "দুর্গাপুর স্টেশন"
+  },
+  {
+    "code": "DSB",
+    "name": "DASPUR/BOKULTALA",
+    "bn": "দাসপুর/বকুলতলা"
+  },
+  {
+    "code": "GDPS",
+    "name": "GODAPIASAL",
+    "bn": "গোঁদাপিয়াশাল"
+  },
+  {
+    "code": "GRE",
+    "name": "GURGURIPAL/ENAYETPUR",
+    "bn": "গুড়গুড়িপাল/এনায়েতপুর"
+  },
+  {
+    "code": "HTDB",
+    "name": "HATEMPUR/DUBRAJPUR",
+    "bn": "হেতেমপুর/দুবরাজপুর"
+  },
+  {
+    "code": "HTPDBP",
+    "name": "HETAMPUR/DUBRAJPUR",
+    "bn": "হেতমপুর/দুবরাজপুর"
+  },
+  {
+    "code": "ILMBZ",
+    "name": "ILLAMBAZAR/BOLPUR",
+    "bn": "ইলামবাজার/বোলপুর"
+  },
+  {
+    "code": "IRB",
+    "name": "INDPUR/BANGLA",
+    "bn": "ইঁদপুর/বাংলা"
+  },
+  {
+    "code": "JMSHP",
+    "name": "JAMSHEDPUR",
+    "bn": "জামশেদপুর/টাটা"
+  },
+  {
+    "code": "JDVPR",
+    "name": "JADAVPUR",
+    "bn": "যাদবপুর"
+  },
+  {
+    "code": "JGA",
+    "name": "JAGALPUR/ANKURHATI",
+    "bn": "জঙ্গলপুর/অঙ্কুরহাটি"
+  },
+  {
+    "code": "JRSRI",
+    "name": "JARA/SRINAGAR",
+    "bn": "জাড়া/শ্রীনগর"
+  },
+  {
+    "code": "KLD",
+    "name": "KOLAGHAT/DEULIA BAZAR",
+    "bn": "কোলাঘাট/দেউলিয়া বাজার"
+  },
+  {
+    "code": "KOL",
+    "name": "KOLKATA (ESPLANADE)",
+    "bn": "কলকাতা (এসপ্ল্যানেড)"
+  },
+  {
+    "code": "LAB",
+    "name": "LABPUR",
+    "bn": "লাভপুর"
+  },
+  {
+    "code": "MDH",
+    "name": "MADHPUR",
+    "bn": "মাধবপুর"
+  },
+  {
+    "code": "MLDG",
+    "name": "MALLANDIGHI",
+    "bn": "মল্লনদীঘি"
+  },
+  {
+    "code": "OMRP",
+    "name": "OMARPUR",
+    "bn": "ওমরপুর"
+  },
+  {
+    "code": "RANI",
+    "name": "ASANSOL/RANIGANJ",
+    "bn": "আসানসোল/রানীগঞ্জ"
+  },
+  {
+    "code": "RBP",
+    "name": "RABINDRASADAN/PTS",
+    "bn": "রবীন্দ্রসদন/পিটিএস"
+  },
+  {
+    "code": "RGO",
+    "name": "RAGHUNATHGANJ(OMARPUR)",
+    "bn": "রঘুনাথগঞ্জ (ওমরপুর)"
+  },
+  {
+    "code": "RTP",
+    "name": "RATANPUR/PIRTALA",
+    "bn": "রতনপুর/পীরতলা"
+  },
+  {
+    "code": "SDPUR",
+    "name": "SODEPUR",
+    "bn": "সোদপুর"
+  },
+  {
+    "code": "SLBN",
+    "name": "SALBANI",
+    "bn": "শালবনী"
+  },
+  {
+    "code": "UBR",
+    "name": "ULBERIA",
+    "bn": "উলুবেড়িয়া"
+  },
+  {
+    "code": "ANARA",
+    "name": "ANARA",
+    "bn": "আনারা/কেউতলা"
+  },
+  {
+    "code": "ANDLAL",
+    "name": "ANDUL/ALAMPUR",
+    "bn": "আন্দুল/আলামপুর"
+  },
+  {
+    "code": "ARAM",
+    "name": "ARAMBAG",
+    "bn": "আরামবাগ"
+  },
+  {
+    "code": "ALNKR",
+    "name": "ALANKARPUR",
+    "bn": "আলঙ্কারপুর"
+  },
+  {
+    "code": "ALPR",
+    "name": "ALAMPUR",
+    "bn": "আলামপুর"
+  },
+  {
+    "code": "ASN",
+    "name": "ASANSOL",
+    "bn": "আসানসোল"
+  },
+  {
+    "code": "ISLP",
+    "name": "ISLAMPUR",
+    "bn": "ইসলামপুর"
+  },
+  {
+    "code": "UL",
+    "name": "ULUBERIA",
+    "bn": "উলুবেড়িয়া"
+  },
+  {
+    "code": "KMLPR",
+    "name": "KAMALPUR",
+    "bn": "কমলপুর"
+  },
+  {
+    "code": "KRMP",
+    "name": "KARIMPUR",
+    "bn": "করিমপুর"
+  },
+  {
+    "code": "KNP",
+    "name": "KANPUR / BINPUR",
+    "bn": "কাঁকো / বিনপুর"
+  },
+  {
+    "code": "KPBR",
+    "name": "KAPASBERIA",
+    "bn": "কাপাসবেড়িয়া"
+  },
+  {
+    "code": "KTSR",
+    "name": "KOTASUR",
+    "bn": "কোটাসুর"
+  },
+  {
+    "code": "KLGHT",
+    "name": "KOLAGHAT",
+    "bn": "কোলাঘাট"
+  },
+  {
+    "code": "KGP",
+    "name": "KHARAGPUR",
+    "bn": "খড়গপুর"
+  },
+  {
+    "code": "KHRB",
+    "name": "KHARBANDHI",
+    "bn": "খড়ন্দী"
+  },
+  {
+    "code": "GNGDP",
+    "name": "GANGADHARPUR",
+    "bn": "গঙ্গাধরপুর"
+  },
+  {
+    "code": "GNGRP",
+    "name": "GANGARAMPUR",
+    "bn": "গঙ্গারামপুর"
+  },
+  {
+    "code": "GHSK",
+    "name": "GUSHKARA",
+    "bn": "গুসকরা"
+  },
+  {
+    "code": "GLMR",
+    "name": "GOALMARA",
+    "bn": "গোলমারা"
+  },
+  {
+    "code": "CHDP",
+    "name": "CHANDIPUR",
+    "bn": "চণ্ডীপুর"
+  },
+  {
+    "code": "CHTRNJ",
+    "name": "CHITTARANJAN",
+    "bn": "চিত্তরঞ্জন"
+  },
+  {
+    "code": "JPR",
+    "name": "JOYPUR",
+    "bn": "জয়পুর"
+  },
+  {
+    "code": "JDV",
+    "name": "JADAVPUR",
+    "bn": "যাদবপুর"
+  },
+  {
+    "code": "JARA",
+    "name": "JARA",
+    "bn": "জাড়া"
+  },
+  {
+    "code": "JHAR",
+    "name": "JHARGRAM",
+    "bn": "ঝাড়গ্রাম"
+  },
+  {
+    "code": "JHLA",
+    "name": "JHALDA",
+    "bn": "ঝালদা"
+  },
+  {
+    "code": "TRRA",
+    "name": "TRILOKCHANDRAPUR",
+    "bn": "ত্রিলোকচন্দ্রপুর"
+  },
+  {
+    "code": "TRP",
+    "name": "TARAPITH",
+    "bn": "তারাপীঠ"
+  },
+  {
+    "code": "TRMO",
+    "name": "TARULIA MORE",
+    "bn": "তারুলিয়া মোড়"
+  },
+  {
+    "code": "DBRJP",
+    "name": "DUBRAJPUR",
+    "bn": "দুবরাজপুর"
+  },
+  {
+    "code": "DCTC",
+    "name": "DURGAPUR CITY CENTER",
+    "bn": "দুর্গাপুর সিটি সেন্টার"
+  },
+  {
+    "code": "NBRKP",
+    "name": "NEW BARRACKPUR",
+    "bn": "নতুন ব্যারাকপুর"
+  },
+  {
+    "code": "NSRI",
+    "name": "NAISARAI",
+    "bn": "নাইসারাই"
+  },
+  {
+    "code": "NMPRA",
+    "name": "NIMPURA",
+    "bn": "নিমপুরা"
+  },
+  {
+    "code": "NPSL",
+    "name": "NEPURA / SALDAHA",
+    "bn": "নেপুরা/সালদহ"
+  },
+  {
+    "code": "PJ",
+    "name": "PARAJ",
+    "bn": "পরাজ"
+  },
+  {
+    "code": "PCB",
+    "name": "PICHABONI",
+    "bn": "পিচাবনি"
+  },
+  {
+    "code": "PRL",
+    "name": "PURULIA",
+    "bn": "পুরুলিয়া"
+  },
+  {
+    "code": "FRKK",
+    "name": "FARAKKA",
+    "bn": "ফারাক্কা"
+  },
+  {
+    "code": "BATHPL",
+    "name": "BAKRESHWAR THERMAL PLANT",
+    "bn": "বক্রেশ্বর তাপবিদ্যুৎ কেন্দ্র"
+  },
+  {
+    "code": "BNKRM",
+    "name": "BANKURA MORE",
+    "bn": "বাঁকুড়া মোড়"
+  },
+  {
+    "code": "BLP",
+    "name": "BOLPUR",
+    "bn": "বোলপুর"
+  },
+  {
+    "code": "BNK",
+    "name": "BANKURA",
+    "bn": "বাঁকুড়া"
+  },
+  {
+    "code": "BNA",
+    "name": "BANSPAHARI",
+    "bn": "বাঁশপাহাড়ী"
+  },
+  {
+    "code": "BRJRA",
+    "name": "BARJORA",
+    "bn": "বড়জোড়া"
+  },
+  {
+    "code": "BRST",
+    "name": "BARASAT",
+    "bn": "বারাসাত"
+  },
+  {
+    "code": "BRPR",
+    "name": "BARUIPUR",
+    "bn": "বারুইপুর"
+  },
+  {
+    "code": "BLRMP",
+    "name": "BALARAMPUR",
+    "bn": "বলরামপুর"
+  },
+  {
+    "code": "BLV",
+    "name": "BALIVASA",
+    "bn": "বালিভাসা"
+  },
+  {
+    "code": "BSNTP",
+    "name": "BASANTPUR",
+    "bn": "বাসন্তপুর"
+  },
+  {
+    "code": "BKRT",
+    "name": "B.K.R THARMALPOWER",
+    "bn": "বি.কে.আর থার্মালপাওয়ার"
+  },
+  {
+    "code": "BSNP",
+    "name": "BISHNUPUR",
+    "bn": "বিষ্ণুপুর"
+  },
+  {
+    "code": "BRP",
+    "name": "BERHAMPUR",
+    "bn": "বহরমপুর"
+  },
+  {
+    "code": "BLTL",
+    "name": "BELTALA",
+    "bn": "বেলতলা"
+  },
+  {
+    "code": "BLD",
+    "name": "BELDA",
+    "bn": "বেলদা"
+  },
+  {
+    "code": "BLPHR",
+    "name": "BELPAHARI",
+    "bn": "বেলপাহাড়ী"
+  },
+  {
+    "code": "BLGHT",
+    "name": "BELIAGHATA",
+    "bn": "বেলেঘাটা"
+  },
+  {
+    "code": "BLTR",
+    "name": "BELIATORE",
+    "bn": "বেলিয়াতোড়"
+  },
+  {
+    "code": "BNKDH",
+    "name": "BANKADAHA",
+    "bn": "বাঁকাদহ"
+  },
+  {
+    "code": "BAN",
+    "name": "BANDWAN",
+    "bn": "বান্দোয়ান"
+  },
+  {
+    "code": "BRKP",
+    "name": "BARRACKPORE",
+    "bn": "ব্যারাকপুর"
+  },
+  {
+    "code": "MDP",
+    "name": "MADPUR",
+    "bn": "মাদপুর"
+  },
+  {
+    "code": "MNB",
+    "name": "MANICKPARA/BALIBHASA",
+    "bn": "মানিকপাড়া/বালিভাসা"
+  },
+  {
+    "code": "MYP",
+    "name": "MAYAPUR",
+    "bn": "মায়াপুর"
+  },
+  {
+    "code": "MLS",
+    "name": "MALANCHA/SAHALCHAK",
+    "bn": "মালঞ্চ/সাহালচক"
+  },
+  {
+    "code": "MLDNG",
+    "name": "MALDANGA",
+    "bn": "মলডাঙ্গা"
+  },
+  {
+    "code": "MLD",
+    "name": "MALDA",
+    "bn": "মালদা"
+  },
+  {
+    "code": "MID",
+    "name": "MIDNAPUR",
+    "bn": "মেদিনীপুর"
+  },
+  {
+    "code": "MCHP",
+    "name": "MUCHIPARA",
+    "bn": "মুচিপাড়া"
+  },
+  {
+    "code": "MHNP",
+    "name": "MOHANPUR",
+    "bn": "মোহনপুর"
+  },
+  {
+    "code": "RGP",
+    "name": "RAGHUNATHPUR",
+    "bn": "রঘুনাথপুর"
+  },
+  {
+    "code": "RTBR",
+    "name": "RATHBERA",
+    "bn": "রথবেড়া"
+  },
+  {
+    "code": "RBSD",
+    "name": "RABINDRASADHAN",
+    "bn": "রবীন্দ্রসদন"
+  },
+  {
+    "code": "RJBN",
+    "name": "RAJBANDH",
+    "bn": "রাজবাঁধ"
+  },
+  {
+    "code": "RAMP",
+    "name": "RAMPURHAT",
+    "bn": "রামপুরহাট"
+  },
+  {
+    "code": "PYPR",
+    "name": "REYAPARA",
+    "bn": "রেয়াপাড়া"
+  },
+  {
+    "code": "SRM",
+    "name": "SARBARI MORE",
+    "bn": "সরবাড়ি মোড়"
+  },
+  {
+    "code": "SNDDKB",
+    "name": "SUNDARPUR / DAKBANGLO",
+    "bn": "সুন্দরপুর / ডাকবাংলো"
+  },
+  {
+    "code": "SURI",
+    "name": "SURI",
+    "bn": "সিউড়ি"
+  },
+  {
+    "code": "HNSH",
+    "name": "HANSCHARA",
+    "bn": "হাঁসচড়া"
+  },
+  {
+    "code": "HBRA",
+    "name": "HABRA",
+    "bn": "হাবড়া"
+  }
+]

@@ -3,14 +3,14 @@
     {
       "id": "wbbus-in-nbstc-913",
       "bus_name": "NBSTC",
-      "reg_no": "",
+      "reg_no": "GOVTB4",
       "operator": "—",
       "bus_type": "Government - NON AC",
       "origin": "Kharagpur",
       "destination": "Baharampur",
       "departure_time": "5:00 AM",
       "arrival_time": "5:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Kharagpur",
       "route": "Kharagpur - Baharampur",
       "stoppages": [
@@ -6902,7 +6902,7 @@
     {
       "id": "wbbustime-jai-maa-durga-0",
       "bus_name": "JOY MAA DURGA",
-      "reg_no": "",
+      "reg_no": "WB45B6992",
       "operator": "Joy Maa Durga",
       "bus_type": "Private",
       "origin": "Bandwan",
@@ -7292,7 +7292,7 @@
       "destination": "Tarapith",
       "departure_time": "6:15 AM",
       "arrival_time": "12:00 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Raghunathpur",
       "route": "Raghunathpur - Tarapith",
       "stoppages": [
@@ -10314,7 +10314,7 @@
       "destination": "Bardhaman",
       "departure_time": "8:35 AM",
       "arrival_time": "1:05 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Chittaranjan",
       "route": "Chittaranjan - Bardhaman",
       "stoppages": [
@@ -11201,7 +11201,7 @@
       "destination": "Siliguri",
       "departure_time": "6:00 AM",
       "arrival_time": "2:40 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Dinhata",
       "route": "Dinhata - Siliguri",
       "stoppages": [
@@ -11483,7 +11483,7 @@
       "destination": "Beldanga",
       "departure_time": "3:20 AM",
       "arrival_time": "8:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Beldanga",
       "stoppages": [
@@ -11592,7 +11592,7 @@
       "destination": "Medinipur",
       "departure_time": "7:55 AM",
       "arrival_time": "10:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Contai",
       "route": "Contai - Medinipur",
       "stoppages": [
@@ -11657,7 +11657,7 @@
       "destination": "Suri",
       "departure_time": "8:00 AM",
       "arrival_time": "12:30 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Suri",
       "stoppages": [
@@ -11885,7 +11885,7 @@
       "destination": "Arambagh",
       "departure_time": "7:50 AM",
       "arrival_time": "12:20 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Nabadwip",
       "route": "Nabadwip - Arambagh",
       "stoppages": [
@@ -14390,7 +14390,7 @@
       "destination": "Nabadwip",
       "departure_time": "9:05 AM",
       "arrival_time": "4:30 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Nabadwip",
       "stoppages": [
@@ -101686,7 +101686,7 @@
       "destination": "Bankura",
       "departure_time": "2:55 AM",
       "arrival_time": "8:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Nabadwip",
       "route": "Nabadwip - Bankura",
       "stoppages": [
@@ -107600,7 +107600,7 @@
       "destination": "Kantakhali",
       "departure_time": "5:20 AM",
       "arrival_time": "11:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Amlasuli",
       "route": "Amlasuli - Kantakhali",
       "stoppages": [
@@ -108266,7 +108266,7 @@
     {
       "id": "bussathi-krishna-gopal-862",
       "bus_name": "KRISHNA GOPAL",
-      "reg_no": "",
+      "reg_no": "WB",
       "operator": "—",
       "bus_type": "",
       "origin": "Silda",
@@ -108492,7 +108492,7 @@
     {
       "id": "bussathi-narayani-866",
       "bus_name": "NARAYANI",
-      "reg_no": "",
+      "reg_no": "WB55",
       "operator": "—",
       "bus_type": "",
       "origin": "Bishnupur",
@@ -135548,7 +135548,7 @@
     {
       "id": "sbstc-digha-barasat-0",
       "bus_name": "SBSTC Digha-Barasat",
-      "reg_no": "",
+      "reg_no": "WB29C4818",
       "operator": "SBSTC",
       "bus_type": "Government - SBSTC",
       "origin": "Digha",
@@ -435340,7 +435340,7 @@
     {
       "id": "maa-binapani-kantakhali-jhargram-4011",
       "bus_name": "MAA BINAPANI",
-      "reg_no": "",
+      "reg_no": "WB11C5248",
       "operator": "Maa Binapani",
       "bus_type": "Private - Non AC",
       "origin": "Kantakhali",
@@ -440416,7 +440416,7 @@
       "destination": "Karunamoyee",
       "departure_time": "7:40 AM",
       "arrival_time": "9:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8967641328",
       "depot_name": "Kaktiya",
       "route": "Kaktiya - Karunamoyee",
       "stoppages": [
@@ -440450,7 +440450,7 @@
       "destination": "Krishnanagar",
       "departure_time": "6:50 AM",
       "arrival_time": "12:10 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Morebandh",
       "route": "Morebandh - Krishnanagar",
       "stoppages": [
@@ -440482,7 +440482,7 @@
       "destination": "Memari",
       "departure_time": "6:00 AM",
       "arrival_time": "11:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9732045607",
       "depot_name": "Bolpur",
       "route": "Bolpur - Memari",
       "stoppages": [
@@ -440516,7 +440516,7 @@
       "destination": "Medinipur",
       "departure_time": "3:45 AM",
       "arrival_time": "6:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7586965635",
       "depot_name": "Bajkul",
       "route": "Bajkul - Medinipur",
       "stoppages": [
@@ -440550,7 +440550,7 @@
       "destination": "Barasat",
       "departure_time": "3:55 AM",
       "arrival_time": "9:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "6297750615",
       "depot_name": "Solpatta",
       "route": "Solpatta - Barasat",
       "stoppages": [
@@ -440685,7 +440685,7 @@
       "destination": "Howrah",
       "departure_time": "5:25 AM",
       "arrival_time": "10:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9732990697",
       "depot_name": "Egra",
       "route": "Egra - Howrah",
       "stoppages": [
@@ -441525,7 +441525,7 @@
       "destination": "Chandrakona Road",
       "departure_time": "5:05 AM",
       "arrival_time": "10:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7586923774",
       "depot_name": "Haldia",
       "route": "Haldia - Chandrakona Road",
       "stoppages": [
@@ -441711,7 +441711,7 @@
       "destination": "Tarkeshwar",
       "departure_time": "4:20 AM",
       "arrival_time": "6:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7047141569",
       "depot_name": "Simlabandh",
       "route": "Simlabandh - Tarkeshwar",
       "stoppages": [
@@ -441917,7 +441917,7 @@
       "destination": "Raskundu",
       "departure_time": "9:15 AM",
       "arrival_time": "11:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Medinipur",
       "route": "Medinipur - Raskundu",
       "stoppages": [
@@ -442259,7 +442259,7 @@
       "destination": "Mecheda",
       "departure_time": "6:25 AM",
       "arrival_time": "11:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9064234330",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Mecheda",
       "stoppages": [
@@ -442379,7 +442379,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "7:10 PM",
       "arrival_time": "2:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9641740130",
       "depot_name": "Bandwan",
       "route": "Bandwan - Kolkata (Esplanade)",
       "stoppages": [
@@ -442929,7 +442929,7 @@
       "destination": "Howrah",
       "departure_time": "3:50 AM",
       "arrival_time": "10:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9564059707",
       "depot_name": "Raipur",
       "route": "Raipur - Howrah",
       "stoppages": [
@@ -443054,7 +443054,7 @@
       "destination": "Bankura",
       "departure_time": "6:30 AM",
       "arrival_time": "10:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Bankura",
       "stoppages": [
@@ -443159,7 +443159,7 @@
       "destination": "Chandrakona Town",
       "departure_time": "6:00 AM",
       "arrival_time": "8:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7047268668",
       "depot_name": "Patharpara",
       "route": "Patharpara - Chandrakona Town",
       "stoppages": [
@@ -443193,7 +443193,7 @@
       "destination": "Solpatta",
       "departure_time": "7:40 AM",
       "arrival_time": "2:05 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "9934719276",
       "depot_name": "Karunamoyee",
       "route": "Karunamoyee - Solpatta",
       "stoppages": [
@@ -443452,7 +443452,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "4:30 AM",
       "arrival_time": "6:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9242271617",
       "depot_name": "Madansole",
       "route": "Madansole - Kolkata (Esplanade)",
       "stoppages": [
@@ -443486,7 +443486,7 @@
       "destination": "Karunamoyee",
       "departure_time": "6:30 AM",
       "arrival_time": "11:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8001128686",
       "depot_name": "Egra",
       "route": "Egra - Karunamoyee",
       "stoppages": [
@@ -443678,7 +443678,7 @@
       "destination": "Hijli Sorif",
       "departure_time": "5:00 AM",
       "arrival_time": "7:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9434802576",
       "depot_name": "Bankura",
       "route": "Bankura - Hijli Sorif",
       "stoppages": [
@@ -443712,7 +443712,7 @@
       "destination": "Tatanagar",
       "departure_time": "5:25 AM",
       "arrival_time": "11:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Durgapur (Station)",
       "route": "Durgapur (Station) - Tatanagar",
       "stoppages": [
@@ -443894,7 +443894,7 @@
       "destination": "Siliguri",
       "departure_time": "6:45 PM",
       "arrival_time": "8:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8653434855",
       "depot_name": "Kolkata (Esplanade)",
       "route": "Kolkata (Esplanade) - Siliguri",
       "stoppages": [
@@ -443928,7 +443928,7 @@
       "destination": "Digha",
       "departure_time": "5:30 AM",
       "arrival_time": "10:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8167522368",
       "depot_name": "Ghatal",
       "route": "Ghatal - Digha",
       "stoppages": [
@@ -444098,7 +444098,7 @@
       "destination": "Bardhaman",
       "departure_time": "6:10 AM",
       "arrival_time": "11:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7478594714",
       "depot_name": "Mecheda",
       "route": "Mecheda - Bardhaman",
       "stoppages": [
@@ -444424,7 +444424,7 @@
       "destination": "Barasat",
       "departure_time": "7:40 AM",
       "arrival_time": "3:40 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Boga",
       "route": "Boga - Barasat",
       "stoppages": [
@@ -444458,7 +444458,7 @@
       "destination": "Kolkata",
       "departure_time": "6:00 AM",
       "arrival_time": "11:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8372010518",
       "depot_name": "Bishnupur",
       "route": "Bishnupur - Kolkata",
       "stoppages": [
@@ -444578,7 +444578,7 @@
       "destination": "Kolkata",
       "departure_time": "5:30 AM",
       "arrival_time": "7:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9083184114",
       "depot_name": "Neradeul",
       "route": "Neradeul - Kolkata",
       "stoppages": [
@@ -444612,7 +444612,7 @@
       "destination": "Manbazar",
       "departure_time": "4:25 AM",
       "arrival_time": "9:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9775780205",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Manbazar",
       "stoppages": [
@@ -444881,7 +444881,7 @@
       "destination": "Khatra",
       "departure_time": "6:20 AM",
       "arrival_time": "9:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9733873824",
       "depot_name": "Mecheda",
       "route": "Mecheda - Khatra",
       "stoppages": [
@@ -445014,7 +445014,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "6:30 AM",
       "arrival_time": "8:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9093123144",
       "depot_name": "Kantakhali",
       "route": "Kantakhali - Kolkata (Esplanade)",
       "stoppages": [
@@ -445048,7 +445048,7 @@
       "destination": "Karunamoyee",
       "departure_time": "8:10 AM",
       "arrival_time": "2:00 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "8293339121",
       "depot_name": "Egra",
       "route": "Egra - Karunamoyee",
       "stoppages": [
@@ -445208,7 +445208,7 @@
       "destination": "Kolkata",
       "departure_time": "8:10 AM",
       "arrival_time": "10:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7407624030",
       "depot_name": "Mangrul",
       "route": "Mangrul - Kolkata",
       "stoppages": [
@@ -445467,7 +445467,7 @@
       "destination": "Durgapur (Station)",
       "departure_time": "6:20 AM",
       "arrival_time": "11:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9800113098",
       "depot_name": "Barabazar",
       "route": "Barabazar - Durgapur (Station)",
       "stoppages": [
@@ -445562,7 +445562,7 @@
       "destination": "Solpatta",
       "departure_time": "4:50 AM",
       "arrival_time": "8:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8159818004",
       "depot_name": "Garia",
       "route": "Garia - Solpatta",
       "stoppages": [
@@ -445765,7 +445765,7 @@
       "destination": "Howrah",
       "departure_time": "5:00 AM",
       "arrival_time": "7:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9732862466",
       "depot_name": "Sautia",
       "route": "Sautia - Howrah",
       "stoppages": [
@@ -445849,7 +445849,7 @@
       "destination": "Balichak",
       "departure_time": "7:40 AM",
       "arrival_time": "9:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8967343760",
       "depot_name": "Kukrahati",
       "route": "Kukrahati - Balichak",
       "stoppages": [
@@ -446053,7 +446053,7 @@
       "destination": "Karunamoyee",
       "departure_time": "4:00 AM",
       "arrival_time": "9:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9083590857",
       "depot_name": "Egra",
       "route": "Egra - Karunamoyee",
       "stoppages": [
@@ -446247,7 +446247,7 @@
       "destination": "Katwa",
       "departure_time": "6:40 AM",
       "arrival_time": "9:05 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7602751687",
       "depot_name": "Ranaghat",
       "route": "Ranaghat - Katwa",
       "stoppages": [
@@ -446281,7 +446281,7 @@
       "destination": "Karunamoyee",
       "departure_time": "5:00 AM",
       "arrival_time": "1:25 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "8348291757",
       "depot_name": "Boga",
       "route": "Boga - Karunamoyee",
       "stoppages": [
@@ -446476,7 +446476,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "7:00 PM",
       "arrival_time": "11:40 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Silda",
       "route": "Silda - Kolkata (Esplanade)",
       "stoppages": [
@@ -446510,7 +446510,7 @@
       "destination": "Bardhaman",
       "departure_time": "5:25 AM",
       "arrival_time": "10:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Manbazar",
       "route": "Manbazar - Bardhaman",
       "stoppages": [
@@ -447181,7 +447181,7 @@
       "destination": "Howrah",
       "departure_time": "4:45 AM",
       "arrival_time": "8:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9733667597",
       "depot_name": "Chandrakona Town",
       "route": "Chandrakona Town - Howrah",
       "stoppages": [
@@ -447296,7 +447296,7 @@
       "destination": "Howrah",
       "departure_time": "7:30 AM",
       "arrival_time": "9:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9733667597",
       "depot_name": "Irhpala",
       "route": "Irhpala - Howrah",
       "stoppages": [
@@ -447668,7 +447668,7 @@
       "destination": "Bardhaman",
       "departure_time": "7:10 AM",
       "arrival_time": "11:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Majhdia",
       "route": "Majhdia - Bardhaman",
       "stoppages": [
@@ -447918,7 +447918,7 @@
       "destination": "Kolkata",
       "departure_time": "7:00 AM",
       "arrival_time": "1:25 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "7047646124",
       "depot_name": "Ranibandh",
       "route": "Ranibandh - Kolkata",
       "stoppages": [
@@ -448246,7 +448246,7 @@
       "destination": "Kolkata",
       "departure_time": "10:20 AM",
       "arrival_time": "5:50 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Manbazar",
       "route": "Manbazar - Kolkata",
       "stoppages": [
@@ -448444,7 +448444,7 @@
       "destination": "Garia",
       "departure_time": "4:15 AM",
       "arrival_time": "6:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9907655012",
       "depot_name": "Nandigram",
       "route": "Nandigram - Garia",
       "stoppages": [
@@ -448668,7 +448668,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "7:00 AM",
       "arrival_time": "9:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9933175180",
       "depot_name": "Garerghat",
       "route": "Garerghat - Kolkata (Esplanade)",
       "stoppages": [
@@ -448792,7 +448792,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "4:25 AM",
       "arrival_time": "9:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9732621620",
       "depot_name": "Bishnupur",
       "route": "Bishnupur - Kolkata (Esplanade)",
       "stoppages": [
@@ -449281,7 +449281,7 @@
       "destination": "Lalgarh",
       "departure_time": "7:15 AM",
       "arrival_time": "10:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7557816283",
       "depot_name": "Haldia",
       "route": "Haldia - Lalgarh",
       "stoppages": [
@@ -449409,7 +449409,7 @@
       "destination": "Digha",
       "departure_time": "5:45 AM",
       "arrival_time": "8:35 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9635623321",
       "depot_name": "Chaitanyapur",
       "route": "Chaitanyapur - Digha",
       "stoppages": [
@@ -449443,7 +449443,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "3:40 AM",
       "arrival_time": "7:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8167858505",
       "depot_name": "Solpatta",
       "route": "Solpatta - Kolkata (Esplanade)",
       "stoppages": [
@@ -449667,7 +449667,7 @@
       "destination": "Tarkeshwar",
       "departure_time": "3:15 AM",
       "arrival_time": "6:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7586900642",
       "depot_name": "Haldia",
       "route": "Haldia - Tarkeshwar",
       "stoppages": [
@@ -449915,7 +449915,7 @@
       "destination": "Kolkata",
       "departure_time": "5:40 AM",
       "arrival_time": "7:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9434342120",
       "depot_name": "Mangrul",
       "route": "Mangrul - Kolkata",
       "stoppages": [
@@ -449949,7 +449949,7 @@
       "destination": "Medinipur",
       "departure_time": "5:40 AM",
       "arrival_time": "7:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Ghatal",
       "route": "Ghatal - Medinipur",
       "stoppages": [
@@ -450052,7 +450052,7 @@
       "destination": "Hoomgarh",
       "departure_time": "6:30 AM",
       "arrival_time": "10:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9531554051",
       "depot_name": "Baruipur",
       "route": "Baruipur - Hoomgarh",
       "stoppages": [
@@ -450086,7 +450086,7 @@
       "destination": "Digha",
       "departure_time": "9:45 PM",
       "arrival_time": "6:05 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9434004516",
       "depot_name": "Baharampur",
       "route": "Baharampur - Digha",
       "stoppages": [
@@ -450120,7 +450120,7 @@
       "destination": "Bardhaman",
       "departure_time": "5:05 AM",
       "arrival_time": "11:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8902625149",
       "depot_name": "Panskura",
       "route": "Panskura - Bardhaman",
       "stoppages": [
@@ -450340,7 +450340,7 @@
       "destination": "Baruipur",
       "departure_time": "4:50 AM",
       "arrival_time": "7:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Egra",
       "route": "Egra - Baruipur",
       "stoppages": [
@@ -450408,7 +450408,7 @@
       "destination": "Howrah",
       "departure_time": "4:45 AM",
       "arrival_time": "7:35 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9434414594",
       "depot_name": "Ramjibanpur",
       "route": "Ramjibanpur - Howrah",
       "stoppages": [
@@ -450442,7 +450442,7 @@
       "destination": "Chandrakona Town",
       "departure_time": "6:00 AM",
       "arrival_time": "10:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7001055148",
       "depot_name": "Kolkata",
       "route": "Kolkata - Chandrakona Town",
       "stoppages": [
@@ -450609,7 +450609,7 @@
       "destination": "Chandrakona Town",
       "departure_time": "7:20 AM",
       "arrival_time": "11:45 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9800305181",
       "depot_name": "Kolkata",
       "route": "Kolkata - Chandrakona Town",
       "stoppages": [
@@ -450744,7 +450744,7 @@
       "destination": "Kolkata",
       "departure_time": "5:35 AM",
       "arrival_time": "10:35 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8670505350",
       "depot_name": "Chandrakona Road",
       "route": "Chandrakona Road - Kolkata",
       "stoppages": [
@@ -450879,7 +450879,7 @@
       "destination": "Mukundapur",
       "departure_time": "4:25 AM",
       "arrival_time": "8:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9564577273",
       "depot_name": "Egra",
       "route": "Egra - Mukundapur",
       "stoppages": [
@@ -451052,7 +451052,7 @@
       "destination": "Egra",
       "departure_time": "4:20 AM",
       "arrival_time": "2:55 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "9874484093",
       "depot_name": "Garia",
       "route": "Garia - Egra",
       "stoppages": [
@@ -451721,7 +451721,7 @@
       "destination": "Bardhaman",
       "departure_time": "3:10 AM",
       "arrival_time": "9:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9832160700",
       "depot_name": "Panskura",
       "route": "Panskura - Bardhaman",
       "stoppages": [
@@ -451836,7 +451836,7 @@
       "destination": "Karunamoyee",
       "departure_time": "7:30 AM",
       "arrival_time": "11:35 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7799340940",
       "depot_name": "Nandigram",
       "route": "Nandigram - Karunamoyee",
       "stoppages": [
@@ -451941,7 +451941,7 @@
       "destination": "Howrah",
       "departure_time": "7:00 AM",
       "arrival_time": "9:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9932393140",
       "depot_name": "Nandigram",
       "route": "Nandigram - Howrah",
       "stoppages": [
@@ -452127,7 +452127,7 @@
       "destination": "Contai",
       "departure_time": "5:40 AM",
       "arrival_time": "8:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7602697506",
       "depot_name": "Medinipur",
       "route": "Medinipur - Contai",
       "stoppages": [
@@ -452180,7 +452180,7 @@
       "destination": "Karunamoyee",
       "departure_time": "6:20 AM",
       "arrival_time": "2:45 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "9593373423",
       "depot_name": "Boga",
       "route": "Boga - Karunamoyee",
       "stoppages": [
@@ -452375,7 +452375,7 @@
       "destination": "Kolkata",
       "departure_time": "7:10 PM",
       "arrival_time": "1:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9434178161",
       "depot_name": "Jhilimili",
       "route": "Jhilimili - Kolkata",
       "stoppages": [
@@ -452710,7 +452710,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "4:50 AM",
       "arrival_time": "6:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8348251650",
       "depot_name": "Sandhipur",
       "route": "Sandhipur - Kolkata (Esplanade)",
       "stoppages": [
@@ -452744,7 +452744,7 @@
       "destination": "Kukrahati",
       "departure_time": "6:20 AM",
       "arrival_time": "8:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9933118644",
       "depot_name": "Balichak",
       "route": "Balichak - Kukrahati",
       "stoppages": [
@@ -452778,7 +452778,7 @@
       "destination": "Bardhaman",
       "departure_time": "5:00 AM",
       "arrival_time": "9:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9434582504",
       "depot_name": "Suri",
       "route": "Suri - Bardhaman",
       "stoppages": [
@@ -452878,7 +452878,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "2:50 AM",
       "arrival_time": "7:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9547154423",
       "depot_name": "Digha",
       "route": "Digha - Kolkata (Esplanade)",
       "stoppages": [
@@ -453012,7 +453012,7 @@
       "destination": "Arambagh",
       "departure_time": "7:10 AM",
       "arrival_time": "12:20 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "8918543600",
       "depot_name": "Durgapur (Station)",
       "route": "Durgapur (Station) - Arambagh",
       "stoppages": [
@@ -453517,7 +453517,7 @@
       "destination": "Jamalpur",
       "departure_time": "7:40 AM",
       "arrival_time": "10:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Benachity",
       "route": "Benachity - Jamalpur",
       "stoppages": [
@@ -453585,7 +453585,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "4:30 AM",
       "arrival_time": "9:05 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9163253811",
       "depot_name": "Haludkanali",
       "route": "Haludkanali - Kolkata (Esplanade)",
       "stoppages": [
@@ -453872,7 +453872,7 @@
       "destination": "Contai",
       "departure_time": "7:30 AM",
       "arrival_time": "11:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Medinipur",
       "route": "Medinipur - Contai",
       "stoppages": [
@@ -453925,7 +453925,7 @@
       "destination": "Dumka",
       "departure_time": "6:50 AM",
       "arrival_time": "10:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bolpur",
       "route": "Bolpur - Dumka",
       "stoppages": [
@@ -453989,7 +453989,7 @@
       "destination": "Medinipur",
       "departure_time": "9:15 AM",
       "arrival_time": "11:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bishnupur",
       "route": "Bishnupur - Medinipur",
       "stoppages": [
@@ -454057,7 +454057,7 @@
       "destination": "Karunamoyee",
       "departure_time": "4:15 AM",
       "arrival_time": "10:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7074757568",
       "depot_name": "Solpatta",
       "route": "Solpatta - Karunamoyee",
       "stoppages": [
@@ -454182,7 +454182,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "9:55 AM",
       "arrival_time": "11:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8653655590",
       "depot_name": "Gomunda",
       "route": "Gomunda - Kolkata (Esplanade)",
       "stoppages": [
@@ -454216,7 +454216,7 @@
       "destination": "Mukundapur",
       "departure_time": "3:50 AM",
       "arrival_time": "7:55 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9734640912",
       "depot_name": "Egra",
       "route": "Egra - Mukundapur",
       "stoppages": [
@@ -454250,7 +454250,7 @@
       "destination": "Kharagpur",
       "departure_time": "6:30 AM",
       "arrival_time": "1:10 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "9002599577",
       "depot_name": "Manbazar",
       "route": "Manbazar - Kharagpur",
       "stoppages": [
@@ -454485,7 +454485,7 @@
       "destination": "Shyambazar",
       "departure_time": "5:45 AM",
       "arrival_time": "8:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7074768414",
       "depot_name": "Durgachak",
       "route": "Durgachak - Shyambazar",
       "stoppages": [
@@ -456098,7 +456098,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "7:15 PM",
       "arrival_time": "1:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9631145876",
       "depot_name": "Tatanagar",
       "route": "Tatanagar - Kolkata (Esplanade)",
       "stoppages": [
@@ -456370,7 +456370,7 @@
       "destination": "Howrah",
       "departure_time": "4:25 AM",
       "arrival_time": "8:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7384312866",
       "depot_name": "Solpatta",
       "route": "Solpatta - Howrah",
       "stoppages": [
@@ -456404,7 +456404,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "7:10 AM",
       "arrival_time": "1:15 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "7384312866",
       "depot_name": "Mirzapur",
       "route": "Mirzapur - Kolkata (Esplanade)",
       "stoppages": [
@@ -456481,7 +456481,7 @@
       "destination": "Ghatal",
       "departure_time": "10:45 AM",
       "arrival_time": "3:55 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Medinipur",
       "route": "Medinipur - Ghatal",
       "stoppages": [
@@ -456618,7 +456618,7 @@
       "destination": "Ghatal",
       "departure_time": "6:50 AM",
       "arrival_time": "10:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bishnupur",
       "route": "Bishnupur - Ghatal",
       "stoppages": [
@@ -456750,7 +456750,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "7:40 AM",
       "arrival_time": "9:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9609225108",
       "depot_name": "Moynapur",
       "route": "Moynapur - Kolkata (Esplanade)",
       "stoppages": [
@@ -456818,7 +456818,7 @@
       "destination": "Karunamoyee",
       "departure_time": "6:40 AM",
       "arrival_time": "8:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Mangrul",
       "route": "Mangrul - Karunamoyee",
       "stoppages": [
@@ -456852,7 +456852,7 @@
       "destination": "Bardhaman",
       "departure_time": "5:50 AM",
       "arrival_time": "11:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9732294504",
       "depot_name": "Purulia",
       "route": "Purulia - Bardhaman",
       "stoppages": [
@@ -456972,7 +456972,7 @@
       "destination": "Digha",
       "departure_time": "4:40 AM",
       "arrival_time": "9:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9062327676",
       "depot_name": "Kalyani",
       "route": "Kalyani - Digha",
       "stoppages": [
@@ -457006,7 +457006,7 @@
       "destination": "Krishnanagar",
       "departure_time": "8:05 AM",
       "arrival_time": "11:20 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Karimpur",
       "route": "Karimpur - Krishnanagar",
       "stoppages": [
@@ -457166,7 +457166,7 @@
       "destination": "Howrah",
       "departure_time": "3:45 AM",
       "arrival_time": "8:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9975030165",
       "depot_name": "Fulkusma",
       "route": "Fulkusma - Howrah",
       "stoppages": [
@@ -457200,7 +457200,7 @@
       "destination": "Howrah",
       "departure_time": "6:50 AM",
       "arrival_time": "11:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9734405853",
       "depot_name": "Garhbeta",
       "route": "Garhbeta - Howrah",
       "stoppages": [
@@ -457305,7 +457305,7 @@
       "destination": "Bolpur",
       "departure_time": "4:55 AM",
       "arrival_time": "9:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bajitpur",
       "route": "Bajitpur - Bolpur",
       "stoppages": [
@@ -457417,7 +457417,7 @@
       "destination": "Digha",
       "departure_time": "6:50 PM",
       "arrival_time": "3:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9679212489",
       "depot_name": "Baharampur",
       "route": "Baharampur - Digha",
       "stoppages": [
@@ -457526,7 +457526,7 @@
       "destination": "Bardhaman",
       "departure_time": "3:40 AM",
       "arrival_time": "8:10 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9015787124",
       "depot_name": "Suri",
       "route": "Suri - Bardhaman",
       "stoppages": [
@@ -457626,7 +457626,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "5:10 AM",
       "arrival_time": "9:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Digha",
       "route": "Digha - Kolkata (Esplanade)",
       "stoppages": [
@@ -457758,7 +457758,7 @@
       "destination": "Kukrahati",
       "departure_time": "6:10 AM",
       "arrival_time": "12:30 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "7477301930",
       "depot_name": "Brahmandiha",
       "route": "Brahmandiha - Kukrahati",
       "stoppages": [
@@ -457922,7 +457922,7 @@
       "destination": "Tarkeshwar",
       "departure_time": "4:30 AM",
       "arrival_time": "7:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9732961021",
       "depot_name": "Pratap Dighi",
       "route": "Pratap Dighi - Tarkeshwar",
       "stoppages": [
@@ -457956,7 +457956,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "3:20 AM",
       "arrival_time": "7:35 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8972445959",
       "depot_name": "Lakshmisagar",
       "route": "Lakshmisagar - Kolkata (Esplanade)",
       "stoppages": [
@@ -457990,7 +457990,7 @@
       "destination": "Howrah",
       "departure_time": "4:50 AM",
       "arrival_time": "9:50 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Goaltore",
       "route": "Goaltore - Howrah",
       "stoppages": [
@@ -458242,7 +458242,7 @@
       "destination": "Durgapur (City Center)",
       "departure_time": "12:05 AM",
       "arrival_time": "8:35 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Haldia",
       "route": "Haldia - Durgapur (City Center)",
       "stoppages": [
@@ -458405,7 +458405,7 @@
       "destination": "Bardhaman",
       "departure_time": "7:25 AM",
       "arrival_time": "2:20 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Jhargram",
       "route": "Jhargram - Bardhaman",
       "stoppages": [
@@ -458594,7 +458594,7 @@
       "destination": "Howrah",
       "departure_time": "8:50 AM",
       "arrival_time": "11:40 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8337803395",
       "depot_name": "Ramjibanpur",
       "route": "Ramjibanpur - Howrah",
       "stoppages": [
@@ -458628,7 +458628,7 @@
       "destination": "Bardhaman",
       "departure_time": "9:20 AM",
       "arrival_time": "1:30 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "9382309727",
       "depot_name": "Bankura",
       "route": "Bankura - Bardhaman",
       "stoppages": [
@@ -458708,7 +458708,7 @@
       "destination": "Pirakata",
       "departure_time": "5:45 AM",
       "arrival_time": "3:20 PM",
-      "contact_number": "Not Available !",
+      "contact_number": "9382309727",
       "depot_name": "Rasulpur",
       "route": "Rasulpur - Pirakata",
       "stoppages": [
@@ -458742,7 +458742,7 @@
       "destination": "Manbazar",
       "departure_time": "6:25 AM",
       "arrival_time": "11:00 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bardhaman",
       "route": "Bardhaman - Manbazar",
       "stoppages": [
@@ -459079,7 +459079,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "8:30 PM",
       "arrival_time": "1:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8653102810",
       "depot_name": "Kenjakura",
       "route": "Kenjakura - Kolkata (Esplanade)",
       "stoppages": [
@@ -459181,7 +459181,7 @@
       "destination": "Kolkata (Esplanade)",
       "departure_time": "4:40 AM",
       "arrival_time": "9:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9531759386",
       "depot_name": "Haludkanali",
       "route": "Haludkanali - Kolkata (Esplanade)",
       "stoppages": [
@@ -459320,7 +459320,7 @@
       "destination": "Belpahari",
       "departure_time": "6:40 AM",
       "arrival_time": "11:15 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Chandrakona Road",
       "route": "Chandrakona Road - Belpahari",
       "stoppages": [
@@ -459352,7 +459352,7 @@
       "destination": "Gopiballabpur",
       "departure_time": "6:15 AM",
       "arrival_time": "11:45 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "+919679963388",
       "depot_name": "Bishnupur",
       "route": "Bishnupur - Gopiballabpur",
       "stoppages": [
@@ -459450,7 +459450,7 @@
       "destination": "Medinipur",
       "departure_time": "9:30 AM",
       "arrival_time": "11:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9800033633",
       "depot_name": "Kankrajhore",
       "route": "Kankrajhore - Medinipur",
       "stoppages": [
@@ -459518,7 +459518,7 @@
       "destination": "Dhumsai",
       "departure_time": "3:10 AM",
       "arrival_time": "6:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "9091769152",
       "depot_name": "Haldia",
       "route": "Haldia - Dhumsai",
       "stoppages": [
@@ -459552,7 +459552,7 @@
       "destination": "Karunamoyee",
       "departure_time": "3:35 AM",
       "arrival_time": "9:25 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "8145950373",
       "depot_name": "Egra",
       "route": "Egra - Karunamoyee",
       "stoppages": [
@@ -459894,7 +459894,7 @@
       "destination": "Medinipur",
       "departure_time": "8:00 AM",
       "arrival_time": "10:30 AM",
-      "contact_number": "Not Available !",
+      "contact_number": "7001390087",
       "depot_name": "Jaleswar",
       "route": "Jaleswar - Medinipur",
       "stoppages": [
@@ -533311,6 +533311,2437 @@
       "total_stoppages": 16,
       "detail_url": "",
       "service_note": "Shiv Shakti interstate service, restarted after a long gap. Tata Marcopolo Ultra BS-III. Departs from Tata Mango Bus Stand Gate 5."
+    },
+    {
+      "id": "bussathi-164",
+      "bus_name": "BHOLE BABA",
+      "reg_no": "WB67A1382",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Jagardanga",
+      "destination": "Bankura",
+      "departure_time": "4:20 AM",
+      "arrival_time": "5:30 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Jagardanga",
+      "route": "Jagardanga - Bankura",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Jagardanga",
+          "up_time": "4:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Mayta",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Amlagora",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Garhbeta",
+          "up_time": "6:00 AM",
+          "down_time": "4:00 PM"
+        },
+        {
+          "no": 5,
+          "name": "Dhadika",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 6,
+          "name": "Sabrakon",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Panchmura",
+          "up_time": "7:30 AM",
+          "down_time": "2:00 PM"
+        },
+        {
+          "no": 8,
+          "name": "Taldangra",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Dhaldanga",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Bankura",
+          "up_time": "",
+          "down_time": "12:20 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 10,
+      "detail_url": "https://bussathi.in/bus/164"
+    },
+    {
+      "id": "bussathi-166",
+      "bus_name": "BHOLE BABA",
+      "reg_no": "WB33B0197",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Simlapal",
+      "destination": "Medinipur",
+      "departure_time": "6:10 AM",
+      "arrival_time": "7:27 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Simlapal",
+      "route": "Simlapal - Medinipur",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Simlapal",
+          "up_time": "6:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bhutsahar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Hoomgarh",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Amlagora",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Garhbeta",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 6,
+          "name": "Kiaboni",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Chandrakona Road",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Salboni",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Godapiasal",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Bhadutala",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Medinipur",
+          "up_time": "",
+          "down_time": "12:05 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 11,
+      "detail_url": "https://bussathi.in/bus/166"
+    },
+    {
+      "id": "bussathi-176",
+      "bus_name": "BISWA BINA",
+      "reg_no": "WB29B0844",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Kolkata",
+      "destination": "Chandrakona Road",
+      "departure_time": "5:00 AM",
+      "arrival_time": "7:48 AM",
+      "contact_number": "9748054982",
+      "depot_name": "Kolkata",
+      "route": "Kolkata - Chandrakona Road",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kolkata",
+          "up_time": "5:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Shyambazar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Dunlop",
+          "up_time": "5:25 AM",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Dakshineswar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Bally",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 6,
+          "name": "Salap",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Kona Express More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Dhulagarh",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Uluberia",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Bagnan",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Kolaghat",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 12,
+          "name": "Mechogram",
+          "up_time": "7:05 AM",
+          "down_time": "1:45 PM"
+        },
+        {
+          "no": 13,
+          "name": "Keshapat",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 14,
+          "name": "Khukur Daha",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 15,
+          "name": "Goura",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 16,
+          "name": "Sultannagar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 17,
+          "name": "Daspur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 18,
+          "name": "Ghatal",
+          "up_time": "8:10 AM",
+          "down_time": "12:45 PM"
+        },
+        {
+          "no": 19,
+          "name": "Baroda Chowkan",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 20,
+          "name": "Radhanagar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 21,
+          "name": "Khirpai",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 22,
+          "name": "Kalikapur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 23,
+          "name": "Chandrakona Town",
+          "up_time": "9:10 AM",
+          "down_time": "11:45 AM"
+        },
+        {
+          "no": 24,
+          "name": "Chandrakona Road",
+          "up_time": "",
+          "down_time": "11:00 AM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 24,
+      "detail_url": "https://bussathi.in/bus/176"
+    },
+    {
+      "id": "bussathi-169",
+      "bus_name": "BIJAYA",
+      "reg_no": "WB41C8661",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Chandrakona Road",
+      "destination": "Tamajuri",
+      "departure_time": "4:50 AM",
+      "arrival_time": "6:21 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Chandrakona Road",
+      "route": "Chandrakona Road - Tamajuri",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Chandrakona Road",
+          "up_time": "4:50 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Salboni",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Godapiasal",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Bhadutala",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Medinipur",
+          "up_time": "6:30 AM",
+          "down_time": "6:30 PM"
+        },
+        {
+          "no": 6,
+          "name": "Kharagpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Lodhasuli",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Jhargram",
+          "up_time": "8:55 AM",
+          "down_time": "3:30 PM"
+        },
+        {
+          "no": 9,
+          "name": "Dahijuri",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Parihati",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Silda",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 12,
+          "name": "Belpahari",
+          "up_time": "10:15 AM",
+          "down_time": "1:50 PM"
+        },
+        {
+          "no": 13,
+          "name": "Tamajuri",
+          "up_time": "",
+          "down_time": "12:50 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 13,
+      "detail_url": "https://bussathi.in/bus/169"
+    },
+    {
+      "id": "bussathi-267",
+      "bus_name": "DISHA",
+      "reg_no": "WB33F2716",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Haldia",
+      "destination": "Medinipur",
+      "departure_time": "6:00 AM",
+      "arrival_time": "7:17 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Haldia",
+      "route": "Haldia - Medinipur",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Haldia",
+          "up_time": "6:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Durgachak",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Mahishadal",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Nandakumar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Tamluk",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 6,
+          "name": "Mecheda",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Mechogram",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Panskura",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Debra",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Madpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Medinipur",
+          "up_time": "",
+          "down_time": "11:40 AM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 11,
+      "detail_url": "https://bussathi.in/bus/267"
+    },
+    {
+      "id": "bussathi-410",
+      "bus_name": "K.G.N.",
+      "reg_no": "WB31B5551",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Howrah",
+      "destination": "Egra",
+      "departure_time": "5:05 AM",
+      "arrival_time": "6:57 AM",
+      "contact_number": "7047464018",
+      "depot_name": "Howrah",
+      "route": "Howrah - Egra",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Howrah",
+          "up_time": "5:05 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Santragachi",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Kona Express More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Dhulagarh",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Uluberia",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 6,
+          "name": "Bagnan",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Kolaghat",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Mecheda",
+          "up_time": "6:40 AM",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Nimtouri",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Nandakumar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Chandipur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 12,
+          "name": "Bajkul",
+          "up_time": "8:00 AM",
+          "down_time": "2:05 PM"
+        },
+        {
+          "no": 13,
+          "name": "Bhagabanpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 14,
+          "name": "Manglamaro",
+          "up_time": "",
+          "down_time": "1:10 PM"
+        },
+        {
+          "no": 15,
+          "name": "Patashpur",
+          "up_time": "",
+          "down_time": "12:45 PM"
+        },
+        {
+          "no": 16,
+          "name": "Egra",
+          "up_time": "",
+          "down_time": "12:10 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 16,
+      "detail_url": "https://bussathi.in/bus/410"
+    },
+    {
+      "id": "bussathi-427",
+      "bus_name": "KALPANA",
+      "reg_no": "WB67B9078",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bankura",
+      "destination": "Tarkeshwar",
+      "departure_time": "8:10 AM",
+      "arrival_time": "9:41 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bankura",
+      "route": "Bankura - Tarkeshwar",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bankura",
+          "up_time": "8:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Dhaldanga",
+          "up_time": "8:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Onda",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 4,
+          "name": "Ramsagar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Bishnupur",
+          "up_time": "9:30 AM",
+          "down_time": "4:35 PM"
+        },
+        {
+          "no": 6,
+          "name": "Joypur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Kotulpur",
+          "up_time": "10:35 AM",
+          "down_time": "3:30 PM"
+        },
+        {
+          "no": 8,
+          "name": "Khatul",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Bengai",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Arambagh",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Mayapur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 12,
+          "name": "Champadanga",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 13,
+          "name": "Tarkeshwar",
+          "up_time": "",
+          "down_time": "1:35 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 13,
+      "detail_url": "https://bussathi.in/bus/427"
+    },
+    {
+      "id": "bussathi-1030",
+      "bus_name": "SHIBAM",
+      "reg_no": "WB678424",
+      "operator": "SHIBAM TRAVELS",
+      "bus_type": "Private - NON AC",
+      "origin": "Bhutsahar",
+      "destination": "Bankura",
+      "departure_time": "7:10 AM",
+      "arrival_time": "8:06 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bhutsahar",
+      "route": "Bhutsahar - Bankura",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bhutsahar",
+          "up_time": "7:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Simlapal",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Lakshmisagar",
+          "up_time": "8:35 AM",
+          "down_time": "3:15 PM"
+        },
+        {
+          "no": 4,
+          "name": "Harmasra",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Bibarda",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 6,
+          "name": "Ratanpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 7,
+          "name": "Dhaldanga",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Bankura",
+          "up_time": "",
+          "down_time": "1:40 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 8,
+      "detail_url": "https://bussathi.in/bus/1030"
+    },
+    {
+      "id": "bussathi-1172",
+      "bus_name": "TARA MAA",
+      "reg_no": "WB67C1342",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Khatra",
+      "destination": "Arambagh",
+      "departure_time": "5:05 AM",
+      "arrival_time": "7:04 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Khatra",
+      "route": "Khatra - Arambagh",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Khatra",
+          "up_time": "5:05 AM",
+          "down_time": "4:50 PM"
+        },
+        {
+          "no": 2,
+          "name": "Arkama",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Harmasra",
+          "up_time": "5:50 AM",
+          "down_time": "4:05 PM"
+        },
+        {
+          "no": 4,
+          "name": "Bibarda",
+          "up_time": "6:00 AM",
+          "down_time": "3:55 PM"
+        },
+        {
+          "no": 5,
+          "name": "Taldangra",
+          "up_time": "6:20 AM",
+          "down_time": "3:30 PM"
+        },
+        {
+          "no": 6,
+          "name": "Panchmura",
+          "up_time": "6:40 AM",
+          "down_time": "3:15 PM"
+        },
+        {
+          "no": 7,
+          "name": "Sabrakon",
+          "up_time": "",
+          "down_time": "3:05 PM"
+        },
+        {
+          "no": 8,
+          "name": "Piardoba",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Bishnupur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 10,
+          "name": "Bankadaha",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Ramdiha",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 12,
+          "name": "Baital",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 13,
+          "name": "Gopinathpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 14,
+          "name": "Jayrambati",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 15,
+          "name": "Kamarpukur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 16,
+          "name": "Goghat",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 17,
+          "name": "Arambagh",
+          "up_time": "",
+          "down_time": "11:15 AM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 17,
+      "detail_url": "https://bussathi.in/bus/1172"
+    },
+    {
+      "id": "bussathi-1231",
+      "bus_name": "WESTERN DIAMOND",
+      "reg_no": "WB33D3897",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Ramgarh",
+      "destination": "Medinipur",
+      "departure_time": "5:15 AM",
+      "arrival_time": "7:00 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Ramgarh",
+      "route": "Ramgarh - Medinipur",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Ramgarh",
+          "up_time": "5:15 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Debagram",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 3,
+          "name": "Sarenga",
+          "up_time": "6:15 AM",
+          "down_time": "4:50 PM"
+        },
+        {
+          "no": 4,
+          "name": "Patharpara",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 5,
+          "name": "Amlasuli",
+          "up_time": "7:30 AM",
+          "down_time": "3:35 PM"
+        },
+        {
+          "no": 6,
+          "name": "Hoomgarh",
+          "up_time": "7:45 AM",
+          "down_time": "3:20 PM"
+        },
+        {
+          "no": 7,
+          "name": "Radhanagar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 8,
+          "name": "Amlagora",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 9,
+          "name": "Garhbeta",
+          "up_time": "8:35 AM",
+          "down_time": "2:30 PM"
+        },
+        {
+          "no": 10,
+          "name": "Kiaboni",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 11,
+          "name": "Chandrakona Road",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 12,
+          "name": "Salboni",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 13,
+          "name": "Godapiasal",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 14,
+          "name": "Bhadutala",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 15,
+          "name": "Medinipur",
+          "up_time": "",
+          "down_time": "12:20 PM"
+        }
+      ],
+      "source": "bussathi.in",
+      "total_stoppages": 15,
+      "detail_url": "https://bussathi.in/bus/1231"
+    },
+    {
+      "id": "bussathi-1349",
+      "bus_name": "SHIBANI BIJOY",
+      "reg_no": "WB41K2908",
+      "operator": "—",
+      "bus_type": "—",
+      "origin": "Garamba",
+      "destination": "Bardhaman",
+      "departure_time": "7:20 AM",
+      "arrival_time": "",
+      "contact_number": "+919679963388",
+      "depot_name": "—",
+      "route": "Garamba - Bardhaman",
+      "stoppages": [],
+      "source": "bussathi.in",
+      "total_stoppages": 0,
+      "detail_url": "https://bussathi.in/bus/1349"
+    },
+    {
+      "id": "wbbus-in-baba-bhootnath-pratap-dighi-howrah-4921",
+      "bus_name": "BABA BHOOTNATH",
+      "reg_no": "WB318896",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Pratap Dighi",
+      "destination": "Howrah",
+      "departure_time": "7:15 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Pratap Dighi",
+      "route": "Pratap Dighi - Howrah",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Pratap Dighi",
+          "up_time": "7:15 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Howrah",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/baba-bhootnath-wb318896-pratap-dighi-howrah-1443"
+    },
+    {
+      "id": "wbbus-in-bhabani-travels-digha-durgapur-city-center-4922",
+      "bus_name": "BHABANI TRAVELS",
+      "reg_no": "WB33P9836",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Digha",
+      "destination": "Durgapur (City Center)",
+      "departure_time": "12:10 AM",
+      "arrival_time": "9:20 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Digha",
+      "route": "Digha - Durgapur (City Center)",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Digha",
+          "up_time": "12:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Durgapur (City Center)",
+          "up_time": "9:20 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/bhabani-travels-wb33p9836-digha-durgapur-%28city-center%29-1457"
+    },
+    {
+      "id": "wbbus-in-bijoy-krishna-benachity-kalna-4923",
+      "bus_name": "BIJOY KRISHNA",
+      "reg_no": "WB41D5755",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Benachity",
+      "destination": "Kalna",
+      "departure_time": "5:20 AM",
+      "arrival_time": "9:40 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Benachity",
+      "route": "Benachity - Kalna",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Benachity",
+          "up_time": "5:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Kalna",
+          "up_time": "9:40 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/bijoy-krishna-wb41d5755-benachity-kalna-1400"
+    },
+    {
+      "id": "wbbus-in-changdar-karunamoyee-goaltore-4924",
+      "bus_name": "CHANGDAR",
+      "reg_no": "WB50AC2796",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Karunamoyee",
+      "destination": "Goaltore",
+      "departure_time": "6:30 AM",
+      "arrival_time": "12:00 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Karunamoyee",
+      "route": "Karunamoyee - Goaltore",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Karunamoyee",
+          "up_time": "6:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Goaltore",
+          "up_time": "12:00 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/changdar-wb50ac2796-karunamoyee-goaltore-1429"
+    },
+    {
+      "id": "wbbus-in-city-2021-sonia-bardhaman-asansol-4925",
+      "bus_name": "CITY 2021 SONIA",
+      "reg_no": "WB41J8444",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bardhaman",
+      "destination": "Asansol",
+      "departure_time": "11:05 AM",
+      "arrival_time": "1:30 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bardhaman",
+      "route": "Bardhaman - Asansol",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bardhaman",
+          "up_time": "11:05 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Asansol",
+          "up_time": "1:30 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/city-2021-sonia-wb41j8444-bardhaman-asansol-1448"
+    },
+    {
+      "id": "wbbus-in-datababa-bandar-kolkata-4926",
+      "bus_name": "DATABABA",
+      "reg_no": "WB15B9986",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bandar",
+      "destination": "Kolkata",
+      "departure_time": "6:40 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Bandar",
+      "route": "Bandar - Kolkata",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bandar",
+          "up_time": "6:40 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Kolkata",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/datababa-wb15b9986-bandar-kolkata-1476"
+    },
+    {
+      "id": "wbbus-in-gangaram-digha-lalgarh-4927",
+      "bus_name": "GANGARAM",
+      "reg_no": "WB33P7888",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Digha",
+      "destination": "Lalgarh",
+      "departure_time": "6:15 AM",
+      "arrival_time": "11:10 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Digha",
+      "route": "Digha - Lalgarh",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Digha",
+          "up_time": "6:15 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Lalgarh",
+          "up_time": "11:10 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/gangaram-wb33p7888-digha-lalgarh-1427"
+    },
+    {
+      "id": "wbbus-in-gopinath-krishnanagar-bardhaman-4928",
+      "bus_name": "GOPINATH",
+      "reg_no": "WB51A4793",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Krishnanagar",
+      "destination": "Bardhaman",
+      "departure_time": "6:30 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Krishnanagar",
+      "route": "Krishnanagar - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Krishnanagar",
+          "up_time": "6:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/gopinath-wb51a4793-krishnanagar-bardhaman-1434"
+    },
+    {
+      "id": "wbbus-in-jai-mata-di-kharagpur-tatanagar-4929",
+      "bus_name": "JAI MATA DI",
+      "reg_no": "WB494711",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Kharagpur",
+      "destination": "Tatanagar",
+      "departure_time": "5:45 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Kharagpur",
+      "route": "Kharagpur - Tatanagar",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kharagpur",
+          "up_time": "5:45 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Tatanagar",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/jai-mata-di-wb494711-kharagpur-tatanagar-1461"
+    },
+    {
+      "id": "wbbus-in-jinia-digha-asansol-4930",
+      "bus_name": "JINIA",
+      "reg_no": "WB37H9318",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Digha",
+      "destination": "Asansol",
+      "departure_time": "8:10 AM",
+      "arrival_time": "6:20 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Digha",
+      "route": "Digha - Asansol",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Digha",
+          "up_time": "8:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Asansol",
+          "up_time": "6:20 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/jinia-wb37h9318-digha-asansol-1465"
+    },
+    {
+      "id": "wbbus-in-joy-maa-kali-bardhaman-asansol-4931",
+      "bus_name": "JOY MAA KALI",
+      "reg_no": "WB37D2252",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bardhaman",
+      "destination": "Asansol",
+      "departure_time": "11:20 AM",
+      "arrival_time": "2:00 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bardhaman",
+      "route": "Bardhaman - Asansol",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bardhaman",
+          "up_time": "11:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Asansol",
+          "up_time": "2:00 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/joy-maa-kali-wb37d2252-bardhaman-asansol-1432"
+    },
+    {
+      "id": "wbbus-in-kedarnath-kotulpur-kolkata-esplanade-4932",
+      "bus_name": "KEDARNATH",
+      "reg_no": "WB67F3637",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Kotulpur",
+      "destination": "Kolkata (Esplanade)",
+      "departure_time": "4:25 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Kotulpur",
+      "route": "Kotulpur - Kolkata (Esplanade)",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kotulpur",
+          "up_time": "4:25 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Kolkata (Esplanade)",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/kedarnath-wb67f3637-kotulpur-kolkata-esplanade-1442"
+    },
+    {
+      "id": "wbbus-in-maa-kamala-medinipur-haldia-4933",
+      "bus_name": "MAA KAMALA",
+      "reg_no": "WB19K2200",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Medinipur",
+      "destination": "Haldia",
+      "departure_time": "8:50 AM",
+      "arrival_time": "1:15 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Medinipur",
+      "route": "Medinipur - Haldia",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Medinipur",
+          "up_time": "8:50 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Haldia",
+          "up_time": "1:15 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/maa-kamala-wb19k2200-medinipur-haldia-1463"
+    },
+    {
+      "id": "wbbus-in-maa-ratanti-guskara-benachity-4934",
+      "bus_name": "MAA RATANTI",
+      "reg_no": "WB41J6225",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Guskara",
+      "destination": "Benachity",
+      "departure_time": "5:00 AM",
+      "arrival_time": "7:20 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Guskara",
+      "route": "Guskara - Benachity",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Guskara",
+          "up_time": "5:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Benachity",
+          "up_time": "7:20 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/maa-ratanti-wb41j6225-guskara-benachity-1440"
+    },
+    {
+      "id": "wbbus-in-monami-jhargram-manbazar-4935",
+      "bus_name": "MONAMI",
+      "reg_no": "WB39F2442",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Jhargram",
+      "destination": "Manbazar",
+      "departure_time": "5:15 AM",
+      "arrival_time": "9:30 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Jhargram",
+      "route": "Jhargram - Manbazar",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Jhargram",
+          "up_time": "5:15 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Manbazar",
+          "up_time": "9:30 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/monami-wb39f2442-jhargram-manbazar-831"
+    },
+    {
+      "id": "wbbus-in-mousumi-jamalpur-kolkata-esplanade-4936",
+      "bus_name": "MOUSUMI",
+      "reg_no": "WB75F5765",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Jamalpur",
+      "destination": "Kolkata (Esplanade)",
+      "departure_time": "5:20 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Jamalpur",
+      "route": "Jamalpur - Kolkata (Esplanade)",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Jamalpur",
+          "up_time": "5:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Kolkata (Esplanade)",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/mousumi-wb75f5765-jamalpur-kolkata-esplanade-1455"
+    },
+    {
+      "id": "wbbus-in-mukherjee-fulkusma-bankura-4937",
+      "bus_name": "MUKHERJEE",
+      "reg_no": "WB67J6999",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Fulkusma",
+      "destination": "Bankura",
+      "departure_time": "4:50 AM",
+      "arrival_time": "7:30 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Fulkusma",
+      "route": "Fulkusma - Bankura",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Fulkusma",
+          "up_time": "4:50 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bankura",
+          "up_time": "7:30 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/mukherjee-wb67j6999-fulkusma-bankura-1285"
+    },
+    {
+      "id": "wbbus-in-nisat-travels-belpahari-durgapur-station-4938",
+      "bus_name": "NISAT TRAVELS",
+      "reg_no": "WB67D7713",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Belpahari",
+      "destination": "Durgapur (Station)",
+      "departure_time": "6:00 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Belpahari",
+      "route": "Belpahari - Durgapur (Station)",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Belpahari",
+          "up_time": "6:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Durgapur (Station)",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/nisat-travels-wb67d7713-belpahari-durgapur-station-1469"
+    },
+    {
+      "id": "wbbus-in-nityananda-asansol-rampurhat-4939",
+      "bus_name": "NITYANANDA",
+      "reg_no": "WB37D6099",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Asansol",
+      "destination": "Rampurhat",
+      "departure_time": "5:35 AM",
+      "arrival_time": "9:55 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Asansol",
+      "route": "Asansol - Rampurhat",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Asansol",
+          "up_time": "5:35 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Rampurhat",
+          "up_time": "9:55 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/nityananda-wb37d6099-asansol-rampurhat-1437"
+    },
+    {
+      "id": "wbbus-in-pally-duth-rasulpur-karunamoyee-4940",
+      "bus_name": "PALLY DUTH",
+      "reg_no": "WB50AB0531",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Rasulpur",
+      "destination": "Karunamoyee",
+      "departure_time": "5:30 AM",
+      "arrival_time": "9:50 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Rasulpur",
+      "route": "Rasulpur - Karunamoyee",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Rasulpur",
+          "up_time": "5:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Karunamoyee",
+          "up_time": "9:50 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/pallyduth-wb41k2522-rasulpur-karunamoyee-170"
+    },
+    {
+      "id": "wbbus-in-parama-bardhaman-bankura-4941",
+      "bus_name": "PARAMA",
+      "reg_no": "WB67B3858",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bardhaman",
+      "destination": "Bankura",
+      "departure_time": "8:30 AM",
+      "arrival_time": "12:30 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bardhaman",
+      "route": "Bardhaman - Bankura",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bardhaman",
+          "up_time": "8:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bankura",
+          "up_time": "12:30 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/parama-wb67b3858-bardhaman-bankura-1464"
+    },
+    {
+      "id": "wbbus-in-pather-sathi-panskura-bardhaman-4942",
+      "bus_name": "PATHER SATHI",
+      "reg_no": "WB41S5372",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Panskura",
+      "destination": "Bardhaman",
+      "departure_time": "4:40 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Panskura",
+      "route": "Panskura - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Panskura",
+          "up_time": "4:40 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/pather-sathi-wb41s5372-panskura-bardhaman-1473"
+    },
+    {
+      "id": "wbbus-in-radha-madhab-natunhat-bardhaman-4943",
+      "bus_name": "RADHA MADHAB",
+      "reg_no": "WB415224",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Natunhat",
+      "destination": "Bardhaman",
+      "departure_time": "4:40 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Natunhat",
+      "route": "Natunhat - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Natunhat",
+          "up_time": "4:40 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/radha-madhab-wb415224-natunhat-bardhaman-1466"
+    },
+    {
+      "id": "wbbus-in-raima-bardhaman-panskura-4944",
+      "bus_name": "RAIMA",
+      "reg_no": "WB41G9385",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bardhaman",
+      "destination": "Panskura",
+      "departure_time": "7:00 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Bardhaman",
+      "route": "Bardhaman - Panskura",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bardhaman",
+          "up_time": "7:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Panskura",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/raima-wb41g9385-bardhaman-panskura-1460"
+    },
+    {
+      "id": "wbbus-in-rajput-bardhaman-bolpur-4945",
+      "bus_name": "RAJPUT",
+      "reg_no": "WB372771",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bardhaman",
+      "destination": "Bolpur",
+      "departure_time": "7:15 AM",
+      "arrival_time": "11:10 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bardhaman",
+      "route": "Bardhaman - Bolpur",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bardhaman",
+          "up_time": "7:15 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bolpur",
+          "up_time": "11:10 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/rajput-wb372771-bardhaman-bolpur-1470"
+    },
+    {
+      "id": "wbbus-in-ramkrishna-mecheda-bardhaman-4946",
+      "bus_name": "RAMKRISHNA",
+      "reg_no": "WB50AC6680",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Mecheda",
+      "destination": "Bardhaman",
+      "departure_time": "3:20 AM",
+      "arrival_time": "7:50 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Mecheda",
+      "route": "Mecheda - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Mecheda",
+          "up_time": "3:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "7:50 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/ramkrishna-wb50ac6680-mecheda-bardhaman-1475"
+    },
+    {
+      "id": "wbbus-in-rcg-travels-kolkata-esplanade-baligeria-4947",
+      "bus_name": "RCG TRAVELS",
+      "reg_no": "8637561616",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Kolkata (Esplanade)",
+      "destination": "Baligeria",
+      "departure_time": "6:30 AM",
+      "arrival_time": "10:35 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Kolkata (Esplanade)",
+      "route": "Kolkata (Esplanade) - Baligeria",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kolkata (Esplanade)",
+          "up_time": "6:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Baligeria",
+          "up_time": "10:35 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/rcg-travels-8637561616-kolkata-esplanade-baligeria-1447"
+    },
+    {
+      "id": "wbbus-in-sagar-raskundu-medinipur-4948",
+      "bus_name": "SAGAR",
+      "reg_no": "WB33D9722",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Raskundu",
+      "destination": "Medinipur",
+      "departure_time": "4:30 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Raskundu",
+      "route": "Raskundu - Medinipur",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Raskundu",
+          "up_time": "4:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Medinipur",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sagar-wb33d9722-raskundu-medinipur-1451"
+    },
+    {
+      "id": "wbbus-in-sahin-guskara-benachity-4949",
+      "bus_name": "SAHIN",
+      "reg_no": "WB41G6350",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Guskara",
+      "destination": "Benachity",
+      "departure_time": "4:10 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Guskara",
+      "route": "Guskara - Benachity",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Guskara",
+          "up_time": "4:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Benachity",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sahin-wb41g6350-guskara-benachity-1421"
+    },
+    {
+      "id": "wbbus-in-sahin-kalyani-asansol-4950",
+      "bus_name": "SAHIN",
+      "reg_no": "WB41H3268",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Kalyani",
+      "destination": "Asansol",
+      "departure_time": "5:20 AM",
+      "arrival_time": "10:15 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Kalyani",
+      "route": "Kalyani - Asansol",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kalyani",
+          "up_time": "5:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Asansol",
+          "up_time": "10:15 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sahin-wb41h3268-kalyani-asansol-1433"
+    },
+    {
+      "id": "wbbus-in-sathi-bankura-bardhaman-4951",
+      "bus_name": "SATHI",
+      "reg_no": "WB67A8227",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bankura",
+      "destination": "Bardhaman",
+      "departure_time": "8:40 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Bankura",
+      "route": "Bankura - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bankura",
+          "up_time": "8:40 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sathi-wb67a8227-bankura-bardhaman-1468"
+    },
+    {
+      "id": "wbbus-in-sayan-baharampur-bardhaman-4952",
+      "bus_name": "SAYAN",
+      "reg_no": "WB379381",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Baharampur",
+      "destination": "Bardhaman",
+      "departure_time": "",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Baharampur",
+      "route": "Baharampur - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Baharampur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sayan-wb379381-baharampur-bardhaman-1449"
+    },
+    {
+      "id": "wbbus-in-sbstc-bankura-chittaranjan-4953",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Bankura",
+      "destination": "Chittaranjan",
+      "departure_time": "6:20 AM",
+      "arrival_time": "10:30 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bankura",
+      "route": "Bankura - Chittaranjan",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bankura",
+          "up_time": "6:20 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Chittaranjan",
+          "up_time": "10:30 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc-bankura-chittaranjan-72"
+    },
+    {
+      "id": "wbbus-in-sbstc-jhargram-durgapur-station-4954",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Jhargram",
+      "destination": "Durgapur (Station)",
+      "departure_time": "5:50 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Jhargram",
+      "route": "Jhargram - Durgapur (Station)",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Jhargram",
+          "up_time": "5:50 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Durgapur (Station)",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc-jhargram-durgapur-station-249"
+    },
+    {
+      "id": "wbbus-in-sbstc-purulia-kolkata-esplanade-4955",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Purulia",
+      "destination": "Kolkata (Esplanade)",
+      "departure_time": "6:30 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Purulia",
+      "route": "Purulia - Kolkata (Esplanade)",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Purulia",
+          "up_time": "6:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Kolkata (Esplanade)",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc-vadu-express-purulia-kolkata-esplaned-517"
+    },
+    {
+      "id": "wbbus-in-sbstc-durgapur-city-center-tatanagar-4956",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Durgapur (City Center)",
+      "destination": "Tatanagar",
+      "departure_time": "6:00 AM",
+      "arrival_time": "12:50 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Durgapur (City Center)",
+      "route": "Durgapur (City Center) - Tatanagar",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Durgapur (City Center)",
+          "up_time": "6:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Tatanagar",
+          "up_time": "12:50 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc--durgapur-city-center-tatanagar-598"
+    },
+    {
+      "id": "wbbus-in-sbstc-kharagpur-manbazar-4957",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Kharagpur",
+      "destination": "Manbazar",
+      "departure_time": "6:00 AM",
+      "arrival_time": "11:50 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Kharagpur",
+      "route": "Kharagpur - Manbazar",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kharagpur",
+          "up_time": "6:00 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Manbazar",
+          "up_time": "11:50 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc-kharagpur-manbazar-817"
+    },
+    {
+      "id": "wbbus-in-sbstc-durgapur-city-center-purulia-4958",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Durgapur (City Center)",
+      "destination": "Purulia",
+      "departure_time": "6:30 AM",
+      "arrival_time": "10:30 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Durgapur (City Center)",
+      "route": "Durgapur (City Center) - Purulia",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Durgapur (City Center)",
+          "up_time": "6:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Purulia",
+          "up_time": "10:30 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc-durgapur-city-center-purulia-1010"
+    },
+    {
+      "id": "wbbus-in-sbstc-purulia-ajodhya-hills-4959",
+      "bus_name": "SBSTC",
+      "reg_no": "",
+      "operator": "SBSTC",
+      "bus_type": "Government - SBSTC",
+      "origin": "Purulia",
+      "destination": "Ajodhya Hills",
+      "departure_time": "1:30 PM",
+      "arrival_time": "3:30 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Purulia",
+      "route": "Purulia - Ajodhya Hills",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Purulia",
+          "up_time": "1:30 PM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Ajodhya Hills",
+          "up_time": "3:30 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sbstc-purulia-ajodhya-hills-1110"
+    },
+    {
+      "id": "wbbus-in-six-r-beldanga-bardhaman-4960",
+      "bus_name": "SIX-R",
+      "reg_no": "WB04H3524",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Beldanga",
+      "destination": "Bardhaman",
+      "departure_time": "6:55 AM",
+      "arrival_time": "12:25 PM",
+      "contact_number": "Not Available !",
+      "depot_name": "Beldanga",
+      "route": "Beldanga - Bardhaman",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Beldanga",
+          "up_time": "6:55 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Bardhaman",
+          "up_time": "12:25 PM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/six-r-wb04h3524-beldanga-bardhaman-1474"
+    },
+    {
+      "id": "wbbus-in-somnath-katwa-suri-4961",
+      "bus_name": "SOMNATH",
+      "reg_no": "WB41A0964",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Katwa",
+      "destination": "Suri",
+      "departure_time": "6:50 AM",
+      "arrival_time": "10:00 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Katwa",
+      "route": "Katwa - Suri",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Katwa",
+          "up_time": "6:50 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Suri",
+          "up_time": "10:00 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/somnath-wb41a0964-katwa-suri-1456"
+    },
+    {
+      "id": "wbbus-in-sreedhar-jew-kolkata-garhbeta-4962",
+      "bus_name": "SREEDHAR JEW",
+      "reg_no": "WB50AA3758",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Kolkata",
+      "destination": "Garhbeta",
+      "departure_time": "5:50 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Kolkata",
+      "route": "Kolkata - Garhbeta",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Kolkata",
+          "up_time": "5:50 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Garhbeta",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/sreedhar-jew-wb50aa3758-kolkata-garhbeta-1459"
+    },
+    {
+      "id": "wbbus-in-ss-route-liner-garia-solpatta-4963",
+      "bus_name": "SS ROUTE LINER",
+      "reg_no": "WB31AF8339",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Garia",
+      "destination": "Solpatta",
+      "departure_time": "3:10 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Garia",
+      "route": "Garia - Solpatta",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Garia",
+          "up_time": "3:10 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Solpatta",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/ss-route-liner-wb31af8339-garia-solpatta-1435"
+    },
+    {
+      "id": "wbbus-in-swapner-bangla-bardhaman-asansol-4964",
+      "bus_name": "SWAPNER BANGLA",
+      "reg_no": "WB417789",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Bardhaman",
+      "destination": "Asansol",
+      "departure_time": "8:15 AM",
+      "arrival_time": "11:30 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "Bardhaman",
+      "route": "Bardhaman - Asansol",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Bardhaman",
+          "up_time": "8:15 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Asansol",
+          "up_time": "11:30 AM",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/swapner-bangla-wb417789-bardhaman-asansol-1472"
+    },
+    {
+      "id": "wbbus-in-tara-maa-tarkeshwar-kharagpur-4965",
+      "bus_name": "TARA MAA",
+      "reg_no": "WB41K3078",
+      "operator": "—",
+      "bus_type": "Private - NON AC",
+      "origin": "Tarkeshwar",
+      "destination": "Kharagpur",
+      "departure_time": "9:30 AM",
+      "arrival_time": "",
+      "contact_number": "Not Available !",
+      "depot_name": "Tarkeshwar",
+      "route": "Tarkeshwar - Kharagpur",
+      "stoppages": [
+        {
+          "no": 1,
+          "name": "Tarkeshwar",
+          "up_time": "9:30 AM",
+          "down_time": ""
+        },
+        {
+          "no": 2,
+          "name": "Kharagpur",
+          "up_time": "",
+          "down_time": ""
+        }
+      ],
+      "source": "wbbus.in",
+      "total_stoppages": 2,
+      "detail_url": "https://wbbus.in/bus/tara-maa-wb41k3078-tarkeshwar-kharagpur-1471"
     }
   ],
   "routes": {
@@ -647675,7 +650106,7 @@
     }
   },
   "meta": {
-    "total_buses": 4909,
+    "total_buses": 4965,
     "total_routes": 3015,
     "total_stops": 4253,
     "version": "3.0.0",
