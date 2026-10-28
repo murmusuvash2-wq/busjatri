@@ -504,3 +504,25 @@
 /bus-time-table/dhuliyan-to-nababhat-bus-stand.html /bus-time-table/langalhata-to-nababhat-mor 301
 /bus-time-table/bankura-to-digha /bus-time-table/bankura-to-kolkata 301
 /bus-time-table/bankura-to-digha.html /bus-time-table/bankura-to-kolkata 301
+# sitemap-city dead-URL fixes
+/bus-time-table/ballygunge-to-dunlop /bus-time-table/ballygunge-station-to-dunlop 301
+/bus-time-table/chetla-park-to-howrah /bus-time-table/chetla-park-to-howrah-station 301
+/bus-time-table/howrah-to-ballygunge /bus-time-table/howrah-station-to-ballygunge-station 301
+/bus-time-table/howrah-to-baruipur /bus-time-table/howrah-station-to-baruipur 301
+/bus-time-table/howrah-to-chetla-park /bus-time-table/howrah-station-to-chetla-park 301
+/bus-time-table/howrah-to-garia /bus-time-table/howrah-station-to-garia-station 301
+/bus-time-table/howrah-to-joka /bus-time-table/howrah-station-to-joka-depot 301
+/bus-time-table/howrah-to-kamalgazi /bus-time-table/howrah-station-to-kamalgazi 301
+/bus-time-table/howrah-to-layalka /bus-time-table/howrah-station-to-layalka 301
+/bus-time-table/howrah-to-pardankuni /bus-time-table/howrah-station-to-pardankuni 301
+/bus-time-table/howrah-to-parnasree /bus-time-table/howrah-station-to-parnasree 301
+/bus-time-table/howrah-to-picnic-garden /bus-time-table/howrah-station-to-picnic-garden 301
+/bus-time-table/howrah-to-sarsuna /bus-time-table/howrah-station-to-sarsuna 301
+/bus-time-table/howrah-to-shibrampur /bus-time-table/howrah-station-to-shibrampur 301
+/bus-time-table/howrah-to-thakurpukur /bus-time-table/howrah-station-to-thakurpukur 301
+/bus-time-table/karunamoyee-to-garia /bus-time-table/karunamoyee-to-garia-bus-stand 301
+/bus-time-table/layalka-to-howrah /bus-time-table/layalka-to-howrah-station 301
+/bus-time-table/nabanna-to-garia /bus-time-table/nabanna-to-garia-bus-stand 301
+/bus-time-table/pardankuni-to-howrah /bus-time-table/pardankuni-to-howrah-station 301
+/bus-time-table/picnic-garden-to-howrah /bus-time-table/picnic-garden-to-howrah-station 301
+/bus-time-table/shibrampur-to-howrah /bus-time-table/shibrampur-to-howrah-station 301
