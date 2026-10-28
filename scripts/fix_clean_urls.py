@@ -66,12 +66,12 @@ def normalize(text: str) -> str:
     text = LOC_HOME_RE.sub("<loc>https://busjatri.in/</loc>", text)
     text = ABS_RE.sub(r"\1", text)
     text = LOC_RE.sub(r"\1\2", text)
-    # NOTE: PARENT_HOME_RE matches with a LOOKAHEAD, so it does not consume the
-    # closing quote -- the replacement must NOT add one, or we get href=".."".
+    # NOTE: Lookahead matches (?=["?#]) do not consume the closing quote or
+    # query/hash, so the replacements must NOT add a trailing quote.
     text = PARENT_HOME_RE.sub('href="../', text)
-    text = PARENT_RE.sub(r'href="../\1"', text)
-    text = DOT_RE.sub(r'href="\1"', text)
-    text = BARE_RE.sub(r'href="\1"', text)
+    text = PARENT_RE.sub(r'href="../\1', text)
+    text = DOT_RE.sub(r'href="\1', text)
+    text = BARE_RE.sub(r'href="\1', text)
     return text
 
 

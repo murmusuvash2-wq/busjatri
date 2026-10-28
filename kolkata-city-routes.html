@@ -302,7 +302,7 @@ function crSetF(btn){document.querySelectorAll('.fbtn').forEach(function(b){b.cl
 function crFilter(){var q=document.getElementById('crSearch').value.toLowerCase().trim();var n=0;document.querySelectorAll('#rtGrid .rt-card').forEach(function(c){var ok=(crF==='all'||c.getAttribute('data-cat')===crF)&&(!q||c.getAttribute('data-k').indexOf(q)>-1);c.classList.toggle('hid',!ok);if(ok)n++;});document.getElementById('crCount').textContent=n+' / 107';}
 crFilter();
 </script>
-<script src="js/hdr.js?v=b8a36609"></script>
+<script defer src="js/hdr.js?v=b8a36609"></script>
 <script defer src="/js/cookie-consent.js?v=9788dec7"></script>
 </body>
 </html>
