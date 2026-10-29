@@ -8588,6 +8588,33 @@
      "down": "12:55 PM"
     }
    ]
+  },
+  {
+   "operator": "Apsara Bus Service",
+   "bus_name": "Apsara Bus Service Siliguri-Kalimpong",
+   "bus_type": "Private - NON AC",
+   "reg_no": "",
+   "origin": "Siliguri",
+   "destination": "Kalimpong",
+   "departure_time": "7:10 AM",
+   "arrival_time": "10:15 AM",
+   "route": "Siliguri - Kalimpong",
+   "contact_number": "9064919130",
+   "source": "apsarabus.in (operator route directory)",
+   "detail_url": "",
+   "service_note": "Apsara Bus Service. 2+2 Eicher, non-AC, 31 seats. About 3h 05m; fare approx Rs.270. Siliguri 7:10 AM to Kalimpong 10:15 AM.",
+   "stops": [
+    {
+     "name": "Siliguri",
+     "up": "7:10 AM",
+     "down": ""
+    },
+    {
+     "name": "Kalimpong",
+     "up": "10:15 AM",
+     "down": ""
+    }
+   ]
   }
  ],
  "enrich": [
