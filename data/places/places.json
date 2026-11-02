@@ -291,6 +291,11 @@
  },
  "Behala Chowrastha": {},
  "Bejra": {},
+ "Beldanga": {
+  "district": "Murshidabad",
+  "lat": 23.93428,
+  "lon": 88.26018
+ },
  "Beleghata Building": {},
  "Belgachia": {
   "lat": 22.601,
@@ -666,6 +671,7 @@
  },
  "Gangasagar": {},
  "Gangtok": {},
+ "Garamba": {},
  "Garchakraberia": {
   "lat": 22.514668,
   "lon": 88.249021
@@ -856,6 +862,11 @@
  "Jalpaiguri": {
   "lat": 26.5414,
   "lon": 88.7196
+ },
+ "Jamalpur": {
+  "district": "Purba Bardhaman",
+  "lat": 23.06664,
+  "lon": 87.99181
  },
  "Jamirgachi": {},
  "Jamtora": {},
