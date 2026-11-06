@@ -1,7 +1,7 @@
 {
  "state": "jharkhand",
  "operator": "Janta Bus Service (private)",
- "fetched_at": "2026-11-05T01:34:05+00:00",
+ "fetched_at": "2026-11-06T01:41:31+00:00",
  "source_url": "https://www.jantabus.in/schedules.html",
  "rows": [
   {
@@ -77,5 +77,5 @@
    "journey": "08:45hrs"
   }
  ],
- "sha256": "aee283569786127b"
+ "sha256": "a6ec10a57936f141"
 }
