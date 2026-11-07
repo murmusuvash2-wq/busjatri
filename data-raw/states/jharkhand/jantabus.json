@@ -1,7 +1,7 @@
 {
  "state": "jharkhand",
  "operator": "Janta Bus Service (private)",
- "fetched_at": "2026-11-06T01:41:31+00:00",
+ "fetched_at": "2026-11-07T01:00:28+00:00",
  "source_url": "https://www.jantabus.in/schedules.html",
  "rows": [
   {
@@ -32,7 +32,7 @@
    "service": "Varanasi - Ranchi (01)",
    "route": "Varanasi to Ranchi",
    "coach": "2+1, Sleeper/Seater, AC (38 seats)",
-   "fare": "₹ 1000/ 1350/ 1300/ 1200/ 1200",
+   "fare": "₹ 1250/ 1600/ 1550/ 1450/ 1450",
    "departure": "18:30",
    "journey": "10:30hrs"
   },
@@ -40,7 +40,7 @@
    "service": "Varanasi - Ranchi (01)",
    "route": "Varanasi to Hazaribagh",
    "coach": "2+1, Sleeper/Seater, AC (38 seats)",
-   "fare": "₹ 1000/ 1350/ 1300/ 1200/ 1200",
+   "fare": "₹ 1250/ 1600/ 1550/ 1450/ 1450",
    "departure": "18:30",
    "journey": "09:30hrs"
   },
@@ -48,7 +48,7 @@
    "service": "Varanasi - Ranchi (01)",
    "route": "Varanasi to Ramgarah",
    "coach": "2+1, Sleeper/Seater, AC (38 seats)",
-   "fare": "₹ 1000/ 1350/ 1300/ 1200/ 1200",
+   "fare": "₹ 1250/ 1600/ 1550/ 1450/ 1450",
    "departure": "18:30",
    "journey": "10:00hrs"
   },
@@ -77,5 +77,5 @@
    "journey": "08:45hrs"
   }
  ],
- "sha256": "a6ec10a57936f141"
+ "sha256": "e61b2b9a40fbc26f"
 }
