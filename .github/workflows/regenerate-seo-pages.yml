@@ -13,6 +13,7 @@ on:
       - 'scripts/polish_route_pages.py'
       - 'scripts/add_ga4.py'
       - 'scripts/build_client_data.py'
+      - 'scripts/fix_duplicate_faq_and_routes.py'
       - '.github/workflows/regenerate-seo-pages.yml'
 
 concurrency:
@@ -50,10 +51,28 @@ jobs:
           python3 scripts/gen_reverse_routes.py --write
           python3 scripts/gen_stop_network.py --write
           python3 scripts/gen_blog.py --write
+          # remove the duplicate English-only FAQ block (bj-faq) where the
+          # bilingual generator FAQ already exists; keeps the FAQPage JSON-LD
+          python3 scripts/fix_duplicate_faq_and_routes.py
           python3 scripts/fix_clean_urls.py
           python3 scripts/add_legal_links.py --write
           python3 scripts/add_consent_banner.py --write
           python3 scripts/bump_asset_versions.py
+
+      - name: Verify no duplicate FAQ sections remain
+        run: |
+          python3 - <<'EOF'
+          import glob
+          bad = []
+          for f in glob.glob('bus-time-table/*.html'):
+              h = open(f, encoding='utf-8', errors='ignore').read()
+              if h.count('Frequently Asked Questions') >= 2:
+                  bad.append(f)
+          print(f'pages with 2+ FAQ headings: {len(bad)}')
+          if len(bad) > 5:
+              raise SystemExit(f'duplicate FAQ still on {len(bad)} pages, e.g. {bad[:3]}')
+          print('OK')
+          EOF
 
       - name: Commit and push
         env:
@@ -63,5 +82,5 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --staged --quiet && echo "No changes to commit" && exit 0
-          git commit -m "Auto: regenerate SEO pages — +single-bus routes, Time N/A, bn toggle [skip ci]"
+          git commit -m "Auto: regenerate SEO pages + remove duplicate FAQ blocks [skip ci]"
           bash scripts/push_retry.sh
