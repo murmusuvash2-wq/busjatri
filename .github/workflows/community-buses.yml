@@ -37,6 +37,8 @@ jobs:
           python3 scripts/gen_seo_pages.py
           python3 scripts/build_client_data.py
           python3 scripts/finalize_pages.py
+          # keep the route-guide FAQ, drop the bilingual duplicate
+          python3 scripts/strip_bilingual_faq.py
 
       - name: Commit and push if changed
         run: |
