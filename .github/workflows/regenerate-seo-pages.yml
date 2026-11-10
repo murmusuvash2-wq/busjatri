@@ -63,12 +63,16 @@ jobs:
         run: |
           python3 - <<'EOF'
           import glob
+          import os
 
           two_or_more = []
           guide_without_faq = []
           with_faq = 0
 
-          for f in glob.glob('bus-time-table/*.html'):
+          for f in sorted(glob.glob('bus-time-table/*.html')):
+              # demo/preview pages are not real route pages - ignore them
+              if os.path.basename(f).startswith('demo-'):
+                  continue
               h = open(f, encoding='utf-8', errors='ignore').read()
               if h.count('Frequently Asked Questions') >= 2:
                   two_or_more.append(f)
