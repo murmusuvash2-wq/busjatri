@@ -13,6 +13,7 @@ on:
       - 'scripts/polish_route_pages.py'
       - 'scripts/add_ga4.py'
       - 'scripts/build_client_data.py'
+      - 'scripts/strip_bilingual_faq.py'
       - 'scripts/fix_duplicate_faq_and_routes.py'
       - '.github/workflows/regenerate-seo-pages.yml'
 
@@ -51,6 +52,8 @@ jobs:
           python3 scripts/gen_reverse_routes.py --write
           python3 scripts/gen_stop_network.py --write
           python3 scripts/gen_blog.py --write
+          # keep the route-guide FAQ, drop the bilingual duplicate
+          python3 scripts/strip_bilingual_faq.py
           python3 scripts/fix_clean_urls.py
           python3 scripts/add_legal_links.py --write
           python3 scripts/add_consent_banner.py --write
@@ -59,7 +62,7 @@ jobs:
       - name: Verify exactly one FAQ block per route page
         run: |
           python3 - <<'EOF'
-          import glob, re
+          import glob
 
           two_or_more = []
           guide_without_faq = []
@@ -67,14 +70,11 @@ jobs:
 
           for f in glob.glob('bus-time-table/*.html'):
               h = open(f, encoding='utf-8', errors='ignore').read()
-              n_headings = h.count('Frequently Asked Questions')
-              has_guide = 'Bus Route Guide' in h
-              has_bjfaq = 'class="bj-faq"' in h
-              if n_headings >= 2:
+              if h.count('Frequently Asked Questions') >= 2:
                   two_or_more.append(f)
-              if has_guide and not has_bjfaq:
+              if 'Bus Route Guide' in h and 'class="bj-faq"' not in h:
                   guide_without_faq.append(f)
-              if has_bjfaq:
+              if 'class="bj-faq"' in h:
                   with_faq += 1
 
           print(f'pages with a visible FAQ (bj-faq): {with_faq}')
@@ -93,7 +93,7 @@ jobs:
           SITE_BASE: https://busjatri.in
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
           git diff --staged --quiet && echo "No changes to commit" && exit 0
           git commit -m "Auto: regenerate SEO pages — single FAQ per route page [skip ci]"
