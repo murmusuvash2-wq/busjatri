@@ -47,10 +47,10 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
       Bus<span>Jatri</span>
     </a>
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
-      
-      
+      <a href="../" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
+      <a href="../bus-time-table/" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Stops</a>
-    
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◔</button>
 </nav>
   </div>
 </header>
@@ -59,7 +59,7 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
 <div class="seo-hero">
   <h1>Buses via <span class="arr">→</span> College More</h1>
   <p class="bn-sub">College More স্টপেজ হয়ে যাওয়া সব বাসের সময়সূচী</p>
-  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-10-28</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
+  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-11-10</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
     <span class="schip">🚘 201 buses</span>
     <span class="schip hot">⏰ First 7:10 AM</span>
     <span class="schip">⏰ Last 8:10 PM</span>
@@ -96,13 +96,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Amtala → Barasat Chapadali</span><span>47 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
-</a><a class="bus-row" href="../bus-time-table/krishnanagar-to-asansol">
-  <div class="dep">7:50 AM<small>→ Asansol</small></div>
-  <div class="bmid">
-    <div class="op">AYESHA (VEER) · Veer (Ayesha)</div>
-    <div class="mrow"><span>Krishnanagar → Asansol</span><span>30 stops</span></div>
-  </div>
-  <span class="badge badge-priv">Private</span>
 </a><a class="bus-row" href="../bus-time-table/unitech-gate-1-to-kadamtala">
   <div class="dep">8:10 AM<small>→ Unitech Gate 1</small></div>
   <div class="bmid">
@@ -129,13 +122,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
   <div class="bmid">
     <div class="op">Bagnan to Karunamoyee · Private</div>
     <div class="mrow"><span>Karunamoyee → Bagnan</span><span>33 stops</span></div>
-  </div>
-  <span class="badge badge-priv">Private</span>
-</a><a class="bus-row" href="../bus-time-table/asansol-to-krishnanagar">
-  <div class="dep">8:55 AM<small>→ Krishnanagar</small></div>
-  <div class="bmid">
-    <div class="op">CHIRANJEET</div>
-    <div class="mrow"><span>Asansol → Krishnanagar</span><span>28 stops</span></div>
   </div>
   <span class="badge badge-priv">Private</span>
 </a><a class="bus-row" href="../bus-time-table/kadamtala-to-unitech-gate-1">
@@ -278,13 +264,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Bishnupur → Karunamoyee</span><span>31 stops</span></div>
   </div>
   <span class="badge badge-priv">Private</span>
-</a><a class="bus-row" href="../bus-time-table/asansol-to-krishnanagar">
-  <div class="dep">1:30 PM<small>→ Asansol</small></div>
-  <div class="bmid">
-    <div class="op">CHIRANJEET</div>
-    <div class="mrow"><span>Asansol → Krishnanagar</span><span>28 stops</span></div>
-  </div>
-  <span class="badge badge-priv">Private</span>
 </a><a class="bus-row" href="../bus-time-table/barasat-chapadali-to-amtala">
   <div class="dep">1:40 PM<small>→ Barasat Chapadali</small></div>
   <div class="bmid">
@@ -304,13 +283,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
   <div class="bmid">
     <div class="op">MDG Paribahan Bishnupur-Karunamoyee · MDG Paribahan</div>
     <div class="mrow"><span>Bishnupur → Karunamoyee</span><span>31 stops</span></div>
-  </div>
-  <span class="badge badge-priv">Private</span>
-</a><a class="bus-row" href="../bus-time-table/krishnanagar-to-asansol">
-  <div class="dep">1:55 PM<small>→ Krishnanagar</small></div>
-  <div class="bmid">
-    <div class="op">AYESHA (VEER) · Veer (Ayesha)</div>
-    <div class="mrow"><span>Krishnanagar → Asansol</span><span>30 stops</span></div>
   </div>
   <span class="badge badge-priv">Private</span>
 </a><a class="bus-row" href="../bus-time-table/boga-to-karunamoyee">
@@ -684,6 +656,13 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Newtown → Garia Station</span><span>16 stops</span></div>
   </div>
   <span class="badge badge-priv">Private</span>
+</a><a class="bus-row" href="../bus-time-table/krishnanagar-to-asansol">
+  <div class="dep">—<small>→ Asansol</small></div>
+  <div class="bmid">
+    <div class="op">AYESHA (VEER) · Veer (Ayesha)</div>
+    <div class="mrow"><span>Krishnanagar → Asansol</span><span>30 stops</span></div>
+  </div>
+  <span class="badge badge-priv">Private</span>
 </a><a class="bus-row" href="../bus-time-table/andul-station-to-ecospace">
   <div class="dep">—<small>→ Ecospace</small></div>
   <div class="bmid">
@@ -838,6 +817,13 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Barasat Kazipara Depot → Joka Tram Depot</span><span>43 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
+</a><a class="bus-row" href="../bus-time-table/asansol-to-krishnanagar">
+  <div class="dep">—<small>→ Krishnanagar</small></div>
+  <div class="bmid">
+    <div class="op">CHIRANJEET</div>
+    <div class="mrow"><span>Asansol → Krishnanagar</span><span>28 stops</span></div>
+  </div>
+  <span class="badge badge-priv">Private</span>
 </a><a class="bus-row" href="../bus-time-table/rajabazar-to-ghatakpukur">
   <div class="dep">—<small>→ Ghatakpukur</small></div>
   <div class="bmid">
@@ -1599,7 +1585,7 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
 </section>
 <section class="seo-section">
   <h3 class="section-title">Routes via College More</h3>
-  <div class="chip-row hscroll"><a class="rel-chip" href="../bus-time-table/karunamoyee-to-haldia">Karunamoyee → Haldia (4)</a><a class="rel-chip" href="../bus-time-table/majhdia-to-bardhaman">Majhdia → Bardhaman (3)</a><a class="rel-chip" href="../bus-time-table/sector-v-to-howrah-station">Sector V → Howrah Station (3)</a><a class="rel-chip" href="../bus-time-table/ballyhalt-to-karunamoyee">Ballyhalt → Karunamoyee (3)</a><a class="rel-chip" href="../bus-time-table/boga-to-karunamoyee">Boga → Karunamoyee (3)</a><a class="rel-chip" href="../bus-time-table/howrah-station-to-sector-v">Howrah Station → Sector V (3)</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-ballyhalt">Karunamoyee → Ballyhalt (3)</a><a class="rel-chip" href="../bus-time-table/nabanna-to-newtown">Nabanna → Newtown (2)</a><a class="rel-chip" href="../bus-time-table/asansol-to-krishnanagar">Asansol → Krishnanagar (2)</a><a class="rel-chip" href="../bus-time-table/krishnanagar-to-asansol">Krishnanagar → Asansol (2)</a><a class="rel-chip" href="../bus-time-table/hatishala-to-kolkata-station">Hatishala → Kolkata Station (2)</a><a class="rel-chip" href="../bus-time-table/amta-to-unitech-gate-1">Amta → Unitech Gate 1 (2)</a><a class="rel-chip" href="../bus-time-table/bagnan-to-karunamoyee">Bagnan → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-santragachi">Barasat Chapadali → Santragachi (2)</a><a class="rel-chip" href="../bus-time-table/haldia-to-karunamoyee">Haldia → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/ultadanga-to-shapoorji">Ultadanga → Shapoorji (2)</a><a class="rel-chip" href="../bus-time-table/kadamtala-to-unitech-gate-1">Kadamtala → Unitech Gate 1 (2)</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-karunamoyee">Barasat Chapadali → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/ultadanga-to-amity-university">Ultadanga → Amity University (2)</a><a class="rel-chip" href="../bus-time-table/amtala-to-dakshineswar">Amtala → Dakshineswar (2)</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-amtala">Barasat Chapadali → Amtala (2)</a><a class="rel-chip" href="../bus-time-table/kolkata-station-to-hatishala">Kolkata Station → Hatishala (2)</a><a class="rel-chip" href="../bus-time-table/unitech-gate-1-to-amta">Unitech Gate 1 → Amta (2)</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-bagnan">Karunamoyee → Bagnan (2)</a><a class="rel-chip" href="../bus-time-table/santragachi-to-barasat-chapadali">Santragachi → Barasat Chapadali (2)</a><a class="rel-chip" href="../bus-time-table/shapoorji-to-ultadanga">Shapoorji → Ultadanga (2)</a><a class="rel-chip" href="../bus-time-table/unitech-gate-1-to-kadamtala">Unitech Gate 1 → Kadamtala (2)</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-barasat-chapadali">Karunamoyee → Barasat Chapadali (2)</a><a class="rel-chip" href="../bus-time-table/amity-university-to-ultadanga">Amity University → Ultadanga (2)</a><a class="rel-chip" href="../bus-time-table/dakshineswar-to-amtala">Dakshineswar → Amtala (2)</a><a class="rel-chip" href="../bus-time-table/amtala-to-barasat-chapadali">Amtala → Barasat Chapadali (2)</a><a class="rel-chip" href="../bus-time-table/bishnupur-to-karunamoyee">Bishnupur → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/parnashri-to-sapoorji">Parnashri → Sapoorji</a><a class="rel-chip" href="../bus-time-table/joka-to-new-town">Joka → New Town</a><a class="rel-chip" href="../bus-time-table/jadavpore-to-eco-space">Jadavpore → Eco Space</a><a class="rel-chip" href="../bus-time-table/ultadanga-to-sapoorji">Ultadanga → Sapoorji</a><a class="rel-chip" href="../bus-time-table/dum-dum-11a-stand-to-karunamoyee">Dum Dum 11A Stand → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/golf-green-to-air-port">Golf Green → Air Port</a><a class="rel-chip" href="../bus-time-table/tollygunge-to-eco-space">Tollygunge → Eco space</a><a class="rel-chip" href="../bus-time-table/santragachi-to-eco-space">Santragachi → Eco Space</a><a class="rel-chip" href="../bus-time-table/behala-to-new-town">Behala → New Town</a><a class="rel-chip" href="../bus-time-table/joka-to-eco-space">Joka → Eco Space</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-sakuntala-park">Karunamoyee → Sakuntala Park</a><a class="rel-chip" href="../bus-time-table/ultadanga-salt-lake-ultadanga-to-circuitous-service">Ultadanga - Salt Lake-Ultadanga → Circuitous Service</a><a class="rel-chip" href="../bus-time-table/dinhata-to-siliguri">Dinhata → Siliguri</a><a class="rel-chip" href="../bus-time-table/dakshineswar-to-sector-v">Dakshineswar → Sector V</a><a class="rel-chip" href="../bus-time-table/nimta-bazar-to-mahishbathan">Nimta Bazar → Mahishbathan</a><a class="rel-chip" href="../bus-time-table/shapoorji-to-babughat">Shapoorji → Babughat</a><a class="rel-chip" href="../bus-time-table/unitech-gate-1-to-alipore-zoo">Unitech Gate 1 → Alipore Zoo</a><a class="rel-chip" href="../bus-time-table/birati-station-to-saltlake-206">Birati Station → Saltlake 206</a><a class="rel-chip" href="../bus-time-table/japani-gate-to-sector-v">Japani Gate → Sector V</a><a class="rel-chip" href="../bus-time-table/tikiapara-to-sector-v">Tikiapara → Sector V</a><a class="rel-chip" href="../bus-time-table/danesh-shaikh-lane-to-aliah-university">Danesh Shaikh Lane → Aliah University</a><a class="rel-chip" href="../bus-time-table/barasat-colony-to-sector-v">Barasat Colony → Sector V</a><a class="rel-chip" href="../bus-time-table/ballyhalt-to-sector-v">Ballyhalt → Sector V</a><a class="rel-chip" href="../bus-time-table/barasat-colony-to-karunamoyee">Barasat Colony → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/parnasree-to-unitech-gate-1">Parnasree → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/shapoorji-to-bangur-avenue">Shapoorji → Bangur Avenue</a><a class="rel-chip" href="../bus-time-table/sonarpur-station-to-unitech-gate-1">Sonarpur Station → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/jamirgachi-to-kolkata-station">Jamirgachi → Kolkata Station</a><a class="rel-chip" href="../bus-time-table/serampore-to-sector-v">Serampore → Sector V</a><a class="rel-chip" href="../bus-time-table/andul-station-to-ecospace">Andul Station → Ecospace</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-b-garden">Barasat Chapadali → B Garden</a><a class="rel-chip" href="../bus-time-table/boalia-to-karunamoyee">Boalia → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/dhulagarh-to-unitech-gate-1">Dhulagarh → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/dhulagarh-to-chingrighata">Dhulagarh → Chingrighata</a><a class="rel-chip" href="../bus-time-table/dhulagarh-to-amity-university">Dhulagarh → Amity University</a><a class="rel-chip" href="../bus-time-table/gadiara-to-unitech-gate-1">Gadiara → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/ghatakpukur-to-rajchandrapur">Ghatakpukur → Rajchandrapur</a><a class="rel-chip" href="../bus-time-table/rajchandrapur-to-saltlake-206">Rajchandrapur → Saltlake 206</a><a class="rel-chip" href="../bus-time-table/matapara-to-unitech-gate-2">Matapara → Unitech Gate 2</a><a class="rel-chip" href="../bus-time-table/shalimar-station-to-shapoorji">Shalimar Station → Shapoorji</a><a class="rel-chip" href="../bus-time-table/newtown-to-shyampur">Newtown → Shyampur</a><a class="rel-chip" href="../bus-time-table/muchighata-to-karunamoyee">Muchighata → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/rajarhat-to-nabanna">Rajarhat → Nabanna</a><a class="rel-chip" href="../bus-time-table/ranihati-to-karunamoyee">Ranihati → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/thakurpukur-to-amity-university">Thakurpukur → Amity University</a><a class="rel-chip" href="../bus-time-table/parnasree-to-newtown">Parnasree → Newtown</a><a class="rel-chip" href="../bus-time-table/parnasree-to-shapoorji">Parnasree → Shapoorji</a><a class="rel-chip" href="../bus-time-table/thakurpukur-to-newtown">Thakurpukur → Newtown</a></div>
+  <div class="chip-row hscroll"><a class="rel-chip" href="../bus-time-table/karunamoyee-to-haldia">Karunamoyee → Haldia (4)</a><a class="rel-chip" href="../bus-time-table/majhdia-to-bardhaman">Majhdia → Bardhaman (3)</a><a class="rel-chip" href="../bus-time-table/sector-v-to-howrah-station">Sector V → Howrah Station (3)</a><a class="rel-chip" href="../bus-time-table/ballyhalt-to-karunamoyee">Ballyhalt → Karunamoyee (3)</a><a class="rel-chip" href="../bus-time-table/boga-to-karunamoyee">Boga → Karunamoyee (3)</a><a class="rel-chip" href="../bus-time-table/howrah-station-to-sector-v">Howrah Station → Sector V (3)</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-ballyhalt">Karunamoyee → Ballyhalt (3)</a><a class="rel-chip" href="../bus-time-table/nabanna-to-newtown">Nabanna → Newtown (2)</a><a class="rel-chip" href="../bus-time-table/hatishala-to-kolkata-station">Hatishala → Kolkata Station (2)</a><a class="rel-chip" href="../bus-time-table/amta-to-unitech-gate-1">Amta → Unitech Gate 1 (2)</a><a class="rel-chip" href="../bus-time-table/bagnan-to-karunamoyee">Bagnan → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-santragachi">Barasat Chapadali → Santragachi (2)</a><a class="rel-chip" href="../bus-time-table/haldia-to-karunamoyee">Haldia → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/ultadanga-to-shapoorji">Ultadanga → Shapoorji (2)</a><a class="rel-chip" href="../bus-time-table/kadamtala-to-unitech-gate-1">Kadamtala → Unitech Gate 1 (2)</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-karunamoyee">Barasat Chapadali → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/ultadanga-to-amity-university">Ultadanga → Amity University (2)</a><a class="rel-chip" href="../bus-time-table/amtala-to-dakshineswar">Amtala → Dakshineswar (2)</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-amtala">Barasat Chapadali → Amtala (2)</a><a class="rel-chip" href="../bus-time-table/kolkata-station-to-hatishala">Kolkata Station → Hatishala (2)</a><a class="rel-chip" href="../bus-time-table/unitech-gate-1-to-amta">Unitech Gate 1 → Amta (2)</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-bagnan">Karunamoyee → Bagnan (2)</a><a class="rel-chip" href="../bus-time-table/santragachi-to-barasat-chapadali">Santragachi → Barasat Chapadali (2)</a><a class="rel-chip" href="../bus-time-table/shapoorji-to-ultadanga">Shapoorji → Ultadanga (2)</a><a class="rel-chip" href="../bus-time-table/unitech-gate-1-to-kadamtala">Unitech Gate 1 → Kadamtala (2)</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-barasat-chapadali">Karunamoyee → Barasat Chapadali (2)</a><a class="rel-chip" href="../bus-time-table/amity-university-to-ultadanga">Amity University → Ultadanga (2)</a><a class="rel-chip" href="../bus-time-table/dakshineswar-to-amtala">Dakshineswar → Amtala (2)</a><a class="rel-chip" href="../bus-time-table/amtala-to-barasat-chapadali">Amtala → Barasat Chapadali (2)</a><a class="rel-chip" href="../bus-time-table/bishnupur-to-karunamoyee">Bishnupur → Karunamoyee (2)</a><a class="rel-chip" href="../bus-time-table/parnashri-to-sapoorji">Parnashri → Sapoorji</a><a class="rel-chip" href="../bus-time-table/joka-to-new-town">Joka → New Town</a><a class="rel-chip" href="../bus-time-table/jadavpore-to-eco-space">Jadavpore → Eco Space</a><a class="rel-chip" href="../bus-time-table/ultadanga-to-sapoorji">Ultadanga → Sapoorji</a><a class="rel-chip" href="../bus-time-table/dum-dum-11a-stand-to-karunamoyee">Dum Dum 11A Stand → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/golf-green-to-air-port">Golf Green → Air Port</a><a class="rel-chip" href="../bus-time-table/tollygunge-to-eco-space">Tollygunge → Eco space</a><a class="rel-chip" href="../bus-time-table/santragachi-to-eco-space">Santragachi → Eco Space</a><a class="rel-chip" href="../bus-time-table/behala-to-new-town">Behala → New Town</a><a class="rel-chip" href="../bus-time-table/joka-to-eco-space">Joka → Eco Space</a><a class="rel-chip" href="../bus-time-table/karunamoyee-to-sakuntala-park">Karunamoyee → Sakuntala Park</a><a class="rel-chip" href="../bus-time-table/ultadanga-salt-lake-ultadanga-to-circuitous-service">Ultadanga - Salt Lake-Ultadanga → Circuitous Service</a><a class="rel-chip" href="../bus-time-table/asansol-to-krishnanagar">Asansol → Krishnanagar</a><a class="rel-chip" href="../bus-time-table/dinhata-to-siliguri">Dinhata → Siliguri</a><a class="rel-chip" href="../bus-time-table/krishnanagar-to-asansol">Krishnanagar → Asansol</a><a class="rel-chip" href="../bus-time-table/dakshineswar-to-sector-v">Dakshineswar → Sector V</a><a class="rel-chip" href="../bus-time-table/nimta-bazar-to-mahishbathan">Nimta Bazar → Mahishbathan</a><a class="rel-chip" href="../bus-time-table/shapoorji-to-babughat">Shapoorji → Babughat</a><a class="rel-chip" href="../bus-time-table/unitech-gate-1-to-alipore-zoo">Unitech Gate 1 → Alipore Zoo</a><a class="rel-chip" href="../bus-time-table/birati-station-to-saltlake-206">Birati Station → Saltlake 206</a><a class="rel-chip" href="../bus-time-table/japani-gate-to-sector-v">Japani Gate → Sector V</a><a class="rel-chip" href="../bus-time-table/tikiapara-to-sector-v">Tikiapara → Sector V</a><a class="rel-chip" href="../bus-time-table/danesh-shaikh-lane-to-aliah-university">Danesh Shaikh Lane → Aliah University</a><a class="rel-chip" href="../bus-time-table/barasat-colony-to-sector-v">Barasat Colony → Sector V</a><a class="rel-chip" href="../bus-time-table/ballyhalt-to-sector-v">Ballyhalt → Sector V</a><a class="rel-chip" href="../bus-time-table/barasat-colony-to-karunamoyee">Barasat Colony → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/parnasree-to-unitech-gate-1">Parnasree → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/shapoorji-to-bangur-avenue">Shapoorji → Bangur Avenue</a><a class="rel-chip" href="../bus-time-table/sonarpur-station-to-unitech-gate-1">Sonarpur Station → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/jamirgachi-to-kolkata-station">Jamirgachi → Kolkata Station</a><a class="rel-chip" href="../bus-time-table/serampore-to-sector-v">Serampore → Sector V</a><a class="rel-chip" href="../bus-time-table/andul-station-to-ecospace">Andul Station → Ecospace</a><a class="rel-chip" href="../bus-time-table/barasat-chapadali-to-b-garden">Barasat Chapadali → B Garden</a><a class="rel-chip" href="../bus-time-table/boalia-to-karunamoyee">Boalia → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/dhulagarh-to-unitech-gate-1">Dhulagarh → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/dhulagarh-to-chingrighata">Dhulagarh → Chingrighata</a><a class="rel-chip" href="../bus-time-table/dhulagarh-to-amity-university">Dhulagarh → Amity University</a><a class="rel-chip" href="../bus-time-table/gadiara-to-unitech-gate-1">Gadiara → Unitech Gate 1</a><a class="rel-chip" href="../bus-time-table/ghatakpukur-to-rajchandrapur">Ghatakpukur → Rajchandrapur</a><a class="rel-chip" href="../bus-time-table/rajchandrapur-to-saltlake-206">Rajchandrapur → Saltlake 206</a><a class="rel-chip" href="../bus-time-table/matapara-to-unitech-gate-2">Matapara → Unitech Gate 2</a><a class="rel-chip" href="../bus-time-table/shalimar-station-to-shapoorji">Shalimar Station → Shapoorji</a><a class="rel-chip" href="../bus-time-table/newtown-to-shyampur">Newtown → Shyampur</a><a class="rel-chip" href="../bus-time-table/muchighata-to-karunamoyee">Muchighata → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/rajarhat-to-nabanna">Rajarhat → Nabanna</a><a class="rel-chip" href="../bus-time-table/ranihati-to-karunamoyee">Ranihati → Karunamoyee</a><a class="rel-chip" href="../bus-time-table/thakurpukur-to-amity-university">Thakurpukur → Amity University</a><a class="rel-chip" href="../bus-time-table/parnasree-to-newtown">Parnasree → Newtown</a><a class="rel-chip" href="../bus-time-table/parnasree-to-shapoorji">Parnasree → Shapoorji</a><a class="rel-chip" href="../bus-time-table/thakurpukur-to-newtown">Thakurpukur → Newtown</a></div>
 </section>
 <section class="seo-section">
   <a class="rel-chip" href="./">📚 Browse all stops A–Z</a>

@@ -47,10 +47,10 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
       Bus<span>Jatri</span>
     </a>
     <nav style="display:flex;gap:10px;align-items:center;font-size:13px">
-      
-      
+      <a href="../" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Home</a>
+      <a href="../bus-time-table/" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Routes</a>
       <a href="./" style="color:var(--ink-dim);text-decoration:none;font-weight:600">Stops</a>
-    
+    <button id="bjThemeBtn" aria-label="Toggle dark mode" style="background:var(--surface,#fffcf4);border:1px solid var(--line,#ccc);border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:600;color:var(--ink-dim,#665);font-size:13px;font-family:inherit;line-height:1.2">◔</button>
 </nav>
   </div>
 </header>
@@ -59,7 +59,7 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
 <div class="seo-hero">
   <h1>Buses via <span class="arr">→</span> Kolkata</h1>
   <p class="bn-sub">Kolkata স্টপেজ হয়ে যাওয়া সব বাসের সময়সূচী</p>
-  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-10-28</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
+  <div class="trust-note" role="note"><strong>Schedule data refreshed 2026-11-10</strong> · Listed schedules can change; confirm with the operator before travel.</div><div class="stat-chips">
     <span class="schip">🚘 237 buses</span>
     <span class="schip hot">⏰ First 1:35 AM</span>
     <span class="schip">⏰ Last 10:00 PM</span>
@@ -258,10 +258,24 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
   </div>
   <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/kolkata-to-darjeeling">
+  <div class="dep">6:30 AM<small>→ Darjeeling</small></div>
+  <div class="bmid">
+    <div class="op">WBTC Banglashree Kolkata-Darjeeling · WBTC</div>
+    <div class="mrow"><span>Kolkata → Darjeeling</span><span>3 stops</span></div>
+  </div>
+  <span class="badge badge-govt">Govt</span>
+</a><a class="bus-row" href="../bus-time-table/kolkata-to-darjeeling">
   <div class="dep">6:30 AM<small>→ Kolkata</small></div>
   <div class="bmid">
     <div class="op">WBTC Banglashree Kolkata-Darjeeling · WBTC</div>
     <div class="mrow"><span>Kolkata → Darjeeling</span><span>3 stops</span></div>
+  </div>
+  <span class="badge badge-govt">Govt</span>
+</a><a class="bus-row" href="../bus-time-table/kolkata-to-kalimpong">
+  <div class="dep">6:30 AM<small>→ Kalimpong</small></div>
+  <div class="bmid">
+    <div class="op">WBTC Banglashree Kolkata-Kalimpong · WBTC</div>
+    <div class="mrow"><span>Kolkata → Kalimpong</span><span>3 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/kolkata-to-kalimpong">
@@ -474,13 +488,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Kolkata → Jhargram</span><span>4 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
-</a><a class="bus-row" href="../bus-time-table/bankura-to-kolkata">
-  <div class="dep">8:30 AM<small>→ Kolkata</small></div>
-  <div class="bmid">
-    <div class="op">SBSTC Bankura-Kolkata · SBSTC</div>
-    <div class="mrow"><span>Bankura → Kolkata</span><span>16 stops</span></div>
-  </div>
-  <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/kolkata-to-arambag">
   <div class="dep">8:30 AM<small>→ Arambag</small></div>
   <div class="bmid">
@@ -607,13 +614,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Chandrakona Town → Kolkata</span><span>23 stops</span></div>
   </div>
   <span class="badge badge-priv">Private</span>
-</a><a class="bus-row" href="../bus-time-table/bankura-to-kolkata">
-  <div class="dep">9:35 AM<small>→ Kolkata</small></div>
-  <div class="bmid">
-    <div class="op">SBSTC Bankura-Kolkata · SBSTC</div>
-    <div class="mrow"><span>Bankura → Kolkata</span><span>16 stops</span></div>
-  </div>
-  <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/jhargram-to-kolkata">
   <div class="dep">9:50 AM<small>→ Kolkata</small></div>
   <div class="bmid">
@@ -1153,13 +1153,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Farakka → Kolkata</span><span>3 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
-</a><a class="bus-row" href="../bus-time-table/kolkata-to-bankura">
-  <div class="dep">2:15 PM<small>→ Bankura</small></div>
-  <div class="bmid">
-    <div class="op">SBSTC Kolkata-Bankura · SBSTC</div>
-    <div class="mrow"><span>Kolkata → Bankura</span><span>16 stops</span></div>
-  </div>
-  <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/kolkata-to-jhargram">
   <div class="dep">2:15 PM<small>→ Jhargram</small></div>
   <div class="bmid">
@@ -1305,13 +1298,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
   <div class="bmid">
     <div class="op">SBSTC Haldia-Tarapith · SBSTC</div>
     <div class="mrow"><span>Haldia → Tarapith</span><span>5 stops</span></div>
-  </div>
-  <span class="badge badge-govt">Govt</span>
-</a><a class="bus-row" href="../bus-time-table/kolkata-to-bankura">
-  <div class="dep">3:30 PM<small>→ Bankura</small></div>
-  <div class="bmid">
-    <div class="op">SBSTC Kolkata-Bankura · SBSTC</div>
-    <div class="mrow"><span>Kolkata → Bankura</span><span>16 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/diamond-to-asansol">
@@ -1650,20 +1636,6 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Kolkata → Jhargram</span><span>3 stops</span></div>
   </div>
   <span class="badge badge-govt">Govt</span>
-</a><a class="bus-row" href="../bus-time-table/kolkata-to-darjeeling">
-  <div class="dep">6:30 PM<small>→ Darjeeling</small></div>
-  <div class="bmid">
-    <div class="op">WBTC Banglashree Kolkata-Darjeeling · WBTC</div>
-    <div class="mrow"><span>Kolkata → Darjeeling</span><span>3 stops</span></div>
-  </div>
-  <span class="badge badge-govt">Govt</span>
-</a><a class="bus-row" href="../bus-time-table/kolkata-to-kalimpong">
-  <div class="dep">6:30 PM<small>→ Kalimpong</small></div>
-  <div class="bmid">
-    <div class="op">WBTC Banglashree Kolkata-Kalimpong · WBTC</div>
-    <div class="mrow"><span>Kolkata → Kalimpong</span><span>3 stops</span></div>
-  </div>
-  <span class="badge badge-govt">Govt</span>
 </a><a class="bus-row" href="../bus-time-table/alipurduar-to-kolkata">
   <div class="dep">6:45 PM<small>→ Kolkata</small></div>
   <div class="bmid">
@@ -1818,6 +1790,34 @@ a.bus-row,a.bus-row:visited{color:inherit;text-decoration:none}
     <div class="mrow"><span>Bandar → Kolkata</span><span>2 stops</span></div>
   </div>
   <span class="badge badge-priv">Private</span>
+</a><a class="bus-row" href="../bus-time-table/bankura-to-kolkata">
+  <div class="dep">—<small>→ Kolkata</small></div>
+  <div class="bmid">
+    <div class="op">SBSTC Bankura-Kolkata · SBSTC</div>
+    <div class="mrow"><span>Bankura → Kolkata</span><span>16 stops</span></div>
+  </div>
+  <span class="badge badge-govt">Govt</span>
+</a><a class="bus-row" href="../bus-time-table/bankura-to-kolkata">
+  <div class="dep">—<small>→ Kolkata</small></div>
+  <div class="bmid">
+    <div class="op">SBSTC Bankura-Kolkata · SBSTC</div>
+    <div class="mrow"><span>Bankura → Kolkata</span><span>16 stops</span></div>
+  </div>
+  <span class="badge badge-govt">Govt</span>
+</a><a class="bus-row" href="../bus-time-table/kolkata-to-bankura">
+  <div class="dep">—<small>→ Bankura</small></div>
+  <div class="bmid">
+    <div class="op">SBSTC Kolkata-Bankura · SBSTC</div>
+    <div class="mrow"><span>Kolkata → Bankura</span><span>16 stops</span></div>
+  </div>
+  <span class="badge badge-govt">Govt</span>
+</a><a class="bus-row" href="../bus-time-table/kolkata-to-bankura">
+  <div class="dep">—<small>→ Bankura</small></div>
+  <div class="bmid">
+    <div class="op">SBSTC Kolkata-Bankura · SBSTC</div>
+    <div class="mrow"><span>Kolkata → Bankura</span><span>16 stops</span></div>
+  </div>
+  <span class="badge badge-govt">Govt</span>
 </a>
   
 </section>
