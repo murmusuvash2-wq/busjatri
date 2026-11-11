@@ -721,8 +721,114 @@ groups = {
 }
 
 
+THROUGH_BUS_ENABLED = True
+
+# ------------------------------------------------------------------
+# Through-bus (segment) coverage
+#
+# A route page used to list only buses whose origin/destination matched the
+# page exactly. That hid every bus that merely passes through both places --
+# e.g. an Asansol-Digha service that stops at both Bankura and Raniganj.
+#
+# buses_for() now also returns those buses, trimmed to the requested segment:
+# departure/arrival are taken from the two stops themselves, the stop list is
+# the segment only, and the fare is blanked because we only know the fare for
+# the full route.
+# ------------------------------------------------------------------
+
+_SEQ_CACHE = {}
+
+
+def _bus_sequence(bus):
+    """[(place, time_at_place), ...] in travel order (up direction)."""
+    key = id(bus)
+    seq = _SEQ_CACHE.get(key)
+    if seq is None:
+        seq = [(norm_place(bus.get("origin")), bus.get("departure_time"))]
+        for s in (bus.get("stoppages") or []):
+            seq.append((norm_place(s.get("name")), s.get("up_time")))
+        seq.append((norm_place(bus.get("destination")), bus.get("arrival_time")))
+        seq = [x for x in seq if x[0] and x[0] != "—"]
+        _SEQ_CACHE[key] = seq
+    return seq
+
+
+def _segment_copy(bus, origin, destination):
+    """Copy of `bus` trimmed to origin->destination, or None."""
+    seq = _bus_sequence(bus)
+    if len(seq) < 3:
+        return None
+    io = next((i for i, (n, _) in enumerate(seq) if n == origin), None)
+    if io is None:
+        return None
+    it = next((i for i in range(io + 1, len(seq)) if seq[i][0] == destination), None)
+    if it is None:
+        return None
+    t_dep = (seq[io][1] or "").strip()
+    if not t_dep:
+        # no known departure time at the boarding stop -> cannot show it
+        return None
+    seg = seq[io:it + 1]
+    copy = dict(bus)
+    copy["origin"] = origin
+    copy["destination"] = destination
+    copy["departure_time"] = t_dep
+    copy["arrival_time"] = (seq[it][1] or "").strip()
+    copy["stoppages"] = [{"name": n, "up_time": t} for n, t in seg[1:-1]]
+    copy["total_stoppages"] = len(seg)
+    copy["fare"] = ""
+    copy["_segment"] = True
+    return copy
+
+
+_PLACE_INDEX = {}
+
+
+def _place_index():
+    if not _PLACE_INDEX:
+        for bus in BUSES:
+            for i, (n, _) in enumerate(_bus_sequence(bus)):
+                _PLACE_INDEX.setdefault(n, []).append((bus, i))
+    return _PLACE_INDEX
+
+
+_BUSES_FOR_CACHE = {}
+
+
 def buses_for(origin, destination):
-    return FWD.get((origin, destination), [])
+    key = (origin, destination)
+    if key in _BUSES_FOR_CACHE:
+        return _BUSES_FOR_CACHE[key]
+
+    direct = list(FWD.get(key, []))
+    result = direct
+
+    if THROUGH_BUS_ENABLED and origin != destination:
+        idx = _place_index()
+        starts = idx.get(origin) or []
+        if starts:
+            end_pos = {}
+            for bus, i in (idx.get(destination) or []):
+                end_pos.setdefault(id(bus), []).append(i)
+            direct_ids = {id(b) for b in direct}
+            extra = []
+            processed = set()
+            for bus, i in starts:
+                bid = id(bus)
+                if bid in direct_ids or bid in processed:
+                    continue
+                processed.add(bid)
+                later = end_pos.get(id(bus))
+                if not later or not any(j > i for j in later):
+                    continue
+                seg = _segment_copy(bus, origin, destination)
+                if seg is not None:
+                    extra.append(seg)
+            if extra:
+                result = direct + extra
+
+    _BUSES_FOR_CACHE[key] = result
+    return result
 
 
 route_meta = {}
