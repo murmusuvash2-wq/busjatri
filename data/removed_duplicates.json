@@ -1,13 +1,5 @@
 [
  {
-  "id": "sbstc-digha-barasat-0",
-  "bus_name": "SBSTC Digha-Barasat",
-  "route": "Digha - Barasat",
-  "time": "6:20 AM",
-  "source": "SBSTC (govt)",
-  "reason": "same reg+route+time as kept copy"
- },
- {
   "id": "monika-travels-ramharipur-purulia-4966",
   "bus_name": "Monika Travels Ramharipur-Purulia",
   "route": "Ramharipur - Purulia",
