@@ -33,6 +33,10 @@
   "lat": 26.4919,
   "lon": 89.5271
  },
+ "Ambika Nagar": {
+  "lat": 22.515408,
+  "lon": 88.36407
+ },
  "Amity University": {},
  "Amlai": {},
  "Amlashuli": {},
@@ -105,6 +109,7 @@
   "lat": 22.601,
   "lon": 88.365
  },
+ "Bagdogra": {},
  "Baghajatin": {
   "lat": 22.479,
   "lon": 88.387
@@ -202,6 +207,10 @@
   "lat": 23.04553,
   "lon": 88.83084
  },
+ "Bangla": {
+  "lat": 22.273126,
+  "lon": 88.172396
+ },
  "Bangur Avenue": {
   "lat": 22.616,
   "lon": 88.406
@@ -291,6 +300,11 @@
  },
  "Behala Chowrastha": {},
  "Bejra": {},
+ "Belda": {
+  "district": "Paschim Medinipur",
+  "lat": 22.08427,
+  "lon": 87.35204
+ },
  "Beldanga": {
   "district": "Murshidabad",
   "lat": 23.93428,
@@ -399,6 +413,10 @@
   "lon": 87.53895
  },
  "Buglidih": {},
+ "Buniadpur": {
+  "lat": 25.385,
+  "lon": 88.384
+ },
  "Burdwan": {
   "lat": 23.2324,
   "lon": 87.8615
@@ -463,6 +481,10 @@
  "Chingrighata": {
   "lat": 22.578,
   "lon": 88.415
+ },
+ "Chinsurah": {
+  "lat": 22.9031,
+  "lon": 88.3968
  },
  "Chinsurah Court": {},
  "Chirkunda": {
@@ -573,6 +595,10 @@
  "Dhulagarh": {},
  "Dhuliyan": {},
  "Dhumsai": {},
+ "Dhupguri": {
+  "lat": 26.5981,
+  "lon": 89.0142
+ },
  "Diamond": {},
  "Diamond Harbour": {
   "lat": 22.1912,
@@ -643,12 +669,21 @@
   "lat": 22.5645,
   "lon": 88.351
  },
+ "Falakata": {
+  "lat": 26.5167,
+  "lon": 89.2
+ },
  "Falta": {},
  "Falta Sector 1": {},
  "Farakka": {
   "district": "Malda",
   "lat": 24.81667,
   "lon": 87.9
+ },
+ "Fatehpur": {
+  "district": "Birbhum",
+  "lat": 24.08095,
+  "lon": 87.73092
  },
  "Fatikgachi": {},
  "Fishery Gate": {},
@@ -704,6 +739,11 @@
   "district": "Purba Medinipur",
   "lat": 22.66244,
   "lon": 87.73399
+ },
+ "Gidhni": {
+  "district": "Jhargram",
+  "lat": 22.48449,
+  "lon": 86.85498
  },
  "Goaltore": {
   "lat": 22.70989,
@@ -854,6 +894,7 @@
  "Jagatballavpur": {},
  "Jaguli": {},
  "Jaigaon": {},
+ "Jairambati": {},
  "Jajigram": {},
  "Jaleswar": {
   "lat": 21.79749,
@@ -1372,6 +1413,7 @@
  "Noapara": {},
  "Noorpur": {},
  "Old Dakghar": {},
+ "Old Digha": {},
  "Omarpur": {
   "lat": 24.41,
   "lon": 88.02
@@ -1410,6 +1452,11 @@
   "district": "Hooghly",
   "lat": 23.07492,
   "lon": 88.28637
+ },
+ "Paniparul": {
+  "district": "Purba Medinipur",
+  "lat": 21.74949,
+  "lon": 87.53621
  },
  "Panna": {
   "lat": 22.499211,
@@ -1459,6 +1506,11 @@
  "Phulberia": {},
  "Phulkusma": {},
  "Picnic Garden": {},
+ "Pirakata": {
+  "district": "Paschim Medinipur",
+  "lat": 22.56491,
+  "lon": 87.17945
+ },
  "Polerhat": {},
  "Pratap Dighi": {
   "district": "Purba Medinipur",
@@ -1632,6 +1684,11 @@
  "Saltlake Stadium": {
   "lat": 22.57,
   "lon": 88.405
+ },
+ "Saltora": {
+  "district": "Paschim Bardhaman",
+  "lat": 23.52274,
+  "lon": 86.936
  },
  "Salugara": {},
  "Saluka": {},
