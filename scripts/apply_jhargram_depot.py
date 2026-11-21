@@ -30,6 +30,7 @@ data (the page was 17 buses stale already). ASCII-only source.
 import json
 import re
 from pathlib import Path
+from datetime import date
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "data" / "busjatri_data.json"
@@ -178,7 +179,7 @@ def add_buses(write):
     print("before: %d | added: %d | after: %d" % (before, added, len(buses)))
     if write:
         data.setdefault("meta", {})["total_buses"] = len(buses)
-        data["meta"]["last_updated"] = "2026-09-27"
+        data["meta"]["last_updated"] = date.today().isoformat()
         DATA.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n",
                         encoding="utf-8")
         print("written.")

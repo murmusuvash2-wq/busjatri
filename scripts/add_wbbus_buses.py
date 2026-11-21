@@ -20,6 +20,7 @@ Usage:
 import json
 import re
 import sys
+from datetime import date
 
 DATA = "data/busjatri_data.json"
 SRC = "data/wbbus_new.json"
@@ -106,7 +107,7 @@ def main(write=False):
     assert added > 200, "expected to add ~289 buses, added only %d" % added
     if write:
         data.setdefault("meta", {})["total_buses"] = len(buses)
-        data.setdefault("meta", {})["last_updated"] = "2026-09-26"
+        data.setdefault("meta", {})["last_updated"] = date.today().isoformat()
         with open(DATA, "w", encoding="utf-8") as f:
             json.dump(data, f, ensure_ascii=False, indent=1)
         print("written.")

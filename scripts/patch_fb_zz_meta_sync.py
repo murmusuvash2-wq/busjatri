@@ -43,9 +43,9 @@ def main():
     patch(
         "scripts/add_community_buses.py",
         'data.setdefault("meta", {})["total_buses"] = len(buses)',
-        '        data.setdefault("meta", {})["last_updated"] = "2026-09-18"',
+        '        data.setdefault("meta", {})["last_updated"] = date.today().isoformat()',
         '        data.setdefault("meta", {})["total_buses"] = len(buses)\n'
-        '        data.setdefault("meta", {})["last_updated"] = "2026-09-18"',
+        '        data.setdefault("meta", {})["last_updated"] = date.today().isoformat()',
     )
     # 2. dedup_buses.py - sync right before the data write
     patch(
