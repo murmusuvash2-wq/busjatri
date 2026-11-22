@@ -9363,33 +9363,46 @@
    "route": "Bishnupur - Bankura",
    "stoppages": [
     {
-     "no": 5,
+     "name": "Bishnupur",
+     "up_time": "1:10 PM",
+     "down_time": "7:45 PM"
+    },
+    {
+     "name": "Bankadaha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Piardoba",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sabrakon",
+     "up_time": "2:10 PM",
+     "down_time": "6:45 PM"
+    },
+    {
      "name": "Panchmura",
      "up_time": "6:35 AM",
      "down_time": "10:50 AM"
     },
     {
-     "no": 6,
      "name": "Taldangra",
      "up_time": "7:00 AM",
      "down_time": "10:30 AM"
     },
     {
-     "no": 7,
      "name": "Ratanpur",
      "up_time": "7:25 AM",
-     "down_time": "9:15 AM",
-     "is_est_up": true,
-     "is_est_down": true
+     "down_time": "9:15 AM"
     },
     {
-     "no": 8,
      "name": "Dhaldanga",
      "up_time": "7:50 AM",
      "down_time": "9:20 AM"
     },
     {
-     "no": 9,
      "name": "Bankura",
      "up_time": "8:10 AM",
      "down_time": "9:00 AM"
@@ -440745,16 +440758,59 @@
    "route": "Patrasayer - Molian",
    "stoppages": [
     {
-     "no": 1,
      "name": "Patrasayer",
      "up_time": "6:40 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Sonamukhi",
+     "up_time": "8:25 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "10:25 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Boga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Molian",
      "up_time": "9:20 AM",
-     "down_time": ""
+     "down_time": "12:40 PM"
     }
    ],
    "source": "wbbus.in",
@@ -442418,16 +442474,49 @@
    "route": "Bankura - Arambagh",
    "stoppages": [
     {
-     "no": 1,
      "name": "Bankura",
      "up_time": "6:50 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Onda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ramsagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up_time": "8:40 AM",
+     "down_time": "4:05 PM"
+    },
+    {
+     "name": "Moynapur",
+     "up_time": "9:40 AM",
+     "down_time": "2:15 PM"
+    },
+    {
+     "name": "Jayrambati",
+     "up_time": "10:40 AM",
+     "down_time": "1:20 PM"
+    },
+    {
+     "name": "Kamarpukur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Arambagh",
      "up_time": "9:45 AM",
-     "down_time": ""
+     "down_time": "12:20 PM"
     }
    ],
    "source": "wbbus.in",
@@ -442678,16 +442767,149 @@
    "route": "Bankura - Hijli Sorif",
    "stoppages": [
     {
-     "no": 1,
      "name": "Bankura",
      "up_time": "5:00 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Onda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ramsagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up_time": "6:25 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Bankadaha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhadika",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Garhbeta",
+     "up_time": "7:25 AM",
+     "down_time": "6:30 PM"
+    },
+    {
+     "name": "Raskundu",
+     "up_time": "",
+     "down_time": "6:15 PM"
+    },
+    {
+     "name": "Chandrakona Town",
+     "up_time": "8:10 AM",
+     "down_time": "5:40 PM"
+    },
+    {
+     "name": "Kalikapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khirpai",
+     "up_time": "8:30 AM",
+     "down_time": "5:10 PM"
+    },
+    {
+     "name": "Radhanagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Baroda Chowkan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ghatal",
+     "up_time": "9:05 AM",
+     "down_time": "4:30 PM"
+    },
+    {
+     "name": "Daspur",
+     "up_time": "9:15 AM",
+     "down_time": "4:20 PM"
+    },
+    {
+     "name": "Sultannagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Goura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khukur Daha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Keshapat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Mechogram",
+     "up_time": "10:05 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "name": "Mecheda",
+     "up_time": "",
+     "down_time": "3:20 PM"
+    },
+    {
+     "name": "Nimtouri",
+     "up_time": "",
+     "down_time": "2:50 PM"
+    },
+    {
+     "name": "Nandakumar",
+     "up_time": "",
+     "down_time": "2:40 PM"
+    },
+    {
+     "name": "Chandipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bajkul",
+     "up_time": "",
+     "down_time": "2:10 PM"
+    },
+    {
+     "name": "Henria",
+     "up_time": "11:50 AM",
+     "down_time": "1:55 PM"
+    },
+    {
+     "name": "Boga",
+     "up_time": "",
+     "down_time": "1:00 PM"
+    },
+    {
      "name": "Hijli Sorif",
      "up_time": "7:00 AM",
-     "down_time": ""
+     "down_time": "12:40 PM"
     }
    ],
    "source": "wbbus.in",
@@ -446430,16 +446652,64 @@
    "route": "Khatra - Durgapur (Station)",
    "stoppages": [
     {
-     "no": 1,
      "name": "Khatra",
      "up_time": "10:50 AM",
+     "down_time": "6:30 PM"
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "12:45 PM",
+     "down_time": "4:25 PM"
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Durgapur (Station)",
      "up_time": "1:25 PM",
-     "down_time": ""
+     "down_time": "2:25 PM"
     }
    ],
    "source": "wbbus.in",
@@ -446464,16 +446734,84 @@
    "route": "Chittaranjan - Khatra",
    "stoppages": [
     {
-     "no": 1,
      "name": "Chittaranjan",
      "up_time": "6:20 AM",
+     "down_time": "7:30 PM"
+    },
+    {
+     "name": "Asansol",
+     "up_time": "7:20 AM",
+     "down_time": "7:00 PM"
+    },
+    {
+     "name": "Raniganj",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Andal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up_time": "8:20 AM",
+     "down_time": "5:35 PM"
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up_time": "8:55 AM",
+     "down_time": "5:15 PM"
+    },
+    {
+     "name": "Barjora",
+     "up_time": "9:15 AM",
+     "down_time": "5:00 PM"
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "9:30 AM",
+     "down_time": "4:40 PM"
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "9:45 AM",
+     "down_time": "4:25 PM"
+    },
+    {
+     "name": "Bankura",
+     "up_time": "10:30 AM",
+     "down_time": "4:00 PM"
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Khatra",
      "up_time": "9:45 AM",
-     "down_time": ""
+     "down_time": "2:10 PM"
     }
    ],
    "source": "wbbus.in",
@@ -448010,16 +448348,79 @@
    "route": "Ramharipur - Purulia",
    "stoppages": [
     {
-     "no": 1,
      "name": "Ramharipur",
      "up_time": "6:30 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Gangajalghati",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Desuria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Amarkanan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Gobindadham",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kanchanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "9:00 AM",
+     "down_time": "5:45 PM"
+    },
+    {
+     "name": "Chhatna",
+     "up_time": "9:15 AM",
+     "down_time": "3:45 PM"
+    },
+    {
+     "name": "Kharbona",
+     "up_time": "9:30 AM",
+     "down_time": "3:35 PM"
+    },
+    {
+     "name": "Kamalpur",
+     "up_time": "9:50 AM",
+     "down_time": "3:15 PM"
+    },
+    {
+     "name": "Bishpuria",
+     "up_time": "10:10 AM",
+     "down_time": "3:00 PM"
+    },
+    {
+     "name": "Hura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Lalpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ladhurka",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Purulia",
      "up_time": "8:30 AM",
-     "down_time": ""
+     "down_time": "1:25 PM"
     }
    ],
    "source": "wbbus.in",
@@ -452558,16 +452959,124 @@
    "route": "Haludkanali - Kolkata (Esplanade)",
    "stoppages": [
     {
-     "no": 1,
      "name": "Haludkanali",
      "up_time": "4:30 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Khatra",
+     "up_time": "5:00 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (Muchipara)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Panagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Budbud",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Galsi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bardhaman",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Saktigarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Salap",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kona Express More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Kolkata (Esplanade)",
      "up_time": "9:05 AM",
-     "down_time": ""
+     "down_time": "3:25 PM"
     }
    ],
    "source": "wbbus.in",
@@ -454957,16 +455466,119 @@
    "route": "Tatanagar - Kolkata (Esplanade)",
    "stoppages": [
     {
-     "no": 1,
      "name": "Tatanagar",
      "up_time": "7:15 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Patamda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Katin",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Barabazar",
+     "up_time": "8:10 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Sindri",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Manbazar",
+     "up_time": "9:10 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Puncha",
+     "up_time": "9:30 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Dhadki",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Belut",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Saldiha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Jorda",
+     "up_time": "10:10 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "10:30 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "10:55 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up_time": "12:05 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (Muchipara)",
+     "up_time": "12:10 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Panagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bardhaman",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Saktigarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Kolkata (Esplanade)",
      "up_time": "1:50 PM",
-     "down_time": ""
+     "down_time": "9:50 PM"
     }
    ],
    "source": "wbbus.in",
@@ -456583,16 +457195,89 @@
    "route": "Baidyanathpur - Kashipur",
    "stoppages": [
     {
-     "no": 1,
      "name": "Baidyanathpur",
      "up_time": "5:50 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Arkama",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khatra",
+     "up_time": "6:50 AM",
+     "down_time": "5:30 PM"
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "7:50 AM",
+     "down_time": "4:25 PM"
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "9:25 AM",
+     "down_time": "3:45 PM"
+    },
+    {
+     "name": "Chhatna",
+     "up_time": "9:45 AM",
+     "down_time": "3:05 PM"
+    },
+    {
+     "name": "Kharbona",
+     "up_time": "10:00 AM",
+     "down_time": "2:50 PM"
+    },
+    {
+     "name": "Kamalpur",
+     "up_time": "10:25 AM",
+     "down_time": "2:30 PM"
+    },
+    {
+     "name": "Alijhara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kustore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Lara More",
+     "up_time": "11:15 AM",
+     "down_time": "2:00 PM"
+    },
+    {
+     "name": "Sonathali",
+     "up_time": "11:30 AM",
+     "down_time": "1:40 PM"
+    },
+    {
      "name": "Kashipur",
      "up_time": "10:55 AM",
-     "down_time": ""
+     "down_time": "1:05 PM"
     }
    ],
    "source": "wbbus.in",
@@ -456972,16 +457657,44 @@
    "route": "Lodda - Kenjakura",
    "stoppages": [
     {
-     "no": 1,
      "name": "Lodda",
      "up_time": "7:00 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Harmasra",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bibarda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ratanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Chhatna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Kenjakura",
      "up_time": "9:00 AM",
-     "down_time": ""
+     "down_time": "12:00 PM"
     }
    ],
    "source": "wbbus.in",
@@ -458002,16 +458715,114 @@
    "route": "Kenjakura - Kolkata (Esplanade)",
    "stoppages": [
     {
-     "no": 1,
      "name": "Kenjakura",
      "up_time": "8:30 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Bankura",
+     "up_time": "9:00 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Narrah",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Nikunjapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Gamidya",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Joykrishnapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bishnupur",
+     "up_time": "10:10 AM",
+     "down_time": ""
+    },
+    {
+     "name": "Joypur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kotulpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bengai",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Arambagh",
+     "up_time": "12:30 PM",
+     "down_time": ""
+    },
+    {
+     "name": "Mayapur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Champadanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Siakhala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Mosat",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Chanditala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Salap",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kona Express More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Kolkata (Esplanade)",
      "up_time": "1:25 PM",
-     "down_time": ""
+     "down_time": "10:00 PM"
     }
    ],
    "source": "wbbus.in",
@@ -458104,16 +458915,124 @@
    "route": "Haludkanali - Kolkata (Esplanade)",
    "stoppages": [
     {
-     "no": 1,
      "name": "Haludkanali",
      "up_time": "4:40 AM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Khatra",
+     "up_time": "5:30 AM",
+     "down_time": "9:50 PM"
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bankura",
+     "up_time": "6:30 AM",
+     "down_time": "8:55 PM"
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up_time": "7:40 AM",
+     "down_time": "7:45 PM"
+    },
+    {
+     "name": "Durgapur (Muchipara)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Panagarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Budbud",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Galsi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bardhaman",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Saktigarh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dankuni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Salap",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kona Express More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Santragachi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Kolkata (Esplanade)",
      "up_time": "9:15 AM",
-     "down_time": ""
+     "down_time": "3:50 PM"
     }
    ],
    "source": "wbbus.in",
@@ -458307,13 +459226,96 @@
    "route": "Digha - Siliguri",
    "stoppages": [
     {
-     "no": 1,
      "name": "Digha",
      "up_time": "12:10 AM",
+     "down_time": "10:35 AM"
+    },
+    {
+     "name": "Ramnagar",
+     "up_time": "12:30 PM",
+     "down_time": "10:10 AM"
+    },
+    {
+     "name": "Contai",
+     "up_time": "1:15 PM",
+     "down_time": "9:30 AM"
+    },
+    {
+     "name": "Belda",
+     "up_time": "2:15 PM",
+     "down_time": "8:10 AM"
+    },
+    {
+     "name": "Kharagpur",
+     "up_time": "3:35 PM",
+     "down_time": "6:45 AM"
+    },
+    {
+     "name": "Medinipur",
+     "up_time": "4:15 PM",
+     "down_time": "6:30 AM"
+    },
+    {
+     "name": "Chandrakona Road",
+     "up_time": "4:45 PM",
+     "down_time": "6:00 AM"
+    },
+    {
+     "name": "Garhbeta",
+     "up_time": "5:10 PM",
+     "down_time": "5:45 AM"
+    },
+    {
+     "name": "Bishnupur",
+     "up_time": "5:40 PM",
+     "down_time": "5:30 AM"
+    },
+    {
+     "name": "Bankura",
+     "up_time": "6:40 PM",
+     "down_time": "4:50 AM"
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Durgapur (Station)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up_time": "8:15 PM",
+     "down_time": "3:30 AM"
+    },
+    {
+     "name": "Durgapur (Muchipara)",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Illambazar",
+     "up_time": "9:00 PM",
+     "down_time": "3:00 AM"
+    },
+    {
+     "name": "Bolpur",
+     "up_time": "9:30 PM",
+     "down_time": "2:30 AM"
+    },
+    {
+     "name": "Malda",
+     "up_time": "2:30 AM",
+     "down_time": "10:00 PM"
+    },
+    {
+     "name": "Islampur",
+     "up_time": "6:00 AM",
+     "down_time": "6:00 PM"
+    },
+    {
      "name": "Siliguri",
      "up_time": "7:30 AM",
      "down_time": "7:30 AM"
@@ -458339,16 +459341,69 @@
    "route": "Lakshanpur - Raniganj",
    "stoppages": [
     {
-     "no": 1,
      "name": "Lakshanpur",
      "up_time": "6:40 AM",
+     "down_time": "6:45 PM"
+    },
+    {
+     "name": "Susunia Hill",
+     "up_time": "7:10 AM",
+     "down_time": "6:15 PM"
+    },
+    {
+     "name": "Chhatna",
+     "up_time": "7:35 AM",
+     "down_time": "5:45 PM"
+    },
+    {
+     "name": "Bankura",
+     "up_time": "8:30 AM",
+     "down_time": "5:20 PM"
+    },
+    {
+     "name": "Kanchanpur",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Gobindadham",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Amarkanan",
+     "up_time": "9:25 AM",
+     "down_time": "3:55 PM"
+    },
+    {
+     "name": "Desuria",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Gangajalghati",
+     "up_time": "9:40 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "name": "Durlavpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Nandanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Mejia",
+     "up_time": "9:55 AM",
+     "down_time": "3:15 PM"
+    },
+    {
      "name": "Raniganj",
      "up_time": "8:40 AM",
-     "down_time": ""
+     "down_time": "2:45 PM"
     }
    ],
    "source": "wbbus.in",
@@ -510296,8 +511351,34 @@
    "contact_number": "Not Available !",
    "depot_name": "",
    "route": "Bishnupur - Bankura",
-   "stoppages": [],
-   "source": "bussathi.in",
+   "stoppages": [
+    {
+     "name": "Bishnupur",
+     "up_time": "1:30 PM",
+     "down_time": "6:45 PM"
+    },
+    {
+     "name": "Ramsagar",
+     "up_time": "",
+     "down_time": "6:30 PM"
+    },
+    {
+     "name": "Onda",
+     "up_time": "2:10 PM",
+     "down_time": "6:15 PM"
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "2:30 PM",
+     "down_time": "5:50 PM"
+    },
+    {
+     "name": "Bankura",
+     "up_time": "3:00 PM",
+     "down_time": "5:10 PM"
+    }
+   ],
+   "source": "bussathi.in + wbbus.in detail",
    "total_stoppages": 0,
    "detail_url": "https://bussathi.in/bus/1348"
   },
@@ -533506,16 +534587,89 @@
    "route": "Digha - Asansol",
    "stoppages": [
     {
-     "no": 1,
      "name": "Digha",
      "up_time": "8:10 AM",
+     "down_time": "3:40 AM"
+    },
+    {
+     "name": "Contai",
+     "up_time": "9:20 AM",
+     "down_time": "2:40 AM"
+    },
+    {
+     "name": "Egra",
+     "up_time": "10:05 AM",
+     "down_time": "2:00 AM"
+    },
+    {
+     "name": "Belda",
+     "up_time": "10:45 AM",
+     "down_time": "1:20 AM"
+    },
+    {
+     "name": "Kharagpur",
+     "up_time": "12:50 PM",
+     "down_time": "12:20 AM"
+    },
+    {
+     "name": "Medinipur",
+     "up_time": "1:05 PM",
+     "down_time": "11:40 PM"
+    },
+    {
+     "name": "Salboni",
+     "up_time": "1:45 PM",
+     "down_time": "11:00 PM"
+    },
+    {
+     "name": "Chandrakona Road",
+     "up_time": "2:05 PM",
+     "down_time": "10:50 PM"
+    },
+    {
+     "name": "Garhbeta",
+     "up_time": "2:25 PM",
+     "down_time": "10:30 PM"
+    },
+    {
+     "name": "Bankadaha",
+     "up_time": "2:40 PM",
+     "down_time": "10:20 PM"
+    },
+    {
+     "name": "Bishnupur",
+     "up_time": "3:15 PM",
+     "down_time": "10:10 PM"
+    },
+    {
+     "name": "Onda",
+     "up_time": "3:40 PM",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Bankura",
+     "up_time": "4:10 PM",
+     "down_time": "8:40 PM"
+    },
+    {
+     "name": "Barjora",
+     "up_time": "4:50 PM",
+     "down_time": "8:00 PM"
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up_time": "5:10 PM",
+     "down_time": "7:40 PM"
+    },
+    {
+     "name": "Durgapur (City Center)",
+     "up_time": "5:25 PM",
+     "down_time": "7:05 PM"
+    },
+    {
      "name": "Asansol",
      "up_time": "6:20 PM",
-     "down_time": ""
+     "down_time": "6:00 PM"
     }
    ],
    "source": "wbbus.in",
@@ -533723,16 +534877,54 @@
    "route": "Fulkusma - Bankura",
    "stoppages": [
     {
-     "no": 1,
      "name": "Fulkusma",
      "up_time": "4:50 AM",
+     "down_time": "6:40 PM"
+    },
+    {
+     "name": "Motgoda",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Raipur",
+     "up_time": "11:25 AM",
+     "down_time": "6:10 PM"
+    },
+    {
+     "name": "P More",
+     "up_time": "11:40 AM",
+     "down_time": "5:55 PM"
+    },
+    {
+     "name": "Bikrampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Simlapal",
+     "up_time": "12:10 PM",
+     "down_time": "5:40 PM"
+    },
+    {
+     "name": "Taldangra",
+     "up_time": "12:30 PM",
+     "down_time": "5:15 PM"
+    },
+    {
+     "name": "Ratanpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "1:20 PM",
+     "down_time": "4:20 PM"
+    },
+    {
      "name": "Bankura",
      "up_time": "7:30 AM",
-     "down_time": ""
+     "down_time": "4:00 PM"
     }
    ],
    "source": "wbbus.in",
@@ -533754,16 +534946,79 @@
    "route": "Belpahari - Durgapur (Station)",
    "stoppages": [
     {
-     "no": 1,
      "name": "Belpahari",
      "up_time": "6:00 AM",
      "down_time": ""
     },
     {
-     "no": 2,
-     "name": "Durgapur (Station)",
+     "name": "Chendapathar",
      "up_time": "",
      "down_time": ""
+    },
+    {
+     "name": "Ranibandh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khatra",
+     "up_time": "9:30 AM",
+     "down_time": "2:40 PM"
+    },
+    {
+     "name": "Hatirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bangla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Indpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sunukpahari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Puabagan",
+     "up_time": "",
+     "down_time": "1:40 PM"
+    },
+    {
+     "name": "Dhaldanga",
+     "up_time": "",
+     "down_time": "1:35 PM"
+    },
+    {
+     "name": "Bankura",
+     "up_time": "",
+     "down_time": "1:30 PM"
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": "1:15 PM"
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": "1:00 PM"
+    },
+    {
+     "name": "Barjora",
+     "up_time": "",
+     "down_time": "12:40 PM"
+    },
+    {
+     "name": "Durgapur (Station)",
+     "up_time": "",
+     "down_time": "12:20 PM"
     }
    ],
    "source": "wbbus.in",
@@ -533847,16 +535102,69 @@
    "route": "Bardhaman - Bankura",
    "stoppages": [
     {
-     "no": 1,
      "name": "Bardhaman",
      "up_time": "8:30 AM",
+     "down_time": "5:50 PM"
+    },
+    {
+     "name": "Telipukur",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Khandaghosh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Rasulpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kankardanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhansimla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sonamukhi",
+     "up_time": "10:50 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "name": "Rampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bhairabdanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Chhandar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Makurgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Bankura",
      "up_time": "12:30 PM",
-     "down_time": ""
+     "down_time": "2:00 PM"
     }
    ],
    "source": "wbbus.in",
@@ -534157,16 +535465,69 @@
    "route": "Bankura - Bardhaman",
    "stoppages": [
     {
-     "no": 1,
      "name": "Bankura",
      "up_time": "8:40 AM",
      "down_time": ""
     },
     {
-     "no": 2,
-     "name": "Bardhaman",
+     "name": "Makurgram",
      "up_time": "",
      "down_time": ""
+    },
+    {
+     "name": "Beliatore",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Chhandar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bhairabdanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Rampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sonamukhi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Dhansimla",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Kankardanga",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Rasulpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khandaghosh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Telipukur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bardhaman",
+     "up_time": "",
+     "down_time": "2:00 PM"
     }
    ],
    "source": "wbbus.in",
