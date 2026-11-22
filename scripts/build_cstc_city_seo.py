@@ -172,7 +172,10 @@ def main():
     CSS.write_text(css_text(), encoding="utf-8")
     generated = 0
     for route, obj in data.items():
-        image_rel = f"assets/cstc-schedules/{route}.png"
+        # the CSTC schedule photos were removed from the repo (11 MB, never
+        # referenced by any page - the schedule is rendered as text). Keep the
+        # variable so page_html() keeps its signature, but pass nothing.
+        image_rel = ""
         path = OUT_DIR / f"cstc-{slug(route)}.html"
         path.write_text(page_html(route, obj, image_rel), encoding="utf-8")
         generated += 1
