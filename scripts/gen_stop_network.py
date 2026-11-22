@@ -143,6 +143,15 @@ def fmt_min(m):
     return f"{h12}:{mi:02d} {ap}"
 
 
+def no_time_label(b):
+    """City / frequency services have no fixed departure time - say so instead of a bare dash."""
+    src = (b.get("source") or "").lower()
+    bt = (b.get("bus_type") or "").lower()
+    city = ("kolkata-travel-router" in src or "kolbusopedia" in src or "wbbustime" in src
+            or "wbtc" in bt or len(b.get("stoppages") or []) >= 15)
+    return "Freq." if city else "N/A"
+
+
 def build_index(buses):
     """slug(stop) -> {display Counter, rows: [ (min, time_str, towards, bus) ]}"""
     idx = defaultdict(lambda: {"display": Counter(), "rows": []})
@@ -167,7 +176,7 @@ def build_index(buses):
                 if s.get("down_time"):
                     e["rows"].append((to_min(s["down_time"]), s["down_time"], b.get("origin"), b))
             else:
-                e["rows"].append((None, "—", b.get("destination"), b))
+                e["rows"].append((None, no_time_label(b), b.get("destination"), b))
     return idx
 
 
@@ -293,6 +302,15 @@ def stop_page(stop, e, route_pages):
 
     faq_visible, faq_ld = faq_block(stop, n_buses, first, last, top_dests, night)
 
+    if first and last:
+        first_last_chips = (
+            f'<span class="schip hot">⏰ First {esc(first[1])}</span>'
+            f'<span class="schip">⏰ Last {esc(last[1])}</span>'
+        )
+    else:
+        first_last_chips = '<span class="schip hot">⏰ Runs on frequency</span>'
+
+
     crumb_ld = json.dumps({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Home", "item": BASE + "/"},
         {"@type": "ListItem", "position": 2, "name": "Stops", "item": BASE + "/via/"},
@@ -338,8 +356,7 @@ def stop_page(stop, e, route_pages):
   <p class="bn-sub">{esc(stop)} স্টপেজ হয়ে যাওয়া সব বাসের সময়সূচী</p>
   {TRUST}<div class="stat-chips">
     <span class="schip">🚘 {n_buses} buses</span>
-    <span class="schip hot">⏰ First {esc(first[1]) if first else '—'}</span>
-    <span class="schip">⏰ Last {esc(last[1]) if last else '—'}</span>
+    {first_last_chips}
     <span class="schip">📍 {len(dests)} destinations</span>
   </div>
 </div>
