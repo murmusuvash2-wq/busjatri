@@ -15347,6 +15347,201 @@
           "down_time": "12:25 PM"
         }
       ]
+    },
+    {
+      "target_id": "bussathi-mousumi-509",
+      "departure_time": "6:50 AM",
+      "arrival_time": "10:50 AM",
+      "contact_number": "8170973102 / 8391909096",
+      "source": "facebook (community report)",
+      "service_note": "Mousumi / Disha — Baidyanathpur-Khatra-Manbazar-Purulia. Service restarted; times confirmed by the operator. Driver 8170973102, conductor 8391909096. Return: Purulia 1:20 PM, Gopalnagar 2:40 PM, Manbazar 3:30 PM, Payrachali 3:55 PM, Hatirampur 4:25 PM, Khatra 5:00 PM, Arkama 5:35 PM, Baidyanathpur 5:50 PM.",
+      "stoppages": [
+        {
+          "name": "Baidyanathpur",
+          "up_time": "6:50 AM",
+          "down_time": "5:50 PM"
+        },
+        {
+          "name": "Arkama",
+          "up_time": "7:10 AM",
+          "down_time": "5:35 PM"
+        },
+        {
+          "name": "Khatra",
+          "up_time": "7:50 AM",
+          "down_time": "5:00 PM"
+        },
+        {
+          "name": "Supur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Hatirampur",
+          "up_time": "8:05 AM",
+          "down_time": "4:25 PM"
+        },
+        {
+          "name": "Payrachali",
+          "up_time": "8:40 AM",
+          "down_time": "3:55 PM"
+        },
+        {
+          "name": "Manbazar",
+          "up_time": "9:10 AM",
+          "down_time": "3:30 PM"
+        },
+        {
+          "name": "Gopalnagar",
+          "up_time": "9:40 AM",
+          "down_time": "2:40 PM"
+        },
+        {
+          "name": "Kenda",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Chakaltore",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Simulia",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Purulia",
+          "up_time": "10:50 AM",
+          "down_time": "1:20 PM"
+        }
+      ]
+    },
+    {
+      "target_id": "bussathi-krishna-sarathi-868",
+      "departure_time": "7:50 AM",
+      "arrival_time": "12:40 PM",
+      "bus_type": "Private - NON AC",
+      "source": "facebook (community report)",
+      "service_note": "Krishna Sarathi superfast — Joydeb (Kenduli) to Nabadwip Dham, the only direct service. Tata Motors Ultra Prime 44+D LPO 11.6/54 BS-6, reg WB-39D-0880. Guskara stop is 20 min (in 9:50, out 10:10 up / in 3:30, out 3:45 down). Return: Nabadwip 12:55 PM, Kusumgram 1:55 PM, Maldanga 2:10 PM, Bolgona 3:00 PM, Guskara 3:45 PM, Morebandh 4:20 PM, Illambazar 5:00 PM, Joydeb 5:25 PM.",
+      "stoppages": [
+        {
+          "name": "Joydeb Bus Stand",
+          "up_time": "7:50 AM",
+          "down_time": "5:25 PM"
+        },
+        {
+          "name": "Junbazar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Payer",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Dumrut",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Illambazar",
+          "up_time": "8:20 AM",
+          "down_time": "5:00 PM"
+        },
+        {
+          "name": "11 Mile",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Chhora",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Morebandh",
+          "up_time": "9:05 AM",
+          "down_time": "4:20 PM"
+        },
+        {
+          "name": "Ausgram",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Guskara Bus Stand",
+          "up_time": "10:10 AM",
+          "down_time": "3:45 PM"
+        },
+        {
+          "name": "Debpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Muratipur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bolgona",
+          "up_time": "10:45 AM",
+          "down_time": "3:00 PM"
+        },
+        {
+          "name": "Bhatakul",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Chandrapur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Maldanga",
+          "up_time": "11:25 AM",
+          "down_time": "2:10 PM"
+        },
+        {
+          "name": "Monteswar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Kusumgram",
+          "up_time": "11:40 AM",
+          "down_time": "1:55 PM"
+        },
+        {
+          "name": "Nadanghat",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Nadanghat More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Heyamtpur More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Nabadwip Station",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Nabadwip Bus Stand",
+          "up_time": "12:40 PM",
+          "down_time": "12:55 PM"
+        }
+      ]
     }
   ]
 }
