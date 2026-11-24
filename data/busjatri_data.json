@@ -11629,55 +11629,76 @@
    "origin": "Bardhaman",
    "destination": "Suri",
    "departure_time": "8:00 AM",
-   "arrival_time": "12:30 PM",
+   "arrival_time": "11:15 AM",
    "contact_number": "+919679963388",
    "depot_name": "Bardhaman",
    "route": "Bardhaman - Suri",
    "stoppages": [
     {
-     "no": 1,
-     "name": "Bardhaman",
+     "name": "Bardhaman Nababhat Bus Stand",
      "up_time": "8:00 AM",
+     "down_time": "4:10 PM"
+    },
+    {
+     "name": "108 Shiv Mandir",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
-     "name": "Guskara",
-     "up_time": "8:50 AM",
-     "down_time": "3:05 PM"
+     "name": "Haldi",
+     "up_time": "8:20 AM",
+     "down_time": "3:50 PM"
     },
     {
-     "no": 3,
+     "name": "Kayrapur",
+     "up_time": "8:30 AM",
+     "down_time": "3:40 PM"
+    },
+    {
+     "name": "Orgram",
+     "up_time": "8:40 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "name": "Guskara Bus Stand",
+     "up_time": "9:00 AM",
+     "down_time": "3:10 PM"
+    },
+    {
+     "name": "Ausgram",
+     "up_time": "9:15 AM",
+     "down_time": "2:40 PM"
+    },
+    {
+     "name": "Morebandh",
+     "up_time": "9:30 AM",
+     "down_time": "2:20 PM"
+    },
+    {
+     "name": "Egaro Mile",
+     "up_time": "9:50 AM",
+     "down_time": "2:00 PM"
+    },
+    {
      "name": "Illambazar",
-     "up_time": "10:10 AM",
-     "down_time": "1:35 PM"
+     "up_time": "10:00 AM",
+     "down_time": "1:50 PM"
     },
     {
-     "no": 4,
-     "name": "Joydeb",
-     "up_time": "10:55 AM",
-     "down_time": "12:20 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "name": "Dubrajpur Power House More",
+     "up_time": "10:40 AM",
+     "down_time": "1:10 PM"
     },
     {
-     "no": 5,
-     "name": "Dubrajpur",
-     "up_time": "11:45 AM",
-     "down_time": "12:25 PM",
-     "is_est_up": true,
-     "is_est_down": true
-    },
-    {
-     "no": 6,
-     "name": "Suri",
-     "up_time": "12:30 PM",
+     "name": "Suri Bus Stand",
+     "up_time": "11:15 AM",
      "down_time": "12:30 PM"
     }
    ],
-   "source": "wbbus.in",
+   "source": "facebook (community report)",
    "total_stoppages": 6,
-   "detail_url": "https://wbbus.in/bus/krishnagopal-wb41e3984-bardhaman-suri-1363"
+   "detail_url": "https://wbbus.in/bus/krishnagopal-wb41e3984-bardhaman-suri-1363",
+   "service_note": "Krishna Gopal (WB-41E-3984, Tata LP 1512 Euro-2) — Bardhaman to Suri. Guskara 8:50 in / 9:00 out. Return: Suri 12:30 PM, Illambazar 1:45 in / 1:50 out, Guskara 2:55 in / 3:10 out, Bardhaman 4:10 PM. Connects for Dumka / Deoghar, Rampurhat and Nalhati mail."
   },
   {
    "id": "wbbus-in-lal-parul-1346",
@@ -40668,117 +40689,122 @@
    "bus_type": "Private - NON AC",
    "origin": "Barakar",
    "destination": "Katwa",
-   "departure_time": "4:40 AM",
+   "departure_time": "4:45 AM",
    "arrival_time": "10:15 AM",
    "contact_number": "8157351024",
    "depot_name": "Barakar",
    "route": "Barakar - Katwa",
    "stoppages": [
     {
-     "no": 1,
-     "name": "Barakar",
-     "up_time": "4:40 AM",
-     "down_time": "4:20 PM"
+     "name": "Barakar Bus Stand",
+     "up_time": "4:45 AM",
+     "down_time": "4:10 PM"
     },
     {
-     "no": 2,
      "name": "Kulti",
-     "up_time": "5:05 AM",
-     "down_time": "3:20 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 3,
-     "name": "Neamatpur",
-     "up_time": "5:25 AM",
-     "down_time": "3:25 PM",
-     "is_est_up": true,
-     "is_est_down": true
-    },
-    {
-     "no": 4,
-     "name": "Asansol",
+     "name": "Asansol Bus Stand",
      "up_time": "5:50 AM",
-     "down_time": "3:30 PM"
+     "down_time": "3:35 PM"
     },
     {
-     "no": 5,
-     "name": "Raniganj",
-     "up_time": "6:10 AM",
-     "down_time": "2:10 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "name": "Raniganj Punjabi More",
+     "up_time": "6:15 AM",
+     "down_time": "2:55 PM"
     },
     {
-     "no": 6,
      "name": "Andal",
-     "up_time": "6:30 AM",
-     "down_time": "2:15 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 7,
-     "name": "Durgapur (City Center)",
+     "name": "Durgapur City Center",
      "up_time": "6:50 AM",
-     "down_time": "2:20 PM"
+     "down_time": "2:25 PM"
     },
     {
-     "no": 8,
-     "name": "Durgapur (Muchipara)",
-     "up_time": "7:05 AM",
-     "down_time": "12:25 PM",
-     "is_est_down": true
+     "name": "Rajbandh",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 9,
-     "name": "Panagarh",
-     "up_time": "7:35 AM",
-     "down_time": "12:30 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "name": "Panagarh Bazar",
+     "up_time": "7:25 AM",
+     "down_time": "1:50 PM"
     },
     {
-     "no": 10,
-     "name": "Budbud",
-     "up_time": "8:10 AM",
-     "down_time": "12:35 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "name": "Budbud Bazar",
+     "up_time": "7:45 AM",
+     "down_time": "1:35 PM"
     },
     {
-     "no": 11,
-     "name": "Guskara",
+     "name": "Mankar Hattala More",
+     "up_time": "7:55 AM",
+     "down_time": "1:25 PM"
+    },
+    {
+     "name": "Jamtara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Abhirampur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Guskara Bus Stand",
      "up_time": "8:40 AM",
-     "down_time": "12:40 PM"
+     "down_time": "12:45 PM"
     },
     {
-     "no": 12,
-     "name": "Balgona",
-     "up_time": "9:10 AM",
-     "down_time": "10:55 AM",
-     "is_est_up": true,
-     "is_est_down": true
+     "name": "Debpur",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 13,
+     "name": "Muratipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bolgona More",
+     "up_time": "9:15 AM",
+     "down_time": "12:00 PM"
+    },
+    {
+     "name": "Nigan",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Koichor",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Srikhanda",
-     "up_time": "9:45 AM",
-     "down_time": "11:00 AM",
-     "is_est_up": true,
-     "is_est_down": true
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 14,
-     "name": "Katwa",
+     "name": "Katwa Station",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Katwa Bus Stand",
      "up_time": "10:15 AM",
      "down_time": "11:05 AM"
     }
    ],
-   "source": "bussathi.in",
+   "source": "facebook (community report)",
    "total_stoppages": 14,
-   "detail_url": "https://bussathi.in/bus/322"
+   "detail_url": "https://bussathi.in/bus/322",
+   "service_note": "Gurukripa — Barakar to Katwa. Asansol 5:40 in / 5:50 out; Durgapur City Center 6:45 in / 6:50 out; Panagarh 7:20 in / 7:25 out; Guskara 8:35 in / 8:40 out. Return: Katwa 11:05 AM, Guskara 12:45 PM, Asansol 3:35 PM, Barakar 4:10 PM."
   },
   {
    "id": "bussathi-gurunanak-245",
@@ -56749,87 +56775,90 @@
    "route": "Dainhat - Asansol",
    "stoppages": [
     {
-     "no": 1,
-     "name": "Dainhat",
+     "name": "Dainhat Bus Stand",
      "up_time": "5:15 AM",
      "down_time": "4:35 PM"
     },
     {
-     "no": 2,
-     "name": "Katwa",
+     "name": "Katwa Bus Stand",
      "up_time": "5:55 AM",
-     "down_time": "3:50 PM"
+     "down_time": "4:10 PM"
     },
     {
-     "no": 3,
-     "name": "Balgona",
+     "name": "Srikhanda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Koichor",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bolgona Mach Bazar More",
      "up_time": "6:50 AM",
      "down_time": "2:45 PM"
     },
     {
-     "no": 4,
      "name": "Muratipur",
-     "up_time": "7:20 AM",
-     "down_time": "2:00 PM",
-     "is_est_up": true,
-     "is_est_down": true
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 5,
-     "name": "Guskara",
-     "up_time": "7:50 AM",
+     "name": "Debpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Guskara Bus Stand",
+     "up_time": "7:40 AM",
      "down_time": "2:05 PM"
     },
     {
-     "no": 6,
-     "name": "Budbud",
-     "up_time": "8:40 AM",
-     "down_time": "12:50 PM"
+     "name": "Abhirampur",
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 7,
-     "name": "Panagarh",
+     "name": "Mankar Hattala More",
+     "up_time": "8:25 AM",
+     "down_time": "1:10 PM"
+    },
+    {
+     "name": "Budbud Bazar",
+     "up_time": "8:40 AM",
+     "down_time": "12:55 PM"
+    },
+    {
+     "name": "Panagarh Bazar",
      "up_time": "9:00 AM",
      "down_time": "12:30 PM"
     },
     {
-     "no": 8,
-     "name": "Durgapur (Muchipara)",
-     "up_time": "9:20 AM",
-     "down_time": "12:10 PM"
-    },
-    {
-     "no": 9,
-     "name": "Durgapur (City Center)",
-     "up_time": "9:30 AM",
+     "name": "Durgapur City Center",
+     "up_time": "9:40 AM",
      "down_time": "12:00 PM"
     },
     {
-     "no": 10,
      "name": "Andal",
-     "up_time": "9:55 AM",
-     "down_time": "10:45 AM",
-     "is_est_up": true,
-     "is_est_down": true
+     "up_time": "",
+     "down_time": ""
     },
     {
-     "no": 11,
-     "name": "Raniganj",
-     "up_time": "10:15 AM",
-     "down_time": "10:50 AM",
-     "is_est_up": true,
-     "is_est_down": true
+     "name": "Raniganj Punjabi More",
+     "up_time": "10:10 AM",
+     "down_time": "11:25 AM"
     },
     {
-     "no": 12,
-     "name": "Asansol",
+     "name": "Asansol Bus Stand",
      "up_time": "10:40 AM",
      "down_time": "10:55 AM"
     }
    ],
-   "source": "bussathi.in",
+   "source": "facebook (community report)",
    "total_stoppages": 12,
-   "detail_url": "https://bussathi.in/bus/539"
+   "detail_url": "https://bussathi.in/bus/539",
+   "service_note": "Maa Jagadhatri (WB-41G-8623) — Dainhat to Asansol. Katwa 5:35 in / 5:55 out; Guskara 7:30 in / 7:40 out; Durgapur City Center 9:30 in / 9:40 out. Return: Asansol 10:55 AM, Guskara 1:50 in / 2:05 out, Katwa 3:45 in / 4:10 out, Dainhat 4:35 PM."
   },
   {
    "id": "bussathi-maa-jagatgouri-387",
@@ -407654,179 +407683,121 @@
    "origin": "Kalna",
    "destination": "Bolpur",
    "departure_time": "5:20 AM",
-   "arrival_time": "10:45 AM",
+   "arrival_time": "10:30 AM",
    "contact_number": "Not Available !",
    "depot_name": "",
    "route": "Kalna - Bolpur",
    "stoppages": [
     {
-     "no": 1,
      "name": "Kalna",
-     "up_time": "",
-     "down_time": "",
-     "time": "5:20 AM"
+     "up_time": "5:20 AM",
+     "down_time": "5:20 PM"
     },
     {
-     "no": 2,
-     "name": "Dhatrigram",
+     "name": "Dhatrigram More",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 3,
-     "name": "Madhupur",
+     "name": "Samudragarh",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 4,
-     "name": "Bulbulitala",
+     "name": "Nadanghat More",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 5,
-     "name": "Bohar",
+     "name": "Nadanghat",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 6,
-     "name": "Satgachia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 7,
-     "name": "Jhikra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 8,
-     "name": "Bamunia",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 9,
-     "name": "Bhagra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 10,
      "name": "Kusumgram",
-     "up_time": "",
-     "down_time": ""
+     "up_time": "6:40 AM",
+     "down_time": "4:05 PM"
     },
     {
-     "no": 11,
-     "name": "Dakbangla",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 12,
      "name": "Manteswar",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 13,
      "name": "Maldanga",
+     "up_time": "7:00 AM",
+     "down_time": "3:30 PM"
+    },
+    {
+     "name": "Chandrapur More",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 14,
-     "name": "Chandrapur",
+     "name": "Bhatakul",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 15,
-     "name": "Singi",
+     "name": "Bolgona More",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 16,
-     "name": "Korui",
+     "name": "Muratipur",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 17,
-     "name": "Kaichar",
+     "name": "Mangalkot",
      "up_time": "",
      "down_time": ""
     },
     {
-     "no": 18,
+     "name": "Palitpur More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Banshapara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Khujutipara",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Baliguni",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Nanoor",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sian Hospital",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Nutanhat",
-     "up_time": "",
-     "down_time": ""
+     "up_time": "8:50 AM",
+     "down_time": "1:50 PM"
     },
     {
-     "no": 19,
-     "name": "Palitpur",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 20,
-     "name": "Basapara",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 21,
-     "name": "Bangachatra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 22,
-     "name": "Sansat",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 23,
-     "name": "Bahiri",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 24,
-     "name": "Muluk",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 25,
-     "name": "Layekbazar",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 26,
-     "name": "Chitra",
-     "up_time": "",
-     "down_time": ""
-    },
-    {
-     "no": 27,
-     "name": "Bolpur",
-     "up_time": "",
-     "down_time": "",
-     "time": "10:45 AM"
+     "name": "Bolpur Jambuni Bus Stand",
+     "up_time": "10:30 AM",
+     "down_time": "12:15 PM"
     }
    ],
-   "source": "kolkata-travel-router (GitHub)",
+   "source": "facebook (community report)",
    "total_stoppages": 27,
-   "detail_url": "https://busjatri.in/"
+   "detail_url": "https://busjatri.in/",
+   "service_note": "Madhumira Travels (Pinky) — Kalna to Bolpur super service. Nutanhat 8:50 AM up, 1:50 PM down. Return: Bolpur 12:15 PM, Maldanga 3:30 PM, Kusumgram 4:05 PM, Kalna 5:20 PM."
   },
   {
    "id": "ktr-private-shyamsundar-kalna-to-bolpur-9155-1",
@@ -439821,32 +439792,171 @@
    "bus_name": "BISWAS",
    "reg_no": "WB41J3173",
    "operator": "—",
-   "bus_type": "Private",
+   "bus_type": "Private - NON AC",
    "origin": "Illambazar",
    "destination": "Bowaichandi",
-   "departure_time": "6:25 AM",
-   "arrival_time": "10:40 AM",
+   "departure_time": "6:10 AM",
+   "arrival_time": "10:30 AM",
    "contact_number": "Not Available !",
    "depot_name": "Illambazar",
    "route": "Illambazar - Bowaichandi",
    "stoppages": [
     {
-     "no": 1,
-     "name": "Illambazar",
-     "up_time": "6:25 AM",
+     "name": "Illambazar Bus Stop",
+     "up_time": "6:10 AM",
+     "down_time": "3:50 PM"
+    },
+    {
+     "name": "Basudha",
+     "up_time": "",
      "down_time": ""
     },
     {
-     "no": 2,
+     "name": "Egaro Mile",
+     "up_time": "6:30 AM",
+     "down_time": "3:35 PM"
+    },
+    {
+     "name": "Panrijangal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Hedogora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Akulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Morebandh",
+     "up_time": "6:55 AM",
+     "down_time": "3:15 PM"
+    },
+    {
+     "name": "Bannabagram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Ausgram",
+     "up_time": "7:15 AM",
+     "down_time": "2:50 PM"
+    },
+    {
+     "name": "Somaipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Alutia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Guskara Station",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Guskara Bus Stand",
+     "up_time": "7:50 AM",
+     "down_time": "2:25 PM"
+    },
+    {
+     "name": "Shibda",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Jharna",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Orgram",
+     "up_time": "8:05 AM",
+     "down_time": "1:55 PM"
+    },
+    {
+     "name": "Bora Choumatha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Koyrapur",
+     "up_time": "8:20 AM",
+     "down_time": "1:40 PM"
+    },
+    {
+     "name": "Mahinagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Haldi",
+     "up_time": "8:30 AM",
+     "down_time": "1:30 PM"
+    },
+    {
+     "name": "Talit",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Bardhaman Nababhat",
+     "up_time": "8:50 AM",
+     "down_time": "1:10 PM"
+    },
+    {
+     "name": "Bardhaman Bypass",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Telipukur",
+     "up_time": "",
+     "down_time": "12:30 PM"
+    },
+    {
+     "name": "Bankura More",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sograi",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Sehara Bazar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Mogalmari",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "name": "Akui",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
      "name": "Bowaichandi",
-     "up_time": "10:40 AM",
-     "down_time": "10:40 AM"
+     "up_time": "10:30 AM",
+     "down_time": "11:30 AM"
     }
    ],
-   "source": "wbbus.in",
+   "source": "facebook (community report)",
    "time_source": "wbbus.in",
    "total_stoppages": 2,
-   "detail_url": "https://wbbus.in/bus/biswas-wb41j3173-illambazar-bowaichondi-1415"
+   "detail_url": "https://wbbus.in/bus/biswas-wb41j3173-illambazar-bowaichondi-1415",
+   "service_note": "Biswas Travels — Illambazar to Bowaichandi via Guskara and Bardhaman. Guskara 7:40 in / 7:50 out; Bardhaman Alisha 9:20 in / 9:30 out. Return: Bowaichandi 11:30 AM, Bardhaman 1:10 PM, Guskara 2:25 PM, Illambazar 3:50 PM."
   },
   {
    "id": "wbbus-in-bk-travels-contai-medinipur-4110",
@@ -537768,6 +537878,129 @@
    "total_stoppages": 2,
    "detail_url": "",
    "service_note": "Biswas Travels — first bus from Illambazar to Nabadwip via Guskara and Bardhaman. Reg WB-41K-2961, Tata LP 916 BS-6 Phase-2. Operator note: the bus does NOT go to Krishnanagar at present. Guskara 5:45 in / 5:50 out; Bardhaman Nababhat 6:50 in / 7:10 out. Return: Nabadwip 1:00 PM, Kusumgram 2:10 PM, Bardhaman 3:50 PM, Guskara 4:50 PM, Illambazar 6:10 PM."
+  },
+  {
+   "id": "madhumira-travels-guskara-illambazar-4976",
+   "bus_name": "PINKY",
+   "reg_no": "WB 41G 6349",
+   "operator": "Madhumira Travels",
+   "bus_type": "Private - NON AC",
+   "origin": "Guskara",
+   "destination": "Illambazar",
+   "departure_time": "5:10 AM",
+   "arrival_time": "7:10 AM",
+   "contact_number": "Not Available !",
+   "depot_name": "",
+   "route": "Guskara - Ausgram - Morebandh - Illambazar",
+   "stoppages": [
+    {
+     "no": 1,
+     "name": "Guskara Bus Stand",
+     "up_time": "5:10 AM",
+     "down_time": "10:30 AM"
+    },
+    {
+     "no": 2,
+     "name": "Alutia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 3,
+     "name": "Somaipur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 4,
+     "name": "Ausgram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 5,
+     "name": "Bannabagram",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 6,
+     "name": "Morebandh",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 7,
+     "name": "Uttar Ramnagar",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 8,
+     "name": "Dinnathpur",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 9,
+     "name": "Panduk Danga",
+     "up_time": "6:20 AM",
+     "down_time": "9:30 AM"
+    },
+    {
+     "no": 10,
+     "name": "Chhora Hattala",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 11,
+     "name": "Akulia",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 12,
+     "name": "Hedogora",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 13,
+     "name": "Panrijangal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 14,
+     "name": "Egaro Mile",
+     "up_time": "7:00 AM",
+     "down_time": "8:45 AM"
+    },
+    {
+     "no": 15,
+     "name": "Dangal",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 16,
+     "name": "Basudha",
+     "up_time": "",
+     "down_time": ""
+    },
+    {
+     "no": 17,
+     "name": "Illambazar Bus Stop",
+     "up_time": "7:10 AM",
+     "down_time": "8:30 AM"
+    }
+   ],
+   "source": "facebook (community report)",
+   "time_source": "facebook (community report)",
+   "total_stoppages": 17,
+   "detail_url": "",
+   "service_note": ""
   }
  ],
  "routes": {
@@ -652132,7 +652365,7 @@
   }
  },
  "meta": {
-  "total_buses": 4975,
+  "total_buses": 4976,
   "total_routes": 3015,
   "total_stops": 4253,
   "version": "3.0.0",
