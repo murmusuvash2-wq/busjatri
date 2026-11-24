@@ -8615,6 +8615,167 @@
           "down": ""
         }
       ]
+    },
+    {
+      "operator": "BISWAS TRAVELS",
+      "bus_name": "BISWAS",
+      "bus_type": "Private - NON AC",
+      "reg_no": "WB 41K 2961",
+      "origin": "Illambazar",
+      "destination": "Nabadwip",
+      "departure_time": "4:30 AM",
+      "arrival_time": "9:35 AM",
+      "contact_number": "Not Available !",
+      "depot_name": "",
+      "route": "Illambazar - Guskara - Bardhaman - Nabadwip",
+      "source": "facebook (community report)",
+      "stops": [
+        {
+          "name": "Illambazar",
+          "up": "4:30 AM",
+          "down": "6:10 PM"
+        },
+        {
+          "name": "11 Mile",
+          "up": "4:45 AM",
+          "down": "5:50 PM"
+        },
+        {
+          "name": "Chora Hattala",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Morebandh",
+          "up": "5:05 AM",
+          "down": "5:30 PM"
+        },
+        {
+          "name": "Bononabagram",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Ausgram",
+          "up": "5:25 AM",
+          "down": "5:10 PM"
+        },
+        {
+          "name": "Somaipur",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Alutia",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Guskara Station",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Guskara Bus Stand",
+          "up": "5:50 AM",
+          "down": "4:50 PM"
+        },
+        {
+          "name": "Shibda",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Jharna",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Oorgaram",
+          "up": "6:05 AM",
+          "down": "4:35 PM"
+        },
+        {
+          "name": "Bara Choumata",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Kayrapur",
+          "up": "6:15 AM",
+          "down": "4:20 PM"
+        },
+        {
+          "name": "Mahinagar",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Haldi",
+          "up": "6:25 AM",
+          "down": "4:10 PM"
+        },
+        {
+          "name": "Talit",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Bardhaman Nababhat",
+          "up": "7:10 AM",
+          "down": "3:50 PM"
+        },
+        {
+          "name": "Bardhaman Station",
+          "up": "7:30 AM",
+          "down": "3:10 PM"
+        },
+        {
+          "name": "Dewandighi More",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Kurmun",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Bhandardihi",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Malamba",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Kusumgram",
+          "up": "8:35 AM",
+          "down": "2:10 PM"
+        },
+        {
+          "name": "Nadanghat",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Nadanghat More",
+          "up": "",
+          "down": ""
+        },
+        {
+          "name": "Heyamtpur More",
+          "up": "9:25 AM",
+          "down": "1:20 PM"
+        },
+        {
+          "name": "Nabadwip",
+          "up": "9:35 AM",
+          "down": "1:00 PM"
+        }
+      ]
     }
   ],
   "enrich": [
@@ -15540,6 +15701,469 @@
           "name": "Nabadwip Bus Stand",
           "up_time": "12:40 PM",
           "down_time": "12:55 PM"
+        }
+      ]
+    },
+    {
+      "target_id": "bussathi-amit-0",
+      "arrival_time": "11:00 AM",
+      "source": "facebook (community report)",
+      "service_note": "Amit Super (Maa Tara) — Bardhaman-Krishnanagar-Karimpur-Shikarpur. Reg WB-41N-1213, Tata LP 1618/53 BS-6. Last bus of the day from Karimpur and Krishnanagar to Bardhaman. Return: Shikarpur 11:40 AM, Karimpur 12:30 PM, Tehatta 1:30 PM, Krishnanagar 2:20 PM, Nabadwip 3:35 PM, Kusumgram 4:40 PM, Bardhaman Nababhat 6:10 PM.",
+      "stoppages": [
+        {
+          "name": "Bardhaman",
+          "up_time": "4:55 AM",
+          "down_time": "6:10 PM"
+        },
+        {
+          "name": "Golapbag",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Station More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Dewandighi More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Kurmun",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bhandardihi",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Malamba",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Kusumgram",
+          "up_time": "6:15 AM",
+          "down_time": "4:40 PM"
+        },
+        {
+          "name": "Nadanghat",
+          "up_time": "6:40 AM",
+          "down_time": "3:30 PM"
+        },
+        {
+          "name": "Nadanghat More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Nabadwip",
+          "up_time": "7:00 AM",
+          "down_time": "3:35 PM"
+        },
+        {
+          "name": "Krishnanagar",
+          "up_time": "8:08 AM",
+          "down_time": "2:20 PM"
+        },
+        {
+          "name": "Chapra",
+          "up_time": "8:40 AM",
+          "down_time": "1:25 PM"
+        },
+        {
+          "name": "Tehatta",
+          "up_time": "9:10 AM",
+          "down_time": "1:30 PM"
+        },
+        {
+          "name": "Betai",
+          "up_time": "9:30 AM",
+          "down_time": "12:55 PM"
+        },
+        {
+          "name": "Nazipur",
+          "up_time": "9:50 AM",
+          "down_time": "1:00 PM"
+        },
+        {
+          "name": "Mahish Bathan",
+          "up_time": "10:05 AM",
+          "down_time": "12:25 PM"
+        },
+        {
+          "name": "Karimpur",
+          "up_time": "10:20 AM",
+          "down_time": "12:30 PM"
+        },
+        {
+          "name": "Shikarpur",
+          "up_time": "11:00 AM",
+          "down_time": "11:40 AM"
+        }
+      ]
+    },
+    {
+      "target_id": "bussathi-shanti-1",
+      "arrival_time": "11:05 AM",
+      "source": "facebook (community report)",
+      "service_note": "Shanti Travels (Raju) — the only direct Bolpur/Santiniketan to Bishnupur express, STA permit. Reg WB-47B-6229, Tata LP 916/52 BS-6. Illambazar 7:00 in / 7:10 out; Durgapur Station 8:15 in / 8:25 out; Sonamukhi 9:55 in / 10:05 out. Return: Bishnupur 11:55 AM, Sonamukhi 1:10 PM, Durgapur Station 2:50 PM, Illambazar 4:30 PM, Bolpur 5:10 PM.",
+      "stoppages": [
+        {
+          "name": "Bolpur",
+          "up_time": "6:20 AM",
+          "down_time": "5:10 PM"
+        },
+        {
+          "name": "Kashipur Bypass",
+          "up_time": "6:35 AM",
+          "down_time": "5:00 PM"
+        },
+        {
+          "name": "Illambazar",
+          "up_time": "7:10 AM",
+          "down_time": "4:30 PM"
+        },
+        {
+          "name": "11 Mile",
+          "up_time": "7:20 AM",
+          "down_time": "4:10 PM"
+        },
+        {
+          "name": "Trilokchandrapur",
+          "up_time": "7:40 AM",
+          "down_time": "3:50 PM"
+        },
+        {
+          "name": "Panagarh",
+          "up_time": "7:50 AM",
+          "down_time": "3:35 PM"
+        },
+        {
+          "name": "Durgapur (Muchipara)",
+          "up_time": "8:05 AM",
+          "down_time": "3:05 PM"
+        },
+        {
+          "name": "Durgapur (Station)",
+          "up_time": "8:25 AM",
+          "down_time": "2:50 PM"
+        },
+        {
+          "name": "Barjora",
+          "up_time": "8:45 AM",
+          "down_time": "2:15 PM"
+        },
+        {
+          "name": "Asuria More",
+          "up_time": "8:50 AM",
+          "down_time": "1:30 PM"
+        },
+        {
+          "name": "Sahebdihi",
+          "up_time": "9:00 AM",
+          "down_time": "1:35 PM"
+        },
+        {
+          "name": "Katabandh",
+          "up_time": "9:10 AM",
+          "down_time": "1:40 PM"
+        },
+        {
+          "name": "Pakhanna",
+          "up_time": "9:15 AM",
+          "down_time": "1:45 PM"
+        },
+        {
+          "name": "Sahapur",
+          "up_time": "9:30 AM",
+          "down_time": "1:00 PM"
+        },
+        {
+          "name": "Nachanhati",
+          "up_time": "9:50 AM",
+          "down_time": "1:05 PM"
+        },
+        {
+          "name": "Sonamukhi",
+          "up_time": "10:05 AM",
+          "down_time": "1:10 PM"
+        },
+        {
+          "name": "Radha Nagar",
+          "up_time": "10:40 AM",
+          "down_time": "12:20 PM"
+        },
+        {
+          "name": "Jaykrishnapur",
+          "up_time": "10:55 AM",
+          "down_time": "12:10 PM"
+        },
+        {
+          "name": "Bishnupur",
+          "up_time": "11:05 AM",
+          "down_time": "11:55 AM"
+        }
+      ]
+    },
+    {
+      "target_id": "bussathi-rajaram-616",
+      "reg_no": "WB 41H 2900",
+      "arrival_time": "11:10 AM",
+      "source": "facebook (community report)",
+      "service_note": "Rajaram Bus Service — second bus of the day from Bandwan to Bardhaman. Reg WB-41H-2900, Tata LP 1512C BS-3; alternates with WB-41H-0047. Return: Bardhaman Nababhat 9:15 AM, Durgapur Station 11:10 AM, Bankura 12:30 PM, Manbazar 2:40 PM, Bandwan 3:50 PM.",
+      "stoppages": [
+        {
+          "name": "Bandwan",
+          "up_time": "4:50 AM",
+          "down_time": "3:50 PM"
+        },
+        {
+          "name": "Manbazar",
+          "up_time": "6:10 AM",
+          "down_time": "2:40 PM"
+        },
+        {
+          "name": "Hatirampur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bangla",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Indpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Sunukpahari",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Puabagan",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Damodarpur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Dhaldanga",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bankura",
+          "up_time": "7:55 AM",
+          "down_time": "12:30 PM"
+        },
+        {
+          "name": "Beliatore",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Barjora",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Durgapur (Station)",
+          "up_time": "9:20 AM",
+          "down_time": "11:10 AM"
+        },
+        {
+          "name": "Muchipara",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Rajbandh",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Panagarh",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Budbud",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Galsi",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bardhaman",
+          "up_time": "11:10 AM",
+          "down_time": "9:15 AM"
+        }
+      ]
+    },
+    {
+      "target_id": "biswas-travels-illambazar-nabadwip-4975",
+      "arrival_time": "9:35 AM",
+      "source": "facebook (community report)",
+      "service_note": "Biswas Travels — first bus from Illambazar to Nabadwip via Guskara and Bardhaman. Reg WB-41K-2961, Tata LP 916 BS-6 Phase-2. Operator note: the bus does NOT go to Krishnanagar at present. Guskara 5:45 in / 5:50 out; Bardhaman Nababhat 6:50 in / 7:10 out. Return: Nabadwip 1:00 PM, Kusumgram 2:10 PM, Bardhaman 3:50 PM, Guskara 4:50 PM, Illambazar 6:10 PM.",
+      "stoppages": [
+        {
+          "name": "Illambazar",
+          "up_time": "4:30 AM",
+          "down_time": "6:10 PM"
+        },
+        {
+          "name": "11 Mile",
+          "up_time": "4:45 AM",
+          "down_time": "5:50 PM"
+        },
+        {
+          "name": "Chora Hattala",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Morebandh",
+          "up_time": "5:05 AM",
+          "down_time": "5:30 PM"
+        },
+        {
+          "name": "Bononabagram",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Ausgram",
+          "up_time": "5:25 AM",
+          "down_time": "5:10 PM"
+        },
+        {
+          "name": "Somaipur",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Alutia",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Guskara Station",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Guskara Bus Stand",
+          "up_time": "5:50 AM",
+          "down_time": "4:50 PM"
+        },
+        {
+          "name": "Shibda",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Jharna",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Oorgaram",
+          "up_time": "6:05 AM",
+          "down_time": "4:35 PM"
+        },
+        {
+          "name": "Bara Choumata",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Kayrapur",
+          "up_time": "6:15 AM",
+          "down_time": "4:20 PM"
+        },
+        {
+          "name": "Mahinagar",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Haldi",
+          "up_time": "6:25 AM",
+          "down_time": "4:10 PM"
+        },
+        {
+          "name": "Talit",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bardhaman Nababhat",
+          "up_time": "7:10 AM",
+          "down_time": "3:50 PM"
+        },
+        {
+          "name": "Bardhaman Station",
+          "up_time": "7:30 AM",
+          "down_time": "3:10 PM"
+        },
+        {
+          "name": "Dewandighi More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Kurmun",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Bhandardihi",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Malamba",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Kusumgram",
+          "up_time": "8:35 AM",
+          "down_time": "2:10 PM"
+        },
+        {
+          "name": "Nadanghat",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Nadanghat More",
+          "up_time": "",
+          "down_time": ""
+        },
+        {
+          "name": "Heyamtpur More",
+          "up_time": "9:25 AM",
+          "down_time": "1:20 PM"
+        },
+        {
+          "name": "Nabadwip",
+          "up_time": "9:35 AM",
+          "down_time": "1:00 PM"
         }
       ]
     }
