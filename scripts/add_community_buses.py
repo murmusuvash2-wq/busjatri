@@ -111,6 +111,9 @@ def main(write=False):
                 for k, v in entry.items():
                     if k != "target_id" and v not in (None, ""):
                         b[k] = v
+                # keep the published stop count in step with the stop list
+                if entry.get("stoppages"):
+                    b["total_stoppages"] = len(entry["stoppages"])
                 enriched += 1
                 print("enriched:", entry["target_id"])
                 break
