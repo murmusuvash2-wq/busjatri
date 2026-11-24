@@ -3477,6 +3477,7 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kotulpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-binpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-domkal</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-illambazar</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-hoomgarh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-bajitpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-sonathali</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -3511,7 +3512,6 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-taldangra</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-dantan</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kamalpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-illambazar</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-salar</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-joyrampur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-trilochanpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -4734,6 +4734,8 @@
 <url><loc>https://busjatri.in/bus-time-table/jhargram-to-goaltore-via-dahijuri</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/karunamoyee-to-haldia-via-dhulagarh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/karunamoyee-to-haldia-via-ranihati</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/illambazar-to-nabadwip-via-11-mile</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/illambazar-to-nabadwip-via-morebandh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jhantipahari-to-purulia-via-arrah</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jhantipahari-to-purulia-via-rangamati</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/raniganj-to-kashipur-via-mejia</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -4805,8 +4807,8 @@
 <url><loc>https://busjatri.in/bus-time-table/garhbeta-to-bardhaman-via-telipukur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jangipur-to-bardhaman-via-umarpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/jangipur-to-bardhaman-via-panchgram</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/bardhaman-to-karimpur-via-golapbag</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bardhaman-to-karimpur-via-kusumgram</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/bardhaman-to-karimpur-via-nadanghat</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bardhaman-to-kharagpur-via-sehara-bazar</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bardhaman-to-kharagpur-via-arambagh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/patharchapuri-to-bardhaman-via-suri</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -5654,6 +5656,7 @@
 <url><loc>https://busjatri.in/via/bardhaman</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bardhaman-alisha-bus-stand</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bardhaman-bypass</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/bardhaman-nababhat</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bardhaman-nababhat-bus-stand</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bardhaman-nawabhat</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bardhaman-nawabhat-bus-stand</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6618,6 +6621,7 @@
 <url><loc>https://busjatri.in/via/hetampur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hetia</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hevry-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/heyamtpur-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hide-road</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/high-court</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/highroad</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -8152,6 +8156,7 @@
 <url><loc>https://busjatri.in/via/sodepur-station</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sohai-bazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/solpatta</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/somaipur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/somragarh</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sonachura</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/sonada</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
