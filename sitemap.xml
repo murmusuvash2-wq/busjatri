@@ -3442,6 +3442,7 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-shikarpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-rasulpur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-bajkul</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/buses-from-guskara</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-arambag</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-kirnahar</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-madhyamgram</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -3465,7 +3466,6 @@
 <url><loc>https://busjatri.in/bus-time-table/buses-from-jamtoria</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-lalgola</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-raskundu</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/buses-from-guskara</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-mukundapur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-baduria</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/buses-from-njp</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -4321,10 +4321,6 @@
 <url><loc>https://busjatri.in/bus-time-table/silda-to-medinipur-via-dherua</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/tarkeshwar-to-medinipur-via-champadanga</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/tarkeshwar-to-medinipur-via-mayapur</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/asansol-to-katwa-via-andal</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/asansol-to-katwa-via-panagarh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/katwa-to-asansol-via-guskara</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
-<url><loc>https://busjatri.in/bus-time-table/katwa-to-asansol-via-budbud</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-krishnanagar-high-road-via-andal</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-krishnanagar-high-road-via-panagarh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/durgachak-to-bankura-via-mechogram</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -4371,6 +4367,10 @@
 <url><loc>https://busjatri.in/bus-time-table/siliguri-to-malda-via-raiganj</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-contai-via-raniganj</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/asansol-to-contai-via-barjora</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/asansol-to-katwa-via-andal</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/asansol-to-katwa-via-panagarh</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/katwa-to-asansol-via-guskara</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
+<url><loc>https://busjatri.in/bus-time-table/katwa-to-asansol-via-budbud</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ballyhalt-to-karunamoyee-via-dakshineswar</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/ballyhalt-to-karunamoyee-via-airport-gate-3</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
 <url><loc>https://busjatri.in/bus-time-table/bankura-to-boga-via-puabagan</loc><lastmod>2026-11-24</lastmod><priority>0.7</priority></url>
@@ -5378,6 +5378,7 @@
 <url><loc>https://busjatri.in/via/akra-rabindra-nagar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/akra-station</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/akui</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/akulia</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/akupurchati</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/akupurchoti</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/alambazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -5565,6 +5566,7 @@
 <url><loc>https://busjatri.in/via/balichak</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/baligeria</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/balighai</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/baliguni</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/balihalt</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/balikhali</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/balisai</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -5623,8 +5625,10 @@
 <url><loc>https://busjatri.in/via/bankura-pump-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bankura-satighat-bridge</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bankura-station</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/bannabagram</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bansbhberia</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bansdroni</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/banshapara</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/banspahari</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/banstala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bantala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -5887,6 +5891,7 @@
 <url><loc>https://busjatri.in/via/bokchora</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/boldeghata</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bolgona</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/bolgona-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bolpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bolpur-jamboni</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/bolpur-jambuni</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -5922,6 +5927,7 @@
 <url><loc>https://busjatri.in/via/brajlalchak</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/brindabanpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/budbud</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/budbud-bazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/budbudm</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/budge-budge</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/budhigram</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6222,6 +6228,7 @@
 <url><loc>https://busjatri.in/via/dharmatala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dharmatala-kolkata</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dhatrigram</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/dhatrigram-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dheko</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dherua</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dhibdhiba</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6260,6 +6267,7 @@
 <url><loc>https://busjatri.in/via/dinanathpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dinhata</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dinhata-chowpathi</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/dinnathpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dishergarh</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dobadhi</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/dobhi</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6327,6 +6335,7 @@
 <url><loc>https://busjatri.in/via/ecopark</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/ecospace</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/eden-city</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/egaro-mile</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/egra</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/ekbalpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/ekdala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6521,6 +6530,7 @@
 <url><loc>https://busjatri.in/via/guskara-bus-stand</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/guskara-college</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/guskara-rail-gate</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/guskara-station</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/gustia</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hmg-college</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/howrah-bridge</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6608,6 +6618,7 @@
 <url><loc>https://busjatri.in/via/hazipur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hazra</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hebir-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/hedogora</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/hedua</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/helabattala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/helencha</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6658,6 +6669,7 @@
 <url><loc>https://busjatri.in/via/iimc-hospital</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/ilambazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/illambazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/illambazar-bus-stop</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/ilsoba</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/inchura</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/indas</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6738,6 +6750,7 @@
 <url><loc>https://busjatri.in/via/jhargram-panch-mathar-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jhargram-panchmatha-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jharkhali</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/jharna</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jhatipahari</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jhautala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jhawdanga</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -6773,7 +6786,6 @@
 <url><loc>https://busjatri.in/via/jorda</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jorehira</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/jorhira</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
-<url><loc>https://busjatri.in/via/joydeb</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/joydev</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/joygachi</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/joygram</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -7212,6 +7224,7 @@
 <url><loc>https://busjatri.in/via/mahesh-bazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/maheshpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/maheshwarpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/mahinagar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mahish-bathan</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mahishadal</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mahishbathan</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -7264,6 +7277,7 @@
 <url><loc>https://busjatri.in/via/mandarmani</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mandirbazar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mandirtala</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/mangalkot</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/manglamaro</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mangrul</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/manguria</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -7278,6 +7292,7 @@
 <url><loc>https://busjatri.in/via/manjushree-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mankanali</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mankar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/mankar-hattala-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/mankur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/manpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/manteshwar</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
@@ -7657,6 +7672,7 @@
 <url><loc>https://busjatri.in/via/panitanki</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/panjabi-more</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/panpur</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
+<url><loc>https://busjatri.in/via/panrijangal</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/panrui</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/panshkura</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
 <url><loc>https://busjatri.in/via/panshkura-bypass</loc><lastmod>2026-11-24</lastmod><priority>0.6</priority></url>
