@@ -9364,7 +9364,7 @@
    "stoppages": [
     {
      "name": "Bishnupur",
-     "up_time": "1:10 PM",
+     "up_time": "1:10 AM",
      "down_time": "7:45 PM"
     },
     {
@@ -9379,7 +9379,7 @@
     },
     {
      "name": "Sabrakon",
-     "up_time": "2:10 PM",
+     "up_time": "2:10 AM",
      "down_time": "6:45 PM"
     },
     {
@@ -535066,7 +535066,7 @@
     },
     {
      "name": "Bankura",
-     "up_time": "7:30 AM",
+     "up_time": "7:30 PM",
      "down_time": "4:00 PM"
     }
    ],
@@ -535083,7 +535083,7 @@
    "origin": "Belpahari",
    "destination": "Durgapur (Station)",
    "departure_time": "6:00 AM",
-   "arrival_time": "",
+   "arrival_time": "12:20 PM",
    "contact_number": "Not Available !",
    "depot_name": "Belpahari",
    "route": "Belpahari - Durgapur (Station)",
@@ -535602,7 +535602,7 @@
    "origin": "Bankura",
    "destination": "Bardhaman",
    "departure_time": "8:40 AM",
-   "arrival_time": "",
+   "arrival_time": "2:00 PM",
    "contact_number": "Not Available !",
    "depot_name": "Bankura",
    "route": "Bankura - Bardhaman",
@@ -536153,7 +536153,7 @@
    "origin": "Ramharipur",
    "destination": "Purulia",
    "departure_time": "6:30 AM",
-   "arrival_time": "",
+   "arrival_time": "1:25 PM",
    "contact_number": "",
    "depot_name": "",
    "route": "Ramharipur - Purulia",
